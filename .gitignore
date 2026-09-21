@@ -2,3 +2,6 @@
 venv/
 *.zip
 cache/
+runs/
+
+**/data/
