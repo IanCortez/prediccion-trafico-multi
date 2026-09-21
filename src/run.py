@@ -150,9 +150,14 @@ def _build(args):
     elif args.split == 'ood_distance':
         kw = {'quantile': args.quantile}
 
-    target = M.build_city_data(tgt, 0, dm, ds, tm, ts, args.split, kw)
-    sources = [M.build_city_data(c, i + 1, dm, ds, tm, ts, 'chronological')
+    kw_st = dict(use_graph=not args.no_graph, graph_k=args.graph_k,
+                 use_stgnn=not args.no_stgnn)
+    target = M.build_city_data(tgt, 0, dm, ds, tm, ts, args.split, kw, **kw_st)
+    sources = [M.build_city_data(c, i + 1, dm, ds, tm, ts, 'chronological', **kw_st)
                for i, c in enumerate(srcs)]
+    if target.st is not None:
+        print(f"tensor espaciotemporal: 168 h x {target.n_cells} celdas | "
+              f"cobertura {target.st['coverage']*100:.1f} % de celdas-hora con datos")
     if args.target_fraction:
         k = max(int(len(target.train_idx) * args.target_fraction), 8)
         target.train_idx = target.train_idx[:k]
@@ -164,21 +169,27 @@ def train(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
     target, sources = _build(args)
+    n_e = 0 if target.edge_weight is None else len(target.edge_weight)
     print(f"train/val/test = {len(target.train_idx)}/{len(target.val_idx)}/"
           f"{len(target.test_idx)}  | celdas {target.n_cells}"
-          f"  | fuentes {len(sources)}")
+          f"  | aristas {n_e}  | fuentes {len(sources)}")
 
     model = M.TravelTimeModel(dim=args.dim, hidden=args.hidden,
                               bank_size=max(target.n_cells // 2, 8),
                               invariant=not args.no_invariant,
-                              use_npm=not args.no_npm)
+                              use_npm=not args.no_npm,
+                              n_graph_layers=0 if args.no_graph
+                              else args.graph_layers,
+                              use_stgnn=not args.no_stgnn,
+                              st_window=args.st_window, st_K=args.st_K)
     tr = M.TSJTTrainer(model, target, sources,
                        device=args.device if args.device != 'auto'
                        else ('cuda' if torch.cuda.is_available() else 'cpu'),
                        alpha=args.alpha, beta=args.beta,
                        batch_size=args.batch,
                        target_per_batch=args.target_per_batch,
-                       use_tsb=not args.no_tsb)
+                       use_tsb=not args.no_tsb,
+                       lambda_st=args.lambda_st, st_mask_ratio=args.st_mask)
     tr.train(epochs=args.epochs, patience=args.patience,
              steps_per_epoch=args.steps_per_epoch)
 
@@ -211,6 +222,9 @@ def ablate(args):
     variants = [
         ('completo', {}),
         ('wo TSB', {'no_tsb': True}),
+        ('wo grafo', {'no_graph': True}),
+        ('wo ST-GNN', {'no_stgnn': True}),
+        ('wo interpolacion', {'lambda_st': 0.0}),
         ('wo NPM', {'no_npm': True}),
         ('wo invariancia', {'no_invariant': True}),
         ('wo contrastivo', {'beta': 0.0}),
@@ -285,6 +299,14 @@ def main():
         p.add_argument('--beta', type=float, default=0.5)
         p.add_argument('--device', default='auto')
         p.add_argument('--no-tsb', action='store_true')
+        p.add_argument('--no-graph', action='store_true')
+        p.add_argument('--no-stgnn', action='store_true')
+        p.add_argument('--st-window', type=int, default=6)
+        p.add_argument('--st-K', type=int, default=2)
+        p.add_argument('--st-mask', type=float, default=0.3)
+        p.add_argument('--lambda-st', type=float, default=0.3)
+        p.add_argument('--graph-layers', type=int, default=2)
+        p.add_argument('--graph-k', type=int, default=8)
         p.add_argument('--no-npm', action='store_true')
         p.add_argument('--no-invariant', action='store_true')
         if name == 'ablate':

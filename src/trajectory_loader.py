@@ -449,6 +449,132 @@ class CityTrips:
             t['has_ctx'] = True
         urban_context_mod.finalize_edge_context(self.trips)
 
+    # ── grafo de regiones ────────────────────────────────────────────────────
+
+    def build_region_graph(self, train_idx, k=8, max_radius_m=2000.0,
+                           min_flow=3, use_od=True, verbose=False):
+        """
+        Construye el grafo sobre las celdas y devuelve su adyacencia normalizada.
+
+        Dos familias de aristas, con propiedades distintas:
+
+        ESPACIALES (k vecinos más próximos). Puramente geométricas: no dependen
+        de los viajes, así que no pueden filtrar información del conjunto de
+        prueba. Su función es que una celda con pocos viajes reciba contexto de
+        las que la rodean, que casi siempre se le parecen.
+
+        FUNCIONALES (pares origen-destino observados). Capturan conectividad
+        real y no mera proximidad: dos celdas separadas por la ría pueden ser
+        vecinas en distancia y estar funcionalmente lejos. Se construyen
+        EXCLUSIVAMENTE con los viajes de entrenamiento; usar el conjunto
+        completo metería la estructura del test en la adyacencia, que es una
+        fuga silenciosa y difícil de detectar después.
+
+        Devuelve (edge_index, edge_weight) con la adyacencia simétrica
+        normalizada D^{-1/2}(A+I)D^{-1/2}.
+        """
+        C = self.grid.n_cells
+        cent = [self.grid.centroid(i) for i in range(C)]
+        w = defaultdict(float)
+
+        # (a) k vecinos espaciales más próximos
+        for i in range(C):
+            d = []
+            for j in range(C):
+                if i == j:
+                    continue
+                dist = _haversine(cent[i][0], cent[i][1], cent[j][0], cent[j][1])
+                if dist <= max_radius_m:
+                    d.append((dist, j))
+            d.sort()
+            for dist, j in d[:k]:
+                # peso decreciente con la distancia; la celda contigua pesa ~1
+                ww = math.exp(-dist / self.grid.cell_m)
+                w[(i, j)] = max(w[(i, j)], ww)
+                w[(j, i)] = max(w[(j, i)], ww)
+
+        # (b) flujos origen-destino observados en entrenamiento
+        n_od = 0
+        if use_od:
+            flow = defaultdict(int)
+            for idx in train_idx:
+                t = self.trips[idx]
+                if t['o_cell'] != t['d_cell']:
+                    flow[(t['o_cell'], t['d_cell'])] += 1
+            mx = max(flow.values()) if flow else 1
+            for (i, j), c in flow.items():
+                if c < min_flow:
+                    continue
+                ww = math.log1p(c) / math.log1p(mx)
+                w[(i, j)] = max(w[(i, j)], ww)
+                w[(j, i)] = max(w[(j, i)], ww)
+                n_od += 1
+
+        # (c) lazos propios y normalización simétrica
+        for i in range(C):
+            w[(i, i)] = 1.0
+        deg = defaultdict(float)
+        for (i, j), ww in w.items():
+            deg[i] += ww
+        src, dst, val = [], [], []
+        for (i, j), ww in w.items():
+            src.append(i)
+            dst.append(j)
+            val.append(ww / math.sqrt(max(deg[i], 1e-8) * max(deg[j], 1e-8)))
+
+        if verbose:
+            print(f"[traj:{self.city}] grafo: {len(val)} aristas "
+                  f"({n_od} funcionales) | grado medio "
+                  f"{len(val)/max(C,1):.1f}")
+        return (src, dst), val
+
+    def build_directed_adjacency(self, train_idx, k=8, max_radius_m=2000.0,
+                                 min_flow=3):
+        """
+        Adyacencia DIRIGIDA y BINARIA para la convolución de difusión.
+
+        Dos decisiones tomadas de GNNUI (Kaiser et al., 2025):
+
+        Binaria. Comparando matrices binarias, por distancia y por similitud,
+        GNNUI encuentra que la binaria es la mejor en todas las métricas, y que
+        combinar varias matrices no aporta: las aristas añadidas meten ruido y
+        debilitan la señal local. Aquí se sigue ese resultado.
+
+        Dirigida. La convolución de difusión distingue transición hacia
+        adelante y hacia atrás, así que la asimetría de los flujos O->D —la
+        demanda matinal hacia el centro no es la vespertina de vuelta— pasa a
+        ser información útil en lugar de perderse al simetrizar.
+
+        Aristas: k vecinos espaciales en ambos sentidos, más los pares O->D
+        observados en ENTRENAMIENTO con al menos `min_flow` viajes, solo en el
+        sentido del flujo. Devuelve (src, dst) sin pesos.
+        """
+        C = self.grid.n_cells
+        cent = [self.grid.centroid(i) for i in range(C)]
+        edges = set()
+        for i in range(C):
+            d = []
+            for j in range(C):
+                if i != j:
+                    dist = _haversine(cent[i][0], cent[i][1], cent[j][0], cent[j][1])
+                    if dist <= max_radius_m:
+                        d.append((dist, j))
+            d.sort()
+            for _, j in d[:k]:
+                edges.add((i, j))
+                edges.add((j, i))
+        flow = defaultdict(int)
+        for idx in train_idx:
+            t = self.trips[idx]
+            if t['o_cell'] != t['d_cell']:
+                flow[(t['o_cell'], t['d_cell'])] += 1
+        for (i, j), c in flow.items():
+            if c >= min_flow:
+                edges.add((i, j))            # solo en el sentido del flujo
+        src = [e[0] for e in edges]
+        dst = [e[1] for e in edges]
+        return src, dst
+
     # ── partición temporal ───────────────────────────────────────────────────
 
     def chronological_split(self, ratios=(0.8, 0.1, 0.1)):
@@ -495,7 +621,7 @@ class CityTrips:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def write_synthetic_csv(out_path, city_name, n_trips=400, seed=0,
-                        center=(41.15, -8.61), spread=0.05):
+                        center=(41.15, -8.61), spread=0.05, structured=False):
     """
     CSV con el mismo esquema que el de Porto. Solo para verificar el pipeline;
     los resultados obtenidos con estos datos no tienen validez experimental.
@@ -516,8 +642,22 @@ def write_synthetic_csv(out_path, city_name, n_trips=400, seed=0,
             d_lon = center[1] + rng.gauss(0, spread / 3)
             dist = _haversine(o_lat, o_lon, d_lat, d_lon)
             hour = rng.randint(0, 23)
-            # velocidad dependiente de la hora: punta lenta, madrugada rápida
-            speed = 7.0 if hour in (8, 9, 17, 18, 19) else 11.0
+            day = rng.randint(0, 60)
+            if structured:
+                # Congestión que depende de DÓNDE y CUÁNDO a la vez: el centro
+                # se satura en hora punta de días laborables y la periferia no.
+                # Sirve para comprobar que el módulo espaciotemporal capta una
+                # interacción espacio x tiempo cuando existe; no aporta
+                # evidencia sobre datos reales.
+                mid_lat, mid_lon = (o_lat + d_lat) / 2, (o_lon + d_lon) / 2
+                r = _haversine(mid_lat, mid_lon, center[0], center[1]) / (spread * 111000 / 3)
+                weekday = ((day + 3) % 7) < 5
+                peak = hour in (8, 9, 17, 18, 19) and weekday
+                congestion = (0.6 * math.exp(-r * r)) if peak else (0.15 * math.exp(-r * r))
+                speed = 11.0 * (1.0 - congestion)
+            else:
+                # velocidad dependiente de la hora: punta lenta, madrugada rápida
+                speed = 7.0 if hour in (8, 9, 17, 18, 19) else 11.0
             speed *= rng.uniform(0.8, 1.2)
             npts = max(int(dist / speed / SAMPLING_INTERVAL_S) + 1, 5)
             if npts > 900:
@@ -527,7 +667,7 @@ def write_synthetic_csv(out_path, city_name, n_trips=400, seed=0,
                 t = s / max(npts - 1, 1)
                 poly.append([round(o_lon + (d_lon - o_lon) * t + rng.gauss(0, 1e-4), 6),
                              round(o_lat + (d_lat - o_lat) * t + rng.gauss(0, 1e-4), 6)])
-            ts = base_ts + rng.randint(0, 60) * 86400 + hour * 3600 + rng.randint(0, 3599)
+            ts = base_ts - (base_ts % 86400) + day * 86400 + hour * 3600 + rng.randint(0, 3599)
             w.writerow([f'{city_name}_T{k}', rng.choice(CALL_TYPES), 'NA',
                         str(rng.randint(1, 63)), str(20000000 + rng.randint(0, 999)),
                         str(ts), 'A', 'False', json.dumps(poly)])
