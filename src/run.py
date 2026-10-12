@@ -115,7 +115,8 @@ def prepare(args):
 
     t2 = time.time()
     city = tl.CityTrips(trips, args.city, cell_m=args.cell_m, urban_ctx=ctx,
-                        corridor_mode=args.corridor_mode, verbose=True)
+                        corridor_mode=args.corridor_mode, verbose=True,
+                        bbox_quantile=args.bbox_quantile)
     print(f"  celdas + contexto: {time.time()-t2:.1f}s")
 
     # se cachea el objeto ya anotado; la polilínea no está (keep_polyline=False)
@@ -159,7 +160,8 @@ def _build(args):
         print(f"tensor espaciotemporal: 168 h x {target.n_cells} celdas | "
               f"cobertura {target.st['coverage']*100:.1f} % de celdas-hora con datos")
     if args.target_fraction:
-        k = max(int(len(target.train_idx) * args.target_fraction), 8)
+        k = (0 if args.target_fraction <= 0
+             else max(int(len(target.train_idx) * args.target_fraction), 8))
         target.train_idx = target.train_idx[:k]
     return target, sources
 
@@ -189,7 +191,9 @@ def train(args):
                        batch_size=args.batch,
                        target_per_batch=args.target_per_batch,
                        use_tsb=not args.no_tsb,
-                       lambda_st=args.lambda_st, st_mask_ratio=args.st_mask)
+                       lambda_st=args.lambda_st, st_mask_ratio=args.st_mask,
+                       eval_chunk=args.eval_chunk,
+                       max_st_windows=args.max_st_windows)
     tr.train(epochs=args.epochs, patience=args.patience,
              steps_per_epoch=args.steps_per_epoch)
 
@@ -267,6 +271,7 @@ def main():
         p.add_argument('--cell-m', type=float, default=500.0)
         p.add_argument('--corridor-mode', default='raster',
                        choices=['raster', 'exact'])
+        p.add_argument('--bbox-quantile', type=float, default=0.0)
         p.add_argument('--split', default='chronological',
                        choices=['chronological', 'ood_hour', 'ood_distance'])
         p.add_argument('--hours', nargs='*', type=int, default=[7, 8, 9])
@@ -305,6 +310,8 @@ def main():
         p.add_argument('--st-K', type=int, default=2)
         p.add_argument('--st-mask', type=float, default=0.3)
         p.add_argument('--lambda-st', type=float, default=0.3)
+        p.add_argument('--eval-chunk', type=int, default=8192)
+        p.add_argument('--max-st-windows', type=int, default=64)
         p.add_argument('--graph-layers', type=int, default=2)
         p.add_argument('--graph-k', type=int, default=8)
         p.add_argument('--no-npm', action='store_true')
