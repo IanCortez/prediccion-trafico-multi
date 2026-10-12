@@ -773,17 +773,26 @@ class TSJTTrainer:
                  device='cpu', lr_target=2e-4, lr_source=1e-6,
                  alpha=0.5, beta=0.5, env_lr=1e-3, env_gamma=0.1,
                  batch_size=128, target_per_batch=4, use_tsb=True,
-                 lambda_st=0.3, st_mask_ratio=0.3, st_windows=8):
+                 lambda_st=0.3, st_mask_ratio=0.3, st_windows=8,
+                 eval_chunk=8192, max_st_windows=64):
         """
         lambda_st      peso de la pérdida auxiliar de interpolación enmascarada.
         st_mask_ratio  fracción de celdas ocultadas por ventana al entrenar la
                        interpolación (GNNUI enmascara nodos completos).
         st_windows     ventanas temporales muestreadas por paso para esa pérdida.
+        eval_chunk     viajes evaluados a la vez durante validación y prueba.
+        max_st_windows tope de ventanas únicas resueltas en una sola pasada por
+                       el módulo espaciotemporal; por encima se trocea. El coste
+                       de memoria crece como ventanas x celdas x canales, así que
+                       con miles de celdas este tope es lo que evita el
+                       desbordamiento.
         """
         self.model = model.to(device)
         self.lambda_st = lambda_st
         self.st_mask_ratio = st_mask_ratio
         self.st_windows = st_windows
+        self.eval_chunk = eval_chunk
+        self.max_st_windows = max_st_windows
         self.device = device
         self.target = target
         self.sources = sources
@@ -880,11 +889,17 @@ class TSJTTrainer:
             sel = (u_src == sv).nonzero(as_tuple=True)[0]
             spd = st['spd_full'] if sv < 0 else st['spd_oof'][sv]
             obs = st['obs_full'] if sv < 0 else st['obs_oof'][sv]
-            H0 = assemble_st_input(st['feat'], spd, obs, self._win, u_tau[sel])
-            emb[sel] = self.model.stgnn(H0, st['P_fwd'], st['P_bwd'])
-        e = emb[inv]                                    # [B, C, d_st]
-        ar = torch.arange(len(idx), device=self.device)
-        return torch.cat([e[ar, o], e[ar, d]], dim=1)   # [B, 2·d_st]
+            for k in range(0, len(sel), self.max_st_windows):
+                part = sel[k:k + self.max_st_windows]
+                H0 = assemble_st_input(st['feat'], spd, obs, self._win,
+                                       u_tau[part])
+                emb[part] = self.model.stgnn(H0, st['P_fwd'], st['P_bwd'])
+        # Indexación conjunta (ventana, celda). La versión anterior construía
+        # primero emb[inv], de forma [viajes x celdas x d_st], y solo después
+        # seleccionaba dos celdas por viaje: con 100.000 viajes y 5.000 celdas
+        # ese tensor intermedio ocupa decenas de gigabytes. Aquí se recuperan
+        # directamente las dos celdas que hacen falta.
+        return torch.cat([emb[inv, o], emb[inv, d]], dim=1)   # [B, 2·d_st]
 
     def _interp_loss(self, cd):
         """
@@ -998,6 +1013,10 @@ class TSJTTrainer:
     def _step(self, tgt_batch, src_batches):
         self.opt.zero_grad(set_to_none=True)
         loss_t, ex_t = self._loss_on(self.target, tgt_batch)
+        # Con lotes mixtos, el lote de la ciudad objetivo son cuatro viajes y no
+        # permite estimar varianzas; en ese caso el módulo de entornos se
+        # actualiza con las representaciones del lote de las fuentes.
+        ex_env = ex_t if 'phi1' in ex_t else None
         loss_t.backward()
         g_t = self._grads()
 
@@ -1007,7 +1026,9 @@ class TSJTTrainer:
             self.opt.zero_grad(set_to_none=True)
             loss_s = 0.0
             for cd, b in src_batches:
-                ls, _ = self._loss_on(cd, b)
+                ls, ex_s = self._loss_on(cd, b)
+                if 'phi1' in ex_s:
+                    ex_env = ex_s
                 loss_s = loss_s + ls
             loss_s = loss_s / len(src_batches)
             loss_s.backward()
@@ -1030,18 +1051,22 @@ class TSJTTrainer:
         nn.utils.clip_grad_norm_(self.model.parameters(), 1.0)
         self.opt.step()
 
-        if self.invariant and ex_t:
-            self.env_opt.zero_grad()
-            env2 = self.model.env_infer(ex_t['phi1'], ex_t['psi1'])
-            r2 = self._concept_risk(env2, ex_t['per'])
-            marg = env2.mean(0)
-            h_marg = -(marg * (marg + 1e-8).log()).sum()
-            h_cond = -(env2 * (env2 + 1e-8).log()).sum(1).mean()
-            (r2.var(unbiased=False) - self.env_gamma * h_marg
-             + self.env_gamma * h_cond).backward()
-            self.env_opt.step()
-
+        self._update_env(ex_env)
         return float(loss_t.detach()), loss_s_val, ex_t
+
+    def _update_env(self, ex_env):
+        """Nivel externo: ajusta la partición de entornos."""
+        if not (self.invariant and ex_env is not None):
+            return
+        self.env_opt.zero_grad()
+        env2 = self.model.env_infer(ex_env['phi1'], ex_env['psi1'])
+        r2 = self._concept_risk(env2, ex_env['per'])
+        marg = env2.mean(0)
+        h_marg = -(marg * (marg + 1e-8).log()).sum()
+        h_cond = -(env2 * (env2 + 1e-8).log()).sum(1).mean()
+        (r2.var(unbiased=False) - self.env_gamma * h_marg
+         + self.env_gamma * h_cond).backward()
+        self.env_opt.step()
 
     # ── bucle ────────────────────────────────────────────────────────────────
 
@@ -1116,13 +1141,24 @@ class TSJTTrainer:
             return float('nan'), float('nan'), float('nan')
         self.model.eval()
         ii = torch.tensor(idx, dtype=torch.long)
+
+        # Las celdas se codifican UNA vez: su representación no depende del
+        # viaje. Los viajes se recorren por bloques porque un conjunto de
+        # prueba de varios cientos de miles de filas no cabe de una sola vez
+        # en la memoria de la tarjeta gráfica.
         h = self.model.encode_cells(*self._cells[cd.city_id],
                                     graph=self._graphs[cd.city_id])
-        o = cd.o_cell[ii].to(self.device)
-        d = cd.d_cell[ii].to(self.device)
-        st_feat = (self._st_embed(cd, ii.to(self.device), o, d, out_of_fold=False)
-                   if self.use_stgnn else None)
-        pred = self.model(h, o, d, cd.feats[ii].to(self.device), st_feat).cpu()
+        preds = []
+        for k in range(0, len(ii), self.eval_chunk):
+            jj = ii[k:k + self.eval_chunk]
+            o = cd.o_cell[jj].to(self.device)
+            d = cd.d_cell[jj].to(self.device)
+            st_feat = (self._st_embed(cd, jj.to(self.device), o, d,
+                                      out_of_fold=False)
+                       if self.use_stgnn else None)
+            preds.append(self.model(h, o, d, cd.feats[jj].to(self.device),
+                                    st_feat).cpu())
+        pred = torch.cat(preds)
         secs = torch.exp(pred * cd.time_log_std + cd.time_log_mean)
         true = cd.raw_times[ii]
         err = secs - true
