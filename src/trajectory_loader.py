@@ -104,15 +104,37 @@ class RegionGrid:
         self.cell_index = {}        # (i, j) -> posición en cell_ids
         self.cell_count = []        # nº de puntos observados por celda
 
-    def fit(self, lats, lons):
-        self.lat0, self.lon0 = float(np.min(lats)), float(np.min(lons))
-        self.lat_max, self.lon_max = float(np.max(lats)), float(np.max(lons))
+    def fit(self, lats, lons, bbox_quantile=0.0):
+        """
+        Ajusta la rejilla al área de estudio.
+
+        bbox_quantile recorta el rectángulo envolvente a los cuantiles
+        indicados en lugar de al mínimo y al máximo. Unos pocos viajes que
+        terminan muy lejos del área urbana estiran el rectángulo y multiplican
+        el número de celdas, la mayoría de ellas vacías o con un único viaje:
+        con celdas de 500 m, un área de 15 x 15 km da del orden de 900 celdas,
+        mientras que un puñado de valores atípicos puede llevarla a varios
+        miles. Los puntos que caen fuera del rectángulo recortado no se
+        descartan: se asignan a la celda del borde más próxima.
+        """
+        if bbox_quantile > 0:
+            q = bbox_quantile
+            self.lat0, self.lat_max = (float(np.quantile(lats, q)),
+                                       float(np.quantile(lats, 1 - q)))
+            self.lon0, self.lon_max = (float(np.quantile(lons, q)),
+                                       float(np.quantile(lons, 1 - q)))
+        else:
+            self.lat0, self.lon0 = float(np.min(lats)), float(np.min(lons))
+            self.lat_max, self.lon_max = float(np.max(lats)), float(np.max(lons))
         mid_lat = (self.lat0 + self.lat_max) / 2.0
         self._dlat = self.cell_m / 110_540.0
         self._dlon = self.cell_m / max(111_320.0 * math.cos(math.radians(mid_lat)), 1.0)
         return self
 
     def key(self, lat, lon):
+        # se recorta al rectángulo: un punto exterior cae en la celda del borde
+        lat = min(max(lat, self.lat0), self.lat_max)
+        lon = min(max(lon, self.lon0), self.lon_max)
         return (int((lat - self.lat0) // self._dlat),
                 int((lon - self.lon0) // self._dlon))
 
@@ -288,7 +310,8 @@ class CityTrips:
     """
 
     def __init__(self, trips, city_name, city_id=0, cell_m=500.0,
-                 urban_ctx=None, verbose=True, corridor_mode='raster'):
+                 urban_ctx=None, verbose=True, corridor_mode='raster',
+                 bbox_quantile=0.0):
         if not trips:
             raise ValueError(f"[{city_name}] no hay viajes válidos.")
         self.city = city_name
@@ -298,7 +321,7 @@ class CityTrips:
 
         lats = np.array([t['o_lat'] for t in trips] + [t['d_lat'] for t in trips])
         lons = np.array([t['o_lon'] for t in trips] + [t['d_lon'] for t in trips])
-        self.grid = RegionGrid(cell_m).fit(lats, lons)
+        self.grid = RegionGrid(cell_m).fit(lats, lons, bbox_quantile)
         for t in trips:
             t['o_cell'] = self.grid.register(t['o_lat'], t['o_lon'])
             t['d_cell'] = self.grid.register(t['d_lat'], t['d_lon'])
