@@ -86,6 +86,7 @@ class CityData:
     d_cell: torch.Tensor           # [N]
     times: torch.Tensor            # [N] log-tiempo normalizado
     raw_times: torch.Tensor        # [N] segundos
+    od_dist: torch.Tensor          # [N] distancia O-D en metros
     cell_poi: torch.Tensor         # [C, F_POI]
     cell_road: torch.Tensor        # [C, F_ROAD]
     cell_mask: torch.Tensor        # [C, 2] disponibilidad POI / vial
@@ -273,6 +274,7 @@ def build_city_data(city, norms, split='chronological', split_kwargs=None,
         d_cell=torch.tensor([t['d_cell'] for t in city.trips], dtype=torch.long),
         times=torch.tensor(times, dtype=torch.float32),
         raw_times=torch.tensor(raw),
+        od_dist=torch.tensor([t['od_dist'] for t in city.trips], dtype=torch.float32),
         cell_poi=torch.tensor(poi), cell_road=torch.tensor(road),
         cell_mask=torch.tensor(mask),
         cell_pattern=torch.tensor(_cell_patterns(city, tr)),
@@ -291,6 +293,40 @@ def global_norms(cities):
     d = np.array([t['od_dist'] for c in cities for t in c.trips])
     lt = np.log(np.maximum([t['travel_time'] for c in cities for t in c.trips], 1.0))
     return float(d.mean()), float(d.std() + 1e-8), float(lt.mean()), float(lt.std() + 1e-8)
+
+
+def metrics(pred, true):
+    """MAE y RMSE en segundos; MAPE y sesgo (mediana del error relativo) en %."""
+    if len(true) == 0:
+        return dict.fromkeys(('mae', 'rmse', 'mape', 'sesgo'), float('nan'))
+    err = pred - true
+    rel = err / np.maximum(true, 1.0)
+    return {'mae': float(np.abs(err).mean()), 'rmse': float(np.sqrt((err ** 2).mean())),
+            'mape': float(np.abs(rel).mean() * 100), 'sesgo': float(np.median(rel) * 100)}
+
+
+DIST_PERCENTILES = [0, 20, 40, 60, 80, 95, 100]
+
+
+def report(pred, true, hour, dist):
+    """Métricas globales, por franja de 6 h y por tramo de distancia (percentiles del test).
+
+    El peor grupo horario se reporta aparte, como en OOD4TTE: un buen promedio
+    puede esconder una hora punta mala.
+    """
+    out = {'total': metrics(pred, true), 'por_hora': {}, 'por_distancia': {}}
+    for b in np.unique(hour // 6):
+        sel = hour // 6 == b
+        out['por_hora'][f"{b * 6:02d}-{b * 6 + 5:02d}h"] = metrics(pred[sel], true[sel])
+    out['peor_hora'] = max(out['por_hora'].values(), key=lambda m: m['mae'])
+    edges = np.percentile(dist, DIST_PERCENTILES)
+    bucket = np.clip(np.searchsorted(edges, dist, side='right') - 1, 0, len(edges) - 2)
+    for b in range(len(edges) - 1):
+        sel = bucket == b
+        label = (f"p{DIST_PERCENTILES[b]:02d}-{DIST_PERCENTILES[b + 1]:<3d} "
+                 f"{edges[b] / 1000:5.1f}-{edges[b + 1] / 1000:5.1f} km")
+        out['por_distancia'][label] = metrics(pred[sel], true[sel])
+    return out
 
 
 def train_dataset(cd):
@@ -379,28 +415,18 @@ class EnvironmentInference(nn.Module):
 
 
 class InvariantGate(nn.Module):
-    """Conserva el k% de dimensiones más estables entre entornos (OOD4TTE).
+    """Compuerta suave por dimensión, z · σ(W z) (OOD4TTE).
 
-    La varianza se guarda como EMA para que la máscara en inferencia no dependa
-    del lote.
+    La versión anterior anulaba siempre el 50 % de las dimensiones con menor
+    varianza entre muestras, que son las que menos información llevan.
     """
 
-    def __init__(self, dim, k_ratio=0.5, momentum=0.05):
+    def __init__(self, dim):
         super().__init__()
         self.proj = nn.Linear(dim, dim)
-        self.k_ratio = k_ratio
-        self.momentum = momentum
-        self.register_buffer('var_ema', torch.ones(dim))
 
     def forward(self, z):
-        p = self.proj(z)
-        if self.training and z.size(0) > 2:
-            perm = torch.randperm(z.size(0), device=z.device)
-            self.var_ema.mul_(1 - self.momentum).add_(
-                self.momentum * (p - p[perm]).var(0, unbiased=False).detach())
-        k = max(int(self.var_ema.numel() * self.k_ratio), 1)
-        thr = torch.topk(self.var_ema, k, largest=False).values.max()
-        return z * torch.sigmoid(p) * (self.var_ema <= thr).float()
+        return z * torch.sigmoid(self.proj(z))
 
 
 def _double_center(x):
@@ -426,20 +452,20 @@ class TravelTimeModel(nn.Module):
         cabeza(gate(Φ) + gate(Ψ))     --> log-tiempo normalizado
 
     st_kind   'dgcn' (UrbanSTGNN por ventanas) o 'tsa' (Crossformer/iTransformer).
-    pace      y = log d + ritmo medio + residuo; el residuo no ve la distancia,
-              que en ood_distance cae fuera del rango de entrenamiento.
+    pace      log t = β·log d + b + residuo. β y b se aprenden y arrancan del
+              ajuste por mínimos cuadrados del train (β ≈ 0,4-0,5 en Porto: los
+              viajes largos son proporcionalmente más rápidos).
     corridor  añade el log-ritmo del corredor O-D (implica pace).
     """
 
     def __init__(self, dim=64, hidden=128, dropout=0.1, bank_size=64, n_env=8,
-                 invariant_ratio=0.5, n_graph_layers=2, st_kind='dgcn',
+                 n_graph_layers=2, st_kind='dgcn',
                  st_window=6, st_dim=32, st_K=2, st_hidden=32, seg_len=6,
                  tsa_layers=2, n_routers=10, pace=False, corridor=False):
         super().__init__()
         # se guarda con el checkpoint para poder reconstruir el modelo
         self.config = dict(dim=dim, hidden=hidden, dropout=dropout, bank_size=bank_size,
-                           n_env=n_env, invariant_ratio=invariant_ratio,
-                           n_graph_layers=n_graph_layers, st_kind=st_kind,
+                           n_env=n_env, n_graph_layers=n_graph_layers, st_kind=st_kind,
                            st_window=st_window, st_dim=st_dim, st_K=st_K,
                            st_hidden=st_hidden, seg_len=seg_len, tsa_layers=tsa_layers,
                            n_routers=n_routers, pace=pace, corridor=corridor)
@@ -467,8 +493,8 @@ class TravelTimeModel(nn.Module):
         self.ctx_enc = nn.Sequential(
             nn.Linear(F_CTX + 2 * st_dim, hidden), nn.ReLU(), nn.Dropout(dropout),
             nn.Linear(hidden, rep), nn.LayerNorm(rep))
-        self.gate_route = InvariantGate(rep, invariant_ratio)
-        self.gate_ctx = InvariantGate(rep, invariant_ratio)
+        self.gate_route = InvariantGate(rep)
+        self.gate_ctx = InvariantGate(rep)
         self.env_infer = EnvironmentInference(rep * 2, n_env)
         self.head = nn.Sequential(
             nn.Linear(rep, hidden), nn.ReLU(), nn.Dropout(dropout),
@@ -481,15 +507,18 @@ class TravelTimeModel(nn.Module):
         if self.pace:
             self.register_buffer('t_mean', torch.tensor(0.0))
             self.register_buffer('t_std', torch.tensor(1.0))
+            self.dist_exp = nn.Parameter(torch.tensor(1.0))
             self.pace_bias = nn.Parameter(torch.tensor(0.0))
 
     def set_norms(self, cd):
-        """Normalización del tiempo y log-ritmo medio (s/m) de entrenamiento."""
+        """Normalización del tiempo y ajuste inicial log t = β·log d + b sobre el train."""
         self.t_mean.fill_(cd.time_log_mean)
         self.t_std.fill_(cd.time_log_std)
         tr = torch.tensor(cd.train_idx)
-        log_pace = torch.log(cd.raw_times[tr]) - self._log_dist(cd.feats[tr])
-        self.pace_bias.data.fill_(float(log_pace.mean()))
+        x, y = self._log_dist(cd.feats[tr]), torch.log(cd.raw_times[tr])
+        beta = ((x - x.mean()) * (y - y.mean())).sum() / ((x - x.mean()) ** 2).sum()
+        self.dist_exp.data.fill_(float(beta))
+        self.pace_bias.data.fill_(float(y.mean() - beta * x.mean()))
 
     @staticmethod
     def _log_dist(feats):
@@ -497,6 +526,8 @@ class TravelTimeModel(nn.Module):
         return torch.log(torch.expm1(feats[:, I_DIST_LOG] * 10.0).clamp(min=1.0))
 
     def _resid_feats(self, feats):
+        """Con pace, el residuo no ve la distancia: fuera del rango de train
+        extrapola mal, y la escala ya la lleva β·log d."""
         if not self.pace:
             return feats
         f = feats.clone()
@@ -520,7 +551,7 @@ class TravelTimeModel(nn.Module):
         out = self.head(self.gate_ctx(phi) + self.gate_route(psi)).squeeze(1)
         if not self.pace:
             return out
-        logt = self._log_dist(feats) + self.pace_bias
+        logt = self.dist_exp * self._log_dist(feats) + self.pace_bias
         if self.corridor is not None:
             logt = logt + self.corridor(h_cells, corr['cells'], corr['mask'], corr['pos'],
                                         self._resid_feats(feats), corr.get('st'))
@@ -539,15 +570,16 @@ class TSJTTrainer:
     objetivo (Target-Skewed Backward) antes de actualizar.
     """
 
-    def __init__(self, model, target, sources, device='cpu', lr_target=2e-4,
-                 lr_source=1e-6, alpha=0.5, beta=0.5, env_lr=1e-3, env_gamma=0.1,
-                 batch_size=128, target_per_batch=4, lambda_st=0.3,
-                 st_mask_ratio=0.3, st_windows=8, eval_chunk=8192):
+    def __init__(self, model, target, sources, device='cpu', lr_target=1e-3,
+                 lr_source=5e-6, alpha=0.5, beta=0.5, env_lr=1e-3, env_gamma=0.1,
+                 batch_size=512, target_per_batch=64, lambda_st=0.3,
+                 st_mask_ratio=0.3, st_windows=8, eval_chunk=8192, val_size=20000):
         """
         alpha, beta    pesos de la varianza del riesgo y del término contrastivo.
         lambda_st      peso de la pérdida de interpolación enmascarada.
         st_mask_ratio  fracción de celdas ocultadas en esa pérdida.
         st_windows     ventanas por paso para esa pérdida (solo 'dgcn').
+        val_size       viajes de validación evaluados por época (muestra fija).
         """
         self.model = model.to(device)
         self.device = device
@@ -555,17 +587,23 @@ class TSJTTrainer:
         self.sources = sources
         self.alpha, self.beta = alpha, beta
         self.env_gamma = env_gamma
+        self.lr = lr_target
         self.lr_ratio = lr_source / lr_target
         self.lambda_st = lambda_st
         self.st_mask_ratio = st_mask_ratio
         self.st_windows = st_windows
         self.eval_chunk = eval_chunk
+        self.batch_size = batch_size
         self.tsa = model.st_kind == 'tsa'
+        # muestra fija: la misma en todas las épocas para que el early stopping sea comparable
+        val = np.asarray(target.val_idx)
+        if len(val) > val_size:
+            val = np.sort(np.random.RandomState(0).choice(val, val_size, replace=False))
+        self.val_idx = val.tolist()
 
         params = [p for n, p in model.named_parameters() if not n.startswith('env_infer.')]
         self.opt = torch.optim.Adam(params, lr=lr_target, weight_decay=1e-4)
         self.env_opt = torch.optim.Adam(model.env_infer.parameters(), lr=env_lr)
-        self.sched = torch.optim.lr_scheduler.ReduceLROnPlateau(self.opt, patience=8, factor=0.5)
 
         if model.pace:
             model.set_norms(target)
@@ -685,7 +723,10 @@ class TSJTTrainer:
         feats, o, d, y, idx = (x.to(self.device) for x in batch)
         h = self.model.encode_cells(cd)
         st_feat, corr = self._context(cd, h, idx, o, d, out_of_fold=True)
-        per = (self.model(h, o, d, feats, st_feat, corr) - y) ** 2
+        # Huber: cuadrática cerca del objetivo y lineal lejos, para no dejarse
+        # arrastrar por viajes anómalos (taxímetro olvidado, desvíos largos)
+        per = F.huber_loss(self.model(h, o, d, feats, st_feat, corr), y,
+                           reduction='none', delta=1.0)
         loss = per.mean()
         extras = {}
         # la varianza entre entornos necesita un lote mínimo
@@ -721,7 +762,8 @@ class TSJTTrainer:
             else:
                 dot = (gs * gt).sum()
                 g_par = dot / (gt * gt).sum().clamp(min=1e-12) * gt
-                keep = 1.0 if dot > 0 else 0.0
+                # (dot > 0) como tensor: un `if` forzaría una sincronización con la GPU por parámetro
+                keep = (dot > 0).to(gt.dtype)
                 p.grad = gt + self.lr_ratio * (gs - g_par + keep * g_par)
 
     def _update_env(self, ex):
@@ -743,11 +785,14 @@ class TSJTTrainer:
         if src_batches:
             g_t = self._grads()
             self.opt.zero_grad(set_to_none=True)
-            loss_s = sum(self._loss_on(cd, b)[0] for cd, b in src_batches) / len(src_batches)
-            loss_s.backward()
+            # un backward por fuente: el gradiente se acumula igual que con la
+            # pérdida media, pero solo hay un grafo de cálculo vivo en la GPU
+            for cd, b in src_batches:
+                (self._loss_on(cd, b)[0] / len(src_batches)).backward()
             self._apply_tsb(g_t, self._grads())
         nn.utils.clip_grad_norm_(self.model.parameters(), 1.0)
         self.opt.step()
+        self.sched.step()
         if 'phi' in ex_t:
             self._update_env(ex_t)
         return loss_t.item(), ex_t
@@ -763,24 +808,32 @@ class TSJTTrainer:
             out.append((self.sources[k], b))
         return out
 
-    def train(self, epochs=60, patience=12, steps_per_epoch=None):
+    def train(self, epochs=30, patience=6, steps_per_epoch=None):
         best, best_w, bad = float('inf'), None, 0
         src_iters = [iter(dl) for dl in self.src_loaders]
+        # una época son train/batch_size pasos con o sin fuentes; si no, con 64
+        # viajes de la objetivo por lote una época tendría 8 veces más pasos
+        n_steps = min(math.ceil(len(self.target.train_idx) / self.batch_size),
+                      len(self.tgt_loader), steps_per_epoch or len(self.tgt_loader))
+        # calentamiento corto y decaimiento coseno a lo largo de todo el entrenamiento
+        self.sched = torch.optim.lr_scheduler.OneCycleLR(
+            self.opt, max_lr=self.lr, total_steps=epochs * n_steps, pct_start=0.05,
+            cycle_momentum=False)
 
         for ep in range(1, epochs + 1):
             self.model.train()
             losses, interps = [], []
             for step, tb in enumerate(self.tgt_loader):
-                if steps_per_epoch and step >= steps_per_epoch:
+                if step >= n_steps:
                     break
                 loss, ex = self._step(tb, self._next_source_batches(src_iters))
                 losses.append(loss)
                 interps.append(ex['interp'])
 
-            mae, rmse, mape = self.evaluate(self.target, self.target.val_idx)
-            self.sched.step(mae)
+            val = self.evaluate(self.target, self.val_idx)
+            mae = val['mae']
             for k, v in (('train', np.mean(losses)), ('interp', np.mean(interps)),
-                         ('val_mae', mae), ('val_rmse', rmse), ('val_mape', mape)):
+                         ('val_mae', mae), ('val_rmse', val['rmse']), ('val_mape', val['mape'])):
                 self.history[k].append(float(v))
 
             if mae < best:
@@ -790,7 +843,7 @@ class TSJTTrainer:
                 bad += 1
             if ep % 5 == 0:
                 print(f"Época {ep:3d} | loss={self.history['train'][-1]:.4f}  "
-                      f"MAE={mae:6.1f}s  RMSE={rmse:6.1f}s  MAPE={mape:5.2f}%  "
+                      f"MAE={mae:6.1f}s  RMSE={val['rmse']:6.1f}s  MAPE={val['mape']:5.2f}%  "
                       f"interp={self.history['interp'][-1]:.3f}")
             if bad >= patience:
                 print(f"Early stopping en época {ep}")
@@ -801,38 +854,22 @@ class TSJTTrainer:
         return self.history
 
     @torch.no_grad()
-    def evaluate(self, cd, idx):
-        """MAE y RMSE en segundos, MAPE en %."""
-        if not idx:
-            return float('nan'), float('nan'), float('nan')
+    def predict(self, cd, idx):
+        """Tiempo de viaje predicho en segundos (numpy) para los viajes idx."""
         self.model.eval()
         h = self.model.encode_cells(cd)
-        ii = torch.tensor(idx, dtype=torch.long)
         preds = []
-        for chunk in ii.split(self.eval_chunk):
+        for chunk in torch.tensor(idx, dtype=torch.long).split(self.eval_chunk):
             o = cd.o_cell[chunk].to(self.device)
             d = cd.d_cell[chunk].to(self.device)
             st_feat, corr = self._context(cd, h, chunk.to(self.device), o, d, out_of_fold=False)
             preds.append(self.model(h, o, d, cd.feats[chunk].to(self.device), st_feat, corr).cpu())
-        secs = torch.exp(torch.cat(preds) * cd.time_log_std + cd.time_log_mean)
-        true = cd.raw_times[ii]
-        err = secs - true
-        return (float(err.abs().mean()),
-                float(torch.sqrt((err ** 2).mean())),
-                float((err.abs() / true.clamp(min=1)).mean() * 100))
+        if not preds:
+            return np.zeros(0)
+        return torch.exp(torch.cat(preds) * cd.time_log_std + cd.time_log_mean).numpy()
 
-    @torch.no_grad()
-    def evaluate_by_hour(self, cd, idx):
-        """Métricas por franja de 6 h y el peor grupo, como reporta OOD4TTE."""
-        buckets = {}
-        hours = (cd.st.how[torch.tensor(idx, device=self.device)] % 24).tolist()
-        for i, h in zip(idx, hours):
-            buckets.setdefault(h // 6, []).append(i)
-        out = {f"{b * 6:02d}-{b * 6 + 5:02d}h": self.evaluate(cd, ids)
-               for b, ids in sorted(buckets.items())}
-        if out:
-            out['peor_grupo'] = max(out.values(), key=lambda m: m[0])
-        return out
+    def evaluate(self, cd, idx):
+        return metrics(self.predict(cd, idx), cd.raw_times[idx].numpy())
 
     def save(self, path):
         torch.save({'model_state': self.model.state_dict(),

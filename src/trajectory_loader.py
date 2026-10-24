@@ -24,6 +24,12 @@ import urban_context as uc
 
 SAMPLING_INTERVAL_S = 15.0
 
+# La rejilla cubre el rectángulo entre los cuantiles 0,1 % y 99,9 % de los
+# extremos de viaje; los puntos de fuera van a la celda del borde. Con el
+# rectángulo completo, unos pocos GPS atípicos estiraban Porto a 400 x 266 km
+# y 4.951 celdas casi vacías, y el módulo espaciotemporal escala con ellas.
+BBOX_QUANTILE = 0.001
+
 CALL_TYPES = ['A', 'B', 'C']       # A: central, B: parada, C: aleatorio
 DAY_TYPES = ['A', 'B', 'C']        # A: normal, B: víspera de festivo, C: festivo
 
@@ -36,9 +42,9 @@ class RegionGrid:
         self.cell_ids = []          # (i, j) de cada celda ocupada
         self.cell_index = {}        # (i, j) -> posición en cell_ids
 
-    def fit(self, lats, lons):
-        self.lat0, self.lon0 = float(np.min(lats)), float(np.min(lons))
-        self.lat_max, self.lon_max = float(np.max(lats)), float(np.max(lons))
+    def fit(self, lats, lons, quantile=BBOX_QUANTILE):
+        self.lat0, self.lat_max = (float(v) for v in np.quantile(lats, [quantile, 1 - quantile]))
+        self.lon0, self.lon_max = (float(v) for v in np.quantile(lons, [quantile, 1 - quantile]))
         mid_lat = (self.lat0 + self.lat_max) / 2.0
         self._dlat = self.cell_m / 110_540.0
         self._dlon = self.cell_m / max(111_320.0 * math.cos(math.radians(mid_lat)), 1.0)
@@ -249,18 +255,18 @@ class CityTrips:
     # entrenamiento; con todos se filtraría la estructura del test.
 
     def _knn_pairs(self, k, max_radius_m):
-        C = self.grid.n_cells
-        cent = [self.grid.centroid(i) for i in range(C)]
-        for i in range(C):
-            near = []
-            for j in range(C):
-                if i != j:
-                    dist = uc.haversine(*cent[i], *cent[j])
-                    if dist <= max_radius_m:
-                        near.append((dist, j))
-            near.sort()
-            for dist, j in near[:k]:
-                yield i, j, dist
+        """(i, j, distancia) para los k vecinos más cercanos de cada celda dentro del radio."""
+        lat, lon = np.radians(np.array([self.grid.centroid(i) for i in range(self.grid.n_cells)])).T
+        a = (np.sin((lat[:, None] - lat[None]) / 2) ** 2
+             + np.cos(lat[:, None]) * np.cos(lat[None]) * np.sin((lon[:, None] - lon[None]) / 2) ** 2)
+        dist = 6_371_000.0 * 2 * np.arcsin(np.sqrt(np.clip(a, 0.0, 1.0)))
+        np.fill_diagonal(dist, np.inf)
+        dist[dist > max_radius_m] = np.inf
+        near = np.argsort(dist, axis=1, kind='stable')[:, :k]
+        for i, row in enumerate(near):
+            for j in row:
+                if np.isfinite(dist[i, j]):
+                    yield i, int(j), float(dist[i, j])
 
     def _od_flows(self, train_idx):
         flow = defaultdict(int)

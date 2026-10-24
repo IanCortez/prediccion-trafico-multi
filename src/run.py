@@ -22,6 +22,7 @@ import random
 import numpy as np
 import torch
 
+import baselines as B
 import compat
 import trajectory_loader as tl
 import tte_model as M
@@ -34,7 +35,8 @@ SEED = 0
 
 def load_city(name, args):
     suffix = f'_n{args.max_trips}' if args.max_trips else ''
-    cache = os.path.join(CACHE_DIR, f'{name}_c{int(args.cell_m)}_raster{suffix}.pkl')
+    # el nombre cambia con la rejilla recortada (BBOX_QUANTILE): las cachés viejas no se reutilizan
+    cache = os.path.join(CACHE_DIR, f'{name}_c{int(args.cell_m)}_q{tl.BBOX_QUANTILE:g}{suffix}.pkl')
     if os.path.exists(cache):
         print(f"[{name}] desde caché {cache}")
         with open(cache, 'rb') as f:
@@ -81,10 +83,11 @@ def main():
                     help='predice log d + log-ritmo (extrapola en distancia)')
     ap.add_argument('--corridor', action='store_true',
                     help='añade el ritmo del corredor O-D (implica --pace)')
-    ap.add_argument('--epochs', type=int, default=60)
-    ap.add_argument('--patience', type=int, default=12)
-    ap.add_argument('--steps-per-epoch', type=int, default=200)
-    ap.add_argument('--batch', type=int, default=128)
+    ap.add_argument('--epochs', type=int, default=30)
+    ap.add_argument('--patience', type=int, default=6)
+    ap.add_argument('--steps-per-epoch', type=int, default=None,
+                    help='tope de pasos por época (por defecto, la época completa)')
+    ap.add_argument('--batch', type=int, default=512)
     ap.add_argument('--dim', type=int, default=64)
     ap.add_argument('--hidden', type=int, default=128)
     ap.add_argument('--out', default='runs')
@@ -115,20 +118,40 @@ def main():
     tr = M.TSJTTrainer(model, target, sources, device='cuda', batch_size=args.batch)
     tr.train(epochs=args.epochs, patience=args.patience, steps_per_epoch=args.steps_per_epoch)
 
-    mae, rmse, mape = tr.evaluate(target, target.test_idx)
-    print(f"\nTEST {target.city} (split={args.split})")
-    print(f"  MAE {mae:8.1f} s | RMSE {rmse:8.1f} s | MAPE {mape:6.2f} %")
-    by_hour = tr.evaluate_by_hour(target, target.test_idx)
-    for k, v in by_hour.items():
-        print(f"  {k:<12} MAE {v[0]:7.1f} s | MAPE {v[2]:6.2f} %")
+    # el modelo y los baselines se evalúan sobre el mismo test y con el mismo train
+    test = np.asarray(target.test_idx)
+    true = target.raw_times[test].numpy()
+    hour = target.st.how.cpu().numpy()[test] % 24
+    dist = target.od_dist[test].numpy()
+    preds = {'modelo': tr.predict(target, target.test_idx)}
+    preds.update(B.predict(tgt, target.train_idx, target.test_idx))
+    results = {name: M.report(p, true, hour, dist) for name, p in preds.items()}
+    print_report(results, target.city, args.split)
 
     variant = args.st_kind + ('_corr' if args.corridor else '_pace' if args.pace else '')
     tag = f"{args.city}_{args.split}_{variant}"
     os.makedirs(args.out, exist_ok=True)
     tr.save(os.path.join(args.out, f'{tag}.pt'))
     with compat.open_text(os.path.join(args.out, f'{tag}.json'), 'w') as f:
-        json.dump({'mae': mae, 'rmse': rmse, 'mape': mape, 'por_hora': by_hour,
-                   'args': vars(args)}, f, indent=2)
+        json.dump({**results['modelo']['total'], 'resultados': results, 'args': vars(args)},
+                  f, indent=2)
+
+
+def print_report(results, city, split):
+    print(f"\nTEST {city} (split={split})")
+    print(f"  {'':10s}{'MAE (s)':>9s}{'RMSE (s)':>10s}{'MAPE %':>8s}{'sesgo %':>9s}"
+          f"{'peor hora MAE':>15s}")
+    for name, r in results.items():
+        t = r['total']
+        print(f"  {name:10s}{t['mae']:9.1f}{t['rmse']:10.1f}{t['mape']:8.2f}{t['sesgo']:+9.1f}"
+              f"{r['peor_hora']['mae']:15.1f}")
+    names = list(results)
+    print("\n  MAE (s) / sesgo % por tramo de distancia")
+    print(f"  {'':30s}" + ''.join(f"{n:>19s}" for n in names))
+    for label in results['modelo']['por_distancia']:
+        row = ''.join(f"{results[n]['por_distancia'][label]['mae']:10.1f} / "
+                      f"{results[n]['por_distancia'][label]['sesgo']:+6.1f}" for n in names)
+        print(f"  {label:30s}{row}")
 
 
 if __name__ == '__main__':
