@@ -36,6 +36,8 @@ ROUTE_NAMES = [
     'o_radial', 'd_radial', 'radial_delta',
     'inter_per_km',
     'corr_arterial', 'corr_colectora', 'corr_local', 'corr_peatonal',
+    # red vial OSM entre las celdas de O y D: medidas relativas, 0 sin red (net_mask)
+    'net_circuity', 'net_pace', 'net_mask',
 ]
 # CONTEXTO (C): cuándo y en qué condiciones ocurre el viaje.
 CTX_NAMES = [
@@ -87,6 +89,7 @@ class CityData:
     times: torch.Tensor            # [N] log-tiempo normalizado
     raw_times: torch.Tensor        # [N] segundos
     od_dist: torch.Tensor          # [N] distancia O-D en metros
+    route_circuity: torch.Tensor   # [N] log(longitud real / distancia O-D): SOLO objetivo auxiliar
     cell_poi: torch.Tensor         # [C, F_POI]
     cell_road: torch.Tensor        # [C, F_ROAD]
     cell_mask: torch.Tensor        # [C, 2] disponibilidad POI / vial
@@ -99,11 +102,8 @@ class CityData:
     test_idx: List[int] = field(default_factory=list)
     time_log_mean: float = 0.0
     time_log_std: float = 1.0
-    # corredor O-D (solo con --corridor, ver st_attention.attach_corridors)
-    corr_cells: Optional[torch.Tensor] = None
-    corr_mask: Optional[torch.Tensor] = None
-    corr_pos: Optional[torch.Tensor] = None
-    pair_of_trip: Optional[torch.Tensor] = None
+    # (dist_mean, dist_std, time_log_mean, time_log_std) calculadas con el train de la objetivo
+    norms: Optional[tuple] = None
 
     @property
     def n_cells(self):
@@ -113,9 +113,8 @@ class CityData:
         """Mueve lo que se usa por ciudad. Los tensores por viaje (feats,
         o_cell, ...) se quedan en CPU y viajan por lotes."""
         for name in ('cell_poi', 'cell_road', 'cell_mask', 'cell_pattern', 'edge_weight',
-                     'corr_cells', 'corr_mask', 'corr_pos', 'pair_of_trip'):
-            if getattr(self, name) is not None:
-                setattr(self, name, getattr(self, name).to(device))
+                     'route_circuity'):
+            setattr(self, name, getattr(self, name).to(device))
         self.edge_index = tuple(e.to(device) for e in self.edge_index)
         self.st = self.st.to(device)
         return self
@@ -126,7 +125,10 @@ class CityData:
 # ---------------------------------------------------------------------------
 
 def hour_and_dow(ts):
-    """Hora del día y día de la semana con lunes = 0 (el 1-1-1970 fue jueves)."""
+    """Hora del día y día de la semana (lunes = 0; el 1-1-1970 fue jueves).
+
+    ts debe ser la hora local de la ciudad (`local_ts`), no el timestamp UTC.
+    """
     return (ts // 3600) % 24, ((ts // 86400) + 3) % 7
 
 
@@ -143,7 +145,7 @@ def _trip_vector(t, city, dist_mean, dist_std):
     d = t['od_dist']
     o_rad = min(uc.haversine(t['o_lat'], t['o_lon'], city.lat_c, city.lon_c) / city.radius, 2.0)
     d_rad = min(uc.haversine(t['d_lat'], t['d_lon'], city.lat_c, city.lon_c) / city.radius, 2.0)
-    hour, dow = hour_and_dow(t['timestamp'])
+    hour, dow = hour_and_dow(t['local_ts'])
     f = {
         'dist_norm': (d - dist_mean) / dist_std,
         'dist_log': math.log1p(d) / 10.0,
@@ -170,7 +172,7 @@ def _cell_patterns(city, train_idx):
     n_o, n_d = np.zeros(C), np.zeros(C)
     for i in train_idx:
         t = city.trips[i]
-        h = hour_and_dow(t['timestamp'])[0]
+        h = hour_and_dow(t['local_ts'])[0]
         prof[t['o_cell'], h] += 1
         prof[t['d_cell'], h] += 1
         n_o[t['o_cell']] += 1
@@ -195,7 +197,7 @@ def build_st_tensors(city, train_idx, graph_k=8, n_folds=2, seed=0):
     trips = city.trips
     tr = np.asarray(train_idx, dtype=np.int64)
 
-    hd = np.array([hour_and_dow(t['timestamp']) for t in trips], dtype=np.int64)
+    hd = np.array([hour_and_dow(t['local_ts']) for t in trips], dtype=np.int64)
     how = hd[:, 1] * 24 + hd[:, 0]                  # hora de la semana en [0, 168)
     o = np.array([t['o_cell'] for t in trips], dtype=np.int64)
     d = np.array([t['d_cell'] for t in trips], dtype=np.int64)
@@ -236,12 +238,41 @@ def build_st_tensors(city, train_idx, graph_k=8, n_folds=2, seed=0):
                      P_fwd=P_fwd, P_bwd=P_bwd)
 
 
-def build_city_data(city, norms, split='chronological', split_kwargs=None,
-                    graph_k=8, corridor_k=None, target_fraction=None):
+def _route_circuity(trips):
+    """log(longitud del recorrido real / distancia en línea recta), recortado a [0, 2].
+
+    Viene de la trayectoria, así que es la etiqueta disfrazada: solo se usa como
+    objetivo auxiliar de entrenamiento y nunca como entrada. NaN si la caché no
+    trae la longitud del recorrido.
+    """
+    r = np.array([t.get('route_len', np.nan) / t['od_dist'] for t in trips])
+    return np.clip(np.log(np.maximum(r, 1.0)), 0.0, 2.0).astype(np.float32)
+
+
+def _standardize(x):
+    """Z-score de cada feature de celda dentro de la ciudad.
+
+    Una sonda lineal distinguía Porto de Pekín con un 96 % de acierto usando
+    solo las features crudas de celda: sus niveles absolutos (mezcla de POIs,
+    perfil horario) son una huella de la ciudad. Con z-score cada celda se
+    describe respecto de las demás de su ciudad, que es lo que se puede
+    transferir. También pone las tres modalidades en la misma escala: el perfil
+    horario (24 valores de ~0,04) apenas pesaba frente a POI y red vial.
+    Una columna constante (por ejemplo, una modalidad sin datos OSM) queda en 0.
+    """
+    std = x.std(axis=0)
+    return np.where(std > 1e-6, (x - x.mean(axis=0)) / np.maximum(std, 1e-6), 0.0).astype(np.float32)
+
+
+def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
+                    graph_k=8, target_fraction=None):
     """Tensores de una ciudad. target_fraction recorta el train ANTES de
-    construir grafo, patrones y tensores ST, para que el régimen few-shot no
-    vea información de los viajes descartados."""
-    dist_mean, dist_std, time_log_mean, time_log_std = norms
+    construir grafo, patrones, tensores ST y normalización, para que el régimen
+    few-shot no vea información de los viajes descartados.
+
+    norms=None calcula la normalización con el train de esta ciudad (la objetivo);
+    las fuentes reciben las de la objetivo (`cd.norms`).
+    """
     split_kwargs = split_kwargs or {}
     if split == 'chronological':
         tr, va, te = city.chronological_split(**split_kwargs)
@@ -253,6 +284,9 @@ def build_city_data(city, norms, split='chronological', split_kwargs=None,
         raise ValueError(f"split desconocido: {split!r}")
     if target_fraction:
         tr = tr[:max(int(len(tr) * target_fraction), 8)]
+    if norms is None:
+        norms = train_norms(city, tr)
+    dist_mean, dist_std, time_log_mean, time_log_std = norms
 
     feats = np.array([_trip_vector(t, city, dist_mean, dist_std) for t in city.trips],
                      dtype=np.float32)
@@ -275,57 +309,69 @@ def build_city_data(city, norms, split='chronological', split_kwargs=None,
         times=torch.tensor(times, dtype=torch.float32),
         raw_times=torch.tensor(raw),
         od_dist=torch.tensor([t['od_dist'] for t in city.trips], dtype=torch.float32),
-        cell_poi=torch.tensor(poi), cell_road=torch.tensor(road),
+        route_circuity=torch.tensor(_route_circuity(city.trips)),
+        cell_poi=torch.tensor(_standardize(poi)), cell_road=torch.tensor(_standardize(road)),
         cell_mask=torch.tensor(mask),
-        cell_pattern=torch.tensor(_cell_patterns(city, tr)),
+        cell_pattern=torch.tensor(_standardize(_cell_patterns(city, tr))),
         edge_index=(torch.tensor(src, dtype=torch.long), torch.tensor(dst, dtype=torch.long)),
         edge_weight=torch.tensor(val, dtype=torch.float32),
         st=build_st_tensors(city, tr, graph_k),
         train_idx=tr, val_idx=va, test_idx=te,
-        time_log_mean=time_log_mean, time_log_std=time_log_std)
-    if corridor_k:
-        S.attach_corridors(cd, city, K=corridor_k)
+        time_log_mean=time_log_mean, time_log_std=time_log_std, norms=norms)
     return cd
 
 
-def global_norms(cities):
-    """Normalización de distancia y log-tiempo compartida por todas las ciudades."""
-    d = np.array([t['od_dist'] for c in cities for t in c.trips])
-    lt = np.log(np.maximum([t['travel_time'] for c in cities for t in c.trips], 1.0))
+def train_norms(city, train_idx):
+    """Media y desviación de la distancia O-D y del log-tiempo, solo con viajes de train.
+
+    Con todos los viajes, la normalización incluía las etiquetas del test y, en
+    few-shot, las de los viajes descartados: con 800 viajes de train el modelo
+    recibía la duración media de 100.000.
+    """
+    trips = [city.trips[i] for i in train_idx]
+    d = np.array([t['od_dist'] for t in trips])
+    lt = np.log(np.maximum([t['travel_time'] for t in trips], 1.0))
     return float(d.mean()), float(d.std() + 1e-8), float(lt.mean()), float(lt.std() + 1e-8)
 
 
 def metrics(pred, true):
-    """MAE y RMSE en segundos; MAPE y sesgo (mediana del error relativo) en %."""
+    """MAE, RMSE y MdAE (mediana del error absoluto) en segundos; MAPE y sesgo
+    (mediana del error relativo) en %. MdAE no se mueve con unos pocos viajes de
+    duración absurda, que en datos sin marca de ocupado dominan MAE y RMSE."""
     if len(true) == 0:
-        return dict.fromkeys(('mae', 'rmse', 'mape', 'sesgo'), float('nan'))
+        return dict.fromkeys(('mae', 'rmse', 'mdae', 'mape', 'sesgo'), float('nan'))
     err = pred - true
     rel = err / np.maximum(true, 1.0)
     return {'mae': float(np.abs(err).mean()), 'rmse': float(np.sqrt((err ** 2).mean())),
+            'mdae': float(np.median(np.abs(err))),
             'mape': float(np.abs(rel).mean() * 100), 'sesgo': float(np.median(rel) * 100)}
 
 
-DIST_PERCENTILES = [0, 20, 40, 60, 80, 95, 100]
+# franjas fijas en km: significan lo mismo en cualquier ciudad, split o
+# fracción de datos, y permiten comparar experimentos
+DIST_BANDS_KM = [0, 2, 5, 10, 20, None]
+
+
+def band_label(lo, hi):
+    return f"{lo}-{hi} km" if hi is not None else f"> {lo} km"
 
 
 def report(pred, true, hour, dist):
-    """Métricas globales, por franja de 6 h y por tramo de distancia (percentiles del test).
+    """Métricas globales, por franja de 6 h y por franja fija de distancia en km.
 
     El peor grupo horario se reporta aparte, como en OOD4TTE: un buen promedio
     puede esconder una hora punta mala.
     """
-    out = {'total': metrics(pred, true), 'por_hora': {}, 'por_distancia': {}}
+    out = {'total': metrics(pred, true), 'por_hora': {}, 'por_franja_km': {}}
+    km = dist / 1000
+    for lo, hi in zip(DIST_BANDS_KM[:-1], DIST_BANDS_KM[1:]):
+        sel = (km >= lo) & ((km < hi) if hi is not None else True)
+        out['por_franja_km'][band_label(lo, hi)] = {**metrics(pred[sel], true[sel]),
+                                                     'n': int(sel.sum())}
     for b in np.unique(hour // 6):
         sel = hour // 6 == b
         out['por_hora'][f"{b * 6:02d}-{b * 6 + 5:02d}h"] = metrics(pred[sel], true[sel])
     out['peor_hora'] = max(out['por_hora'].values(), key=lambda m: m['mae'])
-    edges = np.percentile(dist, DIST_PERCENTILES)
-    bucket = np.clip(np.searchsorted(edges, dist, side='right') - 1, 0, len(edges) - 2)
-    for b in range(len(edges) - 1):
-        sel = bucket == b
-        label = (f"p{DIST_PERCENTILES[b]:02d}-{DIST_PERCENTILES[b + 1]:<3d} "
-                 f"{edges[b] / 1000:5.1f}-{edges[b + 1] / 1000:5.1f} km")
-        out['por_distancia'][label] = metrics(pred[sel], true[sel])
     return out
 
 
@@ -429,6 +475,16 @@ class InvariantGate(nn.Module):
         return z * torch.sigmoid(self.proj(z))
 
 
+def mmd_rbf(x, y):
+    """MMD² con una mezcla de núcleos gaussianos (ancho = mediana de distancias x 0,5/1/2)."""
+    z = torch.cat([x, y])
+    d2 = torch.cdist(z, z).pow(2)
+    bw = d2.detach().median().clamp(min=1e-6)
+    k = sum(torch.exp(-d2 / (bw * s)) for s in (0.5, 1.0, 2.0))
+    n = len(x)
+    return k[:n, :n].mean() + k[n:, n:].mean() - 2 * k[:n, n:].mean()
+
+
 def _double_center(x):
     d = torch.cdist(x, x)
     return d - d.mean(0, keepdim=True) - d.mean(1, keepdim=True) + d.mean()
@@ -451,26 +507,22 @@ class TravelTimeModel(nn.Module):
         [CONTEXTO | estado ST de O,D] --> Φ   (contexto)
         cabeza(gate(Φ) + gate(Ψ))     --> log-tiempo normalizado
 
-    st_kind   'dgcn' (UrbanSTGNN por ventanas) o 'tsa' (Crossformer/iTransformer).
+    El estado ST sale de UrbanSTGNN (DGCN por ventanas de st_window horas).
     pace      log t = β·log d + b + residuo. β y b se aprenden y arrancan del
               ajuste por mínimos cuadrados del train (β ≈ 0,4-0,5 en Porto: los
               viajes largos son proporcionalmente más rápidos).
-    corridor  añade el log-ritmo del corredor O-D (implica pace).
     """
 
     def __init__(self, dim=64, hidden=128, dropout=0.1, bank_size=64, n_env=8,
-                 n_graph_layers=2, st_kind='dgcn',
-                 st_window=6, st_dim=32, st_K=2, st_hidden=32, seg_len=6,
-                 tsa_layers=2, n_routers=10, pace=False, corridor=False):
+                 n_graph_layers=2, st_window=6, st_dim=32, st_K=2, st_hidden=32,
+                 pace=False):
         super().__init__()
         # se guarda con el checkpoint para poder reconstruir el modelo
         self.config = dict(dim=dim, hidden=hidden, dropout=dropout, bank_size=bank_size,
-                           n_env=n_env, n_graph_layers=n_graph_layers, st_kind=st_kind,
+                           n_env=n_env, n_graph_layers=n_graph_layers,
                            st_window=st_window, st_dim=st_dim, st_K=st_K,
-                           st_hidden=st_hidden, seg_len=seg_len, tsa_layers=tsa_layers,
-                           n_routers=n_routers, pace=pace, corridor=corridor)
-        self.st_kind = st_kind
-        self.pace = pace or corridor
+                           st_hidden=st_hidden, pace=pace)
+        self.pace = pace
 
         self.cell_enc = CellEncoder(dim, dropout)
         # el grafo va antes del banco: propagar después difuminaría los prompts
@@ -479,20 +531,18 @@ class TravelTimeModel(nn.Module):
         self.npm = NodePromptingModule(dim, bank_size)
 
         # el estado espaciotemporal depende de la hora, así que va en el contexto
-        if st_kind == 'tsa':
-            self.stgnn = S.TSAEncoder(dim, seg_len=seg_len, d=dim, out=st_dim,
-                                      n_layers=tsa_layers, n_routers=n_routers,
-                                      dropout=dropout, K=st_K)
-        else:
-            self.stgnn = S.UrbanSTGNN(st_window, st_hidden, st_dim, st_K, dropout)
+        self.stgnn = S.UrbanSTGNN(st_window, st_hidden, st_dim, st_K, dropout)
 
         rep = hidden // 2
+        # entrada de ruta: h_o, h_d, su producto (interacción O x D) y la geometría
         self.route_enc = nn.Sequential(
-            nn.Linear(dim * 2 + F_ROUTE, hidden), nn.ReLU(), nn.Dropout(dropout),
+            nn.Linear(dim * 3 + F_ROUTE, hidden), nn.ReLU(), nn.Dropout(dropout),
             nn.Linear(hidden, rep), nn.LayerNorm(rep))
         self.ctx_enc = nn.Sequential(
             nn.Linear(F_CTX + 2 * st_dim, hidden), nn.ReLU(), nn.Dropout(dropout),
             nn.Linear(hidden, rep), nn.LayerNorm(rep))
+        # objetivo auxiliar: circuidad real del recorrido, predicha desde la ruta
+        self.aux_circuity = nn.Linear(rep, 1)
         self.gate_route = InvariantGate(rep)
         self.gate_ctx = InvariantGate(rep)
         self.env_infer = EnvironmentInference(rep * 2, n_env)
@@ -501,9 +551,6 @@ class TravelTimeModel(nn.Module):
             nn.Linear(hidden, hidden // 2), nn.ReLU(),
             nn.Linear(hidden // 2, 1))
 
-        self.corridor = (S.CorridorPace(dim, st_dim if st_kind == 'tsa' else 0,
-                                        F_ROUTE + F_CTX, d=dim, dropout=dropout)
-                         if corridor else None)
         if self.pace:
             self.register_buffer('t_mean', torch.tensor(0.0))
             self.register_buffer('t_std', torch.tensor(1.0))
@@ -542,19 +589,20 @@ class TravelTimeModel(nn.Module):
 
     def represent(self, h_cells, o_idx, d_idx, feats, st):
         feats = self._resid_feats(feats)
-        psi = self.route_enc(torch.cat([h_cells[o_idx], h_cells[d_idx], feats[:, SL_ROUTE]], 1))
+        h_o, h_d = h_cells[o_idx], h_cells[d_idx]
+        # el producto h_o * h_d deja expresar qué tiene de particular cada par de
+        # celdas sin memorizar el par: se calcula desde embeddings transferibles,
+        # a diferencia de un historial por par O-D, que sería una tabla por ciudad
+        psi = self.route_enc(torch.cat([h_o, h_d, h_o * h_d, feats[:, SL_ROUTE]], 1))
         phi = self.ctx_enc(torch.cat([feats[:, SL_CTX], st], 1))
         return phi, psi
 
-    def forward(self, h_cells, o_idx, d_idx, feats, st, corr=None):
+    def forward(self, h_cells, o_idx, d_idx, feats, st):
         phi, psi = self.represent(h_cells, o_idx, d_idx, feats, st)
         out = self.head(self.gate_ctx(phi) + self.gate_route(psi)).squeeze(1)
         if not self.pace:
             return out
         logt = self.dist_exp * self._log_dist(feats) + self.pace_bias
-        if self.corridor is not None:
-            logt = logt + self.corridor(h_cells, corr['cells'], corr['mask'], corr['pos'],
-                                        self._resid_feats(feats), corr.get('st'))
         return (logt - self.t_mean) / self.t_std + out
 
 
@@ -565,21 +613,28 @@ class TravelTimeModel(nn.Module):
 class TSJTTrainer:
     """Entrenamiento conjunto en una etapa (TSJT) con los términos de OOD4TTE.
 
-    Cada paso usa `target_per_batch` viajes de la ciudad objetivo y el resto de
-    las fuentes. El gradiente de las fuentes se filtra contra el de la
-    objetivo (Target-Skewed Backward) antes de actualizar.
+    Cada paso usa un lote de la ciudad objetivo y otro del mismo tamaño
+    repartido entre las fuentes. El gradiente de las fuentes se filtra contra
+    el de la objetivo (Target-Skewed Backward) antes de actualizar.
     """
 
     def __init__(self, model, target, sources, device='cpu', lr_target=1e-3,
-                 lr_source=5e-6, alpha=0.5, beta=0.5, env_lr=1e-3, env_gamma=0.1,
-                 batch_size=512, target_per_batch=64, lambda_st=0.3,
-                 st_mask_ratio=0.3, st_windows=8, eval_chunk=8192, val_size=20000):
+                 source_ratio=1.0, alpha=0.5, beta=0.5, env_lr=1e-3, env_gamma=0.1,
+                 batch_size=512, lambda_st=0.3, st_mask_ratio=0.3, st_windows=8,
+                 eval_chunk=8192, val_size=20000, weight_decay=1e-4, lambda_align=0.1,
+                 lambda_aux=0.1):
         """
+        source_ratio   tasa de aprendizaje del paso de las fuentes respecto de la
+                       de la objetivo (lr_source / lr_target en TSJT). Con 1 se
+                       obtuvo el mejor resultado en few-shot (ver docs/fase_E).
         alpha, beta    pesos de la varianza del riesgo y del término contrastivo.
         lambda_st      peso de la pérdida de interpolación enmascarada.
         st_mask_ratio  fracción de celdas ocultadas en esa pérdida.
         st_windows     ventanas por paso para esa pérdida (solo 'dgcn').
         val_size       viajes de validación evaluados por época (muestra fija).
+        lambda_align   peso del término MMD que alinea los embeddings de celda de
+                       la objetivo con los de las fuentes (solo con fuentes).
+        lambda_aux     peso del objetivo auxiliar de circuidad del recorrido real.
         """
         self.model = model.to(device)
         self.device = device
@@ -588,13 +643,14 @@ class TSJTTrainer:
         self.alpha, self.beta = alpha, beta
         self.env_gamma = env_gamma
         self.lr = lr_target
-        self.lr_ratio = lr_source / lr_target
+        self.lr_ratio = source_ratio
+        self.lambda_align = lambda_align
+        self.lambda_aux = lambda_aux
         self.lambda_st = lambda_st
         self.st_mask_ratio = st_mask_ratio
         self.st_windows = st_windows
         self.eval_chunk = eval_chunk
         self.batch_size = batch_size
-        self.tsa = model.st_kind == 'tsa'
         # muestra fija: la misma en todas las épocas para que el early stopping sea comparable
         val = np.asarray(target.val_idx)
         if len(val) > val_size:
@@ -602,25 +658,29 @@ class TSJTTrainer:
         self.val_idx = val.tolist()
 
         params = [p for n, p in model.named_parameters() if not n.startswith('env_infer.')]
-        self.opt = torch.optim.Adam(params, lr=lr_target, weight_decay=1e-4)
+        # AdamW: con Adam el decaimiento se sumaba al gradiente y se normalizaba, así
+        # que los parámetros con poca señal (banco de prompts, su proyección de
+        # consulta, el vector de modalidad ausente) se empujaban a cero a ritmo ~lr
+        self.opt = torch.optim.AdamW(params, lr=lr_target, weight_decay=weight_decay)
         self.env_opt = torch.optim.Adam(model.env_infer.parameters(), lr=env_lr)
+        # optimizador propio del gradiente filtrado de las fuentes (ver _step)
+        self.src_opt = torch.optim.AdamW(params, lr=lr_target * source_ratio, weight_decay=0.0)
 
         if model.pace:
             model.set_norms(target)
-        if not self.tsa:
-            self._win = S.window_index(model.stgnn.window).to(device)
+        self._win = S.window_index(model.stgnn.window).to(device)
 
         for cd in [target] + sources:
-            if model.corridor is not None and cd.corr_cells is None:
-                raise ValueError(f"{cd.city}: falta attach_corridors()")
             cd.to(device)
 
-        # sin fuentes, lotes de 4 serían demasiado ruidosos y no activarían la invariancia
-        if not sources:
-            target_per_batch = batch_size
-        n_src = max((batch_size - target_per_batch) // max(len(sources), 1), 1)
-        self.tgt_loader = DataLoader(train_dataset(target), batch_size=target_per_batch,
-                                     shuffle=True)
+        # La objetivo recibe el mismo lote con o sin fuentes, y las fuentes se reparten
+        # un lote del mismo tamaño. Así la objetivo ve los mismos datos por época en
+        # los dos casos y la diferencia medida es solo el aporte de las fuentes (antes,
+        # con 64 viajes de la objetivo por lote, veía 8 veces menos datos).
+        n_src = max(batch_size // max(len(sources), 1), 1)
+        self.tgt_loader = DataLoader(train_dataset(target),
+                                     batch_size=min(batch_size, len(target.train_idx)),
+                                     shuffle=True, drop_last=True)
         # con drop_last, una fuente más pequeña que el lote dejaría el loader vacío
         self.src_loaders = [DataLoader(train_dataset(s), batch_size=min(n_src, len(s.train_idx)),
                                        shuffle=True, drop_last=True) for s in sources]
@@ -650,57 +710,20 @@ class TSJTTrainer:
             emb[sel] = self.model.stgnn(H0, st.P_fwd, st.P_bwd)
         return torch.cat([emb[inv, o], emb[inv, d]], dim=1)
 
-    def _encode_week(self, cd, h, src, node_mask=None):
-        st = cd.st
-        return self.model.stgnn.encode(st.feat, st.spd[src], st.obs[src], h,
-                                       st.P_fwd, st.P_bwd, node_mask)
-
-    def _context(self, cd, h, idx, o, d, out_of_fold):
-        """Devuelve el estado ST de O y D [B, 2·st_dim] y el corredor (o None)."""
-        corr = None
-        if self.model.corridor is not None:
-            p = cd.pair_of_trip[idx]
-            corr = {'cells': cd.corr_cells[p], 'mask': cd.corr_mask[p], 'pos': cd.corr_pos[p]}
-        if not self.tsa:
-            return self._window_embed(cd, idx, o, d, out_of_fold), corr
-
-        taus, src = self._st_keys(cd, idx, out_of_fold)
-        enc = self.model.stgnn
-        st_feat = torch.empty(len(idx), 2 * enc.out_dim, device=self.device)
-        if corr is not None:
-            corr['st'] = torch.empty(*corr['cells'].shape, enc.out_dim, device=self.device)
-        for sv in torch.unique(src).tolist():
-            sel = (src == sv).nonzero(as_tuple=True)[0]
-            Z = self._encode_week(cd, h, sv)
-            t = taus[sel]
-            st_feat[sel] = torch.cat([enc.read(Z, t, o[sel]), enc.read(Z, t, d[sel])], 1)
-            if corr is not None:
-                corr['st'][sel] = enc.read(Z, t, corr['cells'][sel])
-        return st_feat, corr
-
-    def _interp_loss(self, cd, h):
+    def _interp_loss(self, cd):
         """Interpolación enmascarada (GNNUI): se ocultan celdas completas y se
         reconstruye su velocidad. El error cuenta solo lo oculto y observado."""
         st = cd.st
         spd, obs = st.spd[-1], st.obs[-1]
         C = cd.n_cells
-        if self.tsa:
-            vis = (torch.rand(C, device=self.device) >= self.st_mask_ratio).float()
-            hid = (vis == 0).nonzero(as_tuple=True)[0]
-            if len(hid) == 0:
-                return torch.zeros((), device=self.device)
-            pred = self.model.stgnn.reconstruct(self._encode_week(cd, h, -1, vis), hid)
-            target = spd[:, hid].T
-            w = obs[:, hid].T
-        else:
-            taus = torch.randint(0, S.N_HOW, (self.st_windows,), device=self.device)
-            M = (torch.rand(self.st_windows, 1, C, 1, device=self.device)
-                 >= self.st_mask_ratio).float()
-            H0 = S.assemble_st_input(st.feat, spd, obs, self._win, taus, node_mask=M)
-            pred = self.model.stgnn.interp(self.model.stgnn(H0, st.P_fwd, st.P_bwd))
-            steps = self._win[taus]
-            target = spd[steps].permute(0, 2, 1)
-            w = (1.0 - M[:, 0]) * obs[steps].permute(0, 2, 1)
+        taus = torch.randint(0, S.N_HOW, (self.st_windows,), device=self.device)
+        M = (torch.rand(self.st_windows, 1, C, 1, device=self.device)
+             >= self.st_mask_ratio).float()
+        H0 = S.assemble_st_input(st.feat, spd, obs, self._win, taus, node_mask=M)
+        pred = self.model.stgnn.interp(self.model.stgnn(H0, st.P_fwd, st.P_bwd))
+        steps = self._win[taus]
+        target = spd[steps].permute(0, 2, 1)
+        w = (1.0 - M[:, 0]) * obs[steps].permute(0, 2, 1)
         return ((pred - target).abs() * w).sum() / w.sum().clamp(min=1.0)
 
     # pérdidas
@@ -722,21 +745,30 @@ class TSJTTrainer:
     def _loss_on(self, cd, batch):
         feats, o, d, y, idx = (x.to(self.device) for x in batch)
         h = self.model.encode_cells(cd)
-        st_feat, corr = self._context(cd, h, idx, o, d, out_of_fold=True)
+        st_feat = self._window_embed(cd, idx, o, d, out_of_fold=True)
         # Huber: cuadrática cerca del objetivo y lineal lejos, para no dejarse
         # arrastrar por viajes anómalos (taxímetro olvidado, desvíos largos)
-        per = F.huber_loss(self.model(h, o, d, feats, st_feat, corr), y,
+        per = F.huber_loss(self.model(h, o, d, feats, st_feat), y,
                            reduction='none', delta=1.0)
         loss = per.mean()
         extras = {}
+        phi, psi = self.model.represent(h, o, d, feats, st_feat)
+        if self.lambda_aux > 0:
+            # el recorrido real enseña a la representación de ruta cuánto se desvían
+            # los viajes de la recta; en inferencia esta cabeza no se usa
+            target = cd.route_circuity[idx]
+            ok = torch.isfinite(target)
+            if ok.any():
+                pred_c = self.model.aux_circuity(psi[ok]).squeeze(1)
+                aux = F.huber_loss(pred_c, target[ok], delta=0.5)
+                loss = loss + self.lambda_aux * aux
         # la varianza entre entornos necesita un lote mínimo
         if feats.size(0) >= 8:
-            phi, psi = self.model.represent(h, o, d, feats, st_feat)
             env = self.model.env_infer(phi, psi).detach()
             rv = self._concept_risk(env, per).var(unbiased=False)
             loss = loss + self.alpha * rv + self.beta * self._contrastive(phi, psi, env)
             extras = {'phi': phi.detach(), 'psi': psi.detach(), 'per': per.detach()}
-        li = self._interp_loss(cd, h)
+        li = self._interp_loss(cd)
         extras['interp'] = li.item()
         return loss + self.lambda_st * li, extras
 
@@ -744,27 +776,27 @@ class TSJTTrainer:
         return [None if p.grad is None else p.grad.detach().clone()
                 for p in self.model.parameters()]
 
-    def _apply_tsb(self, g_t, g_s):
+    @staticmethod
+    def _filter_source_grads(g_t, g_s):
         """Target-Skewed Backward (TSJT, Ec. 10), por tensor de parámetros.
 
             g_par = <g_s, g_t> / <g_t, g_t> · g_t
-            grad  = g_t + r · (g_s - g_par + 1[<g_s, g_t> > 0] · g_par)
+            filtro = g_s - g_par + 1[<g_s, g_t> > 0] · g_par
 
         La parte ortogonal de las fuentes se acepta siempre; la paralela solo si
-        no va contra la objetivo. r = lr_source / lr_target, metido en el
-        gradiente para usar un solo Adam.
+        no va contra la objetivo.
         """
-        for p, gt, gs in zip(self.model.parameters(), g_t, g_s):
-            if gs is None:
-                p.grad = gt
-            elif gt is None:
-                p.grad = self.lr_ratio * gs
-            else:
-                dot = (gs * gt).sum()
-                g_par = dot / (gt * gt).sum().clamp(min=1e-12) * gt
-                # (dot > 0) como tensor: un `if` forzaría una sincronización con la GPU por parámetro
-                keep = (dot > 0).to(gt.dtype)
-                p.grad = gt + self.lr_ratio * (gs - g_par + keep * g_par)
+        out = []
+        for gt, gs in zip(g_t, g_s):
+            if gs is None or gt is None:
+                out.append(gs)
+                continue
+            dot = (gs * gt).sum()
+            g_par = dot / (gt * gt).sum().clamp(min=1e-12) * gt
+            # (dot > 0) como tensor: un `if` forzaría una sincronización con la GPU por parámetro
+            keep = (dot > 0).to(gt.dtype)
+            out.append(gs - g_par + keep * g_par)
+        return out
 
     def _update_env(self, ex):
         """Ajusta la partición en entornos: riesgo desigual entre entornos y
@@ -778,10 +810,31 @@ class TSJTTrainer:
         (risk.var(unbiased=False) - self.env_gamma * h_marg + self.env_gamma * h_cond).backward()
         self.env_opt.step()
 
+    def _align_loss(self, max_cells=512):
+        """MMD entre los embeddings de celda de la objetivo y los de cada fuente.
+
+        La sonda de ciudad acertaba el 100 % con el embedding final: nada en el
+        modelo acercaba las celdas de ciudades distintas. Este término empuja las
+        dos distribuciones a solaparse, de modo que una celda de Porto y una de
+        Pekín con contexto parecido caigan en la misma zona del espacio.
+        """
+        h_t = self.model.encode_cells(self.target)
+        h_t = h_t[torch.randperm(len(h_t), device=self.device)[:max_cells]]
+        total = 0.0
+        for cd in self.sources:
+            h_s = self.model.encode_cells(cd)
+            h_s = h_s[torch.randperm(len(h_s), device=self.device)[:max_cells]]
+            total = total + mmd_rbf(h_t, h_s)
+        return total / len(self.sources)
+
     def _step(self, tgt_batch, src_batches):
         self.opt.zero_grad(set_to_none=True)
         loss_t, ex_t = self._loss_on(self.target, tgt_batch)
+        if src_batches and self.lambda_align > 0:
+            # entra en el gradiente de la objetivo para que el filtro TSB no lo atenúe
+            loss_t = loss_t + self.lambda_align * self._align_loss()
         loss_t.backward()
+        g_src = None
         if src_batches:
             g_t = self._grads()
             self.opt.zero_grad(set_to_none=True)
@@ -789,32 +842,48 @@ class TSJTTrainer:
             # pérdida media, pero solo hay un grafo de cálculo vivo en la GPU
             for cd, b in src_batches:
                 (self._loss_on(cd, b)[0] / len(src_batches)).backward()
-            self._apply_tsb(g_t, self._grads())
+            g_src = self._filter_source_grads(g_t, self._grads())
+            for p, g in zip(self.model.parameters(), g_t):
+                p.grad = g
         nn.utils.clip_grad_norm_(self.model.parameters(), 1.0)
         self.opt.step()
+        if g_src is not None:
+            # Paso propio de las fuentes, con tasa lr_source = source_ratio x lr actual,
+            # como las dos tasas de TSJT. Antes se sumaba r·g_fuente al gradiente de la
+            # objetivo en un solo Adam, pero Adam normaliza el paso por parámetro: donde
+            # el gradiente de la objetivo era chico, el término de las fuentes movía el
+            # parámetro casi a tasa completa aunque r fuera 0,005, y el entrenamiento se
+            # volvía inestable.
+            for p, g in zip(self.model.parameters(), g_src):
+                p.grad = g
+            nn.utils.clip_grad_norm_(self.model.parameters(), 1.0)
+            for group in self.src_opt.param_groups:
+                group['lr'] = self.lr_ratio * self.opt.param_groups[0]['lr']
+            self.src_opt.step()
         self.sched.step()
         if 'phi' in ex_t:
             self._update_env(ex_t)
         return loss_t.item(), ex_t
 
-    def _next_source_batches(self, iters):
-        out = []
-        for k, dl in enumerate(self.src_loaders):
-            try:
-                b = next(iters[k])
-            except StopIteration:
-                iters[k] = iter(dl)
-                b = next(iters[k])
-            out.append((self.sources[k], b))
-        return out
+    @staticmethod
+    def _next(loader, iters, k):
+        """Siguiente lote del loader k, reiniciándolo al agotarse."""
+        try:
+            return next(iters[k])
+        except StopIteration:
+            iters[k] = iter(loader)
+            return next(iters[k])
 
     def train(self, epochs=30, patience=6, steps_per_epoch=None):
         best, best_w, bad = float('inf'), None, 0
-        src_iters = [iter(dl) for dl in self.src_loaders]
-        # una época son train/batch_size pasos con o sin fuentes; si no, con 64
-        # viajes de la objetivo por lote una época tendría 8 veces más pasos
-        n_steps = min(math.ceil(len(self.target.train_idx) / self.batch_size),
-                      len(self.tgt_loader), steps_per_epoch or len(self.tgt_loader))
+        loaders = [self.tgt_loader] + self.src_loaders
+        iters = [iter(dl) for dl in loaders]
+        # una época = una pasada por el train de la objetivo, con o sin fuentes, así
+        # que ambos casos hacen los mismos pasos. Un mínimo de pasos por época
+        # (probado: 50) hacía sobreajustar la objetivo en few-shot desde la época 3
+        n_steps = math.ceil(len(self.target.train_idx) / self.batch_size)
+        if steps_per_epoch:
+            n_steps = min(n_steps, steps_per_epoch)
         # calentamiento corto y decaimiento coseno a lo largo de todo el entrenamiento
         self.sched = torch.optim.lr_scheduler.OneCycleLR(
             self.opt, max_lr=self.lr, total_steps=epochs * n_steps, pct_start=0.05,
@@ -823,10 +892,11 @@ class TSJTTrainer:
         for ep in range(1, epochs + 1):
             self.model.train()
             losses, interps = [], []
-            for step, tb in enumerate(self.tgt_loader):
-                if step >= n_steps:
-                    break
-                loss, ex = self._step(tb, self._next_source_batches(src_iters))
+            for _ in range(n_steps):
+                tb = self._next(loaders[0], iters, 0)
+                sb = [(s, self._next(dl, iters, k + 1))
+                      for k, (s, dl) in enumerate(zip(self.sources, self.src_loaders))]
+                loss, ex = self._step(tb, sb)
                 losses.append(loss)
                 interps.append(ex['interp'])
 
@@ -839,7 +909,9 @@ class TSJTTrainer:
             if mae < best:
                 best, bad = mae, 0
                 best_w = {k: v.clone() for k, v in self.model.state_dict().items()}
-            else:
+            elif ep > epochs // 2:
+                # la paciencia cuenta solo en la segunda mitad: antes la tasa de
+                # aprendizaje sigue alta y la validación oscila sin haber convergido
                 bad += 1
             if ep % 5 == 0:
                 print(f"Época {ep:3d} | loss={self.history['train'][-1]:.4f}  "
@@ -862,8 +934,8 @@ class TSJTTrainer:
         for chunk in torch.tensor(idx, dtype=torch.long).split(self.eval_chunk):
             o = cd.o_cell[chunk].to(self.device)
             d = cd.d_cell[chunk].to(self.device)
-            st_feat, corr = self._context(cd, h, chunk.to(self.device), o, d, out_of_fold=False)
-            preds.append(self.model(h, o, d, cd.feats[chunk].to(self.device), st_feat, corr).cpu())
+            st_feat = self._window_embed(cd, chunk.to(self.device), o, d, out_of_fold=False)
+            preds.append(self.model(h, o, d, cd.feats[chunk].to(self.device), st_feat).cpu())
         if not preds:
             return np.zeros(0)
         return torch.exp(torch.cat(preds) * cd.time_log_std + cd.time_log_mean).numpy()

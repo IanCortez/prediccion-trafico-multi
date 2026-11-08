@@ -8,7 +8,9 @@ construcción de la rejilla de regiones de cada ciudad.
 Fuga de etiqueta: el tiempo de viaje es (len(POLYLINE) - 1) * 15 s, así que
 cualquier feature sacada del recorrido (longitud, vértices, giros) es la
 etiqueta disfrazada. Solo se usan datos conocidos antes del viaje: origen,
-destino, hora de salida, tipo de llamada y el contexto de la recta O-D.
+destino, hora de salida, tipo de llamada y el contexto de la recta O-D. La
+longitud real del recorrido se guarda (`route_len`) solo como objetivo
+auxiliar de entrenamiento; nunca entra como feature.
 """
 
 import csv
@@ -16,6 +18,8 @@ import json
 import math
 import os
 from collections import defaultdict
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import numpy as np
 
@@ -23,6 +27,42 @@ import compat
 import urban_context as uc
 
 SAMPLING_INTERVAL_S = 15.0
+
+# Los TIMESTAMP están en UTC. La hora del día tiene que ser la local de cada
+# ciudad para que las horas punta coincidan entre ciudades: en UTC, Pekín
+# (UTC+8) tenía su mínimo nocturno a las 19-22 h y Porto a las 1-6 h.
+CITY_TZ = {
+    'porto': 'Europe/Lisbon',
+    'rome': 'Europe/Rome',
+    'beijing': 'Asia/Shanghai',
+    'shenzhen': 'Asia/Shanghai',
+}
+
+
+def local_timestamps(ts, city):
+    """Timestamps UTC -> hora local de pared (como segundos), con horario de verano.
+
+    Una variante de un dataset (`beijing_v2`) usa la zona de su ciudad (`beijing`).
+    """
+    name = city.lower()
+    tz = CITY_TZ.get(name) or CITY_TZ.get(name.split('_')[0])
+    if tz is None:
+        raise ValueError(f"Zona horaria desconocida para {city!r}: agrégala a CITY_TZ")
+    zone = ZoneInfo(tz)
+    ts = np.asarray(ts, dtype=np.int64)
+    # el desfase solo cambia en horas en punto, así que basta con calcularlo por hora
+    hours, inv = np.unique(ts // 3600, return_inverse=True)
+    offsets = np.array([datetime.fromtimestamp(int(h) * 3600, timezone.utc).astimezone(zone)
+                        .utcoffset().total_seconds() for h in hours], dtype=np.int64)
+    return ts + offsets[inv.reshape(-1)]
+
+
+def _path_length(pts):
+    """Longitud en metros de una polilínea [(lat, lon), ...]."""
+    p = np.radians(np.asarray(pts))
+    dlat, dlon = np.diff(p[:, 0]), np.diff(p[:, 1])
+    a = np.sin(dlat / 2) ** 2 + np.cos(p[:-1, 0]) * np.cos(p[1:, 0]) * np.sin(dlon / 2) ** 2
+    return float((6_371_000.0 * 2 * np.arcsin(np.sqrt(np.clip(a, 0.0, 1.0)))).sum())
 
 # La rejilla cubre el rectángulo entre los cuantiles 0,1 % y 99,9 % de los
 # extremos de viaje; los puntos de fuera van a la celda del borde. Con el
@@ -134,6 +174,7 @@ def load_trips(path, city_name=None, *, min_dur_s=60, max_dur_s=4 * 3600,
                 'd_lat': d_lat, 'd_lon': d_lon,
                 'od_dist': od,
                 'travel_time': dur,
+                'route_len': _path_length(pts),     # solo objetivo auxiliar, nunca feature
             })
 
     if verbose:
@@ -146,12 +187,17 @@ def load_trips(path, city_name=None, *, min_dur_s=60, max_dur_s=4 * 3600,
 class CityTrips:
     """Viajes de una ciudad con su rejilla y el contexto urbano de cada celda."""
 
-    def __init__(self, trips, city_name, cell_m=500.0, urban_ctx=None, verbose=True):
+    def __init__(self, trips, city_name, cell_m=500.0, urban_ctx=None, road_graph=None,
+                 verbose=True):
         if not trips:
             raise ValueError(f"[{city_name}] no hay viajes válidos.")
         self.city = city_name
         self.trips = trips
         self.urban_ctx = urban_ctx
+
+        local = local_timestamps([t['timestamp'] for t in trips], city_name)
+        for t, lt in zip(trips, local):
+            t['local_ts'] = int(lt)
 
         lats = np.array([t['o_lat'] for t in trips] + [t['d_lat'] for t in trips])
         lons = np.array([t['o_lon'] for t in trips] + [t['d_lon'] for t in trips])
@@ -173,11 +219,37 @@ class CityTrips:
         self.radius = max(uc.haversine(g.lat0, g.lon0, g.lat_max, g.lon_max) / 2, 1.0)
 
         self._annotate_corridors()
+        if road_graph is not None:
+            self._annotate_network(road_graph)
         if verbose:
+            if road_graph is not None:
+                print(f"[{city_name}] red vial: {np.mean([t['net_mask'] for t in trips]) * 100:.1f} % "
+                      f"de los viajes con distancia por la red")
             print(f"[{city_name}] {g.n_cells} celdas de {cell_m:.0f} m | "
                   f"radio {self.radius / 1000:.1f} km | "
                   f"bbox lat [{g.lat0:.4f}, {g.lat_max:.4f}] "
                   f"lon [{g.lon0:.4f}, {g.lon_max:.4f}]")
+
+    def _annotate_network(self, road_graph):
+        """Circuidad de la red y ritmo a velocidad libre entre las celdas de O y D.
+
+        Son medidas relativas (no escalan con la distancia) calculadas entre
+        centros de celda, así que dependen solo de la geometría de la red, que
+        se conoce antes del viaje. Sin camino o con O y D en la misma celda,
+        net_mask = 0.
+        """
+        from road_network import PACE_REF
+        lat, lon = np.array([self.grid.centroid(i) for i in range(self.grid.n_cells)]).T
+        D, T = road_graph.cell_matrices(lat, lon)
+        o = np.array([t['o_cell'] for t in self.trips])
+        d = np.array([t['d_cell'] for t in self.trips])
+        net, ff = D[o, d].astype(float), T[o, d].astype(float)
+        chord = np.array([uc.haversine(lat[a], lon[a], lat[b], lon[b]) for a, b in zip(o, d)])
+        ok = (o != d) & np.isfinite(net) & (net > 0)
+        circ = np.where(ok, np.clip(np.log(np.where(ok, net, 1.0) / np.maximum(chord, 1.0)), 0, 1.5), 0)
+        pace = np.where(ok, np.log(np.where(ok, ff, 1.0) / np.where(ok, net, 1.0)) - PACE_REF, 0)
+        for t, c, p, m in zip(self.trips, circ, pace, ok):
+            t['net_circuity'], t['net_pace'], t['net_mask'] = float(c), float(p), float(m)
 
     # contexto del corredor recto O-D
 
