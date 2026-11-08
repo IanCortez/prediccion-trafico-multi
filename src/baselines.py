@@ -1,6 +1,10 @@
 """
 Baselines sin red neuronal, para medir cuánto aporta el modelo.
 
+  mediana   la duración mediana del train para todos los viajes. Es el piso: con
+            etiquetas muy ruidosas (Pekín sin marca de ocupado) potencia y TEMP
+            pueden quedar cerca de él, y la distancia a la mediana mide cuánta
+            señal hay en los datos.
   potencia  log t = β·log d + c(hora, laborable/fin de semana), ajustado por
             mínimos cuadrados sobre el train.
   TEMP      potencia + residuo medio de los viajes de train con el mismo par de
@@ -17,7 +21,7 @@ MIN_TRIPS = 5
 
 
 def _arrays(city):
-    ts = np.array([t['timestamp'] for t in city.trips])
+    ts = np.array([t['local_ts'] for t in city.trips])      # hora local de la ciudad
     hour, dow = hour_and_dow(ts)
     return {
         'log_d': np.log([t['od_dist'] for t in city.trips]),
@@ -68,4 +72,5 @@ def predict(city, train_idx, test_idx):
         use = ~filled & ~np.isnan(m)
         temp[use] += m[use]
         filled |= use
-    return {'potencia': np.exp(power[te]), 'TEMP': np.exp(temp)}
+    median = np.full(len(te), np.median(np.exp(a['log_t'][tr])))
+    return {'potencia': np.exp(power[te]), 'TEMP': np.exp(temp), 'mediana': median}
