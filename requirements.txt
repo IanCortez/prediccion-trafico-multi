@@ -1,4 +1,6 @@
 numpy
 torch
+scipy
 scikit-learn
+tzdata
 osmnx
