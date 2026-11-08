@@ -155,6 +155,11 @@ def fetch_roads(city, bbox, path, cache_dir, tile_km, network_type='drive'):
         })
     _write(path, feats)
     print(f"[{city}] {len(feats)} nodos viales")
+    # aristas para la distancia por red vial (road_network.py)
+    from road_network import RoadGraph
+    edges_path = os.path.join(os.path.dirname(path), f'{city}_edges.npz')
+    RoadGraph.from_osmnx(G).save(edges_path)
+    print(f"[{city}] aristas de la red vial -> {edges_path}")
 
 
 def fetch(city, bbox, out_dir, network_type='drive', tile_km=10.0):
