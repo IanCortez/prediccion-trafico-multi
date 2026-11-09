@@ -10,12 +10,11 @@ El entrenamiento corre en CUDA con semilla fija.
     python src/run.py --data src/data --city porto --cell-m 1500
     python src/run.py --data src/data --city porto --cell-m 1500 --sources beijing_v2 rome
     python src/run.py --data src/data --city porto --cell-m 1500 --split ood_distance --pace
-    python src/run.py --data src/data --city porto --cell-m 1500 --sota-filter \
-        --extra-feats subcell posenc point
+    python src/run.py --data src/data --city porto --cell-m 1500 --sota-filter --posenc
 
---sota-filter aplica a la objetivo la definición de viaje de TransferTraj (zona
-central de Porto, 5 a 120 puntos) para comparar con las cifras publicadas.
---extra-feats agrega la posición fina de O y D (ver tte_model.EXTRA_GROUPS).
+--sota-filter deja en la objetivo solo los viajes de la zona central de Porto con
+5 a 120 puntos, la definición de viaje de las cifras publicadas.
+--posenc agrega la posición fina de O y D (ver tte_model.POSENC_NAMES).
 """
 
 import argparse
@@ -39,8 +38,8 @@ CACHE_DIR = 'cache'
 CACHE_VERSION = 'v2'
 SEED = 0
 
-# Definición de viaje de TransferTraj (Wei et al., 2025) para Porto, para que las
-# cifras sean comparables con las publicadas: O y D dentro de la zona central de
+# Definición de viaje de las cifras publicadas para Porto (ver
+# docs/transferencia_ood.md): O y D dentro de la zona central de
 # 11,13 x 5,11 km y trayectorias de 5 a 120 puntos. El mínimo de 5 puntos (60 s)
 # ya lo aplica load_trips; aquí se agrega el máximo de 120 (119 * 15 s).
 SOTA_FILTER = {
@@ -58,6 +57,11 @@ def sota_filter(trips, name):
             and inside(t['o_lat'], t['o_lon']) and inside(t['d_lat'], t['d_lon'])]
     print(f"[{name}] filtro SOTA: {len(kept)} de {len(trips)} viajes")
     return kept
+
+
+def use_posenc(args):
+    # las corridas guardadas antes de --posenc lo registran como extra_feats=['posenc']
+    return getattr(args, 'posenc', False) or 'posenc' in (getattr(args, 'extra_feats', None) or [])
 
 
 def load_city(name, args):
@@ -118,9 +122,9 @@ def build_parser():
     ap.add_argument('--pace', action='store_true',
                     help='predice log d + log-ritmo (extrapola en distancia)')
     ap.add_argument('--sota-filter', action='store_true',
-                    help='filtra la objetivo con la definición de viaje de TransferTraj (solo porto)')
-    ap.add_argument('--extra-feats', nargs='*', default=[], choices=list(M.EXTRA_GROUPS),
-                    help='posición fina de O y D: subcell, posenc, point')
+                    help='solo viajes de la zona central y de 5 a 120 puntos (solo porto)')
+    ap.add_argument('--posenc', action='store_true',
+                    help='posición fina de O y D: senos y cosenos multiescala en km')
     ap.add_argument('--epochs', type=int, default=30)
     ap.add_argument('--patience', type=int, default=6)
     ap.add_argument('--steps-per-epoch', type=int, default=None,
@@ -153,10 +157,10 @@ def prepare(args):
     # la normalización sale del train de la objetivo (ya recortado si es few-shot) y las
     # fuentes usan la misma: así la objetivo se ve igual con o sin fuentes, y ni el
     # test ni los viajes descartados en few-shot entran en ella
-    extra = getattr(args, 'extra_feats', None) or []
+    posenc = use_posenc(args)
     target = M.build_city_data(tgt, None, args.split, split_kwargs,
-                               target_fraction=args.target_fraction, extra=extra)
-    sources = [M.build_city_data(c, target.norms, extra=extra) for c in srcs]
+                               target_fraction=args.target_fraction, posenc=posenc)
+    sources = [M.build_city_data(c, target.norms, posenc=posenc) for c in srcs]
     print(f"train/val/test = {len(target.train_idx)}/{len(target.val_idx)}/"
           f"{len(target.test_idx)} | celdas {target.n_cells} | "
           f"cobertura ST {target.st.coverage * 100:.1f} % | fuentes {len(sources)}")
@@ -164,12 +168,12 @@ def prepare(args):
 
 
 def build_trainer(args, target, sources):
-    n_extra = len(M.extra_names(getattr(args, 'extra_feats', None) or []))
+    n_extra = len(M.POSENC_NAMES) if use_posenc(args) else 0
     model = M.TravelTimeModel(dim=args.dim, hidden=args.hidden,
                               bank_size=max(target.n_cells // 2, 8), pace=args.pace,
                               n_extra=n_extra)
     # getattr: las corridas guardadas antes de existir el argumento usan el valor original
-    return M.TSJTTrainer(model, target, sources, device='cuda', batch_size=args.batch,
+    return M.Trainer(model, target, sources, device='cuda', batch_size=args.batch,
                          source_ratio=getattr(args, 'source_ratio', 0.005),
                          lambda_align=getattr(args, 'lambda_align', 0.0),
                          lambda_aux=getattr(args, 'lambda_aux', 0.0))

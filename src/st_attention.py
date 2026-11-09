@@ -2,7 +2,7 @@
 Módulos espaciotemporales sobre la semana típica de cada ciudad
 [168 horas x C celdas x canales].
 
-UrbanSTGNN (GNNUI, Kaiser et al. 2025)
+UrbanSTGNN
     Convolución de difusión sobre ventanas de h horas, con la velocidad de
     celdas enmascaradas como tarea auxiliar de interpolación.
 """
@@ -62,7 +62,7 @@ class DiffusionGraphConv(nn.Module):
 
 
 class UrbanSTGNN(nn.Module):
-    """Tres capas DGCN como en GNNUI, sobre una ventana de `window` horas aplanada."""
+    """Tres capas DGCN sobre una ventana de `window` horas aplanada."""
 
     def __init__(self, window=6, hidden=32, out=32, K=2, dropout=0.1):
         super().__init__()

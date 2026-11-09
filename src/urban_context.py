@@ -2,7 +2,7 @@
 Contexto urbano de OSM para las celdas de la rejilla: puntos de interés (POI) y
 red vial (intersecciones, semáforos, jerarquía de vías).
 
-Siguiendo a TransferTraj, cada etiqueta OSM se proyecta sobre una taxonomía fija
+Cada etiqueta OSM se proyecta sobre una taxonomía fija
 y gruesa, y el entorno se describe con proporciones y rangos percentil dentro de
 la ciudad, nunca con conteos absolutos: un conteo absoluto identifica a la ciudad
 y estorba la transferencia entre ciudades.

@@ -2,17 +2,16 @@
 Estimación de tiempo de viaje origen-destino (OD TTE) entre ciudades a partir
 de trayectorias GPS.
 
-Ideas que combina el modelo:
-  TransferTraj (NeurIPS 2025)  celdas descritas por modalidades (patrón horario,
-                               POI, red vial) y features espaciales relativas,
-                               sin coordenadas absolutas.
-  OOD4TTE (KDD 2026)           separación ruta (T) / contexto (C), entornos
-                               latentes y compuertas invariantes.
-  TSJT (AAAI 2025)             entrenamiento en una etapa sobre objetivo +
-                               fuentes con Target-Skewed Backward y banco de
-                               prompts compartido (NPM).
-  GNNUI (2025)                 estado espaciotemporal por celda con
-                               interpolación enmascarada (ver st_attention.py).
+Componentes del modelo (los trabajos en que se basa están en
+docs/transferencia_ood.md):
+  celdas      descritas por modalidades (patrón horario, POI, red vial) y
+              features espaciales relativas, sin coordenadas absolutas.
+  ruta/ctx    separación ruta (T) / contexto (C), entornos latentes y
+              compuertas invariantes.
+  fuentes     entrenamiento en una etapa sobre objetivo + fuentes, con filtro
+              de gradientes hacia la objetivo y banco de prompts compartido.
+  estado ST   estado espaciotemporal por celda con interpolación enmascarada
+              (ver st_attention.py).
 """
 
 import math
@@ -50,34 +49,15 @@ F_CTX = len(CTX_NAMES)
 SL_ROUTE = slice(0, F_ROUTE)
 SL_CTX = slice(F_ROUTE, F_ROUTE + F_CTX)
 
-# Posición fina de O y D (opcional, --extra-feats). La celda solo ubica el
-# viaje a 1-1,5 km; estos grupos van al final del vector, después del
-# contexto, y entran a la representación de ruta. Al ir al final, los
-# checkpoints entrenados sin ellos se siguen cargando igual.
-#   subcell  desplazamiento de O y D dentro de su celda, en [-1, 1]
-#   posenc   senos y cosenos multiescala de la posición respecto del centro de
-#            la rejilla (en km, no lat/lon absolutas)
-#   point    contexto OSM en el punto exacto: distancia a la vía y a la arterial
-#            más cercanas, fricción de la vía más cercana, POI e intersecciones
-#            en 200 m
+# Posición fina de O y D (opcional, --posenc): senos y cosenos multiescala de
+# la posición respecto del centro de la rejilla, en km (no lat/lon absolutas).
+# La celda solo ubica el viaje a 1-1,5 km. Van al final del vector, después del
+# contexto, y entran a la representación de ruta; los checkpoints entrenados
+# sin ellas se siguen cargando igual.
 POS_SCALES_KM = (0.25, 0.5, 1.0, 2.0, 4.0, 8.0)
-POINT_RADIUS_M = 200.0
-EXTRA_GROUPS = {
-    'subcell': [f'{p}_{a}' for p in 'od' for a in ('dx', 'dy')],
-    'posenc': [f'{p}_{a}_{fn}{s:g}' for p in 'od' for a in 'xy' for s in POS_SCALES_KM
-               for fn in ('sin', 'cos')],
-    'point': [f'{p}_{n}' for p in 'od'
-              for n in ('snap_log', 'arterial_log', 'friction', 'poi_log', 'inter_log')] + ['point_mask'],
-}
+POSENC_NAMES = [f'{p}_{a}_{fn}{s:g}' for p in 'od' for a in 'xy' for s in POS_SCALES_KM
+                for fn in ('sin', 'cos')]
 SL_EXTRA = slice(F_ROUTE + F_CTX, None)
-
-
-def extra_names(groups):
-    """Nombres de las features extra, siempre en el orden de EXTRA_GROUPS."""
-    unknown = set(groups) - set(EXTRA_GROUPS)
-    if unknown:
-        raise ValueError(f"grupos de features desconocidos: {sorted(unknown)}")
-    return [n for g, names in EXTRA_GROUPS.items() if g in groups for n in names]
 I_DIST_NORM = ROUTE_NAMES.index('dist_norm')
 I_DIST_LOG = ROUTE_NAMES.index('dist_log')
 
@@ -192,7 +172,7 @@ def _trip_vector(t, city, dist_mean, dist_std):
 
 
 def _cell_patterns(city, train_idx):
-    """Perfil horario de demanda + intensidad O/D de cada celda (Query del NPM).
+    """Perfil horario de demanda + intensidad O/D de cada celda (consulta del banco de prompts).
 
     Solo con viajes de entrenamiento, para no meter el test en los prompts.
     """
@@ -293,98 +273,34 @@ def _standardize(x):
     return np.where(std > 1e-6, (x - x.mean(axis=0)) / np.maximum(std, 1e-6), 0.0).astype(np.float32)
 
 
-def _endpoints(city):
-    """Coordenadas (lat, lon) de O y D de todos los viajes: dos arrays [N, 2]."""
-    o = np.array([(t['o_lat'], t['o_lon']) for t in city.trips], dtype=np.float64)
-    d = np.array([(t['d_lat'], t['d_lon']) for t in city.trips], dtype=np.float64)
-    return o, d
-
-
 def _planar_km(city, latlon):
     """Posición en km respecto del centro de la rejilla (x al este, y al norte)."""
     kx = 111.320 * math.cos(math.radians(city.lat_c))
     return np.stack([(latlon[:, 1] - city.lon_c) * kx, (latlon[:, 0] - city.lat_c) * 110.540], 1)
 
 
-def _subcell(city, latlon):
-    """Desplazamiento dentro de la celda en [-1, 1] (0 = centro de la celda)."""
-    g = city.grid
-    lat = np.clip(latlon[:, 0], g.lat0, g.lat_max)
-    lon = np.clip(latlon[:, 1], g.lon0, g.lon_max)
-    fy = (lat - g.lat0) / g._dlat
-    fx = (lon - g.lon0) / g._dlon
-    return np.stack([2 * (fx - np.floor(fx)) - 1, 2 * (fy - np.floor(fy)) - 1], 1)
-
-
 def _posenc(city, latlon):
-    xy = _planar_km(city, latlon)
-    cols = []
-    for a in range(2):
-        for s in POS_SCALES_KM:
-            ang = 2 * np.pi * xy[:, a] / s
-            cols += [np.sin(ang), np.cos(ang)]
-    return np.stack(cols, 1)
+    """sin/cos de la posición en km a cada escala, en el orden x/y, escala, sin/cos."""
+    ang = 2 * np.pi * _planar_km(city, latlon)[:, :, None] / np.array(POS_SCALES_KM)
+    return np.stack([np.sin(ang), np.cos(ang)], -1).reshape(len(latlon), -1)
 
 
-def _point_context(city, latlon):
-    """Contexto OSM en el punto: [log dist. vía, log dist. arterial, fricción,
-    log POI en 200 m, log intersecciones en 200 m]; None si la ciudad no tiene red."""
-    from scipy.spatial import cKDTree
-    ctx = getattr(city, 'urban_ctx', None)
-    if ctx is None or not ctx.roads:
-        return None
-    to_xy = lambda pts: _planar_km(city, np.array([(p['lat'], p['lon']) for p in pts])) * 1000
-    q = _planar_km(city, latlon) * 1000
-    roads = ctx.roads
-    d_any, i_any = cKDTree(to_xy(roads)).query(q)
-    friction = np.array([uc.ROAD_FRICTION[roads[i]['cls']] for i in i_any])
-    art = [p for p in roads if p['cls'] == 'arterial']
-    d_art = cKDTree(to_xy(art)).query(q)[0] if art else np.full(len(q), 1e4)
-    inter = [p for p in roads if p['street_count'] >= 3]
-    n_inter = (cKDTree(to_xy(inter)).query_ball_point(q, POINT_RADIUS_M, return_length=True)
-               if inter else np.zeros(len(q)))
-    n_poi = (cKDTree(to_xy(ctx.pois)).query_ball_point(q, POINT_RADIUS_M, return_length=True)
-             if ctx.pois else np.zeros(len(q)))
-    return np.stack([np.log1p(np.minimum(d_any, 1e4)), np.log1p(np.minimum(d_art, 1e4)),
-                     friction, np.log1p(n_poi), np.log1p(n_inter)], 1)
-
-
-def extra_feats(city, groups, train_idx):
-    """Features de posición fina de O y D (ver EXTRA_GROUPS), [N, len(extra_names)].
-
-    Las de `point` se estandarizan con media y desviación del train de la propia
-    ciudad, como las features de celda: describen cada punto respecto de su ciudad.
-    """
-    o, d = _endpoints(city)
-    blocks = []
-    if 'subcell' in groups:
-        blocks.append(np.concatenate([_subcell(city, o), _subcell(city, d)], 1))
-    if 'posenc' in groups:
-        blocks.append(np.concatenate([_posenc(city, o), _posenc(city, d)], 1))
-    if 'point' in groups:
-        po, pd = _point_context(city, o), _point_context(city, d)
-        if po is None:
-            blocks.append(np.zeros((len(o), len(EXTRA_GROUPS['point'])), dtype=np.float32))
-        else:
-            x = np.concatenate([po, pd], 1)
-            tr = np.asarray(train_idx)
-            mu, sd = x[tr].mean(0), x[tr].std(0)
-            x = np.where(sd > 1e-6, (x - mu) / np.maximum(sd, 1e-6), 0.0)
-            blocks.append(np.concatenate([x, np.ones((len(o), 1))], 1))
-    out = np.concatenate(blocks, 1).astype(np.float32)
-    assert out.shape[1] == len(extra_names(groups))
-    return out
+def posenc_feats(city):
+    """Codificación de posición de O y D de todos los viajes: [N, len(POSENC_NAMES)]."""
+    o = np.array([(t['o_lat'], t['o_lon']) for t in city.trips], dtype=np.float64)
+    d = np.array([(t['d_lat'], t['d_lon']) for t in city.trips], dtype=np.float64)
+    return np.concatenate([_posenc(city, o), _posenc(city, d)], 1).astype(np.float32)
 
 
 def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
-                    graph_k=8, target_fraction=None, extra=()):
+                    graph_k=8, target_fraction=None, posenc=False):
     """Tensores de una ciudad. target_fraction recorta el train ANTES de
     construir grafo, patrones, tensores ST y normalización, para que el régimen
     few-shot no vea información de los viajes descartados.
 
     norms=None calcula la normalización con el train de esta ciudad (la objetivo);
     las fuentes reciben las de la objetivo (`cd.norms`).
-    extra: grupos de EXTRA_GROUPS que se agregan al final del vector del viaje.
+    posenc: agrega POSENC_NAMES al final del vector del viaje.
     """
     split_kwargs = split_kwargs or {}
     if split == 'chronological':
@@ -403,8 +319,8 @@ def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
 
     feats = np.array([_trip_vector(t, city, dist_mean, dist_std) for t in city.trips],
                      dtype=np.float32)
-    if extra:
-        feats = np.concatenate([feats, extra_feats(city, extra, tr)], 1)
+    if posenc:
+        feats = np.concatenate([feats, posenc_feats(city)], 1)
     raw = np.array([t['travel_time'] for t in city.trips], dtype=np.float32)
     times = (np.log(np.maximum(raw, 1.0)) - time_log_mean) / time_log_std
 
@@ -474,7 +390,7 @@ def band_label(lo, hi):
 def report(pred, true, hour, dist):
     """Métricas globales, por franja de 6 h y por franja fija de distancia en km.
 
-    El peor grupo horario se reporta aparte, como en OOD4TTE: un buen promedio
+    El peor grupo horario se reporta aparte: un buen promedio
     puede esconder una hora punta mala.
     """
     out = {'total': metrics(pred, true), 'por_hora': {}, 'por_franja_km': {}}
@@ -545,8 +461,8 @@ class RegionMessagePassing(nn.Module):
         return self.norm(h + self.drop(F.relu(self.w_self(h) + self.w_nbr(agg))))
 
 
-class NodePromptingModule(nn.Module):
-    """Banco de prompts compartido por todas las ciudades (TSJT).
+class PromptBank(nn.Module):
+    """Banco de prompts compartido por todas las ciudades.
 
     Celdas con patrones de demanda parecidos recuperan prompts parecidos,
     aunque sean de ciudades distintas.
@@ -564,7 +480,7 @@ class NodePromptingModule(nn.Module):
 
 
 class EnvironmentInference(nn.Module):
-    """Pertenencia blanda a V entornos de tráfico latentes (OOD4TTE)."""
+    """Pertenencia blanda a V entornos de tráfico latentes."""
 
     def __init__(self, in_dim, n_env=8, hidden=32):
         super().__init__()
@@ -576,7 +492,7 @@ class EnvironmentInference(nn.Module):
 
 
 class InvariantGate(nn.Module):
-    """Compuerta suave por dimensión, z · σ(W z) (OOD4TTE).
+    """Compuerta suave por dimensión, z · σ(W z).
 
     La versión anterior anulaba siempre el 50 % de las dimensiones con menor
     varianza entre muestras, que son las que menos información llevan.
@@ -617,7 +533,7 @@ def partial_distance_corr(a_c, a_t, a_e, eps=1e-8):
 
 class TravelTimeModel(nn.Module):
     """
-        celdas --> CellEncoder --> grafo de regiones --> NPM --> h
+        celdas --> CellEncoder --> grafo de regiones --> prompts --> h
         [h_o | h_d | RUTA]            --> Ψ   (ruta)
         [CONTEXTO | estado ST de O,D] --> Φ   (contexto)
         cabeza(gate(Φ) + gate(Ψ))     --> log-tiempo normalizado
@@ -644,7 +560,7 @@ class TravelTimeModel(nn.Module):
         # el grafo va antes del banco: propagar después difuminaría los prompts
         self.gnn = nn.ModuleList([RegionMessagePassing(dim, dropout)
                                   for _ in range(n_graph_layers)])
-        self.npm = NodePromptingModule(dim, bank_size)
+        self.npm = PromptBank(dim, bank_size)
 
         # el estado espaciotemporal depende de la hora, así que va en el contexto
         self.stgnn = S.UrbanSTGNN(st_window, st_hidden, st_dim, st_K, dropout)
@@ -730,12 +646,13 @@ class TravelTimeModel(nn.Module):
 # Entrenamiento
 # ---------------------------------------------------------------------------
 
-class TSJTTrainer:
-    """Entrenamiento conjunto en una etapa (TSJT) con los términos de OOD4TTE.
+class Trainer:
+    """Entrenamiento conjunto en una etapa, con varianza del riesgo entre entornos
+    y término contrastivo.
 
     Cada paso usa un lote de la ciudad objetivo y otro del mismo tamaño
     repartido entre las fuentes. El gradiente de las fuentes se filtra contra
-    el de la objetivo (Target-Skewed Backward) antes de actualizar.
+    el de la objetivo (ver _filter_source_grads) antes de actualizar.
     """
 
     def __init__(self, model, target, sources, device='cpu', lr_target=1e-3,
@@ -745,7 +662,7 @@ class TSJTTrainer:
                  lambda_aux=0.1):
         """
         source_ratio   tasa de aprendizaje del paso de las fuentes respecto de la
-                       de la objetivo (lr_source / lr_target en TSJT). Con 1 se
+                       de la objetivo. Con 1 se
                        obtuvo el mejor resultado en few-shot (ver docs/fase_E).
         alpha, beta    pesos de la varianza del riesgo y del término contrastivo.
         lambda_st      peso de la pérdida de interpolación enmascarada.
@@ -831,7 +748,7 @@ class TSJTTrainer:
         return torch.cat([emb[inv, o], emb[inv, d]], dim=1)
 
     def _interp_loss(self, cd):
-        """Interpolación enmascarada (GNNUI): se ocultan celdas completas y se
+        """Interpolación enmascarada: se ocultan celdas completas y se
         reconstruye su velocidad. El error cuenta solo lo oculto y observado."""
         st = cd.st
         spd, obs = st.spd[-1], st.obs[-1]
@@ -898,7 +815,7 @@ class TSJTTrainer:
 
     @staticmethod
     def _filter_source_grads(g_t, g_s):
-        """Target-Skewed Backward (TSJT, Ec. 10), por tensor de parámetros.
+        """Filtro de los gradientes de las fuentes, por tensor de parámetros.
 
             g_par = <g_s, g_t> / <g_t, g_t> · g_t
             filtro = g_s - g_par + 1[<g_s, g_t> > 0] · g_par
@@ -968,8 +885,8 @@ class TSJTTrainer:
         nn.utils.clip_grad_norm_(self.model.parameters(), 1.0)
         self.opt.step()
         if g_src is not None:
-            # Paso propio de las fuentes, con tasa lr_source = source_ratio x lr actual,
-            # como las dos tasas de TSJT. Antes se sumaba r·g_fuente al gradiente de la
+            # Paso propio de las fuentes, con tasa lr_source = source_ratio x lr actual.
+            # Antes se sumaba r·g_fuente al gradiente de la
             # objetivo en un solo Adam, pero Adam normaliza el paso por parámetro: donde
             # el gradiente de la objetivo era chico, el término de las fuentes movía el
             # parámetro casi a tasa completa aunque r fuera 0,005, y el entrenamiento se

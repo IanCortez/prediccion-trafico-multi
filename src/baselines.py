@@ -9,7 +9,7 @@ Baselines sin red neuronal, para medir cuánto aporta el modelo.
             mínimos cuadrados sobre el train.
   TEMP      potencia + residuo medio de los viajes de train con el mismo par de
             celdas O-D y franja de 3 h; si hay menos de MIN_TRIPS, se usa el par
-            (O, D) y después la celda O (idea de Wang et al., 2016).
+            (O, D) y después la celda O.
 """
 
 import numpy as np
