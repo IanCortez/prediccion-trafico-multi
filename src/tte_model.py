@@ -49,6 +49,35 @@ F_ROUTE = len(ROUTE_NAMES)
 F_CTX = len(CTX_NAMES)
 SL_ROUTE = slice(0, F_ROUTE)
 SL_CTX = slice(F_ROUTE, F_ROUTE + F_CTX)
+
+# Posición fina de O y D (opcional, --extra-feats). La celda solo ubica el
+# viaje a 1-1,5 km; estos grupos van al final del vector, después del
+# contexto, y entran a la representación de ruta. Al ir al final, los
+# checkpoints entrenados sin ellos se siguen cargando igual.
+#   subcell  desplazamiento de O y D dentro de su celda, en [-1, 1]
+#   posenc   senos y cosenos multiescala de la posición respecto del centro de
+#            la rejilla (en km, no lat/lon absolutas)
+#   point    contexto OSM en el punto exacto: distancia a la vía y a la arterial
+#            más cercanas, fricción de la vía más cercana, POI e intersecciones
+#            en 200 m
+POS_SCALES_KM = (0.25, 0.5, 1.0, 2.0, 4.0, 8.0)
+POINT_RADIUS_M = 200.0
+EXTRA_GROUPS = {
+    'subcell': [f'{p}_{a}' for p in 'od' for a in ('dx', 'dy')],
+    'posenc': [f'{p}_{a}_{fn}{s:g}' for p in 'od' for a in 'xy' for s in POS_SCALES_KM
+               for fn in ('sin', 'cos')],
+    'point': [f'{p}_{n}' for p in 'od'
+              for n in ('snap_log', 'arterial_log', 'friction', 'poi_log', 'inter_log')] + ['point_mask'],
+}
+SL_EXTRA = slice(F_ROUTE + F_CTX, None)
+
+
+def extra_names(groups):
+    """Nombres de las features extra, siempre en el orden de EXTRA_GROUPS."""
+    unknown = set(groups) - set(EXTRA_GROUPS)
+    if unknown:
+        raise ValueError(f"grupos de features desconocidos: {sorted(unknown)}")
+    return [n for g, names in EXTRA_GROUPS.items() if g in groups for n in names]
 I_DIST_NORM = ROUTE_NAMES.index('dist_norm')
 I_DIST_LOG = ROUTE_NAMES.index('dist_log')
 
@@ -83,7 +112,7 @@ class STTensors:
 @dataclass
 class CityData:
     city: str
-    feats: torch.Tensor            # [N, F_ROUTE + F_CTX]
+    feats: torch.Tensor            # [N, F_ROUTE + F_CTX + extras]
     o_cell: torch.Tensor           # [N]
     d_cell: torch.Tensor           # [N]
     times: torch.Tensor            # [N] log-tiempo normalizado
@@ -264,14 +293,98 @@ def _standardize(x):
     return np.where(std > 1e-6, (x - x.mean(axis=0)) / np.maximum(std, 1e-6), 0.0).astype(np.float32)
 
 
+def _endpoints(city):
+    """Coordenadas (lat, lon) de O y D de todos los viajes: dos arrays [N, 2]."""
+    o = np.array([(t['o_lat'], t['o_lon']) for t in city.trips], dtype=np.float64)
+    d = np.array([(t['d_lat'], t['d_lon']) for t in city.trips], dtype=np.float64)
+    return o, d
+
+
+def _planar_km(city, latlon):
+    """Posición en km respecto del centro de la rejilla (x al este, y al norte)."""
+    kx = 111.320 * math.cos(math.radians(city.lat_c))
+    return np.stack([(latlon[:, 1] - city.lon_c) * kx, (latlon[:, 0] - city.lat_c) * 110.540], 1)
+
+
+def _subcell(city, latlon):
+    """Desplazamiento dentro de la celda en [-1, 1] (0 = centro de la celda)."""
+    g = city.grid
+    lat = np.clip(latlon[:, 0], g.lat0, g.lat_max)
+    lon = np.clip(latlon[:, 1], g.lon0, g.lon_max)
+    fy = (lat - g.lat0) / g._dlat
+    fx = (lon - g.lon0) / g._dlon
+    return np.stack([2 * (fx - np.floor(fx)) - 1, 2 * (fy - np.floor(fy)) - 1], 1)
+
+
+def _posenc(city, latlon):
+    xy = _planar_km(city, latlon)
+    cols = []
+    for a in range(2):
+        for s in POS_SCALES_KM:
+            ang = 2 * np.pi * xy[:, a] / s
+            cols += [np.sin(ang), np.cos(ang)]
+    return np.stack(cols, 1)
+
+
+def _point_context(city, latlon):
+    """Contexto OSM en el punto: [log dist. vía, log dist. arterial, fricción,
+    log POI en 200 m, log intersecciones en 200 m]; None si la ciudad no tiene red."""
+    from scipy.spatial import cKDTree
+    ctx = getattr(city, 'urban_ctx', None)
+    if ctx is None or not ctx.roads:
+        return None
+    to_xy = lambda pts: _planar_km(city, np.array([(p['lat'], p['lon']) for p in pts])) * 1000
+    q = _planar_km(city, latlon) * 1000
+    roads = ctx.roads
+    d_any, i_any = cKDTree(to_xy(roads)).query(q)
+    friction = np.array([uc.ROAD_FRICTION[roads[i]['cls']] for i in i_any])
+    art = [p for p in roads if p['cls'] == 'arterial']
+    d_art = cKDTree(to_xy(art)).query(q)[0] if art else np.full(len(q), 1e4)
+    inter = [p for p in roads if p['street_count'] >= 3]
+    n_inter = (cKDTree(to_xy(inter)).query_ball_point(q, POINT_RADIUS_M, return_length=True)
+               if inter else np.zeros(len(q)))
+    n_poi = (cKDTree(to_xy(ctx.pois)).query_ball_point(q, POINT_RADIUS_M, return_length=True)
+             if ctx.pois else np.zeros(len(q)))
+    return np.stack([np.log1p(np.minimum(d_any, 1e4)), np.log1p(np.minimum(d_art, 1e4)),
+                     friction, np.log1p(n_poi), np.log1p(n_inter)], 1)
+
+
+def extra_feats(city, groups, train_idx):
+    """Features de posición fina de O y D (ver EXTRA_GROUPS), [N, len(extra_names)].
+
+    Las de `point` se estandarizan con media y desviación del train de la propia
+    ciudad, como las features de celda: describen cada punto respecto de su ciudad.
+    """
+    o, d = _endpoints(city)
+    blocks = []
+    if 'subcell' in groups:
+        blocks.append(np.concatenate([_subcell(city, o), _subcell(city, d)], 1))
+    if 'posenc' in groups:
+        blocks.append(np.concatenate([_posenc(city, o), _posenc(city, d)], 1))
+    if 'point' in groups:
+        po, pd = _point_context(city, o), _point_context(city, d)
+        if po is None:
+            blocks.append(np.zeros((len(o), len(EXTRA_GROUPS['point'])), dtype=np.float32))
+        else:
+            x = np.concatenate([po, pd], 1)
+            tr = np.asarray(train_idx)
+            mu, sd = x[tr].mean(0), x[tr].std(0)
+            x = np.where(sd > 1e-6, (x - mu) / np.maximum(sd, 1e-6), 0.0)
+            blocks.append(np.concatenate([x, np.ones((len(o), 1))], 1))
+    out = np.concatenate(blocks, 1).astype(np.float32)
+    assert out.shape[1] == len(extra_names(groups))
+    return out
+
+
 def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
-                    graph_k=8, target_fraction=None):
+                    graph_k=8, target_fraction=None, extra=()):
     """Tensores de una ciudad. target_fraction recorta el train ANTES de
     construir grafo, patrones, tensores ST y normalización, para que el régimen
     few-shot no vea información de los viajes descartados.
 
     norms=None calcula la normalización con el train de esta ciudad (la objetivo);
     las fuentes reciben las de la objetivo (`cd.norms`).
+    extra: grupos de EXTRA_GROUPS que se agregan al final del vector del viaje.
     """
     split_kwargs = split_kwargs or {}
     if split == 'chronological':
@@ -290,6 +403,8 @@ def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
 
     feats = np.array([_trip_vector(t, city, dist_mean, dist_std) for t in city.trips],
                      dtype=np.float32)
+    if extra:
+        feats = np.concatenate([feats, extra_feats(city, extra, tr)], 1)
     raw = np.array([t['travel_time'] for t in city.trips], dtype=np.float32)
     times = (np.log(np.maximum(raw, 1.0)) - time_log_mean) / time_log_std
 
@@ -515,14 +630,15 @@ class TravelTimeModel(nn.Module):
 
     def __init__(self, dim=64, hidden=128, dropout=0.1, bank_size=64, n_env=8,
                  n_graph_layers=2, st_window=6, st_dim=32, st_K=2, st_hidden=32,
-                 pace=False):
+                 pace=False, n_extra=0):
         super().__init__()
         # se guarda con el checkpoint para poder reconstruir el modelo
         self.config = dict(dim=dim, hidden=hidden, dropout=dropout, bank_size=bank_size,
                            n_env=n_env, n_graph_layers=n_graph_layers,
                            st_window=st_window, st_dim=st_dim, st_K=st_K,
-                           st_hidden=st_hidden, pace=pace)
+                           st_hidden=st_hidden, pace=pace, n_extra=n_extra)
         self.pace = pace
+        self.n_extra = n_extra
 
         self.cell_enc = CellEncoder(dim, dropout)
         # el grafo va antes del banco: propagar después difuminaría los prompts
@@ -534,9 +650,10 @@ class TravelTimeModel(nn.Module):
         self.stgnn = S.UrbanSTGNN(st_window, st_hidden, st_dim, st_K, dropout)
 
         rep = hidden // 2
-        # entrada de ruta: h_o, h_d, su producto (interacción O x D) y la geometría
+        # entrada de ruta: h_o, h_d, su producto (interacción O x D), la geometría
+        # y, si las hay, las features de posición fina de O y D
         self.route_enc = nn.Sequential(
-            nn.Linear(dim * 3 + F_ROUTE, hidden), nn.ReLU(), nn.Dropout(dropout),
+            nn.Linear(dim * 3 + F_ROUTE + n_extra, hidden), nn.ReLU(), nn.Dropout(dropout),
             nn.Linear(hidden, rep), nn.LayerNorm(rep))
         self.ctx_enc = nn.Sequential(
             nn.Linear(F_CTX + 2 * st_dim, hidden), nn.ReLU(), nn.Dropout(dropout),
@@ -593,7 +710,10 @@ class TravelTimeModel(nn.Module):
         # el producto h_o * h_d deja expresar qué tiene de particular cada par de
         # celdas sin memorizar el par: se calcula desde embeddings transferibles,
         # a diferencia de un historial por par O-D, que sería una tabla por ciudad
-        psi = self.route_enc(torch.cat([h_o, h_d, h_o * h_d, feats[:, SL_ROUTE]], 1))
+        route = [h_o, h_d, h_o * h_d, feats[:, SL_ROUTE]]
+        if self.n_extra:
+            route.append(feats[:, SL_EXTRA])
+        psi = self.route_enc(torch.cat(route, 1))
         phi = self.ctx_enc(torch.cat([feats[:, SL_CTX], st], 1))
         return phi, psi
 

@@ -10,6 +10,12 @@ El entrenamiento corre en CUDA con semilla fija.
     python src/run.py --data src/data --city porto --cell-m 1500
     python src/run.py --data src/data --city porto --cell-m 1500 --sources beijing_v2 rome
     python src/run.py --data src/data --city porto --cell-m 1500 --split ood_distance --pace
+    python src/run.py --data src/data --city porto --cell-m 1500 --sota-filter \
+        --extra-feats subcell posenc point
+
+--sota-filter aplica a la objetivo la definición de viaje de TransferTraj (zona
+central de Porto, 5 a 120 puntos) para comparar con las cifras publicadas.
+--extra-feats agrega la posición fina de O y D (ver tte_model.EXTRA_GROUPS).
 """
 
 import argparse
@@ -33,6 +39,26 @@ CACHE_DIR = 'cache'
 CACHE_VERSION = 'v2'
 SEED = 0
 
+# Definición de viaje de TransferTraj (Wei et al., 2025) para Porto, para que las
+# cifras sean comparables con las publicadas: O y D dentro de la zona central de
+# 11,13 x 5,11 km y trayectorias de 5 a 120 puntos. El mínimo de 5 puntos (60 s)
+# ya lo aplica load_trips; aquí se agrega el máximo de 120 (119 * 15 s).
+SOTA_FILTER = {
+    'porto': {'lat': (41.1405, 41.1859), 'lon': (-8.6887, -8.5557), 'max_s': 119 * 15},
+}
+
+
+def sota_filter(trips, name):
+    if name not in SOTA_FILTER:
+        raise SystemExit(f"--sota-filter no está definido para {name!r}")
+    f = SOTA_FILTER[name]
+    inside = lambda lat, lon: (f['lat'][0] <= lat <= f['lat'][1]
+                               and f['lon'][0] <= lon <= f['lon'][1])
+    kept = [t for t in trips if t['travel_time'] <= f['max_s']
+            and inside(t['o_lat'], t['o_lon']) and inside(t['d_lat'], t['d_lon'])]
+    print(f"[{name}] filtro SOTA: {len(kept)} de {len(trips)} viajes")
+    return kept
+
 
 def load_city(name, args):
     osm = os.path.join(args.data, 'osm')
@@ -42,7 +68,10 @@ def load_city(name, args):
     # las capas OSM presentes (p, r, e), para no reutilizar cachés construidas
     # con otra lógica o antes de descargar OSM
     present = ''.join(k for k, p in zip('pre', layers) if os.path.exists(p))
-    suffix = (f'_osm{present}' if present else '') + (f'_n{args.max_trips}' if args.max_trips else '')
+    # el filtro SOTA se aplica solo a la ciudad objetivo; las fuentes quedan completas
+    sota = getattr(args, 'sota_filter', False) and name == args.city
+    suffix = ((f'_osm{present}' if present else '') + (f'_n{args.max_trips}' if args.max_trips else '')
+              + ('_sota' if sota else ''))
     cache = os.path.join(CACHE_DIR, f'{name}_c{int(args.cell_m)}_q{tl.BBOX_QUANTILE:g}'
                                     f'_{CACHE_VERSION}{suffix}.pkl')
     if os.path.exists(cache):
@@ -54,6 +83,9 @@ def load_city(name, args):
     if not os.path.exists(csv_path):
         raise SystemExit(f"No existe {csv_path}")
     trips = tl.load_trips(csv_path, name, max_trips=args.max_trips)
+    if sota:
+        # se filtra después de leer: con --max-trips quedan menos de max_trips viajes
+        trips = sota_filter(trips, name)
 
     ctx = uc.UrbanContext(pois=pois, road_nodes=roads, city=name) if (pois or roads) else None
     if ctx is None:
@@ -85,6 +117,10 @@ def build_parser():
                     help='fracción del train objetivo que se usa (few-shot)')
     ap.add_argument('--pace', action='store_true',
                     help='predice log d + log-ritmo (extrapola en distancia)')
+    ap.add_argument('--sota-filter', action='store_true',
+                    help='filtra la objetivo con la definición de viaje de TransferTraj (solo porto)')
+    ap.add_argument('--extra-feats', nargs='*', default=[], choices=list(M.EXTRA_GROUPS),
+                    help='posición fina de O y D: subcell, posenc, point')
     ap.add_argument('--epochs', type=int, default=30)
     ap.add_argument('--patience', type=int, default=6)
     ap.add_argument('--steps-per-epoch', type=int, default=None,
@@ -117,9 +153,10 @@ def prepare(args):
     # la normalización sale del train de la objetivo (ya recortado si es few-shot) y las
     # fuentes usan la misma: así la objetivo se ve igual con o sin fuentes, y ni el
     # test ni los viajes descartados en few-shot entran en ella
+    extra = getattr(args, 'extra_feats', None) or []
     target = M.build_city_data(tgt, None, args.split, split_kwargs,
-                               target_fraction=args.target_fraction)
-    sources = [M.build_city_data(c, target.norms) for c in srcs]
+                               target_fraction=args.target_fraction, extra=extra)
+    sources = [M.build_city_data(c, target.norms, extra=extra) for c in srcs]
     print(f"train/val/test = {len(target.train_idx)}/{len(target.val_idx)}/"
           f"{len(target.test_idx)} | celdas {target.n_cells} | "
           f"cobertura ST {target.st.coverage * 100:.1f} % | fuentes {len(sources)}")
@@ -127,8 +164,10 @@ def prepare(args):
 
 
 def build_trainer(args, target, sources):
+    n_extra = len(M.extra_names(getattr(args, 'extra_feats', None) or []))
     model = M.TravelTimeModel(dim=args.dim, hidden=args.hidden,
-                              bank_size=max(target.n_cells // 2, 8), pace=args.pace)
+                              bank_size=max(target.n_cells // 2, 8), pace=args.pace,
+                              n_extra=n_extra)
     # getattr: las corridas guardadas antes de existir el argumento usan el valor original
     return M.TSJTTrainer(model, target, sources, device='cuda', batch_size=args.batch,
                          source_ratio=getattr(args, 'source_ratio', 0.005),
@@ -198,6 +237,9 @@ def print_report(results, city, split):
               f"{t['sesgo']:+9.1f}{r['peor_hora']['mae']:15.1f}")
     # entre datasets o splits distintos los segundos no se comparan; la mejora relativa sí
     mae = results['modelo']['total']['mae']
+    # los trabajos publicados sobre Porto reportan MAE y RMSE en minutos
+    print(f"  MAE del modelo en minutos: {mae / 60:.3f} | "
+          f"RMSE {results['modelo']['total']['rmse'] / 60:.3f}")
     print("  MAE del modelo frente a: " + " | ".join(
         f"{n} {(mae / r['total']['mae'] - 1) * 100:+.1f} %" for n, r in results.items() if n != 'modelo'))
     names = list(results)
