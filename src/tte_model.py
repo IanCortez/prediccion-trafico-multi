@@ -53,10 +53,17 @@ SL_CTX = slice(F_ROUTE, F_ROUTE + F_CTX)
 # la posición respecto del centro de la rejilla, en km (no lat/lon absolutas).
 # La celda solo ubica el viaje a 1-1,5 km. Van al final del vector, después del
 # contexto, y entran a la representación de ruta; los checkpoints entrenados
-# sin ellas se siguen cargando igual.
+# sin ellas se siguen cargando igual. --posenc-max-km deja solo las escalas
+# pequeñas.
 POS_SCALES_KM = (0.25, 0.5, 1.0, 2.0, 4.0, 8.0)
-POSENC_NAMES = [f'{p}_{a}_{fn}{s:g}' for p in 'od' for a in 'xy' for s in POS_SCALES_KM
-                for fn in ('sin', 'cos')]
+
+
+def posenc_names(scales=POS_SCALES_KM):
+    return [f'{p}_{a}_{fn}{s:g}' for p in 'od' for a in 'xy' for s in scales
+            for fn in ('sin', 'cos')]
+
+
+POSENC_NAMES = posenc_names()
 SL_EXTRA = slice(F_ROUTE + F_CTX, None)
 I_DIST_NORM = ROUTE_NAMES.index('dist_norm')
 I_DIST_LOG = ROUTE_NAMES.index('dist_log')
@@ -279,28 +286,29 @@ def _planar_km(city, latlon):
     return np.stack([(latlon[:, 1] - city.lon_c) * kx, (latlon[:, 0] - city.lat_c) * 110.540], 1)
 
 
-def _posenc(city, latlon):
+def _posenc(city, latlon, scales):
     """sin/cos de la posición en km a cada escala, en el orden x/y, escala, sin/cos."""
-    ang = 2 * np.pi * _planar_km(city, latlon)[:, :, None] / np.array(POS_SCALES_KM)
+    ang = 2 * np.pi * _planar_km(city, latlon)[:, :, None] / np.array(scales)
     return np.stack([np.sin(ang), np.cos(ang)], -1).reshape(len(latlon), -1)
 
 
-def posenc_feats(city):
-    """Codificación de posición de O y D de todos los viajes: [N, len(POSENC_NAMES)]."""
+def posenc_feats(city, scales=POS_SCALES_KM):
+    """Codificación de posición de O y D de todos los viajes: [N, len(posenc_names(scales))]."""
     o = np.array([(t['o_lat'], t['o_lon']) for t in city.trips], dtype=np.float64)
     d = np.array([(t['d_lat'], t['d_lon']) for t in city.trips], dtype=np.float64)
-    return np.concatenate([_posenc(city, o), _posenc(city, d)], 1).astype(np.float32)
+    return np.concatenate([_posenc(city, o, scales), _posenc(city, d, scales)], 1).astype(np.float32)
 
 
 def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
-                    graph_k=8, target_fraction=None, posenc=False):
+                    graph_k=8, target_fraction=None, posenc=()):
     """Tensores de una ciudad. target_fraction recorta el train ANTES de
     construir grafo, patrones, tensores ST y normalización, para que el régimen
     few-shot no vea información de los viajes descartados.
 
     norms=None calcula la normalización con el train de esta ciudad (la objetivo);
     las fuentes reciben las de la objetivo (`cd.norms`).
-    posenc: agrega POSENC_NAMES al final del vector del viaje.
+    posenc: escalas en km de la codificación de posición que se agrega al final
+    del vector del viaje (vacío: sin ella).
     """
     split_kwargs = split_kwargs or {}
     if split == 'chronological':
@@ -320,7 +328,7 @@ def build_city_data(city, norms=None, split='chronological', split_kwargs=None,
     feats = np.array([_trip_vector(t, city, dist_mean, dist_std) for t in city.trips],
                      dtype=np.float32)
     if posenc:
-        feats = np.concatenate([feats, posenc_feats(city)], 1)
+        feats = np.concatenate([feats, posenc_feats(city, posenc)], 1)
     raw = np.array([t['travel_time'] for t in city.trips], dtype=np.float32)
     times = (np.log(np.maximum(raw, 1.0)) - time_log_mean) / time_log_std
 

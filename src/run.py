@@ -14,7 +14,8 @@ El entrenamiento corre en CUDA con semilla fija.
 
 --sota-filter deja en la objetivo solo los viajes de la zona central de Porto con
 5 a 120 puntos, la definición de viaje de las cifras publicadas.
---posenc agrega la posición fina de O y D (ver tte_model.POSENC_NAMES).
+--posenc agrega la posición fina de O y D (ver tte_model.POSENC_NAMES);
+--posenc-max-km deja solo las escalas de hasta ese valor.
 """
 
 import argparse
@@ -59,9 +60,18 @@ def sota_filter(trips, name):
     return kept
 
 
-def use_posenc(args):
-    # las corridas guardadas antes de --posenc lo registran como extra_feats=['posenc']
-    return getattr(args, 'posenc', False) or 'posenc' in (getattr(args, 'extra_feats', None) or [])
+def posenc_scales(args):
+    """Escalas de --posenc; () si no se usa. Las corridas guardadas antes de
+    --posenc lo registran como extra_feats=['posenc']."""
+    if not (getattr(args, 'posenc', False) or 'posenc' in (getattr(args, 'extra_feats', None) or [])):
+        return ()
+    top = getattr(args, 'posenc_max_km', None)
+    return tuple(s for s in M.POS_SCALES_KM if top is None or s <= top)
+
+
+def run_tag(args):
+    # 'dgcn' se conserva en el nombre para que las corridas anteriores sigan encontrándose
+    return f"{args.city}_{args.split}_dgcn" + ('_pace' if args.pace else '')
 
 
 def load_city(name, args):
@@ -125,6 +135,8 @@ def build_parser():
                     help='solo viajes de la zona central y de 5 a 120 puntos (solo porto)')
     ap.add_argument('--posenc', action='store_true',
                     help='posición fina de O y D: senos y cosenos multiescala en km')
+    ap.add_argument('--posenc-max-km', type=float, default=None,
+                    help='con --posenc, solo las escalas de hasta este valor')
     ap.add_argument('--epochs', type=int, default=30)
     ap.add_argument('--patience', type=int, default=6)
     ap.add_argument('--steps-per-epoch', type=int, default=None,
@@ -136,6 +148,11 @@ def build_parser():
                     help='peso de la alineación MMD de embeddings de celda entre ciudades')
     ap.add_argument('--lambda-aux', type=float, default=0.1,
                     help='peso del objetivo auxiliar de circuidad del recorrido (solo entrenamiento)')
+    ap.add_argument('--alpha', type=float, default=0.5,
+                    help='peso de la varianza del riesgo entre entornos')
+    ap.add_argument('--beta', type=float, default=0.5,
+                    help='peso del término contrastivo entre ruta y contexto (pdCor)')
+    ap.add_argument('--dropout', type=float, default=0.1)
     ap.add_argument('--dim', type=int, default=64)
     ap.add_argument('--hidden', type=int, default=128)
     ap.add_argument('--out', default='runs')
@@ -157,7 +174,7 @@ def prepare(args):
     # la normalización sale del train de la objetivo (ya recortado si es few-shot) y las
     # fuentes usan la misma: así la objetivo se ve igual con o sin fuentes, y ni el
     # test ni los viajes descartados en few-shot entran en ella
-    posenc = use_posenc(args)
+    posenc = posenc_scales(args)
     target = M.build_city_data(tgt, None, args.split, split_kwargs,
                                target_fraction=args.target_fraction, posenc=posenc)
     sources = [M.build_city_data(c, target.norms, posenc=posenc) for c in srcs]
@@ -168,13 +185,15 @@ def prepare(args):
 
 
 def build_trainer(args, target, sources):
-    n_extra = len(M.POSENC_NAMES) if use_posenc(args) else 0
+    n_extra = len(M.posenc_names(posenc_scales(args)))
     model = M.TravelTimeModel(dim=args.dim, hidden=args.hidden,
+                              dropout=getattr(args, 'dropout', 0.1),
                               bank_size=max(target.n_cells // 2, 8), pace=args.pace,
                               n_extra=n_extra)
     # getattr: las corridas guardadas antes de existir el argumento usan el valor original
     return M.Trainer(model, target, sources, device='cuda', batch_size=args.batch,
                          source_ratio=getattr(args, 'source_ratio', 0.005),
+                         alpha=getattr(args, 'alpha', 0.5), beta=getattr(args, 'beta', 0.5),
                          lambda_align=getattr(args, 'lambda_align', 0.0),
                          lambda_aux=getattr(args, 'lambda_aux', 0.0))
 
@@ -215,8 +234,7 @@ def run(args, seed=SEED):
     results = {name: M.report(p, true, hour, dist) for name, p in preds.items()}
     print_report(results, target.city, args.split)
 
-    # 'dgcn' se conserva en el nombre para que las corridas anteriores sigan encontrándose
-    tag = f"{args.city}_{args.split}_dgcn" + ('_pace' if args.pace else '')
+    tag = run_tag(args)
     os.makedirs(args.out, exist_ok=True)
     tr.save(os.path.join(args.out, f'{tag}.pt'))
     with compat.open_text(os.path.join(args.out, f'{tag}.json'), 'w') as f:
