@@ -642,7 +642,10 @@ class TravelTimeModel(nn.Module):
         return phi, psi
 
     def forward(self, h_cells, o_idx, d_idx, feats, st):
-        phi, psi = self.represent(h_cells, o_idx, d_idx, feats, st)
+        return self.predict(*self.represent(h_cells, o_idx, d_idx, feats, st), feats)
+
+    def predict(self, phi, psi, feats):
+        """Tiempo normalizado a partir de Φ y Ψ ya calculados."""
         out = self.head(self.gate_ctx(phi) + self.gate_route(psi)).squeeze(1)
         if not self.pace:
             return out
@@ -793,11 +796,13 @@ class Trainer:
         st_feat = self._window_embed(cd, idx, o, d, out_of_fold=True)
         # Huber: cuadrática cerca del objetivo y lineal lejos, para no dejarse
         # arrastrar por viajes anómalos (taxímetro olvidado, desvíos largos)
-        per = F.huber_loss(self.model(h, o, d, feats, st_feat), y,
+        # una sola pasada: la predicción y los términos auxiliares usan la misma
+        # Φ, Ψ (la misma máscara de dropout)
+        phi, psi = self.model.represent(h, o, d, feats, st_feat)
+        per = F.huber_loss(self.model.predict(phi, psi, feats), y,
                            reduction='none', delta=1.0)
         loss = per.mean()
         extras = {}
-        phi, psi = self.model.represent(h, o, d, feats, st_feat)
         if self.lambda_aux > 0:
             # el recorrido real enseña a la representación de ruta cuánto se desvían
             # los viajes de la recta; en inferencia esta cabeza no se usa

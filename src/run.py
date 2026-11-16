@@ -91,7 +91,7 @@ def load_city(name, args):
     if os.path.exists(cache):
         print(f"[{name}] desde caché {cache}")
         with open(cache, 'rb') as f:
-            return pickle.load(f)
+            return _cell_context(pickle.load(f), args)
 
     csv_path = os.path.join(args.data, name, 'train.csv')
     if not os.path.exists(csv_path):
@@ -112,6 +112,15 @@ def load_city(name, args):
     os.makedirs(CACHE_DIR, exist_ok=True)
     with open(cache, 'wb') as f:
         pickle.dump(city, f, protocol=4)
+    return _cell_context(city, args)
+
+
+def _cell_context(city, args):
+    """Con --cell-ctx, las features POI y viales de cada celda se miden en un
+    radio de media celda (como el corredor O-D) en lugar de 400 m fijos. Se
+    recalculan sobre las celdas de la caché: no hace falta reconstruirla."""
+    if getattr(args, 'cell_ctx', False) and city.urban_ctx is not None:
+        city.urban_ctx.annotate_nodes(city.cells, radius_m=city.grid.cell_m / 2.0)
     return city
 
 
@@ -137,6 +146,8 @@ def build_parser():
                     help='posición fina de O y D: senos y cosenos multiescala en km')
     ap.add_argument('--posenc-max-km', type=float, default=None,
                     help='con --posenc, solo las escalas de hasta este valor')
+    ap.add_argument('--cell-ctx', action='store_true',
+                    help='features POI y viales de celda en un radio de media celda (por defecto, 400 m)')
     ap.add_argument('--epochs', type=int, default=30)
     ap.add_argument('--patience', type=int, default=6)
     ap.add_argument('--steps-per-epoch', type=int, default=None,

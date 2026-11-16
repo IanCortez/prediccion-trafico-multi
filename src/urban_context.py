@@ -220,12 +220,14 @@ class UrbanContext:
             print(f"[ctx:{city or '?'}] {len(self.pois)} POIs | "
                   f"{len(self.roads)} nodos viales")
 
-    def annotate_nodes(self, nodes):
+    def annotate_nodes(self, nodes, radius_m=None):
         """Añade a cada celda las claves de NODE_POI_NAMES y NODE_ROAD_NAMES.
 
         Necesita todas las celdas a la vez porque las densidades se pasan a
-        rango percentil dentro de la ciudad.
+        rango percentil dentro de la ciudad. radius_m: radio de la consulta
+        alrededor del centro (por defecto poi_radius_m).
         """
+        radius = self.poi_radius_m if radius_m is None else radius_m
         n = len(nodes)
         mix = np.zeros((n, N_POI_CLASSES))
         poi_count = np.zeros(n)
@@ -237,12 +239,12 @@ class UrbanContext:
         for i, nd in enumerate(nodes):
             lat, lon = nd['lat'], nd['lon']
             if self.has_poi:
-                for k in self._poi_idx.query(lat, lon, self.poi_radius_m):
+                for k in self._poi_idx.query(lat, lon, radius):
                     mix[i, POI_CLASS_IDX[self.pois[k]['cls']]] += 1.0
                 poi_count[i] = mix[i].sum()
             if self.has_road:
                 inter = sig = sc = 0
-                for k in self._road_idx.query(lat, lon, self.poi_radius_m):
+                for k in self._road_idx.query(lat, lon, radius):
                     r = self.roads[k]
                     if r['street_count'] >= 3:
                         inter += 1
