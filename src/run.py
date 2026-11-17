@@ -5,7 +5,7 @@ ciudades fuente.
 Cada ciudad se lee de <data>/<ciudad>/train.csv. Si existen
 <data>/osm/<ciudad>_pois.geojson y <data>/osm/<ciudad>_roads.geojson se usan
 como contexto urbano. Las ciudades preprocesadas se guardan en cache/.
-El entrenamiento corre en CUDA con semilla fija.
+El entrenamiento corre con semilla fija, en CUDA si hay GPU y si no en CPU.
 
     python src/run.py --data src/data --city porto --cell-m 1500
     python src/run.py --data src/data --city porto --cell-m 1500 --sources beijing_v2 rome
@@ -14,8 +14,7 @@ El entrenamiento corre en CUDA con semilla fija.
 
 --sota-filter deja en la objetivo solo los viajes de la zona central de Porto con
 5 a 120 puntos, la definición de viaje de las cifras publicadas.
---posenc agrega la posición fina de O y D (ver tte_model.POSENC_NAMES);
---posenc-max-km deja solo las escalas de hasta ese valor.
+--posenc agrega la posición fina de O y D (ver tte_model.POSENC_NAMES).
 """
 
 import argparse
@@ -27,7 +26,6 @@ import random
 import numpy as np
 import torch
 
-import baselines as B
 import compat
 import road_network as RN
 import trajectory_loader as tl
@@ -38,6 +36,7 @@ CACHE_DIR = 'cache'
 # v2: hora local por ciudad, longitud real del recorrido (objetivo auxiliar) y red vial
 CACHE_VERSION = 'v2'
 SEED = 0
+DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # Definición de viaje de las cifras publicadas para Porto (ver
 # docs/transferencia_ood.md): O y D dentro de la zona central de
@@ -63,10 +62,9 @@ def sota_filter(trips, name):
 def posenc_scales(args):
     """Escalas de --posenc; () si no se usa. Las corridas guardadas antes de
     --posenc lo registran como extra_feats=['posenc']."""
-    if not (getattr(args, 'posenc', False) or 'posenc' in (getattr(args, 'extra_feats', None) or [])):
-        return ()
-    top = getattr(args, 'posenc_max_km', None)
-    return tuple(s for s in M.POS_SCALES_KM if top is None or s <= top)
+    if getattr(args, 'posenc', False) or 'posenc' in (getattr(args, 'extra_feats', None) or []):
+        return M.POS_SCALES_KM
+    return ()
 
 
 def run_tag(args):
@@ -144,8 +142,6 @@ def build_parser():
                     help='solo viajes de la zona central y de 5 a 120 puntos (solo porto)')
     ap.add_argument('--posenc', action='store_true',
                     help='posición fina de O y D: senos y cosenos multiescala en km')
-    ap.add_argument('--posenc-max-km', type=float, default=None,
-                    help='con --posenc, solo las escalas de hasta este valor')
     ap.add_argument('--cell-ctx', action='store_true',
                     help='features POI y viales de celda en un radio de media celda (por defecto, 400 m)')
     ap.add_argument('--epochs', type=int, default=30)
@@ -159,10 +155,6 @@ def build_parser():
                     help='peso de la alineación MMD de embeddings de celda entre ciudades')
     ap.add_argument('--lambda-aux', type=float, default=0.1,
                     help='peso del objetivo auxiliar de circuidad del recorrido (solo entrenamiento)')
-    ap.add_argument('--alpha', type=float, default=0.5,
-                    help='peso de la varianza del riesgo entre entornos')
-    ap.add_argument('--beta', type=float, default=0.5,
-                    help='peso del término contrastivo entre ruta y contexto (pdCor)')
     ap.add_argument('--dropout', type=float, default=0.1)
     ap.add_argument('--dim', type=int, default=64)
     ap.add_argument('--hidden', type=int, default=128)
@@ -202,9 +194,8 @@ def build_trainer(args, target, sources):
                               bank_size=max(target.n_cells // 2, 8), pace=args.pace,
                               n_extra=n_extra)
     # getattr: las corridas guardadas antes de existir el argumento usan el valor original
-    return M.Trainer(model, target, sources, device='cuda', batch_size=args.batch,
+    return M.Trainer(model, target, sources, device=DEVICE, batch_size=args.batch,
                          source_ratio=getattr(args, 'source_ratio', 0.005),
-                         alpha=getattr(args, 'alpha', 0.5), beta=getattr(args, 'beta', 0.5),
                          lambda_align=getattr(args, 'lambda_align', 0.0),
                          lambda_aux=getattr(args, 'lambda_aux', 0.0))
 
@@ -217,32 +208,29 @@ def load_run(json_path):
     with compat.open_text(json_path) as f:
         saved = json.load(f)
     args = argparse.Namespace(**saved['args'])
-    tgt, srcs, target, sources = prepare(args)
+    tgt, _, target, sources = prepare(args)
     tr = build_trainer(args, target, sources)
-    ckpt = torch.load(os.path.splitext(json_path)[0] + '.pt', map_location='cuda')
+    ckpt = torch.load(os.path.splitext(json_path)[0] + '.pt', map_location=DEVICE)
     tr.model.load_state_dict(ckpt['model_state'])
     tr.history = ckpt['history']
     return args, tgt, target, sources, tr
 
 
 def run(args, seed=SEED):
-    """Entrena, evalúa contra los baselines y guarda los resultados en args.out.
+    """Entrena, evalúa en el test y guarda los resultados en args.out.
 
-    Devuelve las métricas de test del modelo y de los baselines, y las épocas entrenadas.
+    Devuelve las métricas de test del modelo ({'modelo': ...}) y las épocas entrenadas.
     """
     set_seed(seed)
-    tgt, srcs, target, sources = prepare(args)
+    _, _, target, sources = prepare(args)
     tr = build_trainer(args, target, sources)
     tr.train(epochs=args.epochs, patience=args.patience, steps_per_epoch=args.steps_per_epoch)
 
-    # el modelo y los baselines se evalúan sobre el mismo test y con el mismo train
     test = np.asarray(target.test_idx)
     true = target.raw_times[test].numpy()
     hour = target.st.how.cpu().numpy()[test] % 24
     dist = target.od_dist[test].numpy()
-    preds = {'modelo': tr.predict(target, target.test_idx)}
-    preds.update(B.predict(tgt, target.train_idx, target.test_idx))
-    results = {name: M.report(p, true, hour, dist) for name, p in preds.items()}
+    results = {'modelo': M.report(tr.predict(target, target.test_idx), true, hour, dist)}
     print_report(results, target.city, args.split)
 
     tag = run_tag(args)
@@ -261,6 +249,8 @@ def main():
 
 
 def print_report(results, city, split):
+    """Métricas de test de 'modelo' y de las demás entradas de `results`
+    (ensemble.py pasa el ensamble como 'modelo' junto a cada semilla)."""
     print(f"\nTEST {city} (split={split})")
     print(f"  {'':10s}{'MAE (s)':>9s}{'RMSE (s)':>10s}{'MdAE (s)':>10s}{'MAPE %':>8s}"
           f"{'sesgo %':>9s}{'peor hora MAE':>15s}")
@@ -268,21 +258,27 @@ def print_report(results, city, split):
         t = r['total']
         print(f"  {name:10s}{t['mae']:9.1f}{t['rmse']:10.1f}{t['mdae']:10.1f}{t['mape']:8.2f}"
               f"{t['sesgo']:+9.1f}{r['peor_hora']['mae']:15.1f}")
-    # entre datasets o splits distintos los segundos no se comparan; la mejora relativa sí
-    mae = results['modelo']['total']['mae']
     # los trabajos publicados sobre Porto reportan MAE y RMSE en minutos
+    mae = results['modelo']['total']['mae']
     print(f"  MAE del modelo en minutos: {mae / 60:.3f} | "
           f"RMSE {results['modelo']['total']['rmse'] / 60:.3f}")
-    print("  MAE del modelo frente a: " + " | ".join(
-        f"{n} {(mae / r['total']['mae'] - 1) * 100:+.1f} %" for n, r in results.items() if n != 'modelo'))
+    others = {n: r for n, r in results.items() if n != 'modelo'}
+    if others:
+        print("  MAE del modelo frente a: " + " | ".join(
+            f"{n} {(mae / r['total']['mae'] - 1) * 100:+.1f} %" for n, r in others.items()))
+    _print_bands(results, 'por_franja_km', 'franja fija de distancia')
+    _print_bands(results, 'por_hora', 'franja horaria (hora local de salida)')
+
+
+def _print_bands(results, key, title):
     names = list(results)
-    print("\n  MAE (s) / sesgo % por franja fija de distancia")
+    print(f"\n  MAE (s) / sesgo % por {title}")
     print(f"  {'':22s}{'n':>8s}" + ''.join(f"{n:>19s}" for n in names))
-    for label, m in results['modelo']['por_franja_km'].items():
+    for label, m in results['modelo'][key].items():
         if not m['n']:
             continue
-        row = ''.join(f"{results[n]['por_franja_km'][label]['mae']:10.1f} / "
-                      f"{results[n]['por_franja_km'][label]['sesgo']:+6.1f}" for n in names)
+        row = ''.join(f"{results[n][key][label]['mae']:10.1f} / "
+                      f"{results[n][key][label]['sesgo']:+6.1f}" for n in names)
         print(f"  {label:22s}{m['n']:8d}{row}")
 
 

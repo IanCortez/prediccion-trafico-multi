@@ -130,7 +130,7 @@ class RoadGraph:
         _, nearest = tree.query(np.c_[cell_lat, cell_lon * k])
         snap = main[nearest]
         snap_m = _haversine(cell_lat, cell_lon, self.lat[snap], self.lon[snap])
-        src, inv = np.unique(snap, return_inverse=True)
+        src = np.unique(snap)
         D = np.empty((len(cell_lat), len(cell_lat)), np.float32)
         T = np.empty_like(D)
         for start in range(0, len(src), chunk):

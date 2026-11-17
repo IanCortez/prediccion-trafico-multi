@@ -53,8 +53,7 @@ SL_CTX = slice(F_ROUTE, F_ROUTE + F_CTX)
 # la posición respecto del centro de la rejilla, en km (no lat/lon absolutas).
 # La celda solo ubica el viaje a 1-1,5 km. Van al final del vector, después del
 # contexto, y entran a la representación de ruta; los checkpoints entrenados
-# sin ellas se siguen cargando igual. --posenc-max-km deja solo las escalas
-# pequeñas.
+# sin ellas se siguen cargando igual.
 POS_SCALES_KM = (0.25, 0.5, 1.0, 2.0, 4.0, 8.0)
 
 
@@ -409,7 +408,8 @@ def report(pred, true, hour, dist):
                                                      'n': int(sel.sum())}
     for b in np.unique(hour // 6):
         sel = hour // 6 == b
-        out['por_hora'][f"{b * 6:02d}-{b * 6 + 5:02d}h"] = metrics(pred[sel], true[sel])
+        out['por_hora'][f"{b * 6:02d}-{b * 6 + 5:02d}h"] = {**metrics(pred[sel], true[sel]),
+                                                             'n': int(sel.sum())}
     out['peor_hora'] = max(out['por_hora'].values(), key=lambda m: m['mae'])
     return out
 
@@ -673,12 +673,12 @@ class Trainer:
                  lambda_aux=0.1):
         """
         source_ratio   tasa de aprendizaje del paso de las fuentes respecto de la
-                       de la objetivo. Con 1 se
-                       obtuvo el mejor resultado en few-shot (ver docs/fase_E).
+                       de la objetivo. Con 1 se obtuvo el mejor resultado en
+                       few-shot (ver docs/fase_E_transferencia.md).
         alpha, beta    pesos de la varianza del riesgo y del término contrastivo.
         lambda_st      peso de la pérdida de interpolación enmascarada.
         st_mask_ratio  fracción de celdas ocultadas en esa pérdida.
-        st_windows     ventanas por paso para esa pérdida (solo 'dgcn').
+        st_windows     ventanas por paso para esa pérdida.
         val_size       viajes de validación evaluados por época (muestra fija).
         lambda_align   peso del término MMD que alinea los embeddings de celda de
                        la objetivo con los de las fuentes (solo con fuentes).
@@ -849,8 +849,10 @@ class Trainer:
         return out
 
     def _update_env(self, ex):
-        """Ajusta la partición en entornos: riesgo desigual entre entornos y
-        asignaciones seguras pero balanceadas."""
+        """Ajusta la partición en entornos con asignaciones seguras pero
+        balanceadas. Minimiza la varianza del riesgo entre entornos, igual que
+        el modelo; maximizarla (inferencia adversarial) se probó y empeora (ver
+        "Paso 3b" en docs/plan_sota_porto.md)."""
         self.env_opt.zero_grad()
         env = self.model.env_infer(ex['phi'], ex['psi'])
         risk = self._concept_risk(env, ex['per'])
