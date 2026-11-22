@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "sigma_zero_models_equal": true,
+  "run_order_invariant": true,
+  "masked_duration_intervention_invariant": true,
+  "finite_location_sigma_gradients": true,
+  "shared_geometric_positive_dependence": 0.013965732759997573,
+  "Test_access": false,
+  "code_sha256": "66e1104b4458cf21d780b92c8f3dd5c9409a57f8edd92c8e6309af1fbf690c92",
+  "likelihood_code_sha256": "35e366c07f56b61facfeb189e2ee1924047f0ae8e05266f20e39666f77635968"
+}

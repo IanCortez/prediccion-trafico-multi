@@ -1,0 +1,5 @@
+{
+  "failed_before_training": true,
+  "predictive_result": null,
+  "reason": "Torch forbids integer minus bool; explicit integer cast added. Bernoulli loss implemented in float32 for AMP compatibility. Initial checks now cover FP32 and AMP."
+}

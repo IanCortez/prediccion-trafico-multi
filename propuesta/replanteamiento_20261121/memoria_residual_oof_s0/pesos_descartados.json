@@ -1,0 +1,13 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\memoria_residual_oof_s0\\modelo.pt",
+  "bytes": 376290,
+  "sha256": "2bd1e26a76cac870ae63d7f1ce88d939e11ab36bc58b251966e9e86f8a17d68f",
+  "validation": {
+    "n": 127941,
+    "mae_s": 136.30580321953553,
+    "rmse_s": 216.76987131695302,
+    "mdae_s": 84.3558398865672
+  },
+  "predictions_sha256": "62bdf801bda35c6edc2b693b439fa7bcff2bb9412d6ac51557d774fef25acf01",
+  "reason": "Completed MAE not below131.06s; metrics, predictions, protocol, exact source and OOF prediction instrument retained"
+}

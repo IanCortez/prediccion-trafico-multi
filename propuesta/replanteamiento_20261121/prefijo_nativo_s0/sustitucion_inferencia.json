@@ -1,0 +1,7 @@
+{
+  "pid": 20612,
+  "command": "E:\\UTEC\\Tesis\\TesisIan\\.conda-env\\python.exe -B E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\entrenar_prefijo_nativo.py --id prefijo_nativo_s0",
+  "action": "Replace final inference only after10completed epochs",
+  "checkpoint_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+  "utc": "2026-11-22T04:33:32.6451346Z"
+}

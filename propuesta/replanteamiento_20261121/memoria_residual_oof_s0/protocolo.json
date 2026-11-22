@@ -1,0 +1,17 @@
+{
+  "id": "memoria_residual_oof_s0",
+  "seed": 0,
+  "features": 206,
+  "loss": "MAE on base prediction plus gated learned soft-neighbor residual correction",
+  "base": "4-fold UTC departure-week-blocked fixed1800-tree CatBoost; no held-fold-label fitting or early stopping",
+  "candidate_rule": "Training queries and candidates belong to SAME heldout fold; their base excludes the entire query fold; own row always masked",
+  "bank": "OOF residual true-minus-CFbase; all Train bank for Validation, base uses full Train",
+  "validation": "Fixed4096 selection rows, final all127941, exact all-bank streaming values",
+  "query_batch": 512,
+  "stochastic_candidates": 16384,
+  "lr": 0.001,
+  "epochs": 70,
+  "patience": 12,
+  "Test_access": false,
+  "max_seconds": 7200
+}

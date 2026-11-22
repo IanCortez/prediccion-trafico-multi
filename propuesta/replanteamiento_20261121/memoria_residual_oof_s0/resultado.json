@@ -1,0 +1,71 @@
+{
+  "id": "memoria_residual_oof_s0",
+  "config": {
+    "id": "memoria_residual_oof_s0",
+    "seed": 0,
+    "features": 206,
+    "loss": "MAE on base prediction plus gated learned soft-neighbor residual correction",
+    "base": "4-fold UTC departure-week-blocked fixed1800-tree CatBoost; no held-fold-label fitting or early stopping",
+    "candidate_rule": "Training queries and candidates belong to SAME heldout fold; their base excludes the entire query fold; own row always masked",
+    "bank": "OOF residual true-minus-CFbase; all Train bank for Validation, base uses full Train",
+    "validation": "Fixed4096 selection rows, final all127941, exact all-bank streaming values",
+    "query_batch": 512,
+    "stochastic_candidates": 16384,
+    "lr": 0.001,
+    "epochs": 70,
+    "patience": 12,
+    "Test_access": false,
+    "max_seconds": 7200
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 136.30580321953553,
+    "rmse_s": 216.76987131695302,
+    "mdae_s": 84.3558398865672
+  },
+  "base_validation": {
+    "n": 127941,
+    "mae_s": 136.18608419982218,
+    "rmse_s": 217.50664256249215,
+    "mdae_s": 83.49401562688035
+  },
+  "best_epoch": 22,
+  "epochs_run": 34,
+  "train_n": 1023485,
+  "model_sha256": "2bd1e26a76cac870ae63d7f1ce88d939e11ab36bc58b251966e9e86f8a17d68f",
+  "code_sha256": "70180f0270dcfc9e4dac84a4586b9c4e240a4bcce512195b70da8574e0f7c600",
+  "model_code_sha256": "9bc9333565c194c43ab76bcca7ddc12fc9cae688befe2a3a15eb7dd1a6007245",
+  "paired_vs_retained": {
+    "delta_mae_s": 5.049091141311991,
+    "ci95_s": [
+      4.6055685223908185,
+      5.48707330928431
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "paired_vs_base": {
+    "delta_mae_s": 0.11971901971338386,
+    "ci95_s": [
+      -0.06911082177242596,
+      0.322356069806584
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 1050.101538658142,
+  "Test_access": false,
+  "global_goal_validation": false
+}

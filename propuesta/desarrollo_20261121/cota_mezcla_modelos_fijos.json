@@ -1,0 +1,11 @@
+{
+  "scope": "Only convex point blends, or medians of convex CDF mixtures, of these two fixed checkpoints on this Validation cohort. Any such median lies between the two endpoint medians.",
+  "n": 127941,
+  "relaxed_oracle_mae_lower_bound_s": 123.83579149764344,
+  "formula": "mean(abs(y - clip(y, minimum(pred_old,pred_new), maximum(pred_old,pred_new))))",
+  "target_s": 73.5,
+  "this_fixed_family_excluded_from_target_on_Validation": true,
+  "label_privileged_diagnostic_not_a_predictor": true,
+  "not_a_lower_bound_for_other_models_or_Bayes_error": true,
+  "Test_access": false
+}

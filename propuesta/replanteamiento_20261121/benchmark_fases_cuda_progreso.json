@@ -1,0 +1,56 @@
+[
+  {
+    "kind": "categorical",
+    "batch": 2,
+    "AMP": false,
+    "median_forward_backward_seconds": 0.7226566999961506,
+    "Train_queries_per_second": 2.7675658442115787,
+    "incremental_peak_allocated_bytes": 717578240,
+    "finite_gradients": true
+  },
+  {
+    "kind": "phase",
+    "batch": 2,
+    "AMP": false,
+    "median_forward_backward_seconds": 0.3702995000057854,
+    "Train_queries_per_second": 5.4010334876735,
+    "incremental_peak_allocated_bytes": 328551936,
+    "finite_gradients": true
+  },
+  {
+    "kind": "phase",
+    "batch": 2,
+    "AMP": true,
+    "median_forward_backward_seconds": 0.37664500000391854,
+    "Train_queries_per_second": 5.31003995799544,
+    "incremental_peak_allocated_bytes": 320967168,
+    "finite_gradients": true
+  },
+  {
+    "kind": "categorical",
+    "batch": 8,
+    "AMP": false,
+    "median_forward_backward_seconds": 0.7933474000019487,
+    "Train_queries_per_second": 10.083854815658752,
+    "incremental_peak_allocated_bytes": 2730385920,
+    "finite_gradients": true
+  },
+  {
+    "kind": "phase",
+    "batch": 8,
+    "AMP": false,
+    "median_forward_backward_seconds": 0.38321279999945546,
+    "Train_queries_per_second": 20.87612939863013,
+    "incremental_peak_allocated_bytes": 1321715712,
+    "finite_gradients": true
+  },
+  {
+    "kind": "phase",
+    "batch": 8,
+    "AMP": true,
+    "median_forward_backward_seconds": 0.405147899997246,
+    "Train_queries_per_second": 19.745875518679426,
+    "incremental_peak_allocated_bytes": 1280952320,
+    "finite_gradients": true
+  }
+]

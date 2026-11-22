@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-11-22T05:15:03Z",
+  "Validation_prediction_sets_checked": 10,
+  "rows_in_each_set": 127941,
+  "retained_model_MAE_s": 131.25671207822356,
+  "model_checkpoint_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "CPU_smoke_check": {
+    "n": 8,
+    "finite_probabilities": true,
+    "normalized_probabilities": true,
+    "max_prediction_difference_from_saved_s": 0.0,
+    "parameters": 4280768
+  },
+  "training_run": false,
+  "GPU_used": false,
+  "Test_read": false,
+  "original_research_sources_modified": false,
+  "branch_scope": "Review snapshot only; original src files unchanged.",
+  "snapshot_limit": "The native recurrent model has no complete Validation MAE in this capture.",
+  "historical_ensemble_limit": "131.063380777 s is historical only; three checkpoints unavailable."
+}

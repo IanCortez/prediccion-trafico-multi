@@ -1,0 +1,89 @@
+{
+  "protocol": {
+    "kind": "New online exploratory protocol, not the frozen static OD benchmark",
+    "label_availability": "departure + observed duration + 60 seconds; strictly before current departure",
+    "initial_state": "empty; no Validation future and no Train in-sample residual warm start",
+    "fixed_configurations": [
+      "frozen_static",
+      "global_2h",
+      "local_2h",
+      "local_6h",
+      "local_24h"
+    ],
+    "fit_or_tuning": "none; fixed parameters before simulation",
+    "limits": {
+      "max_bias_s": 120,
+      "local_shrinkage_n": 30,
+      "global_shrinkage_n": 50
+    },
+    "scope": "all existing 127941 Validation trips in original order; Test remains sealed"
+  },
+  "metrics": {
+    "frozen_static": {
+      "n": 127941,
+      "mae_s": 131.25671207822356,
+      "rmse_s": 210.804448731162
+    },
+    "global_2h": {
+      "n": 127941,
+      "mae_s": 130.60690356271442,
+      "rmse_s": 209.6610314438094
+    },
+    "local_2h": {
+      "n": 127941,
+      "mae_s": 130.41891285270825,
+      "rmse_s": 209.03452054890195
+    },
+    "local_6h": {
+      "n": 127941,
+      "mae_s": 130.84285869868586,
+      "rmse_s": 209.54306109244723
+    },
+    "local_24h": {
+      "n": 127941,
+      "mae_s": 130.5041210857325,
+      "rmse_s": 209.67178820230572
+    }
+  },
+  "paired_vs_static": {
+    "global_2h": {
+      "delta_mae_s": -0.6498085155091452,
+      "ci95_s": [
+        -0.9828408790299681,
+        -0.35002511172495265
+      ],
+      "days": 35
+    },
+    "local_2h": {
+      "delta_mae_s": -0.8377992255153068,
+      "ci95_s": [
+        -1.373174536192671,
+        -0.32874185908389086
+      ],
+      "days": 35
+    },
+    "local_6h": {
+      "delta_mae_s": -0.41385337953770646,
+      "ci95_s": [
+        -0.875704476737875,
+        0.00528770219477932
+      ],
+      "days": 35
+    },
+    "local_24h": {
+      "delta_mae_s": -0.7525909924910891,
+      "ci95_s": [
+        -1.2113693197092816,
+        -0.3296411707815667
+      ],
+      "days": 35
+    }
+  },
+  "future_label_invariance_passed": true,
+  "mean_2h_history_n": 368.3730469513291,
+  "seconds": 7.5530619621276855,
+  "code_sha256": "69651f47d1c86f8dcec36739e26b55063bc5d3823f3faf1a2837f80573a3cf0d",
+  "eligible_static_goal": false,
+  "Test_access": false,
+  "conclusion": "Nueva informacion de viajes completados; no comparar como si fuese el mismo contrato estatico. No se selecciona ni certifica un modelo con Test."
+}

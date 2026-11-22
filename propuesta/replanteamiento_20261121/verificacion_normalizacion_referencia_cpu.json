@@ -1,0 +1,30 @@
+{
+  "n": 127941,
+  "CPU_reference_vs_retained_point_changes": 0,
+  "CPU_renormalization_changes": 0,
+  "changed_validation_indices": [],
+  "near_half_indices": [
+    40,
+    6063,
+    28348,
+    47021,
+    48245,
+    53410,
+    57172,
+    70632,
+    111467,
+    124760
+  ],
+  "numerical_scope": "CPU FP32 highest canonical2048; potential sensitivity only. GPU inference remains a separate exact reference check.",
+  "no_GPU": true,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "code_sha256": "367891e89157d2582e6c8d4b9c1b51c515f126c4355e7b6c2793a06a1b32c013",
+  "seconds": 113.51676297187805
+}

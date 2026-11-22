@@ -1,0 +1,16 @@
+"""Strict blocked out-of-fold static baseline for a residual-memory alternative."""
+from base_replanteo import *
+from inferencia import feature_input
+from catboost import CatBoostRegressor
+import gc
+
+def main():
+ start=time.time();run=OUT/'base_oof_estatica_s0';run.mkdir(exist_ok=False);access=deny_test();cfg=dict(folds=4,fold_rule='UTC departure week modulo4',features='206 static OD/map/calendar; no label-derived GPS profiles',iterations=1800,depth=8,learning_rate=.06,l2_leaf_reg=10,loss='MAE',target_scale=600,thread_count=4,task_type='CPU',early_stopping=False,heldout_fold_labels_used_in_fit=False,Test_access=False,purpose='Out-of-fold predictions for residual memory; avoid calibrating only in-sample errors')
+ write(run/'protocolo.json',cfg);fcfg=dict(routes=True,context=True,projected_routes=True,mapmatched=False,calendar=True);tr,X,names=feature_input('train',dict(config=fcfg,architecture='oof_static'));va,V,vnames=feature_input('validation',dict(config=fcfg,architecture='oof_static'));assert names==vnames and len(names)==206 and not any(s.startswith('mm_') for s in names);y=np.load(DATA/'train_y.npy');keep=(tr['timestamp']+y)<va['timestamp'].min();X=X[keep];y=y[keep];row=tr['row'][keep];timestamp=tr['timestamp'][keep];fold=((timestamp//(7*86400))%4).astype(np.uint8);oof=np.full(len(y),np.nan,np.float32);history=[]
+ def model(seed):return CatBoostRegressor(loss_function='MAE',iterations=1800,depth=8,learning_rate=.06,l2_leaf_reg=10,random_seed=seed,thread_count=4,task_type='CPU',allow_writing_files=False,verbose=200)
+ for f in range(4):
+  fit=fold!=f;held=fold==f;assert not np.any(fit&held);print(json.dumps(dict(stage='fold_start',fold=f,fit_n=int(fit.sum()),held_n=int(held.sum()),seconds=time.time()-start)),flush=True);m=model(f);m.fit(X[fit],y[fit]/600);p=np.clip(m.predict(X[held])*600,60,1785);oof[held]=p.astype(np.float32);history.append(dict(fold=f,held=metric(y[held],p),seconds=time.time()-start));write(run/'historia_folds.json',history);np.savez_compressed(run/'oof_progreso.npz',row=row,fold=fold,pred=oof);print(json.dumps(history[-1]),flush=True);del m,p;gc.collect()
+ assert np.isfinite(oof).all();m=model(0);print(json.dumps(dict(stage='full_train_start',seconds=time.time()-start)),flush=True);m.fit(X,y/600);m.save_model(str(run/'modelo.cbm'));insample=np.clip(m.predict(X)*600,60,1785).astype(np.float32);pred=np.clip(m.predict(V)*600,60,1785);v=np.load(DATA/'validation_y.npy');np.savez_compressed(run/'train_oof.npz',row=row,timestamp=timestamp,fold=fold,true=y,pred_oof=oof,pred_in_sample=insample);np.savez_compressed(run/'validacion.npz',row=va['row'],timestamp=va['timestamp'],true=v,pred=pred)
+ result=dict(config=cfg,features=names,train_n=len(y),OOF=metric(y,oof),in_sample=metric(y,insample),validation=metric(v,pred),seconds=time.time()-start,model_sha256=sha(run/'modelo.cbm'),oof_sha256=sha(run/'train_oof.npz'),code_sha256=sha(__file__),actual_data_files_accessed=sorted(access),Test_access=False,conclusion='This is a baseline and a source of out-of-fold residuals, not yet the proposed residual-memory model. No early stopping or tuning uses heldout fold labels.')
+ write(run/'resultado.json',result);print(json.dumps({k:result[k] for k in ['OOF','in_sample','validation','seconds']}),flush=True)
+if __name__=='__main__':main()

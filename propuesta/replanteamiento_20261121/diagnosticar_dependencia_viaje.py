@@ -1,0 +1,22 @@
+"""Train-held-week diagnostic of within-trip dependence among nonterminal residence times."""
+from base_replanteo import *
+import math
+start=time.time();access=deny_test();grid=read(OUT/'datos_semi_markov/protocolo.json');z=np.load(OUT/'datos_semi_markov/runs_train.npz');cell=z['cell'].astype(np.int32);dur=z['duration_n'].astype(float);off=z['run_offsets'];trip=z['trip_train_index'];valid=np.unpackbits(z['outgoing_valid_bits'])[:len(cell)].astype(bool);tr=dict(np.load(DATA/'train_x.npz'));sx=111195*np.cos(np.deg2rad(41.16));dest=np.column_stack([(tr['d_lon'][trip]+8.62)*sx,(tr['d_lat'][trip]-41.16)*111195]);ts=tr['timestamp'][trip];held=(ts//(7*86400))%5==0;period=((ts//3600)%24)//4+6*((ts//86400+3)%7>=5);N=grid['N'];ny=grid['ny'];G=N*32*5
+moments=[np.zeros(G) for _ in range(3)];timem=[np.zeros(G*12) for _ in range(3)];globalm=[np.zeros(32) for _ in range(3)]
+def heading(dx,dy):return np.where(np.abs(dx)>=np.abs(dy),np.where(dx>=0,0,1),np.where(dy>=0,2,3)).astype(np.int64)
+def batch(first,last):
+ ri=np.arange(first,last);ti=np.searchsorted(off,ri,side='right')-1;cur=cell[ri];nxt=cell[ri+1];ok=valid[ri]&(ri<off[ti+1]-1)&(cur<N)&(nxt<N);ri=ri[ok];ti=ti[ok];cur=cur[ok];prev=cell[np.maximum(ri-1,0)];known=(ri>off[ti])&(prev<N)&valid[np.maximum(ri-1,0)];h=np.where(known,heading(cur//ny-prev//ny,cur%ny-prev%ny),4);xy=np.column_stack([grid['x0']+(cur//ny+.5)*200,grid['y0']+(cur%ny+.5)*200]);rel=dest[ti]-xy;angle=np.floor((np.arctan2(rel[:,1],rel[:,0])+math.pi/8)/(math.pi/4)).astype(int)%8;distance=np.searchsorted([500,1500,4000],np.linalg.norm(rel,axis=1));co=angle*4+distance;g=(cur*32+co)*5+h;return ti,g,g*12+period[ti],co,dur[ri]
+for first in range(0,len(cell)-1,200000):
+ ti,g,gt,co,y=batch(first,min(first+200000,len(cell)-1));fit=~held[ti]
+ for arr,index in [(moments,g),(timem,gt),(globalm,co)]:
+  for v,w in zip(arr,[np.ones(len(y)),y,y*y]):np.add.at(v,index[fit],w[fit])
+sumr=np.zeros(len(trip));sumr2=np.zeros(len(trip));sumpvar=np.zeros(len(trip));steps=np.zeros(len(trip),np.int32)
+for first in range(0,len(cell)-1,200000):
+ ti,g,gt,co,y=batch(first,min(first+200000,len(cell)-1));mask=held[ti];ti=ti[mask];g=g[mask];gt=gt[mask];co=co[mask];y=y[mask];m0=globalm[1][co]/np.maximum(globalm[0][co],1);m20=globalm[2][co]/np.maximum(globalm[0][co],1);m1=(moments[1][g]+20*m0)/(moments[0][g]+20);m21=(moments[2][g]+20*m20)/(moments[0][g]+20);mu=(timem[1][gt]+20*m1)/(timem[0][gt]+20);mu2=(timem[2][gt]+20*m21)/(timem[0][gt]+20);r=y-mu;np.add.at(sumr,ti,r);np.add.at(sumr2,ti,r*r);np.add.at(sumpvar,ti,np.maximum(mu2-mu*mu,1e-6));np.add.at(steps,ti,1)
+keep=held&(steps>=2);meanr=sumr[held].sum()/steps[held].sum();rs=sumr-steps*meanr;ss=sumr2-2*meanr*sumr+steps*meanr**2;num=rs[keep]**2;den=ss[keep];ratio=float(num.sum()/den.sum());cov=float((num.sum()-den.sum())/(steps[keep]*(steps[keep]-1)).sum());days=ts[keep]//86400;_,di=np.unique(days,return_inverse=True);ns=np.bincount(di,weights=num);ds=np.bincount(di,weights=den);ix=np.random.default_rng(1729).integers(len(ns),size=(3000,len(ns)));ci=np.quantile(ns[ix].sum(1)/ds[ix].sum(1),[.025,.975]);groups=[]
+for lo,hi in [(2,5),(6,10),(11,20),(21,40),(41,120)]:
+ k=held&(steps>=lo)&(steps<=hi)
+ if k.any():groups.append(dict(valid_runs=[lo,hi],trips=int(k.sum()),variance_ratio=float((rs[k]**2).sum()/ss[k].sum())))
+report=dict(scope='Train held weeks modulo5==0 only; valid nonterminal residences, NOT total-trip predictor MAE',fit='Other Train weeks; moments conditioned on cell, incoming heading, destination bearing8/distance4, departure UTC4-hour period and weekend',held_trips_with_2plus_runs=int(keep.sum()),held_valid_runs=int(steps[held].sum()),mean_run_residual_intervals=float(meanr),variance_of_trip_residual_sum_over_sum_step_residual_variances=ratio,ratio_CI95_by_day=ci,mean_cross_step_covariance_intervals_squared=cov,variance_relative_to_predicted_local_variances=float(num.sum()/sumpvar[keep].sum()),by_run_count=groups,interpretation='A ratio above1 indicates positive dependence remaining under this COARSE historical mean model. It may reflect omitted context as well as a shared trip effect. It does not prove a causal driving style or irreducible uncertainty, and it is not a travel-time MAE result.',Validation_or_Test_paths_decoded=False,Test_access=False,seconds=time.time()-start,code_sha256=sha(__file__))
+write(OUT/'diagnostico_dependencia_viaje.json',report);print(json.dumps(report,default=lambda x:x.tolist()))
+

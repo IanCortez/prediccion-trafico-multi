@@ -1,0 +1,24 @@
+{
+  "id": "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+  "validation": {
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0,
+    "mape": 22.474025207956632,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Mismo checkpoint elegido con validación bfloat16; reevaluación fija float32 para reducir dependencia del tamaño de lote. Se conserva la corrida anterior, sin reentrenar ni seleccionar la precisión por su MAE.",
+  "test_labels_read": false,
+  "comparison": {
+    "reference": "od_mezcla8_geometria_conjunta_s0",
+    "delta_mae_s": -0.00011724154319381341,
+    "ci95_s": [
+      -0.008615725596691586,
+      0.007589124391963029
+    ],
+    "interpretation": "Negative favors this iteration; exploratory after adaptive validation selection, conditional on fitted models."
+  },
+  "distance_to_target_s": 57.75671207822356,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

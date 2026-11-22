@@ -1,0 +1,39 @@
+{
+  "record": {
+    "id": "CDF_vial_y_contexto_espacial",
+    "members": [
+      "od_mezcla_proyectada_mm_calendario_s0_fp32_v2",
+      "od_mezcla8_sin_geometria_s0_fp32_v2",
+      "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+      "od_contexto_rutas_espacial_s0"
+    ],
+    "aggregation": "distribution_median",
+    "validation": {
+      "mae_s": 131.06338077707693,
+      "rmse_s": 210.99243267295284,
+      "mdae_s": 75.0,
+      "mape": 22.37270583587366,
+      "n": 127941
+    },
+    "interval": {
+      "ci95_s": [
+        128.7054213176979,
+        133.3400111489918
+      ],
+      "blocks": 35,
+      "method": "bootstrap departure UTC day; conditional on fitted model"
+    },
+    "point_mean_same_members": {
+      "mae_s": 131.13527915210918,
+      "rmse_s": 210.88146326396355,
+      "mdae_s": 78.75,
+      "mape": 22.4074081165292,
+      "n": 127941
+    },
+    "weights_fitted_to_validation": false,
+    "test_labels_read": false,
+    "caveat": "Median of equally weighted predictive distributions. Optimal for that model distribution, not guaranteed to improve empirical MAE. Families compared on adaptively used validation."
+  },
+  "status": "Historical exploratory Validation result. Three of four component checkpoints were removed on 2026-11-19; this ensemble cannot be loaded from this delivery.",
+  "not_a_new_model_or_Test_result": true
+}

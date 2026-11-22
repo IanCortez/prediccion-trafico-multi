@@ -1,0 +1,1 @@
+{"alphas":[0,0.02,0.05,0.1,0.2,0.35,0.5,1],"selection":"Same fixed4096 Validation subset","defined_before_current_training_finished":true,"scan_count":1,"full_cohort":127941,"Test":"sealed","no_further_weight_search_for_same_frozen_pair":true,"preserve_models_below_MAE_s":131.06,"no_duplicate_weights":true,"no_disk_CDF_banks":true}

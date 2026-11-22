@@ -1,0 +1,16 @@
+{
+  "kind": "CPU-only residence-head initialization, NOT travel-time MAE",
+  "parent_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "head_sha256": "5cb7d2f8f0c743ed36a2377033dea811eab881a54a5f172184d7b9ad9a4e1006",
+  "best_held_Train_NLL_nats": 1.0556091436947712,
+  "sample_n": 200000,
+  "fit_n": 156460,
+  "held_n": 43540,
+  "caveat": "Only the new head excludes Train weekfold0; its frozen parent representation was trained with all eligible Train, so this is not an independent whole-model generalization test.",
+  "no_disk_hidden_state_bank": true,
+  "no_GPU_used": true,
+  "Validation_or_Test_labels_used": false,
+  "Test_access": false,
+  "seconds": 16.26175308227539,
+  "code_sha256": "4b1ef68efc91580e487502eeea954950820b12e3ce3262b96107c4d2b73d843d"
+}

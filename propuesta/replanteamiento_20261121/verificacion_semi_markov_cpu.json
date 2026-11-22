@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "deterministic_time_addition": true,
+  "analytical_convolution_of_waits": true,
+  "return_loops_geometric_absorption": true,
+  "fast_and_differentiable_versions_match": true,
+  "analytical_gradient_matches": true,
+  "finite_horizon_mass_conserved": true,
+  "query_route_or_duration_used": false,
+  "Test_access": false
+}

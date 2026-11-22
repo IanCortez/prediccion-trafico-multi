@@ -1,0 +1,75 @@
+{
+  "status": "Native GPU training continues; no native full Validation result yet",
+  "positive_local_evidence": {
+    "held_Train_points": 9198270,
+    "clock_effect": {
+      "delta_NLL_per_point": -0.0165014305928846,
+      "CI95_by_Train_day": [
+        -0.018591713834662515,
+        -0.014138433861812655
+      ],
+      "days": 63
+    },
+    "age_effect": {
+      "delta_NLL_per_point": -0.04273812146393652,
+      "CI95_by_Train_day": [
+        -0.04346440387352998,
+        -0.04203542970524225
+      ],
+      "days": 63
+    },
+    "scope": "Historical context likelihood; not OD MAE and not complementarity to a neural representation"
+  },
+  "asset_verification": {
+    "bytes": 18461049,
+    "held_instrument_reproduced": {
+      "points": 9198270,
+      "NLL": 0.5418264381021076,
+      "previous_NLL": 0.5418264380601072
+    },
+    "fold_exclusion": {
+      "passed": true,
+      "entire_fold_intervention_invariant_at_every_backoff": true,
+      "explicit_removal_of_held_fold_exact": true,
+      "broadcast_shapes_and_probabilities": true,
+      "run_entry_clock_constant_through_a_run": true,
+      "query_order_invariant": true,
+      "no_query_duration_argument": true,
+      "no_GPU": true,
+      "code_sha256": "5083f4a0ef6d9142cb435bfca03b55c637da402e89f87dce72a7276d1070e4d8",
+      "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+    },
+    "model": {
+      "passed": true,
+      "numpy_and_Torch_history_keys_exact": true,
+      "teacher_vs_incremental_max_error": 5.960464477539063e-08,
+      "causal_future_intervention": true,
+      "finite_gradients_and_nonzero_RNN_gradient": true,
+      "raw_mass_and_survival_conserved": true,
+      "query_permutation_and_singleton": true,
+      "requires_explicit_fold_excluded_history_during_training": true,
+      "requires_only_known_departure_timestamp_at_query": true,
+      "no_query_length_or_duration_argument": true,
+      "no_GPU": true,
+      "code_sha256": "ad5a9627e6935ea3812aa3a777e0a0b667ca865e7e95cc9f4b3bb6360c3287df",
+      "model_code_sha256": "b092ab807f1c0f46167cf1a9b7419bab3ffcb5528002be3c5e95aac90891d6c7",
+      "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+    },
+    "recovered_preparation": "Wrong shape assertion corrected; original count file unchanged; see prior_eventos/fallo_preparacion.json"
+  },
+  "next_gate": {
+    "script": "piloto_historia_condicional.py",
+    "requires": "Freeze native model and complete its full127941 result first",
+    "fit": "25000Train trips; parent representation frozen; new3-event heads fitted on Train weekfolds1..4, assessed on fold0. Each count lookup excludes its own fold.",
+    "matched_control": "New linear head without empirical history; same frozen hidden representation and support",
+    "original_control": "Original frozen native stay/stop event probabilities",
+    "criterion": "History must reduce held NLL by>.001nats versus BOTH controls and have day-bootstrap upper95%<0",
+    "scope": "Only newly fitted heads held out, parent representation saw Train; not whole-model generalization",
+    "if_positive": "Warm-start6epochs new HistoricalPrefixArrival with controlled head; full Validation required; improvement alone is not causal attribution to prior because of additional training",
+    "if_negative": "Do not run temporal-prior GPU trial; pursue a distinct mechanism, not blend or smoothing searches"
+  },
+  "goal": "active",
+  "final_confirmation_s": 73.5,
+  "preservation_threshold_s": 131.06,
+  "Test": "sealed"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "espacial_semimarkov_s0_v2",
+  "seed": 0,
+  "epochs": 30,
+  "fine_steps": 1000,
+  "local_batch": 2048,
+  "dp_batch": 4,
+  "inference_batch": 32,
+  "selection_n": 512,
+  "selection_head": "fixed mixed spatial/direct posterior",
+  "local_loss": "next-zone CE + residence CE + terminal CE + direct OD NLL +5RPS",
+  "fine_loss": "mixed total NLL +5RPS through differentiable semi-Markov inference",
+  "query_input": "Same216 OD/departure/map/history features, plus grid IDs derived deterministically from given endpoints",
+  "no_query_route_or_duration": true,
+  "geometry": "200m cells; public2014 roads and Train transitions only",
+  "time_model": "Spatial state transition + positive movement residence + nonnegative terminal residence; marginalize all paths",
+  "time_window": "Fixed60..1785s for every query; no observed query point count",
+  "max_seconds": 7200,
+  "Test_access": false
+}

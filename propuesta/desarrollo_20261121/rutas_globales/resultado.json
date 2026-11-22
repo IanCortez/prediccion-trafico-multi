@@ -1,0 +1,46 @@
+{
+  "protocol": {
+    "kind": "Global A-star with historical expected edge times; geometry targets only in screening",
+    "variants": [
+      "shortest_length_control",
+      "historical_time",
+      "historical_time_support_preference"
+    ],
+    "preference": "cost = historical time * (1 - 0.6 link_support); positive and globally optimized",
+    "training_profiles": "Exclude query UTC departure-week fold",
+    "validation_profiles": "Training history only, index5",
+    "endpoint_attachment": "nearest raw road node; same for three variants, recorded limitation",
+    "training_n": 2048,
+    "validation_n": 2048,
+    "seed": 4321,
+    "expansion_gate": "Held-out geometry mean error at least 5% lower than same-endpoint shortest control, with paired day CI excluding zero; route variant chosen using Train only",
+    "Test_access": false
+  },
+  "train_geometry_coordinate_mae_m": [
+    245.55931091308594,
+    239.85186767578125,
+    238.8082275390625
+  ],
+  "validation_geometry_coordinate_mae_m": [
+    252.4482879638672,
+    239.72914123535156,
+    235.72552490234375
+  ],
+  "validation_n": 1784,
+  "selected_kind_using_train": 2,
+  "relative_improvement": 0.0662415623664856,
+  "paired_geometry_delta_m": {
+    "delta_mae_s": -16.722568095665878,
+    "ci95_s": [
+      -30.828168044763373,
+      -3.887515997685917
+    ],
+    "days": 35
+  },
+  "passed_expansion_gate": true,
+  "query_geometry_is_input": false,
+  "Test_access": false,
+  "seconds": 12.960513353347778,
+  "code_sha256": "e7e7f64e6971ee3aedc42d044037424cb84ce6144fb0facb4145e9b21073c3eb",
+  "conclusion": "Geometry diagnostic is not duration MAE. Expand only if global routes beat control; no claim of full decision-focused neural training."
+}

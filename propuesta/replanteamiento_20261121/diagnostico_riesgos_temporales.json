@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "protocol": {
+    "source": "Train GPS only; all observed states, no Validation or Test GPS or labels",
+    "held": "Train departure UTCweek modulo5==0; every count and backoff excludes this complete fold",
+    "features": "Cell, incoming heading from past, known destination equality, run-entry UTC4h bin and weekend; run entry computed from departure plus past elapsed time",
+    "objective": "Proper three-event stay/move/end likelihood; no observed query length as predictor",
+    "smoothing": "Global Dirichlet1; cell/heading/destination50; clock20 fixed before held evaluation",
+    "clock": "UTC; distinguish from Lisbon local clock; no claim of exact UNITE reproduction",
+    "age": "Elapsed dwell age from past; at inference age and elapsed time would be model-generated",
+    "scope": "Local likelihood instrument, not an achieved OD duration MAE; training cohort and labels are unchanged"
+  },
+  "fit_runs": 15801544,
+  "held_runs": 4389696,
+  "kept_runs": 20191240,
+  "scores": {
+    "global_age": {
+      "held_NLL_per_point": 0.6706949093030504,
+      "held_runs": 4389696,
+      "held_points": 9198270
+    },
+    "cell_heading_destination_age": {
+      "held_NLL_per_point": 0.5583278686529914,
+      "held_runs": 4389696,
+      "held_points": 9198270
+    },
+    "cell_heading_destination_clock_age": {
+      "held_NLL_per_point": 0.5418264380601072,
+      "held_runs": 4389696,
+      "held_points": 9198270
+    },
+    "cell_heading_destination_clock_no_age": {
+      "held_NLL_per_point": 0.584564559524043,
+      "held_runs": 4389696,
+      "held_points": 9198270
+    }
+  },
+  "clock_effect": {
+    "delta_NLL_per_point": -0.0165014305928846,
+    "CI95_by_Train_day": [
+      -0.018591713834662515,
+      -0.014138433861812655
+    ],
+    "days": 63
+  },
+  "age_effect": {
+    "delta_NLL_per_point": -0.04273812146393652,
+    "CI95_by_Train_day": [
+      -0.04346440387352998,
+      -0.04203542970524225
+    ],
+    "days": 63
+  },
+  "worth_temporal_hazard_prior_test": true,
+  "max_fit_event_bin": 7765,
+  "max_held_event_bin": 1969,
+  "no_GPU": true,
+  "no_histogram_bank_saved": true,
+  "only_Train_files_opened": true,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "code_sha256": "ce5de3e96111207d07ff9f8f3adf3231b996ea954f28454ded82f36490439ea4",
+  "seconds": 9.277835369110107
+}

@@ -1,0 +1,35 @@
+{
+  "train": {
+    "n": 1766,
+    "coordinate_mae_m": {
+      "existing_projected_length": 241.8004913330078,
+      "existing_projected_free": 241.25689697265625,
+      "new_global_historical_preference": 238.80809020996094
+    },
+    "new_vs_existing_free": {
+      "delta_mae_s": -2.448816659361428,
+      "ci95_s": [
+        -15.1329968549982,
+        11.02682951008882
+      ],
+      "days": 297
+    }
+  },
+  "validation": {
+    "n": 1784,
+    "coordinate_mae_m": {
+      "existing_projected_length": 245.90988159179688,
+      "existing_projected_free": 241.02162170410156,
+      "new_global_historical_preference": 235.72564697265625
+    },
+    "new_vs_existing_free": {
+      "delta_mae_s": -5.295961690991449,
+      "ci95_s": [
+        -17.029890822021002,
+        6.785980441661116
+      ],
+      "days": 35
+    }
+  },
+  "interpretation": "Post-screen diagnostic against features already available to retained model; no new tuning, not duration MAE or Test."
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "all127941_retained_predictions_exact": true,
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "no_distribution_bank_on_disk": true,
+  "shared_parent": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "shared_initialization": {
+    "loaded_parameters_and_buffers": 38,
+    "new_head": [
+      "wait_head.weight",
+      "wait_head.bias"
+    ]
+  },
+  "Test_access": false
+}

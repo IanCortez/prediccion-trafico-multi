@@ -1,0 +1,68 @@
+{
+  "id": "memoria_cdf_s0",
+  "config": {
+    "id": "memoria_cdf_s0",
+    "seed": 0,
+    "objective": "cdf",
+    "encoder": [
+      206,
+      256,
+      128,
+      32
+    ],
+    "query_batch": 512,
+    "stochastic_candidates": 16384,
+    "epochs": 80,
+    "patience": 12,
+    "lr": 0.001,
+    "validation_selection": "8192 fixed Validation rows, exact entire training memory; final all127941",
+    "inference": "Exact all-bank normalized kernel via streaming; no topK approximation",
+    "memory_features": "206 static OD/map/calendar; no GPS label-derived profiles",
+    "self_exclusion": true,
+    "memory_arrival_embargo": true,
+    "query_duration_as_input": false,
+    "Test_access": false,
+    "source": "ModernNCA ICLR2025 inspiration; custom distributional likelihood and geographic kernel, not exact paper replica",
+    "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/ecd294194d5155432aab533f7ce0f6fe-Paper-Conference.pdf",
+    "max_seconds": 7200
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 137.4315895608132,
+    "rmse_s": 219.76714831713943,
+    "mdae_s": 90.0
+  },
+  "train_n": 1023485,
+  "best_epoch": 19,
+  "epochs_run": 31,
+  "parameters": 90531,
+  "model_sha256": "2e6b95f7fd8e716b9975b5c89d44674867fa3b65efdd3241baeeeb0640d34315",
+  "code_sha256": "7e778c53036db3f0a7ea7bd08386371e60b86c24c91c417f1a44a1a33003560a",
+  "model_code_sha256": "a3c894d36b2a91703fb580f22dd3f946a021075562bac59206310012b971c611",
+  "manifest_sha256": "9f9491df73f5cfb98a00d2cabb5ba1ae2beb6c2ccd301daf0c32698de955ca52",
+  "paired_vs_retained": {
+    "delta_mae_s": 6.174877482589631,
+    "ci95_s": [
+      5.449039480763538,
+      6.91117928965918
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 1326.5635328292847,
+  "global_goal_validation": false,
+  "Test_access": false
+}

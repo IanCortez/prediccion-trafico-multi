@@ -1,0 +1,19 @@
+{
+  "conditioning": "current cell, destination bearing8/distance4, incoming cardinal heading4 plus unknown",
+  "fold_rule": "UTC departure week modulo5",
+  "fold_exclusion": "Subtract all contribution of current Train query fold for local and total-loss training. Validation uses total Train. This excludes prior counts, not neural fitting or the already Train-derived allowed graph.",
+  "backoff": "Heading-group Dirichlet20 to cell/destination group, which has Dirichlet20 to global destination-direction/distance prior with Laplace1",
+  "Train_only": true,
+  "Validation_or_Test_GPS_used": false,
+  "moves": 19013732,
+  "counts_shape": [
+    5,
+    380160,
+    48
+  ],
+  "counts_sha256": "fb6c68e4b2a19dd40848a9afd9f03adf60d1c5ee4b6194c5567fac1c8d57108d",
+  "code_sha256": "05f7c795ce091f31fc31261ee088b9b0db635f366a43daa142ce150e4b66ee02",
+  "bytes": 3176011,
+  "seconds": 6.427520990371704,
+  "Test_access": false
+}

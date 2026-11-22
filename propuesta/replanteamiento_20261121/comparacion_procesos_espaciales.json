@@ -1,0 +1,41 @@
+{
+  "scope": "Complete same127941 reused Validation; exploratory adaptive search",
+  "no_heading": {
+    "n": 127941,
+    "mae_s": 138.22343892888128,
+    "rmse_s": 220.15717408778448,
+    "mdae_s": 90.0
+  },
+  "heading": {
+    "n": 127941,
+    "mae_s": 137.91802471451686,
+    "rmse_s": 217.45644950373136,
+    "mdae_s": 90.0
+  },
+  "heading_and_count_prior": {
+    "n": 127941,
+    "mae_s": 137.53886557084905,
+    "rmse_s": 216.9405669865068,
+    "mdae_s": 90.0
+  },
+  "heading_minus_no_heading": {
+    "delta_mae_s": -0.3054142143644336,
+    "ci95_s": [
+      -0.8068284479365438,
+      0.18680619155730974
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "prior_minus_heading": {
+    "delta_mae_s": -0.37915914366778436,
+    "ci95_s": [
+      -0.9190513242073214,
+      0.13626609736577644
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "conclusion": "Direction and empirical prior improve this weak-base structural family slightly but remain worse than protected131.2567s. Current next trial therefore corrects the strong protected distribution, uses efficient phase residence, more marginal-total updates and Train local likelihood regularization. It is not a claim of a target achievement.",
+  "Test_access": false
+}

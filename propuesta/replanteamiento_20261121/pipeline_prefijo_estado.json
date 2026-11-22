@@ -1,0 +1,7 @@
+{
+  "stage": "Inspect failed native prefix log; resume when appropriate, never overwrite",
+  "exit_code": 4294967295,
+  "complete_result": false,
+  "goal": "active",
+  "Test": "sealed"
+}

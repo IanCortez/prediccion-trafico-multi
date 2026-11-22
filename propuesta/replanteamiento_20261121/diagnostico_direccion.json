@@ -1,0 +1,22 @@
+{
+  "kind": "Train-only held-week next-zone diagnostic, NOT travel-time MAE",
+  "fit_moves": 14883509,
+  "held_moves": 4130223,
+  "held_rule": "UTC departure week modulo5 equals0",
+  "conditioning": "Current cell, destination bearing8 bins and distance4 bins; add incoming direction4 plus unknown initial mode",
+  "baseline_NLL_nats": 0.7721737191128383,
+  "with_direction_NLL_nats": 0.6469046679939744,
+  "delta_nats": -0.1252690511188638,
+  "delta_CI95_by_day": [
+    -0.12656653268997253,
+    -0.1239325528384195
+  ],
+  "baseline_top1": 0.727528513593576,
+  "with_direction_top1": 0.7637420546057683,
+  "selection_used_actual_Validation": false,
+  "Validation_or_Test_paths_decoded": false,
+  "Test_access": false,
+  "seconds": 19.87405037879944,
+  "code_sha256": "f248b5aba4d8c58a56b7c3d41c097c74e9286d82e01e9bd5207c3742fc936327",
+  "conclusion": "Measures whether a direction-aware state is justified before expanding the generative process. Not evidence of a duration MAE improvement."
+}

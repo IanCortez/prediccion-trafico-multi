@@ -1,0 +1,27 @@
+{
+  "source": "User steering: preserve models improving131.06 seconds",
+  "candidate_MAE_threshold_s": 131.06,
+  "direction": "strictly lower MAE is better",
+  "eligible_evaluation": "Complete unchanged Validation, not selection subset or privileged diagnostic",
+  "preserve_for_qualifying_candidate": [
+    "checkpoint",
+    "metrics",
+    "predictions",
+    "exact_sources",
+    "protocol",
+    "required_reproduction_assets"
+  ],
+  "all_completed_experiments": [
+    "metrics",
+    "predictions for comparison",
+    "config",
+    "source hashes and exact source"
+  ],
+  "protected_original_model": "propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2",
+  "TransferTraj_metrics_and_predictions_protected": true,
+  "training_checkpoints_are_temporary_until_complete_evaluation": true,
+  "final_goal_confirmation_MAE_s": 73.5,
+  "Test": "sealed",
+  "best_model_always_preserved": true,
+  "note": "Every complete candidate below131.06s is preserved; the strongest verified model remains protected in all cases."
+}

@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "exact_enumeration": [
+    {
+      "particles": 3,
+      "enumerated_joint_outcomes": 8,
+      "expected_gradient_max_error": 1.4210854715202004e-14,
+      "expected_CRPS_max_error": 8.526512829121202e-14,
+      "gradient_of_inadmissible_category": 0.0
+    },
+    {
+      "particles": 4,
+      "enumerated_joint_outcomes": 16,
+      "expected_gradient_max_error": 2.842170943040401e-14,
+      "expected_CRPS_max_error": 1.1368683772161603e-13,
+      "gradient_of_inadmissible_category": -3.571936863903905e-16
+    },
+    {
+      "particles": 5,
+      "enumerated_joint_outcomes": 32,
+      "expected_gradient_max_error": 2.0661653486103503e-16,
+      "expected_CRPS_max_error": 1.4210854715202004e-13,
+      "gradient_of_inadmissible_category": -2.0661653486103503e-16
+    },
+    {
+      "particles": 8,
+      "enumerated_joint_outcomes": 256,
+      "expected_gradient_max_error": 5.684341886080802e-14,
+      "expected_CRPS_max_error": 1.9895196601282805e-13,
+      "gradient_of_inadmissible_category": -1.6686444645336834e-16
+    }
+  ],
+  "exact_conditional_CRPS": 229.02704919090277,
+  "exact_gradient": [
+    0.0,
+    -79.43934197944066,
+    79.43934197944066
+  ],
+  "conditioning": "Unconditional category0 is outside the cohort; categories1and2 are eligible. Its gradient cancels exactly although accepted-sample log probabilities remain unconditional.",
+  "requirements": [
+    "IID complete path/time samples from exact cohort rejection, not normalized finiteCDF particles",
+    "At least3accepted samples per query",
+    "Full unconditional path log probabilities",
+    "No query label in sampling or rejection; fixed60..1785 cohort only",
+    "Centering coefficients sum0; unknown cohort-normalizer score cancels"
+  ],
+  "limitations": "Not a trained Porto model, no MAE result, and not yet a verified recurrent trajectory sampler. Exact estimator verification does not prove low training variance or target achievement.",
+  "no_GPU": true,
+  "Test_access": false,
+  "code_sha256": "8144e94d2c14dc778856023b62c6159df38a92bd2d6d87202db8da52cf398e71",
+  "estimator_sha256": "2fb79264dcd2a71ada7098b6c94c74f4336d43bde9e9a9d0cf30e06511673b24",
+  "references": [
+    "https://www.jmlr.org/papers/v21/19-346.html",
+    "https://www.jmlr.org/papers/volume25/23-0038/23-0038.pdf",
+    "https://www.nature.com/articles/s44387-026-00073-7"
+  ]
+}

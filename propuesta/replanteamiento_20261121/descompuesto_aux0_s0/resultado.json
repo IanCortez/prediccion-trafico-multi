@@ -1,0 +1,62 @@
+{
+  "id": "descompuesto_aux0_s0",
+  "config": {
+    "id": "descompuesto_aux0_s0",
+    "seed": 0,
+    "aux_weight": 0.0,
+    "epochs": 100,
+    "k": 16,
+    "width": 512,
+    "batch": 512,
+    "lr": 0.001,
+    "patience": 20,
+    "loss": "NLL(total)+5RPS(total)+lambda NLL(low-count | total); total PMF is convolution of movement and low-displacement PMFs",
+    "input": "Same 216 OD/departure/map/history features as retained model",
+    "support": "Condition the joint mixture on 4 <= moving_n + low_n <=119 intervals",
+    "global_stop_prior": "Fixed 50% point mass at zero + 50% geometric mean approx8; no count-derived initialization",
+    "anchor_fit": "Total-time labels only, same for lambda0 and lambda1",
+    "Test_access": false,
+    "max_seconds": 7200
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.41756747250685,
+    "rmse_s": 212.51456124532928,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 48,
+  "epochs_run": 68,
+  "model_sha256": "87f41268a0d9acbb6fde7a88dccee8ab46c88e469507d38d71ad2e321d2973a3",
+  "code_sha256": "6eb352f8fc74fbf46dc7c77973a1265ffb279304fbdece893a709137f7c245ad",
+  "model_code_sha256": "b2e45b3c6c6a7f3c6aa5024819f00100e1b2208e44a78bf5677bfef3b0a7fcc3",
+  "counts_sha256": "a225bf53897ef03a3379bcbf685664c3427780e476c5f7a1fe6c3b56d8cf1f68",
+  "manifest_sha256": "9f9491df73f5cfb98a00d2cabb5ba1ae2beb6c2ccd301daf0c32698de955ca52",
+  "paired_vs_retained": {
+    "delta_mae_s": 0.16085539428330245,
+    "ci95_s": [
+      -0.07709182176093211,
+      0.3950382643778266
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "parameters": 6283520,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 3320.6846771240234,
+  "Test_access": false,
+  "global_target_on_validation": false
+}

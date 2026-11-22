@@ -1,0 +1,26 @@
+{
+  "source": "https://papers.nips.cc/paper_files/paper/2025/file/9f02b7c937447b6857b21d31d5c344e6-Paper-Conference.pdf",
+  "verified": {
+    "task": "OD TTE",
+    "Porto_MAE_minutes": 1.225,
+    "Porto_MAE_seconds": 73.5,
+    "standard_deviation_minutes": 0.006,
+    "chronological_departure_split": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "Porto_trajectories": 323481,
+    "Porto_sampling_seconds": 15,
+    "reported_point_count_range": [
+      5,
+      120
+    ],
+    "repeat_count": 5
+  },
+  "local_code": "propuesta/referencias/TransferTraj/data.py:OdTtePadder",
+  "code_inspection": "Two endpoints; destination temporal modalities masked; positions0,1. No observed full-query path or actual original sequence length is supplied by this padder.",
+  "conclusion": "Do not attribute the gap to a random split or to full-route input. The unresolved mismatch is the published323481-trip preprocessed cohort versus the fixed local primary cohort; available official code/config does not identify that cohort. Target remains numerical external reference, not an exact reproduced benchmark.",
+  "local_TransferTraj_metrics_and_predictions_preserved": true,
+  "no_Test_access": true
+}

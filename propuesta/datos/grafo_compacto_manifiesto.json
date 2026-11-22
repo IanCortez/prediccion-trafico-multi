@@ -1,0 +1,11 @@
+{
+  "raw_nodes": 88911,
+  "junctions": 15182,
+  "directed_chains": 32843,
+  "raw_arcs": 143873,
+  "all_raw_arcs_covered_exactly_once": true,
+  "method": "Exact contraction of homogeneous directed/bidirectional degree-2 chains; retain cumulative original geometry and direction",
+  "raw_map_sha256": "b785ea32d848d562990fa136740f249e21a7770b9a01bd847615c35178b3a295",
+  "compact_sha256": "3dbbb11b260694f2beb0060c2015b2d3f21f51358ea32253d20042ee94a731da",
+  "seconds": 204.76961398124695
+}

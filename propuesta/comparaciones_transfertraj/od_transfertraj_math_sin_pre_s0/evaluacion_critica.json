@@ -1,0 +1,15 @@
+{
+  "id": "od_transfertraj_math_sin_pre_s0",
+  "validation": {
+    "mae_s": 164.36768626577134,
+    "rmse_s": 236.9183530969551,
+    "mdae_s": 117.1583251953125,
+    "mape": 32.27114861798219,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Control de arquitectura oficial adaptada con backend de atencion matematica del ejecutable original y guardia de gradiente, sin recortar gradientes. El intento anterior con otro backend no completo una epoca y se excluye.",
+  "test_labels_read": false,
+  "distance_to_target_s": 90.86768626577134,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

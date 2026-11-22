@@ -1,0 +1,21 @@
+{
+  "scope": "CPU kernel microbenchmark,2×512states×120time bins×8neighbors, same shifted-geometric family in both algorithms",
+  "results": {
+    "explicit": {
+      "median_forward_backward_seconds": 0.09367209999618353,
+      "unique_saved_tensor_bytes": 38233768
+    },
+    "phase": {
+      "median_forward_backward_seconds": 0.033184999992954545,
+      "unique_saved_tensor_bytes": 12362768
+    }
+  },
+  "max_prediction_difference": 1.1641532182693481e-10,
+  "saved_tensor_storage_ratio": 3.0926543311336103,
+  "CPU_time_ratio": 2.822724122828715,
+  "not_a_CUDA_measurement": true,
+  "not_actual_peak_memory": true,
+  "not_a_MAE_result": true,
+  "code_sha256": "e8a1a46c40cb872ca2d3ea72bdc1780f1f8520541aefb640a4312cf27fafc7d4",
+  "Test_access": false
+}

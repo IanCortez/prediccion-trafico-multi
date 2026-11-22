@@ -1,0 +1,24 @@
+{
+  "id": "od_transfertraj_math_pre30_s0",
+  "validation": {
+    "mae_s": 171.7201123041532,
+    "rmse_s": 242.58526898635768,
+    "mdae_s": 127.64013671875,
+    "mape": 34.17252463131909,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Mismo backend y ajuste OD, desde30 epocas de preentrenamiento de trayectoria de entrenamiento. Comparacion con su control matematica-sin-pre; no es replica exacta del conjunto de Porto publicado.",
+  "test_labels_read": false,
+  "comparison": {
+    "reference": "od_transfertraj_math_sin_pre_s0",
+    "delta_mae_s": 7.352426052093506,
+    "ci95_s": [
+      5.501453749690895,
+      9.233282410559054
+    ],
+    "interpretation": "Negative favors this iteration; exploratory after adaptive validation selection, conditional on fitted models."
+  },
+  "distance_to_target_s": 98.22011230415319,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

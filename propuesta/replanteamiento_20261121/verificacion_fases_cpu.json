@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "explicit_convolution_max_error": 2.6020852139652106e-18,
+  "explicit_convolution_gradient_max_error": 8.348356728138384e-18,
+  "multiple_terminal_states": true,
+  "shifted_positive_residence": true,
+  "query_permutation": true,
+  "finite_horizon_mass_conserved": true,
+  "deterministic_time_addition": true,
+  "duration_pmf_is_unbounded_not_renormalized_before_total_cohort_conditioning": true,
+  "code_sha256": "65363c920252abbc0332ac2e3d8cbd1a37fb1889b25d9a94d746590a4de28c60",
+  "kernel_code_sha256": "e558f1299997145992a851a573297310f07b9944a0498718569ddd92ac8cf46a",
+  "Test_access": false
+}

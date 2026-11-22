@@ -1,0 +1,61 @@
+{
+  "scope": "Train held weeks modulo5==0 only; valid nonterminal residences, NOT total-trip predictor MAE",
+  "fit": "Other Train weeks; moments conditioned on cell, incoming heading, destination bearing8/distance4, departure UTC4-hour period and weekend",
+  "held_trips_with_2plus_runs": 222578,
+  "held_valid_runs": 4130223,
+  "mean_run_residual_intervals": -0.015115463380238989,
+  "variance_of_trip_residual_sum_over_sum_step_residual_variances": 1.4230997438174753,
+  "ratio_CI95_by_day": [
+    1.3773927551430611,
+    1.47577748725347
+  ],
+  "mean_cross_step_covariance_intervals_squared": 0.052035588818304584,
+  "variance_relative_to_predicted_local_variances": 1.4561176328875118,
+  "by_run_count": [
+    {
+      "valid_runs": [
+        2,
+        5
+      ],
+      "trips": 9816,
+      "variance_ratio": 1.2401064013402583
+    },
+    {
+      "valid_runs": [
+        6,
+        10
+      ],
+      "trips": 38895,
+      "variance_ratio": 1.3293294365885777
+    },
+    {
+      "valid_runs": [
+        11,
+        20
+      ],
+      "trips": 93260,
+      "variance_ratio": 1.4198260264061153
+    },
+    {
+      "valid_runs": [
+        21,
+        40
+      ],
+      "trips": 73704,
+      "variance_ratio": 1.4575926409627178
+    },
+    {
+      "valid_runs": [
+        41,
+        120
+      ],
+      "trips": 6903,
+      "variance_ratio": 1.4348583225583142
+    }
+  ],
+  "interpretation": "A ratio above1 indicates positive dependence remaining under this COARSE historical mean model. It may reflect omitted context as well as a shared trip effect. It does not prove a causal driving style or irreducible uncertainty, and it is not a travel-time MAE result.",
+  "Validation_or_Test_paths_decoded": false,
+  "Test_access": false,
+  "seconds": 8.768739938735962,
+  "code_sha256": "2921d1f18c19cb4fec26e8186e883144094db6ff8bf87bcd4f5c5d78ecb8304e"
+}

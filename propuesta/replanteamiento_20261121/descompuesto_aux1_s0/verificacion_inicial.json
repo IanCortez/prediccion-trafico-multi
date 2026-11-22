@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "finite_gradients": true,
+  "total_probabilities_normalized": true,
+  "FFT_direct_convolution_error": 1.3877787807814457e-17,
+  "low_count_is_not_query_input": true,
+  "Test_access": false
+}

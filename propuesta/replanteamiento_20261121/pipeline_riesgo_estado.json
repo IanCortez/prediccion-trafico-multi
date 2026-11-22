@@ -1,0 +1,7 @@
+{
+  "stage": "Waiting for actual preceding GPU/control chain exit",
+  "wait_original_controller": 34908,
+  "supervisor_pid": 29428,
+  "goal": "active",
+  "Test": "sealed"
+}

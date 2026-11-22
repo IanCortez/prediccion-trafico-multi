@@ -1,0 +1,17 @@
+{
+  "kind": "Global A-star with historical expected edge times; geometry targets only in screening",
+  "variants": [
+    "shortest_length_control",
+    "historical_time",
+    "historical_time_support_preference"
+  ],
+  "preference": "cost = historical time * (1 - 0.6 link_support); positive and globally optimized",
+  "training_profiles": "Exclude query UTC departure-week fold",
+  "validation_profiles": "Training history only, index5",
+  "endpoint_attachment": "nearest raw road node; same for three variants, recorded limitation",
+  "training_n": 2048,
+  "validation_n": 2048,
+  "seed": 4321,
+  "expansion_gate": "Held-out geometry mean error at least 5% lower than same-endpoint shortest control, with paired day CI excluding zero; route variant chosen using Train only",
+  "Test_access": false
+}

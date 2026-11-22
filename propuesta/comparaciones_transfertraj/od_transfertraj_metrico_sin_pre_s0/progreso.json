@@ -1,0 +1,9 @@
+{
+  "stage": "od",
+  "epoch": 27,
+  "batch": 15500,
+  "batches_per_epoch": 15993,
+  "train_loss": 121.87079396832374,
+  "updated_unix": 1795053397.1754434,
+  "seconds": 15155.353861570358
+}

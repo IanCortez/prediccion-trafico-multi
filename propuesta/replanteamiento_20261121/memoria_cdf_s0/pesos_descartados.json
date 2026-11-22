@@ -1,0 +1,8 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\memoria_cdf_s0\\modelo.pt",
+  "bytes": 375722,
+  "sha256": "2e6b95f7fd8e716b9975b5c89d44674867fa3b65efdd3241baeeeb0640d34315",
+  "predictions_sha256": "23e051a00a2688498584214546f83dbb57b4fc9fa85ea341d7396c150981da32",
+  "mae_s": 137.4315895608132,
+  "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+}

@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "id": "espacial_prior_cf_s0",
+      "selected": {
+        "stage": {
+          "fine_step": 600
+        },
+        "selection_validation": {
+          "n": 512,
+          "mae_s": 144.90234375,
+          "rmse_s": 227.9455629914739,
+          "mdae_s": 90.0
+        },
+        "seconds": 1189.9768006801605
+      },
+      "logit": -0.0171891488134861,
+      "nominal_fraction": 0.4957028186023237,
+      "checkpoint_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487"
+    },
+    {
+      "id": "espacial_fases_referencia_s0",
+      "selected": {
+        "step": 1000,
+        "selection_validation": {
+          "n": 4096,
+          "mae_s": 137.35107421875,
+          "rmse_s": 217.59064988636058,
+          "mdae_s": 90.0
+        },
+        "seconds": 428.36419224739075
+      },
+      "logit": -0.09937312453985214,
+      "nominal_fraction": 0.47517714268383526,
+      "checkpoint_sha256": "3e68c68115f129c13dff25c016ecea3dd30dbd8afb7eeb299e8c331910ff961e"
+    }
+  ],
+  "current_scalar_learning_rate": 0.0001,
+  "interpretation": "The global blend parameter was inherited from a weaker direct head. A slow scalar learning rate may retain excessive physical correction when replacing it with a stronger frozen reference. This is an optimization/calibration hypothesis, not evidence that the physical branch improves MAE.",
+  "next": "After the trained model is frozen, one predeclared small global-weight calibration on the same fixed selection subset may test this hypothesis without retraining or disk CDF banks. Report the uncalibrated result separately. Do not launch an endless weight search.",
+  "code_sha256": "9d32e5b373f662fffa0b36baa6979c94cd93013a98eb73e783b0ef3ce0a1c48c",
+  "Test_access": false,
+  "no_GPU_used": true
+}

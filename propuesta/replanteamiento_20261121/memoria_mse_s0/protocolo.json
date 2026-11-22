@@ -1,0 +1,26 @@
+{
+  "id": "memoria_mse_s0",
+  "seed": 0,
+  "objective": "mse",
+  "encoder": [
+    206,
+    256,
+    128,
+    32
+  ],
+  "query_batch": 512,
+  "stochastic_candidates": 16384,
+  "epochs": 80,
+  "patience": 12,
+  "lr": 0.001,
+  "validation_selection": "8192 fixed Validation rows, exact entire training memory; final all127941",
+  "inference": "Exact all-bank normalized kernel via streaming; no topK approximation",
+  "memory_features": "206 static OD/map/calendar; no GPS label-derived profiles",
+  "self_exclusion": true,
+  "memory_arrival_embargo": true,
+  "query_duration_as_input": false,
+  "Test_access": false,
+  "source": "ModernNCA ICLR2025 inspiration; custom distributional likelihood and geographic kernel, not exact paper replica",
+  "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/ecd294194d5155432aab533f7ce0f6fe-Paper-Conference.pdf",
+  "max_seconds": 7200
+}

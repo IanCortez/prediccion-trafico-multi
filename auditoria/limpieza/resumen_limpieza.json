@@ -1,0 +1,102 @@
+{
+  "completed": true,
+  "created_unix": 1795149932.340251,
+  "before_GiB": 74.48871095478535,
+  "after_GiB": 13.845,
+  "net_reduction_GiB": 60.644,
+  "reduction_percent": 81.41,
+  "files_before": 115222,
+  "files_after": 30816,
+  "protected_files_verified_after_deletion": 407,
+  "original_files_verified": 147,
+  "top_level_GiB": {
+    "README.md": 0.0,
+    ".conda-env": 5.5814,
+    ".runtime": 0.0,
+    "auditoria": 0.0467,
+    "codigo-ian": 0.0005,
+    "conda": 0.0,
+    "propuesta": 6.2489,
+    "tesis": 1.9677
+  },
+  "best_model_validation_mae_s": 131.25671207822356,
+  "all127941_predictions_identical_after_cleanup": true,
+  "raw65_reverse_single_exact": true,
+  "TransferTraj_prediction_sets": [
+    {
+      "id": "od_modal_normalizado_sin_pre_s0",
+      "n": 127941,
+      "MAE_s": 166.44812985427973,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+      "n": 127941,
+      "MAE_s": 158.8770064215753,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+      "n": 127941,
+      "MAE_s": 175.77850761821756,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_reloj_preciso_oficial_sin_normalizar_s0",
+      "n": 127941,
+      "MAE_s": 162.89860516635213,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_transfertraj_adaptado_sin_pre_s0",
+      "n": 127941,
+      "MAE_s": 554.5258752804972,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_transfertraj_math_pre30_s0",
+      "n": 127941,
+      "MAE_s": 171.7201123041532,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_transfertraj_math_sin_pre_s0",
+      "n": 127941,
+      "MAE_s": 164.36768626577134,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_transfertraj_metrico_sin_pre_s0",
+      "n": 127941,
+      "MAE_s": 164.60096140012416,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_xgboost_transfertraj_aleatorio_s0",
+      "n": 127941,
+      "MAE_s": 134.54569770525023,
+      "original_file_SHA256_unchanged": true
+    },
+    {
+      "id": "od_xgboost_transfertraj_prefijo6_s0",
+      "n": 127941,
+      "MAE_s": 134.30095756217634,
+      "original_file_SHA256_unchanged": true
+    }
+  ],
+  "Test_evaluation_performed": false,
+  "retraining_performed": false,
+  "new_operational_file_hashes": {
+    "README.md": "2c2308607bd6bb1526200808f5fa83083a3954096ce51927f3fd97af92ab363d",
+    "propuesta/README.md": "4addb946527a713091036260914eee7d4b68193c52ec70d13146b5f184a2c3cf",
+    "propuesta/RESUMEN_RESULTADOS.md": "6f0289ce4e92bdf4035f4044907a34d4aae5bb1635a6ba112c15cc928e5729f4",
+    "propuesta/REPRODUCIR.md": "bbc98af76fc9662ed0c1d8714efbc81f5e51b1fd324c60621f20dc84c2763dfe",
+    "propuesta/ARQUITECTURA.md": "6893be300cee2e247904ab4e5fbcafc20451856ef7f65113eb86458fdd7c0085",
+    "propuesta/reproducir_mejor.py": "6108e68ad6db2cf449137b5f461da48d50cb3a7e96ccddc1474da8e5b9b0ccb7",
+    "propuesta/reentrenar_mejor.py": "4857dcc4aa0eb553dbdcb3670b3d50e722b48b4f55ba2576816c169acc5804e3",
+    "auditoria/entorno.ps1": "5080f6822f0cdfb7901d93557fe32e9d5f07167cccdeb0ff5b96c33e5b33a590"
+  },
+  "caches_generated_by_verification_removed": true,
+  "project_python_processes_remaining_at_final_check": 0,
+  "research_goal_status": "paused_by_user"
+}

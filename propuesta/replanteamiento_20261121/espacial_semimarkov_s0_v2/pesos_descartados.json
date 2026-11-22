@@ -1,0 +1,8 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\espacial_semimarkov_s0_v2\\modelo.pt",
+  "bytes": 8678281,
+  "sha256": "fa5dd3c60b288866c328600884228ff59b9a8a7570b7057373af479627e73bd0",
+  "predictions_sha256": "0c487f290a499d3a530f448e4b0082384159e170ca2765256cb022b584c0b162",
+  "mae_s": 138.22343892888128,
+  "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+}

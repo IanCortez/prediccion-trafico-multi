@@ -1,0 +1,226 @@
+{
+  "fecha": "2026-11-21",
+  "objective_mae_s": 73.5,
+  "objective_achieved": false,
+  "Test_evaluated": false,
+  "primary_best_mae_s": 131.25671207822356,
+  "primary_best_model": "propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2",
+  "remaining_gap_s": 57.75671207822356,
+  "results": [
+    {
+      "experiment": "Referencia conservada",
+      "protocol": "Primario OD estatico",
+      "mae_s": 131.25671207822356,
+      "n": 127941
+    },
+    {
+      "experiment": "Ajuste directo MAE: mejor epoca entrenada",
+      "protocol": "Primario OD estatico",
+      "mae_s": 131.499755859375,
+      "n": 127941
+    },
+    {
+      "experiment": "Adaptador control_capacidad: mejor epoca entrenada",
+      "protocol": "Primario OD estatico",
+      "mae_s": 132.92470748235516,
+      "n": 127941
+    },
+    {
+      "experiment": "Adaptador rutas_globales: mejor epoca entrenada",
+      "protocol": "Primario OD estatico",
+      "mae_s": 132.9871972237203,
+      "n": 127941
+    },
+    {
+      "experiment": "Modelo conjunto nuevo desde cero",
+      "protocol": "Primario OD estatico",
+      "mae_s": 131.39951227518935,
+      "n": 127941
+    },
+    {
+      "experiment": "Regional objetivo solo",
+      "protocol": "Pocas etiquetas, solo zona este",
+      "mae_s": 146.1186301607799,
+      "n": 49434
+    },
+    {
+      "experiment": "Regional transferencia selectiva",
+      "protocol": "Pocas etiquetas, solo zona este",
+      "mae_s": 146.1186301607799,
+      "n": 49434
+    },
+    {
+      "experiment": "Estado causal local 2h",
+      "protocol": "Online con etiquetas de viajes ya completados; diferente del estatico",
+      "mae_s": 130.41891285270825,
+      "n": 127941
+    }
+  ],
+  "fresh_model": {
+    "best_epoch": 48,
+    "epochs_run": 63,
+    "paired": {
+      "delta_mae_s": 0.1428001969657889,
+      "ci95_s": [
+        -0.08374463027267336,
+        0.3554414083944366
+      ],
+      "days": 35
+    },
+    "seconds": 1644.7111718654633
+  },
+  "scientific_limits": [
+    "Validation reutilizada de forma adaptativa; intervalos exploratorios.",
+    "El piloto regional y la simulacion online no certifican el objetivo del benchmark estatico.",
+    "La cohorte publicada de TransferTraj no esta disponible; 73.5 s es referencia externa.",
+    "Estos resultados no prueban que el objetivo sea matematicamente imposible."
+  ],
+  "preserved_evidence": {
+    "retained_best_model_unchanged": true,
+    "retained_best_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "TransferTraj_prediction_archives_unchanged": [
+      {
+        "id": "od_modal_normalizado_sin_pre_s0",
+        "sha256": "001acca25acaed30e88e39fa3c0e70cfc41f71f736ee143b063aa9105097a060",
+        "unchanged": true
+      },
+      {
+        "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+        "sha256": "d2568689c8fc18aab1a3b151ee19f6738a4cc3dac8c4a33b75dd8fed5be4c3d6",
+        "unchanged": true
+      },
+      {
+        "id": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+        "sha256": "521d6cccd99b2cb81761796ce1dc10ae607109ddcae0e1e09b12760382552a87",
+        "unchanged": true
+      },
+      {
+        "id": "od_reloj_preciso_oficial_sin_normalizar_s0",
+        "sha256": "138464a02259326ea71f2201e0244cc6bb60ebfcb909d43a21f3d36e2e6db9d8",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_adaptado_sin_pre_s0",
+        "sha256": "9c31edb70e6adc9e9a04948ef7ae764ed9812f6066dac1a7dbf21eed9ddc64fb",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_math_pre30_s0",
+        "sha256": "60cb67ee49e99033ab1d1c466605ef51609d7c4f4ad6d066cc05620939da347c",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_math_sin_pre_s0",
+        "sha256": "9eceff2c39ef60450899d55f9a942819ce2caf78996a2acdeb183a2136403bea",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_metrico_sin_pre_s0",
+        "sha256": "038c76dced49a6d22344696bd51106216ac566cf68de5b129fac3746b1b9d43e",
+        "unchanged": true
+      },
+      {
+        "id": "od_xgboost_transfertraj_aleatorio_s0",
+        "sha256": "e6c23d134561c17f72c953112e1ecd1eaffc72814e688aa6148158b91a303fb2",
+        "unchanged": true
+      },
+      {
+        "id": "od_xgboost_transfertraj_prefijo6_s0",
+        "sha256": "9bdb8a731345587ffdbe26b1162c727748a899a9ab9631c7bd091461ad76304a",
+        "unchanged": true
+      }
+    ],
+    "Test_files_opened": false
+  },
+  "retained_baseline_replay": {
+    "passed": true,
+    "model_id": "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+    "model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "validation_n": 127941,
+    "validation_mae_s": 131.25671207822356,
+    "all_validation_predictions_bit_identical": true,
+    "validation_max_delta_s": 0.0,
+    "raw65_max_delta_s": 0.0,
+    "reverse_max_delta_s": 0.0,
+    "single_max_delta_s": 0.0,
+    "frozen_sources_verified": 115,
+    "current_research_imports": 0,
+    "actual_data_files_accessed": [
+      "propuesta\\datos\\contexto_rejilla25m.npz",
+      "propuesta\\datos\\distancias_2014\\D.npy",
+      "propuesta\\datos\\distancias_2014_free\\D.npy",
+      "propuesta\\datos\\grafo_compacto_2014.npz",
+      "propuesta\\datos\\manifiesto.json",
+      "propuesta\\datos\\mapa_dirigido.npz",
+      "propuesta\\datos\\mapa_dirigido_2014.npz",
+      "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+      "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+      "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+      "propuesta\\datos\\validation_contexto.npz",
+      "propuesta\\datos\\validation_gps_mapmatched.npz",
+      "propuesta\\datos\\validation_rutas.npz",
+      "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+      "propuesta\\datos\\validation_x.npz"
+    ],
+    "no_training": true,
+    "no_Test_labels_read": true,
+    "seconds": 22.417093753814697
+  },
+  "fixed_family_diagnostic_bound": {
+    "scope": "Only convex point blends, or medians of convex CDF mixtures, of these two fixed checkpoints on this Validation cohort. Any such median lies between the two endpoint medians.",
+    "n": 127941,
+    "relaxed_oracle_mae_lower_bound_s": 123.83579149764344,
+    "formula": "mean(abs(y - clip(y, minimum(pred_old,pred_new), maximum(pred_old,pred_new))))",
+    "target_s": 73.5,
+    "this_fixed_family_excluded_from_target_on_Validation": true,
+    "label_privileged_diagnostic_not_a_predictor": true,
+    "not_a_lower_bound_for_other_models_or_Bayes_error": true,
+    "Test_access": false
+  },
+  "cleanup": [
+    {
+      "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\modelo_global_conjunto_s0\\modelo.pt",
+      "bytes": 18118699,
+      "sha256": "954156f01c9e90fd8b30344c7d15713717812bab89843214e6436d9bfb24c0c1",
+      "removed": true
+    },
+    {
+      "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\rutas_globales_completas\\train_rutas_globales.npz",
+      "bytes": 77315950,
+      "sha256": "fcea14e43f835ed576edbb2769d2a5d17001249a3989f3cd3fdf384c379c7d80",
+      "removed": true
+    },
+    {
+      "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\rutas_globales_completas\\validation_rutas_globales.npz",
+      "bytes": 9656093,
+      "sha256": "ac9ee58637a8dcfd572b2ee4a4832c98100a2d2dbae6afa26477d6dba2c02a79",
+      "removed": true
+    },
+    {
+      "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\adaptacion_rutas\\control_capacidad\\validacion.npz",
+      "bytes": 767705,
+      "sha256": "6cb6683d58d5009ceb7742240866287334ed2dfc0d4b55790efacc731718ce1a",
+      "removed": true
+    },
+    {
+      "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\adaptacion_rutas\\rutas_globales\\validacion.npz",
+      "bytes": 767705,
+      "sha256": "6cb6683d58d5009ceb7742240866287334ed2dfc0d4b55790efacc731718ce1a",
+      "removed": true
+    }
+  ],
+  "new_code_hashes": {
+    "adaptar_rutas.py": "10454d852f7b9ef79f20ba091bb90bae8f7eaad400f6faa9910f451477344869",
+    "ajuste_mae.py": "525f362719ee6c47718aa5c114ce56251ecc44dc310b12f7725fed2025c1f36f",
+    "estado_causal.py": "69651f47d1c86f8dcec36739e26b55063bc5d3823f3faf1a2837f80573a3cf0d",
+    "finalizar.py": "60dd122e0fac7202dd0d3d3910d7e5fe2f728509814325a3eb01fd64fb868a04",
+    "generar_rutas.py": "d914efb40ba2b00b07857e7fc4ddf8d2e0877f997a7949ac4a0d1bfd82b7e082",
+    "modelo_global.py": "317968b5146ec712f84a25b53e133d9cd9ca1af2f2eec25541666bcc9064eead",
+    "piloto_transferencia.py": "2a41e73fe0c2c21f8f1fc2f60e00046736174fc6abf19b9ae499f19385e0a109",
+    "rutas_globales.py": "e7e7f64e6971ee3aedc42d044037424cb84ce6144fb0facb4145e9b21073c3eb",
+    "verificar_modelo_global.py": "369ea60538bdac690b104976d24d9985cf5e962da3de5c3031ebb7c5bee4a3d5",
+    "verificar_rutas.py": "683c70ba110e8d268d8bb2339b90a611f34b1d3b943bb156103e007bb9fa8d52"
+  },
+  "new_experiment_bytes_after_cleanup": 8560900,
+  "active_experiments": 0
+}

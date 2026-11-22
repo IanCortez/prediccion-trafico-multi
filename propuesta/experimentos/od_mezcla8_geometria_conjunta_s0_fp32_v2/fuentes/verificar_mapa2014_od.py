@@ -1,0 +1,8 @@
+from common import *
+from consulta_od import od_records,build_od_features
+from inferencia import feature_input
+va=dict(np.load(DATA/'validation_x.npz'));z=np.load(DATA/'validation_rutas_proyectadas2014.npz');rng=np.random.default_rng(1729);ix=np.unique(np.r_[rng.choice(len(va['row']),60,replace=False),np.flatnonzero(z['X'][:,20]==0)[:5]]);columns=('o_lon','o_lat','d_lon','d_lat','timestamp');items=[{k:va[k][i].item() for k in columns} for i in ix];cfg=dict(routes=True,context=True,mapmatched=True,calendar=True,learned_route=True,road_attributes=True);X,names=build_od_features(od_records(items),cfg);_,cached,stored_names=feature_input('validation',dict(config=cfg,architecture='tabm'));assert names==stored_names;error=np.abs(X-cached[ix]);maximum=float(error.max());assert maximum<1e-4,(maximum,names[int(np.unravel_index(error.argmax(),error.shape)[1])]);checks={key:float(error[:,[i for i,n in enumerate(names) if n.startswith(key)]].max()) for key in ('projected_','mm_','learned_','attrs_')}
+try:od_records([dict(items[0],duration=100)])
+except AssertionError:pass
+else:raise RuntimeError('Unknown privileged field accepted')
+out=dict(passed=True,n=len(ix),max_feature_change=maximum,by_component=checks,features=len(names),input_fields=columns,forbidden_duration_rejected=True,query_route_labels_or_count_used=False,test_labels_read=False,method='Fresh projection and route construction from five raw OD fields, compared afterwards with frozen validation feature files.',code_hashes={name:sha(BASE/name) for name in ('consulta_od.py','consulta_mapa2014.py','ruta_preferida.py','consultas_preferidas.py')});write_json(BASE/'instrumentos/mapa2014_desde_od.json',out);print(json.dumps(out),flush=True)

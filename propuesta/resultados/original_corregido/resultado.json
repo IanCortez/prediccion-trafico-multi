@@ -1,0 +1,32 @@
+{
+  "id": "original_completo_pace_pos_s0",
+  "architecture": "upstream full fixed-contract",
+  "config": {
+    "id": "original_completo_pace_pos_s0",
+    "seed": 0,
+    "epochs": 40,
+    "batch": 1024,
+    "no_invariance": false
+  },
+  "validation": {
+    "mae_s": 140.82259378622484,
+    "rmse_s": 219.98868953310418,
+    "mdae_s": 88.71026611328125,
+    "mape": 25.044794132606697,
+    "n": 127941
+  },
+  "interval": {
+    "ci95_s": [
+      138.49460513449478,
+      142.90261658722028
+    ],
+    "blocks": 35,
+    "method": "bootstrap departure UTC day; conditional on fitted model"
+  },
+  "train_n": 1023529,
+  "parameters": 141907,
+  "epochs": 39,
+  "elapsed_seconds": 3707.695311307907,
+  "model_sha256": "703665087b80b9ff2c437c0afa9cb0058e07ad52d7aa942a0fe07bc89813da55",
+  "conclusion": "Comparador del modelo original con las mismas etiquetas y validación completa; solo correcciones de contrato y opción pace/posiciones ya existentes. Sin ciudades fuente reales."
+}

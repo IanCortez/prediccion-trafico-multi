@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "terminal_state_matches_given_destination": true,
+  "finite_local_gradients_FP32_and_AMP": true,
+  "query_route_is_not_input": true,
+  "Test_access": false
+}

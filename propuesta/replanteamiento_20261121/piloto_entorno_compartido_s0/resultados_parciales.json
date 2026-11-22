@@ -1,0 +1,65 @@
+{
+  "baseline": {
+    "fit_NLL_per_observed_run": 1.191488265991211,
+    "held_NLL_per_observed_run": 1.1811423301696777,
+    "location": 0.3274588882923126,
+    "sigma": 0.0,
+    "steps": 109,
+    "history": [
+      {
+        "step": 40,
+        "fit_NLL_nats": 1.191528558731079
+      },
+      {
+        "step": 80,
+        "fit_NLL_nats": 1.1914883852005005
+      }
+    ]
+  },
+  "independent": {
+    "fit_NLL_per_observed_run": 1.1895897388458252,
+    "held_NLL_per_observed_run": 1.1789960861206055,
+    "location": 0.1190299466252327,
+    "sigma": 0.7385143041610718,
+    "steps": 163,
+    "history": [
+      {
+        "step": 40,
+        "fit_NLL_nats": 1.1907858848571777
+      },
+      {
+        "step": 80,
+        "fit_NLL_nats": 1.1896156072616577
+      },
+      {
+        "step": 120,
+        "fit_NLL_nats": 1.1895898580551147
+      },
+      {
+        "step": 160,
+        "fit_NLL_nats": 1.1895897388458252
+      }
+    ]
+  },
+  "shared": {
+    "fit_NLL_per_observed_run": 1.1896873712539673,
+    "held_NLL_per_observed_run": 1.179179072380066,
+    "location": 0.2027527540922165,
+    "sigma": 0.5882896780967712,
+    "steps": 154,
+    "history": [
+      {
+        "step": 40,
+        "fit_NLL_nats": 1.190469741821289
+      },
+      {
+        "step": 80,
+        "fit_NLL_nats": 1.1896953582763672
+      },
+      {
+        "step": 120,
+        "fit_NLL_nats": 1.1896874904632568
+      }
+    ]
+  }
+}

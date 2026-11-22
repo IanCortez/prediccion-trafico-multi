@@ -1,0 +1,12 @@
+{
+  "recorded_unix": 1795036974.9937065,
+  "post_fit_resource_accounting": true,
+  "run_id": "od_xgboost_transfertraj_prefijo6_s0",
+  "od_labelled_training_n": 1023529,
+  "pretraining_trajectories": 1023485,
+  "pretraining_gps_points_per_epoch": 42624621,
+  "pretraining_epochs": 6,
+  "parent_checkpoint": "transfertraj_math_prefijo6_instantanea_s0",
+  "static_semantic_corpus_shared": true,
+  "note": "Derived six-epoch weights from continuing original pretraining; no independent pretraining repetition. Resource accounting does not change initial execution or numerical result."
+}

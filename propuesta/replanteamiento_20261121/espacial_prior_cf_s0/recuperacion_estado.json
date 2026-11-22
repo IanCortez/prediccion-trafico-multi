@@ -1,0 +1,11 @@
+{
+  "pid": 4952,
+  "model_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "completed_rows": 126984,
+  "total_rows": 127941,
+  "seconds": 989.2821817398071,
+  "GPU_memory_fraction": 0.25,
+  "canonical_batch": 8,
+  "process": "inference only",
+  "Test_access": false
+}

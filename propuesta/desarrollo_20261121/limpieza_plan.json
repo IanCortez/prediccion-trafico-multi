@@ -1,0 +1,32 @@
+[
+  {
+    "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\modelo_global_conjunto_s0\\modelo.pt",
+    "bytes": 18118699,
+    "sha256": "954156f01c9e90fd8b30344c7d15713717812bab89843214e6436d9bfb24c0c1",
+    "reason": "Discarded intermediate/model, or point predictions identical to retained baseline. Metrics, code and distinct predictions remain."
+  },
+  {
+    "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\rutas_globales_completas\\train_rutas_globales.npz",
+    "bytes": 77315950,
+    "sha256": "fcea14e43f835ed576edbb2769d2a5d17001249a3989f3cd3fdf384c379c7d80",
+    "reason": "Discarded intermediate/model, or point predictions identical to retained baseline. Metrics, code and distinct predictions remain."
+  },
+  {
+    "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\rutas_globales_completas\\validation_rutas_globales.npz",
+    "bytes": 9656093,
+    "sha256": "ac9ee58637a8dcfd572b2ee4a4832c98100a2d2dbae6afa26477d6dba2c02a79",
+    "reason": "Discarded intermediate/model, or point predictions identical to retained baseline. Metrics, code and distinct predictions remain."
+  },
+  {
+    "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\adaptacion_rutas\\control_capacidad\\validacion.npz",
+    "bytes": 767705,
+    "sha256": "6cb6683d58d5009ceb7742240866287334ed2dfc0d4b55790efacc731718ce1a",
+    "reason": "Discarded intermediate/model, or point predictions identical to retained baseline. Metrics, code and distinct predictions remain."
+  },
+  {
+    "path": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\desarrollo_20261121\\adaptacion_rutas\\rutas_globales\\validacion.npz",
+    "bytes": 767705,
+    "sha256": "6cb6683d58d5009ceb7742240866287334ed2dfc0d4b55790efacc731718ce1a",
+    "reason": "Discarded intermediate/model, or point predictions identical to retained baseline. Metrics, code and distinct predictions remain."
+  }
+]

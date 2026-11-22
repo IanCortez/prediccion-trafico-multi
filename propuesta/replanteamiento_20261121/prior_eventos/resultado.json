@@ -1,0 +1,53 @@
+{
+  "Train_runs": 20191240,
+  "histogram_shape": [
+    5,
+    285120,
+    120,
+    2
+  ],
+  "dtype": "uint16",
+  "maximum_count": 2080,
+  "full_probability_shape": [
+    285120,
+    120,
+    3
+  ],
+  "scope": "Context-level Train event histograms, not query-specific prediction or hidden-state banks",
+  "key": "(((cell*5+incoming_heading)*2+known_destination_equality)*12+run_entry_UTC4h_weekend)",
+  "event_age": "Move atD-1; EOS atD; preceding points stay",
+  "smoothing": [
+    1,
+    50,
+    20
+  ],
+  "Train_history": "Exclude current entire departure-week fold from every backoff",
+  "Validation_history": "Full eligible Train counts only",
+  "held_instrument_reproduced": {
+    "points": 9198270,
+    "NLL": 0.5418264381021076,
+    "previous_NLL": 0.5418264380601072
+  },
+  "no_GPU": true,
+  "Test_access": false,
+  "outputs": {
+    "conteos_fold.npz": {
+      "bytes": 3785412,
+      "sha256": "00f0ff5db2aef7b6cdc98d7cdb7d929c137ef44445fabc2ada90f2271052a504"
+    },
+    "probabilidad_train.npz": {
+      "bytes": 14675637,
+      "sha256": "48ec875b0b4cca2a0029732c6b2207d45496ec6dc9737e81917feb3c9f123131"
+    }
+  },
+  "code_sha256": "63bf6857f6641dd1b8de910f5a68a1b56da5a3f48146f91cd8d0e82a404f0743",
+  "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47",
+  "seconds": 31.67046570777893,
+  "inputs": {
+    "propuesta\\replanteamiento_20261121\\datos_semi_markov\\runs_train.npz": "03cdb472b698961de1eda403c361a8dd71ea2b0e74d0a89aabc9a7385eabc250",
+    "propuesta\\replanteamiento_20261121\\datos_semi_markov\\protocolo.json": "dc5e8a966c4e7890cfcc70d38a4aaf5f2452ccaff92aec86dc78c0d3ee05f081",
+    "propuesta\\datos\\train_x.npz": "f543f8873d930dbf95a6b189df84c182887376d85d6e6a47099d2e8749f7350f",
+    "propuesta\\datos\\manifiesto.json": "9f9491df73f5cfb98a00d2cabb5ba1ae2beb6c2ccd301daf0c32698de955ca52"
+  },
+  "primary_cohort_and_labels_unchanged": true
+}

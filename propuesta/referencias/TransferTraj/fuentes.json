@@ -1,0 +1,22 @@
+[
+  {
+    "file": "data.py",
+    "url": "https://raw.githubusercontent.com/wtl52656/TransferTraj/26d642e05e0afc75b9166a6bc73ed3876e9f4cf9/data.py",
+    "sha256": "1abbf59fa49450ecefbef100bd78c38179011bbcf0c13869405d7b9dd4466c48"
+  },
+  {
+    "file": "models/transfertraj.py",
+    "url": "https://raw.githubusercontent.com/wtl52656/TransferTraj/26d642e05e0afc75b9166a6bc73ed3876e9f4cf9/models/transfertraj.py",
+    "sha256": "45e0bf64c21b17920bb25bd4eb106fe9f0701f1cb6fb1327fe82bf03c501328e"
+  },
+  {
+    "file": "main.py",
+    "url": "https://raw.githubusercontent.com/wtl52656/TransferTraj/26d642e05e0afc75b9166a6bc73ed3876e9f4cf9/main.py",
+    "sha256": "bc68470d36c034a8b2f538de4c61809d7e89a1d86840c240e448011b34a77483"
+  },
+  {
+    "file": "settings/local_test.json",
+    "url": "https://raw.githubusercontent.com/wtl52656/TransferTraj/26d642e05e0afc75b9166a6bc73ed3876e9f4cf9/settings/local_test.json",
+    "sha256": "15d26ac54825a56d23e0b395a4872a6b9bdc908514ee5daa9c6a46a66423e45f"
+  }
+]

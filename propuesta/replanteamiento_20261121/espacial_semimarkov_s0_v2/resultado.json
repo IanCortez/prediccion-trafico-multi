@@ -1,0 +1,77 @@
+{
+  "id": "espacial_semimarkov_s0_v2",
+  "config": {
+    "id": "espacial_semimarkov_s0_v2",
+    "seed": 0,
+    "epochs": 30,
+    "fine_steps": 1000,
+    "local_batch": 2048,
+    "dp_batch": 4,
+    "inference_batch": 32,
+    "selection_n": 512,
+    "selection_head": "fixed mixed spatial/direct posterior",
+    "local_loss": "next-zone CE + residence CE + terminal CE + direct OD NLL +5RPS",
+    "fine_loss": "mixed total NLL +5RPS through differentiable semi-Markov inference",
+    "query_input": "Same216 OD/departure/map/history features, plus grid IDs derived deterministically from given endpoints",
+    "no_query_route_or_duration": true,
+    "geometry": "200m cells; public2014 roads and Train transitions only",
+    "time_model": "Spatial state transition + positive movement residence + nonnegative terminal residence; marginalize all paths",
+    "time_window": "Fixed60..1785s for every query; no observed query point count",
+    "max_seconds": 7200,
+    "Test_access": false
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 138.22343892888128,
+    "rmse_s": 220.15717408778448,
+    "mdae_s": 90.0
+  },
+  "od_validation": {
+    "n": 127941,
+    "mae_s": 138.33962529603488,
+    "rmse_s": 220.7329296653693,
+    "mdae_s": 90.0
+  },
+  "graph_validation": {
+    "n": 127941,
+    "mae_s": 154.22175065069055,
+    "rmse_s": 234.46667919909925,
+    "mdae_s": 105.0
+  },
+  "best_stage": {
+    "fine_step": 900
+  },
+  "model_sha256": "fa5dd3c60b288866c328600884228ff59b9a8a7570b7057373af479627e73bd0",
+  "data_grid_sha256": "a53f981ae6749f602eb2ee6b6b5efba4fb6c0635b471f0c89b1064f7b65fd3a1",
+  "code_sha256": "8231873588407ec06bdad6b655f5eecd7f67f38c7e466a4931b5e2a757e819fd",
+  "model_code_sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786",
+  "kernel_code_sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c",
+  "paired_vs_retained": {
+    "delta_mae_s": 6.966726850657725,
+    "ci95_s": [
+      6.416494744884319,
+      7.470475304190892
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "parameters": 2119414,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 1369.4464671611786,
+  "query_route_is_input": false,
+  "Test_access": false,
+  "goal_validation": false
+}

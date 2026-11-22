@@ -1,0 +1,8 @@
+{
+  "SHA256": "89ec9c58dff39b25415677535fe078ce65f06abe21273dc8a9eff83180e69466",
+  "original_paths": 55249,
+  "unique_objects": 2883,
+  "unique_uncompressed_bytes": 28295956,
+  "archive_bytes": 12441483,
+  "no_discarded_tensor_caches_or_model_weights": true
+}

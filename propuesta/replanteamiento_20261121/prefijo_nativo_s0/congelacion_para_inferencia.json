@@ -1,0 +1,10 @@
+{
+  "epochs_completed": 10,
+  "steps": 79960,
+  "best_epoch": 8,
+  "model_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+  "training_elapsed_seconds": 2475.9786002635956,
+  "source_sha256": "5aa78e2a4ce733c122b1b58b3aae7eb32417213f41f2d9c67965d77a06c4d26e",
+  "reason": "Training fully completed. Freeze best checkpoint and replace only slow final inference. No retraining and no change of cohort, labels, particles or query inputs.",
+  "Test": "sealed"
+}

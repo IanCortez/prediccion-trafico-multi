@@ -1,0 +1,13 @@
+{
+  "removed": [
+    {
+      "path": "propuesta\\replanteamiento_20261121\\base_oof_estatica_s0\\oof_progreso.npz",
+      "sha256": "8112c8101b9d999afd0cd8d508565744e69a7489aa715e565adf09363671a988",
+      "bytes": 5607255,
+      "reason": "Verified exact duplicate of final OOF predictions"
+    }
+  ],
+  "original_data_untouched": true,
+  "retained_best_untouched": true,
+  "TransferTraj_untouched": true
+}

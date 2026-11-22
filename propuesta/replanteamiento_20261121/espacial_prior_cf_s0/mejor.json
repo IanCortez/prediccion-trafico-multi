@@ -1,0 +1,12 @@
+{
+  "stage": {
+    "fine_step": 600
+  },
+  "selection_validation": {
+    "n": 512,
+    "mae_s": 144.90234375,
+    "rmse_s": 227.9455629914739,
+    "mdae_s": 90.0
+  },
+  "seconds": 1189.9768006801605
+}

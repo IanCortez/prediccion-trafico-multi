@@ -1,0 +1,24 @@
+{
+  "id": "od_xgboost_transfertraj_prefijo6_s0",
+  "validation": {
+    "mae_s": 134.30095756217634,
+    "rmse_s": 213.72789256911113,
+    "mdae_s": 82.68582153320312,
+    "mape": 23.390036538702912,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "MismoXGBoost y465 columnas; encoder desde el prefijo real de6 epocas de preentrenamiento, sin ajuste OD del encoder. Misma politica numerica y corpus que control aleatorio. No es transferencia entre ciudades.",
+  "test_labels_read": false,
+  "comparison": {
+    "reference": "od_xgboost_transfertraj_aleatorio_s0",
+    "delta_mae_s": -0.24474012851715088,
+    "ci95_s": [
+      -0.36595717533424477,
+      -0.12127623519367299
+    ],
+    "interpretation": "Negative favors this iteration; exploratory after adaptive validation selection, conditional on fitted models."
+  },
+  "distance_to_target_s": 60.800957562176336,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

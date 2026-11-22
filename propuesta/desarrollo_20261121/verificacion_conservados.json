@@ -1,0 +1,57 @@
+{
+  "retained_best_model_unchanged": true,
+  "retained_best_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "TransferTraj_prediction_archives_unchanged": [
+    {
+      "id": "od_modal_normalizado_sin_pre_s0",
+      "sha256": "001acca25acaed30e88e39fa3c0e70cfc41f71f736ee143b063aa9105097a060",
+      "unchanged": true
+    },
+    {
+      "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+      "sha256": "d2568689c8fc18aab1a3b151ee19f6738a4cc3dac8c4a33b75dd8fed5be4c3d6",
+      "unchanged": true
+    },
+    {
+      "id": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+      "sha256": "521d6cccd99b2cb81761796ce1dc10ae607109ddcae0e1e09b12760382552a87",
+      "unchanged": true
+    },
+    {
+      "id": "od_reloj_preciso_oficial_sin_normalizar_s0",
+      "sha256": "138464a02259326ea71f2201e0244cc6bb60ebfcb909d43a21f3d36e2e6db9d8",
+      "unchanged": true
+    },
+    {
+      "id": "od_transfertraj_adaptado_sin_pre_s0",
+      "sha256": "9c31edb70e6adc9e9a04948ef7ae764ed9812f6066dac1a7dbf21eed9ddc64fb",
+      "unchanged": true
+    },
+    {
+      "id": "od_transfertraj_math_pre30_s0",
+      "sha256": "60cb67ee49e99033ab1d1c466605ef51609d7c4f4ad6d066cc05620939da347c",
+      "unchanged": true
+    },
+    {
+      "id": "od_transfertraj_math_sin_pre_s0",
+      "sha256": "9eceff2c39ef60450899d55f9a942819ce2caf78996a2acdeb183a2136403bea",
+      "unchanged": true
+    },
+    {
+      "id": "od_transfertraj_metrico_sin_pre_s0",
+      "sha256": "038c76dced49a6d22344696bd51106216ac566cf68de5b129fac3746b1b9d43e",
+      "unchanged": true
+    },
+    {
+      "id": "od_xgboost_transfertraj_aleatorio_s0",
+      "sha256": "e6c23d134561c17f72c953112e1ecd1eaffc72814e688aa6148158b91a303fb2",
+      "unchanged": true
+    },
+    {
+      "id": "od_xgboost_transfertraj_prefijo6_s0",
+      "sha256": "9bdb8a731345587ffdbe26b1162c727748a899a9ab9631c7bd091461ad76304a",
+      "unchanged": true
+    }
+  ],
+  "Test_files_opened": false
+}

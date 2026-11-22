@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "true_sigma": 0.7,
+  "true_location": 0.1,
+  "results": {
+    "shared": {
+      "shared": {
+        "held_NLL_per_run": 1.5580703020095825,
+        "location": 0.09852296859025955,
+        "sigma": 0.6964695453643799
+      },
+      "independent": {
+        "held_NLL_per_run": 1.5959669351577759,
+        "location": 0.09620187431573868,
+        "sigma": 0.7094876170158386
+      }
+    },
+    "independent": {
+      "shared": {
+        "held_NLL_per_run": 1.6267385482788086,
+        "location": 0.2903271019458771,
+        "sigma": 0.3681437075138092
+      },
+      "independent": {
+        "held_NLL_per_run": 1.6118621826171875,
+        "location": 0.09745604544878006,
+        "sigma": 0.7230582237243652
+      }
+    }
+  },
+  "correct_dependence_selected_in_both_directions": true,
+  "correct_parameters_recovered": true,
+  "no_user_trip_data_used": true,
+  "no_GPU_used": true,
+  "not_a_travel_time_MAE_result": true,
+  "code_sha256": "bb220a9ae4fa959904502139a54fe7cba580550c8875e56b3ffec68ae702de87",
+  "likelihood_code_sha256": "35e366c07f56b61facfeb189e2ee1924047f0ae8e05266f20e39666f77635968"
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "Waiting for frozen native full result and actual GPU exit",
+  "original_processes": [
+    35928
+  ],
+  "supervisor_pid": 34908,
+  "goal": "active",
+  "Test": "sealed"
+}

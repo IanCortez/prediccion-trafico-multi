@@ -1,0 +1,8 @@
+{
+  "stage": "Post-training stages ended; inspect results and continue goal",
+  "active": [],
+  "goal": "active",
+  "max_GPU_jobs": 1,
+  "Test": "sealed",
+  "last_update_unix": 1795318700.8102047
+}

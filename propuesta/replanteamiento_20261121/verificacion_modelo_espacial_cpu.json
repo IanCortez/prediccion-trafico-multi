@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "probabilities_finite_and_normalized": true,
+  "finite_horizon_absorption_mass": 0.6951191425323486,
+  "query_inputs": "Synthetic OD features only, no target or route",
+  "trained": false,
+  "predictive_MAE_not_evaluated": true,
+  "Test_access": false,
+  "parameters": 2119414
+}

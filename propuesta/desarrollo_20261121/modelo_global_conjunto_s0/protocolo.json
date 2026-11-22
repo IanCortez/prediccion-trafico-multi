@@ -1,0 +1,30 @@
+{
+  "seed": 0,
+  "epochs": 80,
+  "batch": 512,
+  "k": 16,
+  "width": 512,
+  "geometry_weight": 0.2,
+  "lr": 0.001,
+  "weight_decay": 0.0003,
+  "patience": 15,
+  "max_seconds": 3600,
+  "route_generation": "global historical GPS time * (1 - .6 link_support), A-star",
+  "anchors": [
+    "mm_length_gps_time_600s",
+    "mm_free_gps_time_600s",
+    "global_history_600s",
+    "od_km"
+  ],
+  "geometry_priors": [
+    "projected_length",
+    "projected_free",
+    "global",
+    "none"
+  ],
+  "loss": "original NLL +5RPS +.2 conditional geometry score",
+  "validation_selection_precision": "bfloat16; final candidate replay float32 canonical2048",
+  "global_target_mae_s": 73.5,
+  "Test_access": false,
+  "query_actual_route_input": false
+}

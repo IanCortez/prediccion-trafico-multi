@@ -1,0 +1,8 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\descompuesto_aux1_s0\\modelo.pt",
+  "bytes": 25331882,
+  "sha256": "189a0d95f46ef1ad026292b3b0d8001a518f57ab0bd3be17482854f551e87441",
+  "predictions_sha256": "3e07431443b7e203c28cadb7a12b821b1a00526ee28fba0023f370045386885a",
+  "mae_s": 131.62731258939667,
+  "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+}

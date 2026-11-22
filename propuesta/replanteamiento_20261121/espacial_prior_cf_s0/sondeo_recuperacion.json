@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "interval": [
+    12288,
+    14336
+  ],
+  "rows": 2048,
+  "CUDA_LAUNCH_BLOCKING": "1",
+  "model_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "seconds": 22.635741472244263,
+  "Test_access": false
+}

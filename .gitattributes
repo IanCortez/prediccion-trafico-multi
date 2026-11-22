@@ -1,0 +1,15 @@
+# Preserve exact research snapshots/checkpoints across Windows and Linux.
+/propuesta/** -text -filter
+/auditoria/** -text -filter
+/revision_tesis/** -text -filter
+/README.md -text -filter
+/requirements-revision.txt -text -filter
+/.gitignore -text -filter
+/.gitattributes -text -filter
+*.pt binary -filter
+*.npz binary -filter
+*.zip binary -filter
+
+# Historical sources are preserved byte-for-byte, including original spacing.
+/propuesta/** -whitespace
+/auditoria/** -whitespace

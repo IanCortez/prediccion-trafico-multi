@@ -1,0 +1,11 @@
+{
+  "max_heavy_GPU_jobs": 1,
+  "training_microbatch": 8,
+  "training_gradient_accumulation": 2,
+  "training_GPU_memory_fraction": 0.4,
+  "recovery_GPU_memory_fraction": 0.25,
+  "no_disk_CDF_banks": true,
+  "completed_checkpoints_resumable": true,
+  "reason": "Conservative resource bound after saturation during comparative profiling",
+  "goal_status": "active"
+}

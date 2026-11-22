@@ -1,0 +1,3299 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 493,
+      "sha256": "3afca2ff7fd1e1168908da4a55206dd7bcaeb3ceb986d072cf2618e8685a2342"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 416,
+      "sha256": "3ff1255a07dec0a1bae9ff34d30c523a714e7a6edaa2f3cc47fcff7308dcba1e"
+    },
+    {
+      "path": "auditoria/conda-explicito.txt",
+      "bytes": 1758,
+      "sha256": "dd9727356bfd0a7f98fc209d38c26b8c7fe6e87b44c065f2330970b944c3015c"
+    },
+    {
+      "path": "auditoria/dependencias-exactas.txt",
+      "bytes": 1146,
+      "sha256": "b500c02078a96ea2557563777e1ddb56a562136062bf8d3aab1f7924b8c6fe68"
+    },
+    {
+      "path": "auditoria/limpieza/eliminados.jsonl",
+      "bytes": 441284,
+      "sha256": "41bebe3f57386b8a7a9a89a1bce00cce4c3a2b144f95f9f5a6ebc795f2d671ed"
+    },
+    {
+      "path": "auditoria/limpieza/preparar_limpieza.py",
+      "bytes": 12441,
+      "sha256": "6488f1ea175cabff556b7dadadc6d9de1a80afe825c34df0a8c2fa0356114f07"
+    },
+    {
+      "path": "auditoria/limpieza/resumen_limpieza.json",
+      "bytes": 3513,
+      "sha256": "dc3b4e4d08132333d80a8c50fd36a634daf418b6092c06c87ce51bc94f8e3866"
+    },
+    {
+      "path": "auditoria/revision_bibliografica/ANALISIS_PROPUESTA.md",
+      "bytes": 25849,
+      "sha256": "a3f01c92006d1a1216bde26f085a57f8ab99e155211254d19563b58a948108f8"
+    },
+    {
+      "path": "propuesta/ARQUITECTURA.md",
+      "bytes": 1416,
+      "sha256": "6893be300cee2e247904ab4e5fbcafc20451856ef7f65113eb86458fdd7c0085"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/indice.json",
+      "bytes": 11977,
+      "sha256": "2c7b1e9c73afa93f5cdee0edb41a59903604ea5da7875d6979b8a7082dfea6cf"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/ejecucion.json",
+      "bytes": 41485,
+      "sha256": "4353920ac4587e7cf0c0ae402faeacbf63f21fb9053c732a2a09fb1d52e744aa"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/evaluacion_critica.json",
+      "bytes": 972,
+      "sha256": "812faa0d8ce8d9563ccc3c8c0beee23bf1432299e4a426a88fc75257ec163e8e"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/historia.json",
+      "bytes": 14653,
+      "sha256": "5f8f1e335473acf10be95248ea1e67c530e91611e56205d83d64793a60294cf2"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/mejor.json",
+      "bytes": 233,
+      "sha256": "454d99ee59153f1a399cc233644640d4068fb27fc1950e13e868a93bcb73ed6a"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/progreso.json",
+      "bytes": 196,
+      "sha256": "a195205d3b3294b74d387d9a35a20be182ad047f7f60aa312331bdd0a765b2d2"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/resultado.json",
+      "bytes": 2757,
+      "sha256": "fed83e3572ba8c8a89e9891182cfb30caaad68b03bb8faa4f210df8af0c267ec"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_modal_normalizado_sin_pre_s0/validacion.npz",
+      "bytes": 1069526,
+      "sha256": "001acca25acaed30e88e39fa3c0e70cfc41f71f736ee143b063aa9105097a060"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/ejecucion.json",
+      "bytes": 67329,
+      "sha256": "288481f5fae51197436b8286b2fd2beb61dca0fb93cc67a6db414d44b6797b31"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/evaluacion_critica.json",
+      "bytes": 905,
+      "sha256": "68209413762c1b691576e88713f8bf424e255cd2258fccc5ad8141733893611e"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/historia.json",
+      "bytes": 11109,
+      "sha256": "4dedfe3630ccdfca54db5ef34bdf6ec1e9cd009fb19559351b3c57277517b004"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/mejor.json",
+      "bytes": 232,
+      "sha256": "fad2200482be9a8cec773c27c7d748377e08f96419ec6316507278a56a452c20"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/progreso.json",
+      "bytes": 195,
+      "sha256": "cb62abe40a18bbbde504aa083000853dd43bc9b41e65561bf881733b7b33d679"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/resultado.json",
+      "bytes": 2790,
+      "sha256": "608c88c9659885b28f456b9896f26fa379760eb6fcadbff70feed02f67b367ad"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mae_sin_normalizar_s0/validacion.npz",
+      "bytes": 1070111,
+      "sha256": "d2568689c8fc18aab1a3b151ee19f6738a4cc3dac8c4a33b75dd8fed5be4c3d6"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/ejecucion.json",
+      "bytes": 67329,
+      "sha256": "7c77bb01b29504ea01f7a20a827bcaae8b5a9e4d758fdc00df8ccd3fffacf811"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/evaluacion_critica.json",
+      "bytes": 537,
+      "sha256": "c9a82196e8f5b0258cffd4f81e9c768650430836440f8af7d728cdfe583dc533"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/historia.json",
+      "bytes": 4672,
+      "sha256": "b6de9d715e442fcc2656c8ac6cfac2407a1f40128228d51b8f7d52cb70ea35e0"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/mejor.json",
+      "bytes": 231,
+      "sha256": "46edada2427a85897e8548972d46d31d28456655f03488b9c60ffb2ddf628ad4"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/progreso.json",
+      "bytes": 197,
+      "sha256": "4bf19ac27a9b775a63007f8929adc48cae240482ae86b24c15988abb2bd03840"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/resultado.json",
+      "bytes": 2790,
+      "sha256": "27105a15f012c307f5d2af9573333c4e01471796a312f987cea38737125eae58"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_duracion_mse_sin_normalizar_s0/validacion.npz",
+      "bytes": 1068215,
+      "sha256": "521d6cccd99b2cb81761796ce1dc10ae607109ddcae0e1e09b12760382552a87"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/ejecucion.json",
+      "bytes": 64586,
+      "sha256": "03c7be2200ebd8135a0b16ef3cfc058214e660074b756c32d3ac16e10a594482"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/evaluacion_critica.json",
+      "bytes": 885,
+      "sha256": "0b4a9a961ac12b1fd070401e4ec4503d005725daabc2c7677eb6eed407ded0cb"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/historia.json",
+      "bytes": 12872,
+      "sha256": "1dd8a5e3e77951851b065a61a4f0146176bc8010cbaa90d4c7935b4c8a4fa982"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/mejor.json",
+      "bytes": 232,
+      "sha256": "a377b74a487a4ce994c8b7176b3a6969ffdc91e7410510204cb45cdf61726543"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/progreso.json",
+      "bytes": 196,
+      "sha256": "d6a73c03413e21a34a963338ef18a9458af6d237c83761dcd1210ef8500677b2"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/resultado.json",
+      "bytes": 2774,
+      "sha256": "ba6cc9072052e7747cb847ebfff325d5dcc764137591b8777cb8aa1b870f62a3"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_reloj_preciso_oficial_sin_normalizar_s0/validacion.npz",
+      "bytes": 1069589,
+      "sha256": "138464a02259326ea71f2201e0244cc6bb60ebfcb909d43a21f3d36e2e6db9d8"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_adaptado_sin_pre_s0/ejecucion.json",
+      "bytes": 21926,
+      "sha256": "05e64a428038666a66072854b409ed34c0e113f7d014fcc802e35c6d7a2ddc9a"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_adaptado_sin_pre_s0/mejor.json",
+      "bytes": 215,
+      "sha256": "3d2e6cc706cb44de97aa6c1f401b612585ca9494f1ec5981d9cb8fc2e9097a74"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_adaptado_sin_pre_s0/progreso.json",
+      "bytes": 193,
+      "sha256": "e8551e36633539a29d6893254e8c88237e2faa630b10e4cb792de33410c0daf3"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_adaptado_sin_pre_s0/validacion.npz",
+      "bytes": 1064613,
+      "sha256": "9c31edb70e6adc9e9a04948ef7ae764ed9812f6066dac1a7dbf21eed9ddc64fb"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/ejecucion.json",
+      "bytes": 47453,
+      "sha256": "7bde92a4082c9b482c4be973078a922a9fb430acc00f2d92ee8922883b52d298"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/evaluacion_critica.json",
+      "bytes": 928,
+      "sha256": "7d614238c5e8bf01ed6f509647be604ce86460d3aa1fbcd82997e710e1f5be29"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/historia.json",
+      "bytes": 9925,
+      "sha256": "5f0eadcbdc1210cd15b7a4a5700eb9f81cacdd349a021b8859d074cfb42ba443"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/mejor.json",
+      "bytes": 230,
+      "sha256": "7ace13f6115981448197fd4989b26e10b43f998ed0ba4b1b745d24bdc2461df5"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/progreso.json",
+      "bytes": 197,
+      "sha256": "85b5e1a4b694f97d974cc6ca9ad98dc8916123db4aa19e3a13ba49308966952d"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/resultado.json",
+      "bytes": 2727,
+      "sha256": "62276361b51686e985e6dc1499d28ad4145a9ec3923a96363f13386afd84d1b3"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_pre30_s0/validacion.npz",
+      "bytes": 1068937,
+      "sha256": "60cb67ee49e99033ab1d1c466605ef51609d7c4f4ad6d066cc05620939da347c"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/ejecucion.json",
+      "bytes": 24692,
+      "sha256": "6cbd8ce0a45b285749529b9543c01ec80827ec65443c152d455b2d6827adc11b"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/evaluacion_critica.json",
+      "bytes": 629,
+      "sha256": "ab158b30efe2bcb2727bc7cad03413b0d80b373c919943ea0d7ed9ea8df5b692"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/historia.json",
+      "bytes": 7898,
+      "sha256": "9ade69bfed96edf1b4c72c70cc10ea9a744618bc766bd10276af37cd8184a5d3"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/mejor.json",
+      "bytes": 232,
+      "sha256": "7da2eebcc978cff36061bf73bb4ff135adda36481406bcca8d5142934a20d4fe"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/progreso.json",
+      "bytes": 197,
+      "sha256": "fa742cbefa3b84703ffaf759c8626427cd7f51b5bd95bff2c5b2ccb3069efc69"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/resultado.json",
+      "bytes": 2704,
+      "sha256": "a3b36f3e09fad40459d8ceb5fa6b4bc69436932f2dbbf1c3883e4447ee0e4996"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_math_sin_pre_s0/validacion.npz",
+      "bytes": 1069944,
+      "sha256": "9eceff2c39ef60450899d55f9a942819ce2caf78996a2acdeb183a2136403bea"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/ejecucion.json",
+      "bytes": 35036,
+      "sha256": "13350c8f4e3fa14a5966056896b1db80cb84f92e0f9ae3027734f5876c4887c8"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/evaluacion_critica.json",
+      "bytes": 985,
+      "sha256": "19cf3efbf7a982cab2403db53f44fd422d4a98271a4b569a35c9b25d1eb00bcc"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/historia.json",
+      "bytes": 7919,
+      "sha256": "a06e4a529b9e50ac3bd42cfbb1e4c1e05ae138bd8c74d720dc7f4a96484730a7"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/mejor.json",
+      "bytes": 233,
+      "sha256": "5c6be43303613c86b9d641525fba5217dd51a4fca7f5a64790eaaaa6edb24f99"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/progreso.json",
+      "bytes": 197,
+      "sha256": "f412a00e373a25b61a1ae850c0f88fb04528a7e53123f70cd837ba53d991b6b4"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/resultado.json",
+      "bytes": 2758,
+      "sha256": "258825aa401942e555a73b52bffac05529bb24629040a36528c5215c7c1d26d7"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_transfertraj_metrico_sin_pre_s0/validacion.npz",
+      "bytes": 1069513,
+      "sha256": "038c76dced49a6d22344696bd51106216ac566cf68de5b129fac3746b1b9d43e"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/auditoria_empaquetado_fuentes.json",
+      "bytes": 1333,
+      "sha256": "dd3680f9bf41d6bd208b88cb93816b420ffe1abb84ccce53d0a1fb108fa868a6"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/ejecucion.json",
+      "bytes": 27869,
+      "sha256": "0ec86bd5c07048409331a86efcf773a6eebc9c7c27882d336b02fe8dd1dfc98c"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/ejecucion_al_inicio.json",
+      "bytes": 27024,
+      "sha256": "6179a854284e154335936323359401c45492fd1549d974e39ef3d57c84c561d8"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/evaluacion_critica.json",
+      "bytes": 925,
+      "sha256": "137799921000bd40e5adc0b34dd9e7489e2dd172268b3085584ef0a76584127c"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/presupuesto_recursos.json",
+      "bytes": 543,
+      "sha256": "1bc3b684e75c6cc4cdeab34d0a53371ad4aa0557af362ec8e2354a2fa4ca1e95"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/resultado.json",
+      "bytes": 16898,
+      "sha256": "7455b4182505321c49de6dcf0b7d37ead154ba6c04625a67f9621bd6bd546578"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_aleatorio_s0/validacion.npz",
+      "bytes": 1070081,
+      "sha256": "e6c23d134561c17f72c953112e1ecd1eaffc72814e688aa6148158b91a303fb2"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/auditoria_empaquetado_fuentes.json",
+      "bytes": 1332,
+      "sha256": "889c21b3235ae08114e52ae0cb4e312dbf0608155bb11106fa40be1b570c0891"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/ejecucion.json",
+      "bytes": 27969,
+      "sha256": "8c952d95c64e795925fa3d052d2f2c585ff5653d2e446317a0e896e330fd0b2d"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/ejecucion_al_inicio.json",
+      "bytes": 27124,
+      "sha256": "6dfd6286bf52a4a6c6457f5b08b5c5e3150af2595066897f1ed68411a86c11cb"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/evaluacion_critica.json",
+      "bytes": 966,
+      "sha256": "28993d7a289875449378b63ab7d918852eaeb59351aef99faefabce296aed44b"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/presupuesto_recursos.json",
+      "bytes": 594,
+      "sha256": "2addb2b08af94598e376162845968ee18a8ef8805b4c66f85dbbed61a201c7e0"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/resultado.json",
+      "bytes": 16900,
+      "sha256": "cbd51d6550029ccbf34123c860dd309b77e65a252ef514e7d97c1f749a2578aa"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/od_xgboost_transfertraj_prefijo6_s0/validacion.npz",
+      "bytes": 1070087,
+      "sha256": "9bdb8a731345587ffdbe26b1162c727748a899a9ab9631c7bd091461ad76304a"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/README.md",
+      "bytes": 2742,
+      "sha256": "4b29a909456699d731f377a59a253de63cc356bc68d30455c752aa9ce0109c5b"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_adaptado_pre30_s0/ejecucion.json",
+      "bytes": 21928,
+      "sha256": "3f4e4dcc0cbddb1a8145710d476427c0cfbb874c2b406bf2068acbc40b71da64"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_adaptado_pre30_s0/progreso.json",
+      "bytes": 200,
+      "sha256": "351d743b7e72b2191d899b99662a2b5752466bf5daab9423d686e7f527190cf4"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_pre30_s0/ejecucion.json",
+      "bytes": 24693,
+      "sha256": "666fbb749d507b43c3b7834674763879beb49af46f91dd9d5876c3ec42e55992"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_pre30_s0/historia_preentrenamiento.json",
+      "bytes": 3055,
+      "sha256": "45d782fd247e56d294d3b66b61ff23291c2b20cf8053cf8f2ae26c5d461e2190"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_pre30_s0/mejor.json",
+      "bytes": 78,
+      "sha256": "df01982a089b3283bc8774da8f37aca85146da8a0b8642305eefbf8b4d6b64f1"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_pre30_s0/progreso.json",
+      "bytes": 202,
+      "sha256": "35205a92b4851e5a081ecdb5f3890e052eacbab0abace5edef1778755ebf8fad"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_pre30_s0/resultado_preentrenamiento.json",
+      "bytes": 2399,
+      "sha256": "3541659711646e4c1599064bde968fdd8698038a4c8b16a71fc6004df5e43341"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_prefijo6_instantanea_s0/ejecucion.json",
+      "bytes": 24693,
+      "sha256": "666fbb749d507b43c3b7834674763879beb49af46f91dd9d5876c3ec42e55992"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_prefijo6_instantanea_s0/historia_preentrenamiento.json",
+      "bytes": 606,
+      "sha256": "75682a19707ebf45c37623c36ee5ddd0ae3d6e61fdc1234e5239448aa711ae04"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_prefijo6_instantanea_s0/mejor.json",
+      "bytes": 78,
+      "sha256": "2dd78febde81e662bc952e7d4f82e5bea1d956e615ba9cd28bccd7385d13d0ca"
+    },
+    {
+      "path": "propuesta/comparaciones_transfertraj/transfertraj_math_prefijo6_instantanea_s0/resultado_preentrenamiento.json",
+      "bytes": 2413,
+      "sha256": "8c7fc4a9f88994e0408605479c03ceb06fea9a20527402717bc85be57af7a58e"
+    },
+    {
+      "path": "propuesta/datos/contexto_manifiesto.json",
+      "bytes": 564,
+      "sha256": "3d77f54b683c52f2f96514513e03c9842911e24e9743cba0caa2929d4ae5b832"
+    },
+    {
+      "path": "propuesta/datos/geometria_manifiesto.json",
+      "bytes": 536,
+      "sha256": "5ed6f4dd2d320ed71caf67c58f629c326060b4e2e0dd73e022dd6e225da0989d"
+    },
+    {
+      "path": "propuesta/datos/grafo_compacto_manifiesto.json",
+      "bytes": 498,
+      "sha256": "0d381d03a121f51646646996703108456cb69a0d18eaaa69a3b9273aed9aaf95"
+    },
+    {
+      "path": "propuesta/datos/manifiesto.json",
+      "bytes": 1776,
+      "sha256": "9f9491df73f5cfb98a00d2cabb5ba1ae2beb6c2ccd301daf0c32698de955ca52"
+    },
+    {
+      "path": "propuesta/datos/mapa_2014_manifiesto.json",
+      "bytes": 1275,
+      "sha256": "9537fe0ce18232f6af0db428a5fe57bf79f5c02e06889fa692e9fcea7aeddf90"
+    },
+    {
+      "path": "propuesta/datos/mapa_manifiesto.json",
+      "bytes": 1606,
+      "sha256": "8617e87aa6c45dc71f87762d384dc5c43ddc6dcade249291ac1e7f32aa5e1517"
+    },
+    {
+      "path": "propuesta/datos/mapmatched_features_manifiesto.json",
+      "bytes": 2412,
+      "sha256": "da12d47f4783b813529d2c94b99ead0e2b334d695c68f6a6cb5b5813c1cde025"
+    },
+    {
+      "path": "propuesta/datos/README.md",
+      "bytes": 705,
+      "sha256": "ef5ef1726286bc57affdee9551d8cce94d4b9d3f0cb2b1b46712e5ab4a3a477a"
+    },
+    {
+      "path": "propuesta/datos/ruteo_compacto_manifiesto.json",
+      "bytes": 650,
+      "sha256": "c812c176697d89a1e0798cb7c86238699d6c2f1678e3f02b3d76d9f579b7efcb"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptacion_rutas/control_capacidad/historia.json",
+      "bytes": 1387,
+      "sha256": "316bbd91b09f2680804a928940fc853b95a425d0fbbee92e92a53729335ada52"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptacion_rutas/control_capacidad/resultado.json",
+      "bytes": 559,
+      "sha256": "644a7583287d6bbc8e05f6437424ae17b59c10ab442e4c7ef9226a2e44b234ab"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptacion_rutas/protocolo.json",
+      "bytes": 644,
+      "sha256": "919371627047921f38a345a11acbd0b0259a0da05c762db6492bc5cc24ef7d59"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptacion_rutas/resultado.json",
+      "bytes": 3106,
+      "sha256": "1a4726fb9935040e3e328bd5f35eb9c7b1cc151be15f2518ef654fec726bc388"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptacion_rutas/rutas_globales/historia.json",
+      "bytes": 1366,
+      "sha256": "f27033a662eb174357dc43913414c8e19c866ada1550c24b3a828ba2cfb216e9"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptacion_rutas/rutas_globales/resultado.json",
+      "bytes": 556,
+      "sha256": "0baa2cfbe5e15ba5ca2d296dc0ff8415fbf5556ab4091b1dbdeea610cc623e8e"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/adaptar_rutas.py",
+      "bytes": 8186,
+      "sha256": "10454d852f7b9ef79f20ba091bb90bae8f7eaad400f6faa9910f451477344869"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/ajuste_mae.py",
+      "bytes": 5864,
+      "sha256": "525f362719ee6c47718aa5c114ce56251ecc44dc310b12f7725fed2025c1f36f"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/cota_mezcla_modelos_fijos.json",
+      "bytes": 592,
+      "sha256": "5929c3f4adc8c3e068fdb7e5f052cafcf3e077b16cfad91af1cec83a1ef35d33"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/estado_causal/predicciones.npz",
+      "bytes": 4212802,
+      "sha256": "0b402bd6dbe2410f95742e5c74576b4ae8f5b676e6d8ec30ec24ae4127ad3566"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/estado_causal/protocolo.json",
+      "bytes": 671,
+      "sha256": "55fe7bc3873b89bd50e99cc1c9b9bf2fcfb8bf9d04d7e5022a7db1f0f2be6785"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/estado_causal/resultado.json",
+      "bytes": 2513,
+      "sha256": "7742a189fd55f7cedd0f6bafc09eb1f69740941dfd414283bd91e96c80871ef6"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/estado_causal.py",
+      "bytes": 4639,
+      "sha256": "69651f47d1c86f8dcec36739e26b55063bc5d3823f3faf1a2837f80573a3cf0d"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/finalizar.py",
+      "bytes": 7061,
+      "sha256": "60dd122e0fac7202dd0d3d3910d7e5fe2f728509814325a3eb01fd64fb868a04"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/generar_rutas.py",
+      "bytes": 4365,
+      "sha256": "d914efb40ba2b00b07857e7fc4ddf8d2e0877f997a7949ac4a0d1bfd82b7e082"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/limpieza_caches.json",
+      "bytes": 297,
+      "sha256": "bc457b1ee775d5393d9a176d6c1375c9ca21177386ac0ad7044f9b2385efeb76"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/limpieza_plan.json",
+      "bytes": 1943,
+      "sha256": "09970bf7c7080b4c8eb080f39146546bfb61b92701548752df18a0f34ceb6379"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/limpieza_resultado.json",
+      "bytes": 1315,
+      "sha256": "18f2f999ae926e9bf4effb97bc040520ca229d4a960b97331cf98ee245c9df13"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/mae_mediana_s0/historia.json",
+      "bytes": 1409,
+      "sha256": "54b6045e157fe43b1721549161bf68a161e76bb60b8516d48d4ea12060954b08"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/mae_mediana_s0/protocolo.json",
+      "bytes": 593,
+      "sha256": "a64cc8cff67b03c363b297be1fffbcab767af29c33a5983cc4ce2a23cba48dae"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/mae_mediana_s0/resultado.json",
+      "bytes": 2108,
+      "sha256": "e89de33147bb81bc3966cb9e72ce0737adaa72c2e80ef6c0cf9eb49114216e32"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/modelo_global.py",
+      "bytes": 6995,
+      "sha256": "317968b5146ec712f84a25b53e133d9cd9ca1af2f2eec25541666bcc9064eead"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/modelo_global_conjunto_s0/historia.json",
+      "bytes": 16655,
+      "sha256": "d6aa17721074f94d91cd3d0daf6aaf08e7a6a244c083b5cd0e6622634a6552a2"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/modelo_global_conjunto_s0/mejor.json",
+      "bytes": 239,
+      "sha256": "2be235484cbf245bd6cdb56e51d120bf071c9cbc3291be7fe5a8d19cc0b96c9d"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/modelo_global_conjunto_s0/protocolo.json",
+      "bytes": 762,
+      "sha256": "36fc2a0ec3af2a5c580bab276d18790631a3e37fc55d3a54bbaf5be7ab468a12"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/modelo_global_conjunto_s0/resultado.json",
+      "bytes": 10634,
+      "sha256": "9103602843ba93fedbf3509142ed8f41396546006fe9af0a0b422f13b0603b62"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/modelo_global_conjunto_s0/validacion.npz",
+      "bytes": 767521,
+      "sha256": "795957db4e1787ce3098cd64d1341f6dcd7de5a0733ad0519fa76cdc6363413d"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/piloto_transferencia/predicciones.npz",
+      "bytes": 1643410,
+      "sha256": "74ef1fb88c56f8f136234b4863b3064c49f9d20f666d5f0471f06a787b87041c"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/piloto_transferencia/protocolo.json",
+      "bytes": 651,
+      "sha256": "261320ff8ea5a4d078e81397ae658ee7832983793bd94d1c6173d93a91b74758"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/piloto_transferencia/resultado.json",
+      "bytes": 11445,
+      "sha256": "2211f5e8ded82fdb490e98e28aa80a5c5aa1a92e1e752373db6344afe4ef7e65"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/piloto_transferencia.py",
+      "bytes": 7438,
+      "sha256": "2a41e73fe0c2c21f8f1fc2f60e00046736174fc6abf19b9ae499f19385e0a109"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/plan_operativo.json",
+      "bytes": 1088,
+      "sha256": "ea8ae995ccecfd96eca7d4de2d77b9178b18d94e317f9f53380e9e24eea32ae5"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/README.md",
+      "bytes": 4094,
+      "sha256": "108dcc422b8051fc2d474e54c3f417b7d167f9f5652b76385c0e278f6c75eb63"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/resumen_resultados.json",
+      "bytes": 9176,
+      "sha256": "ba8b9dc68134ad5a597f0e93d9e80873d57daef6c2984d2fcbdf4c9efae10a2d"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/rutas_globales/control_rutas_existentes.json",
+      "bytes": 1002,
+      "sha256": "53fe7d7e9683f9e6ac813697cfb9e0cfa02b28000c9b06ef5c90c8f5432cf1cb"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/rutas_globales/protocolo.json",
+      "bytes": 817,
+      "sha256": "b0f4689b9b007fbe7aa53b39ec42f1240d080fe9c0803356f86782894809dde0"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/rutas_globales/resultado.json",
+      "bytes": 1764,
+      "sha256": "00a67834c3c2a8c6c02ad8e6a4bc46e3bbc7a9dadd191a11a1a11cd1a3a22c9e"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/rutas_globales/resultado_invalido_union_filas.json",
+      "bytes": 1760,
+      "sha256": "6005ee859470aa81037c4c309fc81b488434a2cdd550249a3bd78c87acb5d438"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/rutas_globales.py",
+      "bytes": 6624,
+      "sha256": "e7e7f64e6971ee3aedc42d044037424cb84ce6144fb0facb4145e9b21073c3eb"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/rutas_globales_completas/resultado.json",
+      "bytes": 1427,
+      "sha256": "599f9f8f70fcbc36257af945f264aa78872dc0bb9b724c724cbc279a48f04d14"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/verificacion_base_final.json",
+      "bytes": 1413,
+      "sha256": "34a90db609d2f1845764080369ec0d64d22a09a756b82a71ba71bf8cc08dcff4"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/verificacion_conservados.json",
+      "bytes": 2014,
+      "sha256": "00a17ad07af152fdddaf0c4a3744ba828edea2241364810bd6c4d89000c65825"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/verificacion_rutas.json",
+      "bytes": 379,
+      "sha256": "7156d51ba68ffe49fbcf25e30e7d6ad611c834c918a945bd5a04cb90b33c10ef"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/verificar_modelo_global.py",
+      "bytes": 3729,
+      "sha256": "369ea60538bdac690b104976d24d9985cf5e962da3de5c3031ebb7c5bee4a3d5"
+    },
+    {
+      "path": "propuesta/desarrollo_20261121/verificar_rutas.py",
+      "bytes": 2980,
+      "sha256": "683c70ba110e8d268d8bb2339b90a611f34b1d3b943bb156103e007bb9fa8d52"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/ejecucion.json",
+      "bytes": 13566,
+      "sha256": "1ba189a00246720905731860b8a5afb45e1dd9fd3fff40dc940a6abc887af0e1"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/evaluacion_critica.json",
+      "bytes": 959,
+      "sha256": "130e214eb65b1f32ac74c469c45803765678e62c40f53ebb6f74c8de252fa33d"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/actualizar_bitacora.py",
+      "bytes": 4763,
+      "sha256": "f6f9362882461f631fe20397ac2adf0083b2c9d374f521b404eccb6a2733461b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/actualizar_estado.py",
+      "bytes": 5251,
+      "sha256": "d05d59c2f2b0f6ca0bcf49e2dff3a5b95b84bb823c8214d7d4227c764e361c9b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/atributos_ruteados.py",
+      "bytes": 2452,
+      "sha256": "722d817465fe5e38da1b55f2d2e6516db2904f562c5ea1fda33c98e2071f2c57"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/auditar_disponibilidad_etiquetas.py",
+      "bytes": 1439,
+      "sha256": "8c9f8f7128f7ef1b953c28d2035f60d0b4cd74471e8d14de38ab88d82dc1d9da"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/auditar_precision.py",
+      "bytes": 2484,
+      "sha256": "e9284181f4fdd80b23abee6a1f81a6d7c712111feb4e728b250e59616f7024df"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/calendario_porto.py",
+      "bytes": 1860,
+      "sha256": "025294bbe7f8fe463407f4f5ad8f073b41fbbf1ba8dd3a4467d54b5066510d63"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/cola_experimentos.py",
+      "bytes": 3630,
+      "sha256": "291c136cf571dbe721331070b29fa8838991fdbf607fe448afcf38c4e3cfa0c4"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/common.py",
+      "bytes": 3248,
+      "sha256": "9f7c0c7eac073be5c8943bd2bfa611830a71c1842b9f40f6d69c7fad32de92fb"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/comparar_fase_vial.py",
+      "bytes": 4836,
+      "sha256": "bb51437c0b79665257ca931353eedbc93db6d6f69d896b5ee2f9aacf27bd8b45"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/compresion_vial.py",
+      "bytes": 2427,
+      "sha256": "28e45b582b368c6a12e4bbe25da7135a50842a93b847b28737b7b4b8742e5058"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/comprimir_grafo.py",
+      "bytes": 3229,
+      "sha256": "bc7fcfd65ff5553de13fc4ca56e9dafa7cec956fba7b7f9528b8b72f04bcde79"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/comprobar_scripts.py",
+      "bytes": 431,
+      "sha256": "216a1dc8824b516b6f9fb73d3dc90cc83dcb2131c2b3697aad694fb2baf57172"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/congelar_candidato.py",
+      "bytes": 2257,
+      "sha256": "95e2a955818c62a5ced3cf409074fc5bd76be669fc1063d60b46218cdb79bdda"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/consulta_mapa2014.py",
+      "bytes": 4855,
+      "sha256": "82e8396a6983f483a48aaaaec0d7aa906899c7691374eca8c946ae9819a08706"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/consulta_od.py",
+      "bytes": 5238,
+      "sha256": "d730e005ccac198887ca752cc72010d4252890efec51c2d932e6f3f2f0c2778f"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/consultas_mapmatched.py",
+      "bytes": 3594,
+      "sha256": "5c87cfe16bb55050917418242ad2c669bc89f582ba5e74a68bbb6f88b99202c9"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/consultas_preferidas.py",
+      "bytes": 3728,
+      "sha256": "757ecc46089b450e17a0ebdef1ddbaec50fcb1c9d28b4bcd21de706965861713"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/continuar_fase_vial.py",
+      "bytes": 3436,
+      "sha256": "3970213f6990e4bd83063cb279f66727ee3414fbc4246fba20a5a885bcdea9cf"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/continuar_preentrenamiento30.py",
+      "bytes": 3016,
+      "sha256": "8051c501f14717951a867da23a4f23da1cb528ac327eea6ddd732c3ada91af0e"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/corregir_auditoria_precision.py",
+      "bytes": 1155,
+      "sha256": "0c8fa456b0e3a98f4ec3290bd690423ab558e6a985ce05764c6fa5cb0d37bbc3"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/diagnosticar_ensambles.py",
+      "bytes": 2205,
+      "sha256": "c85172a22c2903b101243703f3cd5c052306607365ec16735149896d3825c66b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/diagnosticar_error_pausas.py",
+      "bytes": 2135,
+      "sha256": "ec7006872816150578a4e211fff7f1d61039786f070ac755e96bfd426e02146f"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/diagnosticar_ruta_preferida.py",
+      "bytes": 1507,
+      "sha256": "da6eba44fac4e9c9d2a5c03f1f02dce39e8754aa38ff159a0e8505ae23ac22ac"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/ejecutar_mediana_dirigida.py",
+      "bytes": 3554,
+      "sha256": "61c9ba02ababc202e5066bfe2a44293c8354d4046325abac86c2effade593397"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/ejecutar_mezcla_conjunta.py",
+      "bytes": 4186,
+      "sha256": "c0e9761fd06abfb2a6284dfd61817fb84be386dce4c75caf82cd48d2fb1de594"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/ejecutar_pausas_condicionales.py",
+      "bytes": 4563,
+      "sha256": "ffcbf8940d9fab944779aca65b89f39a01acc4b4f12ebcf9dad65e839febdade"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/evaluar_calibracion_mezcla.py",
+      "bytes": 3841,
+      "sha256": "f2bfe6bff4025999e89b7f7e21e15e2435114b44a2b6b9d293f33c061b469149"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/evaluar_candidato.py",
+      "bytes": 2593,
+      "sha256": "daba4f3165563f5667c4fd26958a49b07aa4ea0bf83ed200ae000e598ab6c914"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/evaluar_iteracion.py",
+      "bytes": 17486,
+      "sha256": "eb4dba6fecff02eea61dd33a4f7a6db3f15b1eb36f38f96dadcf530cff12dad0"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/evaluar_preferencias_giro.py",
+      "bytes": 4922,
+      "sha256": "5203b5210ea904bcc1168bf629ff75bb4b8dc1e2eaa7c8fc3c0c28b9e0fe26ca"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_arbol.py",
+      "bytes": 4395,
+      "sha256": "dfc2f1a92221dee43dcf03a40c0e1cac7a6529701d5d2381ec207d59c57d4b3b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_comparadores.py",
+      "bytes": 2995,
+      "sha256": "7464dd1e7bf6177710272ec5f7a7cdeb121f9318a3ea2fa24eb67c6907e3ab08"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_distribucion.py",
+      "bytes": 3979,
+      "sha256": "0674c8cfc8d43b44e9f4f5446d35cb8e435bd199bdc61e9253b216fc23aff7dd"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_estado_cache.py",
+      "bytes": 4763,
+      "sha256": "c2314c9a9ee6a940bd246b86bd339ec03c29210f5e2cb2d2a5d81da7ab5593bc"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_mediana_dirigida.py",
+      "bytes": 5361,
+      "sha256": "47a326f5d6e49e7c41315878fcc91712ce7bf1eb1099fbd1d25ca225dbe9e0f8"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_mezcla_conjunta.py",
+      "bytes": 8966,
+      "sha256": "7fa969dcd6156e3c2b68d4afeb044f147fc67a67a27d01b3860a329bcee23aaa"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_mezcla_rutas.py",
+      "bytes": 8462,
+      "sha256": "2df431502fbf3179c9d8de61485da4f83f4bc014cd76c6dabcc9da915d4e6ea4"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_neural.py",
+      "bytes": 5688,
+      "sha256": "f07fd34680d3e2b1242a3c7e370241556effb99351d41a574ae1d0e67414d83a"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_oraculo.py",
+      "bytes": 3251,
+      "sha256": "e2ec6174d52cbf4d6998a0c455840d0e8ae4c95818e9e7e2a34acdacb909fffc"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_original.py",
+      "bytes": 2021,
+      "sha256": "aaeb235486de67bf71ff61653e3e01a5c416097239b2941d670f3f8c8bb20908"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_original_completo.py",
+      "bytes": 5211,
+      "sha256": "77797eb8aaedf7e1aa9fe08b53cf43e3e936e21594d7da8ec853fbf709e3c656"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_sufijos.py",
+      "bytes": 7354,
+      "sha256": "43bcc74d8a89aa8b7534c7b21524efc73e950d10f846756fd8e11da53adaca3b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_tabm.py",
+      "bytes": 4824,
+      "sha256": "c685c2c451e7e66493eac2a9d8b59b57d0398fb22b1e705e24f8df3473779b42"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_transformer.py",
+      "bytes": 5610,
+      "sha256": "d261072578b29c7ff4a4755da5aa04466eeaa0c7653371b867e362ae4ecbfcab"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/experimento_vecinos.py",
+      "bytes": 3051,
+      "sha256": "544ee548da6aace2dccbf9e0a603fd2889861b9d9b0dfb09cd80876b65fba7bf"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/explorar_ensambles.py",
+      "bytes": 4090,
+      "sha256": "f4cc0d27421f32ed5cd5a742c3efc2c6760218b816a05ddc90ff217ec042f4e1"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/features.py",
+      "bytes": 3444,
+      "sha256": "5972ebda580544352433ea3ff61e00989e7bad0280e529a19c369734771c99bd"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/geometria_ruteada.py",
+      "bytes": 3293,
+      "sha256": "0d6c5f4c904bdcb247985d122b4a1d8d60d30fbb955463b566192a9508c71265"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/historial.py",
+      "bytes": 2708,
+      "sha256": "a7acbfa783ceba27f15d35428df8cb8934542fda710a132d3d52760a9f62344a"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/inferencia.py",
+      "bytes": 10396,
+      "sha256": "dd505f5f4795eb860a54838b7ae4aca444d0f938ba60ffdf6a22aba9b7211512"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/map_matching.py",
+      "bytes": 5062,
+      "sha256": "ae9f105ff04ce04cd19d27ac71b0f8c1a058f383aab603a70260be0fcb97c79b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/map_matching_v1_serial.py",
+      "bytes": 5025,
+      "sha256": "7a6a188b0ebfb60a1aa57a6a02fd8db48538636f0cbaa84b33f5138439801753"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/modelo_mezcla_conjunta.py",
+      "bytes": 4146,
+      "sha256": "88a7974902942809e474a655f3ab878fe8a66c5c985835bb81e184d6af5be35b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/modelo_mezcla_rutas.py",
+      "bytes": 3423,
+      "sha256": "db1697dd6681ad6ff14d82fdce510528dc5f1d0fd6b49853ec2cbdd1a6efaf16"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/modelo_residual.py",
+      "bytes": 4231,
+      "sha256": "545717dffb9a0be53725486e64550a88a6ff91b24dd2a1431c5d03906f0811b0"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/modelo_tabm.py",
+      "bytes": 886,
+      "sha256": "d5e00a56236836c78bd3eb5e24bd8f9e4677eb5743c804975fb6e377ec7a124e"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/modelo_trayectorias.py",
+      "bytes": 5732,
+      "sha256": "bfd0870a8efe544a2b16a30989af43e832e5c7f66e1a60f1471389458653d3be"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/movimiento_mapmatched.py",
+      "bytes": 5709,
+      "sha256": "ee21111a614563eafe5aa5af659b27a41848488265eff7197ed7d913cfab2586"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/paso_transferencia_auditado.py",
+      "bytes": 4290,
+      "sha256": "e199bc6b00e2a0b27f0c9cf79b13ecfc1ae34185b2d01e5ccf04917d0f7ad091"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/perfilar_original.py",
+      "bytes": 1900,
+      "sha256": "cbf3d12fda8538099fac23b3679ce0b2045b63b956d84ecb7ca3a8b0b6fe0cbc"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/perfiles_ruta.py",
+      "bytes": 2420,
+      "sha256": "70bb6464c25fbba87da192f028b28f879e42f82517fb7b922aaf2ca5c3b69ede"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/predecir_od.py",
+      "bytes": 4115,
+      "sha256": "95d3ab02eacc254630f7464580be8fccc2c3705d18aa931ad712075f0a01c476"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preentrenar_trayectorias.py",
+      "bytes": 4571,
+      "sha256": "27c5b22b9c0db1679714005e8e265bf31f18db269de111d827d8fe106aed1523"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preferencias_giro.py",
+      "bytes": 3278,
+      "sha256": "273db5cd4397743f1477eb225a1291c6e5eafe0c2ec56cbe76082505940d30ac"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_atributos_mapa.py",
+      "bytes": 3700,
+      "sha256": "4096867d6ddd691f405f1c797d9985782968008421b20a0f3b09be9106ec1824"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_atributos_rutas.py",
+      "bytes": 2467,
+      "sha256": "70e3070d2260f98d3e693a4be073e8a51b7c86b1cc65129ed28fa34e4f36b28e"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_consultas_mapmatched.py",
+      "bytes": 6097,
+      "sha256": "e4ba236a7efe4110145c257d54f952718d6ea6e6a7abb109ceee9a96b0c85f36"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_contexto.py",
+      "bytes": 2729,
+      "sha256": "5d41779a7e310c7d47227d56f52baf19b3d40a7f7adf713d5e6cce11a7872d47"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_datos.py",
+      "bytes": 3251,
+      "sha256": "415b7b210ee4f47e9d78f79617a2c2b38dc24b17536d39425b75800cac00d89d"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_distancias_mapa.py",
+      "bytes": 2848,
+      "sha256": "ab74239f0f098d76246ad5e989987bdd7f5c70e85b3857191fbe29ff92a98774"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_estado_gps.py",
+      "bytes": 3518,
+      "sha256": "92fe9201a0e87ad84f9aa6401594231f55fa0dbe58b0e9841f894bfbe53d7cb0"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_geometria_aux.py",
+      "bytes": 2036,
+      "sha256": "d26398e2406d4cad87ca166ed93076655725419f7072ef757344c0ed3d3eb93e"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_geometria_rutas.py",
+      "bytes": 2531,
+      "sha256": "7ab52eb036c2d7b760e30339aa9d7747d89a8bb5e0e86aff06ad21a07483ef94"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_gps_horario.py",
+      "bytes": 5444,
+      "sha256": "c9894b6b0924af6fdd3be11bf5e21a3f6a48f804acd2c75d270c4f6201cf1ef1"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_historial.py",
+      "bytes": 2162,
+      "sha256": "8770fd4842dc7f54f6261776d7942e5bccc11cb8add214374f08a9ed47b7bbfd"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_map_matching.py",
+      "bytes": 4762,
+      "sha256": "8df6cfcf69d1643575b5d8cc7df45c3aed4b00db0b0c0838c798a8fb298b770a"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_mapa_historico.py",
+      "bytes": 4447,
+      "sha256": "d8171acdb91d59e042f56384991bac7151dc9c0f0cab0a991d021d47695f98a2"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_movimiento_gps.py",
+      "bytes": 4583,
+      "sha256": "a9fe133b5ebf29d4f641175250cc05d04c5e73e468c839a023f4d797b81262ff"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_pausas_gps.py",
+      "bytes": 2789,
+      "sha256": "dd88638e0cf5ae85d8295bd5b52f910e591ed3d83f7dcb34a7e4c5eca2618eb1"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_perfiles_mapmatched.py",
+      "bytes": 3410,
+      "sha256": "4c9dbc798fb605c741d3f9c2fe0af3b9c250f2c9ac5ff3e6ccb8dcdb3cdf16df"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_preferencias_giro.py",
+      "bytes": 3644,
+      "sha256": "006bbe63be7daf8173651534cf80887a48c1b676788c14b882d6815757b64cd3"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_ruta_preferida.py",
+      "bytes": 3632,
+      "sha256": "2b9317bc24150aee4db523e37c21feada76e40c3abb0351595ee215d8943d44e"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_rutas.py",
+      "bytes": 5822,
+      "sha256": "a905750f47e92d174db4901a24090c1cbb1f2c8de71d3c3ca096e02cfb798e63"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_rutas_archivo.py",
+      "bytes": 6030,
+      "sha256": "0eade7736bd27925634bda9a1040a178fd31c54301ab63c4b066a35cb9effb65"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_rutas_dinamicas.py",
+      "bytes": 6997,
+      "sha256": "437791efca7521fb9bd1661fcfa4231e73d9df04ac7c329fc6ef0c0dc4595d85"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_rutas_gps.py",
+      "bytes": 5949,
+      "sha256": "2d4906e09fcfde81dbc96efa9af8a6eeac4ae1bbf590aed88570104394f515c5"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_ruteo_compacto.py",
+      "bytes": 4114,
+      "sha256": "ce13e0b2b70b43af353ad7484fa94341c2a6f4ec47d10bb5d2182356830db85d"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_semantica.py",
+      "bytes": 3814,
+      "sha256": "b2375987172a99e44d1bda731cc51d7c8d89b4d5cfe696ae42bada825bd9689b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_subtrayectos.py",
+      "bytes": 2162,
+      "sha256": "f31aa4a2b72074da2e57bcbb424020b91bf106e35bf144e25b0beb8f7214fa47"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_textos_urbanos.py",
+      "bytes": 2954,
+      "sha256": "958f80530c4b760e9287d43234580a8bc2b85189920eb93d05649310a416d956"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/preparar_trayectorias.py",
+      "bytes": 1647,
+      "sha256": "f47d39ea48719ef6a2ac21fc9e716224f9fae3d10109f6a9e0cfb7e59f4b8ebc"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/reproducir_inferencia_congelada.py",
+      "bytes": 3522,
+      "sha256": "9fc220cf611440980a2036d68b64923746f841601b89905c295a42781a289519"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/ruta_preferida.py",
+      "bytes": 3734,
+      "sha256": "626f06ddebda8e3d14bd1fe81e590350321cc001964641646c1065b6e73ea0ac"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/ruteo_compacto.py",
+      "bytes": 3056,
+      "sha256": "6863b80af0125fd273c2e644cb0ed2e0852b9400551fd3b31c0214b512e70e4c"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/ruteo_proyectado.py",
+      "bytes": 3283,
+      "sha256": "9a3e5a6546b295ff23a9a687c387d5fc820e2e5403af6cff5649e94995694012"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/trazado_vial.py",
+      "bytes": 3663,
+      "sha256": "2f30d5f20b6bdf7a0cd44e36d53b21c3e20df6f31d6528ad117349ae39f95350"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/validar_contratos.py",
+      "bytes": 1473,
+      "sha256": "d0ea11a3fe4545167239041cbe81d040ef2737425f2f6d4f020cc659b0824aff"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/validar_mapa.py",
+      "bytes": 2315,
+      "sha256": "786a38aedd9193652a7e1d838c6c3e5a2fad4949768e522d5b6d914b5c6447c7"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_calendario.py",
+      "bytes": 1450,
+      "sha256": "11f41fb4eb2a51baa75f2e09c9d6cd5286e162990db3a9781002e05a5014bb05"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_codigo_transfertraj.py",
+      "bytes": 3754,
+      "sha256": "95920a48ce98c00e08a95d8158457fd8b3201bdee6544d2812629e61b41c1f21"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_consulta_od.py",
+      "bytes": 2295,
+      "sha256": "b6dbb9431b41ac0015eb1824e15136744ccc55eac4c98dc14487ac76eed21208"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_cuantil_interpolado.py",
+      "bytes": 1740,
+      "sha256": "17e8b785c1963b99f79464c28ad8f35bc175954d629f1b940df15a025bad6aba"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_geometria_rutas.py",
+      "bytes": 3072,
+      "sha256": "a84b013f022af6b4011665a183d9d2392f00e398477b9950b1e1af14c123b3e0"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_gps_horario.py",
+      "bytes": 3126,
+      "sha256": "58b4bec584e7a028f189fc25096a0173c45710f1cecd4640fefb361ca5344d72"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_inferencia.py",
+      "bytes": 2170,
+      "sha256": "19068c94aba5d9ba9e69a58c975c45306a6c2c5a542b8277a039bf1f817ffde1"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_map_matching.py",
+      "bytes": 3302,
+      "sha256": "f703c36db2a4138332f0e7d7b219d31d513ed036e827a982b0c5440f07dad0c9"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_mapa2014_od.py",
+      "bytes": 1720,
+      "sha256": "9aa4fe1836920505acd54e49b15cf6e8abc6367833ab200288b68b1866572790"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_mezcla_conjunta.py",
+      "bytes": 1804,
+      "sha256": "c2a2ae4bdad4964df61b1e7808865ed753355a1c4924d0a7006477195fb2fc2b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_padder_transfertraj.py",
+      "bytes": 2109,
+      "sha256": "7cb33663e8c590b2d30a9fa574e7cad9578222f4df08fff96a6cb5483c4977bb"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_paso_transferencia.py",
+      "bytes": 2967,
+      "sha256": "752eff74a5983d63ed937fdbb47fab0d1a235c0d6a926f346b43829b60d76522"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_pausas_condicionales.py",
+      "bytes": 1670,
+      "sha256": "2307f7dc22fc89c89f7a95685f0f84385fef69787850d2ad4cd45cfa45df977b"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_proyeccion_gps.py",
+      "bytes": 1710,
+      "sha256": "f9db040c7c086b5f3ae75a39f16efeb489c2e5f9f171e8bae7a7ea230ecdcfad"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_rutas_dinamicas.py",
+      "bytes": 2782,
+      "sha256": "81c3267a3a40d0b1280c7c70efb2b1380400e78f8661d05c09e23410d87e1795"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_trazado_vial.py",
+      "bytes": 1973,
+      "sha256": "0d43c92a57e84e8a7979fd530d79716d02a05d185aa74856bbadbcab227ab6f3"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/fuentes/verificar_unidades_tte.py",
+      "bytes": 1194,
+      "sha256": "614999a6723e54580105a2363de3c09da036619ff02ccc4e433a4cda7b415ffb"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/modelo.pt",
+      "bytes": 17321706,
+      "sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/procedencia_entrenamiento/ejecucion.json",
+      "bytes": 12459,
+      "sha256": "f0e87e78cb412459a3ab0165a68e39362ba626814ea2ba29f27a01a735bc2f4f"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/procedencia_entrenamiento/historia.json",
+      "bytes": 25946,
+      "sha256": "1fa252e43faf9296324fac14cb51f67c151124de870d4a25d2343af1a322f825"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/procedencia_entrenamiento/mejor.json",
+      "bytes": 321,
+      "sha256": "d3c2eac672432b35bf1741009ed2076d5979b981b2da6313277e6d50c163527c"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/procedencia_entrenamiento/resultado.json",
+      "bytes": 8712,
+      "sha256": "c5735ca010fd14f5746a4ef98b06df7dd8af9190b2cc6256b2318ca3424e7ffe"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/resultado.json",
+      "bytes": 9073,
+      "sha256": "3e27a5e9898047733207a49b7d32902ece751896885909c29171d0bd6ad80061"
+    },
+    {
+      "path": "propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/validacion.npz",
+      "bytes": 1160745,
+      "sha256": "c41586831d001121c197aadd56e77e298e8e34966aa19ca5c6d31f9249c29971"
+    },
+    {
+      "path": "propuesta/PROTOCOLO.md",
+      "bytes": 3694,
+      "sha256": "9fc0703c3b545d14265ebf6e76be4bba8057dc84096f47616bf7b459fd7789e2"
+    },
+    {
+      "path": "propuesta/README.md",
+      "bytes": 1164,
+      "sha256": "4addb946527a713091036260914eee7d4b68193c52ec70d13146b5f184a2c3cf"
+    },
+    {
+      "path": "propuesta/reentrenar_mejor.py",
+      "bytes": 2921,
+      "sha256": "4857dcc4aa0eb553dbdcb3670b3d50e722b48b4f55ba2576816c169acc5804e3"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/adiciones_codigo.json",
+      "bytes": 773,
+      "sha256": "2fde7683205ba8ebf86112e103230966964160676a8bcb654e90c24114da7c72"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/data.py",
+      "bytes": 15860,
+      "sha256": "1abbf59fa49450ecefbef100bd78c38179011bbcf0c13869405d7b9dd4466c48"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/fuentes.json",
+      "bytes": 1015,
+      "sha256": "266004d3626ceabb049df8816f70b9df9a23fc3f9cb577a68dd7b8099a5776d3"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/main.py",
+      "bytes": 8058,
+      "sha256": "bc68470d36c034a8b2f538de4c61809d7e89a1d86840c240e448011b34a77483"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/models/encode.py",
+      "bytes": 10463,
+      "sha256": "bd8fe0e6e0b559c0dc4a60ed3a1b8b8909c49854564818b6f32c814e81da0de4"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/models/transfertraj.py",
+      "bytes": 17362,
+      "sha256": "45e0bf64c21b17920bb25bd4eb106fe9f0701f1cb6fb1327fe82bf03c501328e"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/pipeline.py",
+      "bytes": 5903,
+      "sha256": "a96b37e499588ecc74f29b754edbc17521c3520e3ab203615e8ec71520dbf3a2"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/settings/local_test.json",
+      "bytes": 1977,
+      "sha256": "15d26ac54825a56d23e0b395a4872a6b9bdc908514ee5daa9c6a46a66423e45f"
+    },
+    {
+      "path": "propuesta/referencias/TransferTraj/utils.py",
+      "bytes": 1524,
+      "sha256": "f6a11df3aaa9c3910fb4a25424639490bebaa1667b214d512bc226f3c317d39b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/acotar_diagnostico_calibracion.py",
+      "bytes": 1691,
+      "sha256": "c258ec6e2292af72c640b4f7ad5d9150a8f7fd4c22e257cf7635e7311abac1fd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/actualizar_estado.py",
+      "bytes": 4059,
+      "sha256": "3ddde42fadaf1fdc6aa17fa0d54dcd3bfe391875e15cdbac71758e2ce4632312"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/actualizar_resumen_prefijo.py",
+      "bytes": 6254,
+      "sha256": "9e7149a7a6671a9832e9e37b1a12aa8c7d5d1fa913210e9e999e7765b57d549d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/agregar_progreso_direccional.py",
+      "bytes": 569,
+      "sha256": "404de74331c54d328c1374e8bb1f18c1bb3b544d20591de0537417d0ab5c8ad2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/ajustar_fases_globales.py",
+      "bytes": 1947,
+      "sha256": "157fa869edbc9648bf425abd321c87434cfe6284b2f33de3726813d5a2a29783"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/ajustar_guardia_referencia_historia.py",
+      "bytes": 847,
+      "sha256": "ecbc2e9169fc0c5a6c60b8862ca85ae2f3feeadc284ac7259a0dafadcfb4333c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/ajustar_muestreo_prefijo.py",
+      "bytes": 437,
+      "sha256": "fd434b769449b6dc10127059e582d8e44a2f9a77069fa05b309c95f179335a78"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/ajustar_reanudacion_inferencia.py",
+      "bytes": 546,
+      "sha256": "edf615b37211f40823bade750607c53bf89cc75bdab0cf6b5948917a1d8de587"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/anotar_procedencia_eventos.py",
+      "bytes": 1923,
+      "sha256": "f0bca5ddd26dce6c1693c49e26d90dbc51eaafb1b7f1d604118bdf97fd834c37"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/arquitectura_activa.json",
+      "bytes": 3108,
+      "sha256": "bed1209f0e2c8993b267ab14699ad5de8ddc09014d702cbcc0c96539bd62f145"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/fuentes/preparar_base_oof.py",
+      "bytes": 3298,
+      "sha256": "4a181829997ca11eb6b57f5ac093b214d12c09839b78504e5e724c03006f085c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/historia_folds.json",
+      "bytes": 852,
+      "sha256": "a8119fcdbc8492658decfa71f63f4d2b4de85cf43e495d85d58625a9e722810f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/pesos_descartados.json",
+      "bytes": 559,
+      "sha256": "26a61d0e4c8493d6714a59fab1881cf81018447efffed4d1203f5910ef33e3c2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/protocolo.json",
+      "bytes": 513,
+      "sha256": "b923159b99a855a1cc112b680779c03008bbcd7bd0cc1872004c2fa2a875e7d6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/resultado.json",
+      "bytes": 8716,
+      "sha256": "b109e45ab6d2bc0cb9be0d323e41805b6f780dfd73b65748078be344b3326255"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_oof_estatica_s0/validacion.npz",
+      "bytes": 1581303,
+      "sha256": "6535abd138e92d479b9a084faab5aaf2ffecf8fb055f644c05a69d7adf5d29f6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/benchmark_fases_cpu.json",
+      "bytes": 781,
+      "sha256": "7c289871b7e63332bd7b8022650c752abbb433d48be6d61fa2bc52d10b980bd5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/benchmark_fases_cpu.py",
+      "bytes": 3683,
+      "sha256": "e8a1a46c40cb872ca2d3ea72bdc1780f1f8520541aefb640a4312cf27fafc7d4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/benchmark_fases_cuda.json",
+      "bytes": 2206,
+      "sha256": "14d5fff70832d05182639331f31d17056f377b7388e2de254693c31108c4e132"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/benchmark_fases_cuda.py",
+      "bytes": 146,
+      "sha256": "99e98cf8a527b9a9712211f0fecd064f113e83d6c39b7191345da0e7cdb0f063"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/benchmark_fases_cuda_progreso.json",
+      "bytes": 1595,
+      "sha256": "941b70430e2699287efb0e97cb661f0d50bd8b0f9201bc921b9d6b0f4e824096"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cabeza_fases_cpu/historia.json",
+      "bytes": 6117,
+      "sha256": "9e7529efa99b68d856f75c969921642e5bb80dd34a650d15cf8efe51f7af2633"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cabeza_fases_cpu/resultado.json",
+      "bytes": 808,
+      "sha256": "054db2fee0a6e089741c614c6e16b00965da74562d3f4e8d5454f3bd391fae8b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibracion_unica_fases_s0/candidatos_a_conservar.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibracion_unica_fases_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibracion_unica_fases_s0/fuentes/calibrar_fases_una_vez.py",
+      "bytes": 5889,
+      "sha256": "77f93d91ec87afdc0ae0cac6029f9e1911c95fef189a5403274b608e1bf09ce1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibracion_unica_fases_s0/predicciones_distintas.npz",
+      "bytes": 1661846,
+      "sha256": "918ad534f9acba77505f0c55e25f6e36c2560941454e9258a5fd7dab84bed4ef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibracion_unica_fases_s0/resultado.json",
+      "bytes": 3137,
+      "sha256": "ff0583419bcae5b1b66d5daf56d9ed91a81bfb7dcdfa407d7069db7e5d0971fe"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibracion_unica_fases_s0/seleccion.json",
+      "bytes": 1244,
+      "sha256": "d92428cc64bfb311f20662e9a02793549f5a00f444e41de4d6d1b5132d9412f7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/calibrar_fases_una_vez.py",
+      "bytes": 5889,
+      "sha256": "77f93d91ec87afdc0ae0cac6029f9e1911c95fef189a5403274b608e1bf09ce1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/candidatos_conservados_tras_calibracion.json",
+      "bytes": 265,
+      "sha256": "ba411147654af4c586b98905d009fdeb2d5f9abbb99f43285552662b1fe58422"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cerrar_calibracion_en_resumen.py",
+      "bytes": 2347,
+      "sha256": "09d0a23e916a466d506f87c38543f47374a6e3aa934aa3994d9ef78a382e110f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cerrar_preparacion_fases.py",
+      "bytes": 1316,
+      "sha256": "442e6836a4d70b0498e0e45114380c1f2317090ebde8f29a6953a8e9d5cc4845"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cerrar_preparacion_riesgo.py",
+      "bytes": 3437,
+      "sha256": "335c1f84f0a48745b9298e623267d55f16fed355220ad5f464ce36c9846c8af6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cola_experimentos.py",
+      "bytes": 2369,
+      "sha256": "727d6a287855a34b852ca9806671e9d6381d91e806a3349be6c8e94acacccfef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/comparacion_descomposicion.json",
+      "bytes": 1420,
+      "sha256": "9466cab34c2739dded0be97dfb35ff61a770131e1b1f10ae10ffd4f1ff045dc0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/comparacion_procesos_espaciales.json",
+      "bytes": 1390,
+      "sha256": "31632c1d2c36d2497ff5ef57cfe1965e83f24b3fc806a484613a7e3e2b8f89ae"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/concluir_descomposicion.py",
+      "bytes": 2144,
+      "sha256": "79f4b1c49f8714b27f48ab8ae93112e9a70049316cb8afedf675436bde9109ab"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/concluir_memoria_residual.py",
+      "bytes": 3908,
+      "sha256": "a57fe482b5d06c3d893e109f22fbe45bc734d78c0bd62842c3081a49db399fbf"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conclusion_calibracion_unica.json",
+      "bytes": 1639,
+      "sha256": "3219179d9d2525ab83ea3da2552de176d6aca75c56f605d3c37168c3003d3bec"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conclusion_fases_antes_calibracion.json",
+      "bytes": 896,
+      "sha256": "e10b250fda44de00bd8c03fbbc1a2231aa2787e51f4edae362235a052be0ce16"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conclusion_memoria_residual.json",
+      "bytes": 1049,
+      "sha256": "abb7f8b99bbcdb9f6a04e2e69d1af395275734b62abd4959d7427e66ff025781"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/condicionar_entrenador_historia.py",
+      "bytes": 2005,
+      "sha256": "ce0b73247be4d36c05d9ab275a7df19d88db74d9ff28b29fd1095b9c786b8f21"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conectar_inferencia_acelerada.py",
+      "bytes": 1560,
+      "sha256": "b160ca6077b0f4e0d80084a0c41e509d17b00e60615b7b7657e2e74cc4d32670"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/consolidar_continuidad.py",
+      "bytes": 1253,
+      "sha256": "388c80d454d05c601aa3dda6985083bc6f67852904fa0c8693d78c086d90c32a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/consolidar_continuidad_inferencia.py",
+      "bytes": 6136,
+      "sha256": "3e332c0a5d1a6dd4daa8a7711bcd76da846944fba3cb87b9094e885e513592db"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/continuar_a_prefijo.py",
+      "bytes": 5123,
+      "sha256": "0dd6972554ddd1e032084a2506819da50bd29970372de8bd61c5eb5ef6e6b816"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/continuar_a_riesgo_total.py",
+      "bytes": 6669,
+      "sha256": "db31efae584a0b334d1e9adbf947eb83b12cde08eba8de9d69198afb027e8877"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/continuar_despues_fases.py",
+      "bytes": 4157,
+      "sha256": "c5d2875e875a12dbd778a21ed5dc7018c344364911aa05f8221fe1d31b9a4484"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/continuar_tras_prefijo_acelerado.py",
+      "bytes": 5978,
+      "sha256": "c4d2b67c6b45b8b1c04d0dec7cdafe70ac1e37a5eeda6fe8e08111529aae6c70"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/continuar_tras_prefijo_nativo.py",
+      "bytes": 5924,
+      "sha256": "616f63d1af37f24ef52c4f187e2c27e5e95d1fd99faf96acb0f38277bbe7dbea"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/CONTINUIDAD_OPERATIVA.json",
+      "bytes": 26973,
+      "sha256": "04c245865c22f8e7e568cbe09313e9770ada9675ad6a551be7aead283182b086"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/corregir_piloto.py",
+      "bytes": 537,
+      "sha256": "6b981af8ea10878e3ccdd4f67c10dc2b48abf72fa91460d6db0369c37cafb808"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/corregir_verificacion_prefijo.py",
+      "bytes": 406,
+      "sha256": "b34586ca344d1bfbce05c09325c859a49870b440902290e13f61cafb7748b7b3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_prefijo_nativo.py",
+      "bytes": 3462,
+      "sha256": "15170dcd56b4c9e697997502ef2dbdb89ca547bfe17d17841990f7e8ee62a557"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descomposicion_manifiesto.json",
+      "bytes": 856,
+      "sha256": "8c26e56b956680e48ea6b3e1cd417d133b6f75429d56337c1dc4de6deb37ffa2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/fuentes/entrenar_descompuesto.py",
+      "bytes": 7175,
+      "sha256": "6eb352f8fc74fbf46dc7c77973a1265ffb279304fbdece893a709137f7c245ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/fuentes/modelo_descompuesto.py",
+      "bytes": 2917,
+      "sha256": "b2e45b3c6c6a7f3c6aa5024819f00100e1b2208e44a78bf5677bfef3b0a7fcc3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/historia.json",
+      "bytes": 17990,
+      "sha256": "f2e33acdbc25b843b6be44fca58ed4acc6299aa9b7451fb55d85e62da077f69e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/mejor.json",
+      "bytes": 239,
+      "sha256": "aa27d0625b46a9c689021780b9ff8a3186763d141ff9c06d645494374ef3393e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/pesos_descartados.json",
+      "bytes": 429,
+      "sha256": "4d41be3de10651737b60f5bf8d2ddcc73f37b199382fc716bb9685eda91bcde5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/protocolo.json",
+      "bytes": 704,
+      "sha256": "e58dafe5e24c4dac713795a588a78b5daf4f47afb1d93b479db829a24a0a34ff"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/resultado.json",
+      "bytes": 2441,
+      "sha256": "2e4ba82c20fd0c3b698c3a20bd07ceeb285ed5c776ae90d7639f6890878f5697"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/validacion.npz",
+      "bytes": 767326,
+      "sha256": "92c18fe4d69decdd81b2fbde9adbdd171a73aa6541e1b9b6c69a64ec0a79124e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux0_s0/verificacion_inicial.json",
+      "bytes": 219,
+      "sha256": "ca5f40ab278822f2a7c44539102370c3eebc9ec8e45595ad242c5e976389180a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/fuentes/entrenar_descompuesto.py",
+      "bytes": 7175,
+      "sha256": "6eb352f8fc74fbf46dc7c77973a1265ffb279304fbdece893a709137f7c245ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/fuentes/modelo_descompuesto.py",
+      "bytes": 2917,
+      "sha256": "b2e45b3c6c6a7f3c6aa5024819f00100e1b2208e44a78bf5677bfef3b0a7fcc3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/historia.json",
+      "bytes": 17960,
+      "sha256": "29a9da43541af67a527e74e9ef5a8e4dd9eace422a85bc9c317961c44512b73c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/mejor.json",
+      "bytes": 239,
+      "sha256": "dcbf315f712ecb85a3f6423dfa9d81f94b92eff8e4ee8b9620ef036c88bdac36"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/pesos_descartados.json",
+      "bytes": 424,
+      "sha256": "eb1f3d21f7237d361c52d167e0309e13446e6c2acc4b47cc25b6c6ed1da924d2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/protocolo.json",
+      "bytes": 704,
+      "sha256": "ee47f459111296962701e33a52f41a51f0a0156ccca922f5e1cf76bd5d162ca6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/resultado.json",
+      "bytes": 2438,
+      "sha256": "72f7d2668640ea7933e886d1054ab8476616a1b1216b47b647496d69a721593f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/validacion.npz",
+      "bytes": 767083,
+      "sha256": "3e07431443b7e203c28cadb7a12b821b1a00526ee28fba0023f370045386885a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/descompuesto_aux1_s0/verificacion_inicial.json",
+      "bytes": 219,
+      "sha256": "ca5f40ab278822f2a7c44539102370c3eebc9ec8e45595ad242c5e976389180a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_ajuste_neural.py",
+      "bytes": 3785,
+      "sha256": "25cf06985cb867e3cb37fbd91e3ffb07d1a0561b51e2a07a83323ff2a60a44ef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_ajuste_referencia_cpu.py",
+      "bytes": 2543,
+      "sha256": "2431d57f1e8a41eb167c5262d82489494279500850987105e321819e854fa9c6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_complementariedad.py",
+      "bytes": 2756,
+      "sha256": "3ad7ff3da499b6bb7fe4ba0c5b180f918ce09824d166c855e1e2e65781483efd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_dependencia_viaje.py",
+      "bytes": 4423,
+      "sha256": "2921d1f18c19cb4fec26e8186e883144094db6ff8bf87bcd4f5c5d78ecb8304e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_direccion.py",
+      "bytes": 3916,
+      "sha256": "f248b5aba4d8c58a56b7c3d41c097c74e9286d82e01e9bd5207c3742fc936327"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_historia.py",
+      "bytes": 4063,
+      "sha256": "44f4aefc0e3107c80593bc8ff4d51f11e9f6a7fd90ae621903cff32149b098eb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_peso_correccion.py",
+      "bytes": 1498,
+      "sha256": "9d32e5b373f662fffa0b36baa6979c94cd93013a98eb73e783b0ef3ce0a1c48c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_residencia.py",
+      "bytes": 3642,
+      "sha256": "364f3a3772a68317494b6972abb93200d3bf3b504a49872e2e4d5a0e8b70b8c4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_riesgos_temporales.py",
+      "bytes": 8167,
+      "sha256": "ce5de3e96111207d07ff9f8f3adf3231b996ea954f28454ded82f36490439ea4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnosticar_sesgo_espacial.py",
+      "bytes": 1819,
+      "sha256": "295a934a671523bbd5662980bfcbd8c1505348c7c50fc76cea3ce956585b163c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_ajuste_dinamica_neural.json",
+      "bytes": 855,
+      "sha256": "e1e70e5f928ef17badd112a01bb019662b9193ac6fea81860642c7232ffcf58e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_ajuste_referencia_cpu.json",
+      "bytes": 1672,
+      "sha256": "1a5a69f195156807948ef7d2bbc29e68ed0fa7d2ac56b15bd23607159e6c80ef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_ajuste_referencia_cpu_progreso.json",
+      "bytes": 1012,
+      "sha256": "2bc88d4386bbb1f311628eee5ccdcc178edf0a2dbc90bf86f11f14f84b742477"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_complementariedad.json",
+      "bytes": 3450,
+      "sha256": "239b33c5c9dae73c0c6a571c9823b38bd49ae3c5cfab965c2e2228434c8bf79e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_dependencia_residencia.json",
+      "bytes": 981,
+      "sha256": "ca76585527bf4dde500e2471d04acee9c3c4a16f2fadd2cfc75827d86fe62bc8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_dependencia_viaje.json",
+      "bytes": 1909,
+      "sha256": "259d1a35fd85f411344e20a7ea0f851834afcb1846ea9ed08f4d69c2753eb947"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_direccion.json",
+      "bytes": 1014,
+      "sha256": "ee2ba2e7b2497764dfca9fcc86c1e233c8ffe5b1c80fb4e9d79d6bb73e2aa934"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_historia.json",
+      "bytes": 932,
+      "sha256": "a803e431cbf0039393d857d0cda595ed0e9c5f11ed0c7d05c8100ee57f4bcf3b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_peso_correccion.json",
+      "bytes": 1829,
+      "sha256": "60be8d91254bed83c221be6cfb870d2ee243c677db3cdd9018b1c1ac5630c6af"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_riesgos_temporales.json",
+      "bytes": 2436,
+      "sha256": "a11ade023d6cb1c057f55d2c60c0896554b94fffa1cc91d27f73d2ddcccc9518"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/diagnostico_sesgo_espacial.json",
+      "bytes": 7162,
+      "sha256": "20fe3d214a8f8ba04f5bad69b283884f95caef58bc7756e8f20638a7bd234905"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/documentar_arquitectura.py",
+      "bytes": 6164,
+      "sha256": "876e77da39d7d0098e16205216b97314de5cc5182ac4d473081f839c47e979a4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/documentar_fases.py",
+      "bytes": 2054,
+      "sha256": "6ae57bc2cf1e360639b4ca40bd40cfacbb3d7d5daa4167aa003b382419e4756d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_descompuesto.py",
+      "bytes": 7175,
+      "sha256": "6eb352f8fc74fbf46dc7c77973a1265ffb279304fbdece893a709137f7c245ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_dir_prior.py",
+      "bytes": 11804,
+      "sha256": "10f39917616951ca91c6ce5a438b47f2ab522ca95e136c305355111f5515a42e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_direccional.py",
+      "bytes": 11156,
+      "sha256": "60810321feca7d5864dea63f3da3ea2adb25ff4498dc73e362a15cea0c0fe9f4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_espacial.py",
+      "bytes": 10489,
+      "sha256": "8231873588407ec06bdad6b655f5eecd7f67f38c7e466a4931b5e2a757e819fd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_fases_referencia.py",
+      "bytes": 16592,
+      "sha256": "226b2c9cc400615884554eb53fe70d6fdcfa1871f4c21712e1905e91872486c5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_memoria.py",
+      "bytes": 7213,
+      "sha256": "7e778c53036db3f0a7ea7bd08386371e60b86c24c91c417f1a44a1a33003560a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_prefijo_historia.py",
+      "bytes": 17391,
+      "sha256": "493ca45087133bc7642fa34433172f19b859b12da0b6cf47e6244557048f77f4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_prefijo_nativo.py",
+      "bytes": 14280,
+      "sha256": "5aa78e2a4ce733c122b1b58b3aae7eb32417213f41f2d9c67965d77a06c4d26e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_residual.py",
+      "bytes": 7012,
+      "sha256": "70180f0270dcfc9e4dac84a4586b9c4e240a4bcce512195b70da8574e0f7c600"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_riesgo_total.py",
+      "bytes": 19372,
+      "sha256": "3aeba1b33caa025eb20b232f9d3b34dd115bf713356e8ada0042a0ae0095e2f8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/baseline_selection.json",
+      "bytes": 105,
+      "sha256": "3290fbac5dd6156aea62e8c28e3d1e8a51f56e06681ef1367f1d5b8062dea2ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/fuentes/entrenar_direccional.py",
+      "bytes": 11156,
+      "sha256": "60810321feca7d5864dea63f3da3ea2adb25ff4498dc73e362a15cea0c0fe9f4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/fuentes/modelo_direccional.py",
+      "bytes": 4213,
+      "sha256": "4a7ce279d482736de03ff9a8590cbaa6aa0aec42fff1b1e6a6ac3feec90761c0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/fuentes/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/fuentes/nucleo_direccional.py",
+      "bytes": 1692,
+      "sha256": "bf712de7a6e0f0e26ffc19b49b248b3e14b2162f79998d6557453069225a1835"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/fuentes/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/historia.json",
+      "bytes": 17798,
+      "sha256": "4bd2a52a0e4a472f4a3753277aa796b16003d3559c6efedc0ddb7d3a1085dc59"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/mejor.json",
+      "bytes": 211,
+      "sha256": "22d9be1ac81377f22f4539763c1ccd0f789f36395b10a43d5c8a28e914e66413"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/pesos_descartados.json",
+      "bytes": 413,
+      "sha256": "c2f269f9c81ce260b4167717522c9659e938d77ca7adf5f2b04b71c7abb7357c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/protocolo.json",
+      "bytes": 986,
+      "sha256": "178129979a8555932aba6753286cff863fd731a862fc2fc5c47684b519d850a0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/resultado.json",
+      "bytes": 2988,
+      "sha256": "b921c8082b561fb6e5df602a0bdf181688949289b2e65b693f0c65a5d444b0f7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/validacion.npz",
+      "bytes": 1436751,
+      "sha256": "75506e22d7e3c4d16cd49ef9582ae6fba4ef5f227f16da683dcb9b0c20197df8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_direccional_s0/verificacion_inicial.json",
+      "bytes": 185,
+      "sha256": "30e62655673310e0ff8a37be223f3ef56a7c9388a674ae3cc5addb20610f2c57"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/baseline_selection.json",
+      "bytes": 274,
+      "sha256": "267b44351fa7faa41c9c41cf313303a773e1cb3645f0f479a09b0ae35b31cebb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/entrenar_fases_referencia.py",
+      "bytes": 16592,
+      "sha256": "226b2c9cc400615884554eb53fe70d6fdcfa1871f4c21712e1905e91872486c5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/modelo_dir_fases.py",
+      "bytes": 6331,
+      "sha256": "f6060380717083ff297130d196ecfcbc9d17ef0f8094e98220588618e353837d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/modelo_dir_prior.py",
+      "bytes": 4337,
+      "sha256": "324a1130d44f64ef13b39b6e1e8e5a9d6808e9b94bf251466a27a3b6d2659777"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/modelo_direccional.py",
+      "bytes": 4213,
+      "sha256": "4a7ce279d482736de03ff9a8590cbaa6aa0aec42fff1b1e6a6ac3feec90761c0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/nucleo_direccional.py",
+      "bytes": 1692,
+      "sha256": "bf712de7a6e0f0e26ffc19b49b248b3e14b2162f79998d6557453069225a1835"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/nucleo_fases.py",
+      "bytes": 2576,
+      "sha256": "e558f1299997145992a851a573297310f07b9944a0498718569ddd92ac8cf46a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/fuentes/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/historia.json",
+      "bytes": 6022,
+      "sha256": "2ae7692321f7294448e97fa92439086ed78220d500a6fb63be93fcc99842bf2e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/mejor.json",
+      "bytes": 190,
+      "sha256": "5880c23fc45477e4b4a2ad5a4de9b43404da1861f4ebb4c50934c69ce184da3d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/modelo.pt",
+      "bytes": 8662272,
+      "sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/protocolo.json",
+      "bytes": 1188,
+      "sha256": "486a6d8d7fb19e2884c03add310ce634a528c67396ce5331e0e5091f7f5c3a6c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/resultado.json",
+      "bytes": 3621,
+      "sha256": "e10eb39b252cab31b0ba3e5734810ba21a9870ac5e757c7d02a1e2efca9feed6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/validacion.npz",
+      "bytes": 1453490,
+      "sha256": "9a2d9250b411387c9c8bc5b1c978553f5698fb005e4430023c7110e972f73e01"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/verificacion_inicial.json",
+      "bytes": 123,
+      "sha256": "95961d2391761350067769b8739a24e0150cfee6adf3b352d60761bbdcb0250d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_fases_referencia_s0/verificacion_referencia.json",
+      "bytes": 471,
+      "sha256": "49e602284141035ffdb439700aabe0e929834661e1a3dfe76c28a9ce45d52939"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/baseline_selection.json",
+      "bytes": 105,
+      "sha256": "3290fbac5dd6156aea62e8c28e3d1e8a51f56e06681ef1367f1d5b8062dea2ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fallo_evaluacion.json",
+      "bytes": 499,
+      "sha256": "6bfffe63dccad3e68a17b7fc1c67abb88b81e33e6fcd51f9706c7aaf255b040d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/entrenar_dir_prior.py",
+      "bytes": 11804,
+      "sha256": "10f39917616951ca91c6ce5a438b47f2ab522ca95e136c305355111f5515a42e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/modelo_dir_prior.py",
+      "bytes": 4337,
+      "sha256": "324a1130d44f64ef13b39b6e1e8e5a9d6808e9b94bf251466a27a3b6d2659777"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/modelo_direccional.py",
+      "bytes": 4213,
+      "sha256": "4a7ce279d482736de03ff9a8590cbaa6aa0aec42fff1b1e6a6ac3feec90761c0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/nucleo_direccional.py",
+      "bytes": 1692,
+      "sha256": "bf712de7a6e0f0e26ffc19b49b248b3e14b2162f79998d6557453069225a1835"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/fuentes/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/historia.json",
+      "bytes": 17800,
+      "sha256": "198fcde0d2e22111d7c23a40e5f69cfbf0c6802e4e9764bfef6858b4ff0cb190"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/mejor.json",
+      "bytes": 211,
+      "sha256": "ec1966de3bfa9752548937fb02e11354ae8ae09382f081ef3e0f8c46471d9da7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/modelo.pt",
+      "bytes": 8687680,
+      "sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/protocolo.json",
+      "bytes": 1284,
+      "sha256": "bf9e0e8366b4067ae2ebb03a5babcd8599699ac2e4510fa60e5c5734cd10c6d2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/recuperacion_estado.json",
+      "bytes": 307,
+      "sha256": "7482aa79fe5712302eeaf7363234b14886316d50f15f00776d5d2a6001bdbb2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/resultado.json",
+      "bytes": 3353,
+      "sha256": "599e07094d89aa81c39c7fc7e90a4338da3b9267cc2ecbc23c24aad9eed1c220"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/sondeo_recuperacion.json",
+      "bytes": 263,
+      "sha256": "6675252d404aaf1f743423be6453dc23d47c461de88780d54ce8e260162f0c89"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/validacion.npz",
+      "bytes": 1407380,
+      "sha256": "e2cc9add4a21f3e1d0ff493504b35fef413640f92cea1772b799ac15a8b59637"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_prior_cf_s0/verificacion_inicial.json",
+      "bytes": 185,
+      "sha256": "30e62655673310e0ff8a37be223f3ef56a7c9388a674ae3cc5addb20610f2c57"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/baseline_selection.json",
+      "bytes": 105,
+      "sha256": "3290fbac5dd6156aea62e8c28e3d1e8a51f56e06681ef1367f1d5b8062dea2ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/fallo_inicio.json",
+      "bytes": 247,
+      "sha256": "6618b5b23561f7d6d8a96762229cccaafe3db01e94ccd1938240a06869e46391"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/fuentes/entrenar_espacial.py",
+      "bytes": 10306,
+      "sha256": "5f94361344921b458a703eb8459a9bad974e1a8d943bda13e78d4d17566c1d1e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/fuentes/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/fuentes/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0/protocolo.json",
+      "bytes": 915,
+      "sha256": "945fdddebbc6956670925543119e843e03cba17bd256d717306bc2a7f2e51ada"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/baseline_selection.json",
+      "bytes": 105,
+      "sha256": "3290fbac5dd6156aea62e8c28e3d1e8a51f56e06681ef1367f1d5b8062dea2ad"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/fuentes/entrenar_espacial.py",
+      "bytes": 10489,
+      "sha256": "8231873588407ec06bdad6b655f5eecd7f67f38c7e466a4931b5e2a757e819fd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/fuentes/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/fuentes/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/historia.json",
+      "bytes": 17835,
+      "sha256": "e97a61364ea3cc70bd9ac46f7988101515c45db17e3bed40a94df522cec26dd6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/mejor.json",
+      "bytes": 212,
+      "sha256": "090959b73a04e28ab2c9052e9289f1cf0c6d12e4012db652858812fad1dc12a4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/pesos_descartados.json",
+      "bytes": 428,
+      "sha256": "d8a10965237bb6e2ddbc24e8986b5c83427ebb601adc6d5e1deb8e1b251dc13a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/protocolo.json",
+      "bytes": 918,
+      "sha256": "b2693e0277803a74c3c1e393b89e6fd5821b66d882da053eaa101ba5f06ce603"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/resultado.json",
+      "bytes": 2922,
+      "sha256": "d8c2dcb07caee343d43ce55240963a504490284766d80648ebd9f941789edaa4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/validacion.npz",
+      "bytes": 1498674,
+      "sha256": "0c487f290a499d3a530f448e4b0082384159e170ca2765256cb022b584c0b162"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/espacial_semimarkov_s0_v2/verificacion_inicial.json",
+      "bytes": 185,
+      "sha256": "30e62655673310e0ff8a37be223f3ef56a7c9388a674ae3cc5addb20610f2c57"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/evaluar_prefijo_acelerado.py",
+      "bytes": 10361,
+      "sha256": "2dabd61a7ace9bf9c67ebd9df3ba2fe3d5090fac13b46e9aea50eb597c55f4d4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/fijar_controles_siguiente.py",
+      "bytes": 2649,
+      "sha256": "b668b88f9b8cb2ae06c278dd94d5b37988d781519d1199fda7838c7f9fc9b4d8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/fijar_lote_futura_historia.py",
+      "bytes": 3005,
+      "sha256": "18bda579a5b3ce67c519e5afb8978036aa2d27b4b22cb3848dbeda25bfaef54b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/gradiente_crps_condicional.py",
+      "bytes": 1263,
+      "sha256": "2fb79264dcd2a71ada7098b6c94c74f4336d43bde9e9a9d0cf30e06511673b24"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/historia_eventos.py",
+      "bytes": 3137,
+      "sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/inicializacion_fases.json",
+      "bytes": 2340,
+      "sha256": "d59547b3f0c16213dcf2173cd4b9b04fd34d5190473c7bebe47c71fecee78d7e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/inventario_conservacion.json",
+      "bytes": 2392,
+      "sha256": "5fa6d65c06da019a1800b84fc817fc0656c9f4aa5012a2c29944f5efb8913dbb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/limpiar_pesos_descartados.py",
+      "bytes": 1657,
+      "sha256": "ad773040d07e381cbb9ec4032ddec96b4e1b3690482670917411305e8bfb2994"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/limpieza_intermediarios.json",
+      "bytes": 419,
+      "sha256": "177fd2bf5e9412ba2d5e22c20c3c8537229e9007a690c105b720170658c97130"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/limpieza_memoria_residual.json",
+      "bytes": 1296,
+      "sha256": "54659c5d5f42dbc9cca91e1cd47fac64e4710770f25f6d262eb35ae12826ec2c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/limpieza_pesos_descartados.json",
+      "bytes": 1890,
+      "sha256": "5af803ae06062a214d2a35d272b3e97584879508b370e1c77ecc963e3822ef4b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/limpieza_tras_fases.json",
+      "bytes": 513,
+      "sha256": "849b43962690ba1d24aa1154ce8aabeafa38b07a4c10df4ac562fbc902301d06"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/baseline_selection.json",
+      "bytes": 150,
+      "sha256": "4f71d337e56ff2bc04e847e56c132934635fabcba566bc8786ae4cf932e5aaa4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/fuentes/entrenar_memoria.py",
+      "bytes": 7213,
+      "sha256": "7e778c53036db3f0a7ea7bd08386371e60b86c24c91c417f1a44a1a33003560a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/fuentes/modelo_memoria.py",
+      "bytes": 1692,
+      "sha256": "a3c894d36b2a91703fb580f22dd3f946a021075562bac59206310012b971c611"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/historia.json",
+      "bytes": 11452,
+      "sha256": "515fcf111850919a0564bff41019dc435adf53fd6165ed7726934758e3d5e682"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/mejor.json",
+      "bytes": 336,
+      "sha256": "44d225a7dcb6735b983754a12bbfdb2dde2482fb54a5286a9841173d4eeda01b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/pesos_descartados.json",
+      "bytes": 415,
+      "sha256": "66fb8563b7717cecd39ac3414361db491dbb23f489592ccecf69105e64c6c0db"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/protocolo.json",
+      "bytes": 919,
+      "sha256": "3dea4dbd842d94cf5be4a71dc88e7db1e2859ca1dd1611bf7ce9d7cb8274012e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/resultado.json",
+      "bytes": 2479,
+      "sha256": "20b2bc56bbe30133710cfeabd31555277d0b2bbf2a44d42a3c7c94b6af6a1197"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/validacion.npz",
+      "bytes": 764494,
+      "sha256": "23e051a00a2688498584214546f83dbb57b4fc9fa85ea341d7396c150981da32"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_cdf_s0/verificacion_inicial.json",
+      "bytes": 161,
+      "sha256": "642bcd40e40d87a3aa07bceae67c5e29525e8a457955b8f52020f98384950c23"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/fuentes/entrenar_memoria.py",
+      "bytes": 7213,
+      "sha256": "7e778c53036db3f0a7ea7bd08386371e60b86c24c91c417f1a44a1a33003560a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/fuentes/modelo_memoria.py",
+      "bytes": 1692,
+      "sha256": "a3c894d36b2a91703fb580f22dd3f946a021075562bac59206310012b971c611"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/historia.json",
+      "bytes": 8466,
+      "sha256": "2df7f31a038b4a19ae76d429636a8d4c6e80b2c498db074302e0b8753bee8993"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/mejor.json",
+      "bytes": 351,
+      "sha256": "afa191ee260bf5eef20642e4823a961a4c42c4f43eb42a160fe1421225658a7a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/pesos_descartados.json",
+      "bytes": 415,
+      "sha256": "164aeef7cfae2e807447f6852273169115284e26f7c804664f2e104afe3b1998"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/protocolo.json",
+      "bytes": 919,
+      "sha256": "759a2ed61fd40aa06f478415dddbbe1aa7e46d729ea130c0464becbff77b13c8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/resultado.json",
+      "bytes": 2493,
+      "sha256": "46fdd812ff24149a65579d120e241ad83c7b4c1ca407acf68d86f1a95eab44e6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/validacion.npz",
+      "bytes": 1069413,
+      "sha256": "52186f8c7d80e7507b9c969f2a3dc78b8c86a9a354209b56664057b348fd528e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_mse_s0/verificacion_inicial.json",
+      "bytes": 161,
+      "sha256": "642bcd40e40d87a3aa07bceae67c5e29525e8a457955b8f52020f98384950c23"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/baseline_selection.json",
+      "bytes": 283,
+      "sha256": "5cb42b0d0b7c7be79df298913260f35d5c59dbd9bf849d9336dd6d7a94208b60"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/fuentes/entrenar_residual.py",
+      "bytes": 7012,
+      "sha256": "70180f0270dcfc9e4dac84a4586b9c4e240a4bcce512195b70da8574e0f7c600"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/fuentes/modelo_memoria_residual.py",
+      "bytes": 1615,
+      "sha256": "9bc9333565c194c43ab76bcca7ddc12fc9cae688befe2a3a15eb7dd1a6007245"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/historia.json",
+      "bytes": 13050,
+      "sha256": "21ae285b9f0d1774059689d7ae4263da40465fafdc3d2f9c9a04b15b25305520"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/pesos_descartados.json",
+      "bytes": 559,
+      "sha256": "3f6b7c3207fd74fad26812c4d9d49e5d4f16a1d6c875ed9711c5b4d56cbd54b2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/protocolo.json",
+      "bytes": 783,
+      "sha256": "f1b6e16ffba438e8d82a87e0b8c077efab2b15a4c1511ab7231625eb821a35f0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/resultado.json",
+      "bytes": 2589,
+      "sha256": "d4e54892538318eeca5ab4d0a09f8b4b290de7713756877f286ed1e00c3d39e9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/validacion.npz",
+      "bytes": 2544761,
+      "sha256": "62bdf801bda35c6edc2b693b439fa7bcff2bb9412d6ac51557d774fef25acf01"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_residual_oof_s0/verificacion_inicial.json",
+      "bytes": 214,
+      "sha256": "c6cef71a8ca2ac69b16c8f72528a7421c8dfa05742533a3086a4d48844b9448e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_descompuesto.py",
+      "bytes": 2917,
+      "sha256": "b2e45b3c6c6a7f3c6aa5024819f00100e1b2208e44a78bf5677bfef3b0a7fcc3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_dir_fases.py",
+      "bytes": 6331,
+      "sha256": "f6060380717083ff297130d196ecfcbc9d17ef0f8094e98220588618e353837d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_dir_prior.py",
+      "bytes": 4337,
+      "sha256": "324a1130d44f64ef13b39b6e1e8e5a9d6808e9b94bf251466a27a3b6d2659777"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_direccional.py",
+      "bytes": 4213,
+      "sha256": "4a7ce279d482736de03ff9a8590cbaa6aa0aec42fff1b1e6a6ac3feec90761c0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_entorno_compartido.py",
+      "bytes": 2956,
+      "sha256": "bc26912a41a6720bf89b2a0ff37729d122972a87e763747580c64ee8c819100b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_memoria.py",
+      "bytes": 1692,
+      "sha256": "a3c894d36b2a91703fb580f22dd3f946a021075562bac59206310012b971c611"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_memoria_residual.py",
+      "bytes": 1615,
+      "sha256": "9bc9333565c194c43ab76bcca7ddc12fc9cae688befe2a3a15eb7dd1a6007245"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_prefijo_historia.py",
+      "bytes": 6448,
+      "sha256": "b092ab807f1c0f46167cf1a9b7419bab3ffcb5528002be3c5e95aac90891d6c7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_prefijo_nativo.py",
+      "bytes": 6744,
+      "sha256": "409276770dce488db10e035e289faf6aa45d735742db6d98060375f448cc177b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/muestreador_rechazo_nativo.py",
+      "bytes": 5942,
+      "sha256": "bba7a7ac3e60574cf478c15df3878f4e3a1597dbeada30cf39dab6f9480e5bc8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/nucleo_direccional.py",
+      "bytes": 1692,
+      "sha256": "bf712de7a6e0f0e26ffc19b49b248b3e14b2162f79998d6557453069225a1835"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/nucleo_entorno_compartido.py",
+      "bytes": 1505,
+      "sha256": "ceb03c217300cfb2250dd300dfb59f30b587d647f41872e564d08cc04ae5acb5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/nucleo_fases.py",
+      "bytes": 2576,
+      "sha256": "e558f1299997145992a851a573297310f07b9944a0498718569ddd92ac8cf46a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/perfiles_gpu/fuentes/benchmark_fases_cuda.py",
+      "bytes": 4204,
+      "sha256": "569fec9e2efdf9a725b9dafc55e38c41d20b7b1d8b35446813cdf2d7e757e621"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido.py",
+      "bytes": 8237,
+      "sha256": "edd25d3ba5a15872c736307ac78f7c41b4caaed2365d741f1848e62881d74c1c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido_s0/fuentes/piloto_entorno_compartido.py",
+      "bytes": 8237,
+      "sha256": "edd25d3ba5a15872c736307ac78f7c41b4caaed2365d741f1848e62881d74c1c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido_s0/fuentes/verosimilitud_entorno.py",
+      "bytes": 1092,
+      "sha256": "35e366c07f56b61facfeb189e2ee1924047f0ae8e05266f20e39666f77635968"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido_s0/protocolo.json",
+      "bytes": 621,
+      "sha256": "434eae854e18e8535cc9ec0b32c18b2d56aac336ddeb2e4dc084dbfaaf5c3ce8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido_s0/resultado.json",
+      "bytes": 3117,
+      "sha256": "0969eacdd085e80a62c304faf6e9cebc50d4046beeb09b18163b49977683e4d9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_entorno_compartido_s0/resultados_parciales.json",
+      "bytes": 1476,
+      "sha256": "9e2b955720b11f9cf0da6fdfc99abd412bfbc7dad50d8ac82805367e4a6d866f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_historia_condicional.py",
+      "bytes": 9150,
+      "sha256": "bf1f06da3e70f089a87a5d78b8c72125833d45874dfb5fc86752357e967f87ef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/pipeline_estado.json",
+      "bytes": 204,
+      "sha256": "2bd7cee3afb8c81716b2c1b3710fd14989a2afcdcec427dc9e3246e073f49206"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/pipeline_historia_estado.json",
+      "bytes": 190,
+      "sha256": "691f75a14376387356e6ff209df46e4a721666c67c791abb8f66bd2213a47cab"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/pipeline_prefijo_estado.json",
+      "bytes": 192,
+      "sha256": "2069dc8badb03e2eda9c1efa84408eb6b414eeb8a58511c202b00def5814c32e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/pipeline_riesgo_estado.json",
+      "bytes": 178,
+      "sha256": "79509cd1edc8c9bf76b115c7ecdfbc86ba7cfb900f90a74796909c9518eef6b3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/plan_activo.json",
+      "bytes": 4669,
+      "sha256": "139ab58d43634238da64abc9fda017be28996318f2292a820c15e6959aa8bfee"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/plan_control_historia_condicional.json",
+      "bytes": 3632,
+      "sha256": "47eb1eee272462759ab72fb93011aa730ee14babf62c2e5bc22d99d480732cef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/plan_efecto_compartido.json",
+      "bytes": 4679,
+      "sha256": "140fcec2035a321ceb3c592201a38be8ae2303c7e1b7b77c4a9ffddc916224e3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/plan_riesgo_total_generado.json",
+      "bytes": 8743,
+      "sha256": "1a673385c22f0ce21c14dd6febac778fe833597998c4c42540f1e832c68d64b4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/politica_conservacion.json",
+      "bytes": 1052,
+      "sha256": "dcc185d797a41d3249c6b1fcca1dc19d023dd20a21547fb0ab6d7ce9af0d9fac"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/politica_recursos.json",
+      "bytes": 373,
+      "sha256": "45d07d3e2745614f6f37e5aba0f8e140f4d4bcf98f1062a32dfd5a79a53a6b17"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/baseline_selection.json",
+      "bytes": 95,
+      "sha256": "d9bd3c5d0176cbe01cd2609c14c4f0e2ba2b7e430f3c53e1fa4011a51b19713f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/congelacion_para_inferencia.json",
+      "bytes": 494,
+      "sha256": "f805c4ee049c9e9a593a8c215919d012830b2d6fdbec570a397fd82e6e5dafd9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/estabilidad_monte_carlo.json",
+      "bytes": 838,
+      "sha256": "2b3d47afc9f6aa841a30758151f15f637b8f7ccd3dd2b575c4b365594ccbc672"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/evaluacion_acelerada/fuentes/evaluar_prefijo_acelerado.py",
+      "bytes": 10361,
+      "sha256": "2dabd61a7ace9bf9c67ebd9df3ba2fe3d5090fac13b46e9aea50eb597c55f4d4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/evaluacion_acelerada/protocolo.json",
+      "bytes": 1838,
+      "sha256": "9ebf33429fa694ea423dfdc7507e67c21cbf5336b1821e04b658aba2703a0736"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/evaluacion_acelerada/seleccion_lote.json",
+      "bytes": 900,
+      "sha256": "30f5ecb21b217eebd91e2753f9ab0de44a031e755e48d4ca2563e1456a667200"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/evaluacion_acelerada/verificacion_inferencia.json",
+      "bytes": 234,
+      "sha256": "6a9bd8060847a87bdc0d25c6009ecb264c354b027d6a2dc61b7e1ac32719185c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/datos_prefijo_nativo.py",
+      "bytes": 3462,
+      "sha256": "15170dcd56b4c9e697997502ef2dbdb89ca547bfe17d17841990f7e8ee62a557"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/entrenar_prefijo_nativo.py",
+      "bytes": 14280,
+      "sha256": "5aa78e2a4ce733c122b1b58b3aae7eb32417213f41f2d9c67965d77a06c4d26e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/modelo_dir_fases.py",
+      "bytes": 6331,
+      "sha256": "f6060380717083ff297130d196ecfcbc9d17ef0f8094e98220588618e353837d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/modelo_dir_prior.py",
+      "bytes": 4337,
+      "sha256": "324a1130d44f64ef13b39b6e1e8e5a9d6808e9b94bf251466a27a3b6d2659777"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/modelo_direccional.py",
+      "bytes": 4213,
+      "sha256": "4a7ce279d482736de03ff9a8590cbaa6aa0aec42fff1b1e6a6ac3feec90761c0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/modelo_espacial.py",
+      "bytes": 4944,
+      "sha256": "e0867f6acc12033f85add53a9b14c2f7b43704161d408c17803fc44b2655e786"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/modelo_prefijo_nativo.py",
+      "bytes": 6744,
+      "sha256": "409276770dce488db10e035e289faf6aa45d735742db6d98060375f448cc177b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/nucleo_direccional.py",
+      "bytes": 1692,
+      "sha256": "bf712de7a6e0f0e26ffc19b49b248b3e14b2162f79998d6557453069225a1835"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/nucleo_fases.py",
+      "bytes": 2576,
+      "sha256": "e558f1299997145992a851a573297310f07b9944a0498718569ddd92ac8cf46a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/fuentes/nucleo_semi_markov.py",
+      "bytes": 1712,
+      "sha256": "4a2fd12bb3921d73839e785b59873f8ed42ea634cbec5bd9f6ab9c6c7fdb164c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/historia.json",
+      "bytes": 10160,
+      "sha256": "ecbcf4c9455a624bd57b42c9f8e035bda9d3611e90ea031ff3843d95edd2a83e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/mejor.json",
+      "bytes": 925,
+      "sha256": "f0ed357a918e3364f36946df5fab79d5885aa74d3c5f5628abb2d9b3f36fba33"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/modelo.pt",
+      "bytes": 8782766,
+      "sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/protocolo.json",
+      "bytes": 1339,
+      "sha256": "c9f4fed30f4d7ff2a05d15d5daae6fddd26b3351d3f087b866629047f799f6ea"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/sustitucion_inferencia.json",
+      "bytes": 409,
+      "sha256": "c55e3f887364fadd7b8b2284bc4a8fc6844716450e48abdeda04d67fbd378848"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/verificacion_GPU_inicial.json",
+      "bytes": 122,
+      "sha256": "e72084a4f4186326889318c27377af9a1d37e17c9a281a81f12e678c9f64a04a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prefijo_nativo_s0/verificacion_referencia.json",
+      "bytes": 548,
+      "sha256": "3ebef0baa1f94e55bf51319f40b4d7bbdea10db061f05f690e998ba8064d7a99"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparacion_entrenador_historia.json",
+      "bytes": 885,
+      "sha256": "37b8839ebc322949b2e75646a3e37407ef38fa8bdaa5b69889149e0af9d98489"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_base_oof.py",
+      "bytes": 3298,
+      "sha256": "4a181829997ca11eb6b57f5ac093b214d12c09839b78504e5e724c03006f085c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_cabeza_fases_cpu.py",
+      "bytes": 5185,
+      "sha256": "4b1ef68efc91580e487502eeea954950820b12e3ce3262b96107c4d2b73d843d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_descomposicion.py",
+      "bytes": 2134,
+      "sha256": "49f64f61b5be8a9c0596faecaf76668c31ccc74216129e57477e9a96b5bf5326"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_entrenador_direccional.py",
+      "bytes": 1883,
+      "sha256": "5625f0c010b9d1f58d045c987df13b38a07b5d2f1abd095e1d00461472dec563"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_entrenador_historia.py",
+      "bytes": 4678,
+      "sha256": "5c7050b60886eed028883942930f252a4536edec7318fec55ae85f5c51244175"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_entrenador_prior.py",
+      "bytes": 2222,
+      "sha256": "1900d911eadf98fcc320279b4815c80329519be20324126169340740d85f111a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_historia_eventos.py",
+      "bytes": 4174,
+      "sha256": "75fd0887a8dd2d050418dc3f76e70be0ebd23ee60fb0c0633e9292cc4c136165"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_plan_compartido.py",
+      "bytes": 3439,
+      "sha256": "4d5cd57f70e37500ac1059b19cd628b2be4e9c75cc1ca98a15cc23b2d88e891e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_prior_transiciones.py",
+      "bytes": 2649,
+      "sha256": "05f7c795ce091f31fc31261ee088b9b0db635f366a43daa142ce150e4b66ee02"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_reanudacion_fases.py",
+      "bytes": 5935,
+      "sha256": "5f3988c07c6d709cc1f099eb992b258740d0af1fd9bb6b2afb18449904edf35c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_semi_markov.py",
+      "bytes": 5930,
+      "sha256": "68fc45d9be6fac5481bc5c2b01046ceebb1cca4857f53457e8aff7c4e901f55b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/fallo_fuentes/historia_eventos.py",
+      "bytes": 3133,
+      "sha256": "65b9592b1eaee954ce085fc0ad2a0150dde92b7cf14701cf19945638cb6fcff8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/fallo_preparacion.json",
+      "bytes": 565,
+      "sha256": "a7c7ad7b1d463aedb0d1ac5e7456289b190f85865c0b520c8bcd8ad421b79c92"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/fuentes/historia_eventos.py",
+      "bytes": 3137,
+      "sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/fuentes/preparar_historia_eventos.py",
+      "bytes": 4174,
+      "sha256": "75fd0887a8dd2d050418dc3f76e70be0ebd23ee60fb0c0633e9292cc4c136165"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/fuentes/recuperar_historia_eventos.py",
+      "bytes": 3589,
+      "sha256": "63bf6857f6641dd1b8de910f5a68a1b56da5a3f48146f91cd8d0e82a404f0743"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/fuentes/verificar_historia_eventos.py",
+      "bytes": 1490,
+      "sha256": "5083f4a0ef6d9142cb435bfca03b55c637da402e89f87dce72a7276d1070e4d8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_eventos/resultado.json",
+      "bytes": 1961,
+      "sha256": "48476961d339d07e055850c80de2d484ece1c3f1acac3e8a089958d19e4dd199"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prior_transiciones/protocolo.json",
+      "bytes": 938,
+      "sha256": "77843ac8f14a27c7cd95257da90c59011ed520008bae7407bbc55d34b5628249"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/protocolo_calibracion_unica.json",
+      "bytes": 335,
+      "sha256": "a5c7441b86aa086ab13358b63b962e791bc6c6b7a07068100cce0fdbd7c0a63a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/README.md",
+      "bytes": 13189,
+      "sha256": "d1642d2e066cc7656818b9e6f9d5e65c78e9c57f749de426956a06cf0de5d7f8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/recuperar_evaluacion_prior.py",
+      "bytes": 5215,
+      "sha256": "44129ef08b1c255f51857cbb3d95471efe33c13e0deb5a75d7cad6e58f601099"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/recuperar_historia_eventos.py",
+      "bytes": 3589,
+      "sha256": "63bf6857f6641dd1b8de910f5a68a1b56da5a3f48146f91cd8d0e82a404f0743"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_conservacion.py",
+      "bytes": 897,
+      "sha256": "d25f0c129425cc832310e079a3ccadd0b8234fb215eb03a2674c4f50390f37af"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_diagnostico_historia.py",
+      "bytes": 5278,
+      "sha256": "deb9c9a2543ab65b7f28882e5be78298b5665db2e530501ecf14264fe923dd83"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_diagnosticos_finales.py",
+      "bytes": 3267,
+      "sha256": "3e1fc0a74fdbe232e07ed1ff1aa129cec12125c48697ee915800df394d2f239c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_riesgo_preparado.py",
+      "bytes": 5987,
+      "sha256": "d70f33408cc521d124ed3fdc3bac9d64acd262a57eba7a3d0c4d8e38e1e66dbb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_transicion_fases.py",
+      "bytes": 5758,
+      "sha256": "19ac088553a1713092e7acb79265e05431e80be2945483b64ec61a29f9ceaaa5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_transicion_prefijo.py",
+      "bytes": 4293,
+      "sha256": "eb1f62e16f74fd4d4c4d8d5b78ed722f4983e7690a796f5460ff47f8b2903604"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/sesiones_activas.json",
+      "bytes": 452,
+      "sha256": "665af58cc6e635bad0370c5fe8325ea6a2e2e6ffc01b7103d0e33b413b2f7312"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/sesiones_extra.json",
+      "bytes": 452,
+      "sha256": "665af58cc6e635bad0370c5fe8325ea6a2e2e6ffc01b7103d0e33b413b2f7312"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/siguiente_propuesta_fases.json",
+      "bytes": 5643,
+      "sha256": "12a7061c03f007cdfc3fb74fec4a61f6e495b32c05f8c0c0b902b734dc0372c4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/sondeo_riesgo_total_cpu.json",
+      "bytes": 1739,
+      "sha256": "f0d6eb5924dbfe97879cf48ce6d464e214d9c6dad7892b8c0d3db60117115951"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/sondeo_riesgo_total_cpu.py",
+      "bytes": 3589,
+      "sha256": "d3227b4d51d1f87dfb6d0e02525d54b081581abd7f4b54913603211540979ce4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/transicion_a_prefijos.json",
+      "bytes": 4561,
+      "sha256": "32c3b73b73b22beea8e7ebb83241ed9c448f627dad0a863a82e0fc5951d6d4c7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_direccional_cpu.json",
+      "bytes": 323,
+      "sha256": "84fc610c1fbf68336df2f79aae47e91b6fd3379ef95a80e9efa6b19b9d5fa954"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_entorno_cpu.json",
+      "bytes": 458,
+      "sha256": "9cad2eeeb79b862a1486164ad139fc055fc31e85e13db6b33e7205d34207062d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_fases_cpu.json",
+      "bytes": 632,
+      "sha256": "2b921eec7152ff091bd7396a1d4be93080d474fa2d69b0be32c5abb29f92006f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_gradiente_crps_condicional.json",
+      "bytes": 2450,
+      "sha256": "5a90ddc455212d260d17e448d747ea44e4bdcef372544379e8202c2cd2e2dd7d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_historia_eventos.json",
+      "bytes": 504,
+      "sha256": "6ac14d6280876987f57e95ae3ee3f468eb0d8005a73b02ed6516e21c6674682e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_identificacion_entorno.json",
+      "bytes": 1190,
+      "sha256": "1ba30b0a2f207bfbdf12c2a6b3732ac780f533aff4a8f51458d905398b6bfcd9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_llegada_compartida.json",
+      "bytes": 637,
+      "sha256": "ec583e0231cca54526c0b6dbc1d6aa27e535551a03665518d2fb7da6bdea55a9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_memoria_cpu.json",
+      "bytes": 234,
+      "sha256": "25feb1a8a1feb83126b2dee8d509f2028c12897adbd4feb7edf1dd229e1d3458"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_modelo_direccional_cpu.json",
+      "bytes": 484,
+      "sha256": "ce5cea9a617ff4b93127cd1a6d375c58926158d401cab92095de9dc9017aa52d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_modelo_espacial_cpu.json",
+      "bytes": 309,
+      "sha256": "e3aa98721f3366e27facfae22ffec47f92a347255bda860453024060e757f9bd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_modelo_fases_cpu.json",
+      "bytes": 559,
+      "sha256": "7d57def5d220a74a323e83e4bc6ce1e24b775e0a700c142e3949a7585a62deef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_muestreador_rechazo.json",
+      "bytes": 908,
+      "sha256": "aad0f867d20c1f33a66697007b9c56f2ed0c7a49970ff6637c1f85dbb67adef5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_normalizacion_referencia_cpu.json",
+      "bytes": 890,
+      "sha256": "c89123e2404527a39456285c3e1ffc795e4e9c5c26aa76ff8952b0e9ac0d9034"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_prefijo_historia.json",
+      "bytes": 781,
+      "sha256": "09583bfb4761e50d06f1217e2832d0b12802e72a949f52cc9501cfcce9e3b5ff"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_prefijo_nativo.json",
+      "bytes": 1034,
+      "sha256": "7cd93da862e0a37cbfce2b550516823896b4af725ec1557bce7d7017b1efd46e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_prior_cpu.json",
+      "bytes": 642,
+      "sha256": "10c1f25f80e6d620d8a32c4ca3c20b8f22554cb0472076fddaa0d4bab4defd6f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_protocolo_transfertraj.json",
+      "bytes": 1211,
+      "sha256": "87c4eec291036614f9031af609401abd06c70a30aeecf686220ded10cdb34b11"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_residual_cpu.json",
+      "bytes": 143,
+      "sha256": "555d06cc6c5d0d9bdee14c270c47058ecdbec1f81d0c784e865dbc7dd81f31cf"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_semi_markov_cpu.json",
+      "bytes": 352,
+      "sha256": "d333cf5c276a968cbd069af135b4513b95f75f347cb4f08dcb6b55c024a6055c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_conservacion.py",
+      "bytes": 1624,
+      "sha256": "ddf47dcbd55d9ec0f01361d9522787d34fcdae29d17b5bf6675a3c0ace8dbcfc"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_direccional.py",
+      "bytes": 2039,
+      "sha256": "36a7add6e85bf1a0f3e4a900b5ff6ec5547376c30ec6966fa8be1ff05fad639d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_entorno.py",
+      "bytes": 1907,
+      "sha256": "66e1104b4458cf21d780b92c8f3dd5c9409a57f8edd92c8e6309af1fbf690c92"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_fases.py",
+      "bytes": 2317,
+      "sha256": "65363c920252abbc0332ac2e3d8cbd1a37fb1889b25d9a94d746590a4de28c60"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_fin_entrenamiento_nativo.py",
+      "bytes": 860,
+      "sha256": "1f7c5de6d76ad1b4fa5d149b80e02cac88d9b428cbf3f10c0ec137a6c5452e5a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_gradiente_crps_condicional.py",
+      "bytes": 3882,
+      "sha256": "8144e94d2c14dc778856023b62c6159df38a92bd2d6d87202db8da52cf398e71"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_historia_eventos.py",
+      "bytes": 1490,
+      "sha256": "5083f4a0ef6d9142cb435bfca03b55c637da402e89f87dce72a7276d1070e4d8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_identificacion_entorno.py",
+      "bytes": 2531,
+      "sha256": "bb220a9ae4fa959904502139a54fe7cba580550c8875e56b3ffec68ae702de87"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_llegada_compartida.py",
+      "bytes": 3571,
+      "sha256": "b6697ac83e28dbc8e9cfea224afdc6699e0440fe62cd68fddd295c80e9dc7272"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_memoria.py",
+      "bytes": 1254,
+      "sha256": "f6e978133105ea9650d5ef283e91d36e24a8fe09487c7f971ac85c526e9ca5fb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_modelo_direccional.py",
+      "bytes": 1475,
+      "sha256": "c67cef59d8ef4b0056797ced710fa1d8d90ef091a20e440bb0d2d58a83fe6d3a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_modelo_espacial.py",
+      "bytes": 1214,
+      "sha256": "fbb1162e3fbb39ff0374717edcb903c3f057fbdd9ea638545f99c8e9173bb5f5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_modelo_fases.py",
+      "bytes": 1578,
+      "sha256": "50ee39e313effa399af766fbe604875a1a519ec3d9f8597dc898adf34d70313c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_muestreador_rechazo.py",
+      "bytes": 3374,
+      "sha256": "0c4d8a0bfbb1c6f9eb72fae1a1997b9e0ccb61acbf4c6e1b1647d7197b64fee2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_normalizacion_referencia_cpu.py",
+      "bytes": 1865,
+      "sha256": "367891e89157d2582e6c8d4b9c1b51c515f126c4355e7b6c2793a06a1b32c013"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_prefijo_historia.py",
+      "bytes": 4106,
+      "sha256": "ad5a9627e6935ea3812aa3a777e0a0b667ca865e7e95cc9f4b3bb6360c3287df"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_prefijo_nativo.py",
+      "bytes": 5892,
+      "sha256": "3bb02830cf7db31a8624f0e54df4d68451764922f8937d51358a7e5307f08c2d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_prior.py",
+      "bytes": 3301,
+      "sha256": "0f386927dac080111e320b25e3ab0e40976436310b2eed5f4a5bffb277d66048"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_residual.py",
+      "bytes": 819,
+      "sha256": "c5226d6f0e775de06ef773089c52fe7aa4d47aa1a175a2cb89ee8f3f011b42d2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_semi_markov.py",
+      "bytes": 1722,
+      "sha256": "442b410397ec0ef71091bea2576b31997278a33b412a5e5924ad719bd772b337"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verosimilitud_entorno.py",
+      "bytes": 1092,
+      "sha256": "35e366c07f56b61facfeb189e2ee1924047f0ae8e05266f20e39666f77635968"
+    },
+    {
+      "path": "propuesta/REPRODUCIR.md",
+      "bytes": 1761,
+      "sha256": "bbc98af76fc9662ed0c1d8714efbc81f5e51b1fd324c60621f20dc84c2763dfe"
+    },
+    {
+      "path": "propuesta/reproducir_mejor.py",
+      "bytes": 4314,
+      "sha256": "6108e68ad6db2cf449137b5f461da48d50cb3a7e96ccddc1474da8e5b9b0ccb7"
+    },
+    {
+      "path": "propuesta/resultados/historial_evidencia.json",
+      "bytes": 267,
+      "sha256": "552cb977cb910b89a459552024200c78e24b990ea854fb75080b4774499083cf"
+    },
+    {
+      "path": "propuesta/resultados/historial_evidencia.zip",
+      "bytes": 12441483,
+      "sha256": "89ec9c58dff39b25415677535fe078ce65f06abe21273dc8a9eff83180e69466"
+    },
+    {
+      "path": "propuesta/resultados/original_corregido/evaluacion_critica.json",
+      "bytes": 582,
+      "sha256": "70bbe30901c3db6fe2867ee0677af8cb457084501ac94c15cec164065e03b20b"
+    },
+    {
+      "path": "propuesta/resultados/original_corregido/resultado.json",
+      "bytes": 1008,
+      "sha256": "ebaafe041b8e7960668d41ceb30f5295dba8e15273fbc574fe4521f8ecf6cd10"
+    },
+    {
+      "path": "propuesta/resultados/original_corregido/validacion.npz",
+      "bytes": 1070411,
+      "sha256": "ba298db7117b3ecc9f7045340a1fa083c2c1499d71cc18911a215216b3454218"
+    },
+    {
+      "path": "propuesta/resultados/resultados_experimentos.csv",
+      "bytes": 14181,
+      "sha256": "7768c4205f29d51a25afb54de66497b79ff77e9ac82b75460ad671048abdc711"
+    },
+    {
+      "path": "propuesta/resultados/resultados_experimentos.json",
+      "bytes": 136488,
+      "sha256": "e828f6d4d44b4f63392654f32e84d919e6af2bf8e9277b271059d20f132f298e"
+    },
+    {
+      "path": "propuesta/resultados/resultados_internos.json",
+      "bytes": 87837,
+      "sha256": "e9792e3642b84caf093ff249b507436f277174a0d4eafc5f51c203f1711a38d8"
+    },
+    {
+      "path": "propuesta/RESUMEN_RESULTADOS.md",
+      "bytes": 9950,
+      "sha256": "ee9b5b82f6c86b3166bd3c43f87a02ff3696805de8727c407885ca62f3720c96"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1218,
+      "sha256": "80af1da5957527ba12cc21d35e2a6ed304d4accb49f7d0df79599234d3bdf255"
+    },
+    {
+      "path": "requirements-revision.txt",
+      "bytes": 107,
+      "sha256": "624cfdab171084f40979c9fd6359e20cdb35e8391405fd7d30ba716f2a8b9d54"
+    },
+    {
+      "path": "revision_tesis/construccion_de_esta_entrega.py",
+      "bytes": 22037,
+      "sha256": "602c7be4facbd12eca814efe83d7146bad38efc73a9941093ef58a5bba851e13"
+    },
+    {
+      "path": "revision_tesis/ejemplo_65_validacion.npz",
+      "bytes": 33040,
+      "sha256": "092029667276447fccd619447525d84384eb22b9c684374bbdfcba21d49d6a6d"
+    },
+    {
+      "path": "revision_tesis/ensamble_historico_131_06.json",
+      "bytes": 1394,
+      "sha256": "34c8d3f6118e1634f739b11f634b394d2eaab2c4345bcdf4732e17e0e9d94d70"
+    },
+    {
+      "path": "revision_tesis/probar_modelo.py",
+      "bytes": 2399,
+      "sha256": "54deab6c93842e0792b7d05b5d259601a6a0430edbffa9b2fc5f513cdf004799"
+    },
+    {
+      "path": "revision_tesis/procedencia_copia.json",
+      "bytes": 144054,
+      "sha256": "c492eb342aac72c999dd0ee38b68863ee39efb9ea19f1b10bcd9f2f850d6e2b3"
+    },
+    {
+      "path": "revision_tesis/README.md",
+      "bytes": 6553,
+      "sha256": "5cbef9fb80394c11fd39b721527af00185b3e80a10e2b4b6d75287242e9aaff5"
+    },
+    {
+      "path": "revision_tesis/verificacion_entrega.json",
+      "bytes": 857,
+      "sha256": "25a98c5ae83dca4d919f2f9c73580a979f7ebb90cfe99a12f9c1cf649af85409"
+    },
+    {
+      "path": "revision_tesis/verificar_resultados.py",
+      "bytes": 2332,
+      "sha256": "b1a1062b0db3f7d6aa64016d29eb534d1a9b3441d411d1340e86fdb30e50abaa"
+    }
+  ],
+  "file_count": 658,
+  "total_bytes": 93931134,
+  "raw_Train_Test_and_environment_excluded": true,
+  "secret_literal_scan_passed": true,
+  "original_repository_files_not_rehashed_as_research_artifacts": true
+}

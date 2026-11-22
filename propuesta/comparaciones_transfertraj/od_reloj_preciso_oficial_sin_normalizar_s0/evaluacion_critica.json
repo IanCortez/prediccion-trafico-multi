@@ -1,0 +1,24 @@
+{
+  "id": "od_reloj_preciso_oficial_sin_normalizar_s0",
+  "validation": {
+    "mae_s": 162.89860516635213,
+    "rmse_s": 233.729971510491,
+    "mdae_s": 118.37860107421875,
+    "mape": 32.77059540316956,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Solo precision del reloj: reduce Unix modulo semana antes de float32, conserva definiciones periodicas del modelo y perdida oficial.",
+  "test_labels_read": false,
+  "comparison": {
+    "reference": "od_transfertraj_math_sin_pre_s0",
+    "delta_mae_s": -1.4690810441970825,
+    "ci95_s": [
+      -2.072059602189508,
+      -0.8960797318253161
+    ],
+    "interpretation": "Negative favors this iteration; exploratory after adaptive validation selection, conditional on fitted models."
+  },
+  "distance_to_target_s": 89.39860516635213,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

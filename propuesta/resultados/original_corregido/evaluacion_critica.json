@@ -1,0 +1,15 @@
+{
+  "id": "original_completo_pace_pos_s0",
+  "validation": {
+    "mae_s": 140.82259378622484,
+    "rmse_s": 219.98868953310418,
+    "mdae_s": 88.71026611328125,
+    "mape": 25.044794132606697,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Comparación completa del original con pace, posición y contratos corregidos. Sirve como referencia de arquitectura; no es una réplica byte a byte de sus errores iniciales.",
+  "test_labels_read": false,
+  "distance_to_target_s": 67.32259378622484,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

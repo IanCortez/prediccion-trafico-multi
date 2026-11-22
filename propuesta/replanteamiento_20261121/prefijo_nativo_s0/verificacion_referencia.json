@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "all127941_predictions_exact": true,
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "parent_sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a",
+  "new_parameters": [
+    "prefix_rnn.weight_ih_l0",
+    "prefix_rnn.weight_hh_l0",
+    "prefix_rnn.bias_ih_l0",
+    "prefix_rnn.bias_hh_l0",
+    "history_projection.weight",
+    "stay_head.weight",
+    "stay_head.bias",
+    "stop_head.weight",
+    "stop_head.bias"
+  ],
+  "Test_access": false
+}

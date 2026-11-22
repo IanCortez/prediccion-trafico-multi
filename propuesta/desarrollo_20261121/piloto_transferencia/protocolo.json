@@ -1,0 +1,23 @@
+{
+  "target_rule": "both endpoints longitude >= -8.62",
+  "source_rule": "both endpoints longitude < -8.62",
+  "target_label_budget_total": 5000,
+  "target_fit_n": 4000,
+  "target_selection_n": 1000,
+  "source_n": 20000,
+  "seed": 20261121,
+  "feature_config": {
+    "routes": true,
+    "context": true,
+    "projected_routes": true,
+    "mapmatched": false,
+    "calendar": true
+  },
+  "maximum_fits": 3,
+  "maximum_configurations": 4,
+  "max_wall_seconds": 7200,
+  "max_additional_bytes": 1000000000,
+  "Test_access": false,
+  "goal_global_mae_s": 73.5,
+  "scope": "Regional transfer diagnostic; not global goal confirmation"
+}

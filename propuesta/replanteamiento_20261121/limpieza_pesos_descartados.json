@@ -1,0 +1,37 @@
+{
+  "removed": [
+    {
+      "path": "propuesta\\replanteamiento_20261121\\descompuesto_aux1_s0\\modelo.pt",
+      "bytes": 25331882,
+      "sha256": "189a0d95f46ef1ad026292b3b0d8001a518f57ab0bd3be17482854f551e87441",
+      "predictions_sha256": "3e07431443b7e203c28cadb7a12b821b1a00526ee28fba0023f370045386885a",
+      "mae_s": 131.62731258939667,
+      "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\memoria_cdf_s0\\modelo.pt",
+      "bytes": 375722,
+      "sha256": "2e6b95f7fd8e716b9975b5c89d44674867fa3b65efdd3241baeeeb0640d34315",
+      "predictions_sha256": "23e051a00a2688498584214546f83dbb57b4fc9fa85ea341d7396c150981da32",
+      "mae_s": 137.4315895608132,
+      "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\memoria_mse_s0\\modelo.pt",
+      "bytes": 375722,
+      "sha256": "efcc33925e3e271861e0134b083462f5f1860b63543f2f66a18b3a67a27b16db",
+      "predictions_sha256": "52186f8c7d80e7507b9c969f2a3dc78b8c86a9a354209b56664057b348fd528e",
+      "mae_s": 144.3031549620929,
+      "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\espacial_semimarkov_s0_v2\\modelo.pt",
+      "bytes": 8678281,
+      "sha256": "fa5dd3c60b288866c328600884228ff59b9a8a7570b7057373af479627e73bd0",
+      "predictions_sha256": "0c487f290a499d3a530f448e4b0082384159e170ca2765256cb022b584c0b162",
+      "mae_s": 138.22343892888128,
+      "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+    }
+  ],
+  "best_and_TransferTraj_untouched": true
+}

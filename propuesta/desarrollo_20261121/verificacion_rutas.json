@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "independent_shortest_path_reference": "SciPy Dijkstra with minimum, not sum, for parallel edges",
+  "finite_pairs": 16,
+  "max_cost_error_s": 1.1368683772161603e-13,
+  "batch_reversal_bit_identical": true,
+  "Test_access": false,
+  "seconds": 6.866060495376587,
+  "code_sha256": "683c70ba110e8d268d8bb2339b90a611f34b1d3b943bb156103e007bb9fa8d52"
+}

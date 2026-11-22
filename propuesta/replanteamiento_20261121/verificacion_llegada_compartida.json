@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "explicit_convolution_max_error": 2.7755575615628914e-17,
+  "gradient_max_error": 2.7755575615628914e-17,
+  "shared_vs_independent_L1_difference": 0.18855434001550303,
+  "wrong_per_node_cohort_normalization_L1_difference": 0.3877419832552713,
+  "sigma_zero_equals_independent_phase": true,
+  "query_permutation_and_singleton": true,
+  "mass_conserved": true,
+  "no_GPU": true,
+  "not_MAE_result": true,
+  "code_sha256": "b6697ac83e28dbc8e9cfea224afdc6699e0440fe62cd68fddd295c80e9dc7272",
+  "kernel_sha256": "ceb03c217300cfb2250dd300dfb59f30b587d647f41872e564d08cc04ae5acb5"
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "complete_queries": 4096,
+  "accepted_samples": 32768,
+  "path_likelihood_matches_unconditional_origin_branch_exact": true,
+  "out_of_cohort_trap_rejected": true,
+  "no_label_in_sampler_signature": true,
+  "exact_gradient": [
+    0.0,
+    -0.9997160216277267,
+    0.9997160216277268
+  ],
+  "sample_gradient": [
+    -7.623296525288703e-18,
+    -1.0079302106584822,
+    1.0079302106584822
+  ],
+  "gradient_standard_error": [
+    2.542772747361137e-19,
+    0.018573105595391343,
+    0.018573105595391347
+  ],
+  "autograd_matches_score_estimator": true,
+  "first_two_accepted_draw_correlation": -0.0033962184948703087,
+  "no_GPU": true,
+  "not_Porto_MAE": true,
+  "code_sha256": "0c4d8a0bfbb1c6f9eb72fae1a1997b9e0ccb61acbf4c6e1b1647d7197b64fee2",
+  "sampler_sha256": "bba7a7ac3e60574cf478c15df3878f4e3a1597dbeada30cf39dab6f9480e5bc8"
+}

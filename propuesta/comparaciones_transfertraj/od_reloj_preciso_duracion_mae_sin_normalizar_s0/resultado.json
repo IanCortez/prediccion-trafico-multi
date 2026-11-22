@@ -1,0 +1,72 @@
+{
+  "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+  "architecture": "transfertraj_adaptado",
+  "config": {
+    "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+    "architecture": "transfertraj_adaptado",
+    "stage": "od",
+    "epochs": 50,
+    "seed": 0,
+    "pretrain_id": null,
+    "radius_m": 100.0,
+    "embed_size": 64,
+    "d_model": 128,
+    "layers": 2,
+    "experts": 8,
+    "batch": 64,
+    "lr": 0.001,
+    "optimizer": "Adam",
+    "gradient_clip": null,
+    "router_eval": "noise_off",
+    "inference_precision": "float32",
+    "canonical_batch": 256,
+    "transfertraj_resources": true,
+    "resource_manifest_sha256": "2af61ee08d89837346508bfe320a7b786f93862ee00fdd50cb44df7696eea1e3",
+    "neighbor_manifest_sha256": "787d1e072a1adeadfc16da8c976d4b9683f735947f9150ce44061aded0589436",
+    "clock_precision": "weekly_modulo_before_float32",
+    "od_training_objective": "duration_mae",
+    "normalize_modalities": false,
+    "neural_coordinate_scale_m": 1.0,
+    "attention_backend": "math_sdp_like_official_main",
+    "attention_backend_code_sha256": "ea2366390ab1d905177012bd5bf7e53f13bebbb5f5465261f11ea80ac7f4e91a",
+    "gradient_finiteness_guard": "infinite_norm_no_clipping",
+    "expert_execution": "batched_same_parameters",
+    "inactive_expert_adam_skip_preserved": true,
+    "pretraining_input": "array_records_official_padder",
+    "training_precision": "float32 highest"
+  },
+  "train_n": 1023529,
+  "epochs": 38,
+  "selected_epoch": 28,
+  "parameters": 2662384,
+  "elapsed_seconds": 39675.12081670761,
+  "model_sha256": "eaae655194fbd1cb2f4b7893a500d397d5139bfb9d635d4453fa7ac0fa6b15a6",
+  "data_manifest_sha256": "9f9491df73f5cfb98a00d2cabb5ba1ae2beb6c2ccd301daf0c32698de955ca52",
+  "resource_manifest_sha256": "2af61ee08d89837346508bfe320a7b786f93862ee00fdd50cb44df7696eea1e3",
+  "neighbor_manifest_sha256": "787d1e072a1adeadfc16da8c976d4b9683f735947f9150ce44061aded0589436",
+  "features": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "test_labels_read": false,
+  "conclusion": "Control OD sin preentrenamiento: precision del reloj, luego perdida solo de duracion MSE frente a MAE, con inicializacion, arquitectura y presupuesto pareados. La consulta usa cinco campos; no modifica cohorte ni objetivos de prueba. Las opciones se registran en config.",
+  "validation": {
+    "mae_s": 158.8770064215753,
+    "rmse_s": 239.57272221214575,
+    "mdae_s": 105.6854248046875,
+    "mape": 28.549641312242862,
+    "n": 127941
+  },
+  "interval": {
+    "ci95_s": [
+      155.78383070715876,
+      161.89244593302232
+    ],
+    "blocks": 35,
+    "method": "bootstrap departure UTC day; conditional on fitted model"
+  },
+  "pretraining_train_n": 0
+}

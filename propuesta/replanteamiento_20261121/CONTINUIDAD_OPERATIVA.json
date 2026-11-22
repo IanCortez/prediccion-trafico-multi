@@ -1,0 +1,586 @@
+{
+  "goal_status": "ACTIVE; do not close because a batch fails",
+  "current_trial": {
+    "experiment": "prefijo_nativo_s0/evaluacion_acelerada",
+    "pid": 35928,
+    "session": 46924,
+    "device": "GPU",
+    "max_GPU_jobs": 1,
+    "training_finished": true,
+    "epochs": 10,
+    "steps": 79960,
+    "checkpoint_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+    "do_not_restart_training": true
+  },
+  "threshold_preservation_s": 131.06,
+  "final_confirmation_goal_s": 73.5,
+  "Test": "SEALED until eligible candidate frozen",
+  "retained_best": {
+    "id": "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+    "mae_s": 131.25671207822356,
+    "sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f"
+  },
+  "parent_initialization": {
+    "id": "espacial_prior_cf_s0",
+    "sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+    "keep_until_active_trial_initialized": true
+  },
+  "next_after_result": [
+    "Read full Validation and compare paired against reference; never substitute selection subset as target",
+    "Preserve qualifying checkpoint/source/predictions; verify raw/query permutation and inference if improved",
+    "If independent-phase model fails, inspect plan_efecto_compartido.json: shared environment justified only by coarse Train dependence diagnostic; new global mixture must combine unnormalized absorption before cohort normalization",
+    "A genuinely different later alternative is autoregressive next-cell/wait/EOS with recurrent prefix, not another fixed-route or frozen-CDF bank. Query always fixedmax120steps; true query length/path never supplied. Must address sampling variance and stateless query-order-independent generation.",
+    "Clean failed intermediates, retain original data, current best and all TransferTraj metrics/predictions"
+  ],
+  "known_technical_event": "Legacy batch16 comparative benchmark saturated GPU; stopped only benchmark. Parent final inference had illegal memory access; isolated bounded recovery completed all127941 with unchanged weights. No re-training required. Do not rerun interrupted benchmark.",
+  "resource_policy": "One heavy GPU job; microbatch8; no disk CDF banks; CPU head cache was RAM-only and released",
+  "files": [
+    "politica_conservacion.json",
+    "politica_recursos.json",
+    "benchmark_fases_cuda.json",
+    "comparacion_descomposicion.json",
+    "comparacion_procesos_espaciales.json",
+    "conclusion_memoria_residual.json",
+    "verificacion_referencia.json inside active trial",
+    "plan_efecto_compartido.json"
+  ],
+  "latest_storage_snapshot": {
+    "project_bytes": 14984365553,
+    "project_GiB": 13.955277905799448,
+    "file_count": 31282,
+    "new_work_bytes": 109295173,
+    "new_work_MiB": 104.23199939727783,
+    "note": "Logical file size snapshot while training is active; checkpoints and logs can change during measurement",
+    "best_model_unchanged": true,
+    "best_model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "TransferTraj_predictions_unchanged": [
+      {
+        "id": "od_modal_normalizado_sin_pre_s0",
+        "sha256": "001acca25acaed30e88e39fa3c0e70cfc41f71f736ee143b063aa9105097a060",
+        "unchanged": true
+      },
+      {
+        "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+        "sha256": "d2568689c8fc18aab1a3b151ee19f6738a4cc3dac8c4a33b75dd8fed5be4c3d6",
+        "unchanged": true
+      },
+      {
+        "id": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+        "sha256": "521d6cccd99b2cb81761796ce1dc10ae607109ddcae0e1e09b12760382552a87",
+        "unchanged": true
+      },
+      {
+        "id": "od_reloj_preciso_oficial_sin_normalizar_s0",
+        "sha256": "138464a02259326ea71f2201e0244cc6bb60ebfcb909d43a21f3d36e2e6db9d8",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_adaptado_sin_pre_s0",
+        "sha256": "9c31edb70e6adc9e9a04948ef7ae764ed9812f6066dac1a7dbf21eed9ddc64fb",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_math_pre30_s0",
+        "sha256": "60cb67ee49e99033ab1d1c466605ef51609d7c4f4ad6d066cc05620939da347c",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_math_sin_pre_s0",
+        "sha256": "9eceff2c39ef60450899d55f9a942819ce2caf78996a2acdeb183a2136403bea",
+        "unchanged": true
+      },
+      {
+        "id": "od_transfertraj_metrico_sin_pre_s0",
+        "sha256": "038c76dced49a6d22344696bd51106216ac566cf68de5b129fac3746b1b9d43e",
+        "unchanged": true
+      },
+      {
+        "id": "od_xgboost_transfertraj_aleatorio_s0",
+        "sha256": "e6c23d134561c17f72c953112e1ecd1eaffc72814e688aa6148158b91a303fb2",
+        "unchanged": true
+      },
+      {
+        "id": "od_xgboost_transfertraj_prefijo6_s0",
+        "sha256": "9bdb8a731345587ffdbe26b1162c727748a899a9ab9631c7bd091461ad76304a",
+        "unchanged": true
+      }
+    ],
+    "original_data_were_not_modified": true,
+    "Test_files_opened": false,
+    "paths_skipped_outside_root": [],
+    "seconds": 4.599764585494995
+  },
+  "all_work_root": "E:\\UTEC\\Tesis\\TesisIan",
+  "local_conda": "E:\\UTEC\\Tesis\\TesisIan\\.conda-env",
+  "one_calibration_after_trial": {
+    "script": "calibrar_fases_una_vez.py",
+    "protocol": "protocolo_calibracion_unica.json",
+    "predeclared_alphas": [
+      0,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      1
+    ],
+    "only_after_frozen_full_result": true,
+    "reason": "Inherited global correction remains near.48 after1000steps at1e-4; test once whether blend calibration hides value. Do not keep searching weights for same frozen functions."
+  },
+  "reference_fit_gap_diagnostic": {
+    "Train_sample_MAE_s": 112.188720703125,
+    "recent30day_Train_sample_MAE_s": 114.74853515625,
+    "Validation_sample_MAE_s": 130.927734375,
+    "sample_n": 8192,
+    "CPU_vs_saved_Validation_predictions_changed": 0,
+    "not_a_Bayes_lower_bound": true
+  },
+  "signed_error_diagnostic": "diagnostico_sesgo_espacial.json: reference residual median0, pure count-prior graph residual median+15s. Mean error need not be0 for a median predictor. Do not force zero mean.",
+  "protocol_recheck": "TransferTraj is OD, chronological80/10/10, not a full-query-route or random-split explanation. See verificacion_protocolo_transfertraj.json.",
+  "global_latent_followup": {
+    "options": [
+      "Shared hazard environment via4fixed Gaussian quadrature nodes; sum unnormalized absorption over nodes before total cohort conditioning",
+      "More flexible4learned trip-consistent route/time styles: style probability from OD query, same style affects every generated state. Train exact logsumexp over styles of product likelihood of up to8DISTINCT Train runs from one trip; no per-run redraw of style."
+    ],
+    "evidence": "Positive residual movement dependence under COARSE held-Train moments; not proof of driver causality. Prefix history adds0.02158nats next-zone likelihood beyond one heading; not duration MAE.",
+    "reference_integration": "Keep protected strong baseline; begin correction near zero and use a separate learning-rate group for scalar gate in a NEW version, never edit running sources.",
+    "novelty": "Shared latent dependence and autoregressive route generation have precedents. Do not claim them novel alone."
+  },
+  "latest_selection_checkpoint": {
+    "step": 3500,
+    "selection_validation": {
+      "n": 4096,
+      "mae_s": 136.5087890625,
+      "rmse_s": 218.23798895751113,
+      "mdae_s": 75.0
+    },
+    "seconds": 1556.8055667877197
+  },
+  "goal_is_not_complete": true,
+  "active_session": 73257,
+  "do_not_modify_running_sources": true,
+  "pipeline_session": 64397,
+  "pipeline_supervisor_pid": 30780,
+  "pipeline_state_file": "pipeline_estado.json",
+  "pending_CPU_control": "piloto_entorno_compartido.py",
+  "calibration_oracle_scope": "Only8predeclared actual outputs; no universal or untested-weight impossibility claim.",
+  "shared_effect_decision": {
+    "shared_minus_independent_NLL": 0.00018300344579841483,
+    "CI": [
+      -0.00026406384549781725,
+      0.0006346159377991014
+    ],
+    "decision": "Do not train full shared-environment branch. Global additional variation helps, sharing it across the trip does not improve held scalar likelihood. No general independence or irreducibility claim."
+  },
+  "next_trial": {
+    "id": "prefijo_nativo_s0",
+    "architecture": "Native15s next-cell/stay/stop generator with recurrent prefix; a different state and inference method from finite-state semi-Markov marginalization",
+    "initialization": "Phase checkpoint4edfda...; strong OD reference remains frozen",
+    "known_query": "Only OD/departure and allowed216 features; simulation time, dwell age and history generated by the model",
+    "unknown_query": "No real route, intermediate points, length or duration; never feed true query length as rollout limit",
+    "training": "Teacher forcing from Train only; future cannot affect earlier prefixes; whole sequence likelihood with constant scaling, not inverse observed-length weights",
+    "inference": "128 query-seeded particles, fixed120 steps; marginal stopping probability is deposited at every step. Sum raw absorption before conditioning60..1785s",
+    "validation": "Fixed512 query subset selects checkpoint by generated-only MAE; fixedalphas0,.05,.2,.5,1. Full127941 complete results required; alpha0 baseline is not a new learned result",
+    "risk": "Teacher-forcing exposure mismatch, coarse200m cells, finite particles and terminal support may prevent a MAE gain. Test remains closed.",
+    "qualification": "Preserve any complete output below131.06s; then raw/order reproduction plus512particle sensitivity. Best model always preserved.",
+    "verification": {
+      "passed": true,
+      "teacher_vs_incremental_max_error": 0.0,
+      "future_intervention_causal": true,
+      "padding_length_does_not_enter_prefix": true,
+      "finite_gradients_and_nonzero_RNN_gradient": true,
+      "exact_geometric_absorption_checked": true,
+      "unconditioned_mass_and_survival_conserved": true,
+      "stateless_seed_permutation_and_singleton": true,
+      "real_Train_trips_reconstructed": 1000,
+      "duration_labels_and_endpoints_exact": true,
+      "valid_point_states": 42711,
+      "valid_motion_targets": 41630,
+      "query_inputs": "OD and departure; simulated history only; horizon120 fixed, not actual query N",
+      "no_GPU": true,
+      "Test_access": false,
+      "actual_files_accessed": [
+        "propuesta\\datos\\train_x.npz",
+        "propuesta\\datos\\train_y.npy"
+      ],
+      "code_sha256": "3bb02830cf7db31a8624f0e54df4d68451764922f8937d51358a7e5307f08c2d",
+      "model_sha256": "409276770dce488db10e035e289faf6aa45d735742db6d98060375f448cc177b",
+      "data_sha256": "15170dcd56b4c9e697997502ef2dbdb89ca547bfe17d17841990f7e8ee62a557"
+    },
+    "references": [
+      {
+        "title": "UNITE KDD2026",
+        "url": "https://web.comp.polyu.edu.hk/csmlyiu/conf/KDD26_UNITE.pdf",
+        "scope": "Autoregressive route and time generation with recurrent progress has precedent. Proposed fixed-horizon stochastic absorption here is an adaptation, not an exact replica or novelty claim."
+      },
+      {
+        "title": "DutyTTE AAAI2025",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/download/33350/35505",
+        "scope": "Unknown route and TTE uncertainty motivate an explicit route model; paper Chengdu/Xian results are not the Porto comparison."
+      }
+    ]
+  },
+  "calibration_conclusion": {
+    "alphas": [
+      0,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      1
+    ],
+    "full_validation": [
+      {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 131.2574155274697,
+        "rmse_s": 210.81731237860146,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 131.259056909044,
+        "rmse_s": 210.83583064832445,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 131.30149834689428,
+        "rmse_s": 210.87748246990475,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 131.55462283396253,
+        "rmse_s": 211.15780938834206,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 132.29218936853707,
+        "rmse_s": 211.90039910388327,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 133.57563251811382,
+        "rmse_s": 213.13848477882166,
+        "mdae_s": 75.0
+      },
+      {
+        "n": 127941,
+        "mae_s": 140.966187539569,
+        "rmse_s": 220.28246271192867,
+        "mdae_s": 90.0
+      }
+    ],
+    "selected_by_fixed_subset": 0.02,
+    "selected_full_validation": {
+      "n": 127941,
+      "mae_s": 131.2574155274697,
+      "rmse_s": 210.81731237860146,
+      "mdae_s": 75.0
+    },
+    "qualified": [],
+    "best_full_exploratory_alpha": 0,
+    "conclusion": "This is the ONLY predeclared calibration of this fixed physical branch. Do not keep changing weights. Alpha0 reproduces the protected model and is not a learned improvement.",
+    "goal": "active",
+    "Test": "sealed"
+  },
+  "model_protection_file": "candidatos_conservados_tras_calibracion.json",
+  "pipeline_prefix_session": 9112,
+  "pipeline_prefix_supervisor_pid": 33120,
+  "training_initial_GPU_check_passed": {
+    "passed": true,
+    "finite_actual_Train_gradients": true,
+    "reference_reproduced": true,
+    "Test_access": false
+  },
+  "do_not_rerun_old_scripts": [
+    "registrar_conservacion.py would overwrite enhanced policy",
+    "actualizar_resumen_prefijo.py requires its old active heading; one-time transition already applied",
+    "Do not resume finished phase trial; its resume checkpoint was deleted after verified completion"
+  ],
+  "latest_native_checkpoint_selection_only": {
+    "epoch": 10,
+    "steps": 79960,
+    "mean_NLL": 0.2658629616062176,
+    "selection_all_alphas": [
+      {
+        "n": 512,
+        "mae_s": 140.244140625,
+        "rmse_s": 232.34022988254745,
+        "mdae_s": 90.0
+      },
+      {
+        "n": 512,
+        "mae_s": 140.44921875,
+        "rmse_s": 232.5132304703326,
+        "mdae_s": 90.0
+      },
+      {
+        "n": 512,
+        "mae_s": 141.357421875,
+        "rmse_s": 233.22938765435413,
+        "mdae_s": 90.0
+      },
+      {
+        "n": 512,
+        "mae_s": 146.630859375,
+        "rmse_s": 238.93286926587768,
+        "mdae_s": 90.0
+      },
+      {
+        "n": 512,
+        "mae_s": 161.19140625,
+        "rmse_s": 249.38733522123772,
+        "mdae_s": 105.0
+      }
+    ],
+    "selection_graph": {
+      "n": 512,
+      "mae_s": 161.19140625,
+      "rmse_s": 249.38733522123772,
+      "mdae_s": 105.0
+    },
+    "mean_absorption_mass": 0.9854291081428528,
+    "seconds": 2475.9775998592377
+  },
+  "selection_is_not_complete_Validation": true,
+  "active_unified_session": 46924,
+  "history_pipeline_session": 12734,
+  "history_pipeline_supervisor_pid": 34908,
+  "history_pipeline_state_file": "pipeline_historia_estado.json",
+  "historical_prior_diagnostic_and_control_plan": {
+    "status": "Native GPU training continues; no native full Validation result yet",
+    "positive_local_evidence": {
+      "held_Train_points": 9198270,
+      "clock_effect": {
+        "delta_NLL_per_point": -0.0165014305928846,
+        "CI95_by_Train_day": [
+          -0.018591713834662515,
+          -0.014138433861812655
+        ],
+        "days": 63
+      },
+      "age_effect": {
+        "delta_NLL_per_point": -0.04273812146393652,
+        "CI95_by_Train_day": [
+          -0.04346440387352998,
+          -0.04203542970524225
+        ],
+        "days": 63
+      },
+      "scope": "Historical context likelihood; not OD MAE and not complementarity to a neural representation"
+    },
+    "asset_verification": {
+      "bytes": 18461049,
+      "held_instrument_reproduced": {
+        "points": 9198270,
+        "NLL": 0.5418264381021076,
+        "previous_NLL": 0.5418264380601072
+      },
+      "fold_exclusion": {
+        "passed": true,
+        "entire_fold_intervention_invariant_at_every_backoff": true,
+        "explicit_removal_of_held_fold_exact": true,
+        "broadcast_shapes_and_probabilities": true,
+        "run_entry_clock_constant_through_a_run": true,
+        "query_order_invariant": true,
+        "no_query_duration_argument": true,
+        "no_GPU": true,
+        "code_sha256": "5083f4a0ef6d9142cb435bfca03b55c637da402e89f87dce72a7276d1070e4d8",
+        "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+      },
+      "model": {
+        "passed": true,
+        "numpy_and_Torch_history_keys_exact": true,
+        "teacher_vs_incremental_max_error": 5.960464477539063e-08,
+        "causal_future_intervention": true,
+        "finite_gradients_and_nonzero_RNN_gradient": true,
+        "raw_mass_and_survival_conserved": true,
+        "query_permutation_and_singleton": true,
+        "requires_explicit_fold_excluded_history_during_training": true,
+        "requires_only_known_departure_timestamp_at_query": true,
+        "no_query_length_or_duration_argument": true,
+        "no_GPU": true,
+        "code_sha256": "ad5a9627e6935ea3812aa3a777e0a0b667ca865e7e95cc9f4b3bb6360c3287df",
+        "model_code_sha256": "b092ab807f1c0f46167cf1a9b7419bab3ffcb5528002be3c5e95aac90891d6c7",
+        "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+      },
+      "recovered_preparation": "Wrong shape assertion corrected; original count file unchanged; see prior_eventos/fallo_preparacion.json"
+    },
+    "next_gate": {
+      "script": "piloto_historia_condicional.py",
+      "requires": "Freeze native model and complete its full127941 result first",
+      "fit": "25000Train trips; parent representation frozen; new3-event heads fitted on Train weekfolds1..4, assessed on fold0. Each count lookup excludes its own fold.",
+      "matched_control": "New linear head without empirical history; same frozen hidden representation and support",
+      "original_control": "Original frozen native stay/stop event probabilities",
+      "criterion": "History must reduce held NLL by>.001nats versus BOTH controls and have day-bootstrap upper95%<0",
+      "scope": "Only newly fitted heads held out, parent representation saw Train; not whole-model generalization",
+      "if_positive": "Warm-start6epochs new HistoricalPrefixArrival with controlled head; full Validation required; improvement alone is not causal attribution to prior because of additional training",
+      "if_negative": "Do not run temporal-prior GPU trial; pursue a distinct mechanism, not blend or smoothing searches"
+    },
+    "goal": "active",
+    "final_confirmation_s": 73.5,
+    "preservation_threshold_s": 131.06,
+    "Test": "sealed"
+  },
+  "next_after_native": [
+    "EvaluationPID35928/session46924 must finish full127941; weights and source immutable. Do not restart its completed10epoch training",
+    "History controller34908/session12734 then runs matched conditional CPU head pilot. Only if it beats BOTH controls does HistoricalGPU run6epochs canonical128",
+    "Risk controller29428/session14113 holds original34908 process handle and waits for entire previous chain, not a stale state file",
+    "After completed results/conclusions and preservation, risk_total_s0 starts on one GPU only. Mandatory actualGPU gradient proof precedes up to4000updates; otherwise inspect failure",
+    "Any full output<73.5 interrupts further research for reproduction/freeze/confirmation, Test still closed until that audit",
+    "Preserve any complete output<131.06 and every new best; allOriginal/TransferTraj results remain protected",
+    "After all scheduled trials, continue critical research if target unachieved; a finished job is not a completed goal"
+  ],
+  "goal_turn_classification": "progress: controlled Train likelihood evidence, compact assets, exact fold-exclusion verification and conditional CPU/GPU continuation implemented; Native GPU process verified live",
+  "active_history_supervisor": {
+    "pid": 34908,
+    "session": 12734,
+    "script": "continuar_tras_prefijo_acelerado.py",
+    "state": "pipeline_historia_estado.json",
+    "waits_on_actual_handle": 35928
+  },
+  "completed_CPU_reference_check": {
+    "n": 127941,
+    "CPU_reference_vs_retained_point_changes": 0,
+    "CPU_renormalization_changes": 0,
+    "changed_validation_indices": [],
+    "near_half_indices": [
+      40,
+      6063,
+      28348,
+      47021,
+      48245,
+      53410,
+      57172,
+      70632,
+      111467,
+      124760
+    ],
+    "numerical_scope": "CPU FP32 highest canonical2048; potential sensitivity only. GPU inference remains a separate exact reference check.",
+    "no_GPU": true,
+    "Test_access": false,
+    "actual_files_accessed": [
+      "propuesta\\datos\\validation_contexto.npz",
+      "propuesta\\datos\\validation_gps_mapmatched.npz",
+      "propuesta\\datos\\validation_rutas.npz",
+      "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+      "propuesta\\datos\\validation_x.npz"
+    ],
+    "code_sha256": "367891e89157d2582e6c8d4b9c1b51c515f126c4355e7b6c2793a06a1b32c013",
+    "seconds": 113.51676297187805
+  },
+  "do_not_rerun_one_time_preparation": [
+    "preparar_historia_eventos.py: already recovered; output folder exists",
+    "preparar_entrenador_historia.py: target file already exists",
+    "condicionar_entrenador_historia.py: already applied",
+    "anotar_procedencia_eventos.py: one-time pilot edit, do not repeat"
+  ],
+  "superseded_sessions": [
+    9112,
+    46174
+  ],
+  "do_not_wait_superseded_numeric_pids": [
+    20612,
+    33120,
+    35436
+  ],
+  "replacement_reason": "10epochs79960steps completed and checkpoint frozen. Original16query inference was slow. Replaced inference only, source and weights unchanged; new batch chosen without MAE and must match512point probe.",
+  "next_pipeline": "Follow current34908 supervisor/session12734, not old35436. CPU pilot remains conditional on complete frozen parent result. HistoricalGPU only if pilot beats both controls.",
+  "replacement_inference_batch_result": {
+    "rule": "Fastest eligible batch among16,64,128; require exact5-output point equality on fixed512 and mass error<2e-5; never inspect MAE for this choice",
+    "measurements": [
+      {
+        "batch": 16,
+        "seconds": 10.224390983581543,
+        "point_changes": 0,
+        "mass_max_error": 0.0,
+        "eligible": true
+      },
+      {
+        "batch": 64,
+        "seconds": 2.9108126163482666,
+        "point_changes": 90,
+        "mass_max_error": 0.01560056209564209,
+        "peak_allocated_MiB": 387.97607421875,
+        "eligible": false
+      },
+      {
+        "batch": 128,
+        "seconds": 1.9409387111663818,
+        "point_changes": 89,
+        "mass_max_error": 0.01560056209564209,
+        "peak_allocated_MiB": 447.67236328125,
+        "eligible": false
+      }
+    ],
+    "chosen": 16,
+    "scope": "Probe equivalence only, not a claim of universal equality with unfinished legacy inference"
+  },
+  "replacement_inference_outcome": "Larger batches are faster but change stochastic trajectories; keep original canonical16. No acceleration claimed. Replacement now saves point-prediction progress every8192rows and verifies canonical query order/singletons.",
+  "history_future_canonical_batch": 128,
+  "history_future_inference_scope": "A new numerical configuration declared before this trial. Current native model retains16; larger batches change some sampled paths through finite precision, although seeds and particle count are unchanged. Reference stays canonical2048.",
+  "current_history_pipeline": {
+    "pid": 34908,
+    "session": 12734,
+    "script": "continuar_tras_prefijo_acelerado.py",
+    "waiting_for_pid": 35928
+  },
+  "training_complete": {
+    "epochs_completed": 10,
+    "steps": 79960,
+    "best_epoch": 8,
+    "model_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+    "training_elapsed_seconds": 2475.9786002635956,
+    "source_sha256": "5aa78e2a4ce733c122b1b58b3aae7eb32417213f41f2d9c67965d77a06c4d26e",
+    "reason": "Training fully completed. Freeze best checkpoint and replace only slow final inference. No retraining and no change of cohort, labels, particles or query inputs.",
+    "Test": "sealed"
+  },
+  "generated_total_risk_plan": "plan_riesgo_total_generado.json",
+  "current_Validation_status": "In progress; see evaluar_prefijo_acelerado.log and prefijo_nativo_s0/evaluacion_acelerada/progreso_predicciones.npz. Partial point predictions saved every8192rows, not CDF banks.",
+  "one_time_preparations_do_not_repeat": [
+    "fijar_lote_futura_historia.py already applied",
+    "condicionar_entrenador_historia.py already applied",
+    "conectar_inferencia_acelerada.py target exists",
+    "Do not rerun hardcoded old controllers; numeric PIDs may be reused"
+  ],
+  "risk_pipeline": {
+    "pid": 29428,
+    "session": 14113,
+    "script": "continuar_a_riesgo_total.py",
+    "state": "pipeline_riesgo_estado.json",
+    "waits_on_original_process_handle": 34908
+  },
+  "on_policy_prepared": {
+    "trainer": "entrenar_riesgo_total.py",
+    "sampler": "muestreador_rechazo_nativo.py",
+    "estimator": "gradiente_crps_condicional.py",
+    "mathematical_and_synthetic_tests_passed": true,
+    "actual_Train_CPU_queries": 4,
+    "actual_GPU_gate_pending": true,
+    "not_started": true,
+    "step_budget": 4000,
+    "queries_per_step": 16,
+    "accepted_IID_paths_per_query": 8,
+    "teacher_weight": 0.1,
+    "canonical_inference128_declared_before_trial": true
+  },
+  "current_goal_turn_progress": [
+    "Verified Native inference and original process/controller identities; full evaluation progressed beyond57000rows",
+    "Implemented complete conditional rejection sampler with full unconditioned path likelihood, own Train fold exclusion and deterministic query encoding",
+    "Synthetic4096queries/32768acceptedpaths matched analytic gradient within MonteCarlo error; forbidden-category gradient cancels",
+    "Four real Train queries propagated finite nonzero gradients through route, recurrent, stay and stop heads; no optimizer/model update in probe",
+    "Prepared full-trip risk trainer, finished-resume guards and sequential controller; no second GPU started"
+  ]
+}

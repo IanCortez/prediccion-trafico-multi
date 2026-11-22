@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "probability_normalization": true,
+  "query_permutation_max_error": 0.0,
+  "mass": [
+    0.9974820017814636,
+    0.4353722631931305
+  ],
+  "same_cell_origin_destination": true,
+  "fold_exclusion_in_full_inference": true,
+  "query_inputs": "Synthetic OD fields only, no target/point count/path",
+  "model_code_sha256": "f6060380717083ff297130d196ecfcbc9d17ef0f8094e98220588618e353837d",
+  "kernel_code_sha256": "e558f1299997145992a851a573297310f07b9944a0498718569ddd92ac8cf46a",
+  "Test_access": false,
+  "trained": false
+}

@@ -1,0 +1,14 @@
+{
+  "training_completed": true,
+  "checkpoint_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "exception": "CUDA illegal memory access during full Validation after progress12288",
+  "suspected_context": "Concurrent large GPU benchmark caused observed memory pressure; cause not established",
+  "recovery_probe_passed": true,
+  "probe_rows": [
+    12288,
+    14336
+  ],
+  "recovery_session": 79208,
+  "training_not_repeated": true,
+  "Test_access": false
+}

@@ -1,0 +1,20 @@
+{
+  "n": 1023529,
+  "reliable_n": 894105,
+  "embargoed_n": 44,
+  "threshold_m": 5.0,
+  "reliable_rule": "maximum 15-second step <=500m and arrival before first Validation departure",
+  "counts_are": "Operational low-displacement GPS proxy; not annotated idling time",
+  "moving_plus_low_equals_total": true,
+  "query_trajectory_used": false,
+  "validation_or_test_path_decoded": false,
+  "source_csv_sha256_manifest": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d",
+  "output_sha256": "a225bf53897ef03a3379bcbf685664c3427780e476c5f7a1fe6c3b56d8cf1f68",
+  "data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 39.264938831329346,
+  "code_sha256": "49f64f61b5be8a9c0596faecaf76668c31ccc74216129e57477e9a96b5bf5326"
+}

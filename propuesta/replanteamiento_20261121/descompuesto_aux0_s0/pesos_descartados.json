@@ -1,0 +1,8 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\descompuesto_aux0_s0\\modelo.pt",
+  "bytes": 25331882,
+  "sha256": "87f41268a0d9acbb6fde7a88dccee8ab46c88e469507d38d71ad2e321d2973a3",
+  "predictions_sha256": "92c18fe4d69decdd81b2fbde9adbdd171a73aa6541e1b9b6c69a64ec0a79124e",
+  "mae_s": 131.41756747250685,
+  "reason": "Complete matched control does not improve131.06s; exact sources, protocol and predictions retained"
+}

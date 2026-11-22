@@ -1,0 +1,24 @@
+{
+  "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+  "validation": {
+    "mae_s": 158.8770064215753,
+    "rmse_s": 239.57272221214575,
+    "mdae_s": 105.6854248046875,
+    "mape": 28.549641312242862,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Mismo reloj preciso y modelo, sustituye MSE por MAE solo de duracion. Evaluar toda la cohorte primaria y mantener prueba cerrada.",
+  "test_labels_read": false,
+  "comparison": {
+    "reference": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+    "delta_mae_s": -16.901500701904297,
+    "ci95_s": [
+      -18.928562851685896,
+      -14.893619446557379
+    ],
+    "interpretation": "Negative favors this iteration; exploratory after adaptive validation selection, conditional on fitted models."
+  },
+  "distance_to_target_s": 85.37700642157529,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

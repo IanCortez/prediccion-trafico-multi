@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "streaming_full_reference_max_error": 5.364418029785156e-07,
+  "query_permutation_invariant": true,
+  "self_label_intervention_invariant": true,
+  "probabilities_normalized": true,
+  "Test_access": false
+}

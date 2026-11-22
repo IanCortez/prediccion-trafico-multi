@@ -1,0 +1,13 @@
+{
+  "removed": [
+    {
+      "path": "propuesta\\replanteamiento_20261121\\espacial_fases_referencia_s0\\ultima_reanudacion.pt",
+      "bytes": 25457464,
+      "sha256": "045e212baf32fa86afe78ee74cb9789cec2a21b34aade32c0a328db192c80b47",
+      "reason": "Training complete with full result; best checkpoint remains for calibration and next initialization"
+    }
+  ],
+  "original_data_untouched": true,
+  "best_reference_untouched": true,
+  "TransferTraj_original_metrics_predictions_untouched": true
+}

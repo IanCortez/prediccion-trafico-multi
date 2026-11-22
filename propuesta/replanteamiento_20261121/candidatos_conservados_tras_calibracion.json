@@ -1,0 +1,6 @@
+{
+  "candidates": [],
+  "protected_original_model": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "preserve_rule": "Keep every complete result below131.06s and every new best; all new bests need reproduction audit",
+  "Test": "sealed"
+}

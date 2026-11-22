@@ -1,0 +1,19 @@
+{
+  "id": "od_xgboost_transfertraj_prefijo6_s0",
+  "top_level_source_hashes_unchanged": true,
+  "vendor_copied_after_fit": true,
+  "vendor_from_preexisting_frozen_checkpoint": true,
+  "vendor_hashes": {
+    "data.py": "1abbf59fa49450ecefbef100bd78c38179011bbcf0c13869405d7b9dd4466c48",
+    "main.py": "bc68470d36c034a8b2f538de4c61809d7e89a1d86840c240e448011b34a77483",
+    "pipeline.py": "a96b37e499588ecc74f29b754edbc17521c3520e3ab203615e8ec71520dbf3a2",
+    "utils.py": "f6a11df3aaa9c3910fb4a25424639490bebaa1667b214d512bc226f3c317d39b",
+    "models\\encode.py": "bd8fe0e6e0b559c0dc4a60ed3a1b8b8909c49854564818b6f32c814e81da0de4",
+    "models\\transfertraj.py": "45e0bf64c21b17920bb25bd4eb106fe9f0701f1cb6fb1327fe82bf03c501328e"
+  },
+  "source_parent": "transfertraj_math_prefijo6_instantanea_s0",
+  "original_execution_sha256": "6dfd6286bf52a4a6c6457f5b08b5c5e3150af2595066897f1ed68411a86c11cb",
+  "updated_execution_sha256": "8c952d95c64e795925fa3d052d2f2c585ff5653d2e446317a0e896e330fd0b2d",
+  "interpretation": "Cached tree fitting did not execute the encoder. Its import dependency is now packaged from the already-frozen prefix6 source, verified against parent hashes. Original execution record and initial top-level sources preserved; not claimed as an initial vendor copy.",
+  "test_labels_read": false
+}

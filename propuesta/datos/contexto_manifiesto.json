@@ -1,0 +1,16 @@
+{
+  "poi_source_sha256": "619bfd3b0ae277bb02d1309004db0240d003f358ad3facbe7b0b866a99ff5802",
+  "road_source_sha256": "bf05ab381bf459fa58b8adf9bfc7a6fb3cf9621387e1744f0edb0f9243d894fd",
+  "grid_sha256": "a6c8bf90ff91a16eb3e5df9bb54876044a82b74eb7d3b85fc254cab4fd8445d6",
+  "grid_m": 25,
+  "radii_m": [
+    100,
+    300,
+    800
+  ],
+  "n_features": 108,
+  "poi_n": 46955,
+  "road_n": 13336,
+  "method": "Fixed geographic grid; log1p count per radius, physical scale retained, no ranks or trip-dependent normalization",
+  "seconds": 21.8751060962677
+}

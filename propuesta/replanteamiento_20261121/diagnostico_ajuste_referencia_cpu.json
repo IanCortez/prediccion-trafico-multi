@@ -1,0 +1,50 @@
+{
+  "scope": "8192 fixed random examples per group; CPU evaluation of protected frozen model, not new candidate or full-cohort result",
+  "results": {
+    "Train_random": {
+      "metric": {
+        "n": 8192,
+        "mae_s": 112.188720703125,
+        "rmse_s": 187.95472204513112,
+        "mdae_s": 60.0
+      },
+      "mean_NLL_nats": 3.4931259155273438,
+      "label_mean_s": 607.8900146484375,
+      "label_median_s": 555.0
+    },
+    "Train_recent30days": {
+      "metric": {
+        "n": 8192,
+        "mae_s": 114.74853515625,
+        "rmse_s": 191.5370089075477,
+        "mdae_s": 75.0
+      },
+      "mean_NLL_nats": 3.5059025287628174,
+      "label_mean_s": 613.7164306640625,
+      "label_median_s": 555.0
+    },
+    "Validation": {
+      "metric": {
+        "n": 8192,
+        "mae_s": 130.927734375,
+        "rmse_s": 209.2811269271327,
+        "mdae_s": 75.0
+      },
+      "mean_NLL_nats": 3.6763672828674316,
+      "label_mean_s": 617.706298828125,
+      "label_median_s": 570.0,
+      "CPU_vs_saved_GPU_changed_predictions": 0,
+      "saved_GPU_sample": {
+        "n": 8192,
+        "mae_s": 130.927734375,
+        "rmse_s": 209.2811269271327,
+        "mdae_s": 75.0
+      }
+    }
+  },
+  "caveat": "Train is in sample; distributions differ over time. A small fit gap does not establish a Bayes lower bound; a large gap does not prove a specific cause. CPU arithmetic is checked against saved GPU predictions on the same Validation sample.",
+  "code_sha256": "2431d57f1e8a41eb167c5262d82489494279500850987105e321819e854fa9c6",
+  "no_GPU_used": true,
+  "Test_access": false,
+  "seconds": 17.96557593345642
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "streaming_max_error": 1.7881393432617188e-07,
+  "self_value_intervention_invariant": true,
+  "no_validation_labels_in_memory": true
+}

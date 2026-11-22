@@ -1,0 +1,114 @@
+{
+  "protocol": {
+    "alphas": [
+      0,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      1
+    ],
+    "selection": "Same fixed4096 Validation subset",
+    "defined_before_current_training_finished": true,
+    "scan_count": 1,
+    "full_cohort": 127941,
+    "Test": "sealed",
+    "no_further_weight_search_for_same_frozen_pair": true,
+    "preserve_models_below_MAE_s": 131.06,
+    "no_duplicate_weights": true,
+    "no_disk_CDF_banks": true
+  },
+  "alphas": [
+    0,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    1
+  ],
+  "full_validation": [
+    {
+      "n": 127941,
+      "mae_s": 131.25671207822356,
+      "rmse_s": 210.804448731162,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.2574155274697,
+      "rmse_s": 210.81731237860146,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.259056909044,
+      "rmse_s": 210.83583064832445,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.30149834689428,
+      "rmse_s": 210.87748246990475,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.55462283396253,
+      "rmse_s": 211.15780938834206,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 132.29218936853707,
+      "rmse_s": 211.90039910388327,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 133.57563251811382,
+      "rmse_s": 213.13848477882166,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 140.966187539569,
+      "rmse_s": 220.28246271192867,
+      "mdae_s": 90.0
+    }
+  ],
+  "selected_by_fixed_subset": 0.02,
+  "selected_full_validation": {
+    "n": 127941,
+    "mae_s": 131.2574155274697,
+    "rmse_s": 210.81731237860146,
+    "mdae_s": 75.0
+  },
+  "best_full_validation_exploratory_alpha": 0,
+  "shared_checkpoint_sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a",
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "paired_selected_vs_reference": {
+    "delta_mae_s": 0.0007034492461368912,
+    "ci95_s": [
+      -0.01990748233679312,
+      0.021534705239968855
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "ORACLE_min_error_among_only_the8_tested_outputs_s": 113.25685276807279,
+  "oracle_scope": "Privileged per-query choice among only the8 actual predeclared outputs, using unknown truth. Not deployable, not achieved MAE, and not a lower bound for untested weights or other architectures. The single-scan limit comes from the predeclared protocol.",
+  "qualified_candidates": [],
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "Test_access": false,
+  "code_sha256": "77f93d91ec87afdc0ae0cac6029f9e1911c95fef189a5403274b608e1bf09ce1"
+}

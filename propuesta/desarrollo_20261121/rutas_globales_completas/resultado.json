@@ -1,0 +1,47 @@
+{
+  "kind": "OD-only global expected-time/support route features",
+  "records": {
+    "train": {
+      "n": 1023529,
+      "available_fraction": 0.9829775094985962,
+      "sha256": "fcea14e43f835ed576edbb2769d2a5d17001249a3989f3cd3fdf384c379c7d80",
+      "bytes": 77315950
+    },
+    "validation": {
+      "n": 127941,
+      "available_fraction": 0.9827576875686646,
+      "sha256": "ac9ee58637a8dcfd572b2ee4a4832c98100a2d2dbae6afa26477d6dba2c02a79",
+      "bytes": 9656093
+    }
+  },
+  "features": [
+    "global_shape_0",
+    "global_shape_1",
+    "global_shape_2",
+    "global_shape_3",
+    "global_shape_4",
+    "global_shape_5",
+    "global_shape_6",
+    "global_shape_7",
+    "global_shape_8",
+    "global_shape_9",
+    "global_shape_10",
+    "global_shape_11",
+    "global_shape_12",
+    "global_shape_13",
+    "global_km",
+    "global_freeflow_600s",
+    "global_history_600s",
+    "global_link_support",
+    "global_log_edges",
+    "global_connector_km",
+    "global_available"
+  ],
+  "code_sha256": "d914efb40ba2b00b07857e7fc4ddf8d2e0877f997a7949ac4a0d1bfd82b7e082",
+  "routing_function_sha256": "e7e7f64e6971ee3aedc42d044037424cb84ce6144fb0facb4145e9b21073c3eb",
+  "seconds": 297.0267958641052,
+  "Test_access": false,
+  "labels_used_for_query_routing": false,
+  "profiles": "Train: excluded departure-week fold. Validation: full Train only.",
+  "new_dense_matrices": 0
+}

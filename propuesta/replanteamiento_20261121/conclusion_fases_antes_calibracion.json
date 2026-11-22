@@ -1,0 +1,34 @@
+{
+  "validation": {
+    "n": 127941,
+    "mae_s": 132.70077613900156,
+    "rmse_s": 212.29246423219976,
+    "mdae_s": 75.0
+  },
+  "reference": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "graph": {
+    "n": 127941,
+    "mae_s": 141.15916711609256,
+    "rmse_s": 220.49039041070517,
+    "mdae_s": 90.0
+  },
+  "paired": {
+    "delta_mae_s": 1.4440640607780149,
+    "ci95_s": [
+      1.2363817387929465,
+      1.6653717593167479
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "preserve_threshold_s": 131.06,
+  "qualifies": false,
+  "new_primary_best": false,
+  "Test": "sealed",
+  "conclusion": "Full Validation result of trained model, recorded before any weight calibration. Goal not complete without frozen-candidate confirmation."
+}

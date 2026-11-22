@@ -1,0 +1,405 @@
+{
+  "protocol": "Same_local_primary_validation_127941_trips;no_Test_predictions",
+  "published_TransferTraj_323481_trip_cohort_not_available": true,
+  "not_a_replication_of_published_73_5_seconds": true,
+  "cases": [
+    {
+      "id": "od_modal_normalizado_sin_pre_s0",
+      "architecture": "transfertraj_modal_normalizado",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 166.44812985427973,
+        "rmse_s": 237.9029784275354,
+        "mdae_s": 120.22286987304688,
+        "mape": 33.92738076023813,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 166.44812985427973,
+        "source_SHA256": "001acca25acaed30e88e39fa3c0e70cfc41f71f736ee143b063aa9105097a060",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_reloj_preciso_duracion_mae_sin_normalizar_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 158.8770064215753,
+        "rmse_s": 239.57272221214575,
+        "mdae_s": 105.6854248046875,
+        "mape": 28.549641312242862,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 158.8770064215753,
+        "source_SHA256": "d2568689c8fc18aab1a3b151ee19f6738a4cc3dac8c4a33b75dd8fed5be4c3d6",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 175.77850761821756,
+        "rmse_s": 246.74729533849455,
+        "mdae_s": 132.1109619140625,
+        "mape": 34.71277159104112,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 175.77850761821756,
+        "source_SHA256": "521d6cccd99b2cb81761796ce1dc10ae607109ddcae0e1e09b12760382552a87",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_reloj_preciso_oficial_sin_normalizar_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 162.89860516635213,
+        "rmse_s": 233.729971510491,
+        "mdae_s": 118.37860107421875,
+        "mape": 32.77059540316956,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 162.89860516635213,
+        "source_SHA256": "138464a02259326ea71f2201e0244cc6bb60ebfcb909d43a21f3d36e2e6db9d8",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_transfertraj_adaptado_sin_pre_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "od",
+      "status": "incomplete",
+      "validation": null,
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 554.5258752804972,
+        "source_SHA256": "9c31edb70e6adc9e9a04948ef7ae764ed9812f6066dac1a7dbf21eed9ddc64fb",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "mejor.json",
+        "progreso.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_transfertraj_math_pre30_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 171.7201123041532,
+        "rmse_s": 242.58526898635768,
+        "mdae_s": 127.64013671875,
+        "mape": 34.17252463131909,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 171.7201123041532,
+        "source_SHA256": "60cb67ee49e99033ab1d1c466605ef51609d7c4f4ad6d066cc05620939da347c",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_transfertraj_math_sin_pre_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 164.36768626577134,
+        "rmse_s": 236.9183530969551,
+        "mdae_s": 117.1583251953125,
+        "mape": 32.27114861798219,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 164.36768626577134,
+        "source_SHA256": "9eceff2c39ef60450899d55f9a942819ce2caf78996a2acdeb183a2136403bea",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_transfertraj_metrico_sin_pre_s0",
+      "architecture": "transfertraj_metrico",
+      "stage": "od",
+      "status": "completed",
+      "validation": {
+        "mae_s": 164.60096140012416,
+        "rmse_s": 234.4548316221635,
+        "mdae_s": 120.67095947265625,
+        "mape": 33.62045837799077,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 164.60096140012416,
+        "source_SHA256": "038c76dced49a6d22344696bd51106216ac566cf68de5b129fac3746b1b9d43e",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "timestamp",
+          "true",
+          "pred"
+        ]
+      },
+      "retained_files": [
+        "ejecucion.json",
+        "evaluacion_critica.json",
+        "historia.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_xgboost_transfertraj_aleatorio_s0",
+      "architecture": "xgboost",
+      "stage": null,
+      "status": "completed",
+      "validation": {
+        "mae_s": 134.54569770525023,
+        "rmse_s": 214.09939149365127,
+        "mdae_s": 82.94140625,
+        "mape": 23.46966124963442,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 134.54569770525023,
+        "source_SHA256": "e6c23d134561c17f72c953112e1ecd1eaffc72814e688aa6148158b91a303fb2",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "pred",
+          "true",
+          "timestamp"
+        ]
+      },
+      "retained_files": [
+        "auditoria_empaquetado_fuentes.json",
+        "ejecucion.json",
+        "ejecucion_al_inicio.json",
+        "evaluacion_critica.json",
+        "presupuesto_recursos.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "od_xgboost_transfertraj_prefijo6_s0",
+      "architecture": "xgboost",
+      "stage": null,
+      "status": "completed",
+      "validation": {
+        "mae_s": 134.30095756217634,
+        "rmse_s": 213.72789256911113,
+        "mdae_s": 82.68582153320312,
+        "mape": 23.390036538702912,
+        "n": 127941
+      },
+      "predictions": {
+        "n": 127941,
+        "MAE_s": 134.30095756217634,
+        "source_SHA256": "9bdb8a731345587ffdbe26b1162c727748a899a9ab9631c7bd091461ad76304a",
+        "predictions_and_rows_and_truth_retained_without_changes": true,
+        "keys": [
+          "row",
+          "pred",
+          "true",
+          "timestamp"
+        ]
+      },
+      "retained_files": [
+        "auditoria_empaquetado_fuentes.json",
+        "ejecucion.json",
+        "ejecucion_al_inicio.json",
+        "evaluacion_critica.json",
+        "presupuesto_recursos.json",
+        "resultado.json",
+        "validacion.npz"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "transfertraj_adaptado_pre30_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "pretrain",
+      "status": "incomplete",
+      "validation": null,
+      "predictions": null,
+      "retained_files": [
+        "ejecucion.json",
+        "progreso.json"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "transfertraj_math_pre30_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "pretrain",
+      "status": "pretraining_completed",
+      "validation": null,
+      "predictions": null,
+      "retained_files": [
+        "ejecucion.json",
+        "historia_preentrenamiento.json",
+        "mejor.json",
+        "progreso.json",
+        "resultado_preentrenamiento.json"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    },
+    {
+      "id": "transfertraj_math_prefijo6_instantanea_s0",
+      "architecture": "transfertraj_adaptado",
+      "stage": "pretrain",
+      "status": "pretraining_completed",
+      "validation": null,
+      "predictions": null,
+      "retained_files": [
+        "ejecucion.json",
+        "historia_preentrenamiento.json",
+        "mejor.json",
+        "resultado_preentrenamiento.json"
+      ],
+      "weights_retained": false,
+      "not_exact_published_Porto_cohort": true
+    }
+  ]
+}

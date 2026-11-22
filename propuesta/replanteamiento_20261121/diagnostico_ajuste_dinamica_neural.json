@@ -1,0 +1,17 @@
+{
+  "scope": "8192 random valid nonterminal TRAIN teaching states, weeks modulo5==0; model itself trained on ALL eligible Train including these weeks",
+  "independent_generalization_test": false,
+  "optimistic_fit_diagnostic": true,
+  "snapshot_stage": {
+    "local_epoch": 26
+  },
+  "snapshot_sha256": "097c6e158ea511c6d2b965d27c8cecb2a3d0848b37cf2572ad293a8c01cd3155",
+  "next_move_NLL_nats": 0.7020174264907837,
+  "next_move_top1": 0.7523193359375,
+  "residence_NLL_nats": 1.0896672010421753,
+  "reference": "Held-week empirical conditioned count model on4.13million moves: NLL0.64690, accuracy0.76374; different sample and access, not a controlled performance comparison",
+  "actual_query_GPS_used": false,
+  "Train_actual_prefix_used_for_teacher_diagnostic": true,
+  "Validation_or_Test_paths_decoded": false,
+  "Test_access": false
+}

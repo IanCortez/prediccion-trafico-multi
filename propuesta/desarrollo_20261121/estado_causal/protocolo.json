@@ -1,0 +1,19 @@
+{
+  "kind": "New online exploratory protocol, not the frozen static OD benchmark",
+  "label_availability": "departure + observed duration + 60 seconds; strictly before current departure",
+  "initial_state": "empty; no Validation future and no Train in-sample residual warm start",
+  "fixed_configurations": [
+    "frozen_static",
+    "global_2h",
+    "local_2h",
+    "local_6h",
+    "local_24h"
+  ],
+  "fit_or_tuning": "none; fixed parameters before simulation",
+  "limits": {
+    "max_bias_s": 120,
+    "local_shrinkage_n": 30,
+    "global_shrinkage_n": 50
+  },
+  "scope": "all existing 127941 Validation trips in original order; Test remains sealed"
+}

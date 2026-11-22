@@ -1,0 +1,8 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\memoria_mse_s0\\modelo.pt",
+  "bytes": 375722,
+  "sha256": "efcc33925e3e271861e0134b083462f5f1860b63543f2f66a18b3a67a27b16db",
+  "predictions_sha256": "52186f8c7d80e7507b9c969f2a3dc78b8c86a9a354209b56664057b348fd528e",
+  "mae_s": 144.3031549620929,
+  "reason": "Completed non-improving experiment; predictions, metrics, protocol and exact source preserved"
+}

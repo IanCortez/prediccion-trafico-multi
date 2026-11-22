@@ -1,0 +1,24 @@
+{
+  "n_queries": 1279412,
+  "sources": 5818,
+  "junctions": 15182,
+  "graph_sha256": "3dbbb11b260694f2beb0060c2015b2d3f21f51358ea32253d20042ee94a731da",
+  "queries_sha256": "573ce9528d08375e85bd19fbcda5809d8f02c0c474fdaffc5f2f398e6cd5484c",
+  "static_path_metrics": [
+    "shortest geometry",
+    "fastest OSM free flow"
+  ],
+  "equivalence": {
+    "length": {
+      "max_absolute_error": 0.00038729890820832225,
+      "n": 150,
+      "connectivity_equal": true
+    },
+    "free": {
+      "max_absolute_error": 4.407680842177797e-05,
+      "n": 150,
+      "connectivity_equal": true
+    }
+  },
+  "seconds": 34.794652223587036
+}

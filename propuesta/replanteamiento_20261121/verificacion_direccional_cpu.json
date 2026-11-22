@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "multiple_directional_end_states": true,
+  "analytical_path_mixture_and_time_convolution": true,
+  "return_loops_mass_conserved": true,
+  "analytical_gradient": true,
+  "fast_and_grad_match": true,
+  "batch_permutation": true,
+  "query_actual_direction_used": false,
+  "Test_access": false
+}

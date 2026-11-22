@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "teacher_vs_incremental_max_error": 0.0,
+  "future_intervention_causal": true,
+  "padding_length_does_not_enter_prefix": true,
+  "finite_gradients_and_nonzero_RNN_gradient": true,
+  "exact_geometric_absorption_checked": true,
+  "unconditioned_mass_and_survival_conserved": true,
+  "stateless_seed_permutation_and_singleton": true,
+  "real_Train_trips_reconstructed": 1000,
+  "duration_labels_and_endpoints_exact": true,
+  "valid_point_states": 42711,
+  "valid_motion_targets": 41630,
+  "query_inputs": "OD and departure; simulated history only; horizon120 fixed, not actual query N",
+  "no_GPU": true,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "code_sha256": "3bb02830cf7db31a8624f0e54df4d68451764922f8937d51358a7e5307f08c2d",
+  "model_sha256": "409276770dce488db10e035e289faf6aa45d735742db6d98060375f448cc177b",
+  "data_sha256": "15170dcd56b4c9e697997502ef2dbdb89ca547bfe17d17841990f7e8ee62a557"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "espacial_prior_cf_s0",
+  "config": {
+    "id": "espacial_prior_cf_s0",
+    "process_id": 35992,
+    "seed": 0,
+    "epochs": 30,
+    "fine_steps": 1000,
+    "local_batch": 2048,
+    "dp_batch": 2,
+    "inference_batch": 8,
+    "selection_n": 512,
+    "selection_head": "fixed mixed spatial/direct posterior",
+    "transition_prior": "Hierarchical Train counts over cell/destination bearing-distance/incoming heading; subtract entire departure-week fold at all Train local and total-loss steps; Validation uses all Train; count exclusion does not exclude neural fitting or allowed graph",
+    "local_loss": "next-zone CE + residence CE + terminal CE + direct OD NLL +5RPS",
+    "fine_loss": "mixed total NLL +5RPS through differentiable semi-Markov inference",
+    "query_input": "Same216 OD/departure/map/history features, plus grid IDs derived deterministically from given endpoints",
+    "no_query_route_or_duration": true,
+    "geometry": "200m cells; public2014 roads and Train transitions only; state=(cell,incoming heading4) plus one unknown-heading origin state",
+    "time_model": "Spatial state transition + positive movement residence + nonnegative terminal residence; marginalize all paths",
+    "time_window": "Fixed60..1785s for every query; no observed query point count",
+    "max_seconds": 7200,
+    "Test_access": false
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 137.53886557084905,
+    "rmse_s": 216.9405669865068,
+    "mdae_s": 90.0
+  },
+  "od_validation": {
+    "n": 127941,
+    "mae_s": 138.09470771683823,
+    "rmse_s": 218.09671610099505,
+    "mdae_s": 90.0
+  },
+  "graph_validation": {
+    "n": 127941,
+    "mae_s": 148.20280441766127,
+    "rmse_s": 228.17326791366307,
+    "mdae_s": 90.0
+  },
+  "best_stage": {
+    "fine_step": 600
+  },
+  "model_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "model_code_sha256": "324a1130d44f64ef13b39b6e1e8e5a9d6808e9b94bf251466a27a3b6d2659777",
+  "kernel_code_sha256": "bf712de7a6e0f0e26ffc19b49b248b3e14b2162f79998d6557453069225a1835",
+  "training_code_sha256": "10f39917616951ca91c6ce5a438b47f2ab522ca95e136c305355111f5515a42e",
+  "inference_recovery_code_sha256": "44129ef08b1c255f51857cbb3d95471efe33c13e0deb5a75d7cad6e58f601099",
+  "prior_counts_sha256": "fb6c68e4b2a19dd40848a9afd9f03adf60d1c5ee4b6194c5567fac1c8d57108d",
+  "data_grid_sha256": "a53f981ae6749f602eb2ee6b6b5efba4fb6c0635b471f0c89b1064f7b65fd3a1",
+  "paired_vs_retained": {
+    "delta_mae_s": 6.282153492625507,
+    "ci95_s": [
+      5.724006302412431,
+      6.83130987641942
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "parameters": 2121447,
+  "recovered_after_cuda_failure": true,
+  "training_was_not_repeated": true,
+  "canonical_batch": 8,
+  "unused_fold_buffers_removed_only_from_RAM": true,
+  "Test_access": false,
+  "goal_validation": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "recovery_seconds": 997.1261131763458
+}

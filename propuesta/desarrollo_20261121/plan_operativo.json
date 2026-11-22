@@ -1,0 +1,22 @@
+{
+  "fecha": "2026-11-21",
+  "objetivo": "MAE de confirmacion <73.5 s, cohorte primaria OD congelada",
+  "restricciones": [
+    "Todo dentro de E:/UTEC/Tesis/TesisIan y entorno Conda local",
+    "No trayectoria real de consulta ni datos futuros",
+    "No abrir Test si no hay candidato congelado que justifique confirmacion",
+    "No considerar el experimento regional ni el protocolo online como logro del objetivo estatico"
+  ],
+  "hipotesis": [
+    "Transferencia regional selectiva con presupuesto fijo",
+    "Ajuste directo de la mediana al MAE",
+    "Estado causal de viajes ya terminados, protocolo separado",
+    "Rutas globales con coste historico y preferencia por enlaces observados",
+    "Adaptador de distribucion con rutas globales frente a control de igual capacidad"
+  ],
+  "presupuesto_adicional_max_gb": 1,
+  "presupuesto_ciclo_max_horas": 2,
+  "seleccion": "Validacion reutilizada; diferencias e intervalos son exploratorios",
+  "estado": "Experimentos terminados; objetivo NO alcanzado; sin ejecuciones pendientes",
+  "objective_achieved": false
+}

@@ -1,0 +1,170 @@
+{
+  "goal": "MAE confirmation <73.5 seconds; unchanged primary OD cohort",
+  "status": "active",
+  "completed": {
+    "base_oof_estatica_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.18608419982218,
+        "rmse_s": 217.50664256249215,
+        "mdae_s": 83.49401562688035
+      },
+      "OOF": {
+        "n": 1023485,
+        "mae_s": 131.475149159145,
+        "rmse_s": 212.84137741731294,
+        "mdae_s": 80.09576416015625
+      },
+      "in_sample": {
+        "n": 1023485,
+        "mae_s": 126.32435574647819,
+        "rmse_s": 207.88454994783876,
+        "mdae_s": 75.50473022460938
+      },
+      "seconds": 1764.1730108261108
+    },
+    "cabeza_fases_cpu": {
+      "seconds": 16.26175308227539
+    },
+    "datos_semi_markov": {
+      "seconds": 123.99043798446655
+    },
+    "descompuesto_aux0_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.41756747250685,
+        "rmse_s": 212.51456124532928,
+        "mdae_s": 75.0
+      },
+      "best_epoch": 48,
+      "epochs_run": 68,
+      "seconds": 3320.6846771240234
+    },
+    "descompuesto_aux1_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.62731258939667,
+        "rmse_s": 212.15485612842585,
+        "mdae_s": 75.0
+      },
+      "best_epoch": 48,
+      "epochs_run": 68,
+      "seconds": 2367.459737062454
+    },
+    "espacial_direccional_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 137.91802471451686,
+        "rmse_s": 217.45644950373136,
+        "mdae_s": 90.0
+      },
+      "od_validation": {
+        "n": 127941,
+        "mae_s": 138.0847421858513,
+        "rmse_s": 218.18612603316336,
+        "mdae_s": 90.0
+      },
+      "graph_validation": {
+        "n": 127941,
+        "mae_s": 152.22395479166178,
+        "rmse_s": 232.5844808193083,
+        "mdae_s": 105.0
+      },
+      "seconds": 1851.4751737117767
+    },
+    "espacial_prior_cf_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 137.53886557084905,
+        "rmse_s": 216.9405669865068,
+        "mdae_s": 90.0
+      },
+      "od_validation": {
+        "n": 127941,
+        "mae_s": 138.09470771683823,
+        "rmse_s": 218.09671610099505,
+        "mdae_s": 90.0
+      },
+      "graph_validation": {
+        "n": 127941,
+        "mae_s": 148.20280441766127,
+        "rmse_s": 228.17326791366307,
+        "mdae_s": 90.0
+      }
+    },
+    "espacial_semimarkov_s0_v2": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 138.22343892888128,
+        "rmse_s": 220.15717408778448,
+        "mdae_s": 90.0
+      },
+      "od_validation": {
+        "n": 127941,
+        "mae_s": 138.33962529603488,
+        "rmse_s": 220.7329296653693,
+        "mdae_s": 90.0
+      },
+      "graph_validation": {
+        "n": 127941,
+        "mae_s": 154.22175065069055,
+        "rmse_s": 234.46667919909925,
+        "mdae_s": 105.0
+      },
+      "seconds": 1369.4464671611786
+    },
+    "memoria_cdf_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 137.4315895608132,
+        "rmse_s": 219.76714831713943,
+        "mdae_s": 90.0
+      },
+      "best_epoch": 19,
+      "epochs_run": 31,
+      "seconds": 1326.5635328292847
+    },
+    "memoria_mse_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 144.3031549620929,
+        "rmse_s": 215.5584713506147,
+        "mdae_s": 98.6387939453125
+      },
+      "best_epoch": 10,
+      "epochs_run": 22,
+      "seconds": 834.9217772483826
+    },
+    "memoria_residual_oof_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.30580321953553,
+        "rmse_s": 216.76987131695302,
+        "mdae_s": 84.3558398865672
+      },
+      "best_epoch": 22,
+      "epochs_run": 34,
+      "seconds": 1050.101538658142
+    }
+  },
+  "running": [
+    {
+      "experiment": "espacial_fases_referencia_s0",
+      "pid": 35416,
+      "session_id": 73257,
+      "device": "GPU",
+      "max_memory_fraction": 0.4,
+      "microbatch": 8,
+      "accumulation": 2,
+      "resume_command": ".conda-env/python.exe -B propuesta/replanteamiento_20261121/entrenar_fases_referencia.py --id espacial_fases_referencia_s0 --resume"
+    }
+  ],
+  "next": [],
+  "Test": "sealed; no Test labels used in adaptive search",
+  "candidate_preservation_threshold_s": 131.06,
+  "current_best": {
+    "id": "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+    "mae_s": 131.25671207822356
+  },
+  "storage": "Original data and TransferTraj preserved. No disk CDF banks. Discarded weights removed only after result/hash checks."
+}

@@ -1,0 +1,122 @@
+{
+  "status": "Independent phase model now actively training with frozen strong reference",
+  "reason": "Current local training sees full Train duration in direct head, but exact structural total-duration fine tuning sees only1000steps×2queries. Compact residence recurrence could permit materially larger batches and more total-duration updates.",
+  "mechanism": "Mixture of8 shifted geometric residence distributions; exact reservoir recurrence instead of categorical119-lag explicit convolution",
+  "math": "R_t,k=(1-h_k)R_(t-1),k+w_k*A_(t-1-lag_k); departures_t=sum_k h_k R_t,k times leave probability; destination absorption convolved with terminal residence",
+  "lags": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+  ],
+  "query_cohort": "Unchanged60..1785 seconds for every query. Residence support unbounded; condition total cohort only after finite-horizon absorption.",
+  "preserve": "Existing directional empirical transition prior and count-fold exclusion; no true query path/count/time",
+  "proposed_next": "After current complete Validation results, benchmark CUDA forward/backward throughput before committing a training budget. Warm-start route/OD weights, initialize compact residence head from Train-only fit, train larger total-duration batches.",
+  "Test": "sealed",
+  "current_active": [
+    {
+      "id": "espacial_direccional_s0",
+      "pid": 30768
+    },
+    {
+      "id": "espacial_prior_cf_s0",
+      "pid": 35992,
+      "session": 44841
+    }
+  ],
+  "preserve_candidate_threshold_s": 131.06,
+  "final_goal_s": 73.5,
+  "Train_only_global_fit": {
+    "excess_NLL_nats": 0.0001237895073324946,
+    "mass_within119": 0.9999999966317915,
+    "interpretation": "Global histogram fit only; not proof of conditional fit or MAE improvement"
+  },
+  "shared_trip_effect_hypothesis": {
+    "evidence": {
+      "scope": "Train held weeks modulo5==0 only; valid nonterminal residences, NOT total-trip predictor MAE",
+      "fit": "Other Train weeks; moments conditioned on cell, incoming heading, destination bearing8/distance4, departure UTC4-hour period and weekend",
+      "held_trips_with_2plus_runs": 222578,
+      "held_valid_runs": 4130223,
+      "mean_run_residual_intervals": -0.015115463380238989,
+      "variance_of_trip_residual_sum_over_sum_step_residual_variances": 1.4230997438174753,
+      "ratio_CI95_by_day": [
+        1.3773927551430611,
+        1.47577748725347
+      ],
+      "mean_cross_step_covariance_intervals_squared": 0.052035588818304584,
+      "variance_relative_to_predicted_local_variances": 1.4561176328875118,
+      "by_run_count": [
+        {
+          "valid_runs": [
+            2,
+            5
+          ],
+          "trips": 9816,
+          "variance_ratio": 1.2401064013402583
+        },
+        {
+          "valid_runs": [
+            6,
+            10
+          ],
+          "trips": 38895,
+          "variance_ratio": 1.3293294365885777
+        },
+        {
+          "valid_runs": [
+            11,
+            20
+          ],
+          "trips": 93260,
+          "variance_ratio": 1.4198260264061153
+        },
+        {
+          "valid_runs": [
+            21,
+            40
+          ],
+          "trips": 73704,
+          "variance_ratio": 1.4575926409627178
+        },
+        {
+          "valid_runs": [
+            41,
+            120
+          ],
+          "trips": 6903,
+          "variance_ratio": 1.4348583225583142
+        }
+      ],
+      "interpretation": "A ratio above1 indicates positive dependence remaining under this COARSE historical mean model. It may reflect omitted context as well as a shared trip effect. It does not prove a causal driving style or irreducible uncertainty, and it is not a travel-time MAE result.",
+      "Validation_or_Test_paths_decoded": false,
+      "Test_access": false,
+      "seconds": 8.768739938735962,
+      "code_sha256": "2921d1f18c19cb4fec26e8186e883144094db6ff8bf87bcd4f5c5d78ecb8304e"
+    },
+    "next": "Consider a query-level shared latent environment ONLY after testing efficient independent-phase model. A shared environment must be marginalized over at query and learned solely with Train paths; no true query route or completed Validation trips.",
+    "references": [
+      {
+        "title": "Bayesian Dynamic Gamma Models for Route-Level Travel Time Reliability",
+        "year": 2026,
+        "status": "arXiv preprint,6Feb2026",
+        "url": "https://arxiv.org/html/2602.07170v1",
+        "supports": "Common latent environment can induce cross-segment dependence; I55 sensor route reliability, not Porto OD MAE. Our adaptation would use phase-type residence and unknown spatial paths, not reproduce its Gamma/F model."
+      },
+      {
+        "title": "Link Representation Learning for Probabilistic Travel Time Estimation / ProbETA",
+        "year": 2025,
+        "revision": "arXivv2,26Jan2026",
+        "url": "https://arxiv.org/abs/2407.05895v2",
+        "doi": "10.1109/TITS.2025.3590075",
+        "supports": "Hierarchical link representation with intra/inter-trip dependence. Its adjacent-completed-trip query information differs from primary static OD; only the dependence mechanism is relevant here."
+      }
+    ]
+  },
+  "active_trial": "espacial_fases_referencia_s0",
+  "real_GPU_evidence": "Partial benchmark through batch8: phase20.876queries/s versus categorical10.084; incremental allocated peaks1.322GB versus2.730GB. Larger legacy test cancelled; do not rerun.",
+  "resource_policy": "One heavy GPU job, microbatch8, accumulation2, process memory fraction.40"
+}

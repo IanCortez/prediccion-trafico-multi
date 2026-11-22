@@ -5,3 +5,15 @@ cache/
 runs/
 
 **/data/
+# Local research environments and raw/derived datasets
+.conda-env/
+.runtime/
+publicacion_github_*/
+**/*.pyc
+**/ultima_reanudacion.pt
+**/continuacion.pt
+propuesta/datos/**/*.npy
+propuesta/datos/**/*.npz
+propuesta/datos/**/*.pbf
+# Explicitly retain the compact evidence archive in this review snapshot
+!propuesta/resultados/historial_evidencia.zip

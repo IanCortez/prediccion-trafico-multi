@@ -1,0 +1,17 @@
+{
+  "folds": 4,
+  "fold_rule": "UTC departure week modulo4",
+  "features": "206 static OD/map/calendar; no label-derived GPS profiles",
+  "iterations": 1800,
+  "depth": 8,
+  "learning_rate": 0.06,
+  "l2_leaf_reg": 10,
+  "loss": "MAE",
+  "target_scale": 600,
+  "thread_count": 4,
+  "task_type": "CPU",
+  "early_stopping": false,
+  "heldout_fold_labels_used_in_fit": false,
+  "Test_access": false,
+  "purpose": "Out-of-fold predictions for residual memory; avoid calibrating only in-sample errors"
+}

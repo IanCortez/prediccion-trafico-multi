@@ -1,0 +1,92 @@
+{
+  "config": {
+    "seed": 20261121,
+    "max_epochs": 20,
+    "patience": 5,
+    "batch": 4096,
+    "lr": 0.001,
+    "loss": "MAE continuous mixture median /600 + .02NLL +.1RPS + .1 KL to frozen base",
+    "tilt_bound": 1.5,
+    "matched_controls": [
+      "same adapter with global-route inputs masked to zero",
+      "same adapter with global-route inputs"
+    ],
+    "base_frozen": true,
+    "base_model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "new_route_features": 21,
+    "storage": "One mean CDF per Train query kept in GPU memory only; no teacher files or banks",
+    "Test_access": false,
+    "max_training_seconds": 1800
+  },
+  "results": {
+    "control_capacidad": {
+      "variant": "control_capacidad",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "best_epoch": 0,
+      "epochs_run": 5,
+      "model_sha256": null,
+      "paired_vs_frozen": {
+        "delta_mae_s": 0.0,
+        "ci95_s": [
+          0.0,
+          0.0
+        ],
+        "days": 35
+      },
+      "Test_access": false
+    },
+    "rutas_globales": {
+      "variant": "rutas_globales",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "best_epoch": 0,
+      "epochs_run": 5,
+      "model_sha256": null,
+      "paired_vs_frozen": {
+        "delta_mae_s": 0.0,
+        "ci95_s": [
+          0.0,
+          0.0
+        ],
+        "days": 35
+      },
+      "Test_access": false
+    }
+  },
+  "paired_routes_vs_matched_control": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35
+  },
+  "code_sha256": "10454d852f7b9ef79f20ba091bb90bae8f7eaad400f6faa9910f451477344869",
+  "data_files_accessed": [
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_x.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_rutas.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_contexto.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_gps_mapmatched.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_x.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_rutas.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_contexto.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_gps_mapmatched.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_y.npy",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 26.969832181930542,
+  "Test_access": false,
+  "goal_validation": false,
+  "conclusion": "Exploratory repeated Validation; no Test certification unless candidate meets the target and is frozen first. Route geometry improvement alone is insufficient."
+}

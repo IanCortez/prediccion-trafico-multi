@@ -1,0 +1,38 @@
+{
+  "source_url": "https://download.geofabrik.de/europe/portugal-140101.osm.pbf",
+  "source_sha256": "99d89f11dcaac9b9307102ff69cde179e44eb76b8493217b9e1efbb2fa856bb8",
+  "source_bytes": 65742554,
+  "archive_date": "2014-01-01",
+  "header_replication_timestamp": "2014-01-01T20:55:02Z",
+  "nodes": 94270,
+  "directed_arcs": 174112,
+  "way_segments": {
+    "motorway_link": 4357,
+    "motorway": 2538,
+    "trunk_link": 138,
+    "primary_link": 857,
+    "residential": 58501,
+    "tertiary": 4486,
+    "secondary": 5628,
+    "primary": 6553,
+    "secondary_link": 104,
+    "road": 1073,
+    "service": 8887,
+    "unclassified": 9029,
+    "trunk": 125,
+    "tertiary_link": 240,
+    "living_street": 426
+  },
+  "bbox": [
+    41.09,
+    41.24,
+    -8.76,
+    -8.48
+  ],
+  "graph_sha256": "2f0721a83d1d8c821b65eaaa3317e771452106eba96deb058329ee7de9f8f5fa",
+  "license": "OpenStreetMap contributors, ODbL; regional archive provided by Geofabrik",
+  "source_index": "https://download.geofabrik.de/europe/portugal.html",
+  "test_labels_read": false,
+  "limitation": "OSM state on archive date, not ground-truth road construction or traffic conditions. Added as a separate candidate; modern map files preserved.",
+  "seconds": 39.36300230026245
+}

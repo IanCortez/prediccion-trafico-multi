@@ -1,0 +1,98 @@
+{
+  "protocol": {
+    "parent_sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a",
+    "sample_trips": 25000,
+    "observed_runs": 193495,
+    "up_to8_distinct_runs_per_trip": true,
+    "fit_trips": 19548,
+    "held_trips": 5452,
+    "held_rule": "Train UTCweek modulo5==0",
+    "controls": [
+      "location-only sigma0",
+      "independent environment each residence",
+      "one shared environment per trip"
+    ],
+    "only_scalar_controls_are_heldout": "Frozen representation itself saw eligible Train; not independent whole-model validation",
+    "Validation_or_Test_GPS_or_labels_used": false,
+    "Test_access": false
+  },
+  "results": {
+    "baseline": {
+      "fit_NLL_per_observed_run": 1.191488265991211,
+      "held_NLL_per_observed_run": 1.1811423301696777,
+      "location": 0.3274588882923126,
+      "sigma": 0.0,
+      "steps": 109,
+      "history": [
+        {
+          "step": 40,
+          "fit_NLL_nats": 1.191528558731079
+        },
+        {
+          "step": 80,
+          "fit_NLL_nats": 1.1914883852005005
+        }
+      ]
+    },
+    "independent": {
+      "fit_NLL_per_observed_run": 1.1895897388458252,
+      "held_NLL_per_observed_run": 1.1789960861206055,
+      "location": 0.1190299466252327,
+      "sigma": 0.7385143041610718,
+      "steps": 163,
+      "history": [
+        {
+          "step": 40,
+          "fit_NLL_nats": 1.1907858848571777
+        },
+        {
+          "step": 80,
+          "fit_NLL_nats": 1.1896156072616577
+        },
+        {
+          "step": 120,
+          "fit_NLL_nats": 1.1895898580551147
+        },
+        {
+          "step": 160,
+          "fit_NLL_nats": 1.1895897388458252
+        }
+      ]
+    },
+    "shared": {
+      "fit_NLL_per_observed_run": 1.1896873712539673,
+      "held_NLL_per_observed_run": 1.179179072380066,
+      "location": 0.2027527540922165,
+      "sigma": 0.5882896780967712,
+      "steps": 154,
+      "history": [
+        {
+          "step": 40,
+          "fit_NLL_nats": 1.190469741821289
+        },
+        {
+          "step": 80,
+          "fit_NLL_nats": 1.1896953582763672
+        },
+        {
+          "step": 120,
+          "fit_NLL_nats": 1.1896874904632568
+        }
+      ]
+    }
+  },
+  "shared_minus_independent_held_NLL_nats": 0.00018300344579841483,
+  "CI95_by_Train_day": [
+    -0.00026406384549781725,
+    0.0006346159377991014
+  ],
+  "worth_GPU_shared_effect_test": false,
+  "interpretation": "Only a likelihood test conditional on actual Train teaching states. More flexibility alone is controlled by independent variation. Even a positive result does not establish OD travel-time MAE improvement.",
+  "no_GPU_used": true,
+  "no_representation_bank_on_disk": true,
+  "sample_runs_sha256": "df04d02eec6ea4ea71add45767bc3ead3d2b36c0aefabbf0d0b677db7288635e",
+  "code_sha256": "edd25d3ba5a15872c736307ac78f7c41b4caaed2365d741f1848e62881d74c1c",
+  "likelihood_sha256": "35e366c07f56b61facfeb189e2ee1924047f0ae8e05266f20e39666f77635968",
+  "Test_access": false,
+  "seconds": 62.7868595123291
+}

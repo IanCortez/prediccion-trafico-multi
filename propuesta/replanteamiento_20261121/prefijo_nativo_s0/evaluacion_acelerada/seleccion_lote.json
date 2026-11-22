@@ -1,0 +1,30 @@
+{
+  "rule": "Fastest eligible batch among16,64,128; require exact5-output point equality on fixed512 and mass error<2e-5; never inspect MAE for this choice",
+  "measurements": [
+    {
+      "batch": 16,
+      "seconds": 10.224390983581543,
+      "point_changes": 0,
+      "mass_max_error": 0.0,
+      "eligible": true
+    },
+    {
+      "batch": 64,
+      "seconds": 2.9108126163482666,
+      "point_changes": 90,
+      "mass_max_error": 0.01560056209564209,
+      "peak_allocated_MiB": 387.97607421875,
+      "eligible": false
+    },
+    {
+      "batch": 128,
+      "seconds": 1.9409387111663818,
+      "point_changes": 89,
+      "mass_max_error": 0.01560056209564209,
+      "peak_allocated_MiB": 447.67236328125,
+      "eligible": false
+    }
+  ],
+  "chosen": 16,
+  "scope": "Probe equivalence only, not a claim of universal equality with unfinished legacy inference"
+}

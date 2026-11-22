@@ -1,0 +1,31 @@
+{
+  "particles": 128,
+  "selection_n": 512,
+  "selected_alpha": 0,
+  "stream0": {
+    "n": 512,
+    "mae_s": 140.244140625,
+    "rmse_s": 232.34022988254745,
+    "mdae_s": 90.0
+  },
+  "stream1": {
+    "n": 512,
+    "mae_s": 140.244140625,
+    "rmse_s": 232.34022988254745,
+    "mdae_s": 90.0
+  },
+  "mean_absolute_prediction_change_s": 0.0,
+  "selection_graph_stream0": {
+    "n": 512,
+    "mae_s": 159.345703125,
+    "rmse_s": 247.1419640421776,
+    "mdae_s": 105.0
+  },
+  "selection_graph_stream1": {
+    "n": 512,
+    "mae_s": 158.90625,
+    "rmse_s": 247.54260996846583,
+    "mdae_s": 105.0
+  },
+  "interpretation": "Monte Carlo sensitivity, not independent validation; seeds and128particles fixed before full evaluation. Any threshold candidate needs512particle robustness and raw/order reproduction."
+}

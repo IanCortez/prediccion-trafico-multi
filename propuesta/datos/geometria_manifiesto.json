@@ -1,0 +1,10 @@
+{
+  "train_n": 1023485,
+  "validation_n": 127941,
+  "features": "actual path length (m), 7 normalized-arclength deviations from OD chord (km), max GPS step (m); no number of points",
+  "usage": "Training auxiliary targets and validation oracle diagnostics only. Never OD inference inputs.",
+  "test_path_read": false,
+  "train_sha256": "713593212afb0e5ae7c05a3bd6cd672c0da1340c5fe50c93fae4a16fff7a73aa",
+  "validation_sha256": "9030fa50cf11ba878221f94399d4de871ef0a524db3eea0fac703b8242830415",
+  "seconds": 55.95848727226257
+}

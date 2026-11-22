@@ -1,0 +1,18 @@
+{
+  "id": "descompuesto_aux0_s0",
+  "seed": 0,
+  "aux_weight": 0.0,
+  "epochs": 100,
+  "k": 16,
+  "width": 512,
+  "batch": 512,
+  "lr": 0.001,
+  "patience": 20,
+  "loss": "NLL(total)+5RPS(total)+lambda NLL(low-count | total); total PMF is convolution of movement and low-displacement PMFs",
+  "input": "Same 216 OD/departure/map/history features as retained model",
+  "support": "Condition the joint mixture on 4 <= moving_n + low_n <=119 intervals",
+  "global_stop_prior": "Fixed 50% point mass at zero + 50% geometric mean approx8; no count-derived initialization",
+  "anchor_fit": "Total-time labels only, same for lambda0 and lambda1",
+  "Test_access": false,
+  "max_seconds": 7200
+}

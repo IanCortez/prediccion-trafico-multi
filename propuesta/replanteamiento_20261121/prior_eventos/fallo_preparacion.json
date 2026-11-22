@@ -1,0 +1,8 @@
+{
+  "original_stage": "Counts complete; lookup constructor failed its ndim assertion",
+  "original_history_code_sha256": "65b9592b1eaee954ce085fc0ad2a0150dde92b7cf14701cf19945638cb6fcff8",
+  "original_log_sha256": "7bb67f5022c5e72f8893459d585936cd0502ea5eb7b2a165ae3f33754cb46043",
+  "recovery": "Correct ndim4 and broadcasting; verify whole-fold intervention first. Reuse original count file unchanged, no repeated data counting.",
+  "counts_before_and_after_sha256": "00f0ff5db2aef7b6cdc98d7cdb7d929c137ef44445fabc2ada90f2271052a504",
+  "recovered": true
+}

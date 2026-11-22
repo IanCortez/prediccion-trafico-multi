@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "reference_all127941_exact": true,
+  "probe_queries": 512,
+  "query_permutation65": true,
+  "singleton4": true,
+  "chosen_batch": 16,
+  "particles": 128,
+  "weights_unchanged": true,
+  "no_Test": true
+}

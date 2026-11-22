@@ -1,0 +1,13 @@
+{
+  "source": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\fuentes\\entrenar_prefijo_nativo.py",
+  "source_sha256": "5aa78e2a4ce733c122b1b58b3aae7eb32417213f41f2d9c67965d77a06c4d26e",
+  "target_sha256": "493ca45087133bc7642fa34433172f19b859b12da0b6cf47e6244557048f77f4",
+  "not_started": true,
+  "guards": "Complete native result and CPU verification required; only one GPU job",
+  "Test": "sealed",
+  "exact_alpha0_reference_branch": true,
+  "requires_conditional_pilot_to_beat_both_native_and_matched_head": true,
+  "CPU_head_initialization": true,
+  "canonical_query_batch": 128,
+  "scope": "A new numerical configuration declared before this trial. Current native model retains16; larger batches change some sampled paths through finite precision, although seeds and particle count are unchanged. Reference stays canonical2048."
+}

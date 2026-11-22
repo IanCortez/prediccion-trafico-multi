@@ -1,0 +1,9 @@
+{
+  "stage": "pretrain",
+  "epoch": 30,
+  "batch": 15500,
+  "batches_per_epoch": 15992,
+  "train_loss": 390056.43846471776,
+  "updated_unix": 1795060800.5974941,
+  "seconds": 36170.94715499878
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "finite_local_gradients": true,
+  "reference_reproduced_exactly": true,
+  "Test_access": false
+}

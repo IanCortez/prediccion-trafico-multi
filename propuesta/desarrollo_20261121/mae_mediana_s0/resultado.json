@@ -1,0 +1,54 @@
+{
+  "id": "mae_mediana_s0",
+  "config": {
+    "seed": 20261121,
+    "epochs": 12,
+    "lr": 0.0001,
+    "weight_decay": 0.0003,
+    "batch": 512,
+    "patience": 4,
+    "loss": "0.5 MAE mixture median + 0.5 mean member MAE; divided by600; +0.02NLL +0.1RPS",
+    "initial_model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "inference_precision": "float32",
+    "median_mode": "discrete",
+    "validation_selection": "full 127941, exploratory reused validation",
+    "max_seconds": 1800,
+    "max_additional_bytes": 1000000000,
+    "query_information": "unchanged OD/departure; no query trajectory or duration"
+  },
+  "base_mae_s": 131.2567138671875,
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.2567138671875,
+    "rmse_s": 210.80445861816406
+  },
+  "best_epoch": 0,
+  "epochs_run": 4,
+  "paired": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35
+  },
+  "seconds": 116.86705660820007,
+  "code_sha256": "525f362719ee6c47718aa5c114ce56251ecc44dc310b12f7725fed2025c1f36f",
+  "data_files_accessed": [
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_x.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_rutas.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_contexto.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_gps_mapmatched.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_x.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_rutas.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_contexto.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_gps_mapmatched.npz",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\train_y.npy",
+    "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\datos\\validation_y.npy"
+  ],
+  "model_sha256": null,
+  "Test_access": false,
+  "global_goal_met_on_validation": false
+}

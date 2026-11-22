@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "source": "E:\\UTEC\\Tesis\\TesisIan\\tesis\\porto\\porto\\train.csv",
+  "source_sha256": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d",
+  "counts": {
+    "raw": 1710670,
+    "endpoints": 300321,
+    "od_short": 24449,
+    "points": 106075,
+    "od_fast": 403,
+    "missing": 10
+  },
+  "n": 1279412,
+  "bbox": [
+    41.1405,
+    41.1865,
+    -8.6887,
+    -8.5557
+  ],
+  "protocol_sha256": "9fc0703c3b545d14265ebf6e76be4bba8057dc84096f47616bf7b459fd7789e2",
+  "columns_inference": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "secondary_metadata": [
+    "call"
+  ],
+  "test_accesses": 0,
+  "train": {
+    "n": 1023529,
+    "start_timestamp": 1372636853,
+    "end_timestamp": 1398345179,
+    "x_sha256": "f543f8873d930dbf95a6b189df84c182887376d85d6e6a47099d2e8749f7350f",
+    "y_sha256": "e7b6143171464a7a41f32a3b8db4075c7cc2b5fb8e0c05737381754deaf45f2d",
+    "previously_exposed": 7882,
+    "all_inside": 979685
+  },
+  "validation": {
+    "n": 127941,
+    "start_timestamp": 1398345209,
+    "end_timestamp": 1401276785,
+    "x_sha256": "e6a09bab436e709cebb58934dec183827c77db94dceb95e67c2d6f73c9913b50",
+    "y_sha256": "00cbcb2f8fdbb80313424fb9e10a6f7888d2a39a0bb16150ef8e14beb914f1a6",
+    "previously_exposed": 1028,
+    "all_inside": 120990
+  },
+  "test": {
+    "n": 127942,
+    "start_timestamp": 1401276798,
+    "end_timestamp": 1404172626,
+    "x_sha256": "bba2dcc98b5ed8b9636b77dc977f4452b292ecf36f58fa8b72f286bc5e22de6d",
+    "y_sha256": "4096585313bdc66f7578ff4495763c62f05ef7714f0b968ba248b10162289a8c",
+    "previously_exposed": 992,
+    "all_inside": 121050
+  },
+  "confirmation_n": 126950,
+  "elapsed_seconds": 75.43194246292114
+}

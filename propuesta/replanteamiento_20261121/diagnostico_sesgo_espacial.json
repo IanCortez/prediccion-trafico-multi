@@ -1,0 +1,267 @@
+{
+  "scope": "Same complete reused Validation; descriptive diagnosis only, no cohort changes",
+  "results": {
+    "reference": {
+      "metric": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "mean_prediction_s": 574.5642131920182,
+      "mean_true_s": 615.0344690130607,
+      "mean_signed_error_s": -40.470255821042514,
+      "median_signed_error_s": 0.0,
+      "mean_prediction_minus_reference_s": 0.0,
+      "by_OD_distance": [
+        {
+          "OD_m": [
+            200,
+            500
+          ],
+          "n": 2674,
+          "mae_s": 251.8137621540763,
+          "mean_signed_error_s": -135.49364248317127,
+          "median_signed_error_s": -15.0
+        },
+        {
+          "OD_m": [
+            500,
+            1000
+          ],
+          "n": 12067,
+          "mae_s": 135.40150824562858,
+          "mean_signed_error_s": -63.7266926328002,
+          "median_signed_error_s": 0.0
+        },
+        {
+          "OD_m": [
+            1000,
+            2000
+          ],
+          "n": 35774,
+          "mae_s": 113.75663889975961,
+          "mean_signed_error_s": -40.64264549672947,
+          "median_signed_error_s": 0.0
+        },
+        {
+          "OD_m": [
+            2000,
+            4000
+          ],
+          "n": 51213,
+          "mae_s": 128.91189736980846,
+          "mean_signed_error_s": -38.700427625798135,
+          "median_signed_error_s": 0.0
+        },
+        {
+          "OD_m": [
+            4000,
+            20000
+          ],
+          "n": 26213,
+          "mae_s": 145.51482089039789,
+          "mean_signed_error_s": -23.29340403616526,
+          "median_signed_error_s": 15.0
+        }
+      ]
+    },
+    "spatial_no_heading": {
+      "metric": {
+        "n": 127941,
+        "mae_s": 154.22175065069055,
+        "rmse_s": 234.46667919909925,
+        "mdae_s": 105.0
+      },
+      "mean_prediction_s": 583.6077567003541,
+      "mean_true_s": 615.0344690130607,
+      "mean_signed_error_s": -31.426712312706638,
+      "median_signed_error_s": 0.0,
+      "mean_prediction_minus_reference_s": 9.043543508335874,
+      "by_OD_distance": [
+        {
+          "OD_m": [
+            200,
+            500
+          ],
+          "n": 2674,
+          "mae_s": 306.9558713537771,
+          "mean_signed_error_s": -233.96409872849662,
+          "median_signed_error_s": -75.0
+        },
+        {
+          "OD_m": [
+            500,
+            1000
+          ],
+          "n": 12067,
+          "mae_s": 158.3098533189691,
+          "mean_signed_error_s": -78.7266926328002,
+          "median_signed_error_s": -15.0
+        },
+        {
+          "OD_m": [
+            1000,
+            2000
+          ],
+          "n": 35774,
+          "mae_s": 132.5466819477833,
+          "mean_signed_error_s": -40.255632582322356,
+          "median_signed_error_s": 0.0
+        },
+        {
+          "OD_m": [
+            2000,
+            4000
+          ],
+          "n": 51213,
+          "mae_s": 146.88565403315565,
+          "mean_signed_error_s": -40.694452580399506,
+          "median_signed_error_s": -15.0
+        },
+        {
+          "OD_m": [
+            4000,
+            20000
+          ],
+          "n": 26213,
+          "mae_s": 180.67294853698547,
+          "mean_signed_error_s": 41.164307786212945,
+          "median_signed_error_s": 60.0
+        }
+      ]
+    },
+    "spatial_heading": {
+      "metric": {
+        "n": 127941,
+        "mae_s": 152.22395479166178,
+        "rmse_s": 232.5844808193083,
+        "mdae_s": 105.0
+      },
+      "mean_prediction_s": 584.5175510586911,
+      "mean_true_s": 615.0344690130607,
+      "mean_signed_error_s": -30.516917954369593,
+      "median_signed_error_s": 0.0,
+      "mean_prediction_minus_reference_s": 9.95333786667292,
+      "by_OD_distance": [
+        {
+          "OD_m": [
+            200,
+            500
+          ],
+          "n": 2674,
+          "mae_s": 302.1091997008227,
+          "mean_signed_error_s": -229.4652206432311,
+          "median_signed_error_s": -60.0
+        },
+        {
+          "OD_m": [
+            500,
+            1000
+          ],
+          "n": 12067,
+          "mae_s": 157.00215463661226,
+          "mean_signed_error_s": -76.8969089251678,
+          "median_signed_error_s": -15.0
+        },
+        {
+          "OD_m": [
+            1000,
+            2000
+          ],
+          "n": 35774,
+          "mae_s": 130.3835187566389,
+          "mean_signed_error_s": -40.969698663834066,
+          "median_signed_error_s": 0.0
+        },
+        {
+          "OD_m": [
+            2000,
+            4000
+          ],
+          "n": 51213,
+          "mae_s": 145.0058578876457,
+          "mean_signed_error_s": -41.29371448655615,
+          "median_signed_error_s": -15.0
+        },
+        {
+          "OD_m": [
+            4000,
+            20000
+          ],
+          "n": 26213,
+          "mae_s": 178.6432304581696,
+          "mean_signed_error_s": 46.448899401060544,
+          "median_signed_error_s": 75.0
+        }
+      ]
+    },
+    "spatial_count_prior": {
+      "metric": {
+        "n": 127941,
+        "mae_s": 148.20280441766127,
+        "rmse_s": 228.17326791366307,
+        "mdae_s": 90.0
+      },
+      "mean_prediction_s": 584.8052618003611,
+      "mean_true_s": 615.0344690130607,
+      "mean_signed_error_s": -30.229207212699603,
+      "median_signed_error_s": 15.0,
+      "mean_prediction_minus_reference_s": 10.241048608342908,
+      "by_OD_distance": [
+        {
+          "OD_m": [
+            200,
+            500
+          ],
+          "n": 2674,
+          "mae_s": 295.4842931937173,
+          "mean_signed_error_s": -217.5,
+          "median_signed_error_s": -45.0
+        },
+        {
+          "OD_m": [
+            500,
+            1000
+          ],
+          "n": 12067,
+          "mae_s": 154.09463826966106,
+          "mean_signed_error_s": -57.0937266926328,
+          "median_signed_error_s": 15.0
+        },
+        {
+          "OD_m": [
+            1000,
+            2000
+          ],
+          "n": 35774,
+          "mae_s": 128.33440487504893,
+          "mean_signed_error_s": -25.660675350813438,
+          "median_signed_error_s": 15.0
+        },
+        {
+          "OD_m": [
+            2000,
+            4000
+          ],
+          "n": 51213,
+          "mae_s": 143.08271337355748,
+          "mean_signed_error_s": -36.51192080135903,
+          "median_signed_error_s": 0.0
+        },
+        {
+          "OD_m": [
+            4000,
+            20000
+          ],
+          "n": 26213,
+          "mae_s": 167.58478617479875,
+          "mean_signed_error_s": 7.281120054934575,
+          "median_signed_error_s": 30.0
+        }
+      ]
+    }
+  },
+  "caveat": "Mean signed error need not be zero for a conditional-median predictor. Do not force mean calibration or use actual duration to gate predictions.",
+  "Test_access": false
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "variant": "rutas_globales",
+    "epoch": 1,
+    "loss": 0.2597352784263371,
+    "validation": {
+      "n": 127941,
+      "mae_s": 133.54128074659414,
+      "rmse_s": 211.2410486094699,
+      "mdae_s": 75.0
+    },
+    "seconds": 23.609429121017456
+  },
+  {
+    "variant": "rutas_globales",
+    "epoch": 2,
+    "loss": 0.2578276978887013,
+    "validation": {
+      "n": 127941,
+      "mae_s": 132.9871972237203,
+      "rmse_s": 210.68803122789114,
+      "mdae_s": 75.0
+    },
+    "seconds": 24.45381760597229
+  },
+  {
+    "variant": "rutas_globales",
+    "epoch": 3,
+    "loss": 0.2564822186995429,
+    "validation": {
+      "n": 127941,
+      "mae_s": 133.0154524351068,
+      "rmse_s": 210.86754566305626,
+      "mdae_s": 75.0
+    },
+    "seconds": 25.221644163131714
+  },
+  {
+    "variant": "rutas_globales",
+    "epoch": 4,
+    "loss": 0.2555453788441835,
+    "validation": {
+      "n": 127941,
+      "mae_s": 134.0477642038127,
+      "rmse_s": 211.46074451268066,
+      "mdae_s": 75.0
+    },
+    "seconds": 26.00009036064148
+  },
+  {
+    "variant": "rutas_globales",
+    "epoch": 5,
+    "loss": 0.2549385911511773,
+    "validation": {
+      "n": 127941,
+      "mae_s": 134.1589091847023,
+      "rmse_s": 211.40870979559486,
+      "mdae_s": 75.0
+    },
+    "seconds": 26.770634174346924
+  }
+]

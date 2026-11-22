@@ -1,0 +1,4 @@
+from base_replanteo import *
+write(OUT/'politica_conservacion.json',dict(source='User steering: preserve models improving131.06 seconds',candidate_MAE_threshold_s=131.06,direction='strictly lower MAE is better',eligible_evaluation='Complete unchanged Validation, not selection subset or privileged diagnostic',preserve_for_qualifying_candidate=['checkpoint','metrics','predictions','exact_sources','protocol','required_reproduction_assets'],all_completed_experiments=['metrics','predictions for comparison','config','source hashes and exact source'],protected_original_model=str(BEST.relative_to(ROOT)),TransferTraj_metrics_and_predictions_protected=True,training_checkpoints_are_temporary_until_complete_evaluation=True,final_goal_confirmation_MAE_s=73.5,Test='sealed'))
+print('Candidate preservation threshold recorded: full Validation MAE below131.06s; final confirmation target unchanged.')
+

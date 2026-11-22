@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "entire_fold_intervention_invariant_at_every_backoff": true,
+  "explicit_removal_of_held_fold_exact": true,
+  "broadcast_shapes_and_probabilities": true,
+  "run_entry_clock_constant_through_a_run": true,
+  "query_order_invariant": true,
+  "no_query_duration_argument": true,
+  "no_GPU": true,
+  "code_sha256": "5083f4a0ef6d9142cb435bfca03b55c637da402e89f87dce72a7276d1070e4d8",
+  "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "numpy_and_Torch_history_keys_exact": true,
+  "teacher_vs_incremental_max_error": 5.960464477539063e-08,
+  "causal_future_intervention": true,
+  "finite_gradients_and_nonzero_RNN_gradient": true,
+  "raw_mass_and_survival_conserved": true,
+  "query_permutation_and_singleton": true,
+  "requires_explicit_fold_excluded_history_during_training": true,
+  "requires_only_known_departure_timestamp_at_query": true,
+  "no_query_length_or_duration_argument": true,
+  "no_GPU": true,
+  "code_sha256": "ad5a9627e6935ea3812aa3a777e0a0b667ca865e7e95cc9f4b3bb6360c3287df",
+  "model_code_sha256": "b092ab807f1c0f46167cf1a9b7419bab3ffcb5528002be3c5e95aac90891d6c7",
+  "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47"
+}

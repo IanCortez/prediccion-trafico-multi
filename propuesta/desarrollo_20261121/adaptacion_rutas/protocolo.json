@@ -1,0 +1,19 @@
+{
+  "seed": 20261121,
+  "max_epochs": 20,
+  "patience": 5,
+  "batch": 4096,
+  "lr": 0.001,
+  "loss": "MAE continuous mixture median /600 + .02NLL +.1RPS + .1 KL to frozen base",
+  "tilt_bound": 1.5,
+  "matched_controls": [
+    "same adapter with global-route inputs masked to zero",
+    "same adapter with global-route inputs"
+  ],
+  "base_frozen": true,
+  "base_model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "new_route_features": 21,
+  "storage": "One mean CDF per Train query kept in GPU memory only; no teacher files or banks",
+  "Test_access": false,
+  "max_training_seconds": 1800
+}

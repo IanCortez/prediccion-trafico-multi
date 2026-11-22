@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "self_value_intervention_invariant": true,
+  "same_fold_candidates": true,
+  "base_source_sha256": "4bf92e9e5f000b2e3df39a21c241c8827f0f97bb82a434b4ef4b3b9a43b93099",
+  "no_Test": true
+}

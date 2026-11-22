@@ -1,0 +1,43 @@
+{
+  "kind": "Matched generative decomposition ablation; complete reused Validation",
+  "n": 127941,
+  "supervised_proxy": {
+    "n": 127941,
+    "mae_s": 131.62731258939667,
+    "rmse_s": 212.15485612842585,
+    "mdae_s": 75.0
+  },
+  "same_architecture_without_proxy": {
+    "n": 127941,
+    "mae_s": 131.41756747250685,
+    "rmse_s": 212.51456124532928,
+    "mdae_s": 75.0
+  },
+  "retained": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "supervised_minus_control": {
+    "delta_mae_s": 0.2097451168898164,
+    "ci95_s": [
+      0.04424245819996622,
+      0.3702859129562761
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "control_minus_retained": {
+    "delta_mae_s": 0.16085539428330245,
+    "ci95_s": [
+      -0.07709182176093211,
+      0.3950382643778266
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "scope": "Single seed0, conditional-count auxiliary weight1 versus0, same cohorts/features/model family and scheduled maximum100 epochs with patience20",
+  "conclusion": "No measured improvement from this low-displacement auxiliary target at weight1. Do not equate GPS low-displacement with annotated idling, and do not generalize to every pause model.",
+  "Test_access": false
+}

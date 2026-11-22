@@ -1,0 +1,43 @@
+{
+  "n_queries": 1279412,
+  "static_feature_count": 52,
+  "movement_feature_count": 10,
+  "query_cache_sha256": "929ca53802f113dea7c883ebcaa57b7b4c221c1123844bc3c7139af6d66c51ee",
+  "profiles_sha256": "648fcfcf4145dbc8f5a18ea789fd4fe80d25c61936efa8d486d2f096a48b9e97",
+  "outputs": {
+    "train_rutas_proyectadas2014.npz": "a292f5aa82dfafc582dfdacdd15148f30ec894cb6013948ecc7ba56d68d805dc",
+    "validation_rutas_proyectadas2014.npz": "44e8ca3590682b40cef7c9b9abbcd1f4c4aebd48de0a8b2f806084bcc74df993",
+    "test_rutas_proyectadas2014.npz": "b5b19eba0c56dc6eb9f668c0a6bfd6f3cc1005807f4f56019edd410a7266c97c",
+    "train_gps_mapmatched.npz": "ae572589b492bdfb346c4a5784c080990ce594acc889e23d886c3f474b0037d6",
+    "validation_gps_mapmatched.npz": "3ee23c32f27ef5a624f0c456d679f02d8cbe73cdeddfc9edcfe3a824487edf53",
+    "test_gps_mapmatched.npz": "178533f83aec241287eaa7dda6a3acf067ec3a63b097481a2657da1dd589416c"
+  },
+  "checks": {
+    "length": {
+      "max_planning_cost_error": 0.0004882610810454935,
+      "cost_units": "m",
+      "max_endpoint_error_m": 1.3598119039670564e-05,
+      "max_polyline_length_error_m": 1.8801501937559806e-05,
+      "available_fraction": 0.9990299940109253
+    },
+    "free": {
+      "max_planning_cost_error": 3.0513749152305536e-05,
+      "cost_units": "s",
+      "max_endpoint_error_m": 1.3598119039670564e-05,
+      "max_polyline_length_error_m": 1.8801501937559806e-05,
+      "available_fraction": 0.9990299940109253
+    }
+  },
+  "training_history": "Excludes query UTC-week fold at every hierarchy level",
+  "heldout_history": "Full training GPS only",
+  "route_selection": "Four OD edge projections; minimize static length plus 3*connector distance, or free-flow seconds plus connector at10kmh. Movement profiles do not choose these routes.",
+  "inference": "OD and departure only. No evaluated-query observed route, heading, point count or duration.",
+  "test_labels_read": false,
+  "code_hashes": {
+    "ruteo_proyectado.py": "9a3e5a6546b295ff23a9a687c387d5fc820e2e5403af6cff5649e94995694012",
+    "consultas_mapmatched.py": "5c87cfe16bb55050917418242ad2c669bc89f582ba5e74a68bbb6f88b99202c9",
+    "preparar_consultas_mapmatched.py": "e4ba236a7efe4110145c257d54f952718d6ea6e6a7abb109ceee9a96b0c85f36",
+    "map_matching.py": "ae9f105ff04ce04cd19d27ac71b0f8c1a058f383aab603a70260be0fcb97c79b"
+  },
+  "seconds": 32.60248613357544
+}

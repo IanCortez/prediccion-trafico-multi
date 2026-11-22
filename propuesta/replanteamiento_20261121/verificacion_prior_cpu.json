@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "NumPy_backoff_reference_max_error": 5.018443571813691e-08,
+  "own_fold_count_intervention_invariant": true,
+  "full_prior_reacts_to_added_count": true,
+  "local_policy_and_wait_finite": true,
+  "full_posterior_normalized": true,
+  "synthetic_absorption_mass": 0.9603148698806763,
+  "query_GPS_or_duration_used": false,
+  "counts_sha256": "fb6c68e4b2a19dd40848a9afd9f03adf60d1c5ee4b6194c5567fac1c8d57108d",
+  "code_sha256": "0f386927dac080111e320b25e3ab0e40976436310b2eed5f4a5bffb277d66048",
+  "model_code_sha256": "324a1130d44f64ef13b39b6e1e8e5a9d6808e9b94bf251466a27a3b6d2659777",
+  "Test_access": false
+}

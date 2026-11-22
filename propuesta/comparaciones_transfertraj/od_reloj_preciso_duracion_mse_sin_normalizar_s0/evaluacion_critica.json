@@ -1,0 +1,15 @@
+{
+  "id": "od_reloj_preciso_duracion_mse_sin_normalizar_s0",
+  "validation": {
+    "mae_s": 175.77850761821756,
+    "rmse_s": 246.74729533849455,
+    "mdae_s": 132.1109619140625,
+    "mape": 34.71277159104112,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Mismo reloj preciso y modelo, entrena solo duracion con MSE. Sin preentrenamiento; no atribuir a transferencia.",
+  "test_labels_read": false,
+  "distance_to_target_s": 102.27850761821756,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

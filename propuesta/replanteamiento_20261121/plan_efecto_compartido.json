@@ -1,0 +1,41 @@
+{
+  "status": "Hypothesis supported by COARSE held-Train moment diagnostic; not yet implemented or a MAE result",
+  "evidence_file": "diagnostico_dependencia_viaje.json",
+  "evidence_ratio": 1.4230997438174753,
+  "ratio_CI95_by_day": [
+    1.3773927551430611,
+    1.47577748725347
+  ],
+  "confounding": "Omitted exact OD/traffic context may account for some dependence; do not label it causal driving style or irreducible uncertainty",
+  "architecture": "Shared query-level latent environment across all generated spatial states; conditional phase-type recurrence plus empirical route prior",
+  "suggested_discrete_environment": "4 Gauss-Hermite nodes with fixed normalized weights, eta=sqrt(2)*sigma(query)*node. Interpret implemented model as exact finite4-component mixture, not exact continuous Gaussian integration.",
+  "effect": "For each shared environment, shift all movement hazard logits by minus eta; same eta for every run in that hypothetical trip. Initially keep route policy and terminal residence independent of eta to isolate timing dependence.",
+  "training": "Group up to8 DISTINCT valid nonterminal Train runs from the same trip, without replacement. Minimize negative logsumexp_z(logprior_z + sum_r logP(duration_r|state_r,z)). Single-run independently redrawn latent effects would fail to model correlation.",
+  "query": "Generate/marginalize all paths per z using phase recurrence, sum absorption probabilities using prior_z before total cohort conditioning. Never use actual query path, count, duration, or inferred latent from its label.",
+  "keep_primary_base": "Use protected best116-bin distribution as fixed reference computed from same216 OD features, canonical2048 FP32. Cache Train/Validation reference probabilities in RAM only, never disk CDF banks. Strong reference at mixture weight0 must reproduce all original Validation predictions exactly.",
+  "training_improvement": "Current direct head sees full Train labels, but exact marginal-process training only1000steps×2queries. Benchmark phase CUDA gradients, then train materially larger total-duration batches; consider explicit structural likelihood to prevent frozen in-sample reference from silencing graph gradients.",
+  "freeze_and_retention": "Preserve every candidate with complete Validation MAE<131.06s; keep Test closed until eligible candidate frozen. Reference weights remain protected.",
+  "next_order": [
+    "Complete current directional and empirical-prior Validation",
+    "Benchmark independent-phase CUDA speed/memory",
+    "Train efficient independent-phase model with stronger frozen reference and more marginal likelihood updates",
+    "Only then implement shared-environment ablation if evidence warrants"
+  ],
+  "reference_2026": "https://arxiv.org/html/2602.07170v1",
+  "reference_2025": "https://arxiv.org/abs/2407.05895v2",
+  "goal_status": "active",
+  "final_goal_MAE_s": 73.5,
+  "required_pilot_controls": {
+    "data": "Train trajectories only, up to8DISTINCT valid movement residences per trip, no replacement; freeze final independent-phase checkpoint first",
+    "scope": "Frozen representation saw Train; held split is only for new scalar effect, not whole-model generalization",
+    "baseline": "Fit a global hazard-location adjustment with sigma=0",
+    "independent_effect": "Same4Gaussian quadrature nodes and marginal hazard variation, but redraw latent independently per residence: product_r sum_z weight_z P(duration_r|state_r,z)",
+    "shared_effect": "One latent per trip: sum_z weight_z product_r P(duration_r|state_r,z)",
+    "fit": "Fit global location and nonnegative sigma on Train weekfolds1..4; evaluate scalar-only likelihood on weekfold0",
+    "measure": "Held joint NLL per observed interval, shared minus independent effect and day bootstrap interval. A gain merely over sigma=0 may be extra marginal flexibility; require shared versus independent control.",
+    "implementation": "CPU-only cached phase weights/hazards in RAM; no hidden-state bank on disk; do not use Validation/Test GPS.",
+    "decision": "If shared effect fails on held scalar likelihood, do not spend a new full GPU trial on this narrow mechanism. Consider recurrent/prefix generation with its own evidence and stability tests. A likelihood gain is still not a MAE achievement."
+  },
+  "predeclared_single_calibration": "calibrar_fases_una_vez.py after parent result exists; no subsequent blend grid search for same frozen functions",
+  "strong_reference_generalization_gap": "diagnostico_ajuste_referencia_cpu.json: Train sample112.1887s, recentTrain114.7485s, Validation130.9277s;8192each. Not an irreducible-error bound."
+}

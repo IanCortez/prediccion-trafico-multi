@@ -1,0 +1,7 @@
+{
+  "path": "propuesta\\replanteamiento_20261121\\espacial_direccional_s0\\modelo.pt",
+  "bytes": 8687171,
+  "sha256": "0010bc077568c811d60052683d1a9d8adb06e92f613556ee9eaff5b94ec219f2",
+  "predictions_sha256": "75506e22d7e3c4d16cd49ef9582ae6fba4ef5f227f16da683dcb9b0c20197df8",
+  "reason": "Completed non-improving model; exact sources and predictions retained; not used to initialize active phase model"
+}

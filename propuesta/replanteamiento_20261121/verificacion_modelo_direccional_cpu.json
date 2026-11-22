@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "probabilities_finite_and_normalized": true,
+  "finite_horizon_absorption_mass": [
+    0.6929299235343933,
+    0.3378169536590576
+  ],
+  "batch_permutation_max_error": 1.4901161193847656e-08,
+  "same_cell_origin_destination_supported": true,
+  "query_inputs": "Synthetic OD features only; unknown direction at origin, no target or route",
+  "trained": false,
+  "predictive_MAE_not_evaluated": true,
+  "Test_access": false,
+  "parameters": 2121446
+}

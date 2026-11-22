@@ -1,0 +1,99 @@
+{
+  "scope": "EXPLORATORY reused full Validation; no Test",
+  "models": [
+    "retained_best",
+    "descompuesto_aux1_s0",
+    "memoria_cdf_s0",
+    "memoria_mse_s0",
+    "base_oof_estatica_s0"
+  ],
+  "comparisons": {
+    "descompuesto_aux1_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.62731258939667,
+        "rmse_s": 212.15485612842585,
+        "mdae_s": 75.0
+      },
+      "paired_vs_retained": {
+        "delta_mae_s": 0.3706005111731189,
+        "ci95_s": [
+          0.12519426354565205,
+          0.6102768970048249
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "mean_absolute_prediction_difference_s": 14.420123338101156,
+      "improves_over_retained_fraction": 0.30401513197489466,
+      "two_model_ORACLE_min_absolute_error_s": 124.42000609656013,
+      "ORACLE_is_not_a_valid_model": true
+    },
+    "memoria_cdf_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 137.4315895608132,
+        "rmse_s": 219.76714831713943,
+        "mdae_s": 90.0
+      },
+      "paired_vs_retained": {
+        "delta_mae_s": 6.174877482589631,
+        "ci95_s": [
+          5.449039480763538,
+          6.91117928965918
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "mean_absolute_prediction_difference_s": 39.086219429268176,
+      "improves_over_retained_fraction": 0.3709522357961873,
+      "two_model_ORACLE_min_absolute_error_s": 116.39470537200741,
+      "ORACLE_is_not_a_valid_model": true
+    },
+    "memoria_mse_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 144.3031549620929,
+        "rmse_s": 215.5584713506147,
+        "mdae_s": 98.6387939453125
+      },
+      "paired_vs_retained": {
+        "delta_mae_s": 13.046442883869338,
+        "ci95_s": [
+          11.868179514919893,
+          14.327973129633518
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "mean_absolute_prediction_difference_s": 52.49483432773204,
+      "improves_over_retained_fraction": 0.41556655020673594,
+      "two_model_ORACLE_min_absolute_error_s": 114.06059704422779,
+      "ORACLE_is_not_a_valid_model": true
+    },
+    "base_oof_estatica_s0": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.18608419982218,
+        "rmse_s": 217.50664256249215,
+        "mdae_s": 83.49401562688035
+      },
+      "paired_vs_retained": {
+        "delta_mae_s": 4.92937212159861,
+        "ci95_s": [
+          4.501151257628306,
+          5.359204896831613
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "mean_absolute_prediction_difference_s": 31.511263214436894,
+      "improves_over_retained_fraction": 0.45391235022393134,
+      "two_model_ORACLE_min_absolute_error_s": 119.0253150013255,
+      "ORACLE_is_not_a_valid_model": true
+    }
+  },
+  "all_models_ORACLE_min_absolute_error_s": 100.4382690291874,
+  "oracle_warning": "Chooses with the unknown true duration of each query. Not usable inference, not achieved MAE, not an information-theoretic lower bound. Its sole purpose is to measure complementarity before designing a selector.",
+  "Test_access": false
+}

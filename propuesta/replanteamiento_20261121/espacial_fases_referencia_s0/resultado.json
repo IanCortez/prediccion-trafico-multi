@@ -1,0 +1,92 @@
+{
+  "id": "espacial_fases_referencia_s0",
+  "config": {
+    "id": "espacial_fases_referencia_s0",
+    "process_id": 35416,
+    "seed": 0,
+    "steps": 6000,
+    "microbatch": 8,
+    "accumulation": 2,
+    "effective_batch": 16,
+    "auxiliary_batch": 64,
+    "auxiliary_weight": 0.1,
+    "structural_total_weight": 0.5,
+    "lr": 0.0001,
+    "selection_n": 4096,
+    "selection_interval": 500,
+    "selection_patience": 6,
+    "minimum_steps": 3000,
+    "inference_batch": 32,
+    "reference_canonical_batch": 2048,
+    "inference_precision": "FP32 highest",
+    "training_precision": "FP32 high",
+    "GPU_memory_fraction": 0.4,
+    "max_GPU_jobs": 1,
+    "max_training_seconds": 5400,
+    "query": "Same216 OD/departure/static/history features; no true query path/time/count",
+    "reference": "Protected best116-bin distribution, frozen; Train and Validation probabilities cached only in RAM",
+    "residence": "8 shifted-geometric components; exact reservoir recurrence; total60..1785 conditioning only after spatial absorption",
+    "prior_exclusion": "All current Train query weekfold counts subtracted; Validation uses full Train counts",
+    "objective": "Mixed NLL+5RPS +.5*(structural NLL+5RPS) +.1*Train local dynamics likelihood",
+    "Test_access": false
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 132.70077613900156,
+    "rmse_s": 212.29246423219976,
+    "mdae_s": 75.0
+  },
+  "graph_validation": {
+    "n": 127941,
+    "mae_s": 141.15916711609256,
+    "rmse_s": 220.49039041070517,
+    "mdae_s": 90.0
+  },
+  "reference_validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "best_step": 4500,
+  "steps_run": 6000,
+  "total_queries_seen": 96000,
+  "local_training_states_seen": 384000,
+  "model_sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a",
+  "code_sha256": "226b2c9cc400615884554eb53fe70d6fdcfa1871f4c21712e1905e91872486c5",
+  "model_code_sha256": "f6060380717083ff297130d196ecfcbc9d17ef0f8094e98220588618e353837d",
+  "kernel_code_sha256": "e558f1299997145992a851a573297310f07b9944a0498718569ddd92ac8cf46a",
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "parent_sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+  "head_initialization_sha256": "5cb7d2f8f0c743ed36a2377033dea811eab881a54a5f172184d7b9ad9a4e1006",
+  "prior_counts_sha256": "fb6c68e4b2a19dd40848a9afd9f03adf60d1c5ee4b6194c5567fac1c8d57108d",
+  "paired_vs_retained": {
+    "delta_mae_s": 1.4440640607780149,
+    "ci95_s": [
+      1.2363817387929465,
+      1.6653717593167479
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 3757.2796120643616,
+  "Test_access": false,
+  "new_primary_best": false,
+  "physical_parameters": 2114752,
+  "qualifies_for_preservation": false,
+  "goal_validation": false
+}

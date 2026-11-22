@@ -1,0 +1,32 @@
+{
+  "id": "prefijo_nativo_s0",
+  "seed": 0,
+  "epochs": 10,
+  "batch": 128,
+  "lr": 0.0002,
+  "weight_decay": 0.0003,
+  "selection_n": 512,
+  "selection_particles": 128,
+  "full_particles": 128,
+  "canonical_query_batch": 16,
+  "reference_batch": 2048,
+  "alphas": [
+    0,
+    0.05,
+    0.2,
+    0.5,
+    1
+  ],
+  "selection": "Best generated graph MAE on fixed512 Validation queries; alpha chosen only after checkpoint frozen",
+  "objective": "Mean observed-sequence joint teacher-forced NLL scaled by constant120; actual prefixes used ONLY for Train supervision",
+  "query": "216 OD/departure/static/history features, generated recurrent prefix and elapsed simulation time; NO true route, point count, elapsed trip observation or duration",
+  "generation": "Fixed120 time steps, one interval15s; conditional non-stop particles with Rao-Blackwellized stopping mass at each step; cohort conditioning only after absorption",
+  "randomness": "Stateless hash of exact raw OD/departure plus particle counter, step and stream; no row index and no input order RNG",
+  "prior": "Current Train weekfold counts excluded; Validation uses Train totals",
+  "max_training_seconds": 5400,
+  "minimum_epochs": 3,
+  "patience": 4,
+  "max_GPU_jobs": 1,
+  "no_disk_distribution_or_hidden_bank": true,
+  "Test_access": false
+}

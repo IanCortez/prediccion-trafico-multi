@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "file": "5f72fe4c83a8b1470d772e69dac0f53031148d1a.json",
+      "sha256": "0d6a79e30307d351808bb70dfa9639867261bb9c9b483bea7167eab9e7b2f046",
+      "osm_timestamp": "2026-10-24T01:47:21Z"
+    },
+    {
+      "file": "6a59c4fa6e58199e8cb639bb51e755777e4e38ed.json",
+      "sha256": "b18890510710770dd713a703e47206f104245b0f39ce39bffd16d395691b078a",
+      "osm_timestamp": "2026-10-24T01:48:21Z"
+    },
+    {
+      "file": "7e6d046008004c183e685c865dc50b3d433088c9.json",
+      "sha256": "4b2dc753ca9e17ce0d39ce0c7ba2c2025d767b674eab6c98fa0e97089e1a9a27",
+      "osm_timestamp": "2026-10-24T01:49:21Z"
+    },
+    {
+      "file": "b52fb1cc6f6e04ebda4d334610e0de51a47a2719.json",
+      "sha256": "2833a91b32111a11b85279b6f6620a43e093573f674a28da8bf2f87e782cdba6",
+      "osm_timestamp": "2026-10-24T01:47:21Z"
+    }
+  ],
+  "nodes": 88911,
+  "directed_edges": 143873,
+  "way_segments": {
+    "motorway_link": 4427,
+    "trunk_link": 317,
+    "tertiary": 11327,
+    "residential": 48707,
+    "secondary": 12915,
+    "living_street": 5692,
+    "unclassified": 760,
+    "primary": 6002,
+    "secondary_link": 627,
+    "primary_link": 624,
+    "motorway": 2543,
+    "tertiary_link": 217,
+    "trunk": 185,
+    "road": 1
+  },
+  "sha256": "b785ea32d848d562990fa136740f249e21a7770b9a01bd847615c35178b3a295",
+  "method": "Original Overpass consecutive-node geometry, direction and maxspeed; no label/trajectory fitting",
+  "limitation": "Available OSM map is newer than 2013-2014 trips; no historical map claim",
+  "seconds": 3.2991209030151367
+}

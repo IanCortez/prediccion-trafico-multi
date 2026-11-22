@@ -1,0 +1,188 @@
+{
+  "status": "Estimator and sampler verified mathematically, synthetic sampler and four real Train CPU gradients passed; full-trial source prepared, not started, actualGPU gate pending",
+  "reason": "Native teacher-forced Train NLL improves while generated selection MAE plateaus above the protected reference; a different possible next objective is whole-trip distribution risk on model-generated complete trajectories",
+  "objective": "Conditional CRPS = E|T-y| -.5 E|T-Tprime|. Use score-function covariance U-statistic, P>=3 IID complete accepted trajectories. No differentiation through normalized finite-CDF particles.",
+  "verified": {
+    "passed": true,
+    "synthetic_only": true,
+    "exact_enumeration": [
+      {
+        "particles": 3,
+        "enumerated_joint_outcomes": 8,
+        "expected_gradient_max_error": 1.4210854715202004e-14,
+        "expected_CRPS_max_error": 8.526512829121202e-14,
+        "gradient_of_inadmissible_category": 0.0
+      },
+      {
+        "particles": 4,
+        "enumerated_joint_outcomes": 16,
+        "expected_gradient_max_error": 2.842170943040401e-14,
+        "expected_CRPS_max_error": 1.1368683772161603e-13,
+        "gradient_of_inadmissible_category": -3.571936863903905e-16
+      },
+      {
+        "particles": 5,
+        "enumerated_joint_outcomes": 32,
+        "expected_gradient_max_error": 2.0661653486103503e-16,
+        "expected_CRPS_max_error": 1.4210854715202004e-13,
+        "gradient_of_inadmissible_category": -2.0661653486103503e-16
+      },
+      {
+        "particles": 8,
+        "enumerated_joint_outcomes": 256,
+        "expected_gradient_max_error": 5.684341886080802e-14,
+        "expected_CRPS_max_error": 1.9895196601282805e-13,
+        "gradient_of_inadmissible_category": -1.6686444645336834e-16
+      }
+    ],
+    "exact_conditional_CRPS": 229.02704919090277,
+    "exact_gradient": [
+      0.0,
+      -79.43934197944066,
+      79.43934197944066
+    ],
+    "conditioning": "Unconditional category0 is outside the cohort; categories1and2 are eligible. Its gradient cancels exactly although accepted-sample log probabilities remain unconditional.",
+    "requirements": [
+      "IID complete path/time samples from exact cohort rejection, not normalized finiteCDF particles",
+      "At least3accepted samples per query",
+      "Full unconditional path log probabilities",
+      "No query label in sampling or rejection; fixed60..1785 cohort only",
+      "Centering coefficients sum0; unknown cohort-normalizer score cancels"
+    ],
+    "limitations": "Not a trained Porto model, no MAE result, and not yet a verified recurrent trajectory sampler. Exact estimator verification does not prove low training variance or target achievement.",
+    "no_GPU": true,
+    "Test_access": false,
+    "code_sha256": "8144e94d2c14dc778856023b62c6159df38a92bd2d6d87202db8da52cf398e71",
+    "estimator_sha256": "2fb79264dcd2a71ada7098b6c94c74f4336d43bde9e9a9d0cf30e06511673b24",
+    "references": [
+      "https://www.jmlr.org/papers/v21/19-346.html",
+      "https://www.jmlr.org/papers/volume25/23-0038/23-0038.pdf",
+      "https://www.nature.com/articles/s44387-026-00073-7"
+    ]
+  },
+  "implementation_requirements": [
+    "Sample full EOS/motion trajectories and retain full UNCONDITIONAL log probabilities",
+    "Accept only fixed60..1785 support; never use true query duration to guide sampling. Keep firstPaccepted IID draws, track rare unsupported queries; do not change primary Validation cohort",
+    "Fresh independent training RNG per particle/batch; inference stateless query seed remains separate",
+    "Disable OD encoder dropout while computing stochastic policy gradients. GRU must support CUDA backward: use training GRU with dropout0 or explicitly verified native backend; eval-mode cuDNN RNN backward may fail",
+    "Score coefficient sum0 cancels unknown cohort normalizer. Preserve teacher-force regularization and track sampling/gradient variance",
+    "First verify recurrent rejection sampler against an analytically solvable toy; one-GPU actual gradient smoke only after current GPU exits",
+    "Only then a bounded on-policy total-duration trial, without repeating frozen-blend searches"
+  ],
+  "order": "Finish current Native full Validation, inspect conditional historical-head pilot. If it fails, this is a genuinely different learning objective to investigate. If history trial passes its gate, complete it and draw conclusions before another GPU job.",
+  "Test": "sealed",
+  "goal": "active",
+  "not_a_MAE_result": true,
+  "novelty": "CRPS/energy-score training and score-function estimation have published precedents. No novelty claim for those alone.",
+  "sampler_implemented": {
+    "source": "muestreador_rechazo_nativo.py",
+    "sha256": "bba7a7ac3e60574cf478c15df3878f4e3a1597dbeada30cf39dab6f9480e5bc8",
+    "synthetic_verification": {
+      "passed": true,
+      "synthetic_only": true,
+      "complete_queries": 4096,
+      "accepted_samples": 32768,
+      "path_likelihood_matches_unconditional_origin_branch_exact": true,
+      "out_of_cohort_trap_rejected": true,
+      "no_label_in_sampler_signature": true,
+      "exact_gradient": [
+        0.0,
+        -0.9997160216277267,
+        0.9997160216277268
+      ],
+      "sample_gradient": [
+        -7.623296525288703e-18,
+        -1.0079302106584822,
+        1.0079302106584822
+      ],
+      "gradient_standard_error": [
+        2.542772747361137e-19,
+        0.018573105595391343,
+        0.018573105595391347
+      ],
+      "autograd_matches_score_estimator": true,
+      "first_two_accepted_draw_correlation": -0.0033962184948703087,
+      "no_GPU": true,
+      "not_Porto_MAE": true,
+      "code_sha256": "0c4d8a0bfbb1c6f9eb72fae1a1997b9e0ccb61acbf4c6e1b1647d7197b64fee2",
+      "sampler_sha256": "bba7a7ac3e60574cf478c15df3878f4e3a1597dbeada30cf39dab6f9480e5bc8"
+    },
+    "actual_Train_CPU_probe": {
+      "passed": true,
+      "scope": "Four real Train OD queries, no optimizer step, no predictive MAE; successful gradient propagation only",
+      "Train_query_count": 4,
+      "fully_sampled_queries": 4,
+      "samples_per_query": 4,
+      "sampled_T_seconds": [
+        [
+          300.0,
+          315.0,
+          495.0,
+          525.0
+        ],
+        [
+          345.0,
+          600.0,
+          615.0,
+          405.0
+        ],
+        [
+          375.0,
+          855.0,
+          375.0,
+          540.0
+        ],
+        [
+          1425.0,
+          345.0,
+          435.0,
+          345.0
+        ]
+      ],
+      "rounds": 1,
+      "candidate_attempts_per_query": 8,
+      "encoder_dropout_disabled": true,
+      "GRU_train_mode_with_dropout0": true,
+      "route_counts_exclude_own_Train_weekfold": true,
+      "query_target_duration_supplied_only_after_sampling": true,
+      "gradient_norms": {
+        "route_head.weight": 0.6769171357154846,
+        "prefix_rnn.weight_ih_l0": 3.4835104942321777,
+        "stay_head.weight": 0.5931318998336792,
+        "stop_head.weight": 0.2216397076845169
+      },
+      "sample_CRPS_scaled_by600": 0.06875000149011612,
+      "no_optimizer_or_model_update": true,
+      "model_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+      "no_GPU": true,
+      "Test_access": false,
+      "actual_files_accessed": [
+        "propuesta\\datos\\train_contexto.npz",
+        "propuesta\\datos\\train_gps_mapmatched.npz",
+        "propuesta\\datos\\train_rutas.npz",
+        "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+        "propuesta\\datos\\train_x.npz",
+        "propuesta\\datos\\train_y.npy"
+      ],
+      "code_sha256": "d3227b4d51d1f87dfb6d0e02525d54b081581abd7f4b54913603211540979ce4",
+      "sampler_sha256": "bba7a7ac3e60574cf478c15df3878f4e3a1597dbeada30cf39dab6f9480e5bc8",
+      "seconds": 7.264948844909668
+    }
+  },
+  "trainer_prepared": {
+    "source": "entrenar_riesgo_total.py",
+    "sha256": "3aeba1b33caa025eb20b232f9d3b34dd115bf713356e8ada0042a0ae0095e2f8",
+    "not_started": true,
+    "query_microbatch": 4,
+    "accumulation": 4,
+    "accepted_samples": 8,
+    "max_steps": 4000,
+    "lr": 1e-05,
+    "teacher_weight": 0.1,
+    "canonical_inference": 128,
+    "requires_actual_GPU_gradient_gate_before_long_run": true,
+    "policy_sampling": "Encoder dropout disabled, GRU train mode/dropout0, count priors exclude current Train fold",
+    "finite_budget_fallback": "Failed conditional samples use teacher loss on the same query; record rate, no primary cohort exclusion",
+    "resume": "Finished checkpoint flag prevents retraining when only inference needs recovery"
+  }
+}

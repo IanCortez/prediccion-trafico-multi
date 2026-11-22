@@ -1,0 +1,74 @@
+{
+  "alphas": [
+    0,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    1
+  ],
+  "full_validation": [
+    {
+      "n": 127941,
+      "mae_s": 131.25671207822356,
+      "rmse_s": 210.804448731162,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.2574155274697,
+      "rmse_s": 210.81731237860146,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.259056909044,
+      "rmse_s": 210.83583064832445,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.30149834689428,
+      "rmse_s": 210.87748246990475,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.55462283396253,
+      "rmse_s": 211.15780938834206,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 132.29218936853707,
+      "rmse_s": 211.90039910388327,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 133.57563251811382,
+      "rmse_s": 213.13848477882166,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 140.966187539569,
+      "rmse_s": 220.28246271192867,
+      "mdae_s": 90.0
+    }
+  ],
+  "selected_by_fixed_subset": 0.02,
+  "selected_full_validation": {
+    "n": 127941,
+    "mae_s": 131.2574155274697,
+    "rmse_s": 210.81731237860146,
+    "mdae_s": 75.0
+  },
+  "qualified": [],
+  "best_full_exploratory_alpha": 0,
+  "conclusion": "This is the ONLY predeclared calibration of this fixed physical branch. Do not keep changing weights. Alpha0 reproduces the protected model and is not a learned improvement.",
+  "goal": "active",
+  "Test": "sealed"
+}

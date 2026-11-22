@@ -1,0 +1,20 @@
+{
+  "kind": "Train-only held-week next-zone diagnostic, NOT duration MAE",
+  "fit_moves": 14883509,
+  "held_moves": 4130223,
+  "conditioning": "Cell, destination bearing8/distance4, incoming heading; add preceding heading with unknown start modes",
+  "one_heading_NLL_nats": 0.6469046679939742,
+  "two_heading_NLL_nats": 0.6253211512041779,
+  "delta_nats": -0.021583516789796323,
+  "delta_CI95_by_day": [
+    -0.02222139150193009,
+    -0.020929687582197216
+  ],
+  "one_heading_top1": 0.7637420546057683,
+  "two_heading_top1": 0.7718474280928657,
+  "Validation_or_Test_paths_decoded": false,
+  "Test_access": false,
+  "seconds": 17.651729583740234,
+  "code_sha256": "44f4aefc0e3107c80593bc8ff4d51f11e9f6a7fd90ae621903cff32149b098eb",
+  "conclusion": "Evidence for or against a recurrent/prefix state beyond a first-order heading. At query all prefix states must be generated, never supplied from the true route."
+}

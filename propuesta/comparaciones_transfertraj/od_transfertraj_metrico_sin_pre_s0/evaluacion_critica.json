@@ -1,0 +1,24 @@
+{
+  "id": "od_transfertraj_metrico_sin_pre_s0",
+  "validation": {
+    "mae_s": 164.60096140012416,
+    "rmse_s": 234.4548316221635,
+    "mdae_s": 120.67095947265625,
+    "mape": 33.62045837799077,
+    "n": 127941
+  },
+  "eligible_primary": true,
+  "note": "Control sin preentrenamiento: kilometros solo en MLP espacial y coordenadas rotatorias; busquedas semanticas en metros. Mismos parametros, inicializacion y presupuesto. Cambia condicionamiento y prior de frecuencias, no capacidad funcional.",
+  "test_labels_read": false,
+  "comparison": {
+    "reference": "od_transfertraj_math_sin_pre_s0",
+    "delta_mae_s": 0.23327507078647614,
+    "ci95_s": [
+      -0.581521570494673,
+      1.0685876467155355
+    ],
+    "interpretation": "Negative favors this iteration; exploratory after adaptive validation selection, conditional on fitted models."
+  },
+  "distance_to_target_s": 91.10096140012416,
+  "decision": "Meta no alcanzada; conservar prueba reservada."
+}

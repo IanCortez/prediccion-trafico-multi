@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "scope": "Four real Train OD queries, no optimizer step, no predictive MAE; successful gradient propagation only",
+  "Train_query_count": 4,
+  "fully_sampled_queries": 4,
+  "samples_per_query": 4,
+  "sampled_T_seconds": [
+    [
+      300.0,
+      315.0,
+      495.0,
+      525.0
+    ],
+    [
+      345.0,
+      600.0,
+      615.0,
+      405.0
+    ],
+    [
+      375.0,
+      855.0,
+      375.0,
+      540.0
+    ],
+    [
+      1425.0,
+      345.0,
+      435.0,
+      345.0
+    ]
+  ],
+  "rounds": 1,
+  "candidate_attempts_per_query": 8,
+  "encoder_dropout_disabled": true,
+  "GRU_train_mode_with_dropout0": true,
+  "route_counts_exclude_own_Train_weekfold": true,
+  "query_target_duration_supplied_only_after_sampling": true,
+  "gradient_norms": {
+    "route_head.weight": 0.6769171357154846,
+    "prefix_rnn.weight_ih_l0": 3.4835104942321777,
+    "stay_head.weight": 0.5931318998336792,
+    "stop_head.weight": 0.2216397076845169
+  },
+  "sample_CRPS_scaled_by600": 0.06875000149011612,
+  "no_optimizer_or_model_update": true,
+  "model_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+  "no_GPU": true,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "code_sha256": "d3227b4d51d1f87dfb6d0e02525d54b081581abd7f4b54913603211540979ce4",
+  "sampler_sha256": "bba7a7ac3e60574cf478c15df3878f4e3a1597dbeada30cf39dab6f9480e5bc8",
+  "seconds": 7.264948844909668
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "Train-only held-week conditional residence likelihood; NOT duration MAE",
+  "fit_moves": 14883509,
+  "held_moves": 4130223,
+  "baseline_conditioning": "Cell, incoming heading4/unknown, destination bearing8 and distance4",
+  "joint_conditioning": "Same plus next outgoing heading4, as a candidate action to marginalize at query",
+  "baseline_NLL_nats": 1.0725782900163534,
+  "joint_NLL_nats": 1.0581303628432321,
+  "delta_nats": -0.014447927173121374,
+  "delta_CI95_by_day": [
+    -0.015269413654458918,
+    -0.013593326195089041
+  ],
+  "implication": "Tests whether independence of next action and residence loses predictive information. Next actual action is NOT allowed as query input; only a jointly generated/marginalized action may condition waiting time.",
+  "Validation_or_Test_paths_decoded": false,
+  "Test_access": false,
+  "seconds": 10.742028713226318,
+  "code_sha256": "364f3a3772a68317494b6972abb93200d3bf3b504a49872e2e4d5a0e8b70b8c4"
+}
