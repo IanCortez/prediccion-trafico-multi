@@ -1,0 +1,28 @@
+{
+  "status": "NUMERICAL_INSTRUMENT_PASSED; basic position-only Markov model NOT READY FOR A PORTO predictive trial",
+  "active_experiment": "mezcla_individual_escala_Train_s0 remains unchanged; observed arm still running",
+  "numerical_proof": "verificacion_marginalizacion_caminos_CPU_s0/resultado.json",
+  "actual_fit_diagnostic": "auditoria_cinematica_ajuste_Train_s0/resultado.json",
+  "facts": {
+    "fitparents": 4096,
+    "transitions": 164014,
+    "median_consecutive_moving_step_direction_cosine": 0.9715008452282774,
+    "fixed100m_grid_samecell_fraction": 0.36399941468411234,
+    "fixed100m_grid_jumps_outside3by3_fraction": 0.22379796846610656,
+    "observed15sec_step_speed_gt120kmh_fraction": 0.003670418378918873,
+    "interpretation": "Strong persistence warns against a memoryless location state; a3by3 localGPSgrid misses ordinary transitions, and coarsecell residence is not physicalwaiting. Rare extremeGPS jumps cannot be represented as plausible roadmotion."
+  },
+  "own_critical_assessment": [
+    "The existing53766roadchain graph has variablelength edges, so its adjacency cannot substitute for one15second transition. Such a substitution would confuse roadhopcount with the targetduration.",
+    "A direction/history state or a semiMarkov travelclock would be required. Both increase inferencecost and must pass a bounded resourceprobe before population construction.",
+    "Measurementnoise should be represented in an auxiliary observationmodel, not converted into unrestricted physicalteleportation.",
+    "All original queries and durationtargets must remain. A GPS-quality mask for auxiliary supervision must not silently remove difficult primaryrows.",
+    "Exact forwardnormalization corrects a mathematical mechanism; it is not evidence that the resulting coarsegenerative model improves OD MAE.",
+    "Previous recurrent publicrollout actually used argmax localroute choices within4styles and4attachments. A fullpath sum is structurally different, but Markovapproximation may lose useful recurrenthistory.",
+    "Do not select a new model only because its name is more recent or its inference is exact; require a clear feasible representation, prospective matched Traincontrols and a timeMAE gate."
+  ],
+  "no_new_GPS_or_densegraph_bank": true,
+  "no_predictive_MAE_claim": true,
+  "Test": "SEALED",
+  "Validation": false
+}

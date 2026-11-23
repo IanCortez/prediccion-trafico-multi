@@ -1,0 +1,254 @@
+{
+  "complete": true,
+  "scope": "Same10000reusedheldTrainqueries, now951718fit; no primaryValidation or confirmation.",
+  "practical_gate_passed": false,
+  "statistics": {
+    "none": {
+      "metrics": {
+        "n": 10000,
+        "mae_s": 130.029068616394,
+        "rmse_s": 206.64043797818798,
+        "mdae_s": 82.44181900359021
+      },
+      "interval80": {
+        "coverage": 0.8215,
+        "mean_width_s": 446.73451480737106,
+        "median_width_s": 410.0149627201829
+      },
+      "last_online_train_MAE_s": 129.18570415220313,
+      "held_minus_online_train_s": 0.84336446419087
+    },
+    "geometry": {
+      "metrics": {
+        "n": 10000,
+        "mae_s": 127.47522133363444,
+        "rmse_s": 203.58823253886115,
+        "mdae_s": 79.93759840028235
+      },
+      "interval80": {
+        "coverage": 0.8228,
+        "mean_width_s": 432.06938533472317,
+        "median_width_s": 394.01813483914435
+      },
+      "last_online_train_MAE_s": 126.75957205975519,
+      "held_minus_online_train_s": 0.7156492738792508
+    },
+    "observed": {
+      "metrics": {
+        "n": 10000,
+        "mae_s": 126.43457480872028,
+        "rmse_s": 201.71803356306447,
+        "mdae_s": 79.80957667097621
+      },
+      "interval80": {
+        "coverage": 0.8378,
+        "mean_width_s": 446.2910471371608,
+        "median_width_s": 412.7122076451325
+      },
+      "last_online_train_MAE_s": 126.70671122340154,
+      "held_minus_online_train_s": -0.27213641468125616
+    }
+  },
+  "comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -3.594493807673697,
+      "ci95_s": [
+        -5.268396641179562,
+        -1.946390956631599
+      ],
+      "required_improvement_s": 5,
+      "passed": false
+    },
+    "vs_geometryproxy": {
+      "delta_mae_s": -1.0406465249141543,
+      "ci95_s": [
+        -2.26420224560822,
+        0.25368579528457547
+      ],
+      "required_improvement_s": 2,
+      "passed": false
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": -6.920817984081627,
+      "ci95_s": [
+        -8.661278488845214,
+        -5.051269410006214
+      ],
+      "required_improvement_s": 5,
+      "passed": true
+    }
+  },
+  "change_vs_smallfit_held_MAE_s": {
+    "none": -20.498768630590007,
+    "geometry": -20.827249835270663,
+    "observed": -18.85815492410869
+  },
+  "descriptive_trueT_groups": {
+    "none": [
+      {
+        "trueT_range_s": [
+          60,
+          300
+        ],
+        "metrics": {
+          "n": 1148,
+          "mae_s": 85.26909749065658,
+          "rmse_s": 115.6493054456107,
+          "mdae_s": 68.51267091343331
+        }
+      },
+      {
+        "trueT_range_s": [
+          300,
+          600
+        ],
+        "metrics": {
+          "n": 4480,
+          "mae_s": 78.55258007909246,
+          "rmse_s": 101.77778054536032,
+          "mdae_s": 63.05488607989342
+        }
+      },
+      {
+        "trueT_range_s": [
+          600,
+          900
+        ],
+        "metrics": {
+          "n": 2887,
+          "mae_s": 120.30645671987108,
+          "rmse_s": 158.04273740011354,
+          "mdae_s": 93.5102152641424
+        }
+      },
+      {
+        "trueT_range_s": [
+          900,
+          1800
+        ],
+        "metrics": {
+          "n": 1485,
+          "mae_s": 338.82926797310716,
+          "rmse_s": 444.2914131399202,
+          "mdae_s": 262.5334237885078
+        }
+      }
+    ],
+    "geometry": [
+      {
+        "trueT_range_s": [
+          60,
+          300
+        ],
+        "metrics": {
+          "n": 1148,
+          "mae_s": 80.7179648054456,
+          "rmse_s": 116.20257773981719,
+          "mdae_s": 61.34704035202833
+        }
+      },
+      {
+        "trueT_range_s": [
+          300,
+          600
+        ],
+        "metrics": {
+          "n": 4480,
+          "mae_s": 76.95145526921917,
+          "rmse_s": 101.46645243005347,
+          "mdae_s": 62.149663031302254
+        }
+      },
+      {
+        "trueT_range_s": [
+          600,
+          900
+        ],
+        "metrics": {
+          "n": 2887,
+          "mae_s": 119.13595178927598,
+          "rmse_s": 156.78750743204813,
+          "mdae_s": 92.0847054017587
+        }
+      },
+      {
+        "trueT_range_s": [
+          900,
+          1800
+        ],
+        "metrics": {
+          "n": 1485,
+          "mae_s": 332.25587698178543,
+          "rmse_s": 435.6870458608898,
+          "mdae_s": 261.9805922651931
+        }
+      }
+    ],
+    "observed": [
+      {
+        "trueT_range_s": [
+          60,
+          300
+        ],
+        "metrics": {
+          "n": 1148,
+          "mae_s": 78.89722881940504,
+          "rmse_s": 110.46593361416406,
+          "mdae_s": 60.34078090170311
+        }
+      },
+      {
+        "trueT_range_s": [
+          300,
+          600
+        ],
+        "metrics": {
+          "n": 4480,
+          "mae_s": 78.0340768294758,
+          "rmse_s": 102.9472334394034,
+          "mdae_s": 62.45460472270298
+        }
+      },
+      {
+        "trueT_range_s": [
+          600,
+          900
+        ],
+        "metrics": {
+          "n": 2887,
+          "mae_s": 118.64311507572323,
+          "rmse_s": 155.69194623270775,
+          "mdae_s": 94.3378771830653
+        }
+      },
+      {
+        "trueT_range_s": [
+          900,
+          1800
+        ],
+        "metrics": {
+          "n": 1485,
+          "mae_s": 324.3477387089976,
+          "rmse_s": 430.66971695150147,
+          "mdae_s": 247.65974295135538
+        }
+      }
+    ]
+  },
+  "original_rows_labels_and_cohort_preserved": true,
+  "independent_raw5_replay_passed": true,
+  "interpretation_limits": [
+    "Dataamount, fitpopulation composition and stabletrainingnumerics change together from the smallpilot; not an isolated causal estimate of samplecount.",
+    "Online trainingerror uses dropout and changing weights; the gap to finalheldprediction is descriptive, not identical-estimator risk.",
+    "RepeatedTrainpilot use and one initialization; dayintervals exploratory, not independent confirmation.",
+    "TrueTgroups are retrospective diagnostics, never queryinputs or a reason to change primaryfilters."
+  ],
+  "retention_decision_pending": false,
+  "next": "Preregister fullunchangedprimary training onlyif the declaredtimegatepassed; otherwise critically reassess. Preserveallmetrics/predictions regardless131.06. No extraepochs/gate reduction.",
+  "goal_confirmation_s": 73.5,
+  "primary_goal_proven": false,
+  "Test": "SEALED",
+  "Validation": false,
+  "code_sha256": "0bfffb307bff710d208c79bd7216a9d9409f4f138ac2fb2de71f6f95dc902909",
+  "retention_record": "retencion_resultado.json"
+}

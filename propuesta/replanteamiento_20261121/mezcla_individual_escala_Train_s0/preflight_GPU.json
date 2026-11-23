@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "fit_n": 951718,
+  "resident_all_publicX_and_sourceindices": true,
+  "no_full_rawtokens": true,
+  "peak_allocated_MiB": 1961.16162109375,
+  "two_step_gradients_finite": true,
+  "query_backbone_nonzero": true,
+  "canonical256_reverse_singleton_exact": true,
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc"
+}

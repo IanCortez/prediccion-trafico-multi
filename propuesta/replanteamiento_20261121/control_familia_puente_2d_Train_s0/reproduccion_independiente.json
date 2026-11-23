@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "Independentcompleteheld10000probabilities/quantiles andraw65inference.",
+  "all10000probabilities_FP32_exact": true,
+  "all10000quantiles_exact": true,
+  "raw65probabilities_andquantiles_exact": true,
+  "raw_reverse17_singleton_exact": true,
+  "all_four_fulltrainingpasses_verified": true,
+  "pairedcontrasts_recomputed": true,
+  "original_pointbank_open_attempts": [],
+  "raw_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "computed_metrics": {
+    "n": 10000,
+    "mae_s": 129.6225,
+    "rmse_s": 204.45022010259612,
+    "mdae_s": 90.0
+  },
+  "probability_scores": {
+    "CRPS_s": 96.3376849866221,
+    "bin_NLL": 3.685853468707096,
+    "coverage80": 0.8085,
+    "width80_s": 407.562
+  },
+  "Test": false,
+  "Validation": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 6.395878553390503,
+  "source_sha256": "1a6b0463ff0adc5c86f29dac7153269e407f7e8439b8f9865922cc96f5b65d98"
+}

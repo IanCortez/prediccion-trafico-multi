@@ -1,0 +1,36 @@
+{
+  "user_instruction": "Termina esta ultima propuesta, y ahi cerramos",
+  "last_proposal": "Red vial con reloj original de15s y estados de movimiento, frente a control de solo posicion.",
+  "scope": "Finish sourcecounts, matchedpredictionexperiment, independentreplay, retention and finalcriticalreport. No newfamily afterward.",
+  "target_s": 73.5,
+  "results_above131_06": "Preserve metrics, predictions, config, source and conclusions regardlessMAE.",
+  "Test": "SEALED",
+  "status": "COMPLETE_AND_CLOSED_BY_USER",
+  "protocol": "protocolo_red_cinetica_Train.json",
+  "metrics": {
+    "position": {
+      "n": 10000,
+      "mae_s": 132.6075,
+      "rmse_s": 207.62194609433752,
+      "mdae_s": 90.0
+    },
+    "kinetic": {
+      "n": 10000,
+      "mae_s": 131.985,
+      "rmse_s": 206.73929234666545,
+      "mdae_s": 90.0
+    },
+    "reference": {
+      "n": 10000,
+      "mae_s": 129.6225,
+      "rmse_s": 204.45022010259612,
+      "mdae_s": 90.0
+    }
+  },
+  "summary": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\RESUMEN_FINAL_ULTIMA_PROPUESTA.txt",
+  "conclusion": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\conclusion.json",
+  "target_achieved": false,
+  "summary_sha256": "96800977227d1c0d65db60a6287586d7dbdfdf2dea984ea9c3d812c3b1913c1c",
+  "final_report_reviewed": true,
+  "no_running_experiments": true
+}

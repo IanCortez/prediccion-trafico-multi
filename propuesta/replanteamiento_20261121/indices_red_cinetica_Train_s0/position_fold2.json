@@ -1,0 +1,11 @@
+{
+  "kind": "position",
+  "excluded_fold": 2,
+  "queries": 7952,
+  "supported": 7862,
+  "compact_nodes": 78786,
+  "global_nnz": 862371,
+  "seconds": 104.6822898387909,
+  "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+  "sha256": "ed8e4895c6aa6b544f4d459ee2afddf8e7148305d819b25f7b908b22d1457c1a"
+}

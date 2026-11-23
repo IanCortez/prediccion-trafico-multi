@@ -1,0 +1,98 @@
+{
+  "status": "REFINED_BEFORE_TRAINING;1Dmathpassed but publicpathprojectiondiagnostic motivates2DlinearGPSframe",
+  "hypothesis": "A robust endpoint-duration bridge with memory in signed progress can learn from the temporal evolution of fit trajectories and analytically sum durations, avoiding greedy roadrollouts and a new huge graph.",
+  "trigger": "Full951718 source-time comparison completed, independently exactreplayed, but observed126.434575s failed original5s/2s gates; its time increment overgeometry was1.040647s with exploratoryCI crossingzero.",
+  "own_model_not_a_paper_replica": true,
+  "mathematics": {
+    "clock": "One progress increment per15seconds; original T=15n, fixed n=4..119 for every query.",
+    "increments": "v_1..v_n form stationary AR(1), mean mu(publicq,style), scale sigma, correlation rho. Shared inverseGamma5/2 scale yields a multivariateStudent t with df5.",
+    "endpoint": "s_n=sum v_i. Its exact t5 scale^2 is sigma^2*[n+2 sum_(l=1..n-1)(n-l)rho^l].",
+    "inference": "p(n|publicq) proportional to sum_style pi_style(publicq)*t5(1; n*mu_style, endpoint_scale_style(n)); uniform n prior on original fixed domain.",
+    "auxiliary": "Conditional interiorprogress likelihood = full incrementalpath logdensity minus endpoint logdensity, styles analytically integrated. True fitn belongs only to targetlikelihood; never to prediction.",
+    "not_first_passage": true,
+    "not_nonnegative_physical_speed": true,
+    "global_scale_is_not_independent_GPS_measurementnoise": true
+  },
+  "public_representation": {
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "features": 206,
+    "route": "Existing public projected_free seven shape residuals plus rawO,D form a ninepoint approximatepolyline. No private querypath.",
+    "fallback": "Straightline only when public routeavailability is false; no primaryrow removal.",
+    "targets": "Fit-only GPS positions project onto that publicpolyline; endpointprogress0/1, signedincrements may backtrack. This is a progressproxy, not exact roadvelocity.",
+    "encoding": "Fixed0..1 progress quantizeduint16, first0/last65535; max120positions. Padding never a predictioninput.",
+    "checks": [
+      "Raw65 publicfeatures/path reconstruction, reversedqueries and singleton.",
+      "Every sampledparent belongs to original951718fit and arrives before1396531073.",
+      "Independent straightline/rotation/projection checks and exact durationlabel preservation.",
+      "Projection error and incrementmemory reported only on fitparents; no rowfilter from these diagnostics."
+    ]
+  },
+  "prospective_comparison": {
+    "fit_n": 951718,
+    "held_n": 10000,
+    "held": "Same original chronological reusedTrain reserve; not primaryValidation or Test.",
+    "arms": [
+      "no_auxiliary",
+      "linear_progress_control",
+      "observed_progress"
+    ],
+    "control": "Linearprogress at each fitn preserves endpoint and original durationlabel but lacks observed withintrip evolution. Same encoder, head, initialization, fullfitrows, lossweight and updatebudget in the two auxiliaryarms.",
+    "seed": 20261130,
+    "epochs": 4,
+    "batch": 256,
+    "updates_per_epoch": 3718,
+    "updates_per_arm": 14872,
+    "neural_architecture": "Four independent256wide three-residual encoders, eightstyles each; pi normalizedwithinencoder and equalencoderprior. Treat all32 as one latentmixture, not an epistemicguarantee.",
+    "rho_range": [
+      -0.95,
+      0.995
+    ],
+    "df": 5,
+    "objective": "Proper ordinalCRPS_seconds/600 +.02 originalbinNLL +.02 conditionalbridgeNLL/(n-1) for auxiliaryarms; noaux has lastcoefficient0.",
+    "auxiliary_interpretation": "Normalized composite scoring objective; not the exact jointlikelihood of raw2DGPS.",
+    "stopping": "Fixedfinal4; no heldstopping or epoch/width/rho/df/weight grid after outcome.",
+    "gate": "Same>=5s improvement vs matchedfreshnoaux and storedCatBoost133.355393;>=2s vs linearprogresscontrol; all pairedexploratorydayCIupper<0.",
+    "new_cohort_filters": false,
+    "new_query_information": false
+  },
+  "resources": {
+    "GPU": "One heavyprocess, .5VRAMcap; actualfinite-gradient/order preflight required.",
+    "cache_MiB_cap": 350,
+    "progress_cache": "One fit-only uint16 NPY about218MiB, streamconstruction into finalfile; no second rawGPSbank, no giantgraph and no population rawtokens.",
+    "retirement": "Only after independentreplay, exacthash journal, preservingalloutcomes includingabove131.06. All protectedprimarymodels and10TransferTraj archives untouched."
+  },
+  "risks": [
+    "Approximatepublicroute can disagree with actualroute, distorting projectedprogress.",
+    "Stationary AR coefficients pertrip cannot represent every acceleration, congestion episode or independent GPS artifact.",
+    "GlobalStudent scale downweights an anomalous wholepath, not individual outlierlocations.",
+    "Conditional endpoint energy is a modelingchoice, not a guarantee of betterMAE or a physicalfirstarrival law.",
+    "RepeatedTrain reserve and one initialization give exploratoryevidence only."
+  ],
+  "motivation_sources": [
+    {
+      "title": "Link Representation Learning for Probabilistic Travel Time Estimation (ProbETA)",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2407.05895v2",
+      "relevance": "Correlation in segment/triptime distributions motivates explicitdependence. Its actualroute and same-day contextualinformation are not our OD inputs or a replicated protocol."
+    },
+    {
+      "title": "Inferring spatially varying animal movement characteristics using a hierarchical continuous-time velocity model",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9828272/",
+      "relevance": "Methodological precedent for correlatedvelocity/position covariance; different domain, not PortoTTE evidence."
+    }
+  ],
+  "math_verification": "verificacion_puente_temporal_CPU_s0/resultado.json",
+  "MAE_result": null,
+  "goal_confirmation_s": 73.5,
+  "primary_best_s": 129.99003446901307,
+  "Test": "SEALED",
+  "Validation": false,
+  "active_refinement": "refinamiento_puente_temporal_2D.json",
+  "no_full_publicpathprogress_cache": true
+}

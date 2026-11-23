@@ -1,0 +1,92 @@
+{
+  "complete": true,
+  "scope": "Postfixedresult familydiagnostic. No refit, selectionchange, extraqueries or labelchanges.",
+  "metrics": {
+    "position_graph": {
+      "n": 10000,
+      "mae_s": 280.248,
+      "rmse_s": 334.63571237989527,
+      "mdae_s": 255.0
+    },
+    "kinetic_graph": {
+      "n": 10000,
+      "mae_s": 268.386,
+      "rmse_s": 321.0656007734245,
+      "mdae_s": 247.5
+    }
+  },
+  "diagnostics": {
+    "position": {
+      "rawgraph_with_reference_fallback_metrics": {
+        "n": 10000,
+        "mae_s": 280.248,
+        "rmse_s": 334.63571237989527,
+        "mdae_s": 255.0
+      },
+      "gated_metrics": {
+        "n": 10000,
+        "mae_s": 132.6075,
+        "rmse_s": 207.62194609433752,
+        "mdae_s": 90.0
+      },
+      "all10000_rows_preserved": true,
+      "unsupported_fallback_count": 76,
+      "graph_prediction_bias_s": 216.987,
+      "gate_weight_quantiles": [
+        7.736268844275966e-191,
+        2.1764440347273882e-72,
+        3.4962110257085757e-22,
+        6.172893902894019e-05,
+        0.9999999999942213
+      ],
+      "gate_weight_mean": 0.022846966592393263,
+      "source_support_mass_quantiles": [
+        0.0,
+        1.63618713397847e-05,
+        0.0002784913534476443,
+        0.0035570049442433245,
+        0.187364011680354
+      ],
+      "interpretation": "Postfixedresult descriptiveablation only; not a newselectioncriterion or primarycohort."
+    },
+    "kinetic": {
+      "rawgraph_with_reference_fallback_metrics": {
+        "n": 10000,
+        "mae_s": 268.386,
+        "rmse_s": 321.0656007734245,
+        "mdae_s": 247.5
+      },
+      "gated_metrics": {
+        "n": 10000,
+        "mae_s": 131.985,
+        "rmse_s": 206.73929234666545,
+        "mdae_s": 90.0
+      },
+      "all10000_rows_preserved": true,
+      "unsupported_fallback_count": 76,
+      "graph_prediction_bias_s": 203.136,
+      "gate_weight_quantiles": [
+        1.2230846298479619e-191,
+        7.630053891180565e-70,
+        9.511859128902593e-23,
+        7.336671246533085e-06,
+        1.0
+      ],
+      "gate_weight_mean": 0.020750504279063525,
+      "source_support_mass_quantiles": [
+        0.0,
+        1.867522939939991e-05,
+        0.00028698797534847597,
+        0.003452974041514698,
+        0.16854861375908842
+      ],
+      "interpretation": "Postfixedresult descriptiveablation only; not a newselectioncriterion or primarycohort."
+    }
+  },
+  "predictions_sha256": "f248426c3e4d20b514549055e1ea909d04dba41e4674ce1e8ab14a7fe70fe4a8",
+  "primary_hypotheses_unchanged": true,
+  "above131_06_results_preserved": true,
+  "Validation": false,
+  "Test": false,
+  "source_sha256": "4c5ddce0367fb9052092735b2773762b8b5c8c4ecc781db4450bef4edbd8e83a"
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "raw5_standalone_CLI": true,
+  "source_queryT_read": false,
+  "originalGPSpointbank_forbidden": true,
+  "prediction_exact": true,
+  "max_probability_error": 0.0,
+  "query_count": 1
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "kinetic",
+  "excluded_fold": 0,
+  "queries": 8144,
+  "supported": 8053,
+  "compact_nodes": 158853,
+  "global_nnz": 1486796,
+  "seconds": 172.25469160079956,
+  "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+  "sha256": "b36f1574a201093169e4bb66adb96815bb475c1365504e84d2dd478a7c1f4d3d"
+}

@@ -20,7 +20,8 @@ def main():
     for folder in roots:
         for record_path in sorted(folder.glob("*/resultado.json")):
             record=json.loads(record_path.read_text(encoding="utf-8-sig"))
-            if "validation" not in record or record["validation"].get("n")!=127941:continue
+            validation=record.get("validation")
+            if not isinstance(validation,dict) or validation.get("n")!=127941:continue
             if record.get("conclusion","").lower().find("incomplet")>=0:continue
             predictions=record_path.parent/"validacion.npz"
             if not predictions.exists():continue

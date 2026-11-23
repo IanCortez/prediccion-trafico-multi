@@ -1,0 +1,40 @@
+{
+  "seed": 20261125,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "epochs": 4,
+  "batch": 256,
+  "members": 4,
+  "global_components": 8,
+  "source_components": 64,
+  "source_features": 38,
+  "lr": 0.001,
+  "min_lr": 1e-05,
+  "schedule": "Per-update cosine across exactly14872updates; no heldstopping.",
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "arms": [
+    "none",
+    "geometry",
+    "observed"
+  ],
+  "canonical_batch": 256,
+  "source_normalization_queries": 32768,
+  "source_normalization_seed": 20261127,
+  "objective": "Stable exactensemblemedian MAE/600+.02 stableoriginal15secondbinNLL; onlyextremeweightgradientbounded1e6s.",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "precision": "FP32 neuralweights/highest/noTF32; Float64 signedlogtail quantiles/probabilities.",
+  "epoch_selection": "Fixedfinal4, all951718fitrows once each epoch. No heldmetric beforefinalstate.",
+  "practical_gate": ">=5s betterthan matchedfreshneuralbaseline and storedCatBoost133.355393;>=2s betterthan geometryproxy, all exploratorydayCIupper<0.",
+  "initial": "Freshmatchedneuralparameters, same seedas smallpilot; no pretrainedheldlabels.",
+  "resources": "OneGPU .5cap; resident publicX/sourceindices/pointbank only; rawtokens perB256, no population rawtokencache.",
+  "preservation": "Every completed metric/prediction/config/source retained; finalpilotweights transient until independentreplay and gate decision.",
+  "Test": "SEALED",
+  "Validation": false
+}

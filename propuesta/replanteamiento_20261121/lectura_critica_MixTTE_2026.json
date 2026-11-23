@@ -1,0 +1,18 @@
+{
+  "title": "MixTTE: Multi-Level Mixture-of-Experts for Scalable and Adaptive Travel Time Estimation",
+  "source": "https://arxiv.org/html/2601.02943v1",
+  "version_date": "2026-01-06",
+  "venue": "KDD 2026",
+  "verified_sections": [
+    "Abstract",
+    "Introduction",
+    "Definitions and Problem Statement, equation1"
+  ],
+  "summary_es": "Integra atención externa por vía, expertos de grafo estabilizados y actualización incremental en un sistema industrial. La consulta definida incluye origen, destino, salida y un recorrido; también utiliza una ventana de estados de tráfico de la red.",
+  "applicability_es": "Su entrada contiene más información que la consulta OD local. Sus resultados no constituyen una comparación equivalente con la meta de 73,5 s.",
+  "design_inference_es": "Una adaptación local tendría que usar recorridos públicos generados y contexto aprendido solo con Train. Darle el recorrido observado de una consulta reservada o retroalimentación etiquetada de Validation cambiaría el protocolo.",
+  "decision_es": "Se conserva como referencia de contexto global y estabilidad de expertos. No se inicia una reproducción industrial con entradas incompatibles mientras continúa el ensayo controlado actual.",
+  "actual_experiment": "mezcla_individual_escala_Train_s0",
+  "no_new_predictive_result": true,
+  "Test": "SEALED"
+}

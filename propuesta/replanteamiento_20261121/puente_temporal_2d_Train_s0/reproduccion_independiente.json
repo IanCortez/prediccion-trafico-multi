@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "arms": {
+    "none": {
+      "full10000quantiles_exact": true,
+      "full10000logprob_FP32_exact": true,
+      "raw65_probability_quantiles_exact": true,
+      "raw_reverse17_singleton_exact": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 130.872,
+        "rmse_s": 205.31542806131253,
+        "mdae_s": 90.0
+      },
+      "original_pointbank_opened": false,
+      "model_sha256": "dd133307fe5152b8d202df08e2fab84555fc944270b6a43d6da3f72fb3cce48f"
+    },
+    "linear": {
+      "full10000quantiles_exact": true,
+      "full10000logprob_FP32_exact": true,
+      "raw65_probability_quantiles_exact": true,
+      "raw_reverse17_singleton_exact": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 129.6165,
+        "rmse_s": 205.23820916193944,
+        "mdae_s": 75.0
+      },
+      "original_pointbank_opened": false,
+      "model_sha256": "4b92166b04842d5078190ef49abed2ac89cbd4360054a27bed0012042ef16b63"
+    },
+    "observed": {
+      "full10000quantiles_exact": true,
+      "full10000logprob_FP32_exact": true,
+      "raw65_probability_quantiles_exact": true,
+      "raw_reverse17_singleton_exact": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 130.152,
+        "rmse_s": 205.39201542416393,
+        "mdae_s": 90.0
+      },
+      "original_pointbank_opened": false,
+      "model_sha256": "b4bbd8cf9ff990fd6c4e3009bfb345d2db895b62cf611e38984bd0c49791cf8d"
+    }
+  },
+  "scope": "Independentcompletepredictionreplay; not newprimaryevaluation.",
+  "raw_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "raw65public206_exact": true,
+  "original_pointbank_open_attempts": [],
+  "no_true_queryN_or_trajectory_in_model": true,
+  "all_originalrows_labels_preserved": true,
+  "Validation": false,
+  "Test": false,
+  "seconds": 14.16864013671875,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "source_sha256": "fa14ca39b477e7bad72f31207a7bd1a3fe687a59561c0e3ecc37a0bc90da1306"
+}

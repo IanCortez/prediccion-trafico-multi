@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "scope": "4096precutoffFITcoordinates only, no newpredictiveMAE.",
+  "fit_rows_preserved": true,
+  "true_duration_labels_preserved": true,
+  "no_heldGPS": true,
+  "all_fitparents_before1396531073": true,
+  "linearframe_independent_fixture_passed": true,
+  "rigidtransform_invariance": true,
+  "endpoint_mismatch_m_quantiles": [
+    3.0187877104035145e-06,
+    2.638679315255269e-05,
+    5.938144658263316e-05,
+    0.00011960577266634917,
+    0.0002236383647953007,
+    0.0002529880424160006
+  ],
+  "max_normalized_position_quantiles": [
+    1.0,
+    1.0,
+    1.0009685070115117,
+    1.1058302684271037,
+    2.0416051297495437,
+    13.531967910720299
+  ],
+  "vector_increment_autocorrelation_quantiles": [
+    -0.5035241308652455,
+    0.29209323673282583,
+    0.5657201355168994,
+    0.75302351975248,
+    0.8581087418185122,
+    0.9377812487154115
+  ],
+  "mean_negative_longitudinal_fraction": 0.18214628830560625,
+  "GPS_path_circuity_quantiles": [
+    1.000312539909018,
+    1.1666948594412578,
+    1.4120357050343273,
+    2.13047152401123,
+    5.918529433606252,
+    47.40225259868505
+  ],
+  "no_nearest_publicpath_projection": true,
+  "no_big_populationcache": true,
+  "interpretation": "Signed2DprojectedGPS motion includes roadturns, waiting and GPSerrors; globalStudent scale does not identify their separatephysicalcauses.",
+  "data_sha256": "ecd4c978cea6a38e4dcf5c851897e66386bd340c12f58eae0889b566998a62de",
+  "data_MiB": 1.276759147644043,
+  "sources": {
+    "verificar_coordenadas_2d_Train.py": "6da4897a7ba464aee55f4114737ffc5f420698f8459b0b904b8f4abe2079f22a",
+    "coordenadas_trayecto_2d.py": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+  },
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 1.6767046451568604
+}

@@ -1,0 +1,80 @@
+{
+  "status": "COMPLETE_AND_CLOSED_BY_USER",
+  "reason": "Relaxingcontinuous2DStudent bridge failed both matchedgates, while roadtopology and waiting are explicit omissions. Test a discrete roadstate clock with exact all-route duration marginalization rather than newrho/df/style/epoch choices.",
+  "previous_completed": "puente_temporal_2d_Train_s0/conclusion.json",
+  "fitproof": "verificacion_estados_cineticos_Train_s0/resultado.json",
+  "observed_fit_only_evidence": {
+    "parents": 4096,
+    "intervals15s": 164014,
+    "map_projection_median_m": 3.5847723484039307,
+    "valid_auxiliary_pair_fraction": 0.9828368310022315,
+    "nearest1_matches_fullsourceHMM_origin_fraction": 0.5546875,
+    "nearest1_matches_fullsourceHMM_destination_fraction": 0.50341796875,
+    "interpretation": "Endpointdirection is ambiguous from a singleGPSpoint; sourceHMM labels use completedpasttrajectories and are not annotatedtruth. Queryinference must not use actualqueryfirst/last roadlabels."
+  },
+  "source_data": {
+    "membership": "Original951718eligibleTrainparents arriving before1396531073; same fixed10000heldTrain never used to build sourcecounts.",
+    "pointbank": "memoria_puntos_Train_s0/puntos_Train.npz",
+    "source_mapping": "Stream batches through the existingfrozen public2014mapmatcher (4candidates,25msamples,sigma30m,maxtransition750m,resetGPSjump500m). No persistentfullpoint mapmatchingbank.",
+    "clock": "One transition between adjacentoriginalGPSsamples equals15seconds. Never substitute a roadedgehop for a timeunit; never join across maskedsource gaps.",
+    "quality": "Use only auxiliarypairs with bothprojectionerrors<=80m,rawstep<=500m,finiteroaddistance<=750m. Keep every originalquery and Tlabel; uncertainlinks are not compressed or retimed.",
+    "kineticstate": "Publicdirectedroadedge, uniformpositioncell of width<=50m, incoming15s motionclass:<=5m,5..150m,>150m. Initialmotionclass is a completedsource supervisionlabel, not supplied for the queriedtrip.",
+    "states_fullmap": 648144,
+    "sample_observedstates": 32584,
+    "sample_validuniquepairs": 90200,
+    "context": "WholeparentUTCweekfold0..4 and Europe/Lisbon hour-of-week at each originalsourcepoint. Sourceavailability based on originalparentarrival.",
+    "crossfit": "For fitqueries remove the entirequeryweekfold BEFORE every transition/stop/start count, rownormalizer, calendarshrinkage and globalbackoff. Heldqueries use fullpastsource."
+  },
+  "probabilistic_kernel": {
+    "position_control": "Collapse motionclasses in the SAMEsourcecounts, preserving directedroadposition, originalclock, sourcecalendar and endpointcounts.",
+    "kinetic_model": "Retain motionclass as state so direction/roadlocation and waiting/speedhistory influence subsequentmotion.",
+    "Q": "Nonnegativecontinuationmatrix from adjacentvalidsourcepairs, with separatestopcounts. Contextrows shrink toward samefold-excluded globalrows with a fixed10visit prior.",
+    "missing_rows": "Unknownoutgoingmass is killed/unsupported, never falsely converted to a destinationSTOP. No query is dropped.",
+    "query_location": "Rawfivefields only. Integrate possible directedroadstates aroundO,D with the same30m measurementuncertainty; no actualqueryroadID or velocity.",
+    "measurement_probe_pending": "Prefer publicroadstate-centre radius3sigma, to avoid forcingnearest1direction. Verify cellmeasure/initialprior conventions, deduplication, order/singleton and finite fallback before populationuse.",
+    "initial_state": "Publicoriginmeasurement times pastsource start-state/motion prior, with samefold-safe backoff; unknownactualqueryspeed is marginalized.",
+    "time_advance": "Q/r at known departure+15*k, independent of truequeryT/N. Hourbucket changes follow known Europe/Lisbon clock.",
+    "duration": "u_n=a_O^T Q(t0)...Q(t_(n-1)) [r(t_n)*L_D], n4..119. Normalize only over these same116originaldurations.",
+    "not_first_passage": "Earlier destinationvisits are allowed, matching snapshot-definedtriptermination.",
+    "unsupported_query": "Use frozenpublicreferencep0 if start/end/duration support is absent; keep alloriginalrows.",
+    "numerics": "Finitehorizon exactmarginalization under the approximatekineticmodel. Validate sparseCPU/GPU against independenttinygraph enumeration and normalization; no traffictruth/exactphysicalsimulator claim."
+  },
+  "reference": "referencia_publica_Train_red_vial.json",
+  "reference_leakage_guard": "The savedpubliclognormal model fits only the951718precutoffrows; no heldlabels or originalpointbank access at prediction. The fullprimarybest cannot substitute as a leak-freeTrainpilotreference because it was trained on the broaderTrain population.",
+  "prospective_pilot": {
+    "status": "DRAFT_TO_FREEZE_AFTER_RESOURCE_AND_INTERFACE_PROOFS; no currentpredictivegraphresult",
+    "fit_queries": 40000,
+    "held_queries": 10000,
+    "query_rows": "Same originaloraculo_tiempo_calle_train_s0 rows for 40k+10k; frozenreference/sourceprefix remains951718.",
+    "candidates": [
+      "frozenpublicreference",
+      "positiongraph+convexCDFgate",
+      "kineticgraph+sameconvexCDFgate"
+    ],
+    "gate_model": "One64wide two-layer querygate, sameinitialization/optimizer in position/kinetic arms. p_final=(1-g)*p0+g*p_graph, with properCDF scoring; absentgraph=p0 exactly. No extraquery-onlyhead that could change p0 withoutgraphinformation.",
+    "objective": "Same CRPS_seconds/600+.02originalbinNLL; fixedbudget to be frozen before any graphheldmetric.",
+    "hypothesis_position": "Positiongraph must improve>=5s versus frozenreference, exploratorydayCIupper<0.",
+    "hypothesis_kinetic": "Kineticgraph must improve>=5s versus frozenreference and>=2s versus matchedpositiongraph, all exploratorydayCIupper<0.",
+    "separate_interpretation": "A positiveposition hypothesis doesnot establish velocitymemory benefit; neither changes finalconfirmationgoal73.5.",
+    "no_query_N_T_path_or_newcohortfilters": true,
+    "no_postoutcome_clock_bin_statecount_epoch_or_lossweight_grid": true
+  },
+  "resources": {
+    "large_new_GPS_cache": false,
+    "persistent_graphcounts_andfeatures_cap_MiB": 350,
+    "sourcecounts": "Merge sortedcompactinteger (fold,hour,statepair) counts and source start/stop counts. Exactarrays/shards only withinE, resumable if needed; measurecompressedsize before populationconstruction.",
+    "forward": "Compact only past-observedstates; batchedsparse propagation. Start with4096sources and raw65FITqueries without targetMAE, measurememory/throughput before committingfullsource.",
+    "shards": "Do not duplicate a fullrawGPSbank or retain sourcepointlabelfiles for the population; retiretemporarycountshards only after exactmerge verification.",
+    "GPU": "Oneheavyprocess at a time, .5VRAMcap; actualresourceprobe required."
+  },
+  "next_actions": [],
+  "Test": "SEALED",
+  "Validation": false,
+  "primary_best_unchanged_s": 129.99003446901307,
+  "confirmation_goal_s": 73.5,
+  "new_MAE": null,
+  "final_experiment": "red_cinetica_Train_s0/resultado.json",
+  "final_conclusion": "red_cinetica_Train_s0/conclusion.json",
+  "independent_replay": "red_cinetica_Train_s0/reproduccion_independiente.json",
+  "new_families_authorized": false
+}

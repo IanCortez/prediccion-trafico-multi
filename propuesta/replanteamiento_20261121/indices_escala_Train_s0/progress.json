@@ -1,0 +1,47 @@
+{
+  "completed_groups": [
+    {
+      "fold": 0,
+      "n": 197975,
+      "mean_evaluated": 714.2738376057583,
+      "mean_discovered": 3007.3903018057836,
+      "within100m_fraction": 0.9858163909584543
+    },
+    {
+      "fold": 1,
+      "n": 188447,
+      "mean_evaluated": 714.5213826699285,
+      "mean_discovered": 3001.628139476882,
+      "within100m_fraction": 0.9868557207066178
+    },
+    {
+      "fold": 2,
+      "n": 190522,
+      "mean_evaluated": 718.6927336475578,
+      "mean_discovered": 3004.1353701934686,
+      "within100m_fraction": 0.9863375358226346
+    },
+    {
+      "fold": 3,
+      "n": 192613,
+      "mean_evaluated": 717.3359170980152,
+      "mean_discovered": 3008.4931287088616,
+      "within100m_fraction": 0.9864754715413809
+    },
+    {
+      "fold": 4,
+      "n": 182161,
+      "mean_evaluated": 712.8478049637408,
+      "mean_discovered": 3006.8151250816586,
+      "within100m_fraction": 0.9861660838489029
+    },
+    {
+      "fold": 5,
+      "n": 10000,
+      "mean_evaluated": 741.927,
+      "mean_discovered": 3048.6593,
+      "within100m_fraction": 0.9877
+    }
+  ],
+  "seconds": 1235.6812183856964
+}

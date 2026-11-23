@@ -1,3 +1,7 @@
+> **Cierre del 23 de noviembre:** la última propuesta terminó y la investigación quedó cerrada.
+> Mejor MAE primario: 129,990034 s; meta de 73,5 s no alcanzada; Test sin evaluar.
+> Ver [cierre final](../revision_tesis/CIERRE_FINAL.md). Los planes y estados siguientes son históricos.
+
 <!-- estado_actual_verificado_inicio -->
 Mínimo numérico vigente: **MAE 129,990034 s**, en los mismos 127.941 viajes de validación. Corresponde a la atención sobre subtrayectos, época final fija 6. Se recargaron sus pesos y reprodujeron todos los cuantiles, más 65 consultas crudas con inversión de orden y caso individual.
 
@@ -341,3 +345,33 @@ El piloto con 113.830 intervalos de los mismos 40.000 padres de ajuste obtuvo 13
 Con las fuentes fuera de la semana de cada consulta Train, las distribuciones de tiempos históricos obtuvieron 130,955613 s en 10.000 viajes Train. El modelo público sin memoria obtuvo 133,121328 s y el control de igual dimensión con tiempos derivados de geometría 133,210289 s. Las diferencias fueron −2,165715 s frente al modelo sin memoria, intervalo exploratorio por día [−3,120481; −1,221083], y −2,254676 s frente al control, intervalo [−3,285641; −1,276916].
 
 Existe señal temporal útil, pero no se cumplen los 5 s de mejora predeclarados para escalar este resumen a un experimento primario. No se cambia ese criterio ni se prueban nuevas cuadrículas o cantidades de fuentes. La cifra de 130,955613 s corresponde a Train reservado, no a los 127.941 viajes de Validation: no reemplaza al mejor modelo ni califica para conservar pesos por el umbral primario. Todas las predicciones, métricas, fuentes y referencias compactas se conservan. Test sigue cerrado.
+
+
+<!-- resultado_mezcla_individual_Train_s0 -->
+## Mezcla individual: piloto de 40.000 viajes cerrado
+
+Tras 80 épocas fijas, los MAE de la reserva Train fueron 150,527837 s sin fuentes, 148,302471 s con el control geométrico y 145,292730 s con tiempos observados. La fuente temporal mejoró 5,24 s frente a la red sin fuentes y 3,01 s frente al control geométrico, pero empeoró 11,94 s frente a la referencia de árboles de 133,355393 s. No cumple el criterio de expansión.
+
+La reproducción independiente coincidió en todos los cuantiles de los 10.000 viajes y en 65 consultas crudas. La mediana estable alteró el MAE menos de 0,000004 s; el problema numérico extremo no explica este fallo predictivo. Las grandes diferencias frente al error de ajuste son compatibles con sobreajuste y cambio temporal. Se conservaron las métricas y predicciones de ambas evaluaciones, las configuraciones, fuentes e historias; se retiraron solo los tres pesos transitorios descartados después de reproducirlos.
+
+Se activa la comparación previamente definida con 951.718 viajes anteriores al mismo corte y cuatro épocas completas, aproximadamente el mismo presupuesto de actualizaciones. Mantiene los mismos 10.000 viajes de reserva, filtros y tiempos originales, y no modifica los campos de consulta. Test y la validación primaria siguen cerrados para esta familia.
+
+
+<!-- resultado_mezcla_escala_Train_s0 -->
+## Mezcla individual: comparacion con todo Train previo al corte
+
+Con 951.718 viajes de ajuste y las mismas 10.000 consultas cronologicas de reserva, tras cuatro epocas completas fijas, los MAE fueron: none 130.029069 s, geometry 127.475221 s, observed 126.434575 s. El criterio temporal predeclarado no se cumplio.
+
+Se reprodujeron independientemente los cuantiles de los 10.000 viajes de las tres versiones y 65 consultas de cinco campos, incluyendo orden inverso y consultas individuales. Se conservan todas las predicciones, metricas, configuraciones y fuentes, tambien cuando empeoran 131,06 s. Tras la reproduccion se retiraron solo los tres pesos transitorios y el indice de fuentes especifico de este piloto; su constructor y manifiesto permiten reconstruirlo.
+
+Estas cifras corresponden a Train reservado, no a la validacion primaria de 127.941 viajes. El mejor MAE primario verificado sigue en 129,990034 s; el objetivo de confirmacion de 73,5 s sigue pendiente y Test cerrado.
+
+
+<!-- resultado_puente_temporal_2d_Train_s0 -->
+## Puente temporal bidimensional: comparación cerrada
+
+En las mismas 10.000 consultas cronológicas Train, tras cuatro épocas sobre 951.718 viajes anteriores al corte, los MAE fueron 130,872000 s sin objetivos auxiliares, 129,616500 s con movimiento lineal y 130,152000 s con movimiento observado. El control lognormal con la misma inicialización de codificadores y regla probabilística obtuvo 129,622500 s. Ninguna de las dos hipótesis predeclaradas cumplió su criterio.
+
+Se reprodujeron exactamente las probabilidades y los cuantiles de los cuatro modelos en los 10.000 viajes, además de 65 consultas públicas por reproducción, orden inverso y consultas individuales. No se necesitó el banco GPS original para inferir. Todas las métricas, predicciones, probabilidades, configuraciones y fuentes quedan conservadas. Se retiraron únicamente los tres pesos Student descartados; el control público queda como referencia de Train sin exposición a los viajes reservados.
+
+La correlación de movimiento observada en ajuste no produjo por sí misma una ganancia útil en duración OD. La siguiente alternativa incorporará explícitamente estados de la red vial y espera, manteniendo el reloj original de 15 s y comprobándolo antes de construir datos grandes. El mejor resultado primario sigue en 129,990034 s; no se ha demostrado el objetivo de confirmación de 73,5 s. Test permanece cerrado.

@@ -42,8 +42,8 @@
     },
     {
       "path": "propuesta/ARQUITECTURA.md",
-      "bytes": 21053,
-      "sha256": "fb035a01575248666c1506db3dc5550f5f1da81da1f9612bba24ad499c0caa42"
+      "bytes": 36459,
+      "sha256": "1f0c3e69ac593bb6a7132f980f87c70c180f8312487913e227a1041aa5a74859"
     },
     {
       "path": "propuesta/comparaciones_transfertraj/indice.json",
@@ -1342,8 +1342,8 @@
     },
     {
       "path": "propuesta/README.md",
-      "bytes": 1164,
-      "sha256": "4addb946527a713091036260914eee7d4b68193c52ec70d13146b5f184a2c3cf"
+      "bytes": 1458,
+      "sha256": "bc5d353cd5a31b28ee3fe938d945c52f3417315eb1435d3673b5eef4e2b3af17"
     },
     {
       "path": "propuesta/reentrenar_mejor.py",
@@ -1581,14 +1581,19 @@
       "sha256": "beb7bce7e92893948f52ca9b6bdbfccf1f36290b9947882d00831bcf911b865b"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/analizar_ultima_red_cinetica.py",
+      "bytes": 2285,
+      "sha256": "4c5ddce0367fb9052092735b2773762b8b5c8c4ecc781db4450bef4edbd8e83a"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/anotar_procedencia_eventos.py",
       "bytes": 1923,
       "sha256": "f0bca5ddd26dce6c1693c49e26d90dbc51eaafb1b7f1d604118bdf97fd834c37"
     },
     {
       "path": "propuesta/replanteamiento_20261121/arquitectura_activa.json",
-      "bytes": 3737,
-      "sha256": "a38787bf4bcbf0015c75ae3f108562138e321c8579f0188a2744acf482209fe0"
+      "bytes": 6373,
+      "sha256": "4b6f259be368cb483de6b2108821667f40fbb4bbab711974bdc7c286fbd28705"
     },
     {
       "path": "propuesta/replanteamiento_20261121/arquitectura_prefijo_nativo_historica.json",
@@ -1881,6 +1886,16 @@
       "sha256": "bca033985ff15f00ae414a074b39f85ab3f64278b1049e309e572e020497733a"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/auditar_cinematica_ajuste_Train.py",
+      "bytes": 4901,
+      "sha256": "22b3576dbacdc0e7b3c9c0beb6f45dc7120b25371502e4547d0e803e16b4a70d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditar_conservacion_pilotos_recientes.py",
+      "bytes": 3857,
+      "sha256": "526cdd915a5561ba01f93156935aff8270499649e0a1599f072ad209d9d1b019"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/auditar_etiquetas_secuenciales_viales.py",
       "bytes": 3715,
       "sha256": "e05d80565a722516baef83f3427cd51f348da48b4d7724a5c75bcfcffedbbaa0"
@@ -1889,6 +1904,26 @@
       "path": "propuesta/replanteamiento_20261121/auditar_fuentes_adicionales_Train.py",
       "bytes": 4134,
       "sha256": "34d9c0b6579cc5b200aa72c2c3baa133fbb4315ac259101561e9bae0d65b570b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditar_inferencia_UNITE_CPU.py",
+      "bytes": 5283,
+      "sha256": "a26255523490e6a365b8945bbc923cd080e12bdd36b14d49a8ef020528dd4580"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditar_precision_mediana.py",
+      "bytes": 1139,
+      "sha256": "ea2a7ea67f6bcbf59a4e92ac0336c066dab7b18d16fbf0fb60fdc95ac79a12e1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditar_resultado_escala_Train.py",
+      "bytes": 3664,
+      "sha256": "0bfffb307bff710d208c79bd7216a9d9409f4f138ac2fb2de71f6f95dc902909"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditar_resultado_puente_2d_Train.py",
+      "bytes": 3489,
+      "sha256": "34c342817e5160125c535df3504051b2a0a2410aef2b313c75562f39a98fd718"
     },
     {
       "path": "propuesta/replanteamiento_20261121/auditar_semantica_geometria_subtrayectos.py",
@@ -1901,6 +1936,21 @@
       "sha256": "1b768f2bd95633909835f2d81504cbd5183b5b9639627357854002228a66f858"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/auditoria_cinematica_ajuste_Train_s0/fuente_ejecutada.py",
+      "bytes": 4901,
+      "sha256": "22b3576dbacdc0e7b3c9c0beb6f45dc7120b25371502e4547d0e803e16b4a70d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditoria_cinematica_ajuste_Train_s0/interrupcion_constructor.json",
+      "bytes": 218,
+      "sha256": "4833aa90c1c39cc045d1c6d70b4218cb1c7c7c7e4abcda6c80e888430b222d26"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditoria_cinematica_ajuste_Train_s0/resultado.json",
+      "bytes": 3160,
+      "sha256": "0ce5bce040dcef0d181f25d14618cd496eaa53e05f9066bfa95d367273782612"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/auditoria_etiquetas_secuenciales_viales.json",
       "bytes": 4962,
       "sha256": "a811ea5db31e76893c22a71de7ab472c3af9434e8e5e681bcbacfc9fddbba5bb"
@@ -1909,6 +1959,21 @@
       "path": "propuesta/replanteamiento_20261121/auditoria_fuentes_adicionales_Train.json",
       "bytes": 1711,
       "sha256": "c401698e0a1079c4b0abc5f74ca38df8056e1a8963b02a382b4f3171bd8e4f53"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditoria_inferencia_UNITE_CPU_s0/resultado.json",
+      "bytes": 2855,
+      "sha256": "3e2ecbabe669c673b50d43654d81b9485f784dabf1d142cea1d77e4d14548f97"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditoria_inferencia_UNITE_CPU_s0/verificador_ejecutado.py",
+      "bytes": 5283,
+      "sha256": "a26255523490e6a365b8945bbc923cd080e12bdd36b14d49a8ef020528dd4580"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/auditoria_precision_mediana.json",
+      "bytes": 1180,
+      "sha256": "f302609a7d5016eab85725db748b5ed007cdc2f8b870d82882ec8b570b330977"
     },
     {
       "path": "propuesta/replanteamiento_20261121/auditoria_semantica_geometria_subtrayectos.json",
@@ -2416,6 +2481,11 @@
       "sha256": "b9b79e7ffa7edc355564850a491c0baca263153b1a11322486712597de29877e"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/cerrar_ultima_propuesta.py",
+      "bytes": 13363,
+      "sha256": "336cb199f4278e7185b33f9405079b4a7eb5cf0f21240c95e0597a348c4800ba"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/certificar_atencion_historia.py",
       "bytes": 4930,
       "sha256": "aacf64d6d174ae101997881a76f8e80aa223050a50a800e9318866d8312baa9e"
@@ -2454,6 +2524,11 @@
       "path": "propuesta/replanteamiento_20261121/cierre_conservacion_20261122.json",
       "bytes": 1463,
       "sha256": "04f70aa3ef92b47db5308128ed6287c4c7b0bfd64487cd8245a9788e9e370e26"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/CIERRE_ULTIMA_PROPUESTA.json",
+      "bytes": 1418,
+      "sha256": "caf529bde1ba249e88678d15bbbcd5421b8b089f612d3df79e4eb3f2c8763ccc"
     },
     {
       "path": "propuesta/replanteamiento_20261121/cobertura_fuentes_ampliadas_Train.py",
@@ -2566,6 +2641,16 @@
       "sha256": "a57fe482b5d06c3d893e109f22fbe45bc734d78c0bd62842c3081a49db399fbf"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/concluir_mezcla_escala_Train.py",
+      "bytes": 8136,
+      "sha256": "11baf8024c17c48c919b1f254cbaa6cd5265c903e48b25e464b7bf175a5988ed"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/concluir_mezcla_individual_Train.py",
+      "bytes": 6587,
+      "sha256": "f6e72791ba6f7a990d985b5db6cc5c565d4f311fffa0ba26b8cf30a12a1897df"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/concluir_mezcla_proyeccion.py",
       "bytes": 7775,
       "sha256": "41879a6987af76227b1bbee7053778dcdc714d24b9d67fb9dfdfe660a9e98f5b"
@@ -2589,6 +2674,11 @@
       "path": "propuesta/replanteamiento_20261121/concluir_progreso_recurrente.py",
       "bytes": 5234,
       "sha256": "f6e9e1b8ac713c82a8d822ce9a638d1ba71259e5d5097261eba3a029c29ace7f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/concluir_puente_2d_Train.py",
+      "bytes": 9813,
+      "sha256": "3478b2d632976dbb8ad3f5ba7e0cde19a6c53442dd266af34c1868a5952d3e2f"
     },
     {
       "path": "propuesta/replanteamiento_20261121/concluir_spline_cdf_train.py",
@@ -2786,6 +2876,11 @@
       "sha256": "b160ca6077b0f4e0d80084a0c41e509d17b00e60615b7b7657e2e74cc4d32670"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/conservacion_pilotos_recientes.json",
+      "bytes": 11835,
+      "sha256": "5f27e413d8a6c5728bcaa6b6887003852b16b202e78110f2acba3b5c0b6598e8"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/consistencia_temporal_viaje_s0/etapa_B/fuentes/base_replanteo.py",
       "bytes": 2191,
       "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
@@ -2951,6 +3046,11 @@
       "sha256": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/construir_conteos_cineticos_Train.py",
+      "bytes": 10004,
+      "sha256": "71ae7b7572179701ae08499b1dda41a92f3f8d0b4794446eba18025ba167b0ec"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/consulta_historicos_cruzados.py",
       "bytes": 2268,
       "sha256": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0"
@@ -2959,6 +3059,71 @@
       "path": "propuesta/replanteamiento_20261121/consulta_subviajes_train.py",
       "bytes": 1028,
       "sha256": "8963ecb1c2261309030841c182c99f4a708c01a788006f1bfb5243e88573bba9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_muestra_Train_s0/conteos_red_cinetica.py",
+      "bytes": 1922,
+      "sha256": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_muestra_Train_s0/preparar_conteos_cineticos_muestra.py",
+      "bytes": 4918,
+      "sha256": "2e3e9800c23bbcf3a35e99590e36c56913d9864b31a503b0d19d2080e8b07d30"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_muestra_Train_s0/resultado.json",
+      "bytes": 2314,
+      "sha256": "a1fe36523131c475b5b967f693524f994576293344d29982452014fe20398cf9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/config.json",
+      "bytes": 795,
+      "sha256": "6fc34118d8784e76612dc09331d46a9b89402ec242cdc20dcd549ea71365aa1f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/construir_conteos_cineticos_Train.py",
+      "bytes": 10004,
+      "sha256": "71ae7b7572179701ae08499b1dda41a92f3f8d0b4794446eba18025ba167b0ec"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/conteos_red_cinetica.py",
+      "bytes": 1922,
+      "sha256": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/estados_cineticos_15s.py",
+      "bytes": 2388,
+      "sha256": "5b67b5604968e53520ce1562697c8f603ae8080ec5fa21dd9b1bb9c64d717e5c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/operador_red_cinetica.py",
+      "bytes": 7329,
+      "sha256": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/operador_red_cinetica_GPU.py",
+      "bytes": 3684,
+      "sha256": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/resultado.json",
+      "bytes": 1878,
+      "sha256": "66fffbbcb5a846b80eeb8b1acef0795bc3b6d2dd9f114a7f32a2a687288164aa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/retiro_shards_verificados.json",
+      "bytes": 98977,
+      "sha256": "3ef96c159868465f8daa252fd4a719e8146760a7564407908d0be7d9aa793bfd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_cineticos_prefijo_Train_s0/shards.json",
+      "bytes": 92676,
+      "sha256": "1a99a40798625dcf7fd0017bc721284587bc983b58036886ac7a5839b5dfe2ef"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/conteos_red_cinetica.py",
+      "bytes": 1922,
+      "sha256": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
     },
     {
       "path": "propuesta/replanteamiento_20261121/continuar_a_prefijo.py",
@@ -2997,8 +3162,8 @@
     },
     {
       "path": "propuesta/replanteamiento_20261121/CONTINUIDAD_OPERATIVA.json",
-      "bytes": 129291,
-      "sha256": "5d18c0129a07997dae4230c6bc744646b57def43eddc085d51c1b2e3c60baf27"
+      "bytes": 148679,
+      "sha256": "6054659aafb3279d45189378ea1d990676c18c2166fd024b051bc57d4931a597"
     },
     {
       "path": "propuesta/replanteamiento_20261121/control_dos_rutas_proyeccion_s0/certificacion/certificar_checkpoint_proyeccion.py",
@@ -3084,6 +3249,91 @@
       "path": "propuesta/replanteamiento_20261121/control_dos_rutas_proyeccion_s0/verificacion_GPU_inicial.json",
       "bytes": 300,
       "sha256": "d246400ce89c89ec59ec112bc9ba018e972f95294cd61145881b122b1e5c1f09"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/conclusion.json",
+      "bytes": 382,
+      "sha256": "47bfba64e84b76cc0eae4274596d44f4298b4d4995edfbe0a351c804bd35cb24"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/constructor.pt",
+      "bytes": 10416,
+      "sha256": "db151a4be51fff77448241e2ec17ceab7559e400bac4502b1eae15bc62d004ea"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/epoca_4.pt",
+      "bytes": 13643240,
+      "sha256": "3a427cf587fc2bf10bdf9d74646117f91a31f4aa5d3a542b83af97d9b9c8f770"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/cuantiles_mezcla_balanceada.py",
+      "bytes": 4435,
+      "sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/datos_control_familia_puente.py",
+      "bytes": 1774,
+      "sha256": "66f21074ba8f16f1ecef97cf7e42465872ec6c5f90ef00142bf0074de37ccaac"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/entrenar_control_familia_puente.py",
+      "bytes": 9017,
+      "sha256": "6fc16b7772c3ec4d7c988ba9b625f09b16b028eb6ae2d1c4b318a58c10e6fa8d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/modelo_control_lognormal_puente.py",
+      "bytes": 2982,
+      "sha256": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/modelo_puente_temporal_2d.py",
+      "bytes": 2721,
+      "sha256": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/fuentes/puente_temporal_2d.py",
+      "bytes": 3545,
+      "sha256": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/historia.json",
+      "bytes": 1175,
+      "sha256": "4754b6231832ccdab2cf061c75640137b2380f997f6cc0d13e951989cdffa091"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/predicciones_held_Train.npz",
+      "bytes": 4276117,
+      "sha256": "1a419e95688a70692abc198059f186cd6611ca054ada87df3310b8ef01796741"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/preflight_GPU.json",
+      "bytes": 453,
+      "sha256": "d375d5e72b732c751552dac264730558bad55bc5dbe88989cda24e48c3a91b59"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/protocolo.json",
+      "bytes": 2071,
+      "sha256": "d31b20c69d679a34fe89fd26e7e6fc34e6606c9bc768e4eb112fbe83e2429ac6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/reproduccion_independiente.json",
+      "bytes": 1725,
+      "sha256": "4177cf7f2622c5ebea62ce382d4dc83c5430b7833516a33232bb4b9c7fa2d41c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/control_familia_puente_2d_Train_s0/resultado.json",
+      "bytes": 4092,
+      "sha256": "d66b5497fb7f2b4453f0b6261ad9ee1b30449aa7b574355f43b84747a215efe4"
     },
     {
       "path": "propuesta/replanteamiento_20261121/control_historica_diferencias_IO.json",
@@ -3201,6 +3451,11 @@
       "sha256": "bdfaac7601bb956c290c64ad484ccb9a9f535f5258b5e679e50050514f6a1c64"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/coordenadas_trayecto_2d.py",
+      "bytes": 865,
+      "sha256": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/correccion_impresion_tras_resultados_completos.json",
       "bytes": 723,
       "sha256": "41c74750994be01e79979f84579abba913cfc4f327b07c1b660691673e4b8412"
@@ -3214,6 +3469,11 @@
       "path": "propuesta/replanteamiento_20261121/corregir_carga_cache_subtrayectos.py",
       "bytes": 1479,
       "sha256": "b5a6fedc253306e6f638455f2d2935aac73e20bdcc5f10cb5ab3f82490c0b6e7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/corregir_indice_conservacion.py",
+      "bytes": 391,
+      "sha256": "c1cbbe780d91b7695b5dbea253cacbb5b8aa755d0d0688fc43b032348b34c8bf"
     },
     {
       "path": "propuesta/replanteamiento_20261121/corregir_instrumento_landmarks.py",
@@ -3256,6 +3516,21 @@
       "sha256": "8bcde0d915aa0cca87a6ab6c58fceb9cd0819d135ba4eeb5676a367f0453e3c5"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/criterio_promocion_ultima_propuesta.json",
+      "bytes": 1164,
+      "sha256": "c5a90f3e5a97f944aad1d988fb32aa610b233e74c0a75388b3263e4bb759a0de"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cuantiles_mezcla_balanceada.py",
+      "bytes": 4435,
+      "sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/cuantiles_mezcla_implicita.py",
+      "bytes": 2098,
+      "sha256": "a40af5f3f23f372ec8160ebe25d3bb5fa303bebe5c1a7ecdaf33662ed3c337a3"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/datos_calles_parciales_Train_s0/fuente_ejecutada.py",
       "bytes": 8951,
       "sha256": "c2e915fe1915e7f30d5c897ccb5aff53f3c6a5320f39e6918d3a61478057c9e4"
@@ -3284,6 +3559,11 @@
       "path": "propuesta/replanteamiento_20261121/datos_campo_multiescala.py",
       "bytes": 2672,
       "sha256": "2035e66b1ca620362ac1bd11f8151d84a14dd22e0ed1d045b5307065730e67a9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_control_familia_puente.py",
+      "bytes": 1774,
+      "sha256": "66f21074ba8f16f1ecef97cf7e42465872ec6c5f90ef00142bf0074de37ccaac"
     },
     {
       "path": "propuesta/replanteamiento_20261121/datos_firma_global90_Train_s0/fuentes/firma_global90.py",
@@ -3334,6 +3614,16 @@
       "path": "propuesta/replanteamiento_20261121/datos_historia_individual_s0/resultado.json",
       "bytes": 1698,
       "sha256": "a867e403f1e658a7d95ac2fc4d7b72e19958ded505547ffa80c23b96623c3cff"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_mezcla_escala_Train.py",
+      "bytes": 7437,
+      "sha256": "61df8f25284df1efffa103edda5d697b867a7c928b00afd20055a88edce7932d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_mezcla_individual_Train.py",
+      "bytes": 7675,
+      "sha256": "0dba3a66c94b2393d6974cfd256d74c7bca6850a53d01c4e09e54980507ee1d0"
     },
     {
       "path": "propuesta/replanteamiento_20261121/datos_prefijo_nativo.py",
@@ -3399,6 +3689,11 @@
       "path": "propuesta/replanteamiento_20261121/datos_prototipos_historicos_s0/verificacion_entrada.json",
       "bytes": 284,
       "sha256": "9ef23b1db608fc25966c234eb4bf34838e5d074eb52a0896d623183fb0b2bea8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_puente_temporal_2d.py",
+      "bytes": 6009,
+      "sha256": "ec7b3023577908aa82876efa5e1ec649e6812671f2f52490189d713ac48bdf1b"
     },
     {
       "path": "propuesta/replanteamiento_20261121/datos_semi_markov/protocolo.json",
@@ -3801,6 +4096,11 @@
       "sha256": "0d0f3f6ae58738169775b50c6a26ed512101680dc3b4f86931aa547611183603"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/ejecutar_aux_subviajes.py.impresion_v1.txt",
+      "bytes": 4601,
+      "sha256": "cbb8a4e04f487796424d40cf34b1e9b024f99dc5e3a5289a4508d48cd3784e92"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/ejecutar_campos_multiescala.py",
       "bytes": 6016,
       "sha256": "3f3663a057682ea05fe80d9028b39ecf9a6cf9a543e65b24f0b6caffdc5d6ba5"
@@ -3846,9 +4146,19 @@
       "sha256": "3d31b2d5f32e35defbe1a5a7f3e470333a6ed559f787b53a85fb6126e5b3f9ba"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/entrenar_compuertas_red_cinetica_Train.py",
+      "bytes": 11329,
+      "sha256": "b1e11df15cf9be8681ccf676801d3a1a58d801a0227859e60e287703f21e006b"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/entrenar_consistencia_temporal_viaje.py",
       "bytes": 9208,
       "sha256": "5943341a48295f2554d930e07b7809dfabf6d2261fe8da16aaf001acbfa0dda7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_control_familia_puente.py",
+      "bytes": 9017,
+      "sha256": "6fc16b7772c3ec4d7c988ba9b625f09b16b028eb6ae2d1c4b318a58c10e6fa8d"
     },
     {
       "path": "propuesta/replanteamiento_20261121/entrenar_control_subtrayectos_conjuntos.py",
@@ -3911,6 +4221,16 @@
       "sha256": "7e778c53036db3f0a7ea7bd08386371e60b86c24c91c417f1a44a1a33003560a"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/entrenar_mezcla_escala_Train.py",
+      "bytes": 10650,
+      "sha256": "30d1e2561cfdc694f4978e5d9054a0585a4049d55033e8ea0103889b75c826c1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_mezcla_individual_Train.py",
+      "bytes": 9063,
+      "sha256": "4063260e657d76c2b3a1f2cd9b4fa9ecc1a076860a6c3c12d7eddd46090e3b1e"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/entrenar_mezcla_proyeccion.py",
       "bytes": 11562,
       "sha256": "fcbee8ae15926ac6ec75ed1e660f1f6c9d99d1e100d47533ad05d254228356df"
@@ -3934,6 +4254,11 @@
       "path": "propuesta/replanteamiento_20261121/entrenar_progreso_recurrente.py",
       "bytes": 9373,
       "sha256": "c98185122d59babf5eb87a6d83b39cd7455b62a3ae89f90cb0446b62c19ae40c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/entrenar_puente_2d_Train.py",
+      "bytes": 7650,
+      "sha256": "f4ea4b18e3da8c201247f8a330d3e4d04e0bb4a288d52f680a1835c94d32e23e"
     },
     {
       "path": "propuesta/replanteamiento_20261121/entrenar_residual.py",
@@ -4306,6 +4631,11 @@
       "sha256": "30e62655673310e0ff8a37be223f3ef56a7c9388a674ae3cc5addb20610f2c57"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/especificacion_operador_red_cinetica.json",
+      "bytes": 6519,
+      "sha256": "ac7b94c05c684ba5a6b18ca5642bbe73b0eae5ee880a5c19b67afb423c759385"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/estado_documentado_20261122.json",
       "bytes": 168,
       "sha256": "dcb263b571026a54a006072f480464031fba240549a1fa62d98bdd2514623b24"
@@ -4326,6 +4656,11 @@
       "sha256": "4a281a5a7c3e76e0bd9c88428984f11c52c884286bf5abcc2aa45e5caf5cf002"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/estados_cineticos_15s.py",
+      "bytes": 2388,
+      "sha256": "5b67b5604968e53520ce1562697c8f603ae8080ec5fa21dd9b1bb9c64d717e5c"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/estados_valor_vial_s0/fuente_ejecutada.py",
       "bytes": 4224,
       "sha256": "862f8b8e8f5e6fd1351d95f31496c3d283dccfe0597a081df889f3001d74e3ee"
@@ -4334,6 +4669,11 @@
       "path": "propuesta/replanteamiento_20261121/estados_valor_vial_s0/resultado.json",
       "bytes": 1107,
       "sha256": "535c5a8a316a9228c4c210fac7d2c75a0bcec5c3c1cb21044f3813b5b0626f47"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/evaluacion_previa_marginalizacion_caminos.json",
+      "bytes": 2360,
+      "sha256": "36e2d2a7b035abfc18a66d4106f9b053adf40d0e58fd3ae537cf2d10a16d1c35"
     },
     {
       "path": "propuesta/replanteamiento_20261121/evaluar_consistencia_temporal_viaje.py",
@@ -4606,6 +4946,41 @@
       "sha256": "cbe6d47d8325f32895dff0ed2e46e9bb8445d9e3a70a38ddb4499d451185321d"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/fuentes/preparar_indices_escala_Train.py",
+      "bytes": 5314,
+      "sha256": "e52e3cadef1d78b7c8e0a90c1fe09fd39481954c991c20c64a54e2a314bdaba3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/fuentes/recuperar_fuentes_ordenadas.py",
+      "bytes": 6781,
+      "sha256": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/fuentes/recuperar_subtrayectos.py",
+      "bytes": 5466,
+      "sha256": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/plan.json",
+      "bytes": 442,
+      "sha256": "34f5e3f786581031eced61560f80bb3d9e8d1e8c2385fcb5b43053dfb09da9b3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/progress.json",
+      "bytes": 1186,
+      "sha256": "8df7a3b7c3e6f7689bf02af569a0b7796bbc7cca9b6ecde210a07edc9533f059"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_escala_Train_s0/resultado.json",
+      "bytes": 2405,
+      "sha256": "bb15c3884597f2bb3f1fa10cfa0fa45f636c5d502f947e19e57c0fa7dd77847f"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/indices_progreso_vial_s0/ejecucion_verificada.json",
       "bytes": 322,
       "sha256": "9e9f987b74da8acfd95bdc0f3331cedce3034cde14ba5536cd50c495ea696a14"
@@ -4619,6 +4994,131 @@
       "path": "propuesta/replanteamiento_20261121/indices_progreso_vial_s0/resultado.json",
       "bytes": 1249,
       "sha256": "ece05daf70f170459c010e388381a5ee7c0dd235e031f43db2b5ed455256e5cd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/conteos_red_cinetica.py",
+      "bytes": 1922,
+      "sha256": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/fuente_antes_compatibilidad_cumsum.py",
+      "bytes": 10398,
+      "sha256": "2691f2f9b4554f63e273e1add8e6478637bf91a8e84496a6fb16605fa429ddc6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/incidencia_cumsum_GPU.json",
+      "bytes": 391,
+      "sha256": "bfda4e3a62f509f8f5f1e1a0a04bf3eb2c3194424bddf6ad89ecc2ef5c59ecdd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_fold0.json",
+      "bytes": 353,
+      "sha256": "12167aa49783d236f7e8bf85e91b84a0fba0097d978ef07b335172f3139d145d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_fold1.json",
+      "bytes": 353,
+      "sha256": "2f891a5164709855700639f74554814898dc126aa201d7d0c7a6a2810176a00d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_fold2.json",
+      "bytes": 352,
+      "sha256": "6baafd4499cd13695923cd83426d69ccaabce1097de2034b2a4d400118d5e9a7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_fold3.json",
+      "bytes": 353,
+      "sha256": "0859ad4e50c4c8f2519f04348d8ee50cd194f8dbbab8f15353182317924edb8c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_fold4.json",
+      "bytes": 353,
+      "sha256": "4e6cfd4adea1e25b914cd7fbdea900a29e6651e701a5782a830ace5ffc655478"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_fold5.json",
+      "bytes": 354,
+      "sha256": "0fe8a018a0eb930d1bee3fc6190c4f1116afa4b1b2c79bca5d79289687df63f8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/kinetic_production_resourceproof.json",
+      "bytes": 377,
+      "sha256": "dae2ac6339030a3acc39d67215baba24c622b85f146451b32575c76da4985991"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/modelo_control_lognormal_puente.py",
+      "bytes": 2982,
+      "sha256": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/operador_red_cinetica.py",
+      "bytes": 7329,
+      "sha256": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/operador_red_cinetica_GPU.py",
+      "bytes": 3684,
+      "sha256": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_fold0.json",
+      "bytes": 352,
+      "sha256": "808068f08c0b56faa714e7717aeb29a4fbc02e9c7acc4c59b28be058e424e8e3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_fold1.json",
+      "bytes": 352,
+      "sha256": "7e5a469232db342ca2235ba282069d6d6fe62a3e99fd826a4b10c61fe21382be"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_fold2.json",
+      "bytes": 351,
+      "sha256": "d22ee4c94545223e8e858955f8287181bc3818e9ea17f04d7806697cf2a01d8b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_fold3.json",
+      "bytes": 352,
+      "sha256": "a3c3ae51c5b1d09ff8d49eb0d5a08b48a660956fb7e30cac4fa87f7679233b1d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_fold4.json",
+      "bytes": 352,
+      "sha256": "b31d35d82d0cdbc01e6ebaf1c4de64c6efb30442fe79eb770710f0028225474e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_fold5.json",
+      "bytes": 353,
+      "sha256": "7ec577849580380a55cf5b318bc8d8389abf1d40a1f2730fa17b3b40f69567b3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/position_production_resourceproof.json",
+      "bytes": 378,
+      "sha256": "04f0830339506d5f5a0dd2ab11f35193c807a832860e21f7ff2ce401d73e81df"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/preparar_predicciones_red_cinetica_Train.py",
+      "bytes": 10693,
+      "sha256": "f6b4bf310d0734d499d298cedd486b57e19aee251a0768a5f21c69f7819824a7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/protocolo.json",
+      "bytes": 2709,
+      "sha256": "36d57c42bd37dd6f59154ea91b55b377a40718d2aebb1b8dba0747f8940dfb71"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/resultado.json",
+      "bytes": 7677,
+      "sha256": "87b80c26079e938ecf968eb411292f07766ea276a5c0dea3b8c6a0c95d4f9a4c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/retiro_shards_predicciones.json",
+      "bytes": 2934,
+      "sha256": "3700e28ea024a383fd4b2c4b608309b2daf0016dbd502490facfd4aa1b436868"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_red_cinetica_Train_s0/sources.json",
+      "bytes": 530,
+      "sha256": "26c042ae1327e28e5dfd9fd71dee55829038888b79df95eb46c55a1f6c8995e5"
     },
     {
       "path": "propuesta/replanteamiento_20261121/indices_subtrayectos_s0/fuentes/base_replanteo.py",
@@ -4751,6 +5251,11 @@
       "sha256": "0fd709f87df70afad05ebee8724922ab23e9a48cb3a3d0d21e70f49aa70606db"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/inferir_red_cinetica_raw5.py",
+      "bytes": 4160,
+      "sha256": "fb35d26774d7f3332b129b7e228a22ff1fa3d4bc488263073a4a7add8770c5ed"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/inicializacion_consistencia_temporal_s0/resultado.json",
       "bytes": 538,
       "sha256": "58147d5e603f9064421720d2c8ce5aa7def362af8fe510a1468590b5b8739aeb"
@@ -4792,8 +5297,13 @@
     },
     {
       "path": "propuesta/replanteamiento_20261121/inventario_conservacion.json",
-      "bytes": 18711,
-      "sha256": "04064f429199d0148d7a6fe52065cc736073b135bf90c959e62811dde0640f27"
+      "bytes": 18713,
+      "sha256": "f9ad7eab29e8492f117440a1fcfba898973c47c9fb1f6211e0c9062a02bbf89a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/inventario_espacio_por_carpeta.json",
+      "bytes": 788,
+      "sha256": "5bc6794ec63a6830aaa1d72746a6caf898f9418d684a67ea81af90b3e7bc9d38"
     },
     {
       "path": "propuesta/replanteamiento_20261121/inventario_fuentes_adicionales.json",
@@ -4809,6 +5319,16 @@
       "path": "propuesta/replanteamiento_20261121/landmarks_red_publica_v2.py",
       "bytes": 4926,
       "sha256": "e5a79d412f89234b904965934d4939ba1367787838eabf791242e31e69afa600"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/lectura_critica_MixTTE_2026.json",
+      "bytes": 1361,
+      "sha256": "7459f286856d36af55b2f1d3e653fedbc84bf623f838ae72ef0372468340285d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/lectura_critica_rutas_normalizadas_2025_2026.json",
+      "bytes": 5562,
+      "sha256": "bba6f23081a79c7488d91fc47a82291df1a832b55ab2835916359f879396fe8b"
     },
     {
       "path": "propuesta/replanteamiento_20261121/limitar_momentos_mediana.py",
@@ -4891,6 +5411,21 @@
       "sha256": "849b43962690ba1d24aa1154ce8aabeafa38b07a4c10df4ac562fbc902301d06"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/literatura_UNITE_2026/infer_ODTTE.py",
+      "bytes": 11663,
+      "sha256": "464ce7f2b5739327fdf9c8cdda39cd0ff85c02c4d6b092326894bceb67a58476"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/literatura_UNITE_2026/models_tte.py",
+      "bytes": 16094,
+      "sha256": "acd865d7120128615f33a06b1a1308fb13dc3b6b6c13e23ce2a9d439878c4d35"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/literatura_UNITE_2026/prepare_workspace.py",
+      "bytes": 20261,
+      "sha256": "561c834f066df8e5243d14a2f688c6eeb30a2d30335ea64f945155b8146a7595"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/maestro_cruzado_s0/crear_maestro_cruzado.py",
       "bytes": 8214,
       "sha256": "0780989442bfcc333f58866a55c0ce8c673a008fc9064c039c9bf951d7a3016c"
@@ -4939,6 +5474,11 @@
       "path": "propuesta/replanteamiento_20261121/maestro_cruzado_s0/resultado.json",
       "bytes": 6279,
       "sha256": "ac19062f316a923c29147573fc075bdb4c48b28df208b620587cb56d8bd04250"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/marginalizacion_caminos_log.py",
+      "bytes": 3015,
+      "sha256": "061c4fbde1e0704f061339715c20a83b325377435b73c3131271f1463d8e6aa9"
     },
     {
       "path": "propuesta/replanteamiento_20261121/mediana_directa_s0/fuentes/base_replanteo.py",
@@ -5281,6 +5821,311 @@
       "sha256": "b420a9e2849a6f6b86d75900f10808ea877a0946c861df210c5c3a290d54f3ab"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/auditoria_resultado.json",
+      "bytes": 6800,
+      "sha256": "0a8f179efd7cba06c2e433d9b929f84c8a173681e62bcd77d7c32ac1a9df3acb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/conclusion.json",
+      "bytes": 4764,
+      "sha256": "ad46e9dbb06c0801334e6622090c0f1a4535dba0d8688f3a148144d7fa6ceafd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/cuantiles_mezcla_balanceada.py",
+      "bytes": 4435,
+      "sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/datos_mezcla_escala_Train.py",
+      "bytes": 7437,
+      "sha256": "61df8f25284df1efffa103edda5d697b867a7c928b00afd20055a88edce7932d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/datos_mezcla_individual_Train.py",
+      "bytes": 7675,
+      "sha256": "0dba3a66c94b2393d6974cfd256d74c7bca6850a53d01c4e09e54980507ee1d0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/datos_progreso_recurrente.py",
+      "bytes": 5990,
+      "sha256": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/entrenar_mezcla_escala_Train.py",
+      "bytes": 10650,
+      "sha256": "30d1e2561cfdc694f4978e5d9054a0585a4049d55033e8ea0103889b75c826c1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/recuperar_fuentes_ordenadas.py",
+      "bytes": 6781,
+      "sha256": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/recuperar_subtrayectos.py",
+      "bytes": 5466,
+      "sha256": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/tokens_subtrayectos.py",
+      "bytes": 3898,
+      "sha256": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/tokens_subtrayectos_arco.py",
+      "bytes": 4035,
+      "sha256": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/fuentes/tokens_transferencia_arco.py",
+      "bytes": 3135,
+      "sha256": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/geometry/historia.json",
+      "bytes": 1091,
+      "sha256": "93f4d6e8c81fd8d1ed400f8de4b6d49797cad0ba66b53834f4ad24a40077c790"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/geometry/predicciones_held_Train.npz",
+      "bytes": 357010,
+      "sha256": "af949074c018499b8b781b512b9c3c1b3c261c67e311ec73cfb5a79673d73990"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/geometry/resultado.json",
+      "bytes": 665,
+      "sha256": "c49eb1492d615017af5c8c98f65e57f93f0f1df901a0844a546e0e48d2746106"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/none/historia.json",
+      "bytes": 1071,
+      "sha256": "33a6bbef90cc589338fac55d921e1953d1b3e7bb5ee9d294d7113a9d6678f5f6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/none/predicciones_held_Train.npz",
+      "bytes": 357222,
+      "sha256": "75e2e344e99d17ccc244dbee6b359e9863864985b61f7d79a01cbd33c082d6e3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/none/resultado.json",
+      "bytes": 655,
+      "sha256": "c6c8a76c522672361362ce544083b5c5ef3ab517ec457d6199bc3090725c8871"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/observed/historia.json",
+      "bytes": 1083,
+      "sha256": "1abc55a834eae2d43a3d7e8f98bf28111db4854be9a08c7c1104ab55f5d39042"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/observed/predicciones_held_Train.npz",
+      "bytes": 357139,
+      "sha256": "38699e1c63c87bb00b2aaa478a0ef5775d09321e61611e4b28c5b08c17cd0247"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/observed/resultado.json",
+      "bytes": 665,
+      "sha256": "56247219f5904382d70837cdf9bf81ca47ae421b3231dd71bde892e137b0b299"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/plan_diseno.json",
+      "bytes": 2078,
+      "sha256": "0599b05eaa8ad646fe58ba361efa76cad4599b88de5ab13dcaea44dc6200ca9a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/predicciones_held_Train.npz",
+      "bytes": 1036383,
+      "sha256": "29a7d0901262e8e3505ee1e1ab072d6e9e473ccd1190b0174cba5771d1f46b6e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/preflight_GPU.json",
+      "bytes": 384,
+      "sha256": "a5d4f5411b4b0992572c8d92181317a403af7045ab31f809ad7e37e1728cab32"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/protocolo.json",
+      "bytes": 1529,
+      "sha256": "73e31c813dcea735ca663f0d3d4f2bdbb96e523673a1c1046c78f17b24ecc7f7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/reproduccion_independiente.json",
+      "bytes": 2682,
+      "sha256": "6deec4d02b9a622813fda7ff81df56d6f2f5c598a30ca8324c480867ff74def8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/resultado.json",
+      "bytes": 6450,
+      "sha256": "e954c7d0d36b9fb098f3e362ff41d51b3eb28b43c4f086d947a067f3908e52c9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/retencion_resultado.json",
+      "bytes": 1661,
+      "sha256": "c009202a253cc30bd94427205a77819cb0d1fe72749b03ce84554b724afb6729"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/verificacion_datos.json",
+      "bytes": 728,
+      "sha256": "f5d0d058ae52147677ceddb061c74eaddad9e493c31b53d6984f4da8513ae35c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_escala_Train_s0/verificacion_stream_crudo.json",
+      "bytes": 130,
+      "sha256": "bd7dba8aca113fbb54f2661edd14f3e5857e8041322eb6b1173e9580d4427426"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/conclusion.json",
+      "bytes": 2541,
+      "sha256": "f0af7c4e396a6da58e8246399d3cc88e00f040074d84f6ab02f5dc3d175e7fbf"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/cuantiles_mezcla_implicita.py",
+      "bytes": 2098,
+      "sha256": "a40af5f3f23f372ec8160ebe25d3bb5fa303bebe5c1a7ecdaf33662ed3c337a3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/datos_mezcla_individual_Train.py",
+      "bytes": 7675,
+      "sha256": "0dba3a66c94b2393d6974cfd256d74c7bca6850a53d01c4e09e54980507ee1d0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/entrenar_mezcla_individual_Train.py",
+      "bytes": 9063,
+      "sha256": "4063260e657d76c2b3a1f2cd9b4fa9ecc1a076860a6c3c12d7eddd46090e3b1e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/recuperar_fuentes_ordenadas.py",
+      "bytes": 6781,
+      "sha256": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/recuperar_subtrayectos.py",
+      "bytes": 5466,
+      "sha256": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/tokens_subtrayectos.py",
+      "bytes": 3898,
+      "sha256": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/tokens_subtrayectos_arco.py",
+      "bytes": 4035,
+      "sha256": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/fuentes/tokens_transferencia_arco.py",
+      "bytes": 3135,
+      "sha256": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/geometry/historia.json",
+      "bytes": 20185,
+      "sha256": "1a155e7a3aa520e20e8a5805af66db8b86d538a26a06f3fafe55b4211de27a42"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/geometry/predicciones_held_Train.npz",
+      "bytes": 197307,
+      "sha256": "16c2e76f5ce4bd89d20bb5771afac950dbf640821b067fad95b16e34877bf866"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/geometry/resultado.json",
+      "bytes": 680,
+      "sha256": "973f00e262823421d45f882854b591cc0c68cf51e46f4f39d16368b017ead521"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/none/historia.json",
+      "bytes": 19905,
+      "sha256": "09fa6b489c32e7213eea1c4e713f1ae4e362beccfc26457d669384bb46a17719"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/none/predicciones_held_Train.npz",
+      "bytes": 196916,
+      "sha256": "14b8739dc21fc27b2c94d1c0b0470671fa50d4657d6e727cc4c984218e7ef8ac"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/none/resultado.json",
+      "bytes": 672,
+      "sha256": "0a13fd6d92cb6e28e4299168135f2c9d65f94c4f6c1b669dc4982bc5b18f665c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/observed/historia.json",
+      "bytes": 20231,
+      "sha256": "ebdd5eaea43c34f3c0340f3c6300675356ee63c236b485f894b56cc8e0a0ace0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/observed/predicciones_held_Train.npz",
+      "bytes": 197073,
+      "sha256": "6ae3fcde497406a76955c6a93e577b79481e8b3c45a79e0c7204543cb570d06c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/observed/resultado.json",
+      "bytes": 680,
+      "sha256": "acf8777c1fb632e682174dc1d1b51c53f302ddd374d575b459944e5e70d17d35"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/plan_diseno.json",
+      "bytes": 5310,
+      "sha256": "dc96ef4022eeb501dad5570bd42889f3d2912c8ef46d5dfe5db5841565804b7d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/predicciones_balanceadas_held_Train.npz",
+      "bytes": 1032025,
+      "sha256": "04a41f9e8cc1c16b05102ff5cbd92cdd42846ea93a4e9645a2dea706032bc524"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/predicciones_held_Train.npz",
+      "bytes": 556308,
+      "sha256": "357078dded38f0eaf6100228c84fabce310a17524f2723912b2417a7ba0145b9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/preflight_GPU.json",
+      "bytes": 358,
+      "sha256": "54cd3748f691753ab024fd56c391a98d9b34cb3ce4362b5a776c544a150a25a2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/protocolo.json",
+      "bytes": 1189,
+      "sha256": "1c4fecd380c9c0d90f402b19eb1fa5b5f78c26eca22dc28283455b3a4bb34905"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/reproduccion_independiente.json",
+      "bytes": 5372,
+      "sha256": "23a65a49add705ace2d6864027ca5f785fe3f0bcedf97323fcf3935769789878"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/resultado.json",
+      "bytes": 5234,
+      "sha256": "aa1fb7dcc534140655e54fae3ae79eeea9811847cacb53df38606a6c0c8d4b84"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/retencion_pesos_descartados.json",
+      "bytes": 1045,
+      "sha256": "184dacfbe62561e53072d2968ce5f9faa757ee95b87e58f57b43635a3aed4a7f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/mezcla_individual_mediana_Train_s0/verificacion_datos.json",
+      "bytes": 924,
+      "sha256": "d2f5a522d8753be69e07e7ca859187c2856e752b4b1119163e0edb9f650554b9"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/mezcla_proyeccion_incierta_s0/certificacion/certificar_checkpoint_proyeccion.py",
       "bytes": 4520,
       "sha256": "d6d7fd70e1c9c41b4abdf07b02f9778e1abd6f04042e56c496f76e31868a7c4e"
@@ -5396,9 +6241,19 @@
       "sha256": "9cd92f373120924e310b6e523d0d5632b79377e91ef177560f761f79b1058b90"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/modelo_compuerta_red_cinetica.py",
+      "bytes": 1647,
+      "sha256": "3231f68717da71e16763dd44d32ef7e9ba1517029c56fcc3ddd4d02ed0ffd904"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/modelo_consistencia_temporal_viaje.py",
       "bytes": 2127,
       "sha256": "2f8904022fa56c37e37206a904bc2deba9193753d91ce6566ed2fe0642089c1e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_control_lognormal_puente.py",
+      "bytes": 2982,
+      "sha256": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f"
     },
     {
       "path": "propuesta/replanteamiento_20261121/modelo_descompuesto.py",
@@ -5456,6 +6311,11 @@
       "sha256": "806739e994331184f484a9270bf3bcc48fddadb52af0a4c6687e515be9e26938"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/modelo_mezcla_proyeccion.py",
       "bytes": 3810,
       "sha256": "0881ec64259b9c4195a9b94c5cb43233c1a547177ade6715eceb6abc2ee83672"
@@ -5484,6 +6344,11 @@
       "path": "propuesta/replanteamiento_20261121/modelo_progreso_recurrente.py",
       "bytes": 14540,
       "sha256": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/modelo_puente_temporal_2d.py",
+      "bytes": 2721,
+      "sha256": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227"
     },
     {
       "path": "propuesta/replanteamiento_20261121/modelo_spline_cdf.py",
@@ -5584,6 +6449,16 @@
       "path": "propuesta/replanteamiento_20261121/nuevo_mejor_verificado.json",
       "bytes": 3011,
       "sha256": "a2250e2ab63748fccb8ccdda9b6bff817377fc1e4c73aab5de7cfc6bd6f133fb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/operador_red_cinetica.py",
+      "bytes": 7329,
+      "sha256": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/operador_red_cinetica_GPU.py",
+      "bytes": 3684,
+      "sha256": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0"
     },
     {
       "path": "propuesta/replanteamiento_20261121/oraculo_tiempo_calle_train.py",
@@ -5999,6 +6874,11 @@
       "path": "propuesta/replanteamiento_20261121/piloto_landmarks_red_Train_v2_s0/verificacion_publica.json",
       "bytes": 580,
       "sha256": "5a6f6c52cde5fecdce52d967b9b64911ca9bc2bb805cfe4dcae5463e261a3509"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/piloto_maestro_probabilistico.inicio_fallido.txt",
+      "bytes": 6948,
+      "sha256": "899d1ac33c92fb4bd39440cf3d51fc2c6ad849215565fa68ca13edb642fad4fe"
     },
     {
       "path": "propuesta/replanteamiento_20261121/piloto_maestro_probabilistico.py",
@@ -6726,6 +7606,11 @@
       "sha256": "140fcec2035a321ceb3c592201a38be8ae2303c7e1b7b77c4a9ffddc916224e3"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/plan_escala_datos_Train.json",
+      "bytes": 2339,
+      "sha256": "c013b9dd87b56339ca3e273e3260dc5ac58a704b70c4b6081718fd9a10a44732"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/plan_flujo_progreso_recurrente.json",
       "bytes": 988,
       "sha256": "b5cb1ef1b761e17664411fd75cdce25892512a2a2cbd5aad1a90fa7c6ffc6381"
@@ -6746,6 +7631,11 @@
       "sha256": "fe378cd440ed2eb4bbb8b8cfa29632e429797ce6ede827eb8377d8e8130230b4"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/plan_mezcla_individual_mediana_Train.json",
+      "bytes": 5245,
+      "sha256": "3f3d7b74fce49c21cd48e91d647a276daafe98da771584234a3653ee5e03e30a"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/plan_mezcla_proyeccion.json",
       "bytes": 3345,
       "sha256": "fa79a01fd89b2d3a0ec65c5efe73c9ae1253372a4f4564713226a079c2235878"
@@ -6759,6 +7649,16 @@
       "path": "propuesta/replanteamiento_20261121/plan_progreso_vial_recurrente.json",
       "bytes": 5336,
       "sha256": "ee9e11bdabae5c9876fdc4073b9ff0902bee9c71b8ef3ea88a9f35eabea258cb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/plan_puente_temporal_Train.json",
+      "bytes": 6278,
+      "sha256": "2cd5487e94a633898bf250ddddbb909e69db64c47a3457a4c5d3324ae003cfa9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/plan_red_cinetica_15s_Train.json",
+      "bytes": 7278,
+      "sha256": "b4ef33824db24ebdf5a197fff8e125e584ce3a836a7772596d6299bb5829fd9c"
     },
     {
       "path": "propuesta/replanteamiento_20261121/plan_riesgo_total_generado.json",
@@ -6779,6 +7679,11 @@
       "path": "propuesta/replanteamiento_20261121/plan_valor_vial_amortizado.json",
       "bytes": 2548,
       "sha256": "3fce92ca1b003704681efee7812a4af44e190c844c026fe0018facceb6423aaa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/planificar_escala_datos_Train.py",
+      "bytes": 2830,
+      "sha256": "b5ea28c722b86b25a37acd7adc92733e1ea856baf73ae4844c6289df58f4a07a"
     },
     {
       "path": "propuesta/replanteamiento_20261121/politica_conservacion.json",
@@ -6936,6 +7841,61 @@
       "sha256": "3ebef0baa1f94e55bf51319f40b4d7bbdea10db061f05f690e998ba8064d7a99"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/preflight_balanceado_GPU.json",
+      "bytes": 1010,
+      "sha256": "52ea5e0f41ca7802fb1dea1721d05142d505714e8140eb0462756bb622c601ac"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_balanceado_GPU.py",
+      "bytes": 3077,
+      "sha256": "79c7a25219cb3899b34731060ba15004ffece989d95ce78cd6e559b84812a947"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU.py",
+      "bytes": 4502,
+      "sha256": "4a4a7e2fd84209c47932c045dd040d655f5fa8ab987506462eb1468048a2186f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/coordenadas_trayecto_2d.py",
+      "bytes": 865,
+      "sha256": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/datos_puente_temporal_2d.py",
+      "bytes": 6009,
+      "sha256": "ec7b3023577908aa82876efa5e1ec649e6812671f2f52490189d713ac48bdf1b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/modelo_puente_temporal_2d.py",
+      "bytes": 2721,
+      "sha256": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/preflight_puente_2d_GPU.py",
+      "bytes": 4502,
+      "sha256": "4a4a7e2fd84209c47932c045dd040d655f5fa8ab987506462eb1468048a2186f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/puente_temporal_2d.py",
+      "bytes": 3545,
+      "sha256": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/resultado.json",
+      "bytes": 2023,
+      "sha256": "1c671b1ba0adafdaa89c2dff49cdb5f0619ce809e74d0f51024be15aed3d84a4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/verificacion_datos.json",
+      "bytes": 580,
+      "sha256": "69f8bc3f9d528904d98ec96d0fb0ee1442d1ab10d0b14f132cdd6fecf562377d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preflight_puente_2d_GPU_s0/verificacion_finitud_banco.json",
+      "bytes": 82,
+      "sha256": "07f95e4989b2de8b94eb1fe37f7d6e478d5d42a5eec8abca4489dbd694f5ae24"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/preparacion_entrenador_historia.json",
       "bytes": 885,
       "sha256": "37b8839ebc322949b2e75646a3e37407ef38fa8bdaa5b69889149e0af9d98489"
@@ -6979,6 +7939,11 @@
       "path": "propuesta/replanteamiento_20261121/preparar_codigos_ruta_global.py",
       "bytes": 6790,
       "sha256": "0bf3f924ed73e48616a528f35a8e9bf14f4855da4bbdb5388198a11f7a9bd2c2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_conteos_cineticos_muestra.py",
+      "bytes": 4918,
+      "sha256": "2e3e9800c23bbcf3a35e99590e36c56913d9864b31a503b0d19d2080e8b07d30"
     },
     {
       "path": "propuesta/replanteamiento_20261121/preparar_control_conjunto.py",
@@ -7046,6 +8011,11 @@
       "sha256": "75fd0887a8dd2d050418dc3f76e70be0ebd23ee60fb0c0633e9292cc4c136165"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/preparar_indices_escala_Train.py",
+      "bytes": 5314,
+      "sha256": "e52e3cadef1d78b7c8e0a90c1fe09fd39481954c991c20c64a54e2a314bdaba3"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/preparar_indices_historia_individual.py",
       "bytes": 3719,
       "sha256": "4cc6291fd0d6968b3945a1de493d91f89d85ca75a9f05561a408c27985c4c6af"
@@ -7086,6 +8056,11 @@
       "sha256": "bc4bd4ab5e870baa991b1aafca9128f9db22e4fa8dac7be173ee5582c4ad703c"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/preparar_predicciones_red_cinetica_Train.py",
+      "bytes": 10693,
+      "sha256": "f6b4bf310d0734d499d298cedd486b57e19aee251a0768a5f21c69f7819824a7"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/preparar_prior_transiciones.py",
       "bytes": 2649,
       "sha256": "05f7c795ce091f31fc31261ee088b9b0db635f366a43daa142ce150e4b66ee02"
@@ -7124,6 +8099,11 @@
       "path": "propuesta/replanteamiento_20261121/preparar_secuencias_viales_od.py",
       "bytes": 4553,
       "sha256": "f067a441448cc6ad593743478a1a0bf2433ccf720fd1eaf937526b78a8d7f584"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/preparar_secuencias_viales_od.py.impresion_v1.txt",
+      "bytes": 4409,
+      "sha256": "b7569d83c8ddfac6947e3cf69c59841a4eb8acaa332da6f06fed539fa5467d0c"
     },
     {
       "path": "propuesta/replanteamiento_20261121/preparar_semi_markov.py",
@@ -7311,6 +8291,21 @@
       "sha256": "77843ac8f14a27c7cd95257da90c59011ed520008bae7407bbc55d34b5628249"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/probar_operador_cinetico_GPU.py",
+      "bytes": 5076,
+      "sha256": "c18e840f8898013f3e330060e67ba687100376f813d6d075eb78ceba47a141a6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/probar_operador_cinetico_Train.py",
+      "bytes": 5803,
+      "sha256": "c2efe8a559ecdff73855f955b0a48efd73b3adf0ec27eaeee3c565c6757e21d3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/progreso_ruta_publica.py",
+      "bytes": 1682,
+      "sha256": "bee4d65fcbda1648961be064eb8a1ba579e2099fef680189c30dd12197609eac"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/progreso_vial_recurrente_s0/datos_verificados.json",
       "bytes": 329,
       "sha256": "fbc5611af5ab73d9ce7da3af2abd3855f702a0fe0e3e24babf573c54aafd6451"
@@ -7486,9 +8481,229 @@
       "sha256": "a5c7441b86aa086ab13358b63b962e791bc6c6b7a07068100cce0fdbd7c0a63a"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/protocolo_control_familia_puente_2d.json",
+      "bytes": 2071,
+      "sha256": "d31b20c69d679a34fe89fd26e7e6fc34e6606c9bc768e4eb112fbe83e2429ac6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/protocolo_puente_2d_Train.json",
+      "bytes": 2979,
+      "sha256": "aa1bf9ccec8bed709c1f4c1ced81c9a4a6b596ef0c9687a4e730a7a5c35a4535"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/protocolo_red_cinetica_Train.json",
+      "bytes": 2709,
+      "sha256": "36d57c42bd37dd6f59154ea91b55b377a40718d2aebb1b8dba0747f8940dfb71"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/proyecciones_valor_vial.py",
       "bytes": 1897,
       "sha256": "4488e2b17dca23ae8d1e26c1c5749f1ef92c0e96ce90c25dcb2be3571f6798e5"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/criterio_precision_GPU_pre_MAE.json",
+      "bytes": 405,
+      "sha256": "5d6dbad32a6266cbe734d0340a8bc0d8fff41556cf28e3ff34d1fba937a5d9ba"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/fuente_antes_diagnostico_redondeo.py",
+      "bytes": 4725,
+      "sha256": "fa1709fbae85000b3ecfa3596a1d571fffb2e1f6de737157a00f6b9f2c613fd9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/fuente_previa_correccion_identidad.py",
+      "bytes": 4652,
+      "sha256": "cad41de6740aa4975d0b5a838df56f86c5cdcad6dfb4404966ec614d1970df74"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/incidencia_identidad_previa.json",
+      "bytes": 349,
+      "sha256": "e43deb4b8c1d78e111fb43bc78461fdd444028ac7d0aa782708d971ea89aac95"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/operador_red_cinetica.py",
+      "bytes": 7329,
+      "sha256": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/operador_red_cinetica_GPU.py",
+      "bytes": 3684,
+      "sha256": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/probar_operador_cinetico_GPU.py",
+      "bytes": 5076,
+      "sha256": "c18e840f8898013f3e330060e67ba687100376f813d6d075eb78ceba47a141a6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_GPU_s0/resultado.json",
+      "bytes": 2071,
+      "sha256": "8bfe33fe83fe0edf14697aa954a57d56ac00913aa8fce55333f8d647b9562961"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_Train_s0/conteos_red_cinetica.py",
+      "bytes": 1922,
+      "sha256": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_Train_s0/operador_red_cinetica.py",
+      "bytes": 7329,
+      "sha256": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_Train_s0/probar_operador_cinetico_Train.py",
+      "bytes": 5803,
+      "sha256": "c2efe8a559ecdff73855f955b0a48efd73b3adf0ec27eaeee3c565c6757e21d3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/prueba_operador_cinetico_Train_s0/resultado.json",
+      "bytes": 2914,
+      "sha256": "6bc0c90d2749aacc5c84351b0749dd32c61fd2c698e8137a6e97f13462a92949"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d.py",
+      "bytes": 3545,
+      "sha256": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/auditoria_resultado.json",
+      "bytes": 7497,
+      "sha256": "a33db7abd29585b87d72c640ec6a4cb3414cd1323581703fc9e9317d575075c1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/conclusion.json",
+      "bytes": 8671,
+      "sha256": "1b9131e4a414e96839d9d666fa15f942d0a9e27da6c5d14828aba25d83114cc1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/diseno_refinado.json",
+      "bytes": 5504,
+      "sha256": "99455cf65b595a704dbf71ff850d61cd4550ff2687b4e00a734c523b78290cc8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/coordenadas_trayecto_2d.py",
+      "bytes": 865,
+      "sha256": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/datos_puente_temporal_2d.py",
+      "bytes": 6009,
+      "sha256": "ec7b3023577908aa82876efa5e1ec649e6812671f2f52490189d713ac48bdf1b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/entrenar_puente_2d_Train.py",
+      "bytes": 7650,
+      "sha256": "f4ea4b18e3da8c201247f8a330d3e4d04e0bb4a288d52f680a1835c94d32e23e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/modelo_puente_temporal_2d.py",
+      "bytes": 2721,
+      "sha256": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes/puente_temporal_2d.py",
+      "bytes": 3545,
+      "sha256": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/fuentes_publicas.json",
+      "bytes": 11331,
+      "sha256": "da5c70539fa1cc47945f89d1fc28e9e813e08378162751b5cd478ead89559b95"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/incidencia_impresion_final.json",
+      "bytes": 293,
+      "sha256": "7d79bfe5c475ce088ae48c3ce08d015ddbe00b5e531cc9088602b052a61dade1"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/linear/historia.json",
+      "bytes": 1512,
+      "sha256": "31764a3f8dbab6957bad0103b09b26468194a1cfb382e5beb05c19c8f920c3c9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/linear/predicciones_held_Train.npz",
+      "bytes": 4168680,
+      "sha256": "3b344ffe191c5800c15b3bcf1a1ffd6e42be8780bcb5c0684ebce3e35de3232a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/linear/resultado.json",
+      "bytes": 799,
+      "sha256": "59fc62435afd545869a2d7700e0baaef5509576b96da59e419502585cf020eb4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/none/historia.json",
+      "bytes": 1442,
+      "sha256": "79ce2e6f5ef3f03aa9c20865011886bfd805554d8c7db9c791236c3cae3ea8aa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/none/predicciones_held_Train.npz",
+      "bytes": 4179739,
+      "sha256": "e2d2f8bd1674c867f19509a997f043637aa849c3f89dfdcf4d221293ed09c021"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/none/resultado.json",
+      "bytes": 794,
+      "sha256": "ea4ca8726cf98361971b617219505029c852454cf16d1f29956ff202ee402f18"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/observed/historia.json",
+      "bytes": 1523,
+      "sha256": "92117a89b9c9cd0998dfbfe69d2f4c0ebb5e05423a0afe82112979e89d0ff3a0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/observed/predicciones_held_Train.npz",
+      "bytes": 4171298,
+      "sha256": "f589a4be3d34195663dd924760cfbf3a5fb981db9c790fb1223db8ac349fcb63"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/observed/resultado.json",
+      "bytes": 802,
+      "sha256": "5a6dd199f8f8413bd2c95ecda5e3bc9efb7f90434e701199041050f4a11aaca3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/predicciones_held_Train.npz",
+      "bytes": 273631,
+      "sha256": "cdd0f740def21f17b4a5d0c56560abd4d2b990551b9a02688cf1914323f1617f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/protocolo.json",
+      "bytes": 3040,
+      "sha256": "13a490e13bc44e825e61e9c8be7f1c43d7d3af76fec7625a937befbb03090da7"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/reproduccion_independiente.json",
+      "bytes": 2830,
+      "sha256": "57ba3938b08f0dccd697ba24aa9e7bc19a59b4eca18d8d1c454ad04180b1a106"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/resultado.json",
+      "bytes": 6372,
+      "sha256": "6dbee02331b6d22fdc2214b4e67542bed87adab2fb5c6133188c55211da92414"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/retencion_resultado.json",
+      "bytes": 2871,
+      "sha256": "21da3d73b70aaabd72a858306e475b352a1b07dd05ee74aa95df84f38fb817c3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_2d_Train_s0/verificacion_datos.json",
+      "bytes": 580,
+      "sha256": "355b89a2fbd432ceb4728e7c0b30c3875150fc43d48cc31953dda6f093040052"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/puente_temporal_estudiante.py",
+      "bytes": 4466,
+      "sha256": "f7c97830a2eceddcd2b9f3373e0ea8b22c070287a048f0ca8bff5ddd1d446fc3"
     },
     {
       "path": "propuesta/replanteamiento_20261121/README.md",
@@ -7601,6 +8816,146 @@
       "sha256": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/conclusion.json",
+      "bytes": 14863,
+      "sha256": "5b7703c24c88849e6087015953e7d88ed37c231ce8b79747f0e193da2b764f4a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/constructor.pt",
+      "bytes": 3888,
+      "sha256": "6b896a5c8849febf6f05281240de874f98661369afb6c2f74f763e1c55997dbd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/diagnostico_sin_compuerta.json",
+      "bytes": 2796,
+      "sha256": "5e0f848d709f6fae98ac0871e70b4119dd9d98b08e3f8738ae7f254bd528e215"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/fuentes/base_replanteo.py",
+      "bytes": 2191,
+      "sha256": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/fuentes/entrenar_compuertas_red_cinetica_Train.py",
+      "bytes": 11329,
+      "sha256": "b1e11df15cf9be8681ccf676801d3a1a58d801a0227859e60e287703f21e006b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/fuentes/modelo_compuerta_red_cinetica.py",
+      "bytes": 1647,
+      "sha256": "3231f68717da71e16763dd44d32ef7e9ba1517029c56fcc3ddd4d02ed0ffd904"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/fuentes/modelo_control_lognormal_puente.py",
+      "bytes": 2982,
+      "sha256": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/fuentes/puente_temporal_2d.py",
+      "bytes": 3545,
+      "sha256": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/kinetic/epoca_80.pt",
+      "bytes": 77516,
+      "sha256": "002cedc0648e24b0b80cfb6e53bf81fa7e6925e007f95e1e09d0abab7cc89726"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/kinetic/historia.json",
+      "bytes": 19360,
+      "sha256": "bfd94a1a4ed0cecc7ce3422afd2f5cc96e4a36e8e6ae9348301e5e69dea5f0bb"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/kinetic/predicciones_held_Train.npz",
+      "bytes": 8978626,
+      "sha256": "f1d4aa7956eb2aa85001cabd95b2d4424316648ff1a16669bd5a97d01933264f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/kinetic/preflight_GPU.json",
+      "bytes": 352,
+      "sha256": "16e32e5e2f8a8c690239c1f1909da07b4f61d98e2366f0f2af662f8fd0ff00a6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/kinetic/resultado.json",
+      "bytes": 843,
+      "sha256": "3bde1faa7f30f1bf8cb20523c86c951dc39dbd7dc9912020db6684420e048972"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/position/epoca_80.pt",
+      "bytes": 77516,
+      "sha256": "61a8a406442f1e273216982fd557ebb943c6713e49b720f21952f3d1688076f2"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/position/historia.json",
+      "bytes": 19374,
+      "sha256": "f27eaaab5094bd4f8ed1aa8e5bb7478485e78adf7101dfd3b32f9ddad5bf1d92"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/position/predicciones_held_Train.npz",
+      "bytes": 8979046,
+      "sha256": "dae8c6a00a6b88f6e7b3ca67e36f5a16bac80680e7370af5e9be044e6d793097"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/position/preflight_GPU.json",
+      "bytes": 351,
+      "sha256": "ab2385a633ef2f184b5cc6d1784a05b7ba6357cb622aa9e84a93432c58bcb649"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/position/resultado.json",
+      "bytes": 844,
+      "sha256": "9c4b64dd2d8692e4f63696936c2d220150ce50eaf4f3bbcc7c692dd92d7c108e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/predicciones_held_Train.npz",
+      "bytes": 94989,
+      "sha256": "ab58ef555ae4b92d68f0abc664ab9bbd6020d4ba80753adcd5704d3a466bbe39"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/predicciones_red_sin_compuerta_held_Train.npz",
+      "bytes": 84579,
+      "sha256": "f248426c3e4d20b514549055e1ea909d04dba41e4674ce1e8ab14a7fe70fe4a8"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/protocolo.json",
+      "bytes": 2709,
+      "sha256": "36d57c42bd37dd6f59154ea91b55b377a40718d2aebb1b8dba0747f8940dfb71"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/reproduccion_consulta_publica.json",
+      "bytes": 107,
+      "sha256": "3bc2976eaa2e2e1d13f9800f0336686c1bd83fb72e511ee1dcb74411c29a5363"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/reproduccion_consulta_publica.npz",
+      "bytes": 1919,
+      "sha256": "d2c2cc12dffef7e7e419cf85592fc2ec481d889460260726bec23a4d404acba6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/reproduccion_independiente.json",
+      "bytes": 2826,
+      "sha256": "699a6c30059cf74d3f0af931c005f973d8d54451b48fda39234876feae8b4cea"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/reproduccion_interfaz_publica.json",
+      "bytes": 212,
+      "sha256": "20655c3faaa161cc43b3a6eed01a1f77283e4a40c01190c3932398e2dbae5259"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/red_cinetica_Train_s0/resultado.json",
+      "bytes": 4428,
+      "sha256": "b0b70d10f45dbdd80f5ded677a4fe1950d8c6c3d6bd0a438534dc724957ba7b4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/referencia_publica_Train_red_vial.json",
+      "bytes": 1737,
+      "sha256": "4f1f792951eeda802849420d9b119a981b8080590e7e208989cd7bced42843c6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/refinamiento_puente_temporal_2D.json",
+      "bytes": 5730,
+      "sha256": "77e8e1de23395dcb9ea125fcda9ba7070bbe8b7bdd4a998adc06dc52e52a7e2a"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/registrar_atencion_historia_activa.py",
       "bytes": 4997,
       "sha256": "b3fe8e4a7f62a57ffef85a616c11c4b0d289a9f9a62c75e9841348997bd89b61"
@@ -7636,6 +8991,11 @@
       "sha256": "d25f0c129425cc832310e079a3ccadd0b8234fb215eb03a2674c4f50390f37af"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/registrar_control_familia_puente_2d.py",
+      "bytes": 2341,
+      "sha256": "8cbd086f199ce7e192fed6808b1482c96a211306701ad327e6020b483717af72"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/registrar_control_historica_vivo.py",
       "bytes": 1440,
       "sha256": "0d382540754118a9a21108fcc09ea94c4674c816b06535a083d09f2bffdaf9db"
@@ -7669,6 +9029,16 @@
       "path": "propuesta/replanteamiento_20261121/registrar_maestro_y_alumno.py",
       "bytes": 3480,
       "sha256": "45651a750e387df1f8a254c69af74e37fb148cb0d6225cc535cfe9f92d17d825"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_mezcla_escala_activa.py",
+      "bytes": 5721,
+      "sha256": "79adcd12fa37ef640e9dd446bd8e7a93aedf7b8ad36de03ba371d84f9b42c8cd"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/registrar_mezcla_individual_activa.py",
+      "bytes": 5749,
+      "sha256": "8a263f1258707605856da1d5e953137238563304f8741e588dfc5dbc1963be84"
     },
     {
       "path": "propuesta/replanteamiento_20261121/registrar_piloto_transferencia_intervalos.py",
@@ -7756,14 +9126,44 @@
       "sha256": "6c3d781c2b031e89815372699a5dba674a82994d088d3ceba0eda1dde069e300"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/reproducir_control_familia_puente.py",
+      "bytes": 4870,
+      "sha256": "1a6b0463ff0adc5c86f29dac7153269e407f7e8439b8f9865922cc96f5b65d98"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/reproducir_mezcla_escala_Train.py",
+      "bytes": 5537,
+      "sha256": "f4e87d41d4d9db0708c8dfdd48483f60713dd32920cea1e843348d84742021d0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/reproducir_mezcla_individual_Train.py",
+      "bytes": 7772,
+      "sha256": "68f93f359ae14d56efb77dd1cd8f7e84f5fe3bade261d2462b35b97daac249ee"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/reproducir_prior_arco_subtrayectos.py",
       "bytes": 2962,
       "sha256": "73d4fa0e0f97f9abdf1489541188ebc35043acdc1eca450bd802738739fc7946"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/reproducir_puente_2d_Train.py",
+      "bytes": 5274,
+      "sha256": "fa14ca39b477e7bad72f31207a7bd1a3fe687a59561c0e3ecc37a0bc90da1306"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/reproducir_red_cinetica_Train.py",
+      "bytes": 9112,
+      "sha256": "714e78e500d0f98e0acc5fb97c4c3c318d073b89e1435b9ce1d91d68e5e1092b"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/reproducir_subtrayectos_conjuntos.py",
       "bytes": 2955,
       "sha256": "c8c2cda66a323d1363e330399f5471d28b92c308cb02a443e7a7ca3a6f612bbf"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/RESUMEN_FINAL_ULTIMA_PROPUESTA.txt",
+      "bytes": 7920,
+      "sha256": "96800977227d1c0d65db60a6287586d7dbdfdf2dea984ea9c3d812c3b1913c1c"
     },
     {
       "path": "propuesta/replanteamiento_20261121/retirar_firma_global_descartada.py",
@@ -8261,6 +9661,11 @@
       "sha256": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/tokens_transferencia_arco.py",
+      "bytes": 3135,
+      "sha256": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/transicion_a_prefijos.json",
       "bytes": 4561,
       "sha256": "32c3b73b73b22beea8e7ebb83241ed9c448f627dad0a863a82e0fc5951d6d4c7"
@@ -8376,6 +9781,11 @@
       "sha256": "3bb01dc5d06306d39f3c21d03a4a736a9d70a11e109f081ece26bffd4495b344"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificacion_compuerta_logdensidad_CPU.json",
+      "bytes": 320,
+      "sha256": "c44c8eab433137c7d643ebdbd5b62f57f3039777e939e950c956bfe62fa40afd"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificacion_consistencia_temporal_viaje.json",
       "bytes": 1020,
       "sha256": "6f41abf3dbc13ce34385ef431641d4a17e0ca6743e2578167fa9f4f8e882b08b"
@@ -8384,6 +9794,56 @@
       "path": "propuesta/replanteamiento_20261121/verificacion_consulta_subviajes.json",
       "bytes": 1483,
       "sha256": "719d09e9aa0b8fcc52d552fe7f2fc5578fab854d5c848cc54bfce65f3d490527"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_control_lognormal_CPU_s0/cuantiles_mezcla_balanceada.py",
+      "bytes": 4435,
+      "sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_control_lognormal_CPU_s0/modelo_control_lognormal_puente.py",
+      "bytes": 2982,
+      "sha256": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_control_lognormal_CPU_s0/resultado.json",
+      "bytes": 905,
+      "sha256": "cddd098a411c2d7a0c02a6c26b6f5249650881cd958ab046b9e9cba59a822ae6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_control_lognormal_CPU_s0/verificar_control_lognormal_CPU.py",
+      "bytes": 3049,
+      "sha256": "fc990ab9696ec70f1b38f1ccf299579ed65f1870cd256e1b084355fb7c822a24"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_coordenadas_2d_Train_s0/coordenadas_trayecto_2d.py",
+      "bytes": 865,
+      "sha256": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_coordenadas_2d_Train_s0/resultado.json",
+      "bytes": 1908,
+      "sha256": "df6af4d95d47a21bef4b0d93d29ed0f5e22f3e26e30c197519d346f9ccf7a218"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_coordenadas_2d_Train_s0/verificar_coordenadas_2d_Train.py",
+      "bytes": 4069,
+      "sha256": "6da4897a7ba464aee55f4114737ffc5f420698f8459b0b904b8f4abe2079f22a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_cuantiles_balanceados_s0/fuentes/cuantiles_mezcla_balanceada.py",
+      "bytes": 4435,
+      "sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_cuantiles_balanceados_s0/fuentes/verificar_cuantiles_balanceados.py",
+      "bytes": 3434,
+      "sha256": "ffba9b9f3a57c99ba42f176711d3c175961c5ea74ebcea10708f03f32cbec684"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_cuantiles_balanceados_s0/resultado.json",
+      "bytes": 2552,
+      "sha256": "41d8471e0f11098ef85ffe2408f9a6fa036300a56a3a8a723c6d08afd985a849"
     },
     {
       "path": "propuesta/replanteamiento_20261121/verificacion_difusion_global_cpu.json",
@@ -8409,6 +9869,31 @@
       "path": "propuesta/replanteamiento_20261121/verificacion_entrada_proyeccion_raw.json",
       "bytes": 1688,
       "sha256": "6e3ee6b3b67434a355d903e6997c0addc2ff62e7db62b016596b01d33d6d851b"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_estados_cineticos_Train_s0/coordenadas_trayecto_2d.py",
+      "bytes": 865,
+      "sha256": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_estados_cineticos_Train_s0/estados_cineticos_15s.py",
+      "bytes": 2388,
+      "sha256": "5b67b5604968e53520ce1562697c8f603ae8080ec5fa21dd9b1bb9c64d717e5c"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_estados_cineticos_Train_s0/incidencia_impresion_final.json",
+      "bytes": 241,
+      "sha256": "6761e24b08dfd418d70f83c41c819627eb184732e0b5b2f44e39802f444a6351"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_estados_cineticos_Train_s0/resultado.json",
+      "bytes": 2835,
+      "sha256": "fa50cf5711e1adfefdaebafd257edc4458a12d1bb256419a61e249bb0288ff32"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_estados_cineticos_Train_s0/verificar_estados_cineticos_Train.py",
+      "bytes": 6088,
+      "sha256": "1ed7953bc5fe9316146e6143bf3d9e4de44d28219a05313a9028e61cf6609447"
     },
     {
       "path": "propuesta/replanteamiento_20261121/verificacion_fases_cpu.json",
@@ -8496,6 +9981,116 @@
       "sha256": "ec583e0231cca54526c0b6dbc1d6aa27e535551a03665518d2fb7da6bdea55a9"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificacion_marginalizacion_caminos_CPU_s0/marginalizacion_caminos_log.py",
+      "bytes": 3015,
+      "sha256": "061c4fbde1e0704f061339715c20a83b325377435b73c3131271f1463d8e6aa9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_marginalizacion_caminos_CPU_s0/resultado.json",
+      "bytes": 946,
+      "sha256": "79fdffe8d52c19d3ddcd0801fd0fd588e64918f796ed3baa5945ec7eec003c62"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_marginalizacion_caminos_CPU_s0/verificar_marginalizacion_caminos_CPU.py",
+      "bytes": 4985,
+      "sha256": "b2e12005182f4746547070d4624b5f806b8c423dd5ef16852d70ae60b1657a52"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v1/fuentes/cuantiles_mezcla_implicita.py",
+      "bytes": 2022,
+      "sha256": "8780ffd0a3e652abbc375ba5ab8f84bb4e4730969654aeaa3c5cd168ad85b7c6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v1/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v1/fuentes/tokens_transferencia_arco.py",
+      "bytes": 3120,
+      "sha256": "24be40683f0fc27565c768d1b2d59c5ba48f2aa5dd3fd00861058686ee772c95"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v1/fuentes/verificar_mediana_y_control_arco.py",
+      "bytes": 8932,
+      "sha256": "e22cea87cbd70aa2eed3dca876402c96d342ed75a93601c66a7233820d00fab0"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v1/interrupcion_instrumento.json",
+      "bytes": 270,
+      "sha256": "6441cbdef40bd8e63b68075a663796bae9ec6d1221e8748b3127ed54e5c47baf"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/control_estacionario_y_geometria.json",
+      "bytes": 356,
+      "sha256": "3bd518f8a357607d8cd0e29ed140fd601b7cf9e132b2fddbf4c55ae0087985af"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/fuentes/cuantiles_mezcla_implicita.py",
+      "bytes": 2098,
+      "sha256": "a40af5f3f23f372ec8160ebe25d3bb5fa303bebe5c1a7ecdaf33662ed3c337a3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/fuentes/tokens_transferencia_arco.py",
+      "bytes": 3120,
+      "sha256": "24be40683f0fc27565c768d1b2d59c5ba48f2aa5dd3fd00861058686ee772c95"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/fuentes/verificar_mediana_y_control_arco.py",
+      "bytes": 9068,
+      "sha256": "1053371f2dd6bd2cf184ab7b65d4e84d06219c43760434d7098c749b0176f228"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/gradientes_mediana.json",
+      "bytes": 2429,
+      "sha256": "bea4c83b709d239b47416082d13f0c73ff361a5dc665c2aea8f101ed819222f4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v2/resultado.json",
+      "bytes": 1114,
+      "sha256": "d1925ea553ec3e05046384152e4cf6ba608757a846b97e22df713c675165e77e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/control_estacionario_y_geometria.json",
+      "bytes": 356,
+      "sha256": "3bd518f8a357607d8cd0e29ed140fd601b7cf9e132b2fddbf4c55ae0087985af"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/fuentes/cuantiles_mezcla_implicita.py",
+      "bytes": 2098,
+      "sha256": "a40af5f3f23f372ec8160ebe25d3bb5fa303bebe5c1a7ecdaf33662ed3c337a3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/fuentes/modelo_mezcla_individual_mediana.py",
+      "bytes": 4531,
+      "sha256": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/fuentes/tokens_transferencia_arco.py",
+      "bytes": 3135,
+      "sha256": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/fuentes/verificar_mediana_y_control_arco.py",
+      "bytes": 9068,
+      "sha256": "1053371f2dd6bd2cf184ab7b65d4e84d06219c43760434d7098c749b0176f228"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/gradientes_mediana.json",
+      "bytes": 2429,
+      "sha256": "bea4c83b709d239b47416082d13f0c73ff361a5dc665c2aea8f101ed819222f4"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_mediana_control_arco_v3/resultado.json",
+      "bytes": 1114,
+      "sha256": "5ab88f124dc9bbf2dd35547cc9551724e6151d94cd40647152d5b741c85b8cb0"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificacion_mediana_directa_cpu.json",
       "bytes": 1247,
       "sha256": "df15d86d1270663678f0e3bd85961f1e3c4c5033d0faffa3e4cf6ccaa6255f50"
@@ -8546,6 +10141,31 @@
       "sha256": "c89123e2404527a39456285c3e1ffc795e4e9c5c26aa76ff8952b0e9ac0d9034"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificacion_operador_cinetico_CPU_s0/conteos_red_cinetica.py",
+      "bytes": 1922,
+      "sha256": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_operador_cinetico_CPU_s0/coordenadas_trayecto_2d.py",
+      "bytes": 865,
+      "sha256": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_operador_cinetico_CPU_s0/operador_red_cinetica.py",
+      "bytes": 7329,
+      "sha256": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_operador_cinetico_CPU_s0/resultado.json",
+      "bytes": 1317,
+      "sha256": "38bdc5a6ba5e904d1a32a727d8cc24ba01f40aa17360bd66a992073b9d676a38"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_operador_cinetico_CPU_s0/verificar_operador_cinetico_CPU.py",
+      "bytes": 7725,
+      "sha256": "a104e78da6101c53d608d8cdc77dbb42b254ecff23ff4c1876806672f9b18808"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificacion_perdida_maestro.json",
       "bytes": 1238,
       "sha256": "ef73e297168aab738b81c9b4d348a8a5e250edfd74dc9c775efc0485658b7c0b"
@@ -8571,6 +10191,21 @@
       "sha256": "10c1f25f80e6d620d8a32c4ca3c20b8f22554cb0472076fddaa0d4bab4defd6f"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificacion_progreso_publico_Train_s0/progreso_ruta_publica.py",
+      "bytes": 1682,
+      "sha256": "bee4d65fcbda1648961be064eb8a1ba579e2099fef680189c30dd12197609eac"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_progreso_publico_Train_s0/resultado.json",
+      "bytes": 2579,
+      "sha256": "56d3d68a3b6b22b2106a08afc8ec24ee9f3d85ffdea10751a1a3824c9905b95d"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_progreso_publico_Train_s0/verificar_progreso_publico_Train.py",
+      "bytes": 5549,
+      "sha256": "def9cfa17713df3e5e5896ea753f457ee20e3c804d06febc4132d31b5320222b"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificacion_progreso_recurrente.json",
       "bytes": 1757,
       "sha256": "0646c824e9c0d15818df73788135a4825365d9ed672f0ab6597a69052b9ac12b"
@@ -8584,6 +10219,36 @@
       "path": "propuesta/replanteamiento_20261121/verificacion_proyecciones_valor_vial.json",
       "bytes": 448,
       "sha256": "5010fe69994ef237604657e0a917d359319f74906ffacbd5c552e636bee61b33"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_puente_2d_CPU_s0/puente_temporal_2d.py",
+      "bytes": 3545,
+      "sha256": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_puente_2d_CPU_s0/resultado.json",
+      "bytes": 943,
+      "sha256": "7f934f71c5c4e3b8bd44587f03587c4e0a93f083a90729c9f6d3834fef8dfb9e"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_puente_2d_CPU_s0/verificar_puente_2d_CPU.py",
+      "bytes": 5664,
+      "sha256": "b1da9ec1753665b24bd435fdd1b4c3b736b7f02fb066459c2fe145d6a15ec8fa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_puente_temporal_CPU_s0/puente_temporal_estudiante.py",
+      "bytes": 4466,
+      "sha256": "f7c97830a2eceddcd2b9f3373e0ea8b22c070287a048f0ca8bff5ddd1d446fc3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_puente_temporal_CPU_s0/resultado.json",
+      "bytes": 1064,
+      "sha256": "9105efc0a7e89f26e648b55f25c22ba2946fe4ab16444fc87d5a460934bbd377"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificacion_puente_temporal_CPU_s0/verificar_puente_temporal_CPU.py",
+      "bytes": 4814,
+      "sha256": "8229d0aa483ba572e512b48005b03cba9517b101dd48a60d36f76ce8d5a08e7c"
     },
     {
       "path": "propuesta/replanteamiento_20261121/verificacion_residual_cpu.json",
@@ -8681,6 +10346,21 @@
       "sha256": "3c5217488b699c1f15ced41ddac599c66b49cb5a7fcd2c68cb334497b899df49"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificar_control_lognormal_CPU.py",
+      "bytes": 3049,
+      "sha256": "fc990ab9696ec70f1b38f1ccf299579ed65f1870cd256e1b084355fb7c822a24"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_coordenadas_2d_Train.py",
+      "bytes": 4069,
+      "sha256": "6da4897a7ba464aee55f4114737ffc5f420698f8459b0b904b8f4abe2079f22a"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_cuantiles_balanceados.py",
+      "bytes": 3434,
+      "sha256": "ffba9b9f3a57c99ba42f176711d3c175961c5ea74ebcea10708f03f32cbec684"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificar_difusion_global_cpu.py",
       "bytes": 4051,
       "sha256": "c6968cefbb8d333132d052859d5c99b608187fa9151a9dce0e071115bf81c867"
@@ -8704,6 +10384,11 @@
       "path": "propuesta/replanteamiento_20261121/verificar_entrada_proyeccion_raw.py",
       "bytes": 2272,
       "sha256": "9d383196aa8963ff76b2cbf1c6f00f754250c6cdca466d20797c496a7c441d98"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_estados_cineticos_Train.py",
+      "bytes": 6203,
+      "sha256": "bebf3df827704ad7fceb8e6f327c732be6e1ed0c346ae1f2bf8630fb45082618"
     },
     {
       "path": "propuesta/replanteamiento_20261121/verificar_fases.py",
@@ -8771,9 +10456,19 @@
       "sha256": "b6697ac83e28dbc8e9cfea224afdc6699e0440fe62cd68fddd295c80e9dc7272"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificar_marginalizacion_caminos_CPU.py",
+      "bytes": 4985,
+      "sha256": "b2e12005182f4746547070d4624b5f806b8c423dd5ef16852d70ae60b1657a52"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificar_mediana_directa_cpu.py",
       "bytes": 3115,
       "sha256": "3dbe5943a7fa2fa8c65884ebbfed3e40675e55707d2aba26b37da2d725da32d9"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_mediana_y_control_arco.py",
+      "bytes": 9068,
+      "sha256": "1053371f2dd6bd2cf184ab7b65d4e84d06219c43760434d7098c749b0176f228"
     },
     {
       "path": "propuesta/replanteamiento_20261121/verificar_memoria.py",
@@ -8821,6 +10516,11 @@
       "sha256": "367891e89157d2582e6c8d4b9c1b51c515f126c4355e7b6c2793a06a1b32c013"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificar_operador_cinetico_CPU.py",
+      "bytes": 7725,
+      "sha256": "a104e78da6101c53d608d8cdc77dbb42b254ecff23ff4c1876806672f9b18808"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificar_perdida_maestro.py",
       "bytes": 3516,
       "sha256": "e7182c4878d552bacde9dc12a6dc3f8598f7d71f12253841fcb30320d39f3a56"
@@ -8846,6 +10546,11 @@
       "sha256": "d13e71755e82bfea88a7a7df52e68cb95309649f7da7aebf36c923be4340e5ed"
     },
     {
+      "path": "propuesta/replanteamiento_20261121/verificar_progreso_publico_Train.py",
+      "bytes": 5549,
+      "sha256": "def9cfa17713df3e5e5896ea753f457ee20e3c804d06febc4132d31b5320222b"
+    },
+    {
       "path": "propuesta/replanteamiento_20261121/verificar_progreso_recurrente.py",
       "bytes": 6853,
       "sha256": "e0ad31353c5678cd8f7c86fc6b99b6ba204783a3660c72ec05ea515e2149f1cf"
@@ -8854,6 +10559,16 @@
       "path": "propuesta/replanteamiento_20261121/verificar_proyecciones_valor_vial.py",
       "bytes": 1281,
       "sha256": "8ffd8f660d92f1f8354769e8306c49a39669f7ae862fa2ced75cc664141683d3"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_puente_2d_CPU.py",
+      "bytes": 5664,
+      "sha256": "b1da9ec1753665b24bd435fdd1b4c3b736b7f02fb066459c2fe145d6a15ec8fa"
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/verificar_puente_temporal_CPU.py",
+      "bytes": 4814,
+      "sha256": "8229d0aa483ba572e512b48005b03cba9517b101dd48a60d36f76ce8d5a08e7c"
     },
     {
       "path": "propuesta/replanteamiento_20261121/verificar_residual.py",
@@ -8957,13 +10672,13 @@
     },
     {
       "path": "propuesta/RESUMEN_RESULTADOS.md",
-      "bytes": 46752,
-      "sha256": "ac7f393fa7f1a0962ae03afe66ed03429a82c29e90544b4ae42928eeb4906bfe"
+      "bytes": 50925,
+      "sha256": "8d0bfe943e559f890e66ed9a2cdd1c50a9576cdd06447c4a6b6ffb99a0fa61d3"
     },
     {
       "path": "README.md",
-      "bytes": 1261,
-      "sha256": "9ac3d1b19a248b52f7fe8f611bdf0bdf02932b9219c287ed656d98b1bea99aff"
+      "bytes": 1575,
+      "sha256": "0db41d47d765c809d1496298f9747c5c320db6181bdfeb567c31c6e287ba4940"
     },
     {
       "path": "requirements-revision.txt",
@@ -8979,6 +10694,11 @@
       "path": "revision_tesis/actualizar_entrega_20261122.py",
       "bytes": 16371,
       "sha256": "6f37443594c834f72b3c4ec182d900c60a990842b1c35ec352259de6af6cd1d4"
+    },
+    {
+      "path": "revision_tesis/CIERRE_FINAL.md",
+      "bytes": 4604,
+      "sha256": "edd2fa4f9832a93ab43e302614f0badee37e82dc2d55bcb99a7cb9aa3acfb80b"
     },
     {
       "path": "revision_tesis/construccion_de_esta_entrega.py",
@@ -9001,6 +10721,11 @@
       "sha256": "5a000ac78b9444378e7994d1d322fce8f57d850be8be81f0ee998faa489a041d"
     },
     {
+      "path": "revision_tesis/preparar_cierre_final.py",
+      "bytes": 15311,
+      "sha256": "37ce365962bcc87d72ff2082e8224e66f2d6bb11dddeffb294bcac5d61f89867"
+    },
+    {
       "path": "revision_tesis/probar_modelo.py",
       "bytes": 2399,
       "sha256": "54deab6c93842e0792b7d05b5d259601a6a0430edbffa9b2fc5f513cdf004799"
@@ -9011,14 +10736,19 @@
       "sha256": "283ea1ea661b4d056b5f1e1a6ed11f9ef6644e4b5d54a77df1d9299e290db9b5"
     },
     {
+      "path": "revision_tesis/procedencia_cierre_final.json",
+      "bytes": 402367,
+      "sha256": "8147608eb30b99ce8758cbcd2439159cb08c26eb6c85cf8860a653bf3c2b71cf"
+    },
+    {
       "path": "revision_tesis/procedencia_copia.json",
       "bytes": 144054,
       "sha256": "c492eb342aac72c999dd0ee38b68863ee39efb9ea19f1b10bcd9f2f850d6e2b3"
     },
     {
       "path": "revision_tesis/README.md",
-      "bytes": 7163,
-      "sha256": "4e8f485c2a0e04925b5931d232b92f2719ceb3bcb1671dd97d401a272822bc54"
+      "bytes": 7562,
+      "sha256": "8b2db1c7fb4b87d76ff6bcfa9808d8485ad9a36356260c9c48da9f10f2cf43f6"
     },
     {
       "path": "revision_tesis/recursos_externos_129_99.json",
@@ -9031,9 +10761,19 @@
       "sha256": "de72af14c5e8ec3b46e9248b91e206ca1afbf4a3ff399a3d7182138fb0666b22"
     },
     {
+      "path": "revision_tesis/verificacion_cierre_final.json",
+      "bytes": 942,
+      "sha256": "5bbbd7c1f0484fc97cb86f03887dab259767a43341b0df4d94c6deb6803805f3"
+    },
+    {
       "path": "revision_tesis/verificacion_entrega.json",
       "bytes": 857,
       "sha256": "25a98c5ae83dca4d919f2f9c73580a979f7ebb90cfe99a12f9c1cf649af85409"
+    },
+    {
+      "path": "revision_tesis/verificar_cierre.py",
+      "bytes": 3173,
+      "sha256": "3399811b7db1af575aa2f8be3347ec6ff2cf5dae917b22ca191bbcb90d95674d"
     },
     {
       "path": "revision_tesis/verificar_nuevo_modelo.py",
@@ -9042,12 +10782,12 @@
     },
     {
       "path": "revision_tesis/verificar_resultados.py",
-      "bytes": 3196,
-      "sha256": "2cacd940477e8133a7742e3f50f0827c0f89afe22f9708776af20b54b69f166c"
+      "bytes": 3240,
+      "sha256": "8ce716e405aa9e46df6e97e797808348a20f172438b3f33c7f322d992b0c0646"
     }
   ],
-  "file_count": 1809,
-  "total_bytes": 297493567,
+  "file_count": 2157,
+  "total_bytes": 352756949,
   "raw_Train_Test_and_environment_excluded": true,
   "secret_literal_scan_passed": true,
   "original_repository_files_not_rehashed_as_research_artifacts": true

@@ -1,0 +1,112 @@
+{
+  "complete": true,
+  "practical_gate": false,
+  "metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 130.029068616394,
+      "rmse_s": 206.64043797818798,
+      "mdae_s": 82.44181900359021
+    },
+    "geometry": {
+      "n": 10000,
+      "mae_s": 127.47522133363444,
+      "rmse_s": 203.58823253886115,
+      "mdae_s": 79.93759840028235
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 126.43457480872028,
+      "rmse_s": 201.71803356306447,
+      "mdae_s": 79.80957667097621
+    }
+  },
+  "comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -3.594493807673697,
+      "ci95_s": [
+        -5.268396641179562,
+        -1.946390956631599
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain; not primaryValidation or confirmation."
+    },
+    "vs_geometryproxy": {
+      "delta_mae_s": -1.0406465249141543,
+      "ci95_s": [
+        -2.26420224560822,
+        0.25368579528457547
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain; not primaryValidation or confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": -6.920817984081627,
+      "ci95_s": [
+        -8.661278488845214,
+        -5.051269410006214
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain; not primaryValidation or confirmation."
+    }
+  },
+  "change_vs_smallfit_held_MAE_s": {
+    "none": -20.498768630590007,
+    "geometry": -20.827249835270663,
+    "observed": -18.85815492410869
+  },
+  "independent_full10000_raw65_reverse_singleton_replay_passed": true,
+  "original_rows_labels_and_query_information_preserved": true,
+  "critical_interpretation": [
+    "The full951718fit comparison improves the generalizationregime relative to the small40k pilot; changing samplecomposition and stabletrainingnumerics together does not identify a pure causal samplesize effect.",
+    "Observedsource time must beat both freshneuralbaseline and geometryproxy by the original declaredgates, not merely beat the earlier weaksmallpilot.",
+    "All heldTrain results are exploratory, repeatedlyreused and on one initialization. They do not replace fullValidation or Testconfirmation.",
+    "A negative gate does not prove an irreducibleBayeserror floor or that73.5 is universallyimpossible.",
+    "A positive gate only qualifies a prospectivelyfrozen fullprimaryexperiment, not a73.5claim."
+  ],
+  "next": "Do not sweep epochs, sourcecount, solver or thresholds. Review a structurallydistinct, physicallyconsistent alternative before its prospectivelycontrolled Trainexperiment. Basic position-only Markovwalk is notready after kineticdiagnostic.",
+  "all_metrics_predictions_configs_frozen_sources_retained": true,
+  "weights_and_cache_retention": {
+    "policy": "Keep every completedmetric/prediction/config/source, includingMAE>131.06. PilotheldTrain is not fullprimaryValidation for weightqualification.",
+    "retired": [
+      {
+        "arm": "none",
+        "file": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\none\\epoca_4.pt",
+        "sha256": "017a30a06b5b8b8cc426302d24d509ca5ccdcdb2bfcf435080f5da005f4ea6e6",
+        "bytes": 14650460
+      },
+      {
+        "arm": "geometry",
+        "file": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\geometry\\epoca_4.pt",
+        "sha256": "104686cb681a587380997afe715ee3f02a9006638cb8679c8b1056b13358fe7d",
+        "bytes": 14650460
+      },
+      {
+        "arm": "observed",
+        "file": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\observed\\epoca_4.pt",
+        "sha256": "5e22db26c807cee5984b7b8027a52421b0b9848f181345f01229e9c7faa2825e",
+        "bytes": 14650460
+      },
+      {
+        "file": "propuesta\\replanteamiento_20261121\\indices_escala_Train_s0\\indices_fuentes.npz",
+        "sha256": "22c1eb78475ae1ac5ee95dd878f88f1cba4ada68313363bfaa1186ce72eb9c85",
+        "bytes": 279171450,
+        "kind": "Discarded fullpilot compactindexcache; rebuild via preparar_indices_escala_Train.py before repeating its replay.",
+        "source_and_manifest_retained": true
+      }
+    ],
+    "preserved_weights": [],
+    "retired_bytes": 323122830,
+    "retained_fit_metadata": {
+      "file": "propuesta\\replanteamiento_20261121\\indices_escala_Train_s0\\metadatos_Train.npz",
+      "sha256": "2bc8202585667f0db583ee415285342d8c6fe3fecff0d147181820d4881eff18",
+      "bytes": 4793299
+    }
+  },
+  "goal": "ACTIVE",
+  "primary_best_unchanged_s": 129.99003446901307,
+  "confirmation_goal_s": 73.5,
+  "confirmation_goal_achieved": false,
+  "Test": "SEALED",
+  "Validation": false
+}

@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "fixed_epoch": 80,
+  "metrics": {
+    "n": 10000,
+    "mae_s": 148.3024686935425,
+    "rmse_s": 222.07585047459122,
+    "mdae_s": 99.19143676757812
+  },
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\geometry\\epoca_80.pt",
+  "model_sha256": "a269971a46ca056d950446867d0c53577ddedbaa30fe2ac786337436e7958c99",
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc",
+  "source_mode": "geometry",
+  "held_prediction_sha256": "16c2e76f5ce4bd89d20bb5771afac950dbf640821b067fad95b16e34877bf866",
+  "Test": false,
+  "Validation": false
+}

@@ -1,0 +1,93 @@
+{
+  "complete": true,
+  "scope": "4096 deterministicprecutofffitparents only; no predictiveexperiment or newMAE.",
+  "seed": 20261129,
+  "eligible_fitparents": 951718,
+  "sampled_fitparents": 4096,
+  "sampled15secondtransitions": 164014,
+  "selected_parent_arrivals_before": 1396531073,
+  "all_sampled_rows_in_original951718fit": true,
+  "physical_speed_kmh_quantiles": {
+    "p0": 0.0,
+    "p50": 19.53640678239097,
+    "p90": 51.117993322881595,
+    "p99": 97.55583813910717,
+    "max": 2389.8547764522164
+  },
+  "fraction_steps_gt120kmh": 0.003670418378918873,
+  "adjacent_moving_directions_cosine_quantiles": {
+    "p0": -1.0,
+    "p50": 0.9715008452282774,
+    "p90": 0.9998139760164917,
+    "p99": 0.9999987159520427,
+    "max": 1.0
+  },
+  "fraction_moving_direction_change_gt90deg": 0.03841762497602324,
+  "fixed100m_grid": {
+    "visited_cells": 4348,
+    "observed_directed_jumps": 20218,
+    "largest_celljump_quantiles": {
+      "p0": 0.0,
+      "p50": 1.0,
+      "p90": 2.0,
+      "p99": 4.0,
+      "max": 97.0
+    },
+    "samecell_fraction": 0.36399941468411234,
+    "fraction_jump_outside_3by3_neighborhood": 0.22379796846610656
+  },
+  "trip_groups": [
+    {
+      "trueT_range_s": [
+        60,
+        300
+      ],
+      "n": 504,
+      "mean_fraction_displacement_le5m": 0.10541592021048934,
+      "mean_same100mcell_fraction": 0.3070999475510293
+    },
+    {
+      "trueT_range_s": [
+        300,
+        600
+      ],
+      "n": 1831,
+      "mean_fraction_displacement_le5m": 0.12735976042151687,
+      "mean_same100mcell_fraction": 0.33300894039673556
+    },
+    {
+      "trueT_range_s": [
+        600,
+        900
+      ],
+      "n": 1140,
+      "mean_fraction_displacement_le5m": 0.14923517156918575,
+      "mean_same100mcell_fraction": 0.35805882223839425
+    },
+    {
+      "trueT_range_s": [
+        900,
+        1800
+      ],
+      "n": 621,
+      "mean_fraction_displacement_le5m": 0.18847525713629376,
+      "mean_same100mcell_fraction": 0.4098336305553267
+    }
+  ],
+  "interpretation_limits": [
+    "Displacement<=5m is a GPS displacementproxy, not verified vehicleidling or passengerbehavior.",
+    "Same100mcell mixes truewaiting with movement inside a cell; it is not a physicalstop label.",
+    "Observedspatialresolution/directionpersistence do not establish a timepredictionimprovement.",
+    "The public static53766roadchain adjacency has variablelength edges; one roadedge must NEVER be treated as one15second tick.",
+    "A graph of15secondGPStransitions would need fit-only construction and publicraw5 endpointprojection. This audit stores no extraGPSbank or graph.",
+    "No sourcekinematic anomaly removes a primaryquery or changes its original target."
+  ],
+  "predictions_written": false,
+  "original_cohort_and_targets_unchanged": true,
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [],
+  "source_sha256": "22b3576dbacdc0e7b3c9c0beb6f45dc7120b25371502e4547d0e803e16b4a70d",
+  "provenance_sha256": "f8d3732ef3b5c3b7e3106eef768e22136ae1cf8733b376aeb21d4d1a363ae8ac",
+  "seconds": 1.9385545253753662
+}

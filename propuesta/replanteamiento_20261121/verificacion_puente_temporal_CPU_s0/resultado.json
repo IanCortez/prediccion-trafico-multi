@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "scope": "Synthetic exactnumerical instrument; not a trainedPorto model or observedMAE.",
+  "stationary_AR_covariance_maxerror": 9.094947017729282e-12,
+  "full_t_logpdf_error": 1.0302869668521453e-13,
+  "endpoint_t_logpdf_error": 1.1102230246251565e-16,
+  "conditional_t_logpdf_error": 1.3100631690576847e-13,
+  "gradient_maxerror": 2.579984836881266e-11,
+  "normalized_fixed116durationposterior": true,
+  "batch_reverse_singleton_exact": true,
+  "no_querytrueN_in_prediction": true,
+  "robust_globalpathscale_influence": [
+    1.1984008695949047,
+    0.0011999986281753176
+  ],
+  "robustness_is_not_independent_GPS_noise_model": true,
+  "firstpassage_claim": false,
+  "nonnegative_physicalspeed_claim": false,
+  "Validation": false,
+  "Test": false,
+  "seconds": 0.12829828262329102,
+  "sources": {
+    "puente_temporal_estudiante.py": "f7c97830a2eceddcd2b9f3373e0ea8b22c070287a048f0ca8bff5ddd1d446fc3",
+    "verificar_puente_temporal_CPU.py": "8229d0aa483ba572e512b48005b03cba9517b101dd48a60d36f76ce8d5a08e7c"
+  }
+}

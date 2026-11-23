@@ -1,0 +1,37 @@
+{
+  "policy": "Keep every completedmetric/prediction/config/source, includingMAE>131.06. PilotheldTrain is not fullprimaryValidation for weightqualification.",
+  "retired": [
+    {
+      "arm": "none",
+      "file": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\none\\epoca_4.pt",
+      "sha256": "017a30a06b5b8b8cc426302d24d509ca5ccdcdb2bfcf435080f5da005f4ea6e6",
+      "bytes": 14650460
+    },
+    {
+      "arm": "geometry",
+      "file": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\geometry\\epoca_4.pt",
+      "sha256": "104686cb681a587380997afe715ee3f02a9006638cb8679c8b1056b13358fe7d",
+      "bytes": 14650460
+    },
+    {
+      "arm": "observed",
+      "file": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\observed\\epoca_4.pt",
+      "sha256": "5e22db26c807cee5984b7b8027a52421b0b9848f181345f01229e9c7faa2825e",
+      "bytes": 14650460
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\indices_escala_Train_s0\\indices_fuentes.npz",
+      "sha256": "22c1eb78475ae1ac5ee95dd878f88f1cba4ada68313363bfaa1186ce72eb9c85",
+      "bytes": 279171450,
+      "kind": "Discarded fullpilot compactindexcache; rebuild via preparar_indices_escala_Train.py before repeating its replay.",
+      "source_and_manifest_retained": true
+    }
+  ],
+  "preserved_weights": [],
+  "retired_bytes": 323122830,
+  "retained_fit_metadata": {
+    "file": "propuesta\\replanteamiento_20261121\\indices_escala_Train_s0\\metadatos_Train.npz",
+    "sha256": "2bc8202585667f0db583ee415285342d8c6fe3fecff0d147181820d4881eff18",
+    "bytes": 4793299
+  }
+}

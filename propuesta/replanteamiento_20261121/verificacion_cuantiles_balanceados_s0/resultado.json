@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "deepgap_symmetric_quantiles_exact": true,
+  "deepgap_location_and_scale_gradients_exact": true,
+  "weight_gradient_bound_seconds": 1000000.0,
+  "weight_gradient_limit": "Numericaltrustregion only for ill-conditioned normalized-logweight derivative; location/scale derivatives retain exact log-density ratios.",
+  "nondegenerate_finite_differences": {
+    "median": {
+      "max_abs_error": 7.502631333977661e-07
+    },
+    "nll": {
+      "max_abs_error": 3.9445269273130634e-10
+    },
+    "loss": {
+      "max_abs_error": 1.250507364325415e-09
+    }
+  },
+  "folded_bin_mass_sum": 1.0,
+  "rows": [
+    {
+      "sigma": 0.06,
+      "median_s": 300.0000000000018,
+      "dlocation": [
+        [
+          149.9999999997363,
+          150.00000000026498
+        ]
+      ],
+      "dscale": [
+        [
+          2746.53072166546,
+          -2746.5307216751116
+        ]
+      ],
+      "weight_derivative_max": 999999.9999999995,
+      "naive_float32_s": 137.82981872558594
+    },
+    {
+      "sigma": 0.1,
+      "median_s": 300.00000000000233,
+      "dlocation": [
+        [
+          149.99999999987725,
+          150.0000000001256
+        ]
+      ],
+      "dscale": [
+        [
+          1647.918433000827,
+          -1647.9184330035328
+        ]
+      ],
+      "weight_derivative_max": 999999.9999999995,
+      "naive_float32_s": 170.7021484375
+    },
+    {
+      "sigma": 0.25,
+      "median_s": 299.9999999999957,
+      "dlocation": [
+        [
+          150.00000000003647,
+          149.9999999999592
+        ]
+      ],
+      "dscale": [
+        [
+          659.1673732010172,
+          -659.1673732006951
+        ]
+      ],
+      "weight_derivative_max": 733595.3539326083,
+      "naive_float32_s": 299.9855651855469
+    },
+    {
+      "sigma": 0.5,
+      "median_s": 299.9999999999925,
+      "dlocation": [
+        [
+          150.00000000001296,
+          149.99999999997956
+        ]
+      ],
+      "dscale": [
+        [
+          329.58368660045375,
+          -329.58368660039554
+        ]
+      ],
+      "weight_derivative_max": 1021.2405319146095,
+      "naive_float32_s": 299.9998779296875
+    }
+  ],
+  "sources": {
+    "cuantiles_mezcla_balanceada.py": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+    "verificar_cuantiles_balanceados.py": "ffba9b9f3a57c99ba42f176711d3c175961c5ea74ebcea10708f03f32cbec684"
+  },
+  "new_predictive_result": false,
+  "Test": false,
+  "seconds": 0.2021777629852295
+}

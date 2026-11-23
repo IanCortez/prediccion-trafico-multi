@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "metrics": {
+    "n": 10000,
+    "mae_s": 131.985,
+    "rmse_s": 206.73929234666545,
+    "mdae_s": 90.0
+  },
+  "probability_scores": {
+    "CRPS_s": 97.83525624558258,
+    "bin_NLL": 3.6948154280300196
+  },
+  "weights": {
+    "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\kinetic\\epoca_80.pt",
+    "sha256": "002cedc0648e24b0b80cfb6e53bf81fa7e6925e007f95e1e09d0abab7cc89726",
+    "bytes": 77516
+  },
+  "predictions_sha256": "f1d4aa7956eb2aa85001cabd95b2d4424316648ff1a16669bd5a97d01933264f",
+  "fit_n": 40000,
+  "held_n": 10000,
+  "fixed_epochs": 80,
+  "updates": 12560,
+  "initial_parameters_sha256": "d7b4fe854b0ea7e8060e52c7ce2710761bc717bd29419509683b5c2852cb344f",
+  "held_early_stopping": false,
+  "Validation": false,
+  "Test": false
+}

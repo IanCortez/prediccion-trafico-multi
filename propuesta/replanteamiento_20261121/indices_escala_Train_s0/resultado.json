@@ -1,0 +1,73 @@
+{
+  "complete": true,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "source_cutoff": 1396531073,
+  "statistics": [
+    {
+      "fold": 0,
+      "n": 197975,
+      "mean_evaluated": 714.2738376057583,
+      "mean_discovered": 3007.3903018057836,
+      "within100m_fraction": 0.9858163909584543
+    },
+    {
+      "fold": 1,
+      "n": 188447,
+      "mean_evaluated": 714.5213826699285,
+      "mean_discovered": 3001.628139476882,
+      "within100m_fraction": 0.9868557207066178
+    },
+    {
+      "fold": 2,
+      "n": 190522,
+      "mean_evaluated": 718.6927336475578,
+      "mean_discovered": 3004.1353701934686,
+      "within100m_fraction": 0.9863375358226346
+    },
+    {
+      "fold": 3,
+      "n": 192613,
+      "mean_evaluated": 717.3359170980152,
+      "mean_discovered": 3008.4931287088616,
+      "within100m_fraction": 0.9864754715413809
+    },
+    {
+      "fold": 4,
+      "n": 182161,
+      "mean_evaluated": 712.8478049637408,
+      "mean_discovered": 3006.8151250816586,
+      "within100m_fraction": 0.9861660838489029
+    },
+    {
+      "fold": 5,
+      "n": 10000,
+      "mean_evaluated": 741.927,
+      "mean_discovered": 3048.6593,
+      "within100m_fraction": 0.9877
+    }
+  ],
+  "held_all10000_refs_identical_to_smallpilot": true,
+  "all_source_arrivals_before_cutoff": true,
+  "wholeparentfold_exclusion_before_tree": true,
+  "no_queryself_source": true,
+  "sourceendpoint_bbox_and_span_preserved": true,
+  "original_primary_queries_labels_split_unchanged": true,
+  "no_rawtokens_saved": true,
+  "indices_sha256": "22c1eb78475ae1ac5ee95dd878f88f1cba4ada68313363bfaa1186ce72eb9c85",
+  "MiB": 266.2386417388916,
+  "source_pointbank_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "sources": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "preparar_indices_escala_Train.py": "e52e3cadef1d78b7c8e0a90c1fe09fd39481954c991c20c64a54e2a314bdaba3",
+    "recuperar_fuentes_ordenadas.py": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d"
+  },
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 1270.3144800662994
+}

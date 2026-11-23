@@ -1,0 +1,129 @@
+{
+  "complete": true,
+  "passed": false,
+  "metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 150.52783389053346,
+      "rmse_s": 228.0209804087434,
+      "mdae_s": 99.26541137695312
+    },
+    "geometry": {
+      "n": 10000,
+      "mae_s": 148.3024686935425,
+      "rmse_s": 222.07585047459122,
+      "mdae_s": 99.19143676757812
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 145.29272927398682,
+      "rmse_s": 220.6010040719524,
+      "mdae_s": 94.85848999023438
+    }
+  },
+  "comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -5.235104616546631,
+      "ci95_s": [
+        -7.366970736795935,
+        -2.975751884887354
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain, not primaryValidation or confirmation."
+    },
+    "vs_geometryproxy": {
+      "delta_mae_s": -3.009739419555664,
+      "ci95_s": [
+        -5.307246960766034,
+        -0.6049129375273508
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain, not primaryValidation or confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": 11.937336481184886,
+      "ci95_s": [
+        9.828616291612086,
+        14.24640003111216
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain, not primaryValidation or confirmation."
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "fixed_epoch": 80,
+  "all_neural_initial_parameters_matched": true,
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc",
+  "checkpoints": [
+    {
+      "arm": "none",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\none\\epoca_80.pt",
+      "sha256": "bfe9b318aff16be19068bc51ca8569c6ee2b78a2297468c2b4c0b49d5afd4f2d",
+      "validation_scope": "HeldTrain only, not primaryValidation",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 150.52783389053346,
+        "rmse_s": 228.0209804087434,
+        "mdae_s": 99.26541137695312
+      }
+    },
+    {
+      "arm": "geometry",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\geometry\\epoca_80.pt",
+      "sha256": "a269971a46ca056d950446867d0c53577ddedbaa30fe2ac786337436e7958c99",
+      "validation_scope": "HeldTrain only, not primaryValidation",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 148.3024686935425,
+        "rmse_s": 222.07585047459122,
+        "mdae_s": 99.19143676757812
+      }
+    },
+    {
+      "arm": "observed",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\observed\\epoca_80.pt",
+      "sha256": "f0aa63d709dab867a77311f11a00393e5e966e475c20db4ffa82ee90549aff5a",
+      "validation_scope": "HeldTrain only, not primaryValidation",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 145.29272927398682,
+        "rmse_s": 220.6010040719524,
+        "mdae_s": 94.85848999023438
+      }
+    }
+  ],
+  "independent_replay_pending": false,
+  "predictions_sha256": "357078dded38f0eaf6100228c84fabce310a17524f2723912b2417a7ba0145b9",
+  "constructor_sha256": "496ff1ca49dd15cf29503502d546e6dfaddb3e4ed043c003521beed38743c6c0",
+  "sources": {
+    "entrenar_mezcla_individual_Train.py": "4063260e657d76c2b3a1f2cd9b4fa9ecc1a076860a6c3c12d7eddd46090e3b1e",
+    "datos_mezcla_individual_Train.py": "0dba3a66c94b2393d6974cfd256d74c7bca6850a53d01c4e09e54980507ee1d0",
+    "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a",
+    "cuantiles_mezcla_implicita.py": "a40af5f3f23f372ec8160ebe25d3bb5fa303bebe5c1a7ecdaf33662ed3c337a3",
+    "tokens_transferencia_arco.py": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6",
+    "tokens_subtrayectos_arco.py": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014",
+    "tokens_subtrayectos.py": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+    "recuperar_fuentes_ordenadas.py": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 1651.011001110077,
+  "next": "Independentfullheldreload plus raw65query replay required before retentiondecision; do not change epochs/gates after results.",
+  "independent_replay_sha256": "23a65a49add705ace2d6864027ca5f785fe3f0bcedf97323fcf3935769789878",
+  "retention_record": "retencion_pesos_descartados.json"
+}

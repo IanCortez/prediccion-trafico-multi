@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "scope": "4096fit-targetrepresentation only; not predictiveMAE.",
+  "fit_n": 4096,
+  "heldtrajectory_used": false,
+  "raw65public206_and_ninepoint_path_exact": true,
+  "raw_reverse65_singleton_exact": true,
+  "straightline_analytic_and_rigid_transform_passed": true,
+  "negative_AR_covariance_valid": true,
+  "all_original_durationlabels_preserved": true,
+  "all_fitparents_before1396531073": true,
+  "public_route_available_fraction": 0.999755859375,
+  "fallback": "Publicavailability-only straightline; no droppedqueries.",
+  "lateral_error_m_quantiles_p0_p10_p50_p90_p99_max": [
+    2.4446955463881765e-10,
+    1.5066505893373008,
+    60.985918499706486,
+    746.1515823146327,
+    2393.667903942915,
+    9500.75825616207
+  ],
+  "pertrip_increment_autocorrelation_quantiles": [
+    -0.7729692325168797,
+    -0.0429343011755446,
+    0.22160291454211034,
+    0.6642293388737408,
+    0.8734570483645635,
+    0.9401234923612624
+  ],
+  "mean_fraction_negative_progress_increment": 0.08457206597715979,
+  "mean_fraction_exact_stationary_projected_increment": 0.194720100855848,
+  "uint16_max_quantization_error": 7.629510948348211e-06,
+  "interpretation": "Signed publicrouteprogress is a proxy and can backtrack or pause due to routeambiguity/GPSnoise. Never equate it with exact physicalspeed.",
+  "source_target_archive_sha256": "8d2f5211eb39245682e3e8004ff81d56f740771133dfcc77b50f7edad6dd4b9a",
+  "target_archive_MiB": 0.2960500717163086,
+  "sources": {
+    "verificar_progreso_publico_Train.py": "def9cfa17713df3e5e5896ea753f457ee20e3c804d06febc4132d31b5320222b",
+    "progreso_ruta_publica.py": "bee4d65fcbda1648961be064eb8a1ba579e2099fef680189c30dd12197609eac"
+  },
+  "Test": false,
+  "Validation": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 11.55724811553955
+}

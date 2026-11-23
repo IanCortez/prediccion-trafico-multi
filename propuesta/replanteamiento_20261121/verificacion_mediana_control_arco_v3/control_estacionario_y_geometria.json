@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "insertion_points": 5,
+  "only_actual_time_columns_changed": [
+    16,
+    32
+  ],
+  "geometryproxy_all34columns_exact": true,
+  "old_index_fraction_changes_observed": true,
+  "publicpath_shape_maxerror_km": 4.488229751586914e-05,
+  "rotation_and_scale_physical_frame_verified": true,
+  "synthetic_only_no_queryGT": true
+}

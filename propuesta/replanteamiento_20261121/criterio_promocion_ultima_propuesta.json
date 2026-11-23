@@ -1,0 +1,11 @@
+{
+  "status": "FROZEN_BEFORE_FIRST_GRAPH_HELD_MAE",
+  "user_scope": "Finish only currentproposal then close.",
+  "pilot": "protocolo_red_cinetica_Train.json",
+  "selection": "If kineticpasses its prospectivemain5s/2sgate, selectkinetic. Otherwise selectposition onlyifits prospective5sgate passes. Otherwise close asnegative; no furthertrainingfamily.",
+  "primary_if_selected": "Freeze selectedalreadytrained951718prefixreference +40000querygate +same951718sourcecounts without refitting or changingparameters, evaluate all127941originalprimaryValidation queries; no newfilters or labels. Record useofTrainprefixsubset explicitly.",
+  "baseline_primary": "Samefrozenpublicreference on all127941Validation; also report existingprotected129.990034469s best as separatehistoricalcomparison.",
+  "Test": "SEALED unless selectedfrozenmodel independentlyverified on primaryValidation below73.5; onlythen oneconfirmation on originalunexposed126950.",
+  "negative_result": "Keep allmetrics/predictions/config/source, resourceproof, comparisons and finalcriticalreport. Never mark73.5 achieved from reusedTrainpilot.",
+  "no_further_alternative_families": true
+}

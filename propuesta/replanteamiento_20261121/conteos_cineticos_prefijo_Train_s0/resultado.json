@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "scope": "Completed951718precutoffFITsourcecounts; no predictivegraphMAE.",
+  "fit_sourceparents": 951718,
+  "source_points": 39677053,
+  "original_intervals": 38725335,
+  "valid_auxiliary_intervals": 38066329,
+  "unique_kinetic_contextpairs": 25990406,
+  "public_kinetic_states": 648144,
+  "start_observations": 940230,
+  "stop_observations": 943151,
+  "source_trips_with_HMMreset": 283272,
+  "every_pair_keeps_original15second_clock": true,
+  "no_gap_compression": true,
+  "sourcecount_encoder_sample_exact": true,
+  "all_sources_arrive_before1396531073": true,
+  "held_sourceparents": 0,
+  "original_queries_andT_unchanged": true,
+  "no_population_GPS_or_roadlabel_bank_written": true,
+  "artifact_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+  "artifact_MiB": 94.0514497756958,
+  "peak_persistent_MiB": 223.82533359527588,
+  "after_shard_retirement_MiB": 94.25913619995117,
+  "hardcap_MiB": 350,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014\\manifiesto.json",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz"
+  ],
+  "queryheld_MAE_computed": false,
+  "Validation": false,
+  "Test": false,
+  "seconds": 196.91895031929016,
+  "sources": {
+    "construir_conteos_cineticos_Train.py": "71ae7b7572179701ae08499b1dda41a92f3f8d0b4794446eba18025ba167b0ec",
+    "conteos_red_cinetica.py": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02",
+    "estados_cineticos_15s.py": "5b67b5604968e53520ce1562697c8f603ae8080ec5fa21dd9b1bb9c64d717e5c",
+    "operador_red_cinetica.py": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950",
+    "operador_red_cinetica_GPU.py": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0"
+  }
+}

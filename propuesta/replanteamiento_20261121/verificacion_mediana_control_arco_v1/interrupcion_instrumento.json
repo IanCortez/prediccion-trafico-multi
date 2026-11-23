@@ -1,0 +1,5 @@
+{
+  "terminal": true,
+  "reason": "Doubleprecision reference needed48bisection iterations instead of32 for1e-8second symmetric-quantile test. Float32 modelprotocol unchanged; objectivecomparison now permits floatingdivision roundoff.",
+  "scientific_metric": false
+}

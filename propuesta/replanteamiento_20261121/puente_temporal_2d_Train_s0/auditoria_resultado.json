@@ -1,0 +1,271 @@
+{
+  "complete": true,
+  "practical_gate_passed": false,
+  "statistics": {
+    "none": {
+      "metrics": {
+        "n": 10000,
+        "mae_s": 130.872,
+        "rmse_s": 205.31542806131253,
+        "mdae_s": 90.0
+      },
+      "probability_scores": {
+        "CRPS_s": 96.9560668953263,
+        "bin_NLL": 3.6863298274617655,
+        "coverage80": 0.8096,
+        "width80_s": 402.2265
+      },
+      "mean_duration_entropy": 3.6650724371456294,
+      "mean_mass60s": 0.0009296080682819122,
+      "mean_mass1785s": 0.0004917744440539773,
+      "archived_FP32_probability_normalization_maxerror": 5.295575733477165e-08,
+      "last_online_train_MAE_s": 127.45049478942292,
+      "held_minus_online_train_MAE_s": 3.421505210577095,
+      "descriptive_trueT_groups": [
+        {
+          "trueT_range_s": [
+            60,
+            300
+          ],
+          "metrics": {
+            "n": 1148,
+            "mae_s": 86.602787456446,
+            "rmse_s": 119.30876699359985,
+            "mdae_s": 75.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            300,
+            600
+          ],
+          "metrics": {
+            "n": 4480,
+            "mae_s": 82.5703125,
+            "rmse_s": 108.89652997718261,
+            "mdae_s": 60.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            600,
+            900
+          ],
+          "metrics": {
+            "n": 2887,
+            "mae_s": 121.97956356078974,
+            "rmse_s": 160.11699588958453,
+            "mdae_s": 90.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            900,
+            1800
+          ],
+          "metrics": {
+            "n": 1485,
+            "mae_s": 328.1010101010101,
+            "rmse_s": 432.7204290266057,
+            "mdae_s": 255.0
+          }
+        }
+      ]
+    },
+    "linear": {
+      "metrics": {
+        "n": 10000,
+        "mae_s": 129.6165,
+        "rmse_s": 205.23820916193944,
+        "mdae_s": 75.0
+      },
+      "probability_scores": {
+        "CRPS_s": 96.39619023104046,
+        "bin_NLL": 3.685232057736927,
+        "coverage80": 0.8059,
+        "width80_s": 396.0675
+      },
+      "mean_duration_entropy": 3.654757768687809,
+      "mean_mass60s": 0.0006680195329524944,
+      "mean_mass1785s": 0.0005434005981796592,
+      "archived_FP32_probability_normalization_maxerror": 5.726489937796231e-08,
+      "last_online_train_MAE_s": 127.41140758081701,
+      "held_minus_online_train_MAE_s": 2.2050924191829893,
+      "descriptive_trueT_groups": [
+        {
+          "trueT_range_s": [
+            60,
+            300
+          ],
+          "metrics": {
+            "n": 1148,
+            "mae_s": 84.0548780487805,
+            "rmse_s": 117.8617753286607,
+            "mdae_s": 60.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            300,
+            600
+          ],
+          "metrics": {
+            "n": 4480,
+            "mae_s": 80.11607142857143,
+            "rmse_s": 105.64993365896099,
+            "mdae_s": 60.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            600,
+            900
+          ],
+          "metrics": {
+            "n": 2887,
+            "mae_s": 121.76653966054728,
+            "rmse_s": 159.57262370976076,
+            "mdae_s": 90.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            900,
+            1800
+          ],
+          "metrics": {
+            "n": 1485,
+            "mae_s": 329.4343434343434,
+            "rmse_s": 435.58981260870286,
+            "mdae_s": 255.0
+          }
+        }
+      ]
+    },
+    "observed": {
+      "metrics": {
+        "n": 10000,
+        "mae_s": 130.152,
+        "rmse_s": 205.39201542416393,
+        "mdae_s": 90.0
+      },
+      "probability_scores": {
+        "CRPS_s": 96.63120532957616,
+        "bin_NLL": 3.6883193492178252,
+        "coverage80": 0.8125,
+        "width80_s": 403.056
+      },
+      "mean_duration_entropy": 3.693907976951169,
+      "mean_mass60s": 0.0009404380976966003,
+      "mean_mass1785s": 0.0004403402188499567,
+      "archived_FP32_probability_normalization_maxerror": 5.620401866135438e-08,
+      "last_online_train_MAE_s": 128.9478185765111,
+      "held_minus_online_train_MAE_s": 1.2041814234888761,
+      "descriptive_trueT_groups": [
+        {
+          "trueT_range_s": [
+            60,
+            300
+          ],
+          "metrics": {
+            "n": 1148,
+            "mae_s": 84.59059233449477,
+            "rmse_s": 114.09067089236082,
+            "mdae_s": 75.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            300,
+            600
+          ],
+          "metrics": {
+            "n": 4480,
+            "mae_s": 80.20982142857143,
+            "rmse_s": 105.1319324196303,
+            "mdae_s": 60.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            600,
+            900
+          ],
+          "metrics": {
+            "n": 2887,
+            "mae_s": 121.1378593695878,
+            "rmse_s": 158.71635560939725,
+            "mdae_s": 90.0
+          }
+        },
+        {
+          "trueT_range_s": [
+            900,
+            1800
+          ],
+          "metrics": {
+            "n": 1485,
+            "mae_s": 333.5656565656566,
+            "rmse_s": 437.83472044167814,
+            "mdae_s": 255.0
+          }
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -0.72,
+      "ci95_s": [
+        -1.6627710745207873,
+        0.2560532079650332
+      ],
+      "required_improvement_s": 5,
+      "passed": false
+    },
+    "vs_linearcontrol": {
+      "delta_mae_s": 0.5355,
+      "ci95_s": [
+        -0.422732027700741,
+        1.5880261969135832
+      ],
+      "required_improvement_s": 2,
+      "passed": false
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": -3.203392792801924,
+      "ci95_s": [
+        -5.095327376584588,
+        -0.7959470797110314
+      ],
+      "required_improvement_s": 5,
+      "passed": false
+    }
+  },
+  "independent_probability_andraw65_replay_passed": true,
+  "main_gate_unchanged": true,
+  "secondary_matchedheadcontrol_pending": false,
+  "primary_best_unchanged_s": 129.99003446901307,
+  "confirmation_goal_s": 73.5,
+  "goal_achieved": false,
+  "limits": [
+    "Same10000reusedheldTrain and oneinitialization; not confirmation.",
+    "Online trainingmetrics include dropout/changingparameters; train-held gaps descriptive.",
+    "AuxiliarycontinuouspathNLL magnitudes are not directlycomparable between linear and observedtargets.",
+    "SignedcorrelatedGPS motion is not nonnegativephysicalspeed, firstarrival, or a road-constrained simulator.",
+    "GlobalStudent robustpathscale does not isolate independentGPSobservationerrors.",
+    "TrueTgroups are retrospective diagnostics and never queryinputs or filters."
+  ],
+  "all_results_retained_regardless131_06": true,
+  "retention_pending_secondary_control": false,
+  "Test": "SEALED",
+  "Validation": false,
+  "source_sha256": "34c342817e5160125c535df3504051b2a0a2410aef2b313c75562f39a98fd718",
+  "matched_lognormal_control_metrics": {
+    "n": 10000,
+    "mae_s": 129.6225,
+    "rmse_s": 204.45022010259612,
+    "mdae_s": 90.0
+  },
+  "secondary_head_gate_passed": false
+}

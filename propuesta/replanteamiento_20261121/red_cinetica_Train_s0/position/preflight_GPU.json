@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "finite_two_step_gradients": true,
+  "firstlayer_gradient_nonzero": true,
+  "raw65_reverse17_singleton_logprobs_andgates_exact": true,
+  "unsupported_reference_logprob_exact": true,
+  "initial_parameters_sha256": "d7b4fe854b0ea7e8060e52c7ce2710761bc717bd29419509683b5c2852cb344f",
+  "peak_allocated_MiB": 294.1337890625
+}

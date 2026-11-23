@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "scope": "GPUFloat64canonical64 sparseclock equivalence/resourceprobe. No predictiveMAE.",
+  "statistics": {
+    "position": {
+      "rawqueries": 65,
+      "supported": 57,
+      "CPUmax_weight_error": 2.168404344971009e-19,
+      "CPUmax_probability_error": 2.0816681711721685e-17,
+      "reverse17_exact": false,
+      "singleton_exact": false,
+      "reverse17_max_weight_error": 1.3552527156068805e-20,
+      "singleton_max_weight_error": 1.0842021724855044e-19,
+      "cache_peak": 4,
+      "seconds": 6.985736131668091
+    },
+    "kinetic": {
+      "rawqueries": 65,
+      "supported": 57,
+      "CPUmax_weight_error": 2.168404344971009e-19,
+      "CPUmax_probability_error": 2.7755575615628914e-17,
+      "reverse17_exact": false,
+      "singleton_exact": true,
+      "reverse17_max_weight_error": 3.3881317890172014e-21,
+      "singleton_max_weight_error": 0.0,
+      "cache_peak": 4,
+      "seconds": 8.366167068481445
+    }
+  },
+  "GPU": "NVIDIA GeForce RTX 3080 Ti",
+  "peak_allocated_MiB": 92.87939453125,
+  "peak_reserved_MiB": 106.0,
+  "query_trueT_read": false,
+  "query_MAE_computed": false,
+  "originalGPSpointbank_open_attempts": [],
+  "all65_rows_retained": true,
+  "canonical_batch": 64,
+  "kernel_cache_limit": 4,
+  "CPUfulloperator_intervention_proof": "verificacion_operador_cinetico_CPU_s0/resultado.json",
+  "production_scale_resourceproof_pending": true,
+  "Validation": false,
+  "Test": false,
+  "seconds": 15.60067868232727,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "artifact_sha256": "41bcbb1e1658428d8425d79a82fb11cc3c258f08f9330bcf83180e06dc5bc427",
+  "sources": {
+    "probar_operador_cinetico_GPU.py": "c18e840f8898013f3e330060e67ba687100376f813d6d075eb78ceba47a141a6",
+    "operador_red_cinetica_GPU.py": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0",
+    "operador_red_cinetica.py": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950"
+  }
+}

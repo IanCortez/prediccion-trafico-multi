@@ -1,0 +1,6 @@
+{
+  "stage": "final_console_print_after_all_results_saved",
+  "error": "json.dumps(result) cannot serialize numpyarray from pairedintervals; base.write already persisted complete validJSON.",
+  "all_three_training_arms_and_predictions_complete": true,
+  "rerun_training_required": false
+}

@@ -1,0 +1,36 @@
+{
+  "seed": 20261125,
+  "epochs": 80,
+  "batch": 256,
+  "lr": 0.001,
+  "min_lr": 1e-05,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "members": 4,
+  "global_components": 8,
+  "source_components": 64,
+  "source_features": 38,
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "fit_n": 40000,
+  "held_n": 10000,
+  "epoch_selection": "Fixedfinal80, no heldstopping or heldmetrics duringtraining.",
+  "objective": "Actualensemble-mixturemedian MAE/600 +.02 ensembled original15secondbinNLL; foldedtails60..1785.",
+  "initial": "Freshmatchedrandomneuralparameters, no parent pretrained onheldlabels.",
+  "arms": [
+    "none",
+    "geometry",
+    "observed"
+  ],
+  "practical_gate": ">=5s versus freshneuralbaseline andstoredCatBoost133.355393; >=2s versus equalcapacitygeometryproxy, all dayCIupper<0.",
+  "retention": "Allfinalweights transient until independentreplay; retainpilotweights onlyif gatepassed. Everycompleted prediction/metric/config/source alwaysretained.",
+  "Test": "SEALED",
+  "Validation": "Not accessed",
+  "resources": "OneGPU .5cap; no persistent rawtokens or extraGPSbank.",
+  "canonical_batch": 256
+}

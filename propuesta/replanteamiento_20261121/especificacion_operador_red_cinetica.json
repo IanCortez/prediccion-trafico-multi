@@ -1,0 +1,80 @@
+{
+  "status": "IMPLEMENT_NEXT_FROM_VERIFIED_SAMPLECOUNTS; no graphpredictiveMAE yet",
+  "inputs": {
+    "counts": "conteos_cineticos_muestra_Train_s0/conteos_fuentes4096.npz",
+    "proof": "conteos_cineticos_muestra_Train_s0/resultado.json",
+    "point_count": 168110,
+    "original_intervals": 164014,
+    "valid_auxiliary_intervals": 161199,
+    "sample_counts_MiB": 0.7428808212280273,
+    "rough_linear_fullprefix_counts_MiB": 175.40154296054283,
+    "budget_warning": "This extrapolation is not verification of fullsize; enforce actual350MiBgraphcounts+features cap, with verifiedmerge and shardretirement.",
+    "reference": "referencia_publica_Train_red_vial.json"
+  },
+  "source_count_semantics": {
+    "keys": "Pairkey=(context*S+source)*S+destination, context=wholeparentUTCweekfold*168+localhourOfWeek. Events=context*S+state.",
+    "source_clock": "Physical15second adjacentGPSintervals; invalidsourcepairs omitted onlyfromauxcounts, never joined across gaps or used to retimeT.",
+    "stop_context": "Terminalsourcepoint localtime=parentdeparture+originalT. Startcontext from originaldeparture.",
+    "sourceavailability": "All chosenparents arrive before1396531073. Wholeparentweekfold exclusion before ALL dictionaries, global/hour counts, normalizers, startpriors, measurement-source-support lookups and backoffs.",
+    "position_control": "Collapse kineticState//3 in selectedsourcecounts and aggregate exactintegerweights; no differenttrainingparents or clocks."
+  },
+  "kernel_definitions": {
+    "active_nodes": "Select sourcefold first; then compact nodes appearing in selectedvalidpair/start/stop counts. This avoids a fold-dependent nodecatalogue leaking excludedsourcepaths. Staticroadgeometry remains public.",
+    "global": "Pglobal=Cglobal / (rowContinuationCount+stopCount), rglobal=stopCount/same. Zerodenominator -> Qrow=r=0 (unknownkilling, NOT falseEOS).",
+    "hour": "alpha=10 fixedsourcevisits. Qh=diag(1/(Nh+alpha))*Ch +diag(alpha/(Nh+alpha))*Pglobal. rh analogous. Everyrow Qh1+rh<=1.",
+    "context_clock": "For propagationstepk use Europe/Lisbon hour-of-week at rawquerydeparture+15*k. At most30min; advance clock from knowncandidate step, never truequeryT.",
+    "context_cache": "BoundedLRU (4hourkernels per sourcefold/model) before optimizinggroupedbatches; no unbounded1008matrixcache."
+  },
+  "public_measurement": {
+    "raw_query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "coordinates": "Same(-8.62,41.16) metricprojection as existingpointbank/map.",
+    "state_centres": "For directededge e and spatialbin j of countceil(length_e/50), centre isxy_u+(j+.5)/bins_e*(xy_v-xy_u). Allvelocityclasses sharecentre.",
+    "sigma_m": 30,
+    "radius_m": 90,
+    "source_support": "KDtree/measurement nodes derive ONLY from selectedsourcefold-excluded graphnodes. No actualqueryroadsegment ID, heading, velocity or trajectory.",
+    "initial_prior": "Globalstart prior=(startGlobal+onegeometrypseudostart)/(totalStarts+1). Geometrymeasure usescellwidth and distributes mass over availablemotionclasses within thatroadcell. Localstart prior=(startHour+10*globalPrior)/(totalHourStarts+10).",
+    "initial_vector": "aO proportional to initialPrior_h * exp(-distanceToO^2/(2*30^2)) within90m; normalize if positive. Unknownorunsupportedsource -> explicitfallbackflag.",
+    "destination": "LD(s)=exp(-distanceToD^2/(2*30^2)) within90m, no normalizationrequired for endpointlikelihood. Stopdensity is rh*LD.",
+    "direction": "Integrate possible directedroadstates; never force the completed-sourceHMMfirst/last labels onto an unseenquery. Do not interpret nearest1 agreement as annotatedaccuracy."
+  },
+  "forward": {
+    "formula": "alpha_0=aO; u_n=alpha_n dot(r_hn*LD), n4..119; alpha_(n+1)=Q_hn^T alpha_n. pGraph=u/sum(u) when support>0.",
+    "numeric": "StartCPUFloat64CSR, then actualsparseGPUresourceprobe with canonical64/128batch chosen from measuredVRAM, not targetMAE. Fixed119steps and no globalbreak when anotherquery finishes.",
+    "unsupported": "Return supported=False and alloriginalrows. Productioncalibrator must substitute frozenreferencep0, never uniformfakeprediction or dropqueries.",
+    "mass_checks": "Qrow+r<=1; 0<=sum_n4..119 u_n<=1 up to numericaltolerance. Conditionalp sums1 for supportedqueries.",
+    "claims": "Exact finitehorizon marginalization under this empiricalsub-Markov model, not exactphysicaltraffic or firstarrival."
+  },
+  "required_proofs": [
+    "Independenttinygraph enumeration/densematrix oracle for durationweights including loops and terminalstop.",
+    "Wholeexcludedfold intervention on pair, startANDstop counts; rebuild nodecatalogue/globalbackoff/localoperators and probabilityoutputs, not just a trivialkeymask test.",
+    "Positioncollapse preserves integercountmass and15sclock.",
+    "Raw65 FITqueries only: reverse/singleton/partner independence, no querytrueN/roadID/velocity/path input.",
+    "BoundedCPU/GPUmemory and throughputevidence before anyfullprefixgraphbuilder or heldMAE.",
+    "Allsourceavailability and originalquery/label membership checks, fallbackretains everyrow."
+  ],
+  "calibration_next": {
+    "preliminary_design": "Same64wide2layer gate for position/kinetic, sourcefixedreferencep0; p=(1-g)*p0+g*pGraph. With pGraph=p0, output identicallyp0, so gatecapacity alone cannot invent an improvedpublicpredictor.",
+    "fit_queries": 40000,
+    "held_queries": 10000,
+    "sourceparents_prefix": 951718,
+    "parameters_to_freeze_after_interface_resourceproofs": "Seed20261203, same initialization in bothgates, fixed80epochs (12560updates) or another metadatajustifiedbudget BEFORE any graphheldmetric; no heldstopping or postfailuregrid.",
+    "gates": "Position>=5s vs p0 with dayCIupper<0; kinetic>=5s vs p0 and>=2s vs position, all dayCIupper<0. Distinguish spatial andmemory hypotheses.",
+    "no_hyperparameter_or_seed_sweep": true
+  },
+  "next_steps": [
+    "Implement theCPUcounts-to-kernel and roadmeasurement operator plus independenttinygraph/fold-intervention tests.",
+    "Apply to verified4096sourcecounts and raw65FITqueries without evaluatingMAE. Reportnormalization, supportflags andruntime.",
+    "Run a boundedGPUforwardprobe onlyafterCPUpasses; keep at mostoneheavyGPUprocess.",
+    "Onlythen freeze fullsourcecountbuilder and predictivepilotprotocol; no fullpointcache. Preserveallnegativeoutcomes, originaldata/bestmodels andTransferTraj."
+  ],
+  "Test": "SEALED",
+  "Validation": false,
+  "goal_s": 73.5,
+  "goal_met": false
+}

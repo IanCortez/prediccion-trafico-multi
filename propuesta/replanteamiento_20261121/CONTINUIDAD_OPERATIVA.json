@@ -1,9 +1,17 @@
 {
   "goal_status": "ACTIVE; verified numericalValidation minimum129.990034s. Small.168007s gain, meaningful.5sgatefailed;73.5confirmation unmet,Testsealed.",
-  "current_trial": null,
+  "current_trial": {
+    "experiment": "red_cinetica_15s_en_desarrollo",
+    "status": "FITSTATE_CLOCK_AND_RESOURCE_INSTRUMENT_NEXT",
+    "live_worker": null,
+    "Test": "SEALED",
+    "plan": "plan_red_cinetica_15s_Train.json",
+    "stage": "4096SOURCECOUNTS_CLOCK_AND_FOLDSELECTION_PASSED; CPUSPARSEOPERATOR_NEXT",
+    "operator_specification": "especificacion_operador_red_cinetica.json"
+  },
   "threshold_preservation_s": 131.06,
   "final_confirmation_goal_s": 73.5,
-  "Test": "SEALED until eligible candidate frozen",
+  "Test": "SEALED",
   "retained_best": {
     "id": "atencion_subtrayectos_s0",
     "epoch": 6,
@@ -67,14 +75,15 @@
     "protected": true
   },
   "next_after_result": [
-    "Both boundary-augmentation and orderedCDF Trainpilots terminal. No heavyjob active; verify actualCIM before nextlaunch.",
-    "Orderedsource constructor passed independent sourceinterval/weight/top64, safepruning, raw65 and wholeparentweekexclusion checks. Geometriccoverage gain persisted underoriginalbbox.",
-    "HistoricalCDF130.955613 vsbaseline133.121328 andgeometrycontrol133.210289 shows2.25s exploratorysignal, but predeclared5sgatefailed. No primarytrial or threshold reduction for this recipe.",
-    "Next: inspect existing sourceattention model to avoid repetition; design individual-source conditional transfer preserving geometry/time/boundary relationships, Train-only with freshmatched controls and no heldlabel pretrainedparent.",
-    "All completed predictions/metrics/configs including MAE>131.06 preserved; qualified43primarycheckpoints and TransferTraj protected. Bestprimary129.990034 unchanged;73.5notachieved;Testsealed."
+    "Implement especificacion_operador_red_cinetica.json onverified4096counts. Sourcekeys0.743MiB, roughfullprefix175.4MiB is not aguarantee. Need fullkernel/start-stop/globalbackoff foldintervention and tinygraph/raw65 probabilityproofs BEFORE any graphMAE.",
+    "Read plan_red_cinetica_15s_Train.json.4096sourceMM/15sclock proofpassed:168110points,98.2837% auxiliarypairsvalid, medianprojection3.58m; sourceHMMendpointdirection differs nearest1 roughlyhalf the time. Do not treat HMM as annotatedtruth or supply truequeryroadIDs.",
+    "Next implementcompact sourcecounts on thissample, publicmeasurement overpossible roadstates, exactfinitehorizon sparseforward. Tinygraph/fold-intervention/raw65/reverse/singleton/resourceproofs before populationbuilder or graphMAE.",
+    "Keep actualclock15s, originalT andallcohortrows. Sourcequalitymasks applyonlyauxiliarytransitions and mustnot join across gaps. Wholeparentweekfold excluded before all sourcecount normalizers/backoffs.",
+    "No fullpoint mapmatchingcache, graphcounts/features cap350MiB. Retainedpublicprefixlognormal reference129.6225s in referencia_publica_Train_red_vial.json; never use fullprimarybest as heldTrainpretrainedbaseline.",
+    "Student3weights intentionallyretired after exactreplay, all4outcomes and116logprobs retained. Preserve43qualifiedprimarymodels, originalbest129.990034,10TransferTraj.73.5goalunmet/Testsealed."
   ],
   "known_technical_event": "Legacy batch16 comparative benchmark saturated GPU; stopped only benchmark. Parent final inference had illegal memory access; isolated bounded recovery completed all127941 with unchanged weights. No re-training required. Do not rerun interrupted benchmark.",
-  "resource_policy": "OneGPU .25cap/CPU2 for boundedTrainpilot; sourcefeatures RAM-only, persistentpilotartifacts<150MiB.",
+  "resource_policy": "OneGPU .5cap; measured1961.16MiB withresidentallX/sourceindices/pointbank. Dynamic38Dsource tokens perbatch, cache266.24MiB, no extraGPSbank.",
   "files": [
     "politica_conservacion.json",
     "politica_recursos.json",
@@ -89,11 +98,11 @@
     "conclusion_nativo_completa.json"
   ],
   "latest_storage_snapshot": {
-    "project_bytes": 18119963311,
-    "project_GiB": 16.87553088273853,
-    "file_count": 34653,
-    "new_work_bytes": 3050049809,
-    "new_work_MiB": 2908.7541666030884,
+    "project_bytes": 18578319394,
+    "project_GiB": 17.302408250048757,
+    "file_count": 37160,
+    "new_work_bytes": 3111537889,
+    "new_work_MiB": 2967.393769264221,
     "note": "Logical file size snapshot while training is active; checkpoints and logs can change during measurement",
     "best_model_unchanged": true,
     "best_model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
@@ -152,7 +161,7 @@
     "original_data_were_not_modified": true,
     "Test_files_opened": false,
     "paths_skipped_outside_root": [],
-    "seconds": 3.631920337677002,
+    "seconds": 3.8085856437683105,
     "current_best_unchanged": true,
     "current_best_model_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd",
     "current_best_mae_s": 129.99003446901307,
@@ -1825,7 +1834,7 @@
     "gate_passed": true,
     "Validation_labels_used_in_preparation": false
   },
-  "previous_goal_turn_classification": "Progress: audited completed primary corrections and topology pilot, verified253outputs/36archives plus10TransferTraj and protected lineage.",
+  "previous_goal_turn_classification": "Progress:completed/replayed3smallNNarms, identifiedgeneralizationgap, retirednegativeweights, full951718sourceconstructor finished and streamtrainingstarted.",
   "completed_attention": {
     "id": "atencion_vial_s0",
     "epochs": 9,
@@ -3090,64 +3099,352 @@
   },
   "last_closed_timepilot": {
     "complete": true,
+    "user_instruction": "Termina esta ultima propuesta, y ahi cerramos",
+    "proposal": "Red vial con estados de posicion/movimiento y reloj original15s; mezcla probabilistica con referencia publica congelada.",
     "metrics": {
-      "baseline": {
+      "position": {
         "n": 10000,
-        "mae_s": 133.12132830774271,
-        "rmse_s": 207.87403694947727,
-        "mdae_s": 87.4259202361759
+        "mae_s": 132.6075,
+        "rmse_s": 207.62194609433752,
+        "mdae_s": 90.0
       },
-      "geometry_CDF_control": {
+      "kinetic": {
         "n": 10000,
-        "mae_s": 133.2102889006977,
-        "rmse_s": 208.02315487163767,
-        "mdae_s": 88.04771144890765
+        "mae_s": 131.985,
+        "rmse_s": 206.73929234666545,
+        "mdae_s": 90.0
       },
-      "historical_CDF": {
+      "reference": {
         "n": 10000,
-        "mae_s": 130.95561327932944,
-        "rmse_s": 204.7312065263863,
-        "mdae_s": 85.15720841493476
+        "mae_s": 129.6225,
+        "rmse_s": 204.45022010259612,
+        "mdae_s": 90.0
       }
     },
     "comparisons": {
-      "vs_baseline": {
-        "delta_mae_s": -2.165715028413262,
+      "position_vs_reference": {
+        "delta_mae_s": 2.985,
         "ci95_s": [
-          -3.1204807983084932,
-          -1.2210834304191487
+          2.0893466140095214,
+          3.955655493555431
         ],
         "days": 22,
-        "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+        "interpretation": "Exploratory: reused10000heldTrain, oneinitialization; not primaryValidation or confirmation."
       },
-      "vs_geometry_control": {
-        "delta_mae_s": -2.2546756213682455,
+      "kinetic_vs_reference": {
+        "delta_mae_s": 2.3625,
         "ci95_s": [
-          -3.2856413536275073,
-          -1.2769160197220275
+          1.4464669454737258,
+          3.3752131755018016
         ],
         "days": 22,
-        "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+        "interpretation": "Exploratory: reused10000heldTrain, oneinitialization; not primaryValidation or confirmation."
       },
-      "vs_reference": {
-        "delta_mae_s": -2.3997795134724753,
+      "kinetic_vs_position": {
+        "delta_mae_s": -0.6225,
         "ci95_s": [
-          -3.428234025711694,
-          -1.3288934055073705
+          -1.510186237167227,
+          0.24103011911326744
         ],
         "days": 22,
-        "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+        "interpretation": "Exploratory: reused10000heldTrain, oneinitialization; not primaryValidation or confirmation."
       }
     },
-    "declared5s_expansion_gate": false,
-    "observed_time_signal_vs_geometry_control_s": -2.2546756213682455,
-    "decision": "No fullprimarytrial for this CDF recipe; no K/grid/sourcecount/tree sweep and no posthoc threshold reduction.",
-    "interpretation": "Historical source-time labels improve this reusedTrainpilot by about2.25s versus geometry-derived times. This is useful signal but below the declared5s expansion requirement versus baseline/reference.",
-    "retention": "All completed metrics/predictions/config/exactsource/compactindices retained. Trainpilot130.955613 is not a qualifying fullprimaryValidation model under131.06; its weights were not persisted.",
-    "limit": "No primaryValidation/confirmation MAE gain and no claim that73.5is reached. Small repeatedlyreusedTraininstrument, one modelseed.",
-    "proposed_next": "Study information-preserving individual-source conditional distributions rather than compressedCDF summaries, first on Train with the same predeclared5s criterion. No primary trial without a new positive gate.",
+    "critical_findings": [
+      "Ambas mezclas empeoran la referencia en las mismas10000consultas: posicion+2.985s(IC95%2.089..3.956) y movimiento+2.3625s(IC95%1.446..3.375).",
+      "Movimiento frente a posicion cambia el MAE-.6225s, IC95%[-1.510,.241]; no acredita el beneficio de2s registrado.",
+      "La red aislada obtiene280.248s(posicion) y268.386s(movimiento), con sesgos medios de sobreestimacion216.987s y203.136s.",
+      "Hay soporte de red en9924de10000consultas, pero esa cobertura no se traduce en precision. Las76sin soporte conservan exactamente la referencia.",
+      "Las compuertas asignan pesos medios de2.285% y2.075% a las redes y medianas practicamente nulas; aun asi empeoran. Esto indica que la mezcla rechaza casi siempre un componente poco predictivo.",
+      "Los calculos probabilisticos y la exclusion de datos pasan sus pruebas, mientras la hipotesis predictiva falla. No se confunde correccion del codigo con validez empirica de la propuesta.",
+      "Esta arquitectura no queda respaldada como mejora final para la tesis. Se conserva el mejor modelo primario anterior y se documenta el resultado negativo. No se abren nuevas tandas por indicacion del usuario."
+    ],
+    "hypothesis_position_passed": false,
+    "hypothesis_kinetic_passed": false,
+    "selected_for_primary": null,
+    "primary_result": null,
+    "independent_complete_raw5_replay": {
+      "passed": true,
+      "scope": "Independentcompleteall10000raw5graph and bothgate replay; no originalpointbank.",
+      "arms": {
+        "position": {
+          "passed": true,
+          "all10000_cached_logprob_andgates_Float64_exact": true,
+          "all10000_quantiles_exact": true,
+          "raw65public206_exact": true,
+          "gate_reverse17_singleton_exact": true,
+          "all10000_raw5_graph_support_exact": true,
+          "all10000_raw5_graph_probability_FP32_exact": true,
+          "all10000_raw5_graph_max_probability_error": 0.0,
+          "all10000_raw5_endtoend_quantiles_exact": true,
+          "endtoend_max_probability_error": 2.7755575615628914e-17,
+          "sparse_GPU_CPU_first3_andraw_reverse17_singleton_within1e_10": true,
+          "fixed12560updates_verified": true,
+          "computed_metrics": {
+            "n": 10000,
+            "mae_s": 132.6075,
+            "rmse_s": 207.62194609433752,
+            "mdae_s": 90.0
+          },
+          "seconds": 135.92553091049194
+        },
+        "kinetic": {
+          "passed": true,
+          "all10000_cached_logprob_andgates_Float64_exact": true,
+          "all10000_quantiles_exact": true,
+          "raw65public206_exact": true,
+          "gate_reverse17_singleton_exact": true,
+          "all10000_raw5_graph_support_exact": true,
+          "all10000_raw5_graph_probability_FP32_exact": true,
+          "all10000_raw5_graph_max_probability_error": 0.0,
+          "all10000_raw5_endtoend_quantiles_exact": true,
+          "endtoend_max_probability_error": 2.7755575615628914e-17,
+          "sparse_GPU_CPU_first3_andraw_reverse17_singleton_within1e_10": true,
+          "fixed12560updates_verified": true,
+          "computed_metrics": {
+            "n": 10000,
+            "mae_s": 131.985,
+            "rmse_s": 206.73929234666545,
+            "mdae_s": 90.0
+          },
+          "seconds": 216.39513158798218
+        }
+      },
+      "all_comparisons_andday_bootstrap_recomputed": true,
+      "reference_all10000_exact": true,
+      "original_pointbank_open_attempts": [],
+      "queryfields": [
+        "o_lon",
+        "o_lat",
+        "d_lon",
+        "d_lat",
+        "timestamp"
+      ],
+      "query_N_T_actualroadIDs_or_path_supplied": false,
+      "actual_data_files_accessed": [
+        "propuesta\\datos\\contexto_rejilla25m.npz",
+        "propuesta\\datos\\distancias_2014\\D.npy",
+        "propuesta\\datos\\distancias_2014_free\\D.npy",
+        "propuesta\\datos\\grafo_compacto_2014.npz",
+        "propuesta\\datos\\mapa_dirigido.npz",
+        "propuesta\\datos\\mapa_dirigido_2014.npz",
+        "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+        "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+        "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+        "propuesta\\datos\\train_x.npz"
+      ],
+      "seconds": 359.70473313331604,
+      "source_sha256": "714e78e500d0f98e0acc5fb97c4c3c318d073b89e1435b9ce1d91d68e5e1092b",
+      "Validation": false,
+      "Test": false
+    },
+    "primary_best_s": 129.99003446901307,
+    "confirmation_target_s": 73.5,
+    "confirmation_target_achieved": false,
+    "retained_results_regardless131_06": true,
+    "retained_inference_andreplay_dependencies": [
+      {
+        "file": "propuesta\\replanteamiento_20261121\\conteos_cineticos_prefijo_Train_s0\\conteos_fuentes.npz",
+        "bytes": 98620093,
+        "sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477"
+      },
+      {
+        "file": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\consultas_predicciones.npz",
+        "bytes": 107107188,
+        "sha256": "4693c28b65f9ff1b6f979a8ceda2c7fb943da8b4af7ac6ecf0cb2042d488bac0"
+      },
+      {
+        "file": "propuesta\\replanteamiento_20261121\\control_familia_puente_2d_Train_s0\\epoca_4.pt",
+        "bytes": 13643240,
+        "sha256": "3a427cf587fc2bf10bdf9d74646117f91a31f4aa5d3a542b83af97d9b9c8f770"
+      },
+      {
+        "file": "propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\position\\epoca_80.pt",
+        "bytes": 77516,
+        "sha256": "61a8a406442f1e273216982fd557ebb943c6713e49b720f21952f3d1688076f2"
+      },
+      {
+        "file": "propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\kinetic\\epoca_80.pt",
+        "bytes": 77516,
+        "sha256": "002cedc0648e24b0b80cfb6e53bf81fa7e6925e007f95e1e09d0abab7cc89726"
+      }
+    ],
+    "temporary_source_shards_retired": 135958982,
+    "temporary_prediction_shards_retired": {
+      "merged_sha256": "4693c28b65f9ff1b6f979a8ceda2c7fb943da8b4af7ac6ecf0cb2042d488bac0",
+      "files": [
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold0.npz",
+          "sha256": "904bacabb4eb8cf9a15bf75fae0500e02af0a4674cedd1a7337de520dfd661e9",
+          "bytes": 3420230
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold1.npz",
+          "sha256": "6680fc0bd2572b0476b92de235f433c5ed7962b9dd8c70b4b700cd731bdaff1c",
+          "bytes": 3343697
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold2.npz",
+          "sha256": "ed8e4895c6aa6b544f4d459ee2afddf8e7148305d819b25f7b908b22d1457c1a",
+          "bytes": 3336159
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold3.npz",
+          "sha256": "bed2d78f3572b5c5f4b8b66f0697cc4dad78928d426fa7357c441a74b5135865",
+          "bytes": 3455266
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold4.npz",
+          "sha256": "8dd91ffada78feaf782a26acaffdfab577b1f45f43c6220c22ee72f599b323a5",
+          "bytes": 3259666
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold5.npz",
+          "sha256": "46bc4848af08e8eb58156e41046490274b62baf6de8367b08ef62e2b81faf10e",
+          "bytes": 4217036
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold0.npz",
+          "sha256": "b36f1574a201093169e4bb66adb96815bb475c1365504e84d2dd478a7c1f4d3d",
+          "bytes": 3405780
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold1.npz",
+          "sha256": "1cb5dabe5906206d31f1e902ec57f1c326a2cad3aa224c1224e28fab96c7ba68",
+          "bytes": 3329204
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold2.npz",
+          "sha256": "d8d94247de4778ebe1598b208fcd74e013e82f0877291e8b15a30011365cb83c",
+          "bytes": 3321788
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold3.npz",
+          "sha256": "0f106bd4d6c0d057b28faa478bcc15110176fcb602c25c28eebf65322b3ebaf7",
+          "bytes": 3440338
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold4.npz",
+          "sha256": "f7759f1b3979353139fe13eaf754b565bc9c3f0494d625eb1cbfb7a1a6e05b39",
+          "bytes": 3246104
+        },
+        {
+          "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold5.npz",
+          "sha256": "874054f2adca56f49b33f8b9ae59821918e1c2ece516e90f90fa4348c5be61e2",
+          "bytes": 4201006
+        }
+      ],
+      "reason": "Exactmergedprobabilityarchive verified; temporaryfoldcopies only."
+    },
+    "original_CSV_sha256": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d",
+    "original_data_unchanged": true,
+    "TransferTraj_archives_unchanged": 10,
+    "project_GiB": 17.51510731410235,
+    "sourcecounts_MiB": 94.0514497756958,
+    "predictionfeatures_MiB": 102.1453742980957,
+    "limitations": [
+      "RepeatedlyreusedheldTrain and oneinitialization.",
+      "Sourcegraph is crossfit for fitqueries; frozenpublicreference was fitted on951718including40kfitqueries, potentially biasing fittedgate towardreference. Heldquerylabels enter neitherbaseline nor sourcekernel.",
+      "Kineticstatekernel is an approximateempiricalmodel, not an exactphysicaltrafficsimulator.",
+      "La transicion depende de calle, posicion, clase de movimiento y hora, pero no aprende una politica especifica de destino; condicionar la posicion final no recupera todas las decisiones de ruta.",
+      "La coincidencia de mapa de las fuentes no equivale a una anotacion humana de la calle correcta.",
+      "La exclusion semanal de fuentes y las pruebas numericas acreditan integridad del procedimiento; no acreditan una mejora predictiva.",
+      "TransferTraj publica73.5s en otra cohorte procesada de Porto(323481viajes), que no esta disponible aqui. Esa cifra es una meta externa y no una replica comparable directa."
+    ],
+    "postfixed_rawgraph_diagnostic": {
+      "complete": true,
+      "scope": "Postfixedresult familydiagnostic. No refit, selectionchange, extraqueries or labelchanges.",
+      "metrics": {
+        "position_graph": {
+          "n": 10000,
+          "mae_s": 280.248,
+          "rmse_s": 334.63571237989527,
+          "mdae_s": 255.0
+        },
+        "kinetic_graph": {
+          "n": 10000,
+          "mae_s": 268.386,
+          "rmse_s": 321.0656007734245,
+          "mdae_s": 247.5
+        }
+      },
+      "diagnostics": {
+        "position": {
+          "rawgraph_with_reference_fallback_metrics": {
+            "n": 10000,
+            "mae_s": 280.248,
+            "rmse_s": 334.63571237989527,
+            "mdae_s": 255.0
+          },
+          "gated_metrics": {
+            "n": 10000,
+            "mae_s": 132.6075,
+            "rmse_s": 207.62194609433752,
+            "mdae_s": 90.0
+          },
+          "all10000_rows_preserved": true,
+          "unsupported_fallback_count": 76,
+          "graph_prediction_bias_s": 216.987,
+          "gate_weight_quantiles": [
+            7.736268844275966e-191,
+            2.1764440347273882e-72,
+            3.4962110257085757e-22,
+            6.172893902894019e-05,
+            0.9999999999942213
+          ],
+          "gate_weight_mean": 0.022846966592393263,
+          "source_support_mass_quantiles": [
+            0.0,
+            1.63618713397847e-05,
+            0.0002784913534476443,
+            0.0035570049442433245,
+            0.187364011680354
+          ],
+          "interpretation": "Postfixedresult descriptiveablation only; not a newselectioncriterion or primarycohort."
+        },
+        "kinetic": {
+          "rawgraph_with_reference_fallback_metrics": {
+            "n": 10000,
+            "mae_s": 268.386,
+            "rmse_s": 321.0656007734245,
+            "mdae_s": 247.5
+          },
+          "gated_metrics": {
+            "n": 10000,
+            "mae_s": 131.985,
+            "rmse_s": 206.73929234666545,
+            "mdae_s": 90.0
+          },
+          "all10000_rows_preserved": true,
+          "unsupported_fallback_count": 76,
+          "graph_prediction_bias_s": 203.136,
+          "gate_weight_quantiles": [
+            1.2230846298479619e-191,
+            7.630053891180565e-70,
+            9.511859128902593e-23,
+            7.336671246533085e-06,
+            1.0
+          ],
+          "gate_weight_mean": 0.020750504279063525,
+          "source_support_mass_quantiles": [
+            0.0,
+            1.867522939939991e-05,
+            0.00028698797534847597,
+            0.003452974041514698,
+            0.16854861375908842
+          ],
+          "interpretation": "Postfixedresult descriptiveablation only; not a newselectioncriterion or primarycohort."
+        }
+      },
+      "predictions_sha256": "f248426c3e4d20b514549055e1ea909d04dba41e4674ce1e8ab14a7fe70fe4a8",
+      "primary_hypotheses_unchanged": true,
+      "above131_06_results_preserved": true,
+      "Validation": false,
+      "Test": false,
+      "source_sha256": "4c5ddce0367fb9052092735b2773762b8b5c8c4ecc781db4450bef4edbd8e83a"
+    },
     "Test": "SEALED",
-    "goal": "ACTIVE"
+    "further_experiments": "CLOSED_BY_EXPLICIT_USER_REQUEST_AFTER_THIS_PROPOSAL"
   },
   "completed_ordered_source_constructor": {
     "passed": true,
@@ -3186,5 +3483,116 @@
     ],
     "seconds": 55.62713289260864
   },
-  "last_closed_timepilot_id": "piloto_cdf_ordenada_Train_s0"
+  "last_closed_timepilot_id": "red_cinetica_Train_s0",
+  "next_architecture_design": "plan_red_cinetica_15s_Train.json",
+  "current_individual_kernel_preflight": {
+    "passed": true,
+    "resident_all50000_inputs": true,
+    "train_batch": 256,
+    "finite_two_step_gradients": true,
+    "query_backbone_gradient_nonzero": true,
+    "inference_canonical256_order_singleton_exact": true,
+    "peak_allocated_MiB": 819.1318359375,
+    "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc"
+  },
+  "numeric_reference_verification": {
+    "file": "verificacion_cuantiles_balanceados_s0/resultado.json",
+    "source_sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+    "semantics": "Stable reference recovers symmetric deepgap median300s; active naiveFloat32 gave137.83s. Location/scale derivatives logdensity normalized; only extreme logweight derivative bounded1e6sec."
+  },
+  "latest_storage_by_top_folder": "inventario_espacio_por_carpeta.json",
+  "full_source_constructor": {
+    "fit_n": 951718,
+    "held_n": 10000,
+    "MiB": 266.2386417388916,
+    "sha256": "22c1eb78475ae1ac5ee95dd878f88f1cba4ada68313363bfaa1186ce72eb9c85",
+    "heldreferences_identical": true
+  },
+  "current_all_data_preflight": {
+    "passed": true,
+    "fit_n": 951718,
+    "resident_all_publicX_and_sourceindices": true,
+    "no_full_rawtokens": true,
+    "peak_allocated_MiB": 1961.16162109375,
+    "two_step_gradients_finite": true,
+    "query_backbone_nonzero": true,
+    "canonical256_reverse_singleton_exact": true,
+    "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc"
+  },
+  "current_alternative_review": "evaluacion_previa_marginalizacion_caminos.json",
+  "all_completed_results_including_above131_06": "Verified in conservacion_pilotos_recientes.json and registro_consolidado_auditado.json",
+  "prepared_closure_executed_once": "concluir_mezcla_escala_Train.py; DO NOT RERUN: negativeweights and266MiBindexcache intentionallyretired after independentreplay.",
+  "current_2d_preflight": {
+    "passed": true,
+    "fit_n": 951718,
+    "resident_all_data": true,
+    "initial_parameters_sha256": "d33f5b25225e020ac9c8701fdfe24898770dd211c5d248154c3d22c6862d060b",
+    "finite_two_step_gradients": true,
+    "query_gradient_norms": [
+      0.0,
+      16.247411727905273
+    ],
+    "covariance_correlation_gradients_nonzero": true,
+    "fitcoordinate_CPU_GPU_maxerror": 0.0,
+    "heldGPS_guard_passed": true,
+    "raw65public206_exact": true,
+    "canonical256_reverse17_singleton_exact": true,
+    "peak_allocated_MiB": 1461.95458984375,
+    "new_population_cache_written": false,
+    "weights_saved": false,
+    "Validation": false,
+    "Test": false,
+    "actual_data_files_accessed": [
+      "propuesta\\datos\\contexto_rejilla25m.npz",
+      "propuesta\\datos\\distancias_2014\\D.npy",
+      "propuesta\\datos\\distancias_2014_free\\D.npy",
+      "propuesta\\datos\\grafo_compacto_2014.npz",
+      "propuesta\\datos\\mapa_dirigido.npz",
+      "propuesta\\datos\\mapa_dirigido_2014.npz",
+      "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+      "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+      "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+      "propuesta\\datos\\train_contexto.npz",
+      "propuesta\\datos\\train_gps_mapmatched.npz",
+      "propuesta\\datos\\train_rutas.npz",
+      "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+      "propuesta\\datos\\train_x.npz",
+      "propuesta\\datos\\train_y.npy"
+    ],
+    "seconds": 22.457890033721924,
+    "sources": {
+      "preflight_puente_2d_GPU.py": "4a4a7e2fd84209c47932c045dd040d655f5fa8ab987506462eb1468048a2186f",
+      "modelo_puente_temporal_2d.py": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227",
+      "datos_puente_temporal_2d.py": "ec7b3023577908aa82876efa5e1ec649e6812671f2f52490189d713ac48bdf1b",
+      "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+      "coordenadas_trayecto_2d.py": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+    }
+  },
+  "secondary_head_control": {
+    "status": "COMPLETE_NEGATIVE_EXACTREPLAYED",
+    "id": "control_familia_puente_2d_Train_s0",
+    "metrics": {
+      "n": 10000,
+      "mae_s": 129.6225,
+      "rmse_s": 204.45022010259612,
+      "mdae_s": 90.0
+    },
+    "reference": "referencia_publica_Train_red_vial.json"
+  },
+  "UNITE_source_audit": "auditoria_inferencia_UNITE_CPU_s0/resultado.json",
+  "latest_roadstate_proof": "verificacion_estados_cineticos_Train_s0/resultado.json",
+  "latest_kinetic_counts_proof": "conteos_cineticos_muestra_Train_s0/resultado.json",
+  "user_stop_after_current_proposal": {
+    "user_instruction": "Termina esta ultima propuesta, y ahi cerramos",
+    "last_proposal": "Red vial con reloj original de15s y estados de movimiento, frente a control de solo posicion.",
+    "scope": "Finish sourcecounts, matchedpredictionexperiment, independentreplay, retention and finalcriticalreport. No newfamily afterward.",
+    "target_s": 73.5,
+    "results_above131_06": "Preserve metrics, predictions, config, source and conclusions regardlessMAE.",
+    "Test": "SEALED",
+    "status": "SOURCEBUILDER_STARTING"
+  },
+  "latest_sparse_CPU_proof": "prueba_operador_cinetico_Train_s0/resultado.json",
+  "latest_sparse_GPU_proof": "prueba_operador_cinetico_GPU_s0/resultado.json",
+  "next": "NONE. Userexplicitlyrequestedfinishthisproposal thenclose. Do notstartanotherfamily.",
+  "status": "CLOSED_AFTER_FINALPROPOSAL_BY_USER"
 }

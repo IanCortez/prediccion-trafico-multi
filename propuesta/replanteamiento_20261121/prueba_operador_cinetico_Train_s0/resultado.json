@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "scope": "Raw65FITprobability/interface/resourceprobe only; no queryT or MAE.",
+  "results": {
+    "position": {
+      "raw65_queries": 65,
+      "supported_queries": 57,
+      "unsupported_rows_retained": 8,
+      "normalization_maxerror": 4.440892098500626e-16,
+      "max_support_mass": 0.013378661666042159,
+      "context_cache_peak": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4
+      },
+      "compact_nodes_byfold": {
+        "0": 18705,
+        "1": 18954,
+        "2": 18826,
+        "3": 19013,
+        "4": 18890
+      },
+      "global_nonzero_transitions_byfold": {
+        "0": 59957,
+        "1": 61215,
+        "2": 60643,
+        "3": 61043,
+        "4": 61021
+      },
+      "seconds": 1.325906753540039,
+      "reverse17_singleton_exact": true
+    },
+    "kinetic": {
+      "raw65_queries": 65,
+      "supported_queries": 57,
+      "unsupported_rows_retained": 8,
+      "normalization_maxerror": 3.3306690738754696e-16,
+      "max_support_mass": 0.011996116632324992,
+      "context_cache_peak": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4
+      },
+      "compact_nodes_byfold": {
+        "0": 28879,
+        "1": 29443,
+        "2": 29255,
+        "3": 29452,
+        "4": 29366
+      },
+      "global_nonzero_transitions_byfold": {
+        "0": 75631,
+        "1": 77326,
+        "2": 76517,
+        "3": 77128,
+        "4": 77072
+      },
+      "seconds": 3.73887300491333,
+      "reverse17_singleton_exact": true
+    }
+  },
+  "originalGPSpointbank_open_attempts": [],
+  "queryfields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "sourcefold_removed_before_catalogue_backoff_andmeasurement": true,
+  "all65_rows_retained": true,
+  "unsupported_production_rule": "Must substitute frozenreferencep0 before scoring; zeros here are explicitunsupportedflags, never a modelprediction.",
+  "peak_working_set_MiB": 217.96875,
+  "CPU_only": true,
+  "GPU_resourceprobe_pending": true,
+  "no_new_populationbank": true,
+  "data_sha256": "e88373da31d6d6f6f50644f02e383e6ccf04e242e293f0fb7e011dbaa4b4bc82",
+  "sourcecounts_sha256": "5cac9ed5c3fae384121a80cae478be65d59103bf547517eff83d43d4c434b637",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "Validation": false,
+  "Test": false,
+  "query_trueT_read": false,
+  "query_MAE_computed": false,
+  "seconds": 6.753017425537109,
+  "sources": {
+    "probar_operador_cinetico_Train.py": "c2efe8a559ecdff73855f955b0a48efd73b3adf0ec27eaeee3c565c6757e21d3",
+    "operador_red_cinetica.py": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950",
+    "conteos_red_cinetica.py": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+  }
+}

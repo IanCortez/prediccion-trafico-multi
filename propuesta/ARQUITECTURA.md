@@ -1,3 +1,7 @@
+> **Cierre del 23 de noviembre:** la última propuesta terminó y la investigación quedó cerrada.
+> Mejor MAE primario: 129,990034 s; meta de 73,5 s no alcanzada; Test sin evaluar.
+> Ver [cierre final](../revision_tesis/CIERRE_FINAL.md). Los planes y estados siguientes son históricos.
+
 # Arquitectura y estado de la propuesta
 
 Actualizado el 22 de noviembre de 2026. El estado de ejecución se consulta en `replanteamiento_20261121/CONTINUIDAD_OPERATIVA.json`; los protocolos y resultados de cada ensayo son la evidencia primaria.
@@ -137,3 +141,93 @@ El aumento con ajuste de dominio terminó sin mejora: 133,785328 s frente a 133,
 ## Señal temporal del nuevo buscador
 
 El instrumento temporal terminó en 130,955613 s en 10.000 consultas Train, frente a 133,121328 s sin memoria y 133,210289 s con el control geométrico de igual dimensión. La información de tiempos históricos aporta una diferencia exploratoria favorable de 2,25 s frente al control. No alcanza el criterio de 5 s para ampliar esta representación comprimida y no se evalúa en Validation primaria. El siguiente diseño debe conservar la relación individual entre geometría, contexto de extremos y tiempo de cada fuente, en lugar de perderla al resumir todo en distribuciones. Ese diseño requiere otra prueba Train con el mismo criterio exigente; no se reduce el umbral después del resultado.
+
+
+<!-- diseno_mezcla_individual_mediana_Train -->
+## Siguiente arquitectura: mezcla individual optimizada por mediana
+
+Diseño todavía sin entrenar. La atención existente reúne 64 fuentes en ocho vectores antes de formar sus distribuciones; el resumen CDF separa tiempos por tipo de extremo, pero pierde la relación de cada tiempo con su geometría. La nueva hipótesis conserva una distribución condicionada por cada una de las 64 fuentes y ocho componentes generales de respaldo. Cuatro miembros combinan sus distribuciones antes de calcular la mediana. No se promedian medianas.
+
+El objetivo combina MAE de la mediana con una regularización de probabilidad sobre el tiempo original. La mediana se calcula por bisección y su gradiente implícito debe contrastarse por diferencias finitas antes del entrenamiento. Los tokens usan geometría y fracciones por distancia de arco. Esto permite un control de igual arquitectura con tiempos derivados de geometría: las fracciones de índices anteriores podían codificar el número de muestras en sus denominadores. Insertar muestras estacionarias en una fuente debe cambiar solo el tiempo observado, manteniendo invariante ese control.
+
+Se fija un piloto Train desde cero de 80 épocas, con los mismos 40.000 y 10.000 viajes, sin un padre neuronal que haya visto las etiquetas reservadas. Conserva el criterio de mejora de 5 s frente a los controles sin fuentes y 2 s frente al control geométrico. No hay autorización metodológica para escalar este diseño por la sola cobertura geométrica. El protocolo completo y las pruebas obligatorias están en replanteamiento_20261121/plan_mezcla_individual_mediana_Train.json.
+
+
+<!-- ejecucion_mezcla_individual_Train -->
+## Mezcla individual: implementación y controles activos
+
+La implementación conserva 64 componentes históricos y ocho generales por cada uno de cuatro miembros. Cada fuente usa 34 variables por distancia de arco y cuatro variables de compatibilidad con dos rutas públicas. El entrenamiento calcula la mediana de la mezcla conjunta de los cuatro miembros, coincidiendo con la regla de consulta, y añade 0,02 de regularización mediante probabilidad del tiempo original. No se promedian medianas ni se utiliza un padre neuronal que haya visto la reserva Train.
+
+Las diferencias finitas verificaron el gradiente, las probabilidades de los intervalos sumaron uno y añadir cinco puntos GPS estacionarios solo cambió las dos variables de tiempo observado. El control geométrico completo permaneció idéntico. También se comprobó el marco geométrico al rotar y escalar una trayectoria sintética. La prueba con todos los datos residentes y dos pasos reales de gradiente alcanzó 819,13 MiB en GPU, por debajo del límite fijado.
+
+Una prueba adicional detectó pérdida de precisión de la mediana al separar mucho dos modos estrechos. Se implementó por separado una referencia que compara colas en escala logarítmica y doble precisión; recuperó la mediana analítica de 300 s donde la evaluación directa en float32 devolvía 137,83 s. Sus derivadas de localización y escala también coincidieron con valores analíticos. El gradiente extremo de los pesos se limita explícitamente por estabilidad. Este cálculo no modifica el entrenamiento activo; se evaluarán sus mismos pesos congelados con ambas reglas y se conservarán ambos resultados. La base matemática de la diferenciación implícita es Figurnov et al., NeurIPS 2018: https://proceedings.neurips.cc/paper_files/paper/2018/file/92c8c96e4c37100777c7190b76d28233-Paper.pdf. No se presenta ese cálculo como una contribución nueva.
+
+Se mantienen 80 épocas fijas para las tres versiones. Los primeros controles revelan sobreajuste: sin fuentes se obtuvo 150,53 s y con tiempos geométricos 148,30 s en los mismos 10.000 viajes Train reservados, aunque el error de ajuste fue mucho menor. Está definido un ensayo posterior condicionado a ese diagnóstico: 951.718 viajes existentes anteriores al corte, cuatro épocas completas y un número de actualizaciones comparable, con la misma reserva y sin ampliar las variables de consulta. Solo se activará después del cierre y reproducción independiente del ensayo actual.
+
+
+<!-- resultado_mezcla_individual_Train_s0 -->
+## Mezcla individual: piloto de 40.000 viajes cerrado
+
+Tras 80 épocas fijas, los MAE de la reserva Train fueron 150,527837 s sin fuentes, 148,302471 s con el control geométrico y 145,292730 s con tiempos observados. La fuente temporal mejoró 5,24 s frente a la red sin fuentes y 3,01 s frente al control geométrico, pero empeoró 11,94 s frente a la referencia de árboles de 133,355393 s. No cumple el criterio de expansión.
+
+La reproducción independiente coincidió en todos los cuantiles de los 10.000 viajes y en 65 consultas crudas. La mediana estable alteró el MAE menos de 0,000004 s; el problema numérico extremo no explica este fallo predictivo. Las grandes diferencias frente al error de ajuste son compatibles con sobreajuste y cambio temporal. Se conservaron las métricas y predicciones de ambas evaluaciones, las configuraciones, fuentes e historias; se retiraron solo los tres pesos transitorios descartados después de reproducirlos.
+
+Se activa la comparación previamente definida con 951.718 viajes anteriores al mismo corte y cuatro épocas completas, aproximadamente el mismo presupuesto de actualizaciones. Mantiene los mismos 10.000 viajes de reserva, filtros y tiempos originales, y no modifica los campos de consulta. Test y la validación primaria siguen cerrados para esta familia.
+
+
+<!-- mezcla_individual_escala_Train_activa -->
+## Comparación ampliada: 951.718 viajes de ajuste
+
+La preparación de fuentes terminó y verificó las referencias de los 961.718 casos: 951.718 de ajuste y los mismos 10.000 reservados. Todos los padres fuente llegan antes del corte; los padres del grupo semanal de cada consulta de ajuste se excluyen antes de construir el árbol. Se comprobaron ausencia de fuentes propias, límites geográficos y tiempo del intervalo. Las referencias de los 10.000 casos reservados coinciden exactamente con las del piloto anterior. El archivo comprimido ocupa 266,24 MiB.
+
+El controlador completo entrena cuatro épocas por versión, 14.872 actualizaciones, con descenso cosenoidal por actualización. Conserva la misma arquitectura, semilla e inicialización neuronal del piloto pequeño. Cambian la cantidad de datos disponibles y el cálculo numérico estable previamente verificado. Las tres versiones nuevas comparten estos cambios y todos sus datos de ajuste; sus diferencias permiten estudiar el aporte de las fuentes históricas.
+
+Las 38 variables de cada fuente se generan en cada lote desde el banco de puntos y la distancia de arco existentes. No se guardan tensores de fuentes para toda la población. Las estadísticas públicas y anclajes se ajustan solo con los 951.718 viajes; las estadísticas de fuentes usan 32.768 consultas de ajuste seleccionadas con semilla fija. La comprobación real de gradientes y memoria pasó con 1.961,16 MiB; 65 consultas crudas reprodujeron exactamente las variables públicas y los tokens. Invertir el orden y consultar un caso individual mantuvo los resultados.
+
+No se consulta el error reservado hasta terminar las cuatro épocas de cada versión. Se conservan los criterios de mejora de 5 s frente al control sin fuentes y la referencia, y 2 s frente al control geométrico. Esta sigue siendo una reserva Train reutilizada, con carácter exploratorio. El mejor MAE primario continúa en 129,990034 s y Test permanece cerrado.
+
+
+<!-- resultado_mezcla_escala_Train_s0 -->
+## Mezcla individual: comparacion con todo Train previo al corte
+
+Con 951.718 viajes de ajuste y las mismas 10.000 consultas cronologicas de reserva, tras cuatro epocas completas fijas, los MAE fueron: none 130.029069 s, geometry 127.475221 s, observed 126.434575 s. El criterio temporal predeclarado no se cumplio.
+
+Se reprodujeron independientemente los cuantiles de los 10.000 viajes de las tres versiones y 65 consultas de cinco campos, incluyendo orden inverso y consultas individuales. Se conservan todas las predicciones, metricas, configuraciones y fuentes, tambien cuando empeoran 131,06 s. Tras la reproduccion se retiraron solo los tres pesos transitorios y el indice de fuentes especifico de este piloto; su constructor y manifiesto permiten reconstruirlo.
+
+Estas cifras corresponden a Train reservado, no a la validacion primaria de 127.941 viajes. El mejor MAE primario verificado sigue en 129,990034 s; el objetivo de confirmacion de 73,5 s sigue pendiente y Test cerrado.
+
+
+<!-- puente_temporal_2d_Train_s0 -->
+## Alternativa evaluada: puente temporal de movimiento bidimensional
+
+La consulta conserva únicamente origen, destino y hora de partida, transformados en las mismas 206 variables públicas. Cuatro codificadores con tres bloques residuales producen 32 estilos latentes de movimiento. Cada estilo predice la velocidad inicial y de crucero, su correlación temporal y una matriz de escala bidimensional positiva. Una escala Student compartida limita la influencia de una trayectoria anómala completa; no identifica por separado el error de cada observación GPS.
+
+Durante el ajuste, los puntos GPS originales se expresan en coordenadas longitudinales y laterales respecto al eje origen-destino. Cada incremento conserva sus 15 segundos. Las coordenadas admiten retrocesos y giros, y evitan confundir el desacuerdo con una ruta pública aproximada con una espera real. Estos puntos y el número verdadero de muestras son objetivos auxiliares exclusivos de Train. La función de predicción recibe solo las variables públicas.
+
+El modelo calcula analíticamente la densidad del punto final para cada duración de 60 a 1.785 segundos, integra los 32 estilos y normaliza las 116 posibilidades originales. La mediana de esa distribución minimiza el error absoluto poblacional si la distribución condicional está bien estimada. El modelo admite visitas anteriores al destino y movimiento firmado: no equivale a una primera llegada ni a un simulador restringido a las carreteras.
+
+La comparación principal tiene tres versiones: sin supervisión auxiliar, con movimiento lineal artificial que conserva el tiempo original y con movimiento observado. Todas usan la misma inicialización, 951.718 consultas anteriores al corte, cuatro épocas completas y 14.872 actualizaciones por versión. La reserva cronológica reutilizada sigue en 10.000 consultas Train. Se fijaron antes de evaluarla mejoras mínimas de 5 s frente al control sin supervisión y la referencia de árboles, y de 2 s frente al control lineal, con intervalos exploratorios por día que excluyan cero.
+
+También se registró antes del primer resultado reservado un control de familia: una mezcla lognormal con exactamente los mismos codificadores iniciales, datos, orden, optimizador y regla de puntuación probabilística. Esta comparación distinguirá el efecto de la cabeza analítica del efecto de los objetivos auxiliares. Su criterio independiente exige 5 s de mejora frente al control lognormal y la referencia neuronal pública anterior; no modifica el criterio principal.
+
+Las verificaciones independientes de densidad, condicionamiento y gradientes pasaron. La comprobación con todos los datos residentes usó 1.462 MiB de GPU, coincidió con las coordenadas calculadas en CPU y verificó 65 consultas públicas, orden inverso y consultas individuales. Se reutiliza el banco de puntos existente, sin crear otro banco GPS ni una caché de trayectorias para toda la población. Test y la validación primaria permanecen cerrados para esta familia. Todavía no hay un nuevo resultado de confirmación; el mejor MAE primario sigue en 129,990034 s.
+
+
+<!-- resultado_puente_temporal_2d_Train_s0 -->
+## Puente temporal bidimensional: comparación cerrada
+
+En las mismas 10.000 consultas cronológicas Train, tras cuatro épocas sobre 951.718 viajes anteriores al corte, los MAE fueron 130,872000 s sin objetivos auxiliares, 129,616500 s con movimiento lineal y 130,152000 s con movimiento observado. El control lognormal con la misma inicialización de codificadores y regla probabilística obtuvo 129,622500 s. Ninguna de las dos hipótesis predeclaradas cumplió su criterio.
+
+Se reprodujeron exactamente las probabilidades y los cuantiles de los cuatro modelos en los 10.000 viajes, además de 65 consultas públicas por reproducción, orden inverso y consultas individuales. No se necesitó el banco GPS original para inferir. Todas las métricas, predicciones, probabilidades, configuraciones y fuentes quedan conservadas. Se retiraron únicamente los tres pesos Student descartados; el control público queda como referencia de Train sin exposición a los viajes reservados.
+
+La correlación de movimiento observada en ajuste no produjo por sí misma una ganancia útil en duración OD. La siguiente alternativa incorporará explícitamente estados de la red vial y espera, manteniendo el reloj original de 15 s y comprobándolo antes de construir datos grandes. El mejor resultado primario sigue en 129,990034 s; no se ha demostrado el objetivo de confirmación de 73,5 s. Test permanece cerrado.
+
+
+<!-- propuesta_red_cinetica_15s -->
+## Siguiente arquitectura: red cinética con reloj de quince segundos
+
+La nueva hipótesis incorpora la conectividad de calles y estados de movimiento o espera. Cada transición corresponde a dos observaciones GPS originalmente separadas por quince segundos; no al número de calles atravesadas. Los puntos históricos de ajuste se ubican sobre calles dirigidas y celdas de hasta 50 m. La clase de movimiento se aprende de esos viajes completados y se integra como variable desconocida para la consulta nueva.
+
+La consulta sigue teniendo solo origen, destino y hora. El modelo integra posibles posiciones y direcciones viales compatibles con ambos extremos, suma probabilidades sobre todas las rutas de hasta 119 intervalos y produce una distribución de las mismas 116 duraciones. Las esperas y las terminaciones se modelan por separado. Los conteos de una semana de consulta Train se excluyen antes de construir cualquier normalizador o nivel de respaldo. Una consulta sin soporte conserva la predicción de la referencia pública, sin eliminar el viaje.
+
+Se compararán una red que conserva solo posición vial y otra que añade memoria de movimiento, ambas con el mismo reloj, las mismas fuentes y una mezcla probabilística con la referencia pública. Sus criterios se fijarán antes de evaluar duración en la reserva. Por ahora, 4.096 viajes verificaron los estados, los 164.014 intervalos originales y la separación entre campos públicos y etiquetas privadas de ajuste. Los conteos comprimidos de esa muestra ocupan 0,743 MiB. Faltan verificar el operador probabilístico completo, la exclusión de fuentes en todos los respaldos y su coste de ejecución antes de construir el conjunto completo. No hay todavía un MAE de esta nueva red.

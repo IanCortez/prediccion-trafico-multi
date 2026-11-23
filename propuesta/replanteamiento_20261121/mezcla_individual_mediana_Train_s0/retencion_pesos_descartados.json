@@ -1,0 +1,26 @@
+{
+  "complete": true,
+  "weights": [
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\none\\epoca_80.pt",
+      "sha256": "bfe9b318aff16be19068bc51ca8569c6ee2b78a2297468c2b4c0b49d5afd4f2d",
+      "bytes": 14650763,
+      "removed": true
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\geometry\\epoca_80.pt",
+      "sha256": "a269971a46ca056d950446867d0c53577ddedbaa30fe2ac786337436e7958c99",
+      "bytes": 14650763,
+      "removed": true
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\observed\\epoca_80.pt",
+      "sha256": "f0aa63d709dab867a77311f11a00393e5e966e475c20db4ffa82ee90549aff5a",
+      "bytes": 14650763,
+      "removed": true
+    }
+  ],
+  "bytes_released": 43952289,
+  "all_completed_predictions_preserved": true,
+  "only_negative_transient_pilot_weights_removed": true
+}

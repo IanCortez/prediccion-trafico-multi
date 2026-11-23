@@ -1,0 +1,37 @@
+{
+  "status": "CLOSED_AFTER_INDEPENDENT_REPLAY",
+  "source_fit_n": 951718,
+  "held_n": 10000,
+  "cutoff": 1396531073,
+  "all_source_arrivals_before_held": true,
+  "original_old40000fit_subset_preserved": true,
+  "all_original_primary_filters_labels_split_unchanged": true,
+  "trigger": "Current fixed80epoch40k experiment completes and independentreplay confirms failed5sgate with >20s train/heldgeneralization gap; do not rerun solely for a timeout.",
+  "motivation": "Observed no-source40k model generalizes at150.53s despite much smaller trainingerror; this is a data/capacity regime concern, not proof of sourcekernel incapacity.",
+  "fair_controls": "Fresh no-source, geometryproxy andobservedtime models fit identical fullprecutoffTrainrows, same matchedneuralinitialization and original held10k. No pretrainedheldlabels.",
+  "epoch_budget": {
+    "old_total_updates": 12560,
+    "new_updates_per_epoch": 3718,
+    "new_fixed_full_epochs": 4,
+    "new_total_updates": 14872,
+    "rule": "Ceiling of oldtotalupdates divided by fullpassupdates; derived from metadata, not chosen by heldMAE."
+  },
+  "numerical_solver": "Signedlogtail stablemedian and stablebinNLL alreadyindependentlyverified; preserve original40k results and evaluate its unchangedweights with stablemedian first.",
+  "new_data": "All existing eligibleprimaryTrainbeforeheldcutoff. No newGPSsourcebank and no outsidecohort auxiliary rows.",
+  "sources": "Same original pointbank; wholeparentweekfold excluded BEFORE tree for each fitrow, allsourcearrivalsbeforecutoff.",
+  "resource_limits": {
+    "GPU_fraction": 0.5,
+    "batch": 256,
+    "sourceindices_cache_MiB": 350,
+    "persistent_rawtokens": false,
+    "execution": "Stream arctokens from existing pointbank/prefix on GPU; do not materialize two all-data rawtoken arrays."
+  },
+  "gate": "Same>=5s versus matchedfreshbaseline andstoredCatBoostreference,>=2s versus geometryproxy, all exploratorydayCIupper<0; no posthoc threshold reduction.",
+  "Test": "SEALED",
+  "Validation": false,
+  "no_predictive_result_claim": true,
+  "sourceindices_manifest": "indices_escala_Train_s0/resultado.json",
+  "actual_run": "mezcla_individual_escala_Train_s0/protocolo.json",
+  "practical_gate_passed": false,
+  "outcome_manifest": "mezcla_individual_escala_Train_s0\\conclusion.json"
+}

@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "fit_n": 951718,
+  "resident_all_data": true,
+  "initial_parameters_sha256": "d33f5b25225e020ac9c8701fdfe24898770dd211c5d248154c3d22c6862d060b",
+  "finite_two_step_gradients": true,
+  "query_gradient_norms": [
+    0.0,
+    16.247411727905273
+  ],
+  "covariance_correlation_gradients_nonzero": true,
+  "fitcoordinate_CPU_GPU_maxerror": 0.0,
+  "heldGPS_guard_passed": true,
+  "raw65public206_exact": true,
+  "canonical256_reverse17_singleton_exact": true,
+  "peak_allocated_MiB": 1461.95458984375,
+  "new_population_cache_written": false,
+  "weights_saved": false,
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 22.457890033721924,
+  "sources": {
+    "preflight_puente_2d_GPU.py": "4a4a7e2fd84209c47932c045dd040d655f5fa8ab987506462eb1468048a2186f",
+    "modelo_puente_temporal_2d.py": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227",
+    "datos_puente_temporal_2d.py": "ec7b3023577908aa82876efa5e1ec649e6812671f2f52490189d713ac48bdf1b",
+    "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+    "coordenadas_trayecto_2d.py": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+  }
+}

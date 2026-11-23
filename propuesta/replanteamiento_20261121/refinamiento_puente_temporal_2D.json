@@ -1,0 +1,72 @@
+{
+  "status": "ACTIVE_AFTER_MATH_COORDINATE_AND_GPU_PROOFS",
+  "why_refine_before_training": {
+    "completed_fit_instrument": "verificacion_progreso_publico_Train_s0/resultado.json",
+    "raw65_publicinterface_passed": true,
+    "median_lateral_error_to_ninepoint_publicroute_m": 60.985918499706486,
+    "p90_lateral_error_m": 746.1515823146327,
+    "mean_negative_projected_increment_fraction": 0.08457206597715979,
+    "conclusion": "Publicpath projection is a valid proxy but combines routingdisagreement and projectionartifacts with velocitychanges. Do not build its full218MiB populationcache and call those increments physicalspeed.",
+    "no_heldtrajectory_used": true,
+    "oneD_math_remains_valid": "verificacion_puente_temporal_CPU_s0/resultado.json",
+    "no_new_predictive_experiment_started": true
+  },
+  "refined_representation": {
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "target_coordinates": "For FITGPS only: r_i=((x_i-o) dot u / d, cross(u,x_i-o)/d), where d=|D-O| andu=(D-O)/d. Initial(0,0), final(1,0); retain signedlongitudinal andlateral progress.",
+    "clock": "Each consecutiveposition is15seconds; targetn=originalT/15, only a supervisedtarget. Infer every n=4..119 for everyquery.",
+    "advantages": "No nearestpublicpath distortion, no newroadgraph and no extra populationprogresscache. This is exact linearcoordinate projection of observedGPS, not noise-free physicalpositions.",
+    "public_features": "Same206publicfeatures, including the existingpublicroute summaries; never true querytrajectory or true queryN/T."
+  },
+  "own_stochastic_model": {
+    "name": "Student endpoint-duration bridge with relaxing correlated2Dvelocity",
+    "styles": "Four independent256wide3residual encoders, eightlatentstyles each, equalencoderprior; all32styles integrated.",
+    "velocity_mean": "m_1=mu_initial; m_i=mu_cruise+rho*(m_(i-1)-mu_cruise). Means andcovariances are predicted from publicq/style.",
+    "velocity_covariance": "Conditionally on global inverseGamma scale lambda, Cov(v_i,v_j)=lambda*rho^abs(i-j)*Sigma_xy. Sigma_xy positive definite2x2; lambda~IG(5/2,5/2).",
+    "endpoint_mean": "M_n=n*mu_cruise+H_n(rho)*(mu_initial-mu_cruise), H_n=sum_(i=0..n-1)rho^i. Use cumulativepowers rather than cancellation-prone division.",
+    "endpoint_scale": "S_n(rho)*Sigma_xy, S_n=n+2*sum_(l=1..n-1)(n-l)rho^l.",
+    "endpoint_density": "ExactbivariateStudent t5 density of endpoint(1,0), under thismodel.",
+    "inference": "p(n|publicq) proportional to sum_style pi_style* t5_2((1,0);M_n,S_n*Sigma_xy); normalize over same116durations, uniform nprior.",
+    "fit_fullpath": "MultivariateStudent t of dimension2n overincrements. Quadraticform uses first(v_1-mu_initial) and ARinnovations(v_i-mu_cruise-rho*(v_(i-1)-mu_cruise)) fori>=2.",
+    "fullpath_logdet": "n*logdet(Sigma_xy)+2*(n-1)*log(1-rho^2).",
+    "auxiliary": "Conditionalinteriorpath logdensity is fullpath logdensity minusendpoint logdensity, withstyles integrated, divided by2*(n-1) forcomposite scoring.",
+    "rho_range": [
+      -0.95,
+      0.995
+    ],
+    "df": 5,
+    "claims_excluded": [
+      "Not a physicalnonnegative-speed model or exactroad-constrained routing.",
+      "Not a firstarrival model; earlier destinationvisits canoccur.",
+      "SharedStudent scale limits wholepath influence, not independentGPS observationnoise.",
+      "No proof of novelty, superiority or73.5attainability."
+    ]
+  },
+  "prospective_training": "Keep original controls/gates/seed/fullfit4epochs in plan_puente_temporal_Train.json; replace pathproxy targets with this2DlinearGPS representation and linear2Dgeometrycontrol (i/n,0). Freeze final2D protocol after representation/GPU proofs, before any newheldmetric.",
+  "next_required_in_order": [
+    "Implement2D endpoint and fullpath Student likelihood with relaxingmean. Independently verify against dense covariance and scipy multivariatet conditionalformula, includingnegative rho, mixture/duration normalization and finite-difference gradients.",
+    "On the SAME4096fitparents, verify OD-frame rigidtransform/endpoint/label identity, all sourceparents beforecutoff, rawfivefield predictionseparation, and reportactual2D incrementmemory/measurementoutliers. No heldGPS.",
+    "GPUpreflight onactualfit256: finite querybackbone andcovariance/mean gradients, canonical256raw/reverse/singleton, actualVRAMmeasurement. No trainedheldlabel initialization.",
+    "Stream targets perbatch from EXISTING originalpointbankxy/offsets onGPU, indexed only withfitids; separate prediction API has no GPS/label argument. ResidentpublicX~756MiB+pointbank~325MiB, no extra largecache; confirm actualmemory.",
+    "Train freshmatched noaux/linear2Dcontrol/observed2D arms, fixed4fullpasses of951718fitrows and unchanged10000heldTrain. No epoch, df, componentcount or auxiliaryweight sweep ifnegative.",
+    "Independent replay everyfinalquantile andraw65; preserve everyoutcome includingMAE>131.06. Only qualifiedfullprimaryValidation can protectweights by131.06threshold."
+  ],
+  "resource_decision": "Do NOT regenerate retired266MiB orderedsource cache or create fullpublicpathprogresscache. Reuse preserved indices_escala_Train_s0/metadatos_Train.npz for fit/heldmembership.",
+  "Test": "SEALED",
+  "Validation": false,
+  "primary_best_unchanged_s": 129.99003446901307,
+  "confirmation_goal_s": 73.5,
+  "new_MAE": null,
+  "actual_experiment": "puente_temporal_2d_Train_s0/protocolo.json",
+  "proofs": [
+    "verificacion_puente_2d_CPU_s0/resultado.json",
+    "verificacion_coordenadas_2d_Train_s0/resultado.json",
+    "preflight_puente_2d_GPU_s0/resultado.json"
+  ]
+}

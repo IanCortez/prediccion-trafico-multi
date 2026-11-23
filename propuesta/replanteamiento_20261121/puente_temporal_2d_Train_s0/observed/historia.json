@@ -1,0 +1,54 @@
+[
+  {
+    "arm": "observed",
+    "epoch": 1,
+    "train_n": 951718,
+    "loss": 0.20811115795000673,
+    "train_CRPS_s": 106.07792593074086,
+    "train_binNLL": 3.7980449082979195,
+    "train_auxNLL_perinteriordimension": -2.2323141716926838,
+    "train_MAE_s": 142.8928264464894,
+    "updates": 3718,
+    "lr": 0.0008550178566873261,
+    "seconds": 1238.1653199195862
+  },
+  {
+    "arm": "observed",
+    "epoch": 2,
+    "train_n": 951718,
+    "loss": 0.19746320913522195,
+    "train_CRPS_s": 100.61488667461114,
+    "train_binNLL": 3.72776371662744,
+    "train_auxNLL_perinteriordimension": -2.239177149417257,
+    "train_MAE_s": 135.43262289879985,
+    "updates": 3718,
+    "lr": 0.0005049999999999942,
+    "seconds": 1317.552472114563
+  },
+  {
+    "arm": "observed",
+    "epoch": 3,
+    "train_n": 951718,
+    "loss": 0.19220504982281075,
+    "train_CRPS_s": 97.89135479785746,
+    "train_binNLL": 3.6929487488714554,
+    "train_auxNLL_perinteriordimension": -2.2403091575523795,
+    "train_MAE_s": 131.73617079849282,
+    "updates": 3718,
+    "lr": 0.00015498214331265706,
+    "seconds": 1396.6419124603271
+  },
+  {
+    "arm": "observed",
+    "epoch": 4,
+    "train_n": 951718,
+    "loss": 0.18829378985633494,
+    "train_CRPS_s": 95.84213149923004,
+    "train_binNLL": 3.668614458933022,
+    "train_auxNLL_perinteriordimension": -2.2407692577187577,
+    "train_MAE_s": 128.9478185765111,
+    "updates": 3718,
+    "lr": 1e-05,
+    "seconds": 1486.0446419715881
+  }
+]

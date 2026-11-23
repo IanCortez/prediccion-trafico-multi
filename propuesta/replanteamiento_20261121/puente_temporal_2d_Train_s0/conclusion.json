@@ -1,0 +1,182 @@
+{
+  "complete": true,
+  "main_auxiliary_gate_passed": false,
+  "secondary_head_gate_passed": false,
+  "main_metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 130.872,
+      "rmse_s": 205.31542806131253,
+      "mdae_s": 90.0
+    },
+    "linear": {
+      "n": 10000,
+      "mae_s": 129.6165,
+      "rmse_s": 205.23820916193944,
+      "mdae_s": 75.0
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 130.152,
+      "rmse_s": 205.39201542416393,
+      "mdae_s": 90.0
+    }
+  },
+  "matched_lognormal_metrics": {
+    "n": 10000,
+    "mae_s": 129.6225,
+    "rmse_s": 204.45022010259612,
+    "mdae_s": 90.0
+  },
+  "main_comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -0.72,
+      "ci95_s": [
+        -1.6627710745207873,
+        0.2560532079650332
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; oneinitialization, notprimaryValidation or confirmation."
+    },
+    "vs_linearcontrol": {
+      "delta_mae_s": 0.5355,
+      "ci95_s": [
+        -0.422732027700741,
+        1.5880261969135832
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; oneinitialization, notprimaryValidation or confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": -3.203392792801924,
+      "ci95_s": [
+        -5.095327376584588,
+        -0.7959470797110314
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; oneinitialization, notprimaryValidation or confirmation."
+    }
+  },
+  "head_comparisons": {
+    "Student_vs_matched_lognormal": {
+      "delta_mae_s": 1.2495,
+      "ci95_s": [
+        0.2394208493506577,
+        2.211550657215051
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; prospectivelyregistered headcomparison, oneinitialization."
+    },
+    "Student_vs_saved_publicNN": {
+      "delta_mae_s": 0.8429313836060078,
+      "ci95_s": [
+        -0.44235281526514364,
+        2.189294659654563
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; prospectivelyregistered headcomparison, oneinitialization."
+    }
+  },
+  "all_four_models_independently_exactreplayed": true,
+  "critical_findings": [
+    "Observedmotion supervision changes heldMAE by only-.72s versus noaux, with dayCIincludingzero; it is+.5355s worse than the linearcontrol. No declaredmain gate passed.",
+    "The analyticStudent head withoutaux is1.2495s worse than the exactmatchedlognormal control; no declaredsecondary gate passed.",
+    "Motioncorrelation exists in fitGPS, but that statisticalproperty and exactprobabilitycalculations do not imply an ODpredictiongain.",
+    "A single relaxingAR regime perstyle and globalpathscale omit explicit roadconnectivity, destination-conditioned routechoice and discretewaitingstates. These are hypotheses for failure, not isolatedcausal conclusions.",
+    "Continuousauxiliarylikelihood entropy differs across linear/observedtargets; a smallerauxNLL is not proof of betterdurationprediction.",
+    "Same reusedheldTrain and oneinitialization; none of these numbers replaces the127941primaryValidation or126950unexposedconfirmation cohort."
+  ],
+  "next": "Develop a bounded roadstate/kinetic transition instrument with an original15secondclock and explicitlymodelledwaiting, using rawfivefield publicattachments. First verify4096fitparents and resourcefeasibility; no rho/df/style/epoch sweeps.",
+  "reference_public_only": {
+    "id": "control_familia_puente_2d_Train_s0",
+    "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_familia_puente_2d_Train_s0\\epoca_4.pt",
+    "model_sha256": "3a427cf587fc2bf10bdf9d74646117f91a31f4aa5d3a542b83af97d9b9c8f770",
+    "bytes": 13643240,
+    "metrics": {
+      "n": 10000,
+      "mae_s": 129.6225,
+      "rmse_s": 204.45022010259612,
+      "mdae_s": 90.0
+    },
+    "scope": "Reused10000heldTrain; NOT primaryValidation.",
+    "reason": "ActivefixedTrain-only publicdensity reference for next roadstate instrument; no pretrainingonheldlabels.",
+    "inference_sources": {
+      "entrenar_control_familia_puente.py": "6fc16b7772c3ec4d7c988ba9b625f09b16b028eb6ae2d1c4b318a58c10e6fa8d",
+      "datos_control_familia_puente.py": "66f21074ba8f16f1ecef97cf7e42465872ec6c5f90ef00142bf0074de37ccaac",
+      "modelo_control_lognormal_puente.py": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f",
+      "modelo_puente_temporal_2d.py": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227",
+      "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a",
+      "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+      "cuantiles_mezcla_balanceada.py": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+      "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+    },
+    "constructor_sha256": "db151a4be51fff77448241e2ec17ceab7559e400bac4502b1eae15bc62d004ea",
+    "independent_replay_sha256": "4177cf7f2622c5ebea62ce382d4dc83c5430b7833516a33232bb4b9c7fa2d41c",
+    "qualifies_by_primary131_06": false,
+    "primary_best_not_replaced": true
+  },
+  "retention": {
+    "policy": "All outcomes retained regardless131.06. PilotheldTrain does not qualifyweights by primaryValidationthreshold.",
+    "retired": [
+      {
+        "arm": "none",
+        "file": "propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\none\\epoca_4.pt",
+        "sha256": "dd133307fe5152b8d202df08e2fab84555fc944270b6a43d6da3f72fb3cce48f",
+        "bytes": 13841512
+      },
+      {
+        "arm": "linear",
+        "file": "propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\linear\\epoca_4.pt",
+        "sha256": "4b92166b04842d5078190ef49abed2ac89cbd4360054a27bed0012042ef16b63",
+        "bytes": 13841512
+      },
+      {
+        "arm": "observed",
+        "file": "propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\observed\\epoca_4.pt",
+        "sha256": "b4bbd8cf9ff990fd6c4e3009bfb345d2db895b62cf611e38984bd0c49791cf8d",
+        "bytes": 13841512
+      }
+    ],
+    "retired_bytes": 41524536,
+    "preserved": [
+      {
+        "id": "control_familia_puente_2d_Train_s0",
+        "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_familia_puente_2d_Train_s0\\epoca_4.pt",
+        "model_sha256": "3a427cf587fc2bf10bdf9d74646117f91a31f4aa5d3a542b83af97d9b9c8f770",
+        "bytes": 13643240,
+        "metrics": {
+          "n": 10000,
+          "mae_s": 129.6225,
+          "rmse_s": 204.45022010259612,
+          "mdae_s": 90.0
+        },
+        "scope": "Reused10000heldTrain; NOT primaryValidation.",
+        "reason": "ActivefixedTrain-only publicdensity reference for next roadstate instrument; no pretrainingonheldlabels.",
+        "inference_sources": {
+          "entrenar_control_familia_puente.py": "6fc16b7772c3ec4d7c988ba9b625f09b16b028eb6ae2d1c4b318a58c10e6fa8d",
+          "datos_control_familia_puente.py": "66f21074ba8f16f1ecef97cf7e42465872ec6c5f90ef00142bf0074de37ccaac",
+          "modelo_control_lognormal_puente.py": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f",
+          "modelo_puente_temporal_2d.py": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227",
+          "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a",
+          "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+          "cuantiles_mezcla_balanceada.py": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+          "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+        },
+        "constructor_sha256": "db151a4be51fff77448241e2ec17ceab7559e400bac4502b1eae15bc62d004ea",
+        "independent_replay_sha256": "4177cf7f2622c5ebea62ce382d4dc83c5430b7833516a33232bb4b9c7fa2d41c",
+        "qualifies_by_primary131_06": false,
+        "primary_best_not_replaced": true
+      }
+    ],
+    "negative_weights_removed_only_after_exactreplay": true
+  },
+  "all_metrics_predictions_logprobabilities_configs_andfrozen_sources_preserved": true,
+  "all_primary_rows_filters_andlabels_unchanged": true,
+  "no_extraqueryinformation": true,
+  "primary_best_unchanged_s": 129.99003446901307,
+  "confirmation_goal_s": 73.5,
+  "confirmation_goal_achieved": false,
+  "goal": "ACTIVE",
+  "Test": "SEALED",
+  "Validation": false
+}

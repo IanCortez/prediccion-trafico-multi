@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "fixed_epoch": 4,
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc",
+  "arm": "observed",
+  "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\observed\\epoca_4.pt",
+  "sha256": "5e22db26c807cee5984b7b8027a52421b0b9848f181345f01229e9c7faa2825e",
+  "metrics": {
+    "n": 10000,
+    "mae_s": 126.43457480872028,
+    "rmse_s": 201.71803356306447,
+    "mdae_s": 79.80957667097621
+  },
+  "scope": "HeldTrain only, not primaryValidation",
+  "predictions_sha256": "38699e1c63c87bb00b2aaa478a0ef5775d09321e61611e4b28c5b08c17cd0247"
+}

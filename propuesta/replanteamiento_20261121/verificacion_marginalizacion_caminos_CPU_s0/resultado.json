@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "scope": "Synthetic numerical instrument only; no trainedPorto model or timeMAE.",
+  "independent_exhaustive_paths": 570,
+  "repeated_destination_paths": 458,
+  "max_probability_error": 5.551115123125783e-17,
+  "dense_weight_sum_exact": true,
+  "gradient_max_error": 1.022033846442838e-10,
+  "unreachable_terminal_explicit": true,
+  "extreme_underflow_conditional_normalization": true,
+  "graph_relabeling_invariant": true,
+  "batch_reverse_singleton_exact": true,
+  "original_duration_support_s": [
+    60,
+    1785
+  ],
+  "no_querytrueN_or_route_used": true,
+  "model_claim": false,
+  "Validation": false,
+  "Test": false,
+  "seconds": 0.0740058422088623,
+  "sources": {
+    "verificar_marginalizacion_caminos_CPU.py": "b2e12005182f4746547070d4624b5f806b8c423dd5ef16852d70ae60b1657a52",
+    "marginalizacion_caminos_log.py": "061c4fbde1e0704f061339715c20a83b325377435b73c3131271f1463d8e6aa9"
+  }
+}

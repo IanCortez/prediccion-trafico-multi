@@ -1,0 +1,68 @@
+{
+  "id": "mezcla_individual_mediana_Train",
+  "status": "DESIGN_ONLY_NOT_TRAINED",
+  "goal_confirmation_s": 73.5,
+  "motivation_evidence": {
+    "ordered_source_geometry": "Same original sourcebbox and K2048, 512heldTrainqueries: within100m67.7734% to98.8281%; independent brute-force and support monotonicity passed.",
+    "temporal_signal": "Observed historicalCDF130.955613 versus133.121328baseline and133.210289geometrycontrol; exploratorygain2.25s, predeclared5sgateFAILED.",
+    "existing_attention": "modelo_atencion_subtrayectos.py pools64source embeddings and logtimes into8slots BEFORE constructing time distributions.",
+    "distinction": "Preserve each individual source geometry/time relationship through its own conditional distribution BEFORE mixing; optimize actual pointmedian with distribution regularization. No repeat of K/CDFbin/sourcecount sweeps."
+  },
+  "protocol": {
+    "fit_n": 40000,
+    "held_n": 10000,
+    "cohort": "Exact chronological Trainpilot rows and original targets. No primaryValidation or Test access.",
+    "source_indices": "Reuse piloto_cdf_ordenada_Train_s0/indices_fuentes.npz only after hash/proof audit; fit folds excluded before tree, allsourcearrivals before heldstart.",
+    "public_query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "model_initialization": "Fresh random parameters; no parent or pretrained representation that saw heldTrain labels.",
+    "epochs": 80,
+    "batch": 256,
+    "seed": 20261125,
+    "lr": 0.001,
+    "min_lr": 1e-05,
+    "weight_decay": 0.0003,
+    "gradient_clip": 5,
+    "precision": "FP32 highest, noTF32; measure actual gradients/memory before training. Fixed final epoch only; no held stopping."
+  },
+  "architecture": {
+    "ensemble_members": 4,
+    "query_encoder": "206 standardized publicfeatures ->256dim residualMLP, threeblocks.",
+    "source_representation": "64 ordered historicalsources, arc-length version of34D token; optional explicit compatibility with2publicroute arc signatures only after coordinate/unit proof.",
+    "arc_semantics": "Use7arclength positions, trueintervalpathlength, explicit observedtime16 andfullparenttime32. Replace sample-index fractions28/29/33 by arclength fractions.",
+    "source_components": "One conditionallognormal time distribution PER source, total64, with shared query/source network learning reliability, multiplicative adjustment and nonnegative additional dwell.",
+    "global_components": 8,
+    "total_components_per_member": 72,
+    "mixture": "Normalize64sourceweights with geometry/calendar priors; learn gate against8globalcomponents. Combine distributions before median, never average medians.",
+    "objective": "PointMAE/600 using implicit mixture-median gradient plus .02 negative log probability of the original15second targetbin. Fold tails consistently at60 and1785 without changing labels.",
+    "median": "Bisection under no_grad plus implicit derivative through CDF/density. Prove finite differences independently before using the gradient.",
+    "inference": "Raw5 only, canonical padded256 NNblocks aftersourceconstruction; independent replay and order/singleton proofs before any promotion."
+  },
+  "controls": {
+    "geometry_proxy": "Same sourcecount, fullarchitecture and initialization, but observedsource time16 replaced with sourcechord/25kmh scaled toquery andfullparenttime32 with geometry-derived proxy.",
+    "prevent_alias": "Original sourcefractions28/29/33 can encode integerN through their rational denominator. Use arclengthfractions in BOTH arms, so controlcannot reconstruct elapsedtime from indexfractions.",
+    "invariance_proof": "Insert stationary GPSsamples strictlyinside a synthetic sourceinterval. Sourcearclengthgeometry/calendar-start/flags/proxycontrols must stay invariant; actual elapsedtime16/32 must change.",
+    "baseline": "Fresh no-source neuralbaseline and stored publicCatBoost reference. No use of the protected fullTrain neuralparent inside a heldTrain pilot.",
+    "limits": "Samecapacity controls do not establish independent confirmation after repeated pilot reuse."
+  },
+  "gates": {
+    "technical": [
+      "Exhaustive sourcepair/pruning/raw5/weekfold proofs already passed, revalidate sourcehash.",
+      "Arc/publicroute coordinate semantics.",
+      "Stationary-insertion time-removal control.",
+      "Independent median finite-difference gradients and tail bin probabilities.",
+      "Real B256 GPU memory and finite gradients.",
+      "Fixed-final independent reload/order/singleton."
+    ],
+    "practical": "At least5s better than fresh no-sourcebaseline ANDstored133.355393reference, at least2s better than geometryproxycontrol, all exploratorydayCIupper<0.",
+    "if_fail": "Retain completed metrics/predictions/config/exactsources; no primarytrial or posthoc threshold/epoch/sourcecount sweep.",
+    "if_pass": "Preserve pilotweights, reproduce raw5, then preregister full unchanged-primary training; Testremainssealed until an eligible candidate is frozen."
+  },
+  "resources": "One heavyGPU, <=.5cap after preflight, localConda only. Reuse original241.76MiB pointbank and existing arcprefix144.72MiB. No duplicateGPSbank or persistent rawtoken tensor.",
+  "Test": "SEALED"
+}

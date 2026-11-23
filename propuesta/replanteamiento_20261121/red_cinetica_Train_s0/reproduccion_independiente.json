@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "scope": "Independentcompleteall10000raw5graph and bothgate replay; no originalpointbank.",
+  "arms": {
+    "position": {
+      "passed": true,
+      "all10000_cached_logprob_andgates_Float64_exact": true,
+      "all10000_quantiles_exact": true,
+      "raw65public206_exact": true,
+      "gate_reverse17_singleton_exact": true,
+      "all10000_raw5_graph_support_exact": true,
+      "all10000_raw5_graph_probability_FP32_exact": true,
+      "all10000_raw5_graph_max_probability_error": 0.0,
+      "all10000_raw5_endtoend_quantiles_exact": true,
+      "endtoend_max_probability_error": 2.7755575615628914e-17,
+      "sparse_GPU_CPU_first3_andraw_reverse17_singleton_within1e_10": true,
+      "fixed12560updates_verified": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 132.6075,
+        "rmse_s": 207.62194609433752,
+        "mdae_s": 90.0
+      },
+      "seconds": 135.92553091049194
+    },
+    "kinetic": {
+      "passed": true,
+      "all10000_cached_logprob_andgates_Float64_exact": true,
+      "all10000_quantiles_exact": true,
+      "raw65public206_exact": true,
+      "gate_reverse17_singleton_exact": true,
+      "all10000_raw5_graph_support_exact": true,
+      "all10000_raw5_graph_probability_FP32_exact": true,
+      "all10000_raw5_graph_max_probability_error": 0.0,
+      "all10000_raw5_endtoend_quantiles_exact": true,
+      "endtoend_max_probability_error": 2.7755575615628914e-17,
+      "sparse_GPU_CPU_first3_andraw_reverse17_singleton_within1e_10": true,
+      "fixed12560updates_verified": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 131.985,
+        "rmse_s": 206.73929234666545,
+        "mdae_s": 90.0
+      },
+      "seconds": 216.39513158798218
+    }
+  },
+  "all_comparisons_andday_bootstrap_recomputed": true,
+  "reference_all10000_exact": true,
+  "original_pointbank_open_attempts": [],
+  "queryfields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "query_N_T_actualroadIDs_or_path_supplied": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 359.70473313331604,
+  "source_sha256": "714e78e500d0f98e0acc5fb97c4c3c318d073b89e1435b9ce1d91d68e5e1092b",
+  "Validation": false,
+  "Test": false
+}

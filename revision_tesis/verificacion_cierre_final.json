@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-11-23T05:57:13Z",
+  "closed": true,
+  "target_achieved": false,
+  "Test_evaluated": false,
+  "primary_prediction_sets_verified": 40,
+  "primary_rows_each": 127941,
+  "best_primary_MAE_s": 129.99003446901307,
+  "three_checkpoint_chain_CPU_load_passed": true,
+  "final_pilot": {
+    "n": 10000,
+    "reference_MAE_s": 129.6225,
+    "position_MAE_s": 132.6075,
+    "kinetic_MAE_s": 131.985,
+    "all_rows_and_predictions_aligned": true,
+    "saved_probability_mass_normalized": true,
+    "unsupported76_use_reference_exactly": true,
+    "small_gate_and_reference_weight_hashes_verified": true
+  },
+  "source_closure_status": "COMPLETE_AND_CLOSED_BY_USER",
+  "final_summary_SHA256": "96800977227d1c0d65db60a6287586d7dbdfdf2dea984ea9c3d812c3b1913c1c",
+  "new_training": false,
+  "new_GPU_inference": false,
+  "original_research_sources_modified": false,
+  "original_student_src_modified": false
+}

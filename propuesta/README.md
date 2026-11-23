@@ -1,3 +1,7 @@
+> **Cierre del 23 de noviembre:** la última propuesta terminó y la investigación quedó cerrada.
+> Mejor MAE primario: 129,990034 s; meta de 73,5 s no alcanzada; Test sin evaluar.
+> Ver [cierre final](../revision_tesis/CIERRE_FINAL.md). Los planes y estados siguientes son históricos.
+
 # Tesis de Ian: proyecto depurado
 
 Mejor modelo conservado: **MAE 131,256712 s en validación de 127.941 viajes**. La meta de Test <73,5 s sigue sin demostrarse. Las ejecuciones automáticas están detenidas.

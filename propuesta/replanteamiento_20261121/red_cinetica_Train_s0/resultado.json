@@ -1,0 +1,112 @@
+{
+  "complete": true,
+  "scope": "Finalfixedproposal: original10000reusedheldTrain; no primaryValidation or confirmation.",
+  "metrics": {
+    "position": {
+      "n": 10000,
+      "mae_s": 132.6075,
+      "rmse_s": 207.62194609433752,
+      "mdae_s": 90.0
+    },
+    "kinetic": {
+      "n": 10000,
+      "mae_s": 131.985,
+      "rmse_s": 206.73929234666545,
+      "mdae_s": 90.0
+    },
+    "reference": {
+      "n": 10000,
+      "mae_s": 129.6225,
+      "rmse_s": 204.45022010259612,
+      "mdae_s": 90.0
+    }
+  },
+  "probability_scores": {
+    "position": {
+      "CRPS_s": 98.26271429962036,
+      "bin_NLL": 3.697795544424253
+    },
+    "kinetic": {
+      "CRPS_s": 97.83525624558258,
+      "bin_NLL": 3.6948154280300196
+    }
+  },
+  "comparisons": {
+    "position_vs_reference": {
+      "delta_mae_s": 2.985,
+      "ci95_s": [
+        2.0893466140095214,
+        3.955655493555431
+      ],
+      "days": 22,
+      "interpretation": "Exploratory: reused10000heldTrain, oneinitialization; not primaryValidation or confirmation."
+    },
+    "kinetic_vs_reference": {
+      "delta_mae_s": 2.3625,
+      "ci95_s": [
+        1.4464669454737258,
+        3.3752131755018016
+      ],
+      "days": 22,
+      "interpretation": "Exploratory: reused10000heldTrain, oneinitialization; not primaryValidation or confirmation."
+    },
+    "kinetic_vs_position": {
+      "delta_mae_s": -0.6225,
+      "ci95_s": [
+        -1.510186237167227,
+        0.24103011911326744
+      ],
+      "days": 22,
+      "interpretation": "Exploratory: reused10000heldTrain, oneinitialization; not primaryValidation or confirmation."
+    }
+  },
+  "hypothesis_position_passed": false,
+  "hypothesis_kinetic_passed": false,
+  "weights": {
+    "position": {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\position\\epoca_80.pt",
+      "sha256": "61a8a406442f1e273216982fd557ebb943c6713e49b720f21952f3d1688076f2",
+      "bytes": 77516
+    },
+    "kinetic": {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\kinetic\\epoca_80.pt",
+      "sha256": "002cedc0648e24b0b80cfb6e53bf81fa7e6925e007f95e1e09d0abab7cc89726",
+      "bytes": 77516
+    }
+  },
+  "predictions_sha256": "ab58ef555ae4b92d68f0abc664ab9bbd6020d4ba80753adcd5704d3a466bbe39",
+  "protocol_sha256": "36d57c42bd37dd6f59154ea91b55b377a40718d2aebb1b8dba0747f8940dfb71",
+  "constructor_sha256": "6b896a5c8849febf6f05281240de874f98661369afb6c2f74f763e1c55997dbd",
+  "initial_parameters_sha256": "d7b4fe854b0ea7e8060e52c7ce2710761bc717bd29419509683b5c2852cb344f",
+  "fit_n": 40000,
+  "held_n": 10000,
+  "sourceprefix_n": 951718,
+  "original_15s_T_labels_andqueries_unchanged": true,
+  "source_count_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+  "input_sha256": "4693c28b65f9ff1b6f979a8ceda2c7fb943da8b4af7ac6ecf0cb2042d488bac0",
+  "initial_gate_exactmatched": true,
+  "all_completed_results_preserved_regardless131_06": true,
+  "original_pointbank_open_attempts": [],
+  "peak_allocated_MiB": 326.84912109375,
+  "seconds": 147.7087848186493,
+  "limitations": [
+    "RepeatedlyreusedheldTrain and oneinitialization.",
+    "Sourcegraph is crossfit for fitqueries; frozenpublicreference was fitted on951718including40kfitqueries, potentially biasing fittedgate towardreference. Heldquerylabels enter neitherbaseline nor sourcekernel.",
+    "Kineticstatekernel is an approximateempiricalmodel, not an exactphysicaltrafficsimulator."
+  ],
+  "user_scope": "Finishthisproposal, then close. No furtheralternativefamily.",
+  "primary_best_unchanged_s": 129.99003446901307,
+  "confirmation_target_s": 73.5,
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "sources": {
+    "entrenar_compuertas_red_cinetica_Train.py": "b1e11df15cf9be8681ccf676801d3a1a58d801a0227859e60e287703f21e006b",
+    "modelo_compuerta_red_cinetica.py": "3231f68717da71e16763dd44d32ef7e9ba1517029c56fcc3ddd4d02ed0ffd904",
+    "modelo_control_lognormal_puente.py": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f",
+    "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  }
+}

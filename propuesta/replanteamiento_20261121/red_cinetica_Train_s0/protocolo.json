@@ -1,0 +1,69 @@
+{
+  "status": "FROZEN_BEFORE_GRAPH_TIME_METRIC",
+  "user_scope": "Complete this lastproposal then close; no newalternativefamily.",
+  "sourceprefix_n": 951718,
+  "fitqueries": 40000,
+  "heldqueries": 10000,
+  "query_metadata_sha256": "aa365647a821e6e3db299cffc69ec91ca1c844711e57a4cc189f365a5b48b77b",
+  "query_fields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "query_original_time_label": "(originalGPS_N-1)*15, unchanged",
+  "reference_model_sha256": "3a427cf587fc2bf10bdf9d74646117f91a31f4aa5d3a542b83af97d9b9c8f770",
+  "arms": [
+    "frozenpublicreference",
+    "position",
+    "kinetic"
+  ],
+  "graph": "Fixed648144kineticstate map, <=50m cells, incomingstep<=5m/<=150m/>150m; original15sclock, sigma30m/radius90m, contextprior10, startgeometryprior1, maximum119ticks. Collapse exactsamecounts for positioncontrol. WholeUTCweekfold excluded before everyfitkernelbackoff/catalogue; heldsourceprefixonly.",
+  "gate": {
+    "inputfeatures": 206,
+    "hidden": [
+      64,
+      64
+    ],
+    "activation": "SiLU",
+    "initial_probability": 0.05,
+    "seed": 20261203,
+    "mean_std": "40000fitpublicfeatures only",
+    "combination": "(1-g)*p0+g*pgraph; unsupportedgraph becomesp0 exactly"
+  },
+  "training": {
+    "epochs": 80,
+    "batch": 256,
+    "updates_per_arm": 12560,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0003,
+    "gradient_clip": 5,
+    "cosine_eta_min": 1e-05,
+    "objective": "CRPS_seconds/600+.02original15sbinNLL",
+    "held_early_stopping": false
+  },
+  "hypothesis_position": {
+    "improvement_vs_reference_s": 5,
+    "paired_day_CI_upper_below": 0
+  },
+  "hypothesis_kinetic": {
+    "improvement_vs_reference_s": 5,
+    "improvement_vs_position_s": 2,
+    "paired_day_CI_upper_below": 0
+  },
+  "exploratory_limits": "Same repeatedlyreused10000heldTrain, oneinitialization. Not primaryValidation or independentconfirmation. No graphoutcomes exist at registration.",
+  "production_resource_required": {
+    "GPU_max_allocated_MiB": 5500,
+    "CPU_probability_error_max": 1e-10,
+    "query_reverse_singleton_probability_error_max": 1e-10,
+    "persistent_counts_plusfeatures_MiB": 350
+  },
+  "scoring": "Original15s support60..1785; medianquantile for MAE. No rowdrop, newlabels, realqueryroadIDs or actualqueryN/T input.",
+  "forbidden_after_results": "No clock/bin/statecount/sigma/prior/epoch/lossweight grids or furtherfamily.",
+  "retention": "All metrics,predictions,probabilities,configs,sources,conclusions preserved regardless131.06; replay before anytemporaryretirement.",
+  "Test": "SEALED",
+  "Validation": false,
+  "goal_confirmation_s": 73.5
+}

@@ -1,0 +1,6 @@
+{
+  "stage": "console_print_after_saved_proof",
+  "all_scientific_checks_and_artifacts_saved": true,
+  "rerun_required": false,
+  "correction": "Print the alreadyserialized JSON report instead of dumping its numpyarrays a secondtime."
+}

@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "fixed_epoch": 4,
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc",
+  "arm": "geometry",
+  "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\geometry\\epoca_4.pt",
+  "sha256": "104686cb681a587380997afe715ee3f02a9006638cb8679c8b1056b13358fe7d",
+  "metrics": {
+    "n": 10000,
+    "mae_s": 127.47522133363444,
+    "rmse_s": 203.58823253886115,
+    "mdae_s": 79.93759840028235
+  },
+  "scope": "HeldTrain only, not primaryValidation",
+  "predictions_sha256": "af949074c018499b8b781b512b9c3c1b3c261c67e311ec73cfb5a79673d73990"
+}

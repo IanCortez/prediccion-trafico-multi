@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "sourceindices_sha256": "22c1eb78475ae1ac5ee95dd878f88f1cba4ada68313363bfaa1186ce72eb9c85",
+  "held_rows_labels_identical_to_originalpilot": true,
+  "fit_publicnormalizers_and_anchors_fit_all_preheld_only": true,
+  "source_normalizers_query_sample_n": 32768,
+  "source_normalizer_seed": 20261127,
+  "sample_source_tokens": 2097152,
+  "source_control_only_changes_columns": [
+    16,
+    32
+  ],
+  "persistent_full_rawtokens": false,
+  "GPU_rawtokens_materialized_population": false,
+  "resident_input_MiB": 1645.9423828125,
+  "constructor_sha256": "309b93b88e533f8aa498a9ebdf49b2efe4b04ddcf0f998255c35399322a653a5",
+  "seconds": 20.611058950424194
+}

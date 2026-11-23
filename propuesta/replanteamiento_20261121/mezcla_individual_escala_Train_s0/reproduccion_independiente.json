@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "scope": "All10000heldquantiles and raw65queries for all3fixed4epochmodels.",
+  "fit_n": 951718,
+  "held_n": 10000,
+  "arms": {
+    "none": {
+      "full10000_quantiles_maxerror_s": 0.0,
+      "raw65_maxerror_s": 0.0,
+      "raw_sourceindices_and_tokens_exact": true,
+      "raw_reverse17_singleton_exact": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 130.029068616394,
+        "rmse_s": 206.64043797818798,
+        "mdae_s": 82.44181900359021
+      },
+      "model_sha256": "017a30a06b5b8b8cc426302d24d509ca5ccdcdb2bfcf435080f5da005f4ea6e6"
+    },
+    "geometry": {
+      "full10000_quantiles_maxerror_s": 0.0,
+      "raw65_maxerror_s": 0.0,
+      "raw_sourceindices_and_tokens_exact": true,
+      "raw_reverse17_singleton_exact": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 127.47522133363444,
+        "rmse_s": 203.58823253886115,
+        "mdae_s": 79.93759840028235
+      },
+      "model_sha256": "104686cb681a587380997afe715ee3f02a9006638cb8679c8b1056b13358fe7d"
+    },
+    "observed": {
+      "full10000_quantiles_maxerror_s": 0.0,
+      "raw65_maxerror_s": 0.0,
+      "raw_sourceindices_and_tokens_exact": true,
+      "raw_reverse17_singleton_exact": true,
+      "computed_metrics": {
+        "n": 10000,
+        "mae_s": 126.43457480872028,
+        "rmse_s": 201.71803356306447,
+        "mdae_s": 79.80957667097621
+      },
+      "model_sha256": "5e22db26c807cee5984b7b8027a52421b0b9848f181345f01229e9c7faa2825e"
+    }
+  },
+  "raw_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "source_cutoff": 1396531073,
+  "sameheldcohort": true,
+  "original_labels_unchanged": true,
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "source_sha256": "f4e87d41d4d9db0708c8dfdd48483f60713dd32920cea1e843348d84742021d0",
+  "seconds": 81.48371958732605
+}

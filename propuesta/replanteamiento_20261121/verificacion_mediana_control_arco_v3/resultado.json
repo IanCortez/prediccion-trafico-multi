@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "implicit_median_finite_differences": true,
+  "folded_bins_normalized": true,
+  "stationary_insertion_control_exact": true,
+  "source_time_only_explicit": true,
+  "publicroad_geometry_frame_proven": true,
+  "ensemble_training_median_matches_inference": true,
+  "query_and_source_gradients_finite": true,
+  "canonical256_query_reverse_singleton_exact": true,
+  "sourcepermutation_maxerror_s": 0.0,
+  "empty_source_fallback_finite": true,
+  "source_features": 38,
+  "members": 4,
+  "components_per_member": 72,
+  "sources": {
+    "verificar_mediana_y_control_arco.py": "1053371f2dd6bd2cf184ab7b65d4e84d06219c43760434d7098c749b0176f228",
+    "cuantiles_mezcla_implicita.py": "a40af5f3f23f372ec8160ebe25d3bb5fa303bebe5c1a7ecdaf33662ed3c337a3",
+    "tokens_transferencia_arco.py": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6",
+    "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a"
+  },
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [],
+  "seconds": 6.985562086105347
+}

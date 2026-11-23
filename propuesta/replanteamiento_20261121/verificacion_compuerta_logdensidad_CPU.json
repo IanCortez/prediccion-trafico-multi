@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scope": "CPUlogmixture algebra before predictiveMAE",
+  "extreme_logits_pm1000_finite": true,
+  "zero_graph_bins_preserve_finite_reference_tail": true,
+  "unsupported_logreference_bitwise_exact": true,
+  "unsupported_gradient_zero": true,
+  "normalized": true,
+  "finite_gradient": true
+}

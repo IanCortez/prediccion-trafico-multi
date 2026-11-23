@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "fit_n": 40000,
+  "held_n": 10000,
+  "fit_source_tokens": 2560000,
+  "no_self_source": true,
+  "all_source_arrivals_before_heldcutoff": true,
+  "all_fit_parent_weekfolds_excluded": true,
+  "sourceendpoint_mask_and_span_preserved": true,
+  "raw_feature_change_control_only_columns": [
+    16,
+    32
+  ],
+  "normalizers_and_time_anchors_fit40000only": true,
+  "constructor_sha256": "496ff1ca49dd15cf29503502d546e6dfaddb3e4ed043c003521beed38743c6c0",
+  "sourceindices_sha256": "14774687c767790bdd8383ff458b0c025fa18b40379498644efa5ef82bea8e9f",
+  "source_pointbank_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "prefix_sha256": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+  "held_targets_never_input": true,
+  "persistent_raw_token_tensor": false,
+  "GPU_resident_input_MiB": 508.3818359375,
+  "seconds": 16.005981922149658
+}

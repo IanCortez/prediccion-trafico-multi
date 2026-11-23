@@ -1,0 +1,76 @@
+{
+  "status": "MECHANISM_REVIEW_ONLY; no trainedcandidate or new empiricalclaim. Complete current all-data comparison and declared gate before deciding the next scientific trial.",
+  "papers": [
+    {
+      "title": "Equilibrium-Constrained Estimation of Recursive Logit Choice Models",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2510.16886v1",
+      "read": "Abstract, recursive normalization, cyclic toy example, equilibrium/flow equations.",
+      "finding": "Reformula la estimacion de elecciones secuenciales mediante restricciones de equilibrio. El ejemplo ciclico muestra que una normalizacion infinita puede no existir; la interpretacion de flujo requiere radio espectral menor que uno.",
+      "limit": "Es eleccion de rutas, no una demostracion de MAE OD en nuestra cohorte de Porto. No se implementa su optimizador conico ni se declara una replica."
+    },
+    {
+      "title": "Constrained Recursive Logit for Route Choice Analysis",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2509.01595v1",
+      "read": "Abstract, state augmentation, path feasibility, synthetic/real evaluation description.",
+      "finding": "Amplia el estado para representar restricciones acumuladas y normaliza decisiones entre rutas factibles sin muestrear rutas. Sus restricciones pertenecen al conjunto de alternativas del modelo.",
+      "limit": "No autoriza a usar el tiempo verdadero de la consulta como plazo ni a eliminar viajes dificiles de nuestra evaluacion. Un horizonte fijo puede corresponder al dominio temporal ya definido, conservando todas las filas."
+    },
+    {
+      "title": "Incorporating graph neural network into route choice model",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2503.02315v1",
+      "read": "Abstract, recursive choice equations, graph residual component, Tokyo dataset definition.",
+      "finding": "Combina utilidades de eleccion de rutas con informacion del grafo y componentes neuronales. La probabilidad de transicion incorpora el valor global del destino.",
+      "limit": "Evalua eleccion de rutas en una red agregada de Tokio; no prueba un error de tiempo OD menor de73.5s en Porto. Cambiar GRU por GNN sin cambiar la inferencia global seria una variante insuficiente."
+    },
+    {
+      "title": "Integrating Knowledge into Data-driven Route Choice Modeling",
+      "year": 2026,
+      "url": "https://zgglxb.chd.edu.cn/EN/10.19721/j.cnki.1001-7372.2026.04.024",
+      "read": "Official journal abstract, publication metadata, stated model and evaluation.",
+      "finding": "DR2Logit usa una utilidad neuronal y probabilidades recursivas calculadas analiticamente, con condiciones de solvencia y aprendizaje robusto.",
+      "limit": "Solo se verifico el resumen oficial; no se atribuyen detalles adicionales al articulo. La divergencia de flujos de rutas no equivale al MAE temporal OD."
+    },
+    {
+      "title": "Bayesian Dynamic Gamma Models for Route-Level Travel Time Reliability",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2602.07170v1",
+      "read": "Abstract, shared environment, approximate route distribution, empirical evaluation and limitations.",
+      "finding": "Un ambiente latente comun induce dependencia entre segmentos; la distribucion agregada de ruta usa una aproximacion por momentos.",
+      "limit": "Requiere una ruta y observaciones temporales de sus segmentos. La cobertura de intervalos y la evaluacion en una autopista no establecen el objetivo OD de Porto ni permiten usar retroalimentacion de Validation."
+    }
+  ],
+  "own_hypothesis_for_review": {
+    "name": "Global endpoint-conditioned walk-duration normalization",
+    "reason": "The previous learned road rollout commits to local recurrent decisions; the failed geometric diffusion compresses path shape and time. A finite-horizon forward sum would instead marginalize all graph walks and durations jointly.",
+    "mathematics": "u_n(q)=a_o^T K_0(q)...K_(n-1)(q)b_d; p(n|q)=u_n/sum_(m=4..119)u_m. Each transition corresponds to15seconds, soT=15n. This is an own discretized walk bridge, not automatically a first-passage model.",
+    "inputs": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "forbidden": "No true queryN/T, actual query path, label-dependent horizon or path set; no new cohortfilter.",
+    "not_claimed": "No novelty claim, no expected MAE claim, no empirical gatepassed, and no equivalence to a reviewed publication.",
+    "required_instruments": [
+      "Independent exhaustive tiny-graph enumeration including loops and repeated destination visits.",
+      "Finite-difference gradient through normalization and duration distribution.",
+      "Proper cumulative distribution objective; do not optimize route likelihood and infer time gains without checking time.",
+      "Same fixed rawquery batch/order/singleton interface and unchanged fullrow count.",
+      "CPU/GPU feasibility before any population cache, then prospectively specified matched Train controls."
+    ],
+    "hazards": [
+      "Markov state misses driving direction/history.",
+      "State quantization and map coverage can corrupt transition supervision.",
+      "Finite-horizon conditioning can overfavor loops and end-of-horizon mass.",
+      "Route choice improvement need not improve duration prediction.",
+      "Full graph per-query dynamic programming may be too expensive; do not persist a huge dense transition bank."
+    ]
+  },
+  "active_experiment_unchanged": true,
+  "Test": "SEALED",
+  "primary_best_MAE_s": 129.99003446901307
+}

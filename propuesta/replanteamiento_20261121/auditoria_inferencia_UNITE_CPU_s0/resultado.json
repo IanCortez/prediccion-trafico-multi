@@ -1,0 +1,72 @@
+{
+  "complete": true,
+  "scope": "Releasedforward controlflow under deterministicconstant1persegment ETA stubs; no trainedUNITE or PortoMAE.",
+  "official_singleton": {
+    "predicted_segment_time_sums": [
+      1.0
+    ],
+    "generated_lengths": [
+      2
+    ]
+  },
+  "official_mixed_batch": {
+    "predicted_segment_time_sums": [
+      2.0,
+      3.0
+    ],
+    "generated_lengths": [
+      2,
+      4
+    ]
+  },
+  "originalquery_result_changes_with_batch_partner": true,
+  "actual_query_length_and_times_unused_in_ODbranch_in_thisprobe": true,
+  "minimal_no_globalbreak_control": {
+    "singleton": {
+      "predicted_segment_time_sums": [
+        2.0
+      ],
+      "generated_lengths": [
+        2
+      ]
+    },
+    "mixed_batch": {
+      "predicted_segment_time_sums": [
+        2.0,
+        4.0
+      ],
+      "generated_lengths": [
+        2,
+        4
+      ]
+    }
+  },
+  "finding": "Globalstop.all break can leave destinationETA at fixedlastslot49, outside the generated-length slice. A shortquery has its destinationETA included only when anotherquery keeps the loopalive.",
+  "inference_limits": [
+    "This is a concretealgorithmic invariancefailure in the releasedcontrolflow, not a remeasurement of publishedaccuracy or a claim about paperintent.",
+    "The fixed50ODhorizon and predictedactual_length mean thisaudit does NOT establish a truequeryN leakage.",
+    "Sourcegen_speed explicitlyreads traj_train_100; no allegation that its speedprofile useshelddata.",
+    "Removingglobalbreak is only an isolatingCPUcontrol, not a productionpatch. A Portoimplementation should finalize destinationETA perquery and use absorbingcompletedstates with correctboundedfallback.",
+    "Any proposedfullUNITEadaptation must rerun raw5/batch/reverse/singleton invariance before a benchmarkcomparison."
+  ],
+  "sources": {
+    "models_tte.py": "acd865d7120128615f33a06b1a1308fb13dc3b6b6c13e23ce2a9d439878c4d35",
+    "prepare_workspace.py": "561c834f066df8e5243d14a2f688c6eeb30a2d30335ea64f945155b8146a7595",
+    "infer_ODTTE.py": "464ce7f2b5739327fdf9c8cdda39cd0ff85c02c4d6b092326894bceb67a58476",
+    "LICENSE": "41ceef56bfd7f96e46a93b1b7bf5fe2abda203af87284b1deb139cfd846f10e7"
+  },
+  "URLs": [
+    "https://github.com/derekwtian/UNITE/blob/main/models/tte.py",
+    "https://github.com/derekwtian/UNITE/blob/main/infer_ODTTE.py",
+    "https://github.com/derekwtian/UNITE/blob/main/prepare_workspace.py"
+  ],
+  "source_license": "MIT; exactLICENSE retained.",
+  "source_module_executed": false,
+  "only_extracted_forward_executed_with_controlled_stubs": true,
+  "GPU_used": false,
+  "Porto_data_access": false,
+  "Validation": false,
+  "Test": false,
+  "seconds": 0.0925290584564209,
+  "own_verifier_sha256": "a26255523490e6a365b8945bbc923cd080e12bdd36b14d49a8ef020528dd4580"
+}

@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "fixed_epoch": 4,
+  "initial_parameters_sha256": "d33f5b25225e020ac9c8701fdfe24898770dd211c5d248154c3d22c6862d060b",
+  "arm": "observed",
+  "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\observed\\epoca_4.pt",
+  "sha256": "b4bbd8cf9ff990fd6c4e3009bfb345d2db895b62cf611e38984bd0c49791cf8d",
+  "metrics": {
+    "n": 10000,
+    "mae_s": 130.152,
+    "rmse_s": 205.39201542416393,
+    "mdae_s": 90.0
+  },
+  "probability_scores": {
+    "CRPS_s": 96.63120532957616,
+    "bin_NLL": 3.6883193492178252,
+    "coverage80": 0.8125,
+    "width80_s": 403.056
+  },
+  "predictions_sha256": "f589a4be3d34195663dd924760cfbf3a5fb981db9c790fb1223db8ac349fcb63",
+  "scope": "All10000heldTrain only, notprimaryValidation"
+}

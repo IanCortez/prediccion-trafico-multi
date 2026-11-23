@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "fit_only_n": 256,
+  "no_heldlabel_gradient": true,
+  "stable_loss": 0.09436339005180122,
+  "fit_median_MAE_s": 19.278671090005822,
+  "bin_NLL": 3.1116135784229093,
+  "all_parameter_gradients_finite": true,
+  "query_gradient_nonzero": true,
+  "optimizer_step_executed": false,
+  "checkpoint_parameters_unchanged": true,
+  "peak_allocated_MiB": 798.994140625,
+  "stable_solver_sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+  "model_sha256": "f0aa63d709dab867a77311f11a00393e5e966e475c20db4ffa82ee90549aff5a",
+  "code_sha256": "79c7a25219cb3899b34731060ba15004ffece989d95ce78cd6e559b84812a947",
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 6.178168773651123
+}

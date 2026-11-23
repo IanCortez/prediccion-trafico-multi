@@ -1,0 +1,64 @@
+{
+  "status": "FROZEN_BEFORE_ANY_NEW_HELDRESULT",
+  "architecture": "Four256wide3residual publicencoders, eightrelaxing2DStudentvelocity styles each,32latentstyles globallyintegrated; sourceGPS is targetsupervision only.",
+  "seed": 20261130,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "epochs": 4,
+  "batch": 256,
+  "updates_per_epoch": 3718,
+  "updates_per_arm": 14872,
+  "arms": [
+    "none",
+    "linear",
+    "observed"
+  ],
+  "controls": "Identicalfreshparameters/normalizers/fitrows/order/dropoutseed/optimizer in everyarm. Linearfitincrements correspond to(i/n,0), retain originalfitduration; observedincrements are the exact signed2D OD-coordinate projection ofFITGPS.",
+  "prediction_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "public_features": 206,
+  "prediction_trueN_or_trajectory": false,
+  "source_stream": "Reuse original42.6Mpoint Trainbank inGPU; explicitfitwhitelist only. No nearestpathprojection, sourceindex retrieval, sourcecount or newpopulationcache.",
+  "duration_support": "Original n=4..119, T=15n; everyquery uses all116candidate durations.",
+  "rho_range": [
+    -0.95,
+    0.995
+  ],
+  "df": 5,
+  "mean": "Relaxing mean with learnedinitial andcruise2Dvelocity, conditioned onlyonpublicq.",
+  "covariance": "Stationaryseparable AR temporalcorrelation and positive-definite2Dvelocityscale; sharedglobalStudent scale.",
+  "objective": "ProperordinalCRPS_seconds/600+.02originalbinNLL+.02conditionalStudentinteriorpathNLL/[2(n-1)] forlinear/observed; none hasauxweight0.",
+  "objective_limits": "Composite normalized scoring rule, not rawGPS jointlikelihood; globalStudent robustness is not independentGPS-noise estimation.",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "min_lr": 1e-05,
+    "schedule": "Perupdatecosine across exactly14872updates, fixed4completeepochs."
+  },
+  "precision": "FP32neural/highest/noTF32; Float64 analytic Student likelihoods and fixedgrid normalization.",
+  "selection": "Finalepoch4only; no heldmetrics before completedarm, no earlystop or posthocgrid.",
+  "gate": "Observed>=5s better than matchednone and storedCatBoost133.355393;>=2s better than matchedlinear; all exploratorydayCIupper<0.",
+  "scope": "ReusedchronologicalheldTrain only, oneinitialization; notprimaryValidation or confirmation.",
+  "resources": {
+    "GPU_fraction": 0.5,
+    "preflight_peak_MiB": 1461.95458984375,
+    "preflight_resident_MiB": 1126.5234375,
+    "large_newcache": false
+  },
+  "checks": [
+    "verificacion_puente_2d_CPU_s0/resultado.json",
+    "verificacion_coordenadas_2d_Train_s0/resultado.json",
+    "preflight_puente_2d_GPU_s0/resultado.json"
+  ],
+  "retention": "Save everycompletedmetric/prediction/config/source, includingMAE>131.06. Pilotweights transient until independentreplay and gate decision; protectedprimarymodels/TransferTraj unchanged.",
+  "Test": "SEALED",
+  "Validation": false,
+  "goal_confirmation_s": 73.5
+}

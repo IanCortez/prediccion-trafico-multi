@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "scope": "CompactFITsourcecounts and sourceclock only; probability/kernel/fallback proofs stillpending.",
+  "sourceparents": 4096,
+  "sourcepoints": 168110,
+  "original_sourceintervals": 164014,
+  "valid_auxiliaryintervals": 161199,
+  "source_clock15s_exact": true,
+  "no_crossparent_or_gap_compression": true,
+  "all_originalT_preserved": true,
+  "public_static_kinetic_state_count": 648144,
+  "unique_kinetic_contextpairs": 154997,
+  "unique_position_contextpairs": 148807,
+  "start_sourceobservations": 4046,
+  "stop_sourceobservations": 4048,
+  "nested_position_andkinetic_totalcounts_equal": true,
+  "wholeparentfold_countselection_intervention_passed": [
+    {
+      "excluded_fold": 0,
+      "remaining_unique_pairs": 122100,
+      "remaining_intervals": 127088
+    },
+    {
+      "excluded_fold": 1,
+      "remaining_unique_pairs": 124784,
+      "remaining_intervals": 129793
+    },
+    {
+      "excluded_fold": 2,
+      "remaining_unique_pairs": 123817,
+      "remaining_intervals": 128791
+    },
+    {
+      "excluded_fold": 3,
+      "remaining_unique_pairs": 125002,
+      "remaining_intervals": 129982
+    },
+    {
+      "excluded_fold": 4,
+      "remaining_unique_pairs": 124285,
+      "remaining_intervals": 129142
+    }
+  ],
+  "full_kernel_backoff_probability_intervention_pending": true,
+  "artifact_MiB": 0.7428808212280273,
+  "artifact_sha256": "5cac9ed5c3fae384121a80cae478be65d59103bf547517eff83d43d4c434b637",
+  "prefix_intervals": 38725335,
+  "naive_linear_compressed_scaling_MiB": 175.40154296054283,
+  "scaling_is_not_a_guarantee": "Fullsourcemerge may compress differently; enforce actual350MiBpersistentbudget, do not assume fromsample.",
+  "no_rawGPSbank_or_populationmapmatchingcache": true,
+  "source_dataset_sha256": "a65a846d01cfcaffe5612e02564a34f162ba4f2583fde709ef65517a79d2dc51",
+  "queryheld_MAE_computed": false,
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 0.18897581100463867,
+  "sources": {
+    "preparar_conteos_cineticos_muestra.py": "2e3e9800c23bbcf3a35e99590e36c56913d9864b31a503b0d19d2080e8b07d30",
+    "conteos_red_cinetica.py": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02"
+  }
+}

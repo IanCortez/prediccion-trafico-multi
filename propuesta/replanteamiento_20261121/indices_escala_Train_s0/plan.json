@@ -1,0 +1,14 @@
+{
+  "source": "Full existing eligibleprimaryTrainarriving before originalheldcutoff; originalTrainpilotheld10k unchanged.",
+  "fit_n": 951718,
+  "held_n": 10000,
+  "cutoff": 1396531073,
+  "trigger_verified": true,
+  "fold_exclusion_before_tree": true,
+  "sourceK": 2048,
+  "cache_max_MiB": 350,
+  "no_rawtoken_cache": true,
+  "all_original_primary_queries_filters_labels_preserved": true,
+  "Validation": false,
+  "Test": false
+}

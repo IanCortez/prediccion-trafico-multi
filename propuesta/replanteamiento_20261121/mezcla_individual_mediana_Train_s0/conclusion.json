@@ -1,0 +1,68 @@
+{
+  "complete": true,
+  "stable_metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 150.527837246984,
+      "rmse_s": 228.0209839151624,
+      "mdae_s": 99.26529338420164
+    },
+    "geometry": {
+      "n": 10000,
+      "mae_s": 148.3024711689051,
+      "rmse_s": 222.07585103373242,
+      "mdae_s": 99.19138362420028
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 145.29272973282897,
+      "rmse_s": 220.60100388912772,
+      "mdae_s": 94.8585811419959
+    }
+  },
+  "stable_comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -5.235107514155008,
+      "ci95_s": [
+        -7.36697236189564,
+        -2.975755519331708
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
+    },
+    "vs_geometryproxy": {
+      "delta_mae_s": -3.009741436076107,
+      "ci95_s": [
+        -5.30724718328779,
+        -0.6049158733515853
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": 11.937336940027066,
+      "ci95_s": [
+        9.828613867253983,
+        14.246400128147611
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
+    }
+  },
+  "practical_gate": false,
+  "generalization_gap_s": {
+    "none": 127.86527258548116,
+    "geometry": 126.32733481612762,
+    "observed": 120.12001090808475
+  },
+  "independent_full10000_and_raw65_replay_passed": true,
+  "original_fullquantiles_reproduced_exactly": true,
+  "precision_changed_MAE_max_s": 3.3564505486083362e-06,
+  "interpretation": "Historical time helps versus matchedneural/geometry controls, but all3models have verylarge train/heldgaps and lose to the storedtree reference. This is consistent with overfitting/temporalshift, not evidence of a universal informationbound.",
+  "next": "Activate the predeclared fullprecutoff951718Trainrow4epoch comparison after sourceconstruction checks, using stablemedian/NLL. Sameheld10k and same gates; no targetcohort/querychange.",
+  "original_and_stable_metrics_predictions_configs_sources_retained": true,
+  "negative_weights_retired_after_replay": true,
+  "goal": "ACTIVE",
+  "Test": "SEALED",
+  "Validation": false
+}

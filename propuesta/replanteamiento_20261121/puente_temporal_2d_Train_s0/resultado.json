@@ -1,0 +1,174 @@
+{
+  "complete": true,
+  "passed": false,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "fixed_epoch": 4,
+  "updates_per_arm": 14872,
+  "metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 130.872,
+      "rmse_s": 205.31542806131253,
+      "mdae_s": 90.0
+    },
+    "linear": {
+      "n": 10000,
+      "mae_s": 129.6165,
+      "rmse_s": 205.23820916193944,
+      "mdae_s": 75.0
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 130.152,
+      "rmse_s": 205.39201542416393,
+      "mdae_s": 90.0
+    }
+  },
+  "probability_scores": {
+    "none": {
+      "CRPS_s": 96.9560668953263,
+      "bin_NLL": 3.6863298274617655,
+      "coverage80": 0.8096,
+      "width80_s": 402.2265
+    },
+    "linear": {
+      "CRPS_s": 96.39619023104046,
+      "bin_NLL": 3.685232057736927,
+      "coverage80": 0.8059,
+      "width80_s": 396.0675
+    },
+    "observed": {
+      "CRPS_s": 96.63120532957616,
+      "bin_NLL": 3.6883193492178252,
+      "coverage80": 0.8125,
+      "width80_s": 403.056
+    }
+  },
+  "comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -0.72,
+      "ci95_s": [
+        -1.6627710745207873,
+        0.2560532079650332
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; oneinitialization, notprimaryValidation or confirmation."
+    },
+    "vs_linearcontrol": {
+      "delta_mae_s": 0.5355,
+      "ci95_s": [
+        -0.422732027700741,
+        1.5880261969135832
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; oneinitialization, notprimaryValidation or confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": -3.203392792801924,
+      "ci95_s": [
+        -5.095327376584588,
+        -0.7959470797110314
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedheldTrain; oneinitialization, notprimaryValidation or confirmation."
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "initial_parameters_sha256": "d33f5b25225e020ac9c8701fdfe24898770dd211c5d248154c3d22c6862d060b",
+  "all_matched_fresh_initializations": true,
+  "checkpoints": [
+    {
+      "arm": "none",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\none\\epoca_4.pt",
+      "sha256": "dd133307fe5152b8d202df08e2fab84555fc944270b6a43d6da3f72fb3cce48f",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 130.872,
+        "rmse_s": 205.31542806131253,
+        "mdae_s": 90.0
+      },
+      "probability_scores": {
+        "CRPS_s": 96.9560668953263,
+        "bin_NLL": 3.6863298274617655,
+        "coverage80": 0.8096,
+        "width80_s": 402.2265
+      },
+      "predictions_sha256": "e2d2f8bd1674c867f19509a997f043637aa849c3f89dfdcf4d221293ed09c021",
+      "scope": "All10000heldTrain only, notprimaryValidation"
+    },
+    {
+      "arm": "linear",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\linear\\epoca_4.pt",
+      "sha256": "4b92166b04842d5078190ef49abed2ac89cbd4360054a27bed0012042ef16b63",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 129.6165,
+        "rmse_s": 205.23820916193944,
+        "mdae_s": 75.0
+      },
+      "probability_scores": {
+        "CRPS_s": 96.39619023104046,
+        "bin_NLL": 3.685232057736927,
+        "coverage80": 0.8059,
+        "width80_s": 396.0675
+      },
+      "predictions_sha256": "3b344ffe191c5800c15b3bcf1a1ffd6e42be8780bcb5c0684ebce3e35de3232a",
+      "scope": "All10000heldTrain only, notprimaryValidation"
+    },
+    {
+      "arm": "observed",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\observed\\epoca_4.pt",
+      "sha256": "b4bbd8cf9ff990fd6c4e3009bfb345d2db895b62cf611e38984bd0c49791cf8d",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 130.152,
+        "rmse_s": 205.39201542416393,
+        "mdae_s": 90.0
+      },
+      "probability_scores": {
+        "CRPS_s": 96.63120532957616,
+        "bin_NLL": 3.6883193492178252,
+        "coverage80": 0.8125,
+        "width80_s": 403.056
+      },
+      "predictions_sha256": "f589a4be3d34195663dd924760cfbf3a5fb981db9c790fb1223db8ac349fcb63",
+      "scope": "All10000heldTrain only, notprimaryValidation"
+    }
+  ],
+  "independent_replay_pending": false,
+  "predictions_sha256": "cdd0f740def21f17b4a5d0c56560abd4d2b990551b9a02688cf1914323f1617f",
+  "constructor_sha256": "97e896ed4fc31b9aec5e0bc53841411c77fa478bfe57bbae5bf9d4fa3e9c49fc",
+  "sources": {
+    "entrenar_puente_2d_Train.py": "f4ea4b18e3da8c201247f8a330d3e4d04e0bb4a288d52f680a1835c94d32e23e",
+    "datos_puente_temporal_2d.py": "ec7b3023577908aa82876efa5e1ec649e6812671f2f52490189d713ac48bdf1b",
+    "modelo_puente_temporal_2d.py": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227",
+    "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+    "coordenadas_trayecto_2d.py": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025",
+    "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "protocol_sha256": "13a490e13bc44e825e61e9c8be7f1c43d7d3af76fec7625a937befbb03090da7",
+  "no_query_trueN_or_GPS_in_prediction": true,
+  "original_primary_cohort_queries_labels_unchanged": true,
+  "source_stream": "FITsupervision only; no newpopulationcache, no heldGPS used.",
+  "Test_access": false,
+  "Validation_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 1486.68954372406,
+  "next": "Independentall10000/raw65replay before retention/promotion. Samegates; no additionalepochs or parametergrid.",
+  "independent_replay_sha256": "57ba3938b08f0dccd697ba24aa9e7bc19a59b4eca18d8d1c454ad04180b1a106",
+  "retention_record": "retencion_resultado.json"
+}

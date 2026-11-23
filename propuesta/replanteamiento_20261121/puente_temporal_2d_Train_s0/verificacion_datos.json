@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "all_fit_bank_rows_labels_and_sourcearrivals_verified": true,
+  "all_fit_endpoint_maxerror_m": 0.00027024748758966443,
+  "public206_normalizers_and_anchors_fit951718only": true,
+  "no_new_largecache": true,
+  "original_bank_contains_allTrain_but_only_fit_whitelist_enters_auxiliary": true,
+  "prediction_function_has_no_GPS_or_trueN_argument": true,
+  "resident_MiB": 1126.5234375,
+  "constructor_sha256": "97e896ed4fc31b9aec5e0bc53841411c77fa478bfe57bbae5bf9d4fa3e9c49fc",
+  "seconds": 11.803361415863037
+}

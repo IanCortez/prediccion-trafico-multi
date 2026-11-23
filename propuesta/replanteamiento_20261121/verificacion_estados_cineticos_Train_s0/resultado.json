@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "scope": "4096precutoffFITstate/clock instrument; no predictiveMAE or newprimaryevaluation.",
+  "source_fitparents": 4096,
+  "source_fitpoints": 168110,
+  "source15secondintervals": 164014,
+  "clock_from_originalGPS_not_road_edgecount": true,
+  "all_original_T_labels_andqueries_preserved": true,
+  "all_sources_arrive_before1396531073": true,
+  "public_roadcell_maxwidth_m": 50,
+  "motion_classes": "Incoming15sdisplacement<=5m;5..150m;>150m. Initialclass inferredonlyfor completedFITsource, never supplied as actualqueryspeed.",
+  "public_directed_edges": 174112,
+  "public_spatial_states": 216048,
+  "theoretical_kinetic_states": 648144,
+  "sample_observed_kinetic_states": 32584,
+  "sample_unique_valid_transitions": 90200,
+  "valid_auxiliary_pair_fraction": 0.9828368310022315,
+  "source_projection_error_m_quantiles": [
+    5.6455850426573306e-05,
+    3.5847723484039307,
+    14.545709133148199,
+    55.175449714660665,
+    3304.390380859375
+  ],
+  "source_trips_with_HMMreset": 1183,
+  "source_total_HMMresets": 2029,
+  "nearest1_public_candidate_equals_source_HMM_start_fraction": 0.5546875,
+  "nearest1_public_candidate_equals_source_HMM_end_fraction": 0.50341796875,
+  "public_raw5_65_reverse_singleton_all6arrays_exact": true,
+  "no_actualqueryroadID_speed_N_T_supplied": true,
+  "source_endpoint_inference_limit": "HMMlabels depend on completedsourcepaths and are not annotatedgroundtruth. Queryattachments must integratepubliccandidates ratherthan use HMMfirst/last labels.",
+  "quality_limit": "Pairs with mapmatcherresetlike geometry/jump/error are excludedonlyfrom auxiliarytransitioncounts; their trips and originaldurationtargets remain in everyprimary/heldevaluation.",
+  "large_populationbank_written": false,
+  "artifact_MiB": 1.7055644989013672,
+  "artifact_sha256": "a65a846d01cfcaffe5612e02564a34f162ba4f2583fde709ef65517a79d2dc51",
+  "next": "Assess boundedprefixsourcecounts/sparseclock feasibility before any populationconstruction or timeexperiment.",
+  "Validation": false,
+  "Test": false,
+  "seconds": 6.821229934692383,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014\\manifiesto.json",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "sources": {
+    "verificar_estados_cineticos_Train.py": "1ed7953bc5fe9316146e6143bf3d9e4de44d28219a05313a9028e61cf6609447",
+    "estados_cineticos_15s.py": "5b67b5604968e53520ce1562697c8f603ae8080ec5fa21dd9b1bb9c64d717e5c",
+    "coordenadas_trayecto_2d.py": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+  },
+  "frozen_mapmatcher_sha256": "ae9f105ff04ce04cd19d27ac71b0f8c1a058f383aab603a70260be0fcb97c79b"
+}

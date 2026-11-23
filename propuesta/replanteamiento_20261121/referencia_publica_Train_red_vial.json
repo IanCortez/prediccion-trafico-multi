@@ -1,0 +1,28 @@
+{
+  "id": "control_familia_puente_2d_Train_s0",
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_familia_puente_2d_Train_s0\\epoca_4.pt",
+  "model_sha256": "3a427cf587fc2bf10bdf9d74646117f91a31f4aa5d3a542b83af97d9b9c8f770",
+  "bytes": 13643240,
+  "metrics": {
+    "n": 10000,
+    "mae_s": 129.6225,
+    "rmse_s": 204.45022010259612,
+    "mdae_s": 90.0
+  },
+  "scope": "Reused10000heldTrain; NOT primaryValidation.",
+  "reason": "ActivefixedTrain-only publicdensity reference for next roadstate instrument; no pretrainingonheldlabels.",
+  "inference_sources": {
+    "entrenar_control_familia_puente.py": "6fc16b7772c3ec4d7c988ba9b625f09b16b028eb6ae2d1c4b318a58c10e6fa8d",
+    "datos_control_familia_puente.py": "66f21074ba8f16f1ecef97cf7e42465872ec6c5f90ef00142bf0074de37ccaac",
+    "modelo_control_lognormal_puente.py": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f",
+    "modelo_puente_temporal_2d.py": "1def29e53f6cb175cc6fefefe36825d52764b8f8a372defc6f41005b48dca227",
+    "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a",
+    "puente_temporal_2d.py": "fce3f257b51bdacd6fca842430808e038b430b7cfb2450e9120d56557b965c2a",
+    "cuantiles_mezcla_balanceada.py": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "constructor_sha256": "db151a4be51fff77448241e2ec17ceab7559e400bac4502b1eae15bc62d004ea",
+  "independent_replay_sha256": "4177cf7f2622c5ebea62ce382d4dc83c5430b7833516a33232bb4b9c7fa2d41c",
+  "qualifies_by_primary131_06": false,
+  "primary_best_not_replaced": true
+}

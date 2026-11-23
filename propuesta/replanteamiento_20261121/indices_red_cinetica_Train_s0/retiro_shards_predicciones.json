@@ -1,0 +1,66 @@
+{
+  "merged_sha256": "4693c28b65f9ff1b6f979a8ceda2c7fb943da8b4af7ac6ecf0cb2042d488bac0",
+  "files": [
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold0.npz",
+      "sha256": "904bacabb4eb8cf9a15bf75fae0500e02af0a4674cedd1a7337de520dfd661e9",
+      "bytes": 3420230
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold1.npz",
+      "sha256": "6680fc0bd2572b0476b92de235f433c5ed7962b9dd8c70b4b700cd731bdaff1c",
+      "bytes": 3343697
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold2.npz",
+      "sha256": "ed8e4895c6aa6b544f4d459ee2afddf8e7148305d819b25f7b908b22d1457c1a",
+      "bytes": 3336159
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold3.npz",
+      "sha256": "bed2d78f3572b5c5f4b8b66f0697cc4dad78928d426fa7357c441a74b5135865",
+      "bytes": 3455266
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold4.npz",
+      "sha256": "8dd91ffada78feaf782a26acaffdfab577b1f45f43c6220c22ee72f599b323a5",
+      "bytes": 3259666
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\position_fold5.npz",
+      "sha256": "46bc4848af08e8eb58156e41046490274b62baf6de8367b08ef62e2b81faf10e",
+      "bytes": 4217036
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold0.npz",
+      "sha256": "b36f1574a201093169e4bb66adb96815bb475c1365504e84d2dd478a7c1f4d3d",
+      "bytes": 3405780
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold1.npz",
+      "sha256": "1cb5dabe5906206d31f1e902ec57f1c326a2cad3aa224c1224e28fab96c7ba68",
+      "bytes": 3329204
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold2.npz",
+      "sha256": "d8d94247de4778ebe1598b208fcd74e013e82f0877291e8b15a30011365cb83c",
+      "bytes": 3321788
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold3.npz",
+      "sha256": "0f106bd4d6c0d057b28faa478bcc15110176fcb602c25c28eebf65322b3ebaf7",
+      "bytes": 3440338
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold4.npz",
+      "sha256": "f7759f1b3979353139fe13eaf754b565bc9c3f0494d625eb1cbfb7a1a6e05b39",
+      "bytes": 3246104
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\indices_red_cinetica_Train_s0\\kinetic_fold5.npz",
+      "sha256": "874054f2adca56f49b33f8b9ae59821918e1c2ece516e90f90fa4348c5be61e2",
+      "bytes": 4201006
+    }
+  ],
+  "reason": "Exactmergedprobabilityarchive verified; temporaryfoldcopies only."
+}

@@ -1,0 +1,358 @@
+{
+  "passed": true,
+  "all_registered_completed_results_retained": true,
+  "MAE_threshold_excludes_no_results": true,
+  "completed_prediction_archives": 9,
+  "worse_than131_06_outputs": 15,
+  "records": [
+    {
+      "id": "piloto_transferencia_intervalos_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\piloto_transferencia_intervalos_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "f00f740c51b60ffe7d0088e04836372c5e856528fd236434bc7cbca79435d344",
+      "bytes": 355102,
+      "statistics": {
+        "baseline": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 133.51143159502624,
+            "rmse_s": 208.755103301834,
+            "mdae_s": 87.30363051134873
+          },
+          "above131_06": true
+        },
+        "pseudo_label_control": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 133.97135480969416,
+            "rmse_s": 208.94729424245128,
+            "mdae_s": 87.96544732194846
+          },
+          "above131_06": true
+        },
+        "observed_intervals": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 133.78532839152166,
+            "rmse_s": 208.6285604302447,
+            "mdae_s": 87.10693977825676
+          },
+          "above131_06": true
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true,
+      "configuration_files": {
+        "plan.json": "7fca39a09237247039f436c154a9a91d33d3f6a3f83f405c5a7ec630dfe1ed40"
+      }
+    },
+    {
+      "id": "piloto_cdf_ordenada_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\piloto_cdf_ordenada_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "406cf123e6940425083f47be302b613cdfd30e5787e7a1c49e955fab3dedeade",
+      "bytes": 353377,
+      "statistics": {
+        "baseline": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 133.12132830774271,
+            "rmse_s": 207.87403694947727,
+            "mdae_s": 87.4259202361759
+          },
+          "above131_06": true
+        },
+        "geometry_CDF_control": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 133.2102889006977,
+            "rmse_s": 208.02315487163767,
+            "mdae_s": 88.04771144890765
+          },
+          "above131_06": true
+        },
+        "historical_CDF": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 130.95561327932944,
+            "rmse_s": 204.7312065263863,
+            "mdae_s": 85.15720841493476
+          },
+          "above131_06": false
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true,
+      "configuration_files": {
+        "plan.json": "041ec9f8464915787775deebb9a3e544317d9d03143e78c9fa1affe00e8fa82d"
+      }
+    },
+    {
+      "id": "mezcla_individual_mediana_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "357078dded38f0eaf6100228c84fabce310a17524f2723912b2417a7ba0145b9",
+      "bytes": 556308,
+      "statistics": {
+        "none": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 150.52783389053346,
+            "rmse_s": 228.0209804087434,
+            "mdae_s": 99.26541137695312
+          },
+          "above131_06": true
+        },
+        "geometry": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 148.3024686935425,
+            "rmse_s": 222.07585047459122,
+            "mdae_s": 99.19143676757812
+          },
+          "above131_06": true
+        },
+        "observed": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 145.29272927398682,
+            "rmse_s": 220.6010040719524,
+            "mdae_s": 94.85848999023438
+          },
+          "above131_06": true
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true,
+      "configuration_files": {
+        "protocolo.json": "1c4fecd380c9c0d90f402b19eb1fa5b5f78c26eca22dc28283455b3a4bb34905"
+      }
+    },
+    {
+      "id": "mezcla_individual_mediana_Train_s0",
+      "variant": "stable_sameparameters",
+      "predictions": "propuesta\\replanteamiento_20261121\\mezcla_individual_mediana_Train_s0\\predicciones_balanceadas_held_Train.npz",
+      "sha256": "04a41f9e8cc1c16b05102ff5cbd92cdd42846ea93a4e9645a2dea706032bc524",
+      "bytes": 1032025,
+      "statistics": {
+        "none": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 150.527837246984,
+            "rmse_s": 228.0209839151624,
+            "mdae_s": 99.26529338420164
+          },
+          "above131_06": true
+        },
+        "geometry": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 148.3024711689051,
+            "rmse_s": 222.07585103373242,
+            "mdae_s": 99.19138362420028
+          },
+          "above131_06": true
+        },
+        "observed": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 145.29272973282897,
+            "rmse_s": 220.60100388912772,
+            "mdae_s": 94.8585811419959
+          },
+          "above131_06": true
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true
+    },
+    {
+      "id": "puente_temporal_2d_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\puente_temporal_2d_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "cdd0f740def21f17b4a5d0c56560abd4d2b990551b9a02688cf1914323f1617f",
+      "bytes": 273631,
+      "statistics": {
+        "none": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 130.872,
+            "rmse_s": 205.31542806131253,
+            "mdae_s": 90.0
+          },
+          "above131_06": false
+        },
+        "linear": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 129.6165,
+            "rmse_s": 205.23820916193944,
+            "mdae_s": 75.0
+          },
+          "above131_06": false
+        },
+        "observed": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 130.152,
+            "rmse_s": 205.39201542416393,
+            "mdae_s": 90.0
+          },
+          "above131_06": false
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true,
+      "configuration_files": {
+        "protocolo.json": "13a490e13bc44e825e61e9c8be7f1c43d7d3af76fec7625a937befbb03090da7"
+      }
+    },
+    {
+      "id": "mezcla_individual_escala_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "29a7d0901262e8e3505ee1e1ab072d6e9e473ccd1190b0174cba5771d1f46b6e",
+      "bytes": 1036383,
+      "statistics": {
+        "none": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 130.029068616394,
+            "rmse_s": 206.64043797818798,
+            "mdae_s": 82.44181900359021
+          },
+          "above131_06": false
+        },
+        "geometry": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 127.47522133363444,
+            "rmse_s": 203.58823253886115,
+            "mdae_s": 79.93759840028235
+          },
+          "above131_06": false
+        },
+        "observed": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 126.43457480872028,
+            "rmse_s": 201.71803356306447,
+            "mdae_s": 79.80957667097621
+          },
+          "above131_06": false
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true
+    },
+    {
+      "id": "control_familia_puente_2d_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\control_familia_puente_2d_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "1a419e95688a70692abc198059f186cd6611ca054ada87df3310b8ef01796741",
+      "bytes": 4276117,
+      "statistics": {
+        "matched_lognormal_control": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 129.6225,
+            "rmse_s": 204.45022010259612,
+            "mdae_s": 90.0
+          },
+          "above131_06": false
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true,
+      "configuration_files": {
+        "protocolo.json": "d31b20c69d679a34fe89fd26e7e6fc34e6606c9bc768e4eb112fbe83e2429ac6"
+      }
+    },
+    {
+      "id": "red_cinetica_Train_s0",
+      "variant": "original",
+      "predictions": "propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\predicciones_held_Train.npz",
+      "sha256": "ab58ef555ae4b92d68f0abc664ab9bbd6020d4ba80753adcd5704d3a466bbe39",
+      "bytes": 94989,
+      "statistics": {
+        "position": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 132.6075,
+            "rmse_s": 207.62194609433752,
+            "mdae_s": 90.0
+          },
+          "above131_06": true
+        },
+        "kinetic": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 131.985,
+            "rmse_s": 206.73929234666545,
+            "mdae_s": 90.0
+          },
+          "above131_06": true
+        },
+        "reference": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 129.6225,
+            "rmse_s": 204.45022010259612,
+            "mdae_s": 90.0
+          },
+          "above131_06": false
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true,
+      "configuration_files": {
+        "protocolo.json": "36d57c42bd37dd6f59154ea91b55b377a40718d2aebb1b8dba0747f8940dfb71"
+      }
+    },
+    {
+      "id": "red_cinetica_Train_s0",
+      "variant": "postfixed_rawgraph_diagnostic",
+      "predictions": "propuesta\\replanteamiento_20261121\\red_cinetica_Train_s0\\predicciones_red_sin_compuerta_held_Train.npz",
+      "sha256": "f248426c3e4d20b514549055e1ea909d04dba41e4674ce1e8ab14a7fe70fe4a8",
+      "bytes": 84579,
+      "statistics": {
+        "position_graph": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 280.248,
+            "rmse_s": 334.63571237989527,
+            "mdae_s": 255.0
+          },
+          "above131_06": true
+        },
+        "kinetic_graph": {
+          "metrics": {
+            "n": 10000,
+            "mae_s": 268.386,
+            "rmse_s": 321.0656007734245,
+            "mdae_s": 247.5
+          },
+          "above131_06": true
+        }
+      },
+      "all_metrics_recomputed_exact": true,
+      "scope": "Reused heldTrain; not primaryValidation or Test",
+      "retained": true
+    }
+  ],
+  "current_family": "complete_all_three_arms",
+  "weights": "Separate retention policy; no weight or cache deletion by this audit.",
+  "existing_primary_index": "registro_consolidado_auditado.json",
+  "Test": "SEALED",
+  "Validation": false,
+  "actual_data_files_accessed": [],
+  "source_sha256": "526cdd915a5561ba01f93156935aff8270499649e0a1599f072ad209d9d1b019"
+}

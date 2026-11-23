@@ -1,0 +1,150 @@
+{
+  "complete": true,
+  "passed": false,
+  "fit_n": 951718,
+  "held_n": 10000,
+  "fixed_epoch": 4,
+  "updates_per_arm": 14872,
+  "metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 130.029068616394,
+      "rmse_s": 206.64043797818798,
+      "mdae_s": 82.44181900359021
+    },
+    "geometry": {
+      "n": 10000,
+      "mae_s": 127.47522133363444,
+      "rmse_s": 203.58823253886115,
+      "mdae_s": 79.93759840028235
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 126.43457480872028,
+      "rmse_s": 201.71803356306447,
+      "mdae_s": 79.80957667097621
+    }
+  },
+  "comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -3.594493807673697,
+      "ci95_s": [
+        -5.268396641179562,
+        -1.946390956631599
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain; not primaryValidation or confirmation."
+    },
+    "vs_geometryproxy": {
+      "delta_mae_s": -1.0406465249141543,
+      "ci95_s": [
+        -2.26420224560822,
+        0.25368579528457547
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain; not primaryValidation or confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": -6.920817984081627,
+      "ci95_s": [
+        -8.661278488845214,
+        -5.051269410006214
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedchronologicalheldTrain; not primaryValidation or confirmation."
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc",
+  "matched_initial_parameters": true,
+  "checkpoints": [
+    {
+      "arm": "none",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\none\\epoca_4.pt",
+      "sha256": "017a30a06b5b8b8cc426302d24d509ca5ccdcdb2bfcf435080f5da005f4ea6e6",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 130.029068616394,
+        "rmse_s": 206.64043797818798,
+        "mdae_s": 82.44181900359021
+      },
+      "scope": "HeldTrain only, not primaryValidation",
+      "predictions_sha256": "75e2e344e99d17ccc244dbee6b359e9863864985b61f7d79a01cbd33c082d6e3"
+    },
+    {
+      "arm": "geometry",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\geometry\\epoca_4.pt",
+      "sha256": "104686cb681a587380997afe715ee3f02a9006638cb8679c8b1056b13358fe7d",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 127.47522133363444,
+        "rmse_s": 203.58823253886115,
+        "mdae_s": 79.93759840028235
+      },
+      "scope": "HeldTrain only, not primaryValidation",
+      "predictions_sha256": "af949074c018499b8b781b512b9c3c1b3c261c67e311ec73cfb5a79673d73990"
+    },
+    {
+      "arm": "observed",
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\mezcla_individual_escala_Train_s0\\observed\\epoca_4.pt",
+      "sha256": "5e22db26c807cee5984b7b8027a52421b0b9848f181345f01229e9c7faa2825e",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 126.43457480872028,
+        "rmse_s": 201.71803356306447,
+        "mdae_s": 79.80957667097621
+      },
+      "scope": "HeldTrain only, not primaryValidation",
+      "predictions_sha256": "38699e1c63c87bb00b2aaa478a0ef5775d09321e61611e4b28c5b08c17cd0247"
+    }
+  ],
+  "independent_replay_pending": false,
+  "predictions_sha256": "29a7d0901262e8e3505ee1e1ab072d6e9e473ccd1190b0174cba5771d1f46b6e",
+  "constructor_sha256": "309b93b88e533f8aa498a9ebdf49b2efe4b04ddcf0f998255c35399322a653a5",
+  "sourceindices_sha256": "22c1eb78475ae1ac5ee95dd878f88f1cba4ada68313363bfaa1186ce72eb9c85",
+  "sources": {
+    "entrenar_mezcla_escala_Train.py": "30d1e2561cfdc694f4978e5d9054a0585a4049d55033e8ea0103889b75c826c1",
+    "datos_mezcla_escala_Train.py": "61df8f25284df1efffa103edda5d697b867a7c928b00afd20055a88edce7932d",
+    "modelo_mezcla_individual_mediana.py": "4566e0256d92eceeb2d7da2913b377695eb3ac7422c2ce0ec97a2b31ba5c6b6a",
+    "cuantiles_mezcla_balanceada.py": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+    "tokens_transferencia_arco.py": "3ee02cef48b3b990d3c2bbd0d495178f78bcbe7f1aeb3ed04b4853a6e00aacd6",
+    "tokens_subtrayectos_arco.py": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014",
+    "tokens_subtrayectos.py": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+    "datos_mezcla_individual_Train.py": "0dba3a66c94b2393d6974cfd256d74c7bca6850a53d01c4e09e54980507ee1d0",
+    "recuperar_fuentes_ordenadas.py": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "original_queries_labels_and_targetcohort_unchanged": true,
+  "no_queryroute_N_T": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 4055.743800163269,
+  "next": "Independent fullheld/raw5 replay before retention/promotion. No extraepochs or threshold changes after outcome.",
+  "independent_replay_sha256": "6deec4d02b9a622813fda7ff81df56d6f2f5c598a30ca8324c480867ff74def8",
+  "retention_record": "retencion_resultado.json",
+  "sourcecache_retired": true
+}

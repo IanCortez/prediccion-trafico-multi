@@ -1,0 +1,1 @@
+{"stage": "metadata_selection_before_coordinates", "error": "Eligible field stores parentindices, not a full-length booleanmask; correctedconstructor without changing seed or sample.", "no_completed_metric_lost": true}

@@ -1,0 +1,62 @@
+"""Out-of-fit Train-only privileged distribution teacher; not an OD benchmark."""
+from base_replanteo import *
+from features import features
+from catboost import CatBoostRegressor
+from scipy.special import ndtr
+import shutil
+access=deny_test();start=time.time()
+run=OUT/'piloto_maestro_probabilistico_s0';assert not run.exists();run.mkdir()
+plan=dict(scope='Train-only teacher calibration instrument, not primary OD evaluation',
+ hypothesis='An out-of-fit teacher using actual path geometry may provide less noisy soft duration distributions for a later OD-only student.',
+ information='Teacher privileged geometry is allowed ONLY for Train soft-target creation. Eventual student forward keeps five raw OD/departure fields. No teacher query-time path, type, duration or length input to student.',
+ contrast='Matched probabilistic CatBoost teachers: deterministic raw OD/calendar features versus same features plus observed path length and14 shape deviations. No actual point count or max GPS step.',
+ split='Sample200000 embargoe-safe Train rows; fit UTCweek modulo5!=0; reserve modulo5==0 for teachers. No pretrained shared representation.',
+ selection='1000 fixed trees, depth7,LR0.07,L2=5,seed20261122,CPU2threads, no held early stopping.',
+ distribution='RMSEWithUncertainty on log seconds. RawFormulaVal=(mu, log sigma), sigma clipped[.05,1.5] before 116-bin discretization on original60..1785 support.',
+ reference_docs='https://catboost.ai/docs/en/concepts/loss-functions-regression#RMSEWithUncertainty',
+ gate='Require improvement versus unprivileged teacher in both held duration NLL and15-second CRPS with upper day-bootstrap CI<0, and80% interval coverage between.72 and.90.',
+ caveat='Privileged teacher gain does not prove OD student gain, does not achieve73.5s and is not an irreducible-error bound. Later full Train soft targets require whole-fold exclusion for every row.',
+ no_GPU=True,no_Validation_or_Test=True,no_CDF_bank_on_disk=True)
+write(run/'plan.json',plan);shutil.copy2(__file__,run/Path(__file__).name)
+d=dict(np.load(DATA/'train_x.npz'));eligible=np.load(OUT/'datos_semi_markov/runs_train.npz')['trip_train_index']
+ii=np.sort(np.random.default_rng(20261122).choice(eligible,200000,replace=False));part={k:v[ii] for k,v in d.items()}
+X,names=features(part,enriched=False,calendar=True)
+assert all(not n.startswith('call_') for n in names)
+changed=dict(part);changed['call']=np.full(len(ii),'A');xx,nn=features(changed,enriched=False,calendar=True);assert names==nn and np.array_equal(X,xx)
+y=np.load(DATA/'train_y.npy')[ii];fold=(part['timestamp']//(7*86400))%5;fit=fold!=0;held=fold==0
+geo=dict(np.load(DATA/'geometria_train.npz'));pos=np.searchsorted(geo['row'],part['row'])
+assert (pos<len(geo['row'])).all() and np.array_equal(geo['row'][pos],part['row'])
+observed=geo['X'][pos,:15].copy();assert observed.shape==(len(ii),15)
+valid=np.isfinite(observed).all(1);observed[~valid]=0
+priv=np.column_stack([X,np.log1p(np.maximum(observed[:,0],0)),observed[:,0]/1000,observed[:,1:],valid.astype(float)]).astype(np.float32)
+assert np.isfinite(priv).all()
+del d,geo,xx
+grid=np.arange(60,1786,15,dtype=np.float64);edges=np.log(np.arange(67.5,1785,15,dtype=np.float64))
+label=((y[held]-60)/15).astype(int);truth=y[held].astype(np.float64);stamp=part['timestamp'][held]
+def delta_interval(a,b):
+ delta=np.asarray(a,float)-np.asarray(b,float);days=stamp//86400;_,inv=np.unique(days,return_inverse=True)
+ sums=np.bincount(inv,weights=delta);counts=np.bincount(inv);rg=np.random.default_rng(1729);draw=rg.integers(len(counts),size=(3000,len(counts)))
+ return dict(delta=float(delta.mean()),CI95=np.quantile(sums[draw].sum(1)/counts[draw].sum(1),[.025,.975]).tolist(),days=len(counts),scope='Exploratory held Train weeks, no shared pretrained representation, no Validation use')
+scores={};parameters={};predictions={};results={}
+for name,F in [('OD_only',X),('privileged_geometry',priv)]:
+ model=CatBoostRegressor(iterations=1000,depth=7,learning_rate=.07,l2_leaf_reg=5,loss_function='RMSEWithUncertainty',random_seed=20261122,thread_count=2,allow_writing_files=False,verbose=False,task_type='CPU')
+ model.fit(F[fit],np.log(y[fit].astype(np.float64)))
+ raw=model.predict(F[held],prediction_type='RawFormulaVal');assert raw.shape==(len(truth),2) and np.isfinite(raw).all()
+ # Official objective defines the second raw approximation as log(sigma).
+ sigma=np.exp(raw[:,1]).clip(.05,1.5)
+ cdf=ndtr((edges[None,:]-raw[:,:1])/sigma[:,None]);prob=np.diff(np.column_stack([np.zeros(len(truth)),cdf,np.ones(len(truth))]),axis=1)
+ prob=np.maximum(prob,1e-9);prob/=prob.sum(1,keepdims=True);cdf=prob.cumsum(1)
+ nll=-np.log(prob[np.arange(len(truth)),label]);crps=15*((cdf-(grid[None,:]>=truth[:,None])).square().sum(1) if hasattr(cdf,'square') else 15*np.square(cdf-(grid[None,:]>=truth[:,None])).sum(1)
+ q=np.column_stack([grid[(cdf<level).sum(1).clip(0,115)] for level in [.1,.5,.9]])
+ coverage=float(np.mean((truth>=q[:,0])&(truth<=q[:,2])))
+ parameters[name]=raw;predictions[name]=q[:,1];scores[name]=dict(NLL=nll,CRPS_s=crps)
+ model.save_model(str(run/(name+'.cbm')))
+ results[name]=dict(duration=metric(truth,q[:,1]),NLL=float(nll.mean()),CRPS_s=float(crps.mean()),coverage80=coverage,mean_interval80_s=float(np.mean(q[:,2]-q[:,0])),sigma_clipped_fraction=float(np.mean((np.exp(raw[:,1])<.05)|(np.exp(raw[:,1])>1.5))),sigma_mean=float(sigma.mean()),model_sha256=sha(run/(name+'.cbm')))
+ print(json.dumps(dict(stage='teacher_held_Train',name=name,**results[name],seconds=time.time()-start)),flush=True)
+a='privileged_geometry';b='OD_only'
+nll_delta=delta_interval(scores[a]['NLL'],scores[b]['NLL']);crps_delta=delta_interval(scores[a]['CRPS_s'],scores[b]['CRPS_s'])
+worth=bool(nll_delta['CI95'][1]<0 and crps_delta['CI95'][1]<0 and .72<=results[a]['coverage80']<=.90)
+np.savez_compressed(run/'held_Train_parametros.npz',row=part['row'][held],timestamp=stamp,true=truth,OD_only=parameters[b],privileged_geometry=parameters[a],OD_only_pred=predictions[b],privileged_pred=predictions[a])
+result=dict(scope=plan['scope'],results=results,privileged_minus_OD_NLL=nll_delta,privileged_minus_OD_CRPS_s=crps_delta,worth_building_full_crossfit_teacher=worth,fit_n=int(fit.sum()),held_n=int(held.sum()),geometry_valid_n=int(valid.sum()),all_sampled_rows_retained=True,no_pretrained_shared_representation=True,teacher_has_observed_geometry=True,primary_student_gain_not_tested=True,Test_access=False,Validation_access=False,actual_files_accessed=sorted(access),source_sha256=sha(__file__),parameters_sha256=sha(run/'held_Train_parametros.npz'),seconds=time.time()-start,next='If gate favorable, generate actual whole-fold-excluded Train teacher parameters; any future student remains OD-only and needs a matched full-cohort experiment. Do not launch another GPU while current studies run.')
+assert all('validation' not in p.lower() and 'test' not in p.lower() for p in access)
+write(run/'resultado.json',result);print(json.dumps(result),flush=True)

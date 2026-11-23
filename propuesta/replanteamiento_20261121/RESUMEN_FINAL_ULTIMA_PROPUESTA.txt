@@ -1,0 +1,94 @@
+CIERRE DE LA ÚLTIMA PROPUESTA — TESIS DE IAN
+
+La propuesta de red vial con estados de movimiento se implementó, evaluó y reprodujo. Se cierra por indicación del usuario. No mejoró la referencia y no se alcanzó la meta de MAE menor de 73,5 segundos.
+
+RESULTADOS DE LA COMPARACIÓN FINAL
+
+Las tres alternativas se evaluaron sobre las mismas 10.000 consultas de reserva dentro de Train:
+
+Modelo                                      MAE (s)       RMSE (s)
+Referencia pública congelada                129,6225      204,4502
+Red vial con posición y compuerta           132,6075      207,6219
+Red vial con posición, movimiento y compuerta 131,9850      206,7393
+
+La variante de posición empeora 2,985 s frente a la referencia; intervalo del 95 % por día: [2,089; 3,956] s.
+La variante con movimiento empeora 2,3625 s frente a la referencia; intervalo: [1,446; 3,375] s.
+Movimiento frente a posición mejora 0,6225 s; intervalo: [-1,510; 0,241] s. Esa diferencia no respalda el beneficio mínimo de 2 s fijado previamente.
+
+Los criterios registrados exigían una mejora de al menos 5 s frente a la referencia y, para movimiento, otros 2 s frente al control de posición. Ninguna variante los cumplió. Se mantuvieron las 80 épocas fijadas y no se ajustaron parámetros después de conocer los errores.
+
+Este conjunto de reserva se ha reutilizado en la investigación. Los intervalos son exploratorios, con una sola inicialización y remuestreo de 22 días; no constituyen una confirmación independiente.
+
+MEJOR RESULTADO PRIMARIO CONSERVADO
+
+El mejor modelo anterior mantiene MAE de 129,990034 s sobre las 127.941 consultas de validación primaria.
+Los números del piloto anterior no se comparan directamente con ese MAE porque corresponden a conjuntos diferentes.
+La nueva arquitectura no pasó a validación primaria al fallar sus criterios previos. Test permanece cerrado.
+
+La cifra de 73,5 s de TransferTraj corresponde a otra cohorte procesada de Porto, de 323.481 viajes, que no está disponible aquí. Es una meta externa y no una comparación directa entre cohortes idénticas.
+
+QUÉ SE IMPLEMENTÓ
+
+El estado representa una calle dirigida, una celda de posición de hasta 50 m y una de tres clases de movimiento, definidas por el desplazamiento observado en intervalos de 15 s de los viajes históricos.
+Se conservó el reloj original: cada transición corresponde a dos muestras GPS consecutivas, separadas por 15 s. No se sustituyó ese tiempo por un salto entre calles ni se comprimieron huecos.
+La inferencia suma rutas y duraciones bajo el modelo probabilístico, con incertidumbre en la asociación de origen y destino a las calles.
+
+Solo entran a la consulta origen, destino y hora. No se suministran su duración real, número de puntos, recorrido, velocidad ni calle real.
+Se conservaron todas las consultas y sus etiquetas originales. Las 76 consultas sin soporte de red reciben exactamente la referencia.
+
+Los conteos proceden de 951.718 viajes históricos que terminan antes del corte temporal de reserva.
+Para las consultas de ajuste, se excluye toda su partición semanal antes de construir los conteos, normalizadores, priors y soportes de red.
+Las dos compuertas se ajustaron con 40.000 consultas, los mismos 206 atributos públicos, la misma inicialización y 12.560 actualizaciones cada una.
+
+QUÉ FALLÓ
+
+La red aislada obtuvo MAE de 280,248 s para posición y 268,386 s para movimiento. Sobreestimó la duración media en 216,987 s y 203,136 s, respectivamente.
+Tener soporte en el 99,24 % de las consultas no se tradujo en precisión.
+
+Las compuertas aprendieron a dar muy poco peso a la red: pesos medios de aproximadamente 2,28 % y 2,08 %, con medianas prácticamente nulas. Aun así, las mezclas empeoraron la referencia.
+Agregar memoria de movimiento redujo parte del error de la red aislada, pero no produjo una mejora útil del predictor final.
+
+Una limitación de la formulación es que las transiciones dependen de calle, posición, movimiento y hora, sin aprender una política específica para cada destino. Condicionar la posición final no recupera todas las decisiones de ruta. Esto es una explicación plausible, no una causa aislada experimentalmente.
+La asociación al mapa usa trayectorias históricas completas y no equivale a una anotación humana de la calle correcta.
+
+Hay además una asimetría en el ajuste: la referencia pública se entrenó con los 951.718 viajes, incluidos los 40.000 usados para ajustar la compuerta; la red sí excluye la partición semanal de cada consulta de ajuste. Esto puede sesgar la compuerta hacia la referencia. Las etiquetas de las 10.000 consultas de reserva no intervienen en ninguno de esos ajustes.
+
+Las pruebas acreditan coherencia numérica, conservación temporal y exclusión de fuentes. No acreditan una mejora predictiva. Esta arquitectura no queda respaldada como mejora final de la tesis y no reemplaza al mejor modelo primario anterior.
+
+VERIFICACIÓN Y CONSERVACIÓN
+
+La reproducción independiente recalculó las distribuciones de red de las 10.000 consultas desde sus cinco campos públicos, ambas compuertas, los cuantiles y las estadísticas.
+Las predicciones puntuales coincidieron exactamente. Las pequeñas diferencias numéricas de probabilidad se documentan explícitamente.
+También se comprobó el programa de inferencia con una consulta real sin suministrar su duración.
+
+Se conservaron métricas, predicciones, probabilidades, configuraciones, código y conclusiones, incluidos los resultados superiores a 131,06 s.
+Además del registro histórico, la auditoría de pilotos recientes verificó 9 archivos de predicciones, que contienen 15 resultados superiores a ese umbral.
+Los datos originales, el mejor modelo y sus dependencias permanecen intactos. Los diez archivos conservados de predicciones de TransferTraj mantienen sus huellas originales.
+
+Se retiraron las copias temporales de conteos y predicciones después de verificar sus archivos finales.
+Los conteos necesarios para inferencia ocupan 94,05 MiB y los datos compactos para reproducir esta comparación, 102,15 MiB.
+El proyecto completo se midió en aproximadamente 17,52 GiB. No quedan entrenamientos ni experimentos ejecutándose.
+
+ARCHIVOS PARA CONSULTA
+
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\red_cinetica_Train_s0\resultado.json
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\red_cinetica_Train_s0\predicciones_held_Train.npz
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\red_cinetica_Train_s0\diagnostico_sin_compuerta.json
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\red_cinetica_Train_s0\predicciones_red_sin_compuerta_held_Train.npz
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\red_cinetica_Train_s0\reproduccion_independiente.json
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\red_cinetica_Train_s0\conclusion.json
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\protocolo_red_cinetica_Train.json
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\conservacion_pilotos_recientes.json
+E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\inventario_conservacion.json
+
+REPRODUCCIÓN
+
+Desde E:\UTEC\Tesis\TesisIan, cargar el entorno:
+. 'E:\UTEC\Tesis\TesisIan\auditoria\entorno.ps1'
+
+Reproducir las predicciones conservadas sin reentrenar ni abrir Test:
+& $TaskPython -B 'E:\UTEC\Tesis\TesisIan\propuesta\replanteamiento_20261121\reproducir_red_cinetica_Train.py'
+
+El programa inferir_red_cinetica_raw5.py permite consultas nuevas con --queries archivoJSON, --output archivoNPZ y --arm position o kinetic. Todos los archivos deben estar dentro del proyecto. Sus pesos corresponden al piloto y no sustituyen automáticamente al mejor modelo primario.
+
+La búsqueda de nuevas alternativas queda detenida por indicación del usuario.

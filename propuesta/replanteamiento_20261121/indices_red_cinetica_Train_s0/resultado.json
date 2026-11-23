@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "fitqueries": 40000,
+  "heldqueries": 10000,
+  "sourceprefix_n": 951718,
+  "statistics": {
+    "position": [
+      {
+        "kind": "position",
+        "excluded_fold": 0,
+        "queries": 8144,
+        "supported": 8053,
+        "compact_nodes": 78296,
+        "global_nnz": 857923,
+        "seconds": 107.16865134239197,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "904bacabb4eb8cf9a15bf75fae0500e02af0a4674cedd1a7337de520dfd661e9"
+      },
+      {
+        "kind": "position",
+        "excluded_fold": 1,
+        "queries": 7944,
+        "supported": 7877,
+        "compact_nodes": 78884,
+        "global_nnz": 864364,
+        "seconds": 105.31151390075684,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "6680fc0bd2572b0476b92de235f433c5ed7962b9dd8c70b4b700cd731bdaff1c"
+      },
+      {
+        "kind": "position",
+        "excluded_fold": 2,
+        "queries": 7952,
+        "supported": 7862,
+        "compact_nodes": 78786,
+        "global_nnz": 862371,
+        "seconds": 104.6822898387909,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "ed8e4895c6aa6b544f4d459ee2afddf8e7148305d819b25f7b908b22d1457c1a"
+      },
+      {
+        "kind": "position",
+        "excluded_fold": 3,
+        "queries": 8205,
+        "supported": 8135,
+        "compact_nodes": 78805,
+        "global_nnz": 862460,
+        "seconds": 113.36905765533447,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "bed2d78f3572b5c5f4b8b66f0697cc4dad78928d426fa7357c441a74b5135865"
+      },
+      {
+        "kind": "position",
+        "excluded_fold": 4,
+        "queries": 7755,
+        "supported": 7686,
+        "compact_nodes": 78694,
+        "global_nnz": 863934,
+        "seconds": 106.66559648513794,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "8dd91ffada78feaf782a26acaffdfab577b1f45f43c6220c22ee72f599b323a5"
+      },
+      {
+        "kind": "position",
+        "excluded_fold": 5,
+        "queries": 10000,
+        "supported": 9924,
+        "compact_nodes": 82180,
+        "global_nnz": 937041,
+        "seconds": 128.91777062416077,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "46bc4848af08e8eb58156e41046490274b62baf6de8367b08ef62e2b81faf10e"
+      }
+    ],
+    "kinetic": [
+      {
+        "kind": "kinetic",
+        "excluded_fold": 0,
+        "queries": 8144,
+        "supported": 8053,
+        "compact_nodes": 158853,
+        "global_nnz": 1486796,
+        "seconds": 172.25469160079956,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "b36f1574a201093169e4bb66adb96815bb475c1365504e84d2dd478a7c1f4d3d"
+      },
+      {
+        "kind": "kinetic",
+        "excluded_fold": 1,
+        "queries": 7944,
+        "supported": 7877,
+        "compact_nodes": 159939,
+        "global_nnz": 1498754,
+        "seconds": 168.57735323905945,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "1cb5dabe5906206d31f1e902ec57f1c326a2cad3aa224c1224e28fab96c7ba68"
+      },
+      {
+        "kind": "kinetic",
+        "excluded_fold": 2,
+        "queries": 7952,
+        "supported": 7862,
+        "compact_nodes": 159841,
+        "global_nnz": 1494663,
+        "seconds": 169.3531677722931,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "d8d94247de4778ebe1598b208fcd74e013e82f0877291e8b15a30011365cb83c"
+      },
+      {
+        "kind": "kinetic",
+        "excluded_fold": 3,
+        "queries": 8205,
+        "supported": 8135,
+        "compact_nodes": 159947,
+        "global_nnz": 1494164,
+        "seconds": 172.64578247070312,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "0f106bd4d6c0d057b28faa478bcc15110176fcb602c25c28eebf65322b3ebaf7"
+      },
+      {
+        "kind": "kinetic",
+        "excluded_fold": 4,
+        "queries": 7755,
+        "supported": 7686,
+        "compact_nodes": 159669,
+        "global_nnz": 1499020,
+        "seconds": 164.63850593566895,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "f7759f1b3979353139fe13eaf754b565bc9c3f0494d625eb1cbfb7a1a6e05b39"
+      },
+      {
+        "kind": "kinetic",
+        "excluded_fold": 5,
+        "queries": 10000,
+        "supported": 9924,
+        "compact_nodes": 167457,
+        "global_nnz": 1637274,
+        "seconds": 206.22773385047913,
+        "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+        "sha256": "874054f2adca56f49b33f8b9ae59821918e1c2ece516e90f90fa4348c5be61e2"
+      }
+    ]
+  },
+  "graph_support": {
+    "position": {
+      "fit": 39613,
+      "held": 9924
+    },
+    "kinetic": {
+      "fit": 39613,
+      "held": 9924
+    }
+  },
+  "reference_exact_replayed_onheld": true,
+  "raw65_public206_exact": true,
+  "queryfields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "original_pointbank_open_attempts": [],
+  "no_actualqueryroad_speed_N_T_or_path": true,
+  "queryT_read": false,
+  "query_MAE_computed": false,
+  "wholeparentfold_removed_before_allkernelconstruction": true,
+  "helduses_all_past_fit_only": true,
+  "all50000_originalrows_retained": true,
+  "unsupported_rule": "Finalmixture exactlyp0; never removequery.",
+  "artifact_sha256": "4693c28b65f9ff1b6f979a8ceda2c7fb943da8b4af7ac6ecf0cb2042d488bac0",
+  "artifact_MiB": 102.1453742980957,
+  "sourcecounts_sha256": "13c96f9418fac965782c65000873a8e6468fe7cd4c84d80082e184b95f6a7477",
+  "peak_persistent_counts_plusfeatures_MiB": 236.48283672332764,
+  "peak_GPU_allocated_MiB": 635.62548828125,
+  "seconds": 1736.8863644599915,
+  "Validation": false,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "sources": {
+    "preparar_predicciones_red_cinetica_Train.py": "f6b4bf310d0734d499d298cedd486b57e19aee251a0768a5f21c69f7819824a7",
+    "operador_red_cinetica.py": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950",
+    "operador_red_cinetica_GPU.py": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0",
+    "conteos_red_cinetica.py": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02",
+    "modelo_control_lognormal_puente.py": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f"
+  }
+}

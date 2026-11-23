@@ -1,0 +1,7 @@
+{
+  "scope": "Before graph queryT or predictiveMAE. Diagnose CUDAFloat64 CSRcolumn arithmetic; independentCPUoperator remains exactorderinvariant.",
+  "tolerance_weight_absolute": 1e-14,
+  "tolerance_normalized_probability_absolute": 1e-10,
+  "require_same_support_flags": true,
+  "reason": "BitwiseGPUcolumn invariance failed; magnitude and CPUagreement must be reported, never relabelled exact."
+}

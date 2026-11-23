@@ -1,0 +1,6 @@
+{
+  "reason": "ExistingreferenceGPUquantile cumsum does not support strictdeterministicflag in Torch2.5.1. Restore referenceoriginalexecutionmode onlyduringreferenceprediction; require exactall10000savedheld logprob/quantile replay before graph. Re-enable deterministicflag for sparsegraph.",
+  "graphforward_started": false,
+  "graph_MAE_computed": false,
+  "protocol_changed": false
+}

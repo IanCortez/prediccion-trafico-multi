@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "queries": 64,
+  "compact_nodes": 158853,
+  "global_nnz": 1486796,
+  "CPU_first3_max_probability_error": 5.551115123125783e-17,
+  "reverse17_singleton_max_probability_error": 5.551115123125783e-17,
+  "peak_allocated_MiB": 551.4111328125,
+  "peak_reserved_MiB": 612.0,
+  "seconds": 11.0281822681427,
+  "no_queryT_read": true,
+  "no_MAE": true
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "Train arrays are ordered chronologically, not by rawCSV row. Replaced unsorted searchsorted with sorted row-to-index mapping and retained exact identityassertion.",
+  "failed_before_GPU_forward": true,
+  "queryT_or_MAE_read": false,
+  "previous_source_sha256": "cad41de6740aa4975d0b5a838df56f86c5cdcad6dfb4404966ec614d1970df74"
+}

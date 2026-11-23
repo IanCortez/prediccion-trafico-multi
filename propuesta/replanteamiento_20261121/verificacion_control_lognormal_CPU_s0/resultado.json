@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "scope": "Syntheticdensity/controlinitialization only; no currentheldmetrics.",
+  "scipy_originalbin_probability_maxerror": 4.822531263215524e-16,
+  "finite_difference_gradient_maxerror": 4.185674029599795e-11,
+  "all_four_querybackbones_exactmatched": true,
+  "bridge_initial_parameters_sha256": "d33f5b25225e020ac9c8701fdfe24898770dd211c5d248154c3d22c6862d060b",
+  "fixed116folded_originalbins": true,
+  "normalized": true,
+  "GPU_used": false,
+  "Validation": false,
+  "Test": false,
+  "seconds": 0.1783444881439209,
+  "sources": {
+    "modelo_control_lognormal_puente.py": "e831b9771500204674be0ebd6712c2b02ada944f0a353c2df7ee8d591e8b5a8f",
+    "verificar_control_lognormal_CPU.py": "fc990ab9696ec70f1b38f1ccf299579ed65f1870cd256e1b084355fb7c822a24",
+    "cuantiles_mezcla_balanceada.py": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65"
+  }
+}

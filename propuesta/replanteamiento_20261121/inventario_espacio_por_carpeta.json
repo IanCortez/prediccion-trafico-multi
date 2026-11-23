@@ -1,0 +1,47 @@
+[
+  {
+    "path": "propuesta",
+    "GiB": 9.117804870009422,
+    "files": 2739
+  },
+  {
+    "path": ".conda-env",
+    "GiB": 5.5813947366550565,
+    "files": 30298
+  },
+  {
+    "path": "tesis",
+    "GiB": 1.9676991207525134,
+    "files": 99
+  },
+  {
+    "path": "publicacion_github_20261122",
+    "GiB": 0.5364364581182599,
+    "files": 3523
+  },
+  {
+    "path": "auditoria",
+    "GiB": 0.04666471015661955,
+    "files": 96
+  },
+  {
+    "path": ".runtime",
+    "GiB": 0.014330344274640083,
+    "files": 181
+  },
+  {
+    "path": "codigo-ian",
+    "GiB": 0.0004761824384331703,
+    "files": 45
+  },
+  {
+    "path": "README.md",
+    "GiB": 2.9709190130233765e-07,
+    "files": 1
+  },
+  {
+    "path": "conda",
+    "GiB": 0.0,
+    "files": 1
+  }
+]

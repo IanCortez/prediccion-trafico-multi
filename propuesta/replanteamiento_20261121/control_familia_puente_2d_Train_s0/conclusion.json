@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "secondary_gate_passed": false,
+  "metrics": {
+    "n": 10000,
+    "mae_s": 129.6225,
+    "rmse_s": 204.45022010259612,
+    "mdae_s": 90.0
+  },
+  "same_query_backbone_initialization_proven": true,
+  "independent_replay_passed": true,
+  "preserved_as_activeprefix_publicreference": true,
+  "primary_best_not_replaced": true,
+  "Test": "SEALED"
+}

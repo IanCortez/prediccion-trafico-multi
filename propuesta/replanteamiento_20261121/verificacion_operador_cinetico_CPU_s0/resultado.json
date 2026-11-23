@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "scope": "Independenttinygraph probabilities, clock andfullsourcefold exclusion; no PortoMAE.",
+  "dense_timevarying_weight_maxerror": 8.56259507742152e-15,
+  "exhaustive_walk_weight_maxerror": 3.469446951953614e-17,
+  "explicit_terminal_walks": 602,
+  "repeated_destination_terminalwalks": 359,
+  "excludedfold_pair_start_stop_globalbackoff_and_catalogue_intervention_exact": true,
+  "kinetic_andposition_interventions_passed": true,
+  "singlemotionclass_collapse_exact": true,
+  "raw5_reverse_partner_singleton_exact": true,
+  "unsupported_rows_retained": true,
+  "privatequeryfields_rejected": true,
+  "bounded4contextLRU": true,
+  "all_conditional_probability_sums_one": true,
+  "no_true_queryN_or_path": true,
+  "GPU_used": false,
+  "Portodata_used": false,
+  "Validation": false,
+  "Test": false,
+  "seconds": 0.020000457763671875,
+  "sources": {
+    "operador_red_cinetica.py": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950",
+    "verificar_operador_cinetico_CPU.py": "a104e78da6101c53d608d8cdc77dbb42b254ecff23ff4c1876806672f9b18808",
+    "conteos_red_cinetica.py": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02",
+    "coordenadas_trayecto_2d.py": "2270868646c9ea0003cb97110269dca9ee4e7159a23a1cbdd95c7fea3248d025"
+  }
+}

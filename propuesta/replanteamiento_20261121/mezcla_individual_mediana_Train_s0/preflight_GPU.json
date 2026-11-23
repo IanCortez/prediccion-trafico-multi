@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "resident_all50000_inputs": true,
+  "train_batch": 256,
+  "finite_two_step_gradients": true,
+  "query_backbone_gradient_nonzero": true,
+  "inference_canonical256_order_singleton_exact": true,
+  "peak_allocated_MiB": 819.1318359375,
+  "initial_neural_sha256": "20fe6949254ad5ce2c17990917930da4ac5fc8737ffda7d8957d13c77ca394cc"
+}

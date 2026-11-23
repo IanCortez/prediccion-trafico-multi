@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "scope": "Independentfull10000originalquantile replay and raw65fivefield probes, all3fixed80epochcheckpoints.",
+  "arms": {
+    "none": {
+      "original_full10000_quantiles_maxerror_s": 0.0,
+      "raw65_sourceindices_and_tokens_exact": true,
+      "stable_raw65_maxerror_s": 0.0,
+      "stable_reverse17_singleton_exact": true,
+      "stable_vs_naive_median_difference_s": {
+        "mean": 0.00014364452862743207,
+        "max": 0.007629577305579005,
+        "p99": 0.00047133636710839315,
+        "n_above1ms": 13
+      },
+      "stable_metrics": {
+        "n": 10000,
+        "mae_s": 150.527837246984,
+        "rmse_s": 228.0209839151624,
+        "mdae_s": 99.26529338420164
+      },
+      "checkpoint_sha256": "bfe9b318aff16be19068bc51ca8569c6ee2b78a2297468c2b4c0b49d5afd4f2d"
+    },
+    "geometry": {
+      "original_full10000_quantiles_maxerror_s": 0.0,
+      "raw65_sourceindices_and_tokens_exact": true,
+      "stable_raw65_maxerror_s": 0.0,
+      "stable_reverse17_singleton_exact": true,
+      "stable_vs_naive_median_difference_s": {
+        "mean": 0.00014149050361983982,
+        "max": 0.010146735182956945,
+        "p99": 0.0004681286192055725,
+        "n_above1ms": 6
+      },
+      "stable_metrics": {
+        "n": 10000,
+        "mae_s": 148.3024711689051,
+        "rmse_s": 222.07585103373242,
+        "mdae_s": 99.19138362420028
+      },
+      "checkpoint_sha256": "a269971a46ca056d950446867d0c53577ddedbaa30fe2ac786337436e7958c99"
+    },
+    "observed": {
+      "original_full10000_quantiles_maxerror_s": 0.0,
+      "raw65_sourceindices_and_tokens_exact": true,
+      "stable_raw65_maxerror_s": 0.0,
+      "stable_reverse17_singleton_exact": true,
+      "stable_vs_naive_median_difference_s": {
+        "mean": 0.00014011874558153182,
+        "max": 0.012757912604797639,
+        "p99": 0.00046623557933912746,
+        "n_above1ms": 7
+      },
+      "stable_metrics": {
+        "n": 10000,
+        "mae_s": 145.29272973282897,
+        "rmse_s": 220.60100388912772,
+        "mdae_s": 94.8585811419959
+      },
+      "checkpoint_sha256": "f0aa63d709dab867a77311f11a00393e5e966e475c20db4ffa82ee90549aff5a"
+    }
+  },
+  "stable_metrics": {
+    "none": {
+      "n": 10000,
+      "mae_s": 150.527837246984,
+      "rmse_s": 228.0209839151624,
+      "mdae_s": 99.26529338420164
+    },
+    "geometry": {
+      "n": 10000,
+      "mae_s": 148.3024711689051,
+      "rmse_s": 222.07585103373242,
+      "mdae_s": 99.19138362420028
+    },
+    "observed": {
+      "n": 10000,
+      "mae_s": 145.29272973282897,
+      "rmse_s": 220.60100388912772,
+      "mdae_s": 94.8585811419959
+    }
+  },
+  "stable_comparisons": {
+    "vs_neuralbaseline": {
+      "delta_mae_s": -5.235107514155008,
+      "ci95_s": [
+        -7.36697236189564,
+        -2.975755519331708
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
+    },
+    "vs_geometryproxy": {
+      "delta_mae_s": -3.009741436076107,
+      "ci95_s": [
+        -5.30724718328779,
+        -0.6049158733515853
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
+    },
+    "vs_CatBoostreference": {
+      "delta_mae_s": 11.937336940027066,
+      "ci95_s": [
+        9.828613867253983,
+        14.246400128147611
+      ],
+      "days": 22,
+      "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
+    }
+  },
+  "stable_practical_gate_passed": false,
+  "stable_method": "Signed logtail residual withFloat64, normalizedweights; adversarial symmetry and analyticfinite-difference checks passed before observedarmoutcome. No checkpoint retraining/selection or changedlabels.",
+  "stable_predictions_sha256": "04a41f9e8cc1c16b05102ff5cbd92cdd42846ea93a4e9645a2dea706032bc524",
+  "stable_code_sha256": "4e4ec514b96d4649dc2ab9ea33ce50e9cb5ee5b22ce1c3d172b70cda385bba65",
+  "replay_source_sha256": "68f93f359ae14d56efb77dd1cd8f7e84f5fe3bade261d2462b35b97daac249ee",
+  "all_completed_original_metrics_and_predictions_retained": true,
+  "raw_API": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "sourcearrival_and_weekcutoff_preserved": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 41.07987380027771
+}

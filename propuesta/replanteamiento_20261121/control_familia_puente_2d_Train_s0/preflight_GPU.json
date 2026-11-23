@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "all_publicX_resident": true,
+  "finite_two_step_gradients": true,
+  "query_gradient_nonzero": true,
+  "raw65public206_exact": true,
+  "canonical256_reverse17_singleton_exact": true,
+  "peak_allocated_MiB": 1078.7958984375,
+  "initial_control_parameters_sha256": "730167aec49d0c8601aa475b55dadc3ee1988792a4a04582b825ef1e66fc1ef0",
+  "bridge_querybackbones_initial_exactmatched": true,
+  "no_originalGPSpointbank": true
+}

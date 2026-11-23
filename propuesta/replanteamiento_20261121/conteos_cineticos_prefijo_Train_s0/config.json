@@ -1,0 +1,17 @@
+{
+  "fit_n": 951718,
+  "batchparents": 4096,
+  "cap_MiB": 350,
+  "cutoff": 1396531073,
+  "source_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "sources": {
+    "construir_conteos_cineticos_Train.py": "71ae7b7572179701ae08499b1dda41a92f3f8d0b4794446eba18025ba167b0ec",
+    "conteos_red_cinetica.py": "1171685a12cbe962022fcab9d0144623f32ad1ee24a4d4ff90a3d97878010b02",
+    "estados_cineticos_15s.py": "5b67b5604968e53520ce1562697c8f603ae8080ec5fa21dd9b1bb9c64d717e5c",
+    "operador_red_cinetica.py": "524c15f81a641efcbd0d858e38e8cc11c915cd9957bb7e4d405d01565b5b7950",
+    "operador_red_cinetica_GPU.py": "250df243a722a5f500778b4913965654308327aed4d9c4d8735cc24071cdf0f0"
+  },
+  "heldsourceparents_used": 0,
+  "Validation": false,
+  "Test": false
+}

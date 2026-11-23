@@ -2,8 +2,8 @@
   "status_source": "CONTINUIDAD_OPERATIVA.json",
   "protected_best_source": "nuevo_mejor_verificado.json",
   "architecture_document": "propuesta/ARQUITECTURA.md",
-  "current_experiment": null,
-  "current_protocol": null,
+  "current_experiment": "mezcla_individual_escala_Train_s0",
+  "current_protocol": "mezcla_individual_escala_Train_s0/protocolo.json",
   "protected_best": {
     "n": 127941,
     "mae_s": 129.99003446901307,
@@ -17,9 +17,9 @@
     "d_lat",
     "timestamp"
   ],
-  "Test": "sealed",
+  "Test": "SEALED",
   "goal": "ACTIVE",
-  "checkpoint_kind": "Bestprimary129.990034 unchanged. Correctedorderedsource retrieval verified; compressedCDF pilotclosed, independent-source representation is next hypothesis.",
+  "checkpoint_kind": "Freshstreamed4member x72component sourcekernel, all951718precutoffTrainfit, original10000held; no primarycandidate yet.",
   "previous_joint_result": {
     "n": 127941,
     "mae_s": 130.6859802565245,
@@ -35,63 +35,106 @@
   },
   "last_closed_timepilot": {
     "complete": true,
-    "metrics": {
-      "baseline": {
+    "stable_metrics": {
+      "none": {
         "n": 10000,
-        "mae_s": 133.12132830774271,
-        "rmse_s": 207.87403694947727,
-        "mdae_s": 87.4259202361759
+        "mae_s": 150.527837246984,
+        "rmse_s": 228.0209839151624,
+        "mdae_s": 99.26529338420164
       },
-      "geometry_CDF_control": {
+      "geometry": {
         "n": 10000,
-        "mae_s": 133.2102889006977,
-        "rmse_s": 208.02315487163767,
-        "mdae_s": 88.04771144890765
+        "mae_s": 148.3024711689051,
+        "rmse_s": 222.07585103373242,
+        "mdae_s": 99.19138362420028
       },
-      "historical_CDF": {
+      "observed": {
         "n": 10000,
-        "mae_s": 130.95561327932944,
-        "rmse_s": 204.7312065263863,
-        "mdae_s": 85.15720841493476
+        "mae_s": 145.29272973282897,
+        "rmse_s": 220.60100388912772,
+        "mdae_s": 94.8585811419959
       }
     },
-    "comparisons": {
-      "vs_baseline": {
-        "delta_mae_s": -2.165715028413262,
+    "stable_comparisons": {
+      "vs_neuralbaseline": {
+        "delta_mae_s": -5.235107514155008,
         "ci95_s": [
-          -3.1204807983084932,
-          -1.2210834304191487
+          -7.36697236189564,
+          -2.975755519331708
         ],
         "days": 22,
-        "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+        "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
       },
-      "vs_geometry_control": {
-        "delta_mae_s": -2.2546756213682455,
+      "vs_geometryproxy": {
+        "delta_mae_s": -3.009741436076107,
         "ci95_s": [
-          -3.2856413536275073,
-          -1.2769160197220275
+          -5.30724718328779,
+          -0.6049158733515853
         ],
         "days": 22,
-        "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+        "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
       },
-      "vs_reference": {
-        "delta_mae_s": -2.3997795134724753,
+      "vs_CatBoostreference": {
+        "delta_mae_s": 11.937336940027066,
         "ci95_s": [
-          -3.428234025711694,
-          -1.3288934055073705
+          9.828613867253983,
+          14.246400128147611
         ],
         "days": 22,
-        "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+        "interpretation": "Exploratory reusedTrain, stable mathematically equivalent quantile evaluation of identical frozenparameters; no confirmation."
       }
     },
-    "declared5s_expansion_gate": false,
-    "observed_time_signal_vs_geometry_control_s": -2.2546756213682455,
-    "decision": "No fullprimarytrial for this CDF recipe; no K/grid/sourcecount/tree sweep and no posthoc threshold reduction.",
-    "interpretation": "Historical source-time labels improve this reusedTrainpilot by about2.25s versus geometry-derived times. This is useful signal but below the declared5s expansion requirement versus baseline/reference.",
-    "retention": "All completed metrics/predictions/config/exactsource/compactindices retained. Trainpilot130.955613 is not a qualifying fullprimaryValidation model under131.06; its weights were not persisted.",
-    "limit": "No primaryValidation/confirmation MAE gain and no claim that73.5is reached. Small repeatedlyreusedTraininstrument, one modelseed.",
-    "proposed_next": "Study information-preserving individual-source conditional distributions rather than compressedCDF summaries, first on Train with the same predeclared5s criterion. No primary trial without a new positive gate.",
+    "practical_gate": false,
+    "generalization_gap_s": {
+      "none": 127.86527258548116,
+      "geometry": 126.32733481612762,
+      "observed": 120.12001090808475
+    },
+    "independent_full10000_and_raw65_replay_passed": true,
+    "original_fullquantiles_reproduced_exactly": true,
+    "precision_changed_MAE_max_s": 3.3564505486083362e-06,
+    "interpretation": "Historical time helps versus matchedneural/geometry controls, but all3models have verylarge train/heldgaps and lose to the storedtree reference. This is consistent with overfitting/temporalshift, not evidence of a universal informationbound.",
+    "next": "Activate the predeclared fullprecutoff951718Trainrow4epoch comparison after sourceconstruction checks, using stablemedian/NLL. Sameheld10k and same gates; no targetcohort/querychange.",
+    "original_and_stable_metrics_predictions_configs_sources_retained": true,
+    "negative_weights_retired_after_replay": true,
+    "goal": "ACTIVE",
     "Test": "SEALED",
-    "goal": "ACTIVE"
-  }
+    "Validation": false
+  },
+  "current_trial": {
+    "experiment": "red_cinetica_15s_en_desarrollo",
+    "status": "FITSTATE_CLOCK_AND_RESOURCE_INSTRUMENT_NEXT",
+    "live_worker": null,
+    "Test": "SEALED",
+    "plan": "plan_red_cinetica_15s_Train.json",
+    "stage": "4096SOURCECOUNTS_CLOCK_AND_FOLDSELECTION_PASSED; CPUSPARSEOPERATOR_NEXT",
+    "operator_specification": "especificacion_operador_red_cinetica.json"
+  },
+  "next": [
+    "Implement especificacion_operador_red_cinetica.json onverified4096counts. Sourcekeys0.743MiB, roughfullprefix175.4MiB is not aguarantee. Need fullkernel/start-stop/globalbackoff foldintervention and tinygraph/raw65 probabilityproofs BEFORE any graphMAE.",
+    "Read plan_red_cinetica_15s_Train.json.4096sourceMM/15sclock proofpassed:168110points,98.2837% auxiliarypairsvalid, medianprojection3.58m; sourceHMMendpointdirection differs nearest1 roughlyhalf the time. Do not treat HMM as annotatedtruth or supply truequeryroadIDs.",
+    "Next implementcompact sourcecounts on thissample, publicmeasurement overpossible roadstates, exactfinitehorizon sparseforward. Tinygraph/fold-intervention/raw65/reverse/singleton/resourceproofs before populationbuilder or graphMAE.",
+    "Keep actualclock15s, originalT andallcohortrows. Sourcequalitymasks applyonlyauxiliarytransitions and mustnot join across gaps. Wholeparentweekfold excluded before all sourcecount normalizers/backoffs.",
+    "No fullpoint mapmatchingcache, graphcounts/features cap350MiB. Retainedpublicprefixlognormal reference129.6225s in referencia_publica_Train_red_vial.json; never use fullprimarybest as heldTrainpretrainedbaseline.",
+    "Student3weights intentionallyretired after exactreplay, all4outcomes and116logprobs retained. Preserve43qualifiedprimarymodels, originalbest129.990034,10TransferTraj.73.5goalunmet/Testsealed."
+  ],
+  "next_architecture_design": "plan_red_cinetica_15s_Train.json",
+  "secondary_head_control": {
+    "status": "COMPLETE_NEGATIVE_EXACTREPLAYED",
+    "id": "control_familia_puente_2d_Train_s0",
+    "metrics": {
+      "n": 10000,
+      "mae_s": 129.6225,
+      "rmse_s": 204.45022010259612,
+      "mdae_s": 90.0
+    },
+    "reference": "referencia_publica_Train_red_vial.json"
+  },
+  "last_closed_trial": "puente_temporal_2d_Train_s0",
+  "status": "COMPLETE_AND_CLOSED_BY_USER",
+  "final_experiment": "red_cinetica_Train_s0/resultado.json",
+  "final_conclusion": "red_cinetica_Train_s0/conclusion.json",
+  "independent_replay": "red_cinetica_Train_s0/reproduccion_independiente.json",
+  "next_actions": [],
+  "new_families_authorized": false
 }

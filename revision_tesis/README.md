@@ -1,5 +1,13 @@
 # Guía para Ian: revisión de resultados y modelos
 
+## Estado final del 23 de noviembre
+
+**Investigación cerrada. Mejor MAE de Validation: 129,990034 s. Meta de 73,5 s no alcanzada;
+Test sin evaluar.** Leer primero [CIERRE_FINAL.md](CIERRE_FINAL.md) para distinguir el resultado
+principal de los pilotos y conocer las conclusiones negativas de la última red vial.
+Los apartados siguientes conservan la guía de las entregas de desarrollo.
+
+
 Instantánea de investigación del 22 de noviembre de 2026. Los archivos originales src/ se mantienen.
 La rama aporta código, pesos retenidos, métricas, predicciones, protocolos y evidencia de resultados
 negativos. Las búsquedas usaron Validation de forma adaptativa: las cifras no son confirmación de Test.
