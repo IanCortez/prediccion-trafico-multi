@@ -1,16 +1,14 @@
 {
   "active": [
     {
-      "experiment": "prefijo_nativo_s0/evaluacion_acelerada",
-      "pid": 35928,
-      "session": 46924,
+      "experiment": "riesgo_total_s0",
+      "pid": 34284,
       "device": "GPU",
+      "supervisor_pid": 29428,
       "max_GPU_jobs": 1,
-      "training_finished": true,
-      "epochs": 10,
-      "steps": 79960,
-      "checkpoint_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
-      "do_not_restart_training": true
+      "objective": "Conditional full-trip CRPS on generated complete paths plus teacher regularization",
+      "GPU_gradient_gate_required": true,
+      "do_not_modify_running_sources": true
     }
   ],
   "goal": "active",

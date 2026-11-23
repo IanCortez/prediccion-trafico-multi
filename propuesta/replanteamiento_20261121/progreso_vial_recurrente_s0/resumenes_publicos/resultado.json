@@ -1,0 +1,58 @@
+{
+  "complete": true,
+  "outputs": {
+    "train": {
+      "n": 1023529,
+      "sha256": "d21010d34cf40374834642a60b7da50dce3e25e09e780edc24534971c8f901a6",
+      "shape": [
+        1023529,
+        30
+      ],
+      "bytes": 104125583,
+      "omitted_pair_mass_mean": 0.21985717117786407,
+      "weighted_tail_mass_mean": 0.10046792030334473,
+      "weighted_completion_mass_mean": 0.6796748042106628,
+      "weighted_steps_mean": 47.09956359863281,
+      "style_eta_dispersion_s_mean": 3.884978771209717,
+      "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+      "no_actual_query_route_or_length_or_T": true,
+      "seconds": 1737.2325439453125
+    },
+    "validation": {
+      "n": 127941,
+      "sha256": "c9f63ec75abf86384041a01c2294e1bebc0a5a75481b50dcdb9e2c88e3a7b6d3",
+      "shape": [
+        127941,
+        30
+      ],
+      "bytes": 13004318,
+      "omitted_pair_mass_mean": 0.21871593594551086,
+      "weighted_tail_mass_mean": 0.10909253358840942,
+      "weighted_completion_mass_mean": 0.6721914410591125,
+      "weighted_steps_mean": 49.10812759399414,
+      "style_eta_dispersion_s_mean": 4.180037021636963,
+      "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+      "no_actual_query_route_or_length_or_T": true,
+      "seconds": 218.00854659080505
+    }
+  },
+  "total_MiB": 111.70377826690674,
+  "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+  "source_manifest_sha256": "433f1bb1c9bcf89a01b9605bc96a22e1a88ecb1b336317a8b77afc851862e4c6",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "no_private_teacher_constructed": true,
+  "Test": false,
+  "seconds": 1961.390837430954
+}

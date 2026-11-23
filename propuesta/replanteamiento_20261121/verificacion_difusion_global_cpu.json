@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "CPU_only": true,
+  "actual_neural_gradients_finite_nonzero": true,
+  "actual_neural_full32step_sampler_order_singleton_consistent": true,
+  "every_original_time_label_supervised_when_geometry_missing": true,
+  "primary_time_loss_unweighted_all_queries": true,
+  "reverse_process_recovers_known_public_test_function_seconds": true,
+  "reverse_singleton_exact": true,
+  "sample64_prefix_matches_sample256_noise": true,
+  "no_private_query_parameters": true,
+  "fixed32_global_denoising_steps_independentofGPS_N": true,
+  "not_a_real_performance_score": true,
+  "model_source_sha256": "a87c5f69a7927a864e769ea8176306558e411ba151eb356ffb689c2d47d2ed61",
+  "source_sha256": "c6968cefbb8d333132d052859d5c99b608187fa9151a9dce0e071115bf81c867",
+  "Test": false
+}

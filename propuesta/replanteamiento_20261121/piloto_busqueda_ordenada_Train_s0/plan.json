@@ -1,0 +1,12 @@
+{
+  "scope": "Outcome-free geometrycoverage on512reusedheldTrainqueries, not MAE.",
+  "trigger": "Extra22.16Mpoints worsened matchedK support:40queries lost vs15gained, demonstrating candidatecompetition in this finite procedure.",
+  "algorithm": "Use same2048pointneighbors perendpoint only to discover unionofhistoricalparents. Within each discoveredparent solve the exact minimum endpointRSS over ordered60..1785s intervals with valid sourceOD/speed. Sliding-window minimum with exact constrained fallback.",
+  "original": "Independent endpoint-topK intersection can discard a source even when another point in that sameparent provides a good ordered match.",
+  "data": "Original pointbank only, sourcearrivalsbefore heldTrain cutoff, no additionalGPSbank or newdata used inthis algorithmtest.",
+  "gate": ">=5percentagepoints more queries with sourcewithin100m RSS, no perquery increase in minimumRSS or loss of existing support. No K/radius tuning.",
+  "proof": "Independent brute-force versus monotone-window implementation including longparents and invalid-minimum fallback.",
+  "limits": "Geometriccoverage does not demonstrate MAEgain. A positive instrument would require frozenTrainconstruction/retraining before any primaryevaluation.",
+  "Test": false,
+  "Validation": false
+}

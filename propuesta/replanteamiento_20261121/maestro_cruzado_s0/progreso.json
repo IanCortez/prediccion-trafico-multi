@@ -1,0 +1,122 @@
+{
+  "completed_folds": [
+    {
+      "fold": 0,
+      "fit_n": 800509,
+      "held_n": 222976,
+      "own_week_fold_excluded": true,
+      "fit_rows_sha256": "48467df7cdb892acdca224e34a851121d4e4f8c639f736b757496640264b634c",
+      "held_rows_sha256": "f0f81d08a6fbbdc6dd5c70934ff06924a4e22b7c85ec40f8476146deee316ef5",
+      "model_sha256": "e9e6dd464310b9eccae2dafcea86d148d27fbca8ce6a56bc111ee095c8cfbaca",
+      "held_parameters_sha256": "f4dd245a12d56a4b25701a02bc13c675a228746b313f3294e69f1e805b2ce86f",
+      "held_Train": {
+        "duration": {
+          "n": 222976,
+          "mae_s": 108.03839875143514,
+          "rmse_s": 160.35715597047292,
+          "mdae_s": 75.0
+        },
+        "NLL": 3.5561137607749456,
+        "CRPS_s": 78.36524300664948,
+        "coverage80": 0.8348611509758898,
+        "sigma_mean": 0.23410434803146193
+      },
+      "elapsed_seconds": 231.15798473358154
+    },
+    {
+      "fold": 1,
+      "fit_n": 812557,
+      "held_n": 210928,
+      "own_week_fold_excluded": true,
+      "fit_rows_sha256": "f2c69f8c622a206b43551afcbdf9984aac0b5a020ce57f23b3b6dd5c9b4e355e",
+      "held_rows_sha256": "804cc55e6314ef9a3ae2b4818f1b8e6213e2f02f17e765842eb9af84218606af",
+      "model_sha256": "81284b31562cd39972dbef35af58d7f853e389e5c79aafca46b85e9deaae2a69",
+      "held_parameters_sha256": "6d4e82b17e2aedea74c49824abb4adf1e9bb93783e1494b19bafab6d7cb651ff",
+      "held_Train": {
+        "duration": {
+          "n": 210928,
+          "mae_s": 105.43657077296518,
+          "rmse_s": 156.21486519940896,
+          "mdae_s": 75.0
+        },
+        "NLL": 3.5309846899871844,
+        "CRPS_s": 76.34211822007488,
+        "coverage80": 0.8400164985208223,
+        "sigma_mean": 0.2320349547859281
+      },
+      "elapsed_seconds": 463.3298442363739
+    },
+    {
+      "fold": 2,
+      "fit_n": 830951,
+      "held_n": 192534,
+      "own_week_fold_excluded": true,
+      "fit_rows_sha256": "e334e66a9fef65907e308dd72d58e931a4fd54b9603cb0114957a6f83b4be581",
+      "held_rows_sha256": "4694b48dc9de0d849634966bb4282838e4effed15105ddc52535fb9ca956a2e0",
+      "model_sha256": "f8f193d3ff649214287aeba85ea18f2f586715222e1f62e7587fcb59e977025a",
+      "held_parameters_sha256": "026e44bccc1aa40448eca4472738245e395ed2fe44e8722fb03d6eb2ffe94a85",
+      "held_Train": {
+        "duration": {
+          "n": 192534,
+          "mae_s": 108.06662719311913,
+          "rmse_s": 160.57900412701727,
+          "mdae_s": 75.0
+        },
+        "NLL": 3.553156692484079,
+        "CRPS_s": 78.20800913646237,
+        "coverage80": 0.8367093604246523,
+        "sigma_mean": 0.23289628045295105
+      },
+      "elapsed_seconds": 698.7457535266876
+    },
+    {
+      "fold": 3,
+      "fit_n": 830872,
+      "held_n": 192613,
+      "own_week_fold_excluded": true,
+      "fit_rows_sha256": "e6536b2c92d277fffcd4a05a159069391318b3e7fcf43a48025c52ed1773c1e7",
+      "held_rows_sha256": "fa3057bd6759a0e2eb7bdb92f35cb42119d939722c48181644ae63f2a209770b",
+      "model_sha256": "1c9a905a86b0e330cb3e689225f3c649616dfd2d80798f7bc3c9908929fdd7ec",
+      "held_parameters_sha256": "2bb290c3cdfdb2926eab92662de6bfaae0e1b1080a16fbb1102b7dacfa2da987",
+      "held_Train": {
+        "duration": {
+          "n": 192613,
+          "mae_s": 107.77535784189021,
+          "rmse_s": 159.68187476082113,
+          "mdae_s": 75.0
+        },
+        "NLL": 3.552513867036067,
+        "CRPS_s": 78.03844009609938,
+        "coverage80": 0.8365634718321193,
+        "sigma_mean": 0.23317229653790603
+      },
+      "elapsed_seconds": 932.5070760250092
+    },
+    {
+      "fold": 4,
+      "fit_n": 819051,
+      "held_n": 204434,
+      "own_week_fold_excluded": true,
+      "fit_rows_sha256": "036c3733ffda5b5e70bef41a48687efeb1cc32e4a7531fdaa0a9bee28a696b85",
+      "held_rows_sha256": "fe5a0a0d536484c085aefeb7a265a617d225504301e42eccb1b63f0703dbe2b6",
+      "model_sha256": "edf1d1075e2d037894a1f6a006790227a348711d3ea6e7b65ec16947b38207da",
+      "held_parameters_sha256": "d2f9ea59bb67f3293e22a92d31013a4dbf611c3a65dea623f45105ac091fbe73",
+      "held_Train": {
+        "duration": {
+          "n": 204434,
+          "mae_s": 107.3487531428236,
+          "rmse_s": 158.63142830436465,
+          "mdae_s": 75.0
+        },
+        "NLL": 3.549525006303753,
+        "CRPS_s": 77.7331338947508,
+        "coverage80": 0.8394200573290157,
+        "sigma_mean": 0.23461363463962892
+      },
+      "elapsed_seconds": 1162.4920165538788
+    }
+  ],
+  "goal": "active",
+  "Test": "sealed",
+  "no_GPU": true
+}

@@ -1,0 +1,10 @@
+{
+  "scientific_outputs_complete": true,
+  "metrics_predictions_verified": true,
+  "no_rerun_needed": true,
+  "terminal_exit_note": "Only finalconsoleprint failed onndarrayserialization AFTER complete result/predictions/model werepersisted. No calculation failed, no sourceedit/retraining.",
+  "stdout_log": "oraculo_tiempo_calle_train.log",
+  "source_sha256": "57540b455dc3d37f8956445f92816b6c1df81824c715341ff2eb8fe1f3a0812e",
+  "predictions_sha256": "73dc1afc73431fe4d48f0f719f10b0cca782663562e528310583c4d0eaf4f7b4",
+  "scope": "Privileged actual-route chronological Train-only diagnostic; not deployable OD, primaryValidation or a lower bound."
+}

@@ -1,0 +1,171 @@
+{
+  "complete": true,
+  "primary_validation": true,
+  "metrics": {
+    "control216_MAE": {
+      "n": 127941,
+      "mae_s": 135.98850107536296,
+      "rmse_s": 218.27877750096638,
+      "mdae_s": 83.01675539851544
+    },
+    "full246_MAE": {
+      "n": 127941,
+      "mae_s": 136.1112052749399,
+      "rmse_s": 217.82632324070562,
+      "mdae_s": 82.15039946813079
+    },
+    "full246_q10": {
+      "n": 127941,
+      "mae_s": 187.8400780282029,
+      "rmse_s": 279.55109867853804,
+      "mdae_s": 123.9545398455017
+    },
+    "full246_q50": {
+      "n": 127941,
+      "mae_s": 136.0751961547707,
+      "rmse_s": 217.80876928142487,
+      "mdae_s": 81.96791992882027
+    },
+    "full246_q90": {
+      "n": 127941,
+      "mae_s": 254.61366161298656,
+      "rmse_s": 314.3498818396562,
+      "mdae_s": 217.99241390261898
+    }
+  },
+  "reference": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "comparisons": {
+    "full_vs_reference": {
+      "delta_mae_s": 5.953163677641161,
+      "ci95_s": [
+        5.158153408636728,
+        6.76637783919766
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "full_vs_control": {
+      "delta_mae_s": 0.12270419957693665,
+      "ci95_s": [
+        -0.6576855616077242,
+        0.9148113069537702
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    }
+  },
+  "meaningful_gate_passed": false,
+  "main_model": "full246_MAE",
+  "main_validation": {
+    "n": 127941,
+    "mae_s": 136.1112052749399,
+    "rmse_s": 217.82632324070562,
+    "mdae_s": 82.15039946813079
+  },
+  "models": {
+    "control216_MAE": {
+      "file": "control216_MAE.cbm",
+      "sha256": "9fcde3239bff404af5e1f973ab345713ec4dda488c9269172e0b699dc15e16bc",
+      "bytes": 4205520,
+      "loss": "MAE",
+      "width": 216,
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.98850107536296,
+        "rmse_s": 218.27877750096638,
+        "mdae_s": 83.01675539851544
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    "full246_MAE": {
+      "file": "full246_MAE.cbm",
+      "sha256": "be36bca35e1dc7c7f54797e101bc8a206298d2a9657912d7f2bf85764895452e",
+      "bytes": 4209320,
+      "loss": "MAE",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.1112052749399,
+        "rmse_s": 217.82632324070562,
+        "mdae_s": 82.15039946813079
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    "full246_q10": {
+      "file": "full246_q10.cbm",
+      "sha256": "78972b4487047c0076d51993b19b9238d7f79498919f0798407878c0bc284107",
+      "bytes": 4242736,
+      "loss": "Quantile:alpha=0.1",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 187.8400780282029,
+        "rmse_s": 279.55109867853804,
+        "mdae_s": 123.9545398455017
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    "full246_q50": {
+      "file": "full246_q50.cbm",
+      "sha256": "71e73ce5c58fa2095089f6965b84c59d90e0c5625ff6d2842076a72119989c0a",
+      "bytes": 4244512,
+      "loss": "Quantile:alpha=0.5",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.0751961547707,
+        "rmse_s": 217.80876928142487,
+        "mdae_s": 81.96791992882027
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    "full246_q90": {
+      "file": "full246_q90.cbm",
+      "sha256": "0d89ae4b3d3761aca7e574dafbe1686df9b98fff26fe2ed26fa82268c95d3932",
+      "bytes": 4239288,
+      "loss": "Quantile:alpha=0.9",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 254.61366161298656,
+        "rmse_s": 314.3498818396562,
+        "mdae_s": 217.99241390261898
+      },
+      "preserved": false,
+      "requires_GRU": false
+    }
+  },
+  "sequence_model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+  "public_summary_manifest_sha256": "587822f363019933d6df34b61b3c112f45e6b799519d8543fecbfaeffc769e5f",
+  "predictions_sha256": "b272e450291f9f3c770f6518f6d861aec8c4f06c6dc7e5cec759f10083c840e7",
+  "sources": {
+    "evaluar_progreso_recurrente.py": "3e54f0d6b6a118f22c46f46089a1d264388d39f175e3b2cc2d2fe9b32234c7c4",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "all_completed_metrics_predictions_retained": true,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 99.94511008262634
+}

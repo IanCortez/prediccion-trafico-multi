@@ -1,0 +1,15 @@
+{
+  "native": {
+    "held_NLL": 0.511324405670166
+  },
+  "control": {
+    "held_NLL": 0.5111778378486633,
+    "optimizer_evaluations": 62,
+    "weight_norm": 0.737680196762085
+  },
+  "history": {
+    "held_NLL": 0.5270418524742126,
+    "optimizer_evaluations": 64,
+    "weight_norm": 0.5509338974952698
+  }
+}

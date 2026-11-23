@@ -1,0 +1,106 @@
+{
+  "complete": true,
+  "primary_validation": true,
+  "metrics": {
+    "full246_MAE": {
+      "n": 127941,
+      "mae_s": 135.99613162839904,
+      "rmse_s": 217.77361771079788,
+      "mdae_s": 81.93957816870409
+    }
+  },
+  "models": {
+    "full246_MAE": {
+      "file": "full246_MAE.cbm",
+      "sha256": "fda483fe8e1228f06e5372f1b83cfa1fcc6a7123c827e09d269eef0ada63fa91",
+      "bytes": 4208992,
+      "loss": "MAE",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.99613162839904,
+        "rmse_s": 217.77361771079788,
+        "mdae_s": 81.93957816870409
+      },
+      "preserved": false,
+      "requires_GRU": false
+    }
+  },
+  "reference_id": "atencion_historia_individual_s0",
+  "reference": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "comparisons": {
+    "full_vs_reference": {
+      "delta_mae_s": 5.8380900311002595,
+      "ci95_s": [
+        5.087391871886329,
+        6.608847299360217
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "full_vs_uncalibrated": {
+      "delta_mae_s": -0.11507364654089844,
+      "ci95_s": [
+        -0.26772436196366683,
+        0.02783599400576188
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "full_vs_216control": {
+      "delta_mae_s": 0.007630553036038177,
+      "ci95_s": [
+        -0.7093985762209556,
+        0.7391403158336743
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    }
+  },
+  "main_validation": {
+    "n": 127941,
+    "mae_s": 135.99613162839904,
+    "rmse_s": 217.77361771079788,
+    "mdae_s": 81.93957816870409
+  },
+  "main_model": "full246_MAE",
+  "meaningful_gate_passed": false,
+  "new_numerical_minimum": false,
+  "sequence_model_sha256": "02f8b0ce622e541c35f80ea693abf9b91241d55b4f66e88a2f43c029a84f5431",
+  "reused_216_control": {
+    "n": 127941,
+    "mae_s": 135.98850107536296,
+    "rmse_s": 218.27877750096638,
+    "mdae_s": 83.01675539851544
+  },
+  "no_duplicate_control_training": true,
+  "no_query_private_fields": true,
+  "quantile_models_fit": false,
+  "predictions_sha256": "556510544b44703bff09707e70ecfdc4d0f67b2426f2053b8864edc84d77a2f3",
+  "sources": {
+    "evaluar_consistencia_temporal_viaje.py": "ac208b85acf54eaaaeabc56a4adeb0a41e195d39f7182d5e0aa9c4d8093ea37e",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "all_completed_metrics_predictions_retained": true,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 23.739129781723022
+}

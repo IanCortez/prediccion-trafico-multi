@@ -1,0 +1,39 @@
+{
+  "scope": "Chronological heldTrain prediction gate, not primaryValidation. Distinct from numeric-only CatBoost and learned geometric memory.",
+  "hypothesis": "Explicit multiscale categorical OD interactions with ordered target statistics may capture frequent-trip conditional duration distributions that numeric coordinate splits miss.",
+  "seed": 20261122,
+  "fit_n": 200000,
+  "held_n": 50000,
+  "held_last_days": 21,
+  "public_numeric_features": 206,
+  "categorical_scales_m": [
+    64,
+    128,
+    256
+  ],
+  "pair_scales_m": [
+    128,
+    256
+  ],
+  "time_pair": "256mODpair crossed with weekday and6hourdeparture block",
+  "control": "Reuse exact stored numeric206control from fine-clock gate: identicalfit/held rows,params and features. Verify rows/labels/timestamps/fit-row hash.",
+  "max_ctr_complexity": 1,
+  "ctr_leaf_count_limit": 200000,
+  "iterations": 800,
+  "depth": 7,
+  "learning_rate": 0.05,
+  "l2_leaf_reg": 5,
+  "checkpoint": "Fixed final800trees, no held stopping or parameter search.",
+  "gate": "At least1second heldTrain MAE improvement and upper95percent daybootstrap deltaCI<0; otherwise no full primary trial.",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Validation": false,
+  "Test": false,
+  "CPU_threads": 2,
+  "model_file": "Save only if gate passes; always keep metrics/predictions/source."
+}

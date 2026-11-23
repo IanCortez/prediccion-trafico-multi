@@ -74,5 +74,7 @@
     "propuesta\\datos\\validation_x.npz",
     "propuesta\\datos\\validation_y.npy"
   ],
-  "recovery_seconds": 997.1261131763458
+  "recovery_seconds": 997.1261131763458,
+  "weights_retained": false,
+  "cleanup_note": "Discarded full-cohort family: source, metrics and all predictions retained. No active/queued model depends on these weights."
 }

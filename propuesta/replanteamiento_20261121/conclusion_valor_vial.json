@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "validation": {
+    "n": 127941,
+    "mae_s": 134.77935141979506,
+    "rmse_s": 215.76814945323818,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 7,
+  "epochs": 15,
+  "primary_n": 127941,
+  "delta_vs_protected_best_s": 4.6213098224963005,
+  "paired": {
+    "delta_mae_s": 4.621309822496307,
+    "ci95_s": [
+      3.950116333313929,
+      5.315648868143286
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "decision": "Negative. No conditionalnoauxcontrol or architecturemicrotuning. Keep all16epochquantiles/metrics and selectedoutput; no unqualifiedweights. Best130.158 unchanged.",
+  "observation": "Trainloss fell4.3807to4.0678 whileValidation bestepoch7 andlaterworse; progressauxiliary/localroadvalue did not translate to stronger ODmedian.",
+  "limits": "No matchednoauxcontrol executed because usefulgain gatefailed. Cannot assignfailure causally to roadauxiliary or prove allstreetmodels fail.",
+  "next": "Train-only raw5ODroutegeneration gate using learnedlocalpolicy; predicts fullroutes frompublicendpointsets, then time. Differentfrom amortizedglobalstreetvalue and privilegedteacherstateinstrument.",
+  "source_manifest_sha256": "1de7041c333e296cc3eef22bf4a24fad064c2f30f617ec7d64cf6b892bb43c85",
+  "all_metrics_predictions_preserved": true,
+  "Test": "sealed",
+  "later_auxiliary_geometry_caveat": {
+    "file": "verificacion_adaptador_progreso_vial.json",
+    "finding": "Legacychainendpointadjacency didnotguarantee entry0 afterinteriorrawnode reversal.",
+    "primary_metric_still_valid": true,
+    "claim_that_this_caused_failure": false,
+    "new_adapter_required_forfutureprogress": true
+  }
+}

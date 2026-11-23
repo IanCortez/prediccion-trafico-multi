@@ -1,0 +1,33 @@
+{
+  "scope": "Diagnostic only; original matching reproduced exactly, no primary label/filter change.",
+  "trips": 4096,
+  "steps": 165731,
+  "reset_steps": 1102,
+  "trusted_step_fraction": 0.993350670665114,
+  "fraction_trips_without_reset": 0.81494140625,
+  "reset_due_GPS_over500m": 0,
+  "reset_due_no_finite_transition": 1102,
+  "reset_with_possible_small_backward_same_edge_candidates_fraction": 0.12341197822141561,
+  "caveat": "Candidate-only GPS-jitter explanation does not prove the previous candidate had finite Viterbi score; no tolerance was changed.",
+  "whole_trip_quality_gate_remains_failed": true,
+  "next_question": "Can masked partial-route supervision use >=95percenttrustedsteps while retaining every primary query and original totalduration?",
+  "partial_supervision_step_coverage_gate_passed": true,
+  "all_original_matching_outputs_exact": true,
+  "unknown_step_time_fraction_if_masked": 0.006649329334886045,
+  "route_bridging_not_yet_done": true,
+  "source_sha256": "f688b0a06ee7d2307dd82055126a32cbc6a5e4366f862b9f299f1b49553518b3",
+  "generated_trace_sha256": "d7e2adb69884134a926271039ddb6145e30c2d86b7cefd897e16f1e0835d52d2",
+  "predictions_sha256": "ba655b07f435fad99fe6f30ca66f2e7913ad091fc0e4d8bab9ef2eef34f06f9e",
+  "Validation_paths_decoded": false,
+  "Test_paths_decoded": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy"
+  ],
+  "seconds": 6.29573917388916
+}

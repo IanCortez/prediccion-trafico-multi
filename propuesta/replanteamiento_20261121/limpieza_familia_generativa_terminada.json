@@ -1,0 +1,51 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\modelo.pt",
+      "bytes": 8783534,
+      "sha256": "afd2ea06a83fd93f06590f4c76d2363af8ded215d859e7346a3863e5e9744ea4",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\ultima_reanudacion.pt",
+      "bytes": 25737034,
+      "sha256": "58a6e249b58a0b6fb939d3d855579d564d9378474a0f0eb8e1e1260e6021778c",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\modelo.pt",
+      "bytes": 8782766,
+      "sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\espacial_prior_cf_s0\\modelo.pt",
+      "bytes": 8687680,
+      "sha256": "76a74c5a960617a22705ea381a084335089f5c462f5a8cf0891e7802a2971487",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\espacial_fases_referencia_s0\\modelo.pt",
+      "bytes": 8662272,
+      "sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_maestro_probabilistico_s0\\OD_only.cbm",
+      "bytes": 3197816,
+      "sha256": "0dea6ebf377f78c77eb012e093271b55254278f1680a86bb6898d273e5b698db",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_maestro_probabilistico_s0\\privileged_geometry.cbm",
+      "bytes": 3204528,
+      "sha256": "520fc1e297ecbbd82b85e766fba3ba970d083770bd90b4412a58d676c0afb141",
+      "reason": "Completed discarded lineage or superseded pilot; no current/queued trainer depends on these weights"
+    }
+  ],
+  "bytes_removed": 67055630,
+  "all_predictions_and_metrics_retained": true,
+  "full_crossfit_teachers_and_parameters_retained": true,
+  "original_reference_unchanged": true,
+  "Test": "sealed"
+}

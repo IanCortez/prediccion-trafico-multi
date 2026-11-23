@@ -1,0 +1,18 @@
+{
+  "scope": "Train-only map-label feasibility, not predictive MAE; primary cohort/labels unchanged.",
+  "n": 4096,
+  "seed": 20261122,
+  "raw_read": "Binary row membership in selected eligibleTrain BEFORE text/CSV/POLYLINE decode; no heldout/Test path decoded.",
+  "sample": "EligibleTrain source memory with existing GPS-quality condition, used ONLY for auxiliary label pilot; no primary query removed.",
+  "matching": "Existing frozen public2014map, nearest4projections/Viterbi sigma30m; original15second cadence.",
+  "source_label": "Road edge/fraction and compact street-chain at observedGPSpoints. Bridging between observations is NOT yet reconstructed.",
+  "gate": "At least90percent trips withzeroViterbiresets AND95percentpoints projectedwithin100m; prerequisite only, not time-prediction evidence.",
+  "resources": "CPU2; <=200MiBpilot artifacts; no GPU or whole-dataset trajectory cache.",
+  "future_requirements": [
+    "Pure query endpoint projections from5fields; HMMendpoints labels only.",
+    "Expand missing chains and derive sum-preserving auxiliary segmenttimes before actualUNITEadaptation.",
+    "Keep original(N−1)*15 primaryduration; fixed/predicted decoding horizon, absorbing terminal states and batch invariance."
+  ],
+  "Validation": false,
+  "Test": "sealed"
+}

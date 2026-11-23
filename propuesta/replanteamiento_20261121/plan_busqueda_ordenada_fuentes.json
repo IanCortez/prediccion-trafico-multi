@@ -1,0 +1,21 @@
+{
+  "id": "busqueda_ordenada_fuentes",
+  "hypothesis": "Improve actual source-time signal by removing independent endpoint-topK intersection, rather than increasing K or adding more GPS.",
+  "geometry_gate": {
+    "passed": true,
+    "result": "piloto_busqueda_ordenada_bbox_Train_s0/resultado.json"
+  },
+  "next_required": [
+    "Implement raw5 sourceconstructor returning deterministic top64 parents/orderedindices and weights; same pointbank, sameK2048, sourceendpointbbox/span/speed filters.",
+    "Use public parentboundingboxes only for mathematically safe pruning; verify exact top64 versus unpruned candidate search and independent exhaustive synthetic intervalmatching. Clock/weekend penalties are nonpositive, so spatialbounds can upper-bound weight.",
+    "Exclude the whole sourceparent UTCweekfold BEFORE candidate-tree construction for every Trainquery. Arrival beforeValidation; no query N/T/path and no newqueryfields.",
+    "First test a chronological Train-only timeprediction prototype without a parent pretrained on heldTrainlabels. SourceCDF/full-versus-internal summaries plus206publicfeatures, matched geometry-onlycontrol; fitparents obtain fold-excluded sources.",
+    "Require at least5s gain over a fresh no-memory baseline and storedreference, and2s over sourcegeometry-onlycontrol with exploratorydayCIupper<0. Do not proceed to primaryValidation solely because geometriccoverage improved.",
+    "Only if timepredictiongate passes, train the full unchanged-primary model with frozen protocol, original targets and independently reproducible raw5 inference."
+  ],
+  "resources": "No additionalGPSbank, no all-pairs bank. Reuse241.76MiB pointbank; compactsourceindices only if justified. OneheavyGPU at a time.",
+  "no_sweep": "Do not tune K, matchingradius, sourcecount, hiddenquery information or cohortfilters after outcomes.",
+  "confirmation_goal_s": 73.5,
+  "goal": "ACTIVE",
+  "Test": "SEALED"
+}

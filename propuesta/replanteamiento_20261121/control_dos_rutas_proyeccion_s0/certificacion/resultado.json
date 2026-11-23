@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "checkpoint_sha256": "f1762f5ca2fcfe4d1ec623375e9455c93c2c905930075b05364c34681a246e87",
+  "frozen_epoch": 3,
+  "full127941point_predictions_exact": true,
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.24850517035196,
+    "rmse_s": 210.64766938458985,
+    "mdae_s": 75.0
+  },
+  "raw65_original216features_max_error": 0.0,
+  "raw65_candidate_features_exact": true,
+  "raw65_medians_match_full_saved_predictions": true,
+  "reverse_and_singleton_all_quantiles_exact": true,
+  "query_fields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "uncertainty": {
+    "ensemble_NLL": 3.6843172810479885,
+    "normalized_RPS": 0.05599428636302455,
+    "coverage80": 0.8136015819791935,
+    "mean_width80_s": 393.7749328613281,
+    "mean_candidate_gate": 0.006711582653224468,
+    "candidate_gate_quantiles": [
+      0.0025805688928812742,
+      0.005890031345188618,
+      0.0113950464874506
+    ],
+    "randomized_PIT_decile_counts": [
+      12938,
+      12637,
+      12978,
+      12761,
+      12703,
+      12763,
+      12560,
+      12463,
+      12736,
+      13402
+    ],
+    "interpretation": "Descriptive calibration on reusedValidation; no confirmation or nominal coverage guarantee."
+  },
+  "paired_vs_original": {
+    "delta_mae_s": -0.008206907871597065,
+    "ci95_s": [
+      -0.03235090817225726,
+      0.014208099519955022
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "reproduction_sources": {
+    "certificar_checkpoint_proyeccion.py": "d6d7fd70e1c9c41b4abdf07b02f9778e1abd6f04042e56c496f76e31868a7c4e",
+    "inferencia_proyeccion.py": "1cc6bb0343247d118d7dd357e036da4a3dacead26361219f136578d558473541"
+  },
+  "artifact_sha256": "84923aaf4a174441131af0e280d97d4c96630eca3808d9b8bf5f0f54a60d4c2a",
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 16.521821975708008
+}

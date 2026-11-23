@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "finite_gradients": true,
+  "all_reference_predictions_exact": true,
+  "n": 127941,
+  "initial_auxiliary_request_NLL": 1.0986123085021973,
+  "Test_access": false
+}

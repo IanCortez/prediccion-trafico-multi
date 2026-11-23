@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "Train_loss": 3.523383378982544,
+  "parent_gradients_absent": true,
+  "branch_parameters": 186848,
+  "initial_branch_sha256": "f75695a81c9b615e3573a94e814511cc8f33ce2bee114f2169151d1e823fd64e"
+}

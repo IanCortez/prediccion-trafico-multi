@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "independent_exhaustive_synthetic_oracle": true,
+  "sourceendpoint_bbox_preserved": true,
+  "real_raw65_top64_sources": true,
+  "real17_pruned_unpruned_sources_weights_and_global_minerror_exact": true,
+  "real65_reverse17_singleton_all10outputs_exact": true,
+  "sourcearrival_before_tree": true,
+  "whole_parent_UTCweek_exclusion_before_tree": true,
+  "source_interval_span4to119": true,
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "no_query_route_N_T": true,
+  "pruned65_seconds": 6.02582049369812,
+  "unpruned17_seconds": 0.04804873466491699,
+  "evaluated_parents_median": 451.0,
+  "discovered_parents_median": 2981.0,
+  "nearest_source_within100m_fraction": 0.9692307692307692,
+  "new_MAE_claim": false,
+  "sources": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "recuperar_fuentes_ordenadas.py": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa",
+    "verificar_fuentes_ordenadas_v2.py": "6d4b62980ff08cdb3f2f59cfbc020293c55eaea76945f0c1c8b211adcc35d3ba"
+  },
+  "outputs_sha256": "b3651c1c9554e37fb111c04311114ffa63bcd0dfba0bde4b453f3900908200f6",
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 55.62713289260864
+}

@@ -1,0 +1,5015 @@
+{
+  "scope": "Completed replanteamiento_20261121 full unchanged Validation outputs plus protected reference; not all historical thesis runs",
+  "goal_confirmation_s": 73.5,
+  "preservation_threshold_s": 131.06,
+  "reference": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "full_prediction_outputs": 253,
+  "distinct_archives_checked": 36,
+  "experiments": [
+    {
+      "run": "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+      "label": "Referencia conservada",
+      "kind": "protected_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "descompuesto_aux0_s0",
+      "label": "Movimiento y permanencia: control",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.41756747250685,
+        "rmse_s": 212.51456124532928,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\descompuesto_aux0_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "descompuesto_aux1_s0",
+      "label": "Movimiento y permanencia: supervisión",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.62731258939667,
+        "rmse_s": 212.15485612842585,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\descompuesto_aux1_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "memoria_cdf_s0",
+      "label": "Memoria de distribuciones",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.4315895608132,
+        "rmse_s": 219.76714831713943,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\memoria_cdf_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "memoria_mse_s0",
+      "label": "Memoria con error cuadrático",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 144.3031549620929,
+        "rmse_s": 215.5584713506147,
+        "mdae_s": 98.6387939453125
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\memoria_mse_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "base_oof_estatica_s0",
+      "label": "Base fuera de bloque",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.18608419982218,
+        "rmse_s": 217.50664256249215,
+        "mdae_s": 83.49401562688035
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\base_oof_estatica_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "memoria_residual_oof_s0",
+      "label": "Memoria de residuos fuera de bloque",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.30580321953553,
+        "rmse_s": 216.76987131695302,
+        "mdae_s": 84.3558398865672
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\memoria_residual_oof_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_semimarkov_s0_v2",
+      "label": "Proceso espacial con permanencias",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 138.22343892888128,
+        "rmse_s": 220.15717408778448,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_semimarkov_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_semimarkov_s0_v2",
+      "label": "Proceso espacial con permanencias — rama espacial",
+      "kind": "secondary_branch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 154.22175065069055,
+        "rmse_s": 234.46667919909925,
+        "mdae_s": 105.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_semimarkov_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_direccional_s0",
+      "label": "Proceso espacial con dirección",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.91802471451686,
+        "rmse_s": 217.45644950373136,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_direccional_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_direccional_s0",
+      "label": "Proceso espacial con dirección — rama espacial",
+      "kind": "secondary_branch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 152.22395479166178,
+        "rmse_s": 232.5844808193083,
+        "mdae_s": 105.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_direccional_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_prior_cf_s0",
+      "label": "Dirección y conteos históricos",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.53886557084905,
+        "rmse_s": 216.9405669865068,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_prior_cf_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_prior_cf_s0",
+      "label": "Dirección y conteos históricos — rama espacial",
+      "kind": "secondary_branch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 148.20280441766127,
+        "rmse_s": 228.17326791366307,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_prior_cf_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_fases_referencia_s0",
+      "label": "Permanencias por fases",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.70077613900156,
+        "rmse_s": 212.29246423219976,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_fases_referencia_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "espacial_fases_referencia_s0",
+      "label": "Permanencias por fases — rama espacial",
+      "kind": "secondary_branch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 141.15916711609256,
+        "rmse_s": 220.49039041070517,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\espacial_fases_referencia_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "prefijo_nativo_s0",
+      "label": "Generación nativa, peso 0.0",
+      "kind": "declared_weight",
+      "alpha": 0.0,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "prefijo_nativo_s0",
+      "label": "Generación nativa, peso 0.05",
+      "kind": "declared_weight",
+      "alpha": 0.05,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.33995357234974,
+        "rmse_s": 210.7964898947443,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "prefijo_nativo_s0",
+      "label": "Generación nativa, peso 0.2",
+      "kind": "declared_weight",
+      "alpha": 0.2,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.9470302717659,
+        "rmse_s": 211.10133892247694,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "prefijo_nativo_s0",
+      "label": "Generación nativa, peso 0.5",
+      "kind": "declared_weight",
+      "alpha": 0.5,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.5261800361104,
+        "rmse_s": 214.01658372126568,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "prefijo_nativo_s0",
+      "label": "Generación nativa, peso 1.0",
+      "kind": "declared_weight",
+      "alpha": 1.0,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 148.7559500082069,
+        "rmse_s": 225.78150363230677,
+        "mdae_s": 105.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.0",
+      "kind": "declared_weight",
+      "alpha": 0.0,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.02",
+      "kind": "declared_weight",
+      "alpha": 0.02,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.2574155274697,
+        "rmse_s": 210.81731237860146,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.05",
+      "kind": "declared_weight",
+      "alpha": 0.05,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.259056909044,
+        "rmse_s": 210.83583064832445,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.1",
+      "kind": "declared_weight",
+      "alpha": 0.1,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.30149834689428,
+        "rmse_s": 210.87748246990475,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.2",
+      "kind": "declared_weight",
+      "alpha": 0.2,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.55462283396253,
+        "rmse_s": 211.15780938834206,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.35",
+      "kind": "declared_weight",
+      "alpha": 0.35,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.29218936853707,
+        "rmse_s": 211.90039910388327,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 0.5",
+      "kind": "declared_weight",
+      "alpha": 0.5,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.57563251811382,
+        "rmse_s": 213.13848477882166,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "calibracion_unica_fases_s0",
+      "label": "Calibración fija, peso 1.0",
+      "kind": "declared_weight",
+      "alpha": 1.0,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 140.966187539569,
+        "rmse_s": 220.28246271192867,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "tipo_latente_cpu_s0",
+      "label": "Corrección de distribución: control",
+      "kind": "matched_unsupervised",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.1057518700026,
+        "rmse_s": 212.44095619857612,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "tipo_latente_cpu_s0",
+      "label": "Corrección con tipo de solicitud latente",
+      "kind": "supervised_type",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.7877928107487,
+        "rmse_s": 212.18935768861806,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "riesgo_total_s0",
+      "label": "Riesgo de viaje completo, peso 0",
+      "kind": "declared_weight",
+      "alpha": 0,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "riesgo_total_s0",
+      "label": "Riesgo de viaje completo, peso 0.05",
+      "kind": "selected_risk_weight",
+      "alpha": 0.05,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.30853283935565,
+        "rmse_s": 211.09033377346236,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "riesgo_total_s0",
+      "label": "Riesgo de viaje completo, peso 0.2",
+      "kind": "declared_weight",
+      "alpha": 0.2,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.76987830328042,
+        "rmse_s": 212.2908240010061,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "riesgo_total_s0",
+      "label": "Riesgo de viaje completo, peso 0.5",
+      "kind": "declared_weight",
+      "alpha": 0.5,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.24461275119,
+        "rmse_s": 216.40814514751196,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "riesgo_total_s0",
+      "label": "Riesgo de viaje completo, peso 1",
+      "kind": "declared_weight",
+      "alpha": 1,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 142.36652050554554,
+        "rmse_s": 226.35631253335274,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_control_s0_v2",
+      "label": "Ajuste de control — inicial",
+      "kind": "initial_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0_v2\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_control_s0_v2",
+      "label": "Ajuste de control — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.3746570684925,
+        "rmse_s": 210.83000841270183,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_control_s0_v2",
+      "label": "Ajuste de control — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.40783642460195,
+        "rmse_s": 210.77402583446784,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_control_s0_v2",
+      "label": "Ajuste de control — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.40115365676365,
+        "rmse_s": 210.75930296310736,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_control_s0_v2",
+      "label": "Ajuste de control",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.39681571974583,
+        "rmse_s": 210.7256605335854,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_semantic_s0_v2",
+      "label": "Supervisión del tipo de solicitud — inicial",
+      "kind": "initial_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0_v2\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_semantic_s0_v2",
+      "label": "Supervisión del tipo de solicitud — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.44582268389337,
+        "rmse_s": 210.87107342904267,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_semantic_s0_v2",
+      "label": "Supervisión del tipo de solicitud — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.49776068656647,
+        "rmse_s": 210.8372069412726,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_semantic_s0_v2",
+      "label": "Supervisión del tipo de solicitud — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.4661054704903,
+        "rmse_s": 210.80693476312834,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_solicitud_semantic_s0_v2",
+      "label": "Supervisión del tipo de solicitud",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.48638825708724,
+        "rmse_s": 210.78443844308055,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "alumno_maestro_s0_v2",
+      "label": "Alumno con maestro probabilístico — inicial",
+      "kind": "initial_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\alumno_maestro_s0_v2\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "alumno_maestro_s0_v2",
+      "label": "Alumno con maestro probabilístico — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.47923652308486,
+        "rmse_s": 210.98260964014943,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\alumno_maestro_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "alumno_maestro_s0_v2",
+      "label": "Alumno con maestro probabilístico — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.52331934250944,
+        "rmse_s": 210.96257873820974,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\alumno_maestro_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "alumno_maestro_s0_v2",
+      "label": "Alumno con maestro probabilístico — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.5169882992942,
+        "rmse_s": 210.99990487319266,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\alumno_maestro_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "alumno_maestro_s0_v2",
+      "label": "Alumno con maestro probabilístico",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.526133139494,
+        "rmse_s": 211.0007550119475,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\alumno_maestro_s0_v2\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historicos_integrados_s0",
+      "label": "Histórico completo: control",
+      "kind": "matched_reference_control",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historicos_integrados_s0\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historicos_integrados_s0",
+      "label": "Histórico con exclusión semanal",
+      "kind": "historical_policy",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.34522944169578,
+        "rmse_s": 210.96695102201042,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historicos_integrados_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historicos_integrados_s0",
+      "label": "Integración de cinco históricos",
+      "kind": "historical_policy",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.30689145778132,
+        "rmse_s": 210.96448771597125,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historicos_integrados_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — mejor época",
+      "kind": "fresh_selected",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.42382817079746,
+        "rmse_s": 217.0635316709954,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 138.6140877435693,
+        "rmse_s": 222.40494719429532,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.14469950993035,
+        "rmse_s": 218.33209573050527,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.0098013928295,
+        "rmse_s": 217.03944343930067,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.42382817079746,
+        "rmse_s": 217.0635316709954,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.3710225807208,
+        "rmse_s": 217.72320937657454,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.16397401927452,
+        "rmse_s": 214.468448677721,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.6674091964265,
+        "rmse_s": 216.39537410428875,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 138.51877037071776,
+        "rmse_s": 217.87691121791661,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 9",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 141.14920158510563,
+        "rmse_s": 223.32081846894295,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 10",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 142.6586864257744,
+        "rmse_s": 224.81287503266688,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 11",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 143.3371632236734,
+        "rmse_s": 223.90833803434353,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 12",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 144.0781297629376,
+        "rmse_s": 226.6716766756803,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 13",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 145.52782141768472,
+        "rmse_s": 228.0667575875036,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 14",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 145.8571529064178,
+        "rmse_s": 229.2216826193994,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 15",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 147.74345205993387,
+        "rmse_s": 231.83593254237482,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 16",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 147.4131826388726,
+        "rmse_s": 230.89239607944728,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 17",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 148.56367388092949,
+        "rmse_s": 232.73197619512138,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 18",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 149.8160480221352,
+        "rmse_s": 234.89972711154508,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 19",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 149.5045372476376,
+        "rmse_s": 234.54595009493292,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "campo_multiescala_s0",
+      "label": "Campo espacial desde cero — época 20",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 150.1973175135414,
+        "rmse_s": 235.47743145281416,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos — inicial",
+      "kind": "initial_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.3700846483926,
+        "rmse_s": 210.79190550194588,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.3699674068516,
+        "rmse_s": 210.74835505512308,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.36926395760545,
+        "rmse_s": 210.83579728353536,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.39751916899195,
+        "rmse_s": 210.9390652176161,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.35988463432363,
+        "rmse_s": 210.6334177613887,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "aux_subviajes_s0",
+      "label": "Supervisión auxiliar de subtrayectos",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.36293291439023,
+        "rmse_s": 210.67981757252838,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — inicial",
+      "kind": "initial_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": true,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.46751236898257,
+        "rmse_s": 210.24528935009647,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.38169156095387,
+        "rmse_s": 210.8476247704468,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.27629141557438,
+        "rmse_s": 210.76359602331843,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.2738293432129,
+        "rmse_s": 210.51818380926792,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.37864328088727,
+        "rmse_s": 210.91103814565338,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.56435388186742,
+        "rmse_s": 210.76741339408022,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.82463010293807,
+        "rmse_s": 210.80883680805803,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.11890637090534,
+        "rmse_s": 210.59861536950854,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_vial_s0",
+      "label": "Atención sobre rutas públicas",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.54543109714635,
+        "rmse_s": 211.9182999188711,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — inicial nueva",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.2531948319929,
+        "rmse_s": 210.85057736820357,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — seleccionada",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.12516706919595,
+        "rmse_s": 210.54082134265047,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.1989119984993,
+        "rmse_s": 210.65536252267836,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.20418786784535,
+        "rmse_s": 210.7253141926648,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.15787745914133,
+        "rmse_s": 210.625698773211,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.23185687152673,
+        "rmse_s": 210.92580462037307,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.17030506248975,
+        "rmse_s": 210.5482845124723,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.12516706919595,
+        "rmse_s": 210.54082134265047,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.21063615260158,
+        "rmse_s": 210.74371954618024,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.18542922128168,
+        "rmse_s": 210.4035303383037,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mezcla_proyeccion_incierta_s0",
+      "label": "Mezcla con proyección incierta — final fija",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.13642225713414,
+        "rmse_s": 210.43202197199432,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — inicial nueva",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.25811897671582,
+        "rmse_s": 210.9012238296965,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — seleccionada",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.24850517035196,
+        "rmse_s": 210.64766938458985,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.28485004806902,
+        "rmse_s": 210.7166095821084,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.26116725678241,
+        "rmse_s": 210.65593438336327,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.24850517035196,
+        "rmse_s": 210.64766938458985,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.37418810232842,
+        "rmse_s": 210.98858603278777,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.367036368326,
+        "rmse_s": 210.65340900147586,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.37031913147467,
+        "rmse_s": 210.66797649053262,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.34253288625226,
+        "rmse_s": 210.87231188608416,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.38087087016672,
+        "rmse_s": 210.77017938018787,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_dos_rutas_proyeccion_s0",
+      "label": "Mezcla: control de dos rutas — final fija",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.41018125542243,
+        "rmse_s": 210.62443799218218,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — inicial nueva",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 157.75576242174128,
+        "rmse_s": 235.93602205801616,
+        "mdae_s": 105.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — seleccionada",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.20482097216686,
+        "rmse_s": 209.28216351177895,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.8659225736863,
+        "rmse_s": 213.28962401800763,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.098693929233,
+        "rmse_s": 212.18567364541548,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.6351208760288,
+        "rmse_s": 210.71471922366374,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.49361033601426,
+        "rmse_s": 212.12398853626414,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.25056862147397,
+        "rmse_s": 212.07191338690117,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.04656834009427,
+        "rmse_s": 210.32534448669998,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.7384575702863,
+        "rmse_s": 210.2475854272674,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.64560226979623,
+        "rmse_s": 211.3565332978905,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 9",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.4397964686848,
+        "rmse_s": 213.30398673413703,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 10",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.53316763195537,
+        "rmse_s": 212.59379908277214,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 11",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.62191947850962,
+        "rmse_s": 209.83925894973004,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 12",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.5001055173869,
+        "rmse_s": 210.18647780697995,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 13",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.96524960724085,
+        "rmse_s": 210.0028765852512,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 14",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.1571740098952,
+        "rmse_s": 211.5632834614672,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 15",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.26292587989778,
+        "rmse_s": 208.53269597565813,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 16",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.63650432621287,
+        "rmse_s": 209.67257804224838,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 17",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.34288461087533,
+        "rmse_s": 209.82531281721944,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 18",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.7924355757732,
+        "rmse_s": 209.78583705226765,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 19",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.3478087555983,
+        "rmse_s": 207.88043799850516,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época fija 20",
+      "kind": "matched_fixed_epoch_20",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.20109269116233,
+        "rmse_s": 210.9571559800764,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 21",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.43015921401272,
+        "rmse_s": 209.32760265140985,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 22",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.82209768565198,
+        "rmse_s": 209.57263005915988,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 23",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.2343189438882,
+        "rmse_s": 210.13314418257013,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 24",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.54716627195347,
+        "rmse_s": 210.43981074100236,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 25",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.04602902900555,
+        "rmse_s": 211.02391164098879,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 26",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.0283255563111,
+        "rmse_s": 209.9862948540773,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 27",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.20482097216686,
+        "rmse_s": 209.28216351177895,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 28",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.53298004548972,
+        "rmse_s": 209.0312177446065,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 29",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.8931460595118,
+        "rmse_s": 209.94261079834973,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 30",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.6982906183319,
+        "rmse_s": 209.71666216038804,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 31",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.87527844865994,
+        "rmse_s": 208.14406797465708,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 32",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.5571318029404,
+        "rmse_s": 210.20592591972115,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 33",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.93547025582103,
+        "rmse_s": 211.3814147283416,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 34",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.49300068000093,
+        "rmse_s": 208.47517701205126,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 35",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.6485802049382,
+        "rmse_s": 209.7368288233593,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 36",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.36192463713743,
+        "rmse_s": 208.45337815911265,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 37",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.54998006893803,
+        "rmse_s": 209.1080540713037,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 38",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.54282833493562,
+        "rmse_s": 208.3482789052167,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "historica_fresca_s0",
+      "label": "Mezcla histórica desde cero — época 39",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.72396651581587,
+        "rmse_s": 208.9577028254731,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — inicial nueva",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 163.8627570520787,
+        "rmse_s": 244.25093522150212,
+        "mdae_s": 120.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — seleccionada",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.56416629540178,
+        "rmse_s": 209.5718496506962,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.0112786362464,
+        "rmse_s": 221.35199724672165,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.3736487912397,
+        "rmse_s": 216.99735351270812,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.90843435646119,
+        "rmse_s": 216.78405557645337,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.28271625202242,
+        "rmse_s": 216.10133821663035,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.30077144933992,
+        "rmse_s": 216.9232143844228,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.70237062395947,
+        "rmse_s": 214.5731770255202,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.43212887190188,
+        "rmse_s": 213.854030408905,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.70166717471335,
+        "rmse_s": 215.20328797467423,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 9",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.203460970291,
+        "rmse_s": 216.4631255729403,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 10",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.93947991652402,
+        "rmse_s": 216.28540142160142,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 11",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 133.10209393392267,
+        "rmse_s": 213.82585081772368,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 12",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.66150022275892,
+        "rmse_s": 212.02976216468727,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 13",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.36464464088917,
+        "rmse_s": 213.05222288815895,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 14",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.79949351654278,
+        "rmse_s": 215.12508896406874,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 15",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.63523811756983,
+        "rmse_s": 211.87871194620814,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 16",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.9558233873426,
+        "rmse_s": 211.43812645483987,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 17",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.98126480174454,
+        "rmse_s": 212.75596378075053,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 18",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.41423781274182,
+        "rmse_s": 212.53402801211033,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 19",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.71500926208174,
+        "rmse_s": 210.4264601799293,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época fija 20",
+      "kind": "matched_fixed_epoch_20",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.6937416465402,
+        "rmse_s": 212.5963510479619,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 21",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.40631228456866,
+        "rmse_s": 211.33072523539457,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 22",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.86906464698572,
+        "rmse_s": 212.3709568474654,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 23",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.02710624428448,
+        "rmse_s": 211.79509227865898,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 24",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.54805730766526,
+        "rmse_s": 212.35581881878898,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 25",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.7507679320937,
+        "rmse_s": 212.92888261903738,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 26",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.1335615635332,
+        "rmse_s": 213.7928061025245,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 27",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.21614650502966,
+        "rmse_s": 211.07394578501626,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 28",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.84608530494526,
+        "rmse_s": 210.68576499216363,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 29",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.8649611930499,
+        "rmse_s": 212.36005475994142,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 30",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.64396088822193,
+        "rmse_s": 212.3912275285416,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 31",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.35503083452528,
+        "rmse_s": 209.9779783716293,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 32",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.30302248692757,
+        "rmse_s": 211.81079345951164,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 33",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.73611273946585,
+        "rmse_s": 213.42519031852618,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 34",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.8108424977138,
+        "rmse_s": 209.90518043313904,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 35",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.23244307923184,
+        "rmse_s": 211.8693782324332,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 36",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.6849250826553,
+        "rmse_s": 209.64162178744087,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 37",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.00628414659883,
+        "rmse_s": 210.6247928485329,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 38",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.894201233381,
+        "rmse_s": 209.74308806058502,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 39",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.11320843201162,
+        "rmse_s": 210.0223542597616,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 40",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.56416629540178,
+        "rmse_s": 209.5718496506962,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 41",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.95387717776163,
+        "rmse_s": 210.98160522281768,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 42",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.00804276971417,
+        "rmse_s": 211.44629401938306,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 43",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.39810537669706,
+        "rmse_s": 212.62131898437553,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 44",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.75632518113818,
+        "rmse_s": 210.96898083125993,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 45",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.9167116092574,
+        "rmse_s": 210.40801871613013,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 46",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.27347761858982,
+        "rmse_s": 211.84748866646385,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 47",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.11660843670128,
+        "rmse_s": 210.914786143262,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 48",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.79935282669356,
+        "rmse_s": 210.6676342287067,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "control_historica_fresca_s0",
+      "label": "Histórica: control sin memoria — época 49",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.7596079442868,
+        "rmse_s": 210.47154782985046,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — inicial",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.20482097216686,
+        "rmse_s": 209.28216351177895,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": false,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — seleccionada",
+      "kind": "retained_existing_reference",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.20482097216686,
+        "rmse_s": 209.28216351177895,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": false,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.35625014655193,
+        "rmse_s": 210.4935261762291,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.35554669730578,
+        "rmse_s": 210.78933586237758,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.42483644805029,
+        "rmse_s": 209.1034620972243,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.7126644312613,
+        "rmse_s": 211.36757450813127,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 131.79707834079773,
+        "rmse_s": 210.95103697414945,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "mediana_directa_s0",
+      "label": "Mediana explícita con ajuste conjunto — final fija",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 132.07728562384224,
+        "rmse_s": 211.98703844080353,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — inicial nueva",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.21818650784346,
+        "rmse_s": 209.2251657909117,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": false,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — seleccionada",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.15804159729876,
+        "rmse_s": 209.3534140414966,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.35617980162732,
+        "rmse_s": 210.18506796847916,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.390648814688,
+        "rmse_s": 210.311489121362,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.15804159729876,
+        "rmse_s": 209.3534140414966,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.29943489577227,
+        "rmse_s": 210.05065061182125,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.33378666729195,
+        "rmse_s": 210.0116610223733,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.29333833563908,
+        "rmse_s": 210.26862117840187,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.27411072291133,
+        "rmse_s": 210.3910969481678,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_historia_individual_s0",
+      "label": "Atención sobre historias individuales — final fija",
+      "kind": "fixed_final_epoch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.55408352287384,
+        "rmse_s": 211.1352380072977,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — inicial nueva",
+      "kind": "initial_candidate",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 179.167585058738,
+        "rmse_s": 254.41176554702363,
+        "mdae_s": 135.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — seleccionada",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.77935141979506,
+        "rmse_s": 215.76814945323818,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 1",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.69174854034281,
+        "rmse_s": 221.53783028392846,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 2",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.8272094168406,
+        "rmse_s": 220.31918770210757,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 3",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.54751799657654,
+        "rmse_s": 217.02395442040824,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 4",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.4377799141792,
+        "rmse_s": 218.66225834624572,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 5",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.93891715712712,
+        "rmse_s": 216.01503830950665,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 6",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.80521490374468,
+        "rmse_s": 217.22407185874442,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 7",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 134.77935141979506,
+        "rmse_s": 215.76814945323818,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 8",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.32916735057566,
+        "rmse_s": 218.99185894940538,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 9",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.89830468731682,
+        "rmse_s": 216.29036535853163,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 10",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.44000750345862,
+        "rmse_s": 216.86502581397434,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 11",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.08976012380705,
+        "rmse_s": 216.30547600337545,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 12",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.72692100264965,
+        "rmse_s": 218.77157481311318,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 13",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.6504795179028,
+        "rmse_s": 217.15682909724538,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 14",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.9995544821441,
+        "rmse_s": 216.93493291375808,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "valor_vial_parcial_s0",
+      "label": "Valor vial con progreso parcial — época 15",
+      "kind": "epoch_checkpoint",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.58752081037352,
+        "rmse_s": 217.53164381783887,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "progreso_vial_recurrente_s0",
+      "label": "Progreso recurrente: solo raíz",
+      "kind": "secondary_branch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 137.8945764063123,
+        "rmse_s": 220.84847161001406,
+        "mdae_s": 90.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\resultado_etapa_A.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "progreso_vial_recurrente_s0",
+      "label": "Progreso recurrente: control216_MAE",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.98850107536296,
+        "rmse_s": 218.27877750096638,
+        "mdae_s": 83.01675539851544
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\etapa_B\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "progreso_vial_recurrente_s0",
+      "label": "Progreso recurrente: full246_MAE",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.1112052749399,
+        "rmse_s": 217.82632324070562,
+        "mdae_s": 82.15039946813079
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\etapa_B\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "progreso_vial_recurrente_s0",
+      "label": "Progreso recurrente: full246_q10",
+      "kind": "diagnostic_quantile",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 187.8400780282029,
+        "rmse_s": 279.55109867853804,
+        "mdae_s": 123.9545398455017
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\etapa_B\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "progreso_vial_recurrente_s0",
+      "label": "Progreso recurrente: full246_q50",
+      "kind": "diagnostic_quantile",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 136.0751961547707,
+        "rmse_s": 217.80876928142487,
+        "mdae_s": 81.96791992882027
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\etapa_B\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "progreso_vial_recurrente_s0",
+      "label": "Progreso recurrente: full246_q90",
+      "kind": "diagnostic_quantile",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 254.61366161298656,
+        "rmse_s": 314.3498818396562,
+        "mdae_s": 217.99241390261898
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\etapa_B\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "consistencia_temporal_viaje_s0",
+      "label": "Consistencia temporal del viaje",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 135.99613162839904,
+        "rmse_s": 217.77361771079788,
+        "mdae_s": 81.93957816870409
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\consistencia_temporal_viaje_s0\\etapa_B\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "difusion_global_tiempo_geometria_s0",
+      "label": "Difusión global conjunta",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 139.95339397347203,
+        "rmse_s": 219.11217825636902,
+        "mdae_s": 87.9281005859375
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\difusion_global_tiempo_geometria_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "memoria_subtrayectos_cdf_s0",
+      "label": "Subtrayectos: mezcla según evidencia",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.9599737378948,
+        "rmse_s": 212.83999089768474,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\memoria_subtrayectos_cdf_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "memoria_subtrayectos_cdf_s0",
+      "label": "Subtrayectos: memoria directa con respaldo",
+      "kind": "secondary_branch",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 163.94588130466386,
+        "rmse_s": 251.78703342777385,
+        "mdae_s": 105.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\memoria_subtrayectos_cdf_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": false,
+      "new_learned_improvement": false,
+      "below_131_06_s": false,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "atencion_subtrayectos_s0",
+      "label": "Atención sobre subtrayectos: final fija",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 129.99003446901307,
+        "rmse_s": 209.65124761307314,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\atencion_subtrayectos_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "subtrayectos_conjuntos_s0",
+      "label": "Subtrayectos conjuntos desde cero",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 130.6859802565245,
+        "rmse_s": 208.88094169100518,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\subtrayectos_conjuntos_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    },
+    {
+      "run": "prior_arco_subtrayectos_s0",
+      "label": "Subtrayectos: prior geométrico coherente",
+      "kind": "selected_model",
+      "alpha": null,
+      "computed_validation": {
+        "n": 127941,
+        "mae_s": 129.99448964757192,
+        "rmse_s": 210.02515936501536,
+        "mdae_s": 75.0
+      },
+      "reported_metric_max_error": 0.0,
+      "source": "propuesta\\replanteamiento_20261121\\prior_arco_subtrayectos_s0\\resultado.json",
+      "equals_reference_predictions": false,
+      "new_function_improvement": true,
+      "new_learned_improvement": true,
+      "below_131_06_s": true,
+      "below_external_73_5_s": false
+    }
+  ],
+  "archives": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\descompuesto_aux0_s0\\validacion.npz",
+      "sha256": "92c18fe4d69decdd81b2fbde9adbdd171a73aa6541e1b9b6c69a64ec0a79124e",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\descompuesto_aux1_s0\\validacion.npz",
+      "sha256": "3e07431443b7e203c28cadb7a12b821b1a00526ee28fba0023f370045386885a",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\memoria_cdf_s0\\validacion.npz",
+      "sha256": "23e051a00a2688498584214546f83dbb57b4fc9fa85ea341d7396c150981da32",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\memoria_mse_s0\\validacion.npz",
+      "sha256": "52186f8c7d80e7507b9c969f2a3dc78b8c86a9a354209b56664057b348fd528e",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\base_oof_estatica_s0\\validacion.npz",
+      "sha256": "6535abd138e92d479b9a084faab5aaf2ffecf8fb055f644c05a69d7adf5d29f6",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\memoria_residual_oof_s0\\validacion.npz",
+      "sha256": "62bdf801bda35c6edc2b693b439fa7bcff2bb9412d6ac51557d774fef25acf01",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\espacial_semimarkov_s0_v2\\validacion.npz",
+      "sha256": "0c487f290a499d3a530f448e4b0082384159e170ca2765256cb022b584c0b162",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\espacial_direccional_s0\\validacion.npz",
+      "sha256": "75506e22d7e3c4d16cd49ef9582ae6fba4ef5f227f16da683dcb9b0c20197df8",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\espacial_prior_cf_s0\\validacion.npz",
+      "sha256": "e2cc9add4a21f3e1d0ff493504b35fef413640f92cea1772b799ac15a8b59637",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\espacial_fases_referencia_s0\\validacion.npz",
+      "sha256": "9a2d9250b411387c9c8bc5b1c978553f5698fb005e4430023c7110e972f73e01",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\validacion.npz",
+      "sha256": "980b5ddd5df5ebd4ff680b09f4ffef37c2a3fd6ca8091a35d9d4ca0a3baea967",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\calibracion_unica_fases_s0\\predicciones_distintas.npz",
+      "sha256": "918ad534f9acba77505f0c55e25f6e36c2560941454e9258a5fd7dab84bed4ef",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\validacion.npz",
+      "sha256": "d3df187df2c777334d41f2c8edaa8f7225e8506f8fab355836f3720c4b2cdc5a",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\riesgo_total_s0\\validacion.npz",
+      "sha256": "41959e19991e4c99415489b190965ca0cbb3b153a7fc1b8752fb8c67a91e0720",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0_v2\\validacion.npz",
+      "sha256": "f65d72bbe44aa8d67aab3b4da5ad96fc2615266fea6c78bd190d5d01ba22977b",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0_v2\\validacion.npz",
+      "sha256": "834ad1fd6c441efb2723be2a2496eef55a359a74f9a755e20ca625594941dd23",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\alumno_maestro_s0_v2\\validacion.npz",
+      "sha256": "0274b4cf47b3c624890185755eff6f62c09a7c94b36508a31adfd58c80a5557e",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\historicos_integrados_s0\\validacion.npz",
+      "sha256": "9e04f8b85e5dda4965aae7371d848be61df67e51d71d16286390336506cb3685",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\campo_multiescala_s0\\validacion.npz",
+      "sha256": "33898616a7490311ffa823508f62bd546e1541feff0caf7380d745c3d4dd1f59",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\aux_subviajes_s0\\validacion.npz",
+      "sha256": "beb2d43f008e68e33820d056d6179a357f89885414d282640881013cb99a6dcb",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\atencion_vial_s0\\validacion.npz",
+      "sha256": "6b267dfe86b7fa1d383eac1e3d77ad78cf674987a8b58e0ae5790d1a12327127",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\mezcla_proyeccion_incierta_s0\\validacion.npz",
+      "sha256": "3ce9f688a698c49f47ff203c8e0a82d0e1feb8739c28a11a5fd7a771b0f466cf",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\validacion.npz",
+      "sha256": "ed7e0cd033218c30abaa6ddfb0c3f45a91daece6b42c94cdf94a9bd7d822e363",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\historica_fresca_s0\\validacion.npz",
+      "sha256": "6805ff4c7619a044cacb26e2a9467bd75e1ffde17c4669d868919e56d5e2d0d5",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\validacion.npz",
+      "sha256": "02a06cdc97e6807dbad065ed6081e89ce6df60db423f052d82fda3acecdfae33",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\mediana_directa_s0\\validacion.npz",
+      "sha256": "ec563fdee99cba1fd82dc7e967802540d2831071f92c97a8b863a686c07b7405",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\validacion.npz",
+      "sha256": "b5aec33ccc7f817294d64907f9b42c79e384610119380ddd45ee591f8b46cb79",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\valor_vial_parcial_s0\\validacion.npz",
+      "sha256": "5b441047431cba8973c4a1c4cf8413484cf7f8268456af23779a0f353dcb0b73",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\validacion_solo_raiz.npz",
+      "sha256": "5b136bdadfd49d7ae20e19fb8cd4e5e1659b6fd533946b63554752b5fae46c6a",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\etapa_B\\validacion.npz",
+      "sha256": "b272e450291f9f3c770f6518f6d861aec8c4f06c6dc7e5cec759f10083c840e7",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\consistencia_temporal_viaje_s0\\etapa_B\\validacion.npz",
+      "sha256": "556510544b44703bff09707e70ecfdc4d0f67b2426f2053b8864edc84d77a2f3",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\difusion_global_tiempo_geometria_s0\\validacion.npz",
+      "sha256": "9de3b73af8e471001391784112ad99d28be8e2ef17ebd3d5d82834d7cc191ef3",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\memoria_subtrayectos_cdf_s0\\validacion.npz",
+      "sha256": "8acfd92c643e8552a9b9ce263374b8a08d61c6d225687b5933a81632959570e9",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\atencion_subtrayectos_s0\\validacion.npz",
+      "sha256": "63f7601d931daa2d78f1c9b155576e14b7ec77c615325a4be729f1615971b0d8",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\subtrayectos_conjuntos_s0\\validacion.npz",
+      "sha256": "f1cdc244a73e0e5d7638925e5cbe45b70c18486b70d4a47e89bcc5cb645f06f2",
+      "same_rows_labels_and_timestamps": true
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\prior_arco_subtrayectos_s0\\validacion.npz",
+      "sha256": "bdbbb9431732ebe29fbaf76f8b2204e8ccba016f8f0d4e0c1eaee95991b50c48",
+      "same_rows_labels_and_timestamps": true
+    }
+  ],
+  "pending_no_metric_claimed": [],
+  "exact_reference_copies_are_not_learned_gains": true,
+  "Test_files_accessed": false,
+  "actual_data_files_accessed": [],
+  "limitations": [
+    "Repeated adaptive Validation and exploratory selection; not confirmation.",
+    "TransferTraj published cohort differs;73.5s remains an external target, not a matched-cohort victory.",
+    "No universal irreducible-error claim follows from these finite candidate outputs."
+  ],
+  "code_sha256": "a47c782a9e5b93125acea5da49ef7155289edaf7fcdc5d8d5db898ec127f15cd",
+  "elapsed_seconds": 1.367605447769165
+}

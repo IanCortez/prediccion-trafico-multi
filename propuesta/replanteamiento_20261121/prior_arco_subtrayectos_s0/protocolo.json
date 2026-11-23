@@ -1,0 +1,56 @@
+{
+  "epochs": 6,
+  "batch": 512,
+  "lr": 0.001,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "seed": 20261122,
+  "parent_id": "atencion_historia_individual_s0",
+  "parent_sha256": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b",
+  "parent_validation": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "plan": {
+    "status": "Preparedbefore newgeometry-correction outcome; noGPUtraining launched.",
+    "reason": "Train-onlysemanticproof found212.32mmedian geometryprior mismatch. Correcttheprior withoutdiscarding observedhistoricaltime-profile features.",
+    "original_inputs": "Keepalloriginal34Dtime-sampledsourcefeatures, sourcepathproxy, originalnormalizer43b431... and timeanchor exactly.",
+    "correction": "Supplyseparate14Darclength sourcegeometry onlyto geometryprior. No newneuralparameters. No influenceonTTforward forfixedweights, onlyonjointauxiliarytraininggradients.",
+    "paired": "Samefrozen30componentparent, sameinitialneuralparameters andbuffers, exact6epochs/seed/optimizer/batches. Comparewithtime6control129.990034 andcurrentverifiedbest.",
+    "source_indices": "Same2048nearestpointsets/64parents andalloriginalTrainqueries; no neighbor/bandwidth/label/filter changes.",
+    "instruments": [
+      "OriginalTrainarclengthteacher512parents",
+      "892actualpartialintervals",
+      "Stationarypoint insertiongeometryinvariance",
+      "FixedNNweightsTTbranch independencefromgeometryprior",
+      "Pairedinitialparametersexact",
+      "Raw65/order/singleton/fullcheckpointreplay"
+    ],
+    "old_prepared_replacement": "Arc34replacement trainer preparedbutneverexecuted; superseded before any newscore toretaininformativehistoricaltimefeatures.",
+    "source_parent": "atencion_historia_individual_s0",
+    "epochs": 6,
+    "priority": "Finishfrozenjoint24trial; preserve/replayqualifiedresult. Then semanticpriorcorrection before spendingonoriginalsourcevaluecontrol. No causalclaim withoutmatchedcontrol.",
+    "current_joint_result_exists_at_planning": false,
+    "Test": "SEALED",
+    "goal": "ACTIVE"
+  },
+  "selection": "Fixedfinalepoch6 only, no Validationstopping or epochselection",
+  "source_manifest_sha256": "dbeddff00e11dd21d03ed607892207401e9dcfe92d41c4122fac70cbc2a720aa",
+  "normalization_sha256": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983",
+  "GPU_fraction": 0.5,
+  "source_memory_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "public_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "geometry_prior": "Independent14Dmetricarclengthsourceprior; original34time/contextfeatures andnormalizer unchanged",
+  "prefix_sha256": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+  "comparison_best_id": "atencion_subtrayectos_s0",
+  "comparison_best_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd",
+  "time_control_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd"
+}

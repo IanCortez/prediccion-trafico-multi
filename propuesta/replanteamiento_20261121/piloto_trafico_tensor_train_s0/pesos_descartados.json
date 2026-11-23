@@ -1,0 +1,35 @@
+{
+  "reason": "Gatefailed; metrics/predictions/sources preserved.",
+  "removed": [
+    {
+      "file": "campo_0.pt",
+      "sha256": "90525bf5bcd48698a79f913fc12255d9a1e0b689b01f57bbadf552f4d3e45329",
+      "bytes": 10421749
+    },
+    {
+      "file": "campo_1.pt",
+      "sha256": "2c9c260b374d0a3aadcb19b14c0a798ad7e3a9475769ae4f798962921fb4e713",
+      "bytes": 10421749
+    },
+    {
+      "file": "campo_2.pt",
+      "sha256": "2b9dfb280f599a339ef8622972b585477b9e4de7500775bd684d62fe89855b81",
+      "bytes": 10421749
+    },
+    {
+      "file": "campo_3.pt",
+      "sha256": "d7e4839a85420445903c40071a99472eade8dea7a9e01e0186285359c880f69a",
+      "bytes": 10421749
+    },
+    {
+      "file": "campo_4.pt",
+      "sha256": "edfc29312d4c31de0a51f93f77e968ef3d2b76434d59e1770eeacd90c5bd7022",
+      "bytes": 10421749
+    },
+    {
+      "file": "campo_5.pt",
+      "sha256": "f4758e3388f5a79ececdaed5d1c5b06ee80d2e67e2d9aa8830321ddb4e44dbcf",
+      "bytes": 10421749
+    }
+  ]
+}

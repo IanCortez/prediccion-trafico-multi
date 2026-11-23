@@ -1,0 +1,20 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_posterior_global_neural_train_s0\\predicciones_time_only.npz",
+      "sha256": "aeca5f4d29349280de9d3076c9d859d82f32c6e766c3e2683f4f756c945b9980",
+      "bytes": 73934
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_posterior_global_neural_train_s0\\predicciones_semantic.npz",
+      "sha256": "9adff5ab85cc10ccdebc707fa586119d8154cb960674b20ac5fffd2fe58aad24",
+      "bytes": 72966
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_posterior_global_neural_train_s0\\predicciones_random.npz",
+      "sha256": "e2a92d547282cacd065a164124e7765db217de9ab78f29792e05dac77969c818",
+      "bytes": 73853
+    }
+  ],
+  "allarrays_retained_in": "predicciones_held_Train.npz"
+}

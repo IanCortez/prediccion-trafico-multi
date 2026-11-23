@@ -1,0 +1,14 @@
+{
+  "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+  "canonical_batch": 1024,
+  "paths": 16,
+  "max_steps": 192,
+  "features": 30,
+  "sources": {
+    "generar_resumenes_progreso_recurrente.py": "4b662b04f677efb4dd7ab1d7fba281ebd889215d761c03f7246671acbcb2e644",
+    "modelo_progreso_recurrente.py": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c"
+  },
+  "no_private_teacher_constructed": true,
+  "Test": "sealed"
+}

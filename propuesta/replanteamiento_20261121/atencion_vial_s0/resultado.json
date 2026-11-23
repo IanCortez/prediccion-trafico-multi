@@ -1,0 +1,213 @@
+{
+  "id": "atencion_vial_s0",
+  "config": {
+    "mode": "route",
+    "seed": 20261122,
+    "epochs": 9,
+    "frozen_global_epochs": 3,
+    "joint_epochs": 6,
+    "batch": 512,
+    "global_lr": 1e-05,
+    "branch_lr": 0.001,
+    "weight_decay": 0.0003,
+    "geometry_weight": 0.2,
+    "rps_weight": 5,
+    "clip": 5,
+    "representation": "32ordered public-road samples per length/freeflow route; learned16dim road ids,6static features,8calendar fields; shared64dim2layer4head Transformer and24time-parameter corrections. No observed query route.",
+    "information_control": "Conditional separate run with all road tokens zero, same clock/context/architecture/loop. Tests road information, not a claim of equal effective capacity.",
+    "confidence": "Train-only endpoint-independent sample counts n/(n+20) on road id embeddings; static map features available for all roads.",
+    "initialization": "Protected best global mixture; correction head initially zero. First3epochs freeze global tower, then6joint epochs.",
+    "precision": "FP32 highest, standard seeded CUDA, no bitwise training guarantee",
+    "canonical_inference_batch": 2048,
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "primary_Train_n": 1023485,
+    "Validation_n": 127941,
+    "Test": "sealed",
+    "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "source_data_manifest_sha256": "04dfa27fb245a844c423de4cdd1d9359fddd9a52688c07f6ff4a551cec1d3996",
+    "preservation": "Every completed metric and all epoch predictions, even MAE>131.06; weights for every strict primary new best and every complete MAE<131.06."
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 0,
+  "learned_update_selected": false,
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "global_frozen": true,
+      "primary_train_n": 1023485,
+      "train_loss": 3.5844622172809046,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.46751236898257,
+        "rmse_s": 210.24528935009647,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 53.37154245376587
+    },
+    {
+      "epoch": 2,
+      "global_frozen": true,
+      "primary_train_n": 1023485,
+      "train_loss": 3.58367141772864,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.38169156095387,
+        "rmse_s": 210.8476247704468,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 97.22396683692932
+    },
+    {
+      "epoch": 3,
+      "global_frozen": true,
+      "primary_train_n": 1023485,
+      "train_loss": 3.58267766355148,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.27629141557438,
+        "rmse_s": 210.76359602331843,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 141.40812754631042
+    },
+    {
+      "epoch": 4,
+      "global_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.625921275301597,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.2738293432129,
+        "rmse_s": 210.51818380926792,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 196.8940782546997
+    },
+    {
+      "epoch": 5,
+      "global_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.621833678406106,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.37864328088727,
+        "rmse_s": 210.91103814565338,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 252.70156717300415
+    },
+    {
+      "epoch": 6,
+      "global_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6184014587667157,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.56435388186742,
+        "rmse_s": 210.76741339408022,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 308.20361399650574
+    },
+    {
+      "epoch": 7,
+      "global_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6146448938333067,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.82463010293807,
+        "rmse_s": 210.80883680805803,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 363.949960231781
+    },
+    {
+      "epoch": 8,
+      "global_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.610882768244661,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.11890637090534,
+        "rmse_s": 210.59861536950854,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 419.7217011451721
+    },
+    {
+      "epoch": 9,
+      "global_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.607011203389845,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.54543109714635,
+        "rmse_s": 211.9182999188711,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 475.4998548030853
+    }
+  ],
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\modelo.pt",
+  "model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "saved_checkpoints": [],
+  "paired_vs_reference": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "predictions_sha256": "6b267dfe86b7fa1d383eac1e3d77ad78cf674987a8b58e0ae5790d1a12327127",
+  "sources": {
+    "entrenar_atencion_vial.py": "6013ea93decd70960fb7e5fa0cd2584a1c2582e82a2b56878a64b68fed5d4655",
+    "modelo_atencion_vial.py": "0da37703de84a857355bc65dcfd3ec90d99ab99eab0ede19c2b4319a78bec6df",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "secuencias_viales_od.py": "382ffd90e2dc8a0381c7e2d2f754ff63206d703dbfc67183d11bd496ae9de54e",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "parent_unchanged": true,
+  "seconds": 476.6843388080597,
+  "goal": "ACTIVE unless confirmation target actually later achieved"
+}

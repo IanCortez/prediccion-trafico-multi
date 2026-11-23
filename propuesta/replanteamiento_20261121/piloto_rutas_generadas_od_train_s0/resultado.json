@@ -1,0 +1,38 @@
+{
+  "passed": false,
+  "scope": "Chronological heldTrain OD prediction gate; generated routes frompublic5fields, no heldactualroute/current/endpoint IDs.",
+  "metrics": {
+    "n": 10000,
+    "mae_s": 133.9692334551895,
+    "rmse_s": 209.06311042417377,
+    "mdae_s": 88.15131764427639
+  },
+  "control": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparison": {
+    "delta_mae_s": 0.6138406623875716,
+    "ci95_s": [
+      -0.08414525618217307,
+      1.3489124599614857
+    ],
+    "days": 22,
+    "interpretation": "ChronologicalheldTrain raw5ODgate, noheldactualroute input; not primaryValidation."
+  },
+  "generator_scores_verified": true,
+  "all16publicendpointpairs": true,
+  "failed_route_fraction": 0.01230125,
+  "shortest_tail_fraction": 0.010985,
+  "source_sha256": "80f7421221f647217d95551fe651fb73b8ecb3f4301f00c06ef6d45125430ef2",
+  "generator_sha256": "87962e6782205ddf4f90b421de041d0b5a6a3d9e8a59418b3819b487c959bd83",
+  "policy_sha256": "fc2b0a88983516f85bc8b1d2bc7fa69cd7631acfc685df420fe17ca623951940",
+  "predictions_sha256": "bad2a7bcb1c2b612a9488f83e39bc7c08750c2267c7e42317c44c32ecd808541",
+  "features_sha256": "0caea4642f0d70a903df3a5ed238c6801a8a935a6d3bb5dd2f392efd87b54473",
+  "no_held_trajectory_or_actual_HMMendpoints_or_observed_N_used": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 510.99124455451965
+}

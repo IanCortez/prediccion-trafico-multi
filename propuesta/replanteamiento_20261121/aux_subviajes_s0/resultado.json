@@ -1,0 +1,176 @@
+{
+  "id": "aux_subviajes_s0",
+  "config": {
+    "arm": "auxiliary",
+    "seed": 20261122,
+    "joint_epochs": 6,
+    "auxiliary_warmup_epochs": 1,
+    "batch": 512,
+    "primary_lr": 1e-05,
+    "auxiliary_lr": 0.001,
+    "weight_decay": 0.0003,
+    "auxiliary_weight": 0.2,
+    "geometry_weight": 0.2,
+    "rps_weight": 5,
+    "clip": 5,
+    "precision": "FP32 highest, standard seeded CUDA; no bitwise training guarantee",
+    "primary_Train_n": 1023485,
+    "aux_Train_n": 475076,
+    "Validation_n": 127941,
+    "sampling": "All primary rows once per epoch;512 random auxiliary rows per primary step, separate seeded RNG. Same auxiliary forwards in conditional control to match dropout draws.",
+    "warmup": "One auxiliary epoch with shared duration model frozen/eval; original full validation predictions must remain exact.",
+    "initialization": "Protected original best duration model; independent per-member8component auxiliary duration head. Primary head only at query.",
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "Test": "sealed",
+    "canonical_inference_batch": 2048,
+    "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "aux_features_sha256": "a4779166d5ea406421fadf92bdb62aa0283f0021af20a165800a9148bbffe13e",
+    "preserve": "All metrics/predictions including MAE>131.06; weights for every strict primary new best and complete MAE<131.06 candidate."
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 0,
+  "learned_update_selected": false,
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "primary_train_n": 1023485,
+      "primary_loss": 3.628297815063978,
+      "auxiliary_loss": 3.217368839723727,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.3700846483926,
+        "rmse_s": 210.79190550194588,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 73.36931324005127
+    },
+    {
+      "epoch": 2,
+      "primary_train_n": 1023485,
+      "primary_loss": 3.6271580644473076,
+      "auxiliary_loss": 3.2087277767580744,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.3699674068516,
+        "rmse_s": 210.74835505512308,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 129.52390241622925
+    },
+    {
+      "epoch": 3,
+      "primary_train_n": 1023485,
+      "primary_loss": 3.6266947425600913,
+      "auxiliary_loss": 3.2070874697872163,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.36926395760545,
+        "rmse_s": 210.83579728353536,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 185.85769152641296
+    },
+    {
+      "epoch": 4,
+      "primary_train_n": 1023485,
+      "primary_loss": 3.6263833116591577,
+      "auxiliary_loss": 3.2047855054324628,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.39751916899195,
+        "rmse_s": 210.9390652176161,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 242.2812786102295
+    },
+    {
+      "epoch": 5,
+      "primary_train_n": 1023485,
+      "primary_loss": 3.626053649366545,
+      "auxiliary_loss": 3.204080721139506,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.35988463432363,
+        "rmse_s": 210.6334177613887,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 298.88194251060486
+    },
+    {
+      "epoch": 6,
+      "primary_train_n": 1023485,
+      "primary_loss": 3.6259796118125593,
+      "auxiliary_loss": 3.2047097145616847,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.36293291439023,
+        "rmse_s": 210.67981757252838,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 355.359201669693
+    }
+  ],
+  "warmup": {
+    "aux_examples": 475076,
+    "auxiliary_loss": 3.2539674533253686,
+    "primary_all127941_predictions_still_exact": true,
+    "seconds": 17.80828857421875
+  },
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\modelo.pt",
+  "model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "saved_checkpoints": [],
+  "paired_vs_reference": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "predictions_sha256": "beb2d43f008e68e33820d056d6179a357f89885414d282640881013cb99a6dcb",
+  "sources": {
+    "entrenar_aux_subviajes.py": "668c79121228f54b9d97cc677b12a4a58f242ad6291f0b20e9126c0be0a60098",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "consulta_subviajes_train.py": "8963ecb1c2261309030841c182c99f4a708c01a788006f1bfb5243e88573bba9",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "data_manifest_sha256": "71b8c136d4d784e712a7623a94bdd694482bc44a45c3800f937a49d65add8a6c",
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "parent_unchanged": true,
+  "seconds": 356.2434642314911,
+  "goal": "Still active unless strong frozen candidate later achieves confirmation target"
+}

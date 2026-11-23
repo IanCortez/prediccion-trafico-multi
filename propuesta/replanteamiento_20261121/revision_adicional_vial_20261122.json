@@ -1,0 +1,41 @@
+{
+  "scope": "Revisión adicional de fuentes primarias durante el ensayo vial. No altera consultas, etiquetas ni filtros.",
+  "sources": [
+    {
+      "title": "UNITE: A Unified Framework for Accurate and Efficient Origin-Destination and Route Travel Time Estimation",
+      "year": 2026,
+      "url": "https://web.comp.polyu.edu.hk/csmlyiu/conf/KDD26_UNITE.pdf",
+      "doi": "10.1145/3770855.3818012",
+      "finding": "Usa un estado de progreso compartido, predicción del siguiente segmento y estimación temporal local con atención y mezcla de expertos. Distingue OD sin ruta de estimación con ruta conocida.",
+      "adaptation": "El ensayo actual aprende un valor temporal amortizado con auxiliares de progreso; no genera rutas en inferencia y no replica UNITE. La generación explícita sería una hipótesis posterior distinta.",
+      "limitation": "No aporta una cifra directamente comparable de Porto bajo nuestra cohorte. Sus entradas viales deben adaptarse a puntos GPS y proyecciones inciertas."
+    },
+    {
+      "title": "RED: Effective Trajectory Representation Learning with Comprehensive Information",
+      "year": 2025,
+      "url": "https://www.vldb.org/pvldb/vol18/p80-zhou.pdf",
+      "finding": "El protocolo de TTE recibe trayectorias completas sin información temporal salvo la salida; la sección de tareas explicita esa entrada. Aprende representaciones viales y predicción del siguiente segmento.",
+      "decision": "Puede orientar supervisión auxiliar de Train, pero sus errores no son un objetivo OD comparable. No agregar la ruta real, usuario ni el número de puntos a las consultas."
+    },
+    {
+      "title": "An OD time prediction model based on adaptive graph embedding",
+      "year": 2025,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S037843712400726X",
+      "doi": "10.1016/j.physa.2024.130217",
+      "evidence": "Solo resumen oficial y registro de la revista disponibles en esta revisión; texto completo devolvió403.",
+      "finding": "Propone completar información mediante una descomposición tiempo-segmento-velocidad y una representación de grafo adaptativa.",
+      "possible_distinct_hypothesis": "Tráfico vial de bajo rango aprendido únicamente de Train y extrapolado con información disponible a la salida. No afirmo resultados Porto ni implemento una réplica a partir del resumen."
+    },
+    {
+      "title": "Personalized origin–destination travel time estimation with active adversarial inverse reinforcement learning and Transformer",
+      "year": 2025,
+      "url": "https://www.sciencedirect.com/science/article/pii/S1366554524004307",
+      "doi": "10.1016/j.tre.2024.103839",
+      "evidence": "Resumen y registro editorial; texto completo403.",
+      "finding": "Aprende preferencias de ruta mediante aprendizaje inverso por refuerzo y un Transformer con grafos.",
+      "decision": "La idea de aprender elección de ruta motiva un diagnóstico de decisiones en Train. La personalización no autoriza a introducir identificadores de conductor en nuestro protocolo."
+    }
+  ],
+  "current_diagnostics": "Piloto de predictibilidad de siguiente calle usa estado vial actual y calle terminal reales, solo dentro de Train. Es privilegiado y no mide una consulta OD completa.",
+  "Test": "cerrado"
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "Privileged known-current-road and true-terminal-road chronological Train route-predictability diagnostic. Not ODprediction or endtoendroute accuracy.",
+  "fit_trips": 40000,
+  "held_trips": 10000,
+  "max_states_per_trip": 4,
+  "seed": 20261122,
+  "input": "Publicroad attributes, public directed shortest remainingdistance, turn angles, source/goalgeometry, departureclock. Actualcurrent/dest road are privileged diagnostic state only. No elapsedtime, futurelength, pertokenTT, driver, GPSpointcount.",
+  "control": "Greedypublicshortestremainingdistance neighbor; EOSavailableonlywhen currentroad equals destinationroad, never from observedrouteN.",
+  "model": {
+    "iterations": 400,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss_function": "Logloss",
+    "random_seed": 20261122,
+    "thread_count": 2,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "stop": "Fixed400trees,noheldstopping or search.",
+  "gate": "At least3percentagepoints top1 improvement and upper95percentdaybootstrap deltaNLL<0. Prerequisiteonly; teacherstates do not establish ODroutegeneration quality.",
+  "resources": "CPU2, <=200MiBartifacts.",
+  "Validation": false,
+  "Test": false
+}

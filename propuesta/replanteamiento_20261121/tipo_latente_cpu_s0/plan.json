@@ -1,0 +1,28 @@
+{
+  "architecture": "frozen_TabM_mean_hidden + three semantic duration experts",
+  "equation": "p(T|x) = sum_c p(c|h(x)) softmax_T(log p_reference(T|x) + b(T)^T a_c(h(x)))",
+  "experts": "A/B/C, 8 fixed smooth log-duration basis functions per expert; 64 hidden units; bounded coefficients 1.5*tanh(raw/1.5)",
+  "auxiliary": "Train CALL_TYPE target for joint type and conditional duration NLL; never a forward input",
+  "main_loss": "supervised: -log p(c|x)-log p(T|x,c)+5*RPS(marginal); matched control: -log p(T|x)+5*RPS(marginal)",
+  "backbone": "Strong reference entirely frozen, including 216 feature preprocessing and physical anchors; 16 member hidden states averaged.",
+  "Train": "All 1,023,485 embargoe-safe Train rows used for new head fitting; no new query filters",
+  "Validation": "All unchanged 127,941 rows, only after final fixed heads frozen",
+  "Test": "sealed",
+  "device": "CPU only",
+  "threads": 2,
+  "canonical_batch": 32,
+  "initial": "zero tilt and uniform type gate reproduce base distribution; seeds and matched architecture identical",
+  "budget": {
+    "steps": 12000,
+    "batch": 256,
+    "lr": 0.0005,
+    "AdamW_weight_decay": 0.001,
+    "gradient_clip": 1,
+    "held_early_stopping": false
+  },
+  "checkpoint": "Final fixed step only. No search of blend weights and no Validation selection during head fitting.",
+  "uncertainty": "Day-block paired bootstrap 3000, exploratory after adaptive repeated Validation use.",
+  "conservation": "Any full MAE below 131.06 seconds and any new best retains heads, metrics, predictions, exact sources, frozen-parent references and hashes.",
+  "resources": "Preallocated Train hidden and base probability arrays in RAM only, about 2.6GB; no CDF/hidden banks on disk; one other GPU job unaffected.",
+  "caveat": "Base sees all Train, so residual-head fitting uses in-sample base representations; Train pilot gate is not independent generalization evidence."
+}

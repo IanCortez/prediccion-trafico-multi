@@ -1,0 +1,27 @@
+{
+  "scope": "Privileged actual-route chronological Train-only diagnostic; not deployable OD, primaryValidation or a lower bound.",
+  "hypothesis": "Street geometry and traversal-specific distances might explain duration beyond rawOD/public features, enough to warrant a latent road-route model.",
+  "seed": 20261122,
+  "fit_n": 40000,
+  "held_n": 10000,
+  "held_last_days": 21,
+  "fit": "Quality eligibleTrain memory only; all fit arrivals precede held cutoff. Auxiliary diagnostic selection never changes primary cohort.",
+  "route": "Original frozen4candidate matcher, traced without changing output; trusted15secondinterval paths bridged, unknownGAPs masked. Only street geometry/distance enters oracle; not true duration, pertoken time, GPSsample count, reset count or unknown elapsed time.",
+  "features": "Matched206public ODfeatures control; treatment adds known route distance/freeflow/geometry orientation8, speed bins6, distance-weighted hashed street64, start/end partial distances and geometric route count. Actualroute is privileged.",
+  "model": {
+    "iterations": 1000,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "loss_function": "MAE",
+    "l2_leaf_reg": 5,
+    "random_seed": 20261122,
+    "thread_count": 2,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "stopping": "Fixed1000trees; no held early stopping or hyperparameter search.",
+  "gate": "At least3seconds reduction in heldTrain MAE and upper95percent daybootstrap deltaCI<0. Necessary diagnostic only, not evidence an OD generator can recover actual route.",
+  "resources": "CPU2,1024trip chunks, no persistent rawGPS/candidate cache, <=200MiB artifacts.",
+  "Validation": false,
+  "Test": false
+}

@@ -1,0 +1,20 @@
+{
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "scope": "Train-only matched8candidate geometry coverage gate, not primaryMAE.",
+  "neighbors": 64,
+  "historical_prototypes": 6,
+  "source_UTCweek_fold_excluded": true,
+  "candidate_selection": "Nearest64in4Dendpointkm;weights Gaussian250m,cyclic4hour and weekday/weekend match(0.35mismatch);500m4Dcutoff. First maximumweight, then greedy weighted geometric facility coverage against default routes/straight.",
+  "reanchoring": "Rotate/scale historical relative shape by old/new OD chord. A latent geometric prior, not guaranteed drivable route.",
+  "comparison": "Protected2publicroutes plus6historical prototypes andstraight, versus protected8publicroutes andstraight; same8routecount.",
+  "gate": "At least10percent and25meters reduction versus the prior expanded8route geometry oracle.",
+  "query_true_geometry_used_only_after_selection": true,
+  "Validation_access": false,
+  "Test": "sealed"
+}

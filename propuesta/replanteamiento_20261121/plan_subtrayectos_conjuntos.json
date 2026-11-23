@@ -1,0 +1,17 @@
+{
+  "architecture": "Freshglobal8 +publicroute8 +historicalwholetripprototype6 +orderedsubtrajectoryattention8 =30components",
+  "difference": "All neuralweights initializedfresh and jointlytrained; no frozenin-sampleteacher controlsnewsourcegradient.",
+  "reason": "Protectedparent saw allTrain, so frozen-branchtraining canunderuse crossfit sourceinformation. Treat as optimizationhypothesis, not provenerrorcause.",
+  "gate_initial_logit": 0,
+  "epochs": 24,
+  "lr": 0.001,
+  "scheduler": "FixedCosineAnnealingLR T_max24 eta_min1e-5",
+  "selection": "Fixedfinalepoch24; no Validationepochselection. Controlonlyif>=.5s improvement and upperdayCI<0.",
+  "inputs": "Same216publicODfeatures and samehistorical/projectionbanks; raw5 only, noactualquerypath/N/T.",
+  "primary_train": 1023485,
+  "Validation": 127941,
+  "Test": "SEALED",
+  "source_data": "Same64orderedsubtrip sources and34Dtokens withwholeparentweekfold exclusion; no neighborcount/radius/bandwidth tuning.",
+  "modelweights": "Fullsmallmodel once; checkpointlatest forrecovery, finalretained<131.06 orstrictbest. Allcompletedmetrics/predictions/config retained.",
+  "resource": "OneheavyGPU .5cap, actualfullresidentdata B512gradientpreflight required."
+}

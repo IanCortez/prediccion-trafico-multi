@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "generar_resumenes_progreso_recurrente.py": "4b662b04f677efb4dd7ab1d7fba281ebd889215d761c03f7246671acbcb2e644",
+    "evaluar_progreso_recurrente.py": "3e54f0d6b6a118f22c46f46089a1d264388d39f175e3b2cc2d2fe9b32234c7c4",
+    "certificar_progreso_recurrente.py": "6364dec29537624e4e6ac8094d060b54b5725289cc3d9d37e2f8ef9485ee4f46",
+    "concluir_progreso_recurrente.py": "f6e9e1b8ac713c82a8d822ce9a638d1ba71259e5d5097261eba3a029c29ace7f",
+    "verificar_conservacion.py": "70074976f7264377484ea53a871e3ec32372021483d5f1b53a69a42d847dce1c"
+  },
+  "orchestrator_sha256": "8b3a904ec4fdcabb4ee9a62177ba0dbae526103dbc6a68f89f11922702ad556e",
+  "Train_PID": 30380,
+  "stages": [
+    "FinishsixfixedfullTrainepochs",
+    "Freezeepoch6",
+    "Public-onlyallTrain/Valrollouts",
+    "Fixedmatchedtreecomparison",
+    "Independentcandidatecertificationifnewminimum",
+    "Criticalconclusion",
+    "Conservationaudit"
+  ],
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

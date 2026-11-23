@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "Train_source_parents": 512,
+  "semantic_mismatch_verified": true,
+  "original_teacher": "7normalizedarclengthdeviations fromODchord; fullpolyline length",
+  "tested_source": "Current34Dsource uses7equalGPSindex/time points andninepointapproximatepathlength",
+  "old_point_error_m_quantiles": [
+    0.09080959342274356,
+    101.52755733110395,
+    212.31656631992087,
+    389.03837114003863,
+    639.8449962711433,
+    3933.9627001053022
+  ],
+  "corrected_arclength_vs_original_teacher_max_error_m": 0.0023913279386476084,
+  "full_polyline_length_vs_original_teacher_max_error_m": 0.0029355763390412903,
+  "old_path_length_relative_error_quantiles": [
+    -0.39434231420177807,
+    -0.15156710327846334,
+    -0.10746314972636137,
+    -0.0657994557632641,
+    -0.04370880136398608,
+    0.0003099838480710981
+  ],
+  "stationary_insertion": {
+    "correct_arclength_invariant": true,
+    "current_time_sample_geometry_changes": true
+  },
+  "interpretation": "Semanticauxiliaryprior mismatch, not queryinformationleak or changedprimaryT. CurrentMAE129.990034 remains valid foritsfrozenmethod.",
+  "correction": "Separatefuturetokens samplebymetricarclength andexactsourcepolyline length, retainALLtime/context fields andsameNNarchitecture; neverfeedcorrectedtokens intooldweights.",
+  "no_active_sources_or_weights_changed": true,
+  "no_Validation_data": true,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "source_sha256": "dde0b7582354aa5da03c8684df2d5d4ff3cfbfc3fd93361d0b493e56a587dfba",
+  "oldtoken_sha256": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+  "original_definition_sha256": "d26398e2406d4cad87ca166ed93076655725419f7072ef757344c0ed3d3eb93e",
+  "seconds": 2.3739206790924072
+}

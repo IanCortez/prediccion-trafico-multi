@@ -1,0 +1,15 @@
+{
+  "id": "historica_fresca_s0",
+  "sources": {
+    "entrenar_historica_fresca.py": "a5222f3d204f10bfe5b62498a86019a23ab42e4763cc0ea4de49514e9baa5e84",
+    "modelo_mezcla_historica.py": "806739e994331184f484a9270bf3bcc48fddadb52af0a4c6687e515be9e26938",
+    "modelo_mezcla_proyeccion.py": "0881ec64259b9c4195a9b94c5cb43233c1a547177ade6715eceb6abc2ee83672",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "historicos_rutas.py": "cbe6d47d8325f32895dff0ed2e46e9bb8445d9e3a70a38ddb4499d451185321d",
+    "piloto_prototipos_ruta.py": "2cc3d14d0e89145b42a6e6295e31ebc9b80361d2fe3a5f687744e92578471aa9",
+    "rutas_proyeccion_incierta.py": "ecfdf06d4c6db7041f0b6743e5015140ad460e671e4d5035df72519477173cda",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "model_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5"
+}

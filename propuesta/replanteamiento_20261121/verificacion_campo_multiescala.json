@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "scope": "CPU architecture instrument; protected weights unchanged, no optimizer step",
+  "bilinear_linear_field_max_error_m": 0.00022792816162109375,
+  "nonnegative_weights_partition_unity": true,
+  "query_order_invariance": true,
+  "zero_spatial_branch_exactly_recovers_original_output": true,
+  "zero_branch_max_logp_error": 0.0,
+  "finite_nonzero_embedding_gradient_norm": 0.020967969088815153,
+  "finite_nonzero_field_output_gradient_norm": 0.36342039704322815,
+  "confidence_fit_only_coordinates": true,
+  "query_model_accepts_only_legal216feature_tensor": true,
+  "feature_input_contract": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "actual_path_type_duration_length_not_query_inputs": true,
+  "parameters": 6340040,
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "Test_access": false,
+  "Validation_labels_read": false,
+  "source_sha256": "9cd92f373120924e310b6e523d0d5632b79377e91ef177560f761f79b1058b90",
+  "code_sha256": "f8557f0628eda08b6640e9c28e6685d383340bd2ce5d42f3deedb88d7b6434e2",
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 3.510006904602051
+}

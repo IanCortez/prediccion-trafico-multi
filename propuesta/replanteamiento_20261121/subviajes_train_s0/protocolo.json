@@ -1,0 +1,22 @@
+{
+  "seed": 20261122,
+  "max_selected_parents": 250000,
+  "attempts_per_parent": 2,
+  "max_aux_examples": 500000,
+  "primary_cohort_labels_and_features_unchanged": true,
+  "only_Train_GPS_decoded": true,
+  "label": "15*(j-i) seconds, original GPS sampling interval",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "auxiliary_only_filter": "Original endpoint bbox,OD>=200m,OD speed<=120km/h,time60..1785; proper subsegment; skip UTC-week-crossing parent so parent GPS is wholly excluded by historical week bank.",
+  "primary_filters_changed": false,
+  "whole_week_history_exclusion": true,
+  "Validation_and_Test_GPS_decoded": false,
+  "cache_max_bytes": 629145600,
+  "source_sha256": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d"
+}

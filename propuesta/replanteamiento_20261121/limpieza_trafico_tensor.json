@@ -1,0 +1,17 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_trafico_tensor_train_s0\\caracteristicas_Train.npz",
+      "bytes": 7212064,
+      "sha256": "c1f9e5ac7e766054419a5239f04ab591b6dd03d573d8ee9020439f02b233eed0",
+      "kind": "Regenerablederivedfeatures/Trainauxiliaryobservations, notpredictions."
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\datos_trafico_tensor_train_s0\\observaciones_Train.npz",
+      "bytes": 15429792,
+      "sha256": "041783d8a0cdecdcbde8cd82c40ac8980ade5fee0901ff2fffd34c776f6044f5",
+      "kind": "Regenerablederivedfeatures/Trainauxiliaryobservations, notpredictions."
+    }
+  ],
+  "all_completed_metrics_predictions_preserved": true
+}

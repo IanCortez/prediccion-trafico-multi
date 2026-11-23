@@ -1,0 +1,16 @@
+[
+  {
+    "task": "teacher_gradient",
+    "batch": 256,
+    "seconds": 0.15684890747070312,
+    "peak_allocated_MiB": 3554.41796875,
+    "fragments_per_second": 1632.1439793759273
+  },
+  {
+    "task": "teacher_gradient",
+    "batch": 512,
+    "seconds": 0.145845095316569,
+    "peak_allocated_MiB": 4074.88525390625,
+    "fragments_per_second": 3510.5740024281317
+  }
+]

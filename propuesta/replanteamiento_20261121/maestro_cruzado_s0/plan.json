@@ -1,0 +1,14 @@
+{
+  "scope": "Privileged soft-target creation ONLY for Train, never primary query prediction",
+  "sample": "All1023485 embargoe-safe Train rows, no quality/target-based row removal",
+  "folds": "UTC departure week modulo5. Every row is predicted exactly once by a teacher fit on other4 folds.",
+  "teacher": "CatBoost RMSEWithUncertainty on log(T),1000 fixed trees,depth7,LR.07,L2=5,seed20261122+fold,CPU2threads,no held early stopping or iteration selection",
+  "features": "39 deterministic OD/calendar features plus actual path log length,km length,14 normalized-arclength deviations and finite flag. No CALL_TYPE, number of points, max GPS step or fitted shared feature banks.",
+  "supervision": "T remains the original duration label. Observed geometry is privileged Train-only teacher input. Eventual student forward is five-field OD only.",
+  "storage": "Five compact CBM teachers and one compressed NPZ of two raw lognormal parameters per Train row; no per-trip CDF or hidden bank.",
+  "inference": "RawFormulaVal=(mu_logT,log_sigma); sigma fixed clipped[.05,1.5],116 support bins60..1785. Quantization and fitted model statistics use only each fit partition.",
+  "later_student": "Predeclare auxiliary soft expected NLL+5RPS weight0.2 on the original strong model, primary/geometry objectives unchanged,4 fixed epochs,LR1e-5. Reuse the already queued aux_solicitud_control_s0 only after verifying exact architecture/data/seed/budget/primary-loss equivalence; otherwise do not claim matched effect.",
+  "GPU": "None. Existing risk and request-type study keep priority. No student GPU launch without CPU probability/gradient and actual GPU gates.",
+  "Test": "sealed",
+  "Validation": "not opened"
+}

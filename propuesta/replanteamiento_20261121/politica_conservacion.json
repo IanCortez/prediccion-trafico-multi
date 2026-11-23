@@ -23,5 +23,8 @@
   "final_goal_confirmation_MAE_s": 73.5,
   "Test": "sealed",
   "best_model_always_preserved": true,
-  "note": "Every complete candidate below131.06s is preserved; the strongest verified model remains protected in all cases."
+  "note": "Every complete candidate below131.06s is preserved; the strongest verified model remains protected in all cases.",
+  "user_confirmation": "2026-11-22: preserve metrics and predictions also when MAE is greater than131.06 seconds.",
+  "all_completed_experiments_including_MAE_above131_06": true,
+  "discard_only": "Exact temporary caches/intermediates and discarded weights, preserving every completed metric, prediction archive, source, config, original best and every eligible qualifying model."
 }

@@ -1,0 +1,6 @@
+{
+  "terminal": true,
+  "reason": "Missing explicit lisbon_transitions import in verifier, before any oracle or predictive metric.",
+  "scientific_result": false,
+  "replacement": "verificar_fuentes_ordenadas_v2.py"
+}

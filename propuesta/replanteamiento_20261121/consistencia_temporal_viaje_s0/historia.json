@@ -1,0 +1,18 @@
+[
+  {
+    "epoch": 1,
+    "parents": 894104,
+    "fragments": 2099324,
+    "known_tokens": 41511860,
+    "online_training_knownT_MAE_s": 77.7257138250014,
+    "seconds": 29.429511785507202
+  },
+  {
+    "epoch": 2,
+    "parents": 894104,
+    "fragments": 2099324,
+    "known_tokens": 41511860,
+    "online_training_knownT_MAE_s": 77.09261726574698,
+    "seconds": 29.531232833862305
+  }
+]

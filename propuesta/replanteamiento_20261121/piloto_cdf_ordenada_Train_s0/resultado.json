@@ -1,0 +1,85 @@
+{
+  "complete": true,
+  "passed": false,
+  "metrics": {
+    "baseline": {
+      "n": 10000,
+      "mae_s": 133.12132830774271,
+      "rmse_s": 207.87403694947727,
+      "mdae_s": 87.4259202361759
+    },
+    "geometry_CDF_control": {
+      "n": 10000,
+      "mae_s": 133.2102889006977,
+      "rmse_s": 208.02315487163767,
+      "mdae_s": 88.04771144890765
+    },
+    "historical_CDF": {
+      "n": 10000,
+      "mae_s": 130.95561327932944,
+      "rmse_s": 204.7312065263863,
+      "mdae_s": 85.15720841493476
+    }
+  },
+  "comparisons": {
+    "vs_baseline": {
+      "delta_mae_s": -2.165715028413262,
+      "ci95_s": [
+        -3.1204807983084932,
+        -1.2210834304191487
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+    },
+    "vs_geometry_control": {
+      "delta_mae_s": -2.2546756213682455,
+      "ci95_s": [
+        -3.2856413536275073,
+        -1.2769160197220275
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": -2.3997795134724753,
+      "ci95_s": [
+        -3.428234025711694,
+        -1.3288934055073705
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "sources": {
+    "piloto_cdf_ordenada_Train.py": "dd26d526ba38796968e36262bab097d0b1231f4deb3aafb3444b383fd9ae8e51",
+    "recuperar_fuentes_ordenadas.py": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa",
+    "features_cdf_fuentes.py": "9b3f91046e59ad0937e8e440eb876ccc23ae54a2b7657f9ce3e695278e948179",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "predictions_sha256": "406cf123e6940425083f47be302b613cdfd30e5787e7a1c49e955fab3dedeade",
+  "sourceindices_sha256": "14774687c767790bdd8383ff458b0c025fa18b40379498644efa5ef82bea8e9f",
+  "weights": [],
+  "feature_n": 569,
+  "original_rows_labels_preserved": true,
+  "no_model_pretrained_on_heldlabels": true,
+  "queryraw5_only": true,
+  "sourcefold_exclusion_beforetree": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 392.5864405632019,
+  "interpretation": "Coverageinstrument led to a fixedtimepredictiongate. No fullprimaryMAE or confirmation claim.",
+  "next_if_fail": "Retire this CDF summary recipe; do not infer lower primaryMAE from geometriccoverage or sweep grids/counts."
+}

@@ -1,18 +1,20 @@
 # Predicción de tráfico: avances para revisión de tesis
 
-Esta rama conserva el código original del alumno y añade una instantánea de investigación para su revisión.
-La guía de entrada es [revision_tesis/README.md](revision_tesis/README.md).
+Rama de resultados y modelos, actualizada el 22 de noviembre de 2026.
+El código original del alumno en src/ permanece intacto.
 
-- [Resultados, modelos y límites de interpretación](revision_tesis/README.md).
-- [Resumen de experimentos](propuesta/RESUMEN_RESULTADOS.md).
+**Mejor MAE completo verificado: 129,990034 s en los mismos 127.941 viajes de Validation.**
+La meta de confirmación <73,5 s sigue pendiente y Test permanece cerrado.
+
+- [Qué cambió y cómo revisar el modelo de 129,99 s](revision_tesis/ACTUALIZACION_129_99.md).
+- [Guía para Ian](revision_tesis/README.md).
+- [Resultados y conclusiones de los experimentos](propuesta/RESUMEN_RESULTADOS.md).
+- [Arquitectura vigente y límites científicos](propuesta/ARQUITECTURA.md).
 - [Comparaciones locales con TransferTraj](propuesta/comparaciones_transfertraj/README.md).
-- [Arquitectura del modelo conservado](propuesta/ARQUITECTURA.md).
-- [Nuevo replanteamiento y experimentos negativos](propuesta/replanteamiento_20261121/README.md).
-- [Evidencia del ensamble histórico de 131,06 s](revision_tesis/ensamble_historico_131_06.json).
 
-**Meta MAE <73,5 s: pendiente.** Mejor modelo individual conservado: **131,256712 s** en
-127.941 viajes de Validation. El ensamble histórico llegó a **131,063381 s**, pero tres
-de sus cuatro checkpoints se eliminaron en la limpieza previa. Se conserva su registro; no se afirma
-que ese ensamble pueda cargarse desde esta rama. Test no fue evaluado.
-
-Esta entrega es una instantánea: los estados de procesos y las cifras parciales son históricos.
+La entrega contiene el nuevo checkpoint y sus dos padres, fuentes congeladas, métricas,
+predicciones y evidencia de reproducción. Las memorias grandes de Train y mapas permanecen
+como recursos externos identificados por SHA256. El ensamble histórico de 131,06 s conserva
+su registro, pero tres de sus cuatro checkpoints se eliminaron antes de esta rama.
+Cada actualización es una instantánea: los registros de procesos no describen ejecuciones
+que sigan activas al consultar GitHub.

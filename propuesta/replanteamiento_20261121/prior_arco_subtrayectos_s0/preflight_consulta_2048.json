@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "batch": 2048,
+  "no_Validationmetric": true,
+  "GPU_reserved_MiB": 6090.0,
+  "all_Train_tensors_not_resident": true
+}

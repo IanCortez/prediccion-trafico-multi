@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "stage": "A sequence representation complete; StageB publicrouteforecasts pending",
+  "epoch": 6,
+  "root_diagnostic_validation": {
+    "n": 127941,
+    "mae_s": 137.8945764063123,
+    "rmse_s": 220.84847161001406,
+    "mdae_s": 90.0
+  },
+  "root_diagnostic_not_fullproposed_pipeline": true,
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\modelo_secuencia_epoca6.pt",
+  "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+  "state_MiB": 8.577691078186035,
+  "primary_queries_per_epoch": 1023485,
+  "all_6epochs_fullteacher": true,
+  "sources": {
+    "entrenar_progreso_recurrente.py": "c98185122d59babf5eb87a6d83b39cd7455b62a3ae89f90cb0446b62c19ae40c",
+    "modelo_progreso_recurrente.py": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "normalization_sha256": "01d6224815f9812d4b87bb6bce6dce2c7c1de4d8215ad0c16e946d7731419504",
+  "root_predictions_sha256": "5b136bdadfd49d7ae20e19fb8cd4e5e1659b6fd533946b63554752b5fae46c6a",
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 1592.6013343334198
+}

@@ -1,0 +1,13 @@
+{
+  "reason": "Tiny floating-point tail changes under reordered sums; canonicalize before network instead of weakening the invariance gate.",
+  "before": {
+    "max_log_probability_difference": 0.000217437744140625,
+    "max_absolute_probability_difference": 2.2351741790771484e-08,
+    "point_medians_exact": true,
+    "scope": "Train numerical probe; no Validation or predictive gain claim."
+  },
+  "original_model_sha256": "c71a20d9a56b767b13204084832f7e77850701b999145ca9ad7ea6a3c47b65ed",
+  "updated_model_sha256": "dff6dd910d62102ebe62c6917190772eca37c9108bbdebcce2452df1064e7260",
+  "query_or_source_values_changed": false,
+  "Validation_or_Test_access": false
+}

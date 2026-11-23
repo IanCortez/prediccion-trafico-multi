@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "scope": "CPU proof only; no optimizer step and no primary MAE result",
+  "scipy_Torch_probability_max_error": 1.111307226797642e-16,
+  "expected_hard_score_identity_error": 2.7755575615628914e-17,
+  "expected_hard_score_gradient_max_error": 6.245004513516506e-17,
+  "teacher_parameters_detached": true,
+  "real_Train_finite_nonzero_output_gradient_norm": 0.08320912718772888,
+  "scalar_loss_for_32_Train_rows": 3.7719614505767822,
+  "query_model_unchanged": true,
+  "teacher_geometry_not_a_model_forward_input": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "sources": {
+    "perdida_maestro_probabilistico.py": "78a9b5d63a7eefa912bf5503e7b21aa8be73b7b5c1be546871c54f985fa98949",
+    "verificar_perdida_maestro.py": "e7182c4878d552bacde9dc12a6dc3f8598f7d71f12253841fcb30320d39f3a56"
+  },
+  "seconds": 3.9882943630218506
+}

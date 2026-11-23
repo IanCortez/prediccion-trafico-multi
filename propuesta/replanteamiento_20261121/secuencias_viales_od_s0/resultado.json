@@ -1,0 +1,56 @@
+{
+  "outputs": {
+    "train_secuencias.npz": {
+      "bytes": 94406271,
+      "sha256": "a7559dac06eb9666983ff2eedf208fca236c9c2eca38662dd790e8f6584f6b37",
+      "n": 1023529,
+      "missing_routes_per_kind": [
+        983,
+        983
+      ]
+    },
+    "validation_secuencias.npz": {
+      "bytes": 11718211,
+      "sha256": "92c150387c623260017186c655db61143277e7464cd51b79053ca21aabe18f55",
+      "n": 127941,
+      "missing_routes_per_kind": [
+        124,
+        124
+      ]
+    }
+  },
+  "cache_bytes": 106124482,
+  "source_sha256": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "preparar_secuencias_viales_od.py": "b7569d83c8ddfac6947e3cf69c59841a4eb8acaa332da6f06fed539fa5467d0c",
+    "secuencias_viales_od.py": "382ffd90e2dc8a0381c7e2d2f754ff63206d703dbfc67183d11bd496ae9de54e"
+  },
+  "Validation_labels_accessed": false,
+  "Test_access": false,
+  "observed_Validation_or_Test_paths_decoded": false,
+  "all_primary_rows_retained": true,
+  "query_fields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 29.30617332458496
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_before_treatment_Validation": true,
+  "treatment_source_sha256": "bd38f04603f2cae83e053b0b2582f0dcbc433bbd4f0df2f88f1bc46184344ce8",
+  "control_source_sha256": "faee3cc9bb13cd4afba9fe66defa47e1f27c7e034427d9ef0b199305c58059fc",
+  "trigger": "Treatment at least.5sbetterthan129.990034andupperexploratorydayCI<0. Otherwise do notrun.",
+  "matched": "ExactsamefreshinitialtensorSHA, originalTrainqueries, sourceindices, optimizer, batches, loss, seed and24fixedepochs.",
+  "intervention": "Replace sourcegeometry/path/time columns0..16 and full-parentlogtime32 withTrainmeans. Keep availability, endpointdelta, clock/retrievalprior, andstart/stopfractions.",
+  "no_duration_reconstruction": "FullparentT removedaswell asintervalT; keeping fullparentT andintervalfraction wouldinvalidate thecontrol.",
+  "limitation": "Remaining context proxies may be informative. Control measures incremental measuredsourcevalues inthisarchitecture, not universalcausality.",
+  "Test": "SEALED",
+  "primary_cohort_unchanged": true
+}

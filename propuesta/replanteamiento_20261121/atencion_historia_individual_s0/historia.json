@@ -1,0 +1,106 @@
+[
+  {
+    "epoch": 1,
+    "primary_train_n": 1023485,
+    "train_loss": 3.4767244819930956,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.35617980162732,
+      "rmse_s": 210.18506796847916,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 100.08019256591797
+  },
+  {
+    "epoch": 2,
+    "primary_train_n": 1023485,
+    "train_loss": 3.465451530080621,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.390648814688,
+      "rmse_s": 210.311489121362,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 176.85364770889282
+  },
+  {
+    "epoch": 3,
+    "primary_train_n": 1023485,
+    "train_loss": 3.462588525588662,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.15804159729876,
+      "rmse_s": 209.3534140414966,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 253.90447521209717
+  },
+  {
+    "epoch": 4,
+    "primary_train_n": 1023485,
+    "train_loss": 3.460784657079987,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.29943489577227,
+      "rmse_s": 210.05065061182125,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 330.77018904685974
+  },
+  {
+    "epoch": 5,
+    "primary_train_n": 1023485,
+    "train_loss": 3.459504909982954,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.33378666729195,
+      "rmse_s": 210.0116610223733,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 407.7295277118683
+  },
+  {
+    "epoch": 6,
+    "primary_train_n": 1023485,
+    "train_loss": 3.4584173132607012,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.29333833563908,
+      "rmse_s": 210.26862117840187,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 485.03734850883484
+  },
+  {
+    "epoch": 7,
+    "primary_train_n": 1023485,
+    "train_loss": 3.4576079079258495,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.27411072291133,
+      "rmse_s": 210.3910969481678,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 562.2683823108673
+  },
+  {
+    "epoch": 8,
+    "primary_train_n": 1023485,
+    "train_loss": 3.45684451572563,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.55408352287384,
+      "rmse_s": 211.1352380072977,
+      "mdae_s": 75.0
+    },
+    "preserved": true,
+    "seconds": 639.6471998691559
+  }
+]

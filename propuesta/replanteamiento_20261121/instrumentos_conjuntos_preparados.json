@@ -1,0 +1,12 @@
+{
+  "syntax_valid": true,
+  "frozen_before_treatment_validation": true,
+  "sources": {
+    "concluir_subtrayectos_conjuntos.py": "50e50c9d657cd881b50f7b41a7ad1da4d1467b0fd9c0b680f10e63bcd8a149af",
+    "inferencia_subtrayectos_conjuntos.py": "ce311e0c45badc425b8244e89e993f3b188f46f1cbe696f7910ab69391501a5d",
+    "reproducir_subtrayectos_conjuntos.py": "c8c2cda66a323d1363e330399f5471d28b92c308cb02a443e7a7ca3a6f612bbf",
+    "entrenar_control_subtrayectos_conjuntos.py": "faee3cc9bb13cd4afba9fe66defa47e1f27c7e034427d9ef0b199305c58059fc"
+  },
+  "status": "Preparedonly; runafteractualterminalresult orpreservationtrigger. Neverreruntraining on observationtimeout.",
+  "Test": "sealed"
+}

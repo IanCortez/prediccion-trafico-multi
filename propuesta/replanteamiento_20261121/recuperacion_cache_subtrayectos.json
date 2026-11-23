@@ -1,0 +1,28 @@
+{
+  "cause": "Numba cached a function from an unregistered dynamic module; secondprocess could not rebuild its moduleenvironment.",
+  "fix": "Use regular frozen-source module import and register explicit auxiliarymodules in sys.modules. Recompile only4localfunctioncachefiles.",
+  "removed_cache_only": [
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\.runtime\\numba\\fuentes_99078463e5334c2c356bc1e1ecdfaed6bbab64ee\\recuperar_subtrayectos.choose_subtrips-14.py311.1.nbc",
+      "sha256": "e60417c80a594bceaddf9fd43f9759d4023a6781fa92df03e631e77c5999a29d",
+      "bytes": 240164
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\.runtime\\numba\\fuentes_99078463e5334c2c356bc1e1ecdfaed6bbab64ee\\recuperar_subtrayectos.choose_subtrips-14.py311.nbi",
+      "sha256": "979b56cccc4a4b48d0e08ff6ae877e0f99d2718ab26b194c935b5dd95aa25c6e",
+      "bytes": 1950
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\.runtime\\numba\\fuentes_99078463e5334c2c356bc1e1ecdfaed6bbab64ee\\recuperar_subtrayectos.clock_vars-6.py311.1.nbc",
+      "sha256": "4a63e35b8e8d4de5b39df0db56dea865b192886e4cc5f6d442a46c1d2e04c56b",
+      "bytes": 21238
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\.runtime\\numba\\fuentes_99078463e5334c2c356bc1e1ecdfaed6bbab64ee\\recuperar_subtrayectos.clock_vars-6.py311.nbi",
+      "sha256": "dba599ed535de37e4cdd49d4ee4a2d268186467c26bb984f47f6194b828844b4",
+      "bytes": 1378
+    }
+  ],
+  "no_model_architecture_or_weights_changed": true,
+  "full_evaluation_and_training_not_repeated": true
+}

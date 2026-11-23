@@ -1,0 +1,11 @@
+{
+  "reason": "Verified512Train semanticmismatch: oldmedianpoint error212.32m andmedianpathlength understatement10.75percent vsoriginalteacher.",
+  "correction": "Sample sourcepolyline bymetricarclength; use fullsourceintervallength, notninepointapproximation. 34Dlayout unchanged.",
+  "invariant": "Originaltimes15*(j-i), sourceindices, sourceclock, endpointdelta, availability, allcolumns16..33, raw5query andprimarycohort unchanged.",
+  "old_model": "129.990034 remains valid foritsfrozen time-sampledmethod; neverreplace itsinputfunction.",
+  "future_comparison": "Separate6fixedepochbranch vsoriginaltime-sampled6epochbranch, samefrozen30componentparent andsameinitialneuralparameters. No epoch/neighbor/bandwidth sweep.",
+  "normalizer": "Same32768Trainqueryindices; recompute first16geometry statistics only, preserve allotherstatistics andtimeanchor exactly.",
+  "resource": "OneGPUmaximum; prepareCPUsemanticproof first. Sharexy sourceTensor, prefixadditional<=163MiB uncompressed; inferencepreflightbeforeTrain tensorsresident.",
+  "active_trial": "Current24epoch joint-time-sampled model continuesunchanged; correction sources separate, not launched.",
+  "Test": "SEALED"
+}

@@ -1,0 +1,108 @@
+{
+  "passed": false,
+  "selected": null,
+  "metrics": {
+    "time_only": {
+      "n": 10000,
+      "mae_s": 142.482,
+      "rmse_s": 219.59866802874737,
+      "mdae_s": 90.0
+    },
+    "semantic": {
+      "n": 10000,
+      "mae_s": 141.891,
+      "rmse_s": 217.84266111117904,
+      "mdae_s": 90.0
+    },
+    "random": {
+      "n": 10000,
+      "mae_s": 143.6595,
+      "rmse_s": 219.3360606466707,
+      "mdae_s": 90.0
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "time_only_vs_reference": {
+      "delta_mae_s": 9.126607207198075,
+      "ci95_s": [
+        7.457470885498451,
+        10.883571374262894
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    },
+    "semantic_vs_reference": {
+      "delta_mae_s": 8.535607207198076,
+      "ci95_s": [
+        6.710996523942989,
+        10.442061894016298
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    },
+    "semantic_vs_random": {
+      "delta_mae_s": -1.7685,
+      "ci95_s": [
+        -3.282423099109583,
+        -0.24842327353481342
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    },
+    "semantic_vs_timeonly": {
+      "delta_mae_s": -0.591,
+      "ci95_s": [
+        -1.7374644291268857,
+        0.6676338231009491
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    }
+  },
+  "semantic_gate_passed": false,
+  "time_only_gate_passed": false,
+  "initial_weights_sha256": "56a81308b3f78d5ade511d8239c5e419f50e8fa5e21549af990548a8c72a64f5",
+  "all_branches_same_initial_weights_batches": true,
+  "held_only_final": true,
+  "epochs_per_branch": 100,
+  "held_semantic_code_accuracy_diagnostic": 0.6069,
+  "no_actual_held_code_in_public_forward": true,
+  "sources": {
+    "piloto_posterior_global_neural_train.py": "3a482a2b99ff7a35bd07c2f070d6c80dba01c312cad9b1f190ac0950199ab6ea",
+    "modelo_posterior_global_neural.py": "94f6a889c4b3f3c54c467e798b4b9a0aa8a48c47cfbeaec9f968cd893251847e",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "codebook_manifest_sha256": "a57cb0f4991ca3cca20e1b8b9b927636ad3a6d84bcb0f81918ed9d5e6730eca9",
+  "predictions_sha256": "8013036e430e2db242b3abfe56617858c42a8a54f4c17e4acf6fc4b3b6eac7af",
+  "checkpoints": [
+    {
+      "mode": "time_only",
+      "file": "time_only.pt",
+      "sha256": "126494b9e97022ad90c3fe6bd2d0314f14540394533829324081b47dba3e7976",
+      "bytes": 7777729
+    },
+    {
+      "mode": "semantic",
+      "file": "semantic.pt",
+      "sha256": "a990cdd0fa38bdb776b63a02f4d18775876050a9aed2e024e24d39e505077026",
+      "bytes": 7777696
+    },
+    {
+      "mode": "random",
+      "file": "random.pt",
+      "sha256": "8f8955ae39a8be3132377d195e956e32d35205aa00878b8e0d0fec18e6c2077a",
+      "bytes": 7776158
+    }
+  ],
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 213.6601207256317,
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation orconfirmation."
+}

@@ -1,0 +1,20 @@
+{
+  "hypothesis": "Test label as conditional auxiliary likelihood on original route-duration components, preserving the original duration marginal and original primary/geometry objectives. Avoid fitting a correction density to in-sample reference errors. This remains a hypothesis, not a promised gain.",
+  "factorization": "p(T,c|x)=sum_z pi_z(x) p_z(T|x) q_z(c|x). Sum_c p(T,c|x)=p(T|x).",
+  "training": "Original NLL +5RPS +0.2 conditional geometry NLL +lambda*(-log p(c|T,x)); lambda 0 matched control or0.2 semantic arm.",
+  "query": "Original OD/time duration marginal. Actual CALL_TYPE and duration enter only training losses, never forward.",
+  "initialization": "Exact protected duration model; zero class-head logits. Duration predictions unchanged at step0.",
+  "gate": "CPU arithmetic/gradient gate passed. Mandatory actual GPU finite-gradient gate and exact whole-Validation reference before updates.",
+  "budget": "4 fixed epochs each arm, primary LR1e-5, new class head LR1e-3, 512 batch, FP32 highest, no blending-weight search.",
+  "selection": "All four full Validation outputs retained. Preserve every qualifying checkpoint <131.06s and every new best. Epoch0 means original reference and is never called a learned gain.",
+  "ordering": "Wait for actual risk trainer AND supervisor exits. Require full risk result; reproduce any improved risk candidate first. Then execute one GPU arm at a time.",
+  "limitations": "Repeated adaptive Validation is exploratory. Train call-type gain is small. Joint auxiliary may still overfit and fail. No cohort changes or Test access.",
+  "sources": {
+    "entrenar_aux_solicitud.py": "1d7726235b3f922472653f6b45b387ab2b68a46eddad496422dc9db5e4d1f0d3",
+    "modelo_aux_solicitud.py": "fe079afdc764503ccb778d592e86a6b6872046c31fb87fec479012bd884d8fb4",
+    "verificar_aux_solicitud_cpu.py": "646ce29739f388086f8abbbf128e93fc2ac9cc927280464561c5eb1924477a2a"
+  },
+  "compatibility_generation": "v2, fresh arm directories; all previous jobs confirmed terminal",
+  "numerics_recovery": "Standard seeded CUDA FP32 as reference. Strict deterministic CUDA cumsum is unsupported in this installed build; no bitwise training guarantee. Primary likelihood, RPS, geometry and class losses unchanged.",
+  "failed_initial_stage": "aux_solicitud_control_s0: no optimizer update, no checkpoint or predictions. Exact source/log archived."
+}

@@ -1,0 +1,31 @@
+{
+  "epoch": 15,
+  "n": 65,
+  "scope": "Input-only usage probe, no accuracy/MAE conclusion.",
+  "snapshot_sha256": "5ca4408ab58a29da135740897b30d49db0600557e4f532df1b87be1096b4f9af",
+  "checkpoint_read_stable": true,
+  "device": "CPU2threads",
+  "mean_mass_general": 0.18322381377220154,
+  "mean_mass_public": 0.3322559893131256,
+  "mean_mass_historical": 0.48452019691467285,
+  "historical_mass_quantiles": [
+    0.2151662290096283,
+    0.4967917501926422,
+    0.7151897788047791
+  ],
+  "mean_absolute_median_shift_due_to_historical_branch_s": 32.769229888916016,
+  "mean_learned_geometry_shift_from_historical_prototype_m": 29.617158696055412,
+  "mean_historical_geo_sigma_km": 0.1835455298423767,
+  "historical_inputs_available_fraction": 1.0,
+  "source_sha256": "7622bf445d99223815d3310dcb3f39368721ddf82e3154e28c0e1a585005af01",
+  "Validation_labels_accessed": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 1.078969955444336
+}

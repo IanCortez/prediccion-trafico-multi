@@ -1,0 +1,102 @@
+{
+  "Train_n": 1023485,
+  "only_coordinate_fit": true,
+  "levels": [
+    {
+      "side": "o",
+      "step_m": 1000.0,
+      "nodes": 112,
+      "supported_nodes": 86,
+      "mean_confidence": 0.6710670590400696,
+      "total_endpoint_weight": 1023484.9999348004
+    },
+    {
+      "side": "o",
+      "step_m": 500.0,
+      "nodes": 405,
+      "supported_nodes": 272,
+      "mean_confidence": 0.5668681859970093,
+      "total_endpoint_weight": 1023485.0000400573
+    },
+    {
+      "side": "o",
+      "step_m": 250.0,
+      "nodes": 1537,
+      "supported_nodes": 957,
+      "mean_confidence": 0.47424983978271484,
+      "total_endpoint_weight": 1023484.9999626367
+    },
+    {
+      "side": "o",
+      "step_m": 125.0,
+      "nodes": 5985,
+      "supported_nodes": 3457,
+      "mean_confidence": 0.34540292620658875,
+      "total_endpoint_weight": 1023484.9999978428
+    },
+    {
+      "side": "o",
+      "step_m": 62.5,
+      "nodes": 23617,
+      "supported_nodes": 11800,
+      "mean_confidence": 0.19368614256381989,
+      "total_endpoint_weight": 1023485.0000616814
+    },
+    {
+      "side": "o",
+      "step_m": 31.25,
+      "nodes": 93825,
+      "supported_nodes": 35843,
+      "mean_confidence": 0.08135101199150085,
+      "total_endpoint_weight": 1023485.0000256221
+    },
+    {
+      "side": "d",
+      "step_m": 1000.0,
+      "nodes": 112,
+      "supported_nodes": 86,
+      "mean_confidence": 0.7212346196174622,
+      "total_endpoint_weight": 1023484.9999733026
+    },
+    {
+      "side": "d",
+      "step_m": 500.0,
+      "nodes": 405,
+      "supported_nodes": 272,
+      "mean_confidence": 0.6273629069328308,
+      "total_endpoint_weight": 1023485.000005711
+    },
+    {
+      "side": "d",
+      "step_m": 250.0,
+      "nodes": 1537,
+      "supported_nodes": 967,
+      "mean_confidence": 0.547324538230896,
+      "total_endpoint_weight": 1023485.0000348762
+    },
+    {
+      "side": "d",
+      "step_m": 125.0,
+      "nodes": 5985,
+      "supported_nodes": 3606,
+      "mean_confidence": 0.4264028072357178,
+      "total_endpoint_weight": 1023485.0000457478
+    },
+    {
+      "side": "d",
+      "step_m": 62.5,
+      "nodes": 23617,
+      "supported_nodes": 12766,
+      "mean_confidence": 0.26897019147872925,
+      "total_endpoint_weight": 1023485.0000098774
+    },
+    {
+      "side": "d",
+      "step_m": 31.25,
+      "nodes": 93825,
+      "supported_nodes": 41706,
+      "mean_confidence": 0.12793554365634918,
+      "total_endpoint_weight": 1023485.00001172
+    }
+  ]
+}

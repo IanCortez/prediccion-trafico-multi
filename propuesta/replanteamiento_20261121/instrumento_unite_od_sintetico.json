@@ -1,0 +1,35 @@
+{
+  "scope": "Official forward control-flow execution with deterministic synthetic layer stubs, not actual trained network or a Porto MAE experiment.",
+  "official_source_sha256": "acd865d7120128615f33a06b1a1308fb13dc3b6b6c13e23ce2a9d439878c4d35",
+  "layers_source_sha256": "e8037306c1117393474e1f525f2510c27ee110895aac7903db06627bb50bee41",
+  "extracted_method_unmodified": true,
+  "real_datasets_opened": false,
+  "Test_access": false,
+  "ratio_minus1_route_length_times_poisoning_invariant": true,
+  "ratio0_observed_length_sensitive_negative_control": true,
+  "synthetic_total_base": [
+    15.0,
+    14.0
+  ],
+  "synthetic_generated_lengths": [
+    4,
+    5
+  ],
+  "batch_composition_sensitive_with_positive_destination_stub": true,
+  "same_first_query_alone_synthetic_total": 9.0,
+  "same_query_in_mixed_batch_synthetic_total": 15.0,
+  "interpretation": "Mode−1 removes dependence on true targetroute/length. However stopped rows can keep being updated until allrows stop; positive terminal-segment predictions expose a batch-composition hazard. Inspect real SegTimeEstimator for hard-zero terminal enforcement before attributing this to trained UNITE.",
+  "requirements": [
+    "Never execute ODdriver defaults: tf_ratio defaults1, which teacher-forces actual route.",
+    "ODadapter must supply fixed dummytarget tensors and ratio−1, project endpoints from raw5/publicmap instead of true mapmatchedroute.",
+    "Check/repair absorption and terminaltime placement, and require batch/singleton invariance for actual neural adapter.",
+    "Keep original primary labels and every query; mapmatched segment labels Train auxiliary only."
+  ],
+  "source_sha256": "35ec09040b16839428c5c918a4f1aea8f702e4e367c961b0289d1eceace437ff",
+  "seconds": 0.04153084754943848,
+  "installed_packages": {
+    "torch_geometric": false,
+    "networkx": true,
+    "geopandas": true
+  }
+}

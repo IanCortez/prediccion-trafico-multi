@@ -1,0 +1,29 @@
+{
+  "scope": "Train-only conditional instrument, not a primary MAE result",
+  "sample_n": 25000,
+  "seed": 20261122,
+  "fit": "UTC week modulo 5 != 0",
+  "held": "UTC week modulo 5 == 0",
+  "frozen_representation": "Strong reference saw all Train. Held rows reserve new heads only, not truly unseen foundation data.",
+  "comparison": [
+    "identical capacity latent type mixture, no class supervision",
+    "same mixture, supervised joint duration and CALL_TYPE loss"
+  ],
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "actual_type": "Train auxiliary target only; forward never accepts it",
+  "steps": 1200,
+  "batch": 256,
+  "lr": 0.0005,
+  "checkpoint": "fixed final step, no held stopping/selection",
+  "GPU": false,
+  "Val": false,
+  "Test": false,
+  "output_CDF_banks_on_disk": false,
+  "gate": "Candidate must beat matched control AND frozen reference in held-Train MAE with upper day-bootstrap delta CI <0, and not worsen held-Train duration NLL versus control. Positive gate only justifies a later independent full-cohort experiment."
+}

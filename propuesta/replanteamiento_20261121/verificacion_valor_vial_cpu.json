@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "Train_only": true,
+  "n": 17,
+  "probability_normalization": true,
+  "batch_reverse_singleton_quantiles_exact": true,
+  "max_singleton_probability_error": 3.3527612686157227e-08,
+  "no_reachable_pair_fallback_finite": true,
+  "finite_primary_gradients": true,
+  "public_API": "OnlyrawODderivedpublicfeatures/projections accepted, no route/length/durationtargets.",
+  "parameters": 3107147,
+  "model_sha256": "d723b836982ab50ceb6d2574e133eff6d86a58ecdfbd013987e0cf07b06ce31f",
+  "bank_manifest_sha256": "99cca39e34d10a73c84dbec95ca4fc1a0f96134b0d23880b03c9277b2e353183",
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 3.77397084236145
+}

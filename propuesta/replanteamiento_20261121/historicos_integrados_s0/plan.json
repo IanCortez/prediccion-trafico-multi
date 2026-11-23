@@ -1,0 +1,25 @@
+{
+  "scope": "Primary unchanged full Validation; frozen original duration model",
+  "hypothesis": "Training features use whole-week-excluded historical estimates; integrate the same five available estimators at query instead of a single full-Train point estimate.",
+  "main_policy": "Uniform average of five predicted duration probability vectors, held-history-fold0..4, weights fixed1/5. No fitting or weight search.",
+  "controls": [
+    "Original full-Train profile5, must exactly reproduce all protected point predictions",
+    "Single profile indexed by unchanged raw UTC departure week modulo5, matching Train feature-construction rule"
+  ],
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "unchanged": "Original labels, filters, cohort,216feature definitions, neural weights, static routes and timestamp",
+  "changed": "Only10 historical movement feature values for two already selected static routes; all remaining206 features and road geometry stay fixed.",
+  "historical_data": "Already frozen Train-only profiles, own block removed at every backoff. This is a finite jackknife-style sensitivity integration, not a claim of exact Bayesian posterior draws.",
+  "precision": "FP32 highest, no autocast, canonical2048, no probability renormalization beyond original model",
+  "loss_or_optimizer": "None; no parameter updates",
+  "Validation_selection": "Policies fixed before calculation; no individual-view MAE/selection",
+  "Test": "sealed",
+  "resources": "CPU2 preprocessing, one GPU inference job, six small movement arrays in RAM only, no disk feature or CDF banks",
+  "conservation": "Preserve each eligible policy below131.06 and any new best. Original checkpoint is shared rather than duplicated. Raw five-field proof already passed on65."
+}

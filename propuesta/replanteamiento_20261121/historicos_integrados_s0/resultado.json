@@ -1,0 +1,114 @@
+{
+  "id": "historicos_integrados_s0",
+  "query_information": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "primary_Validation_n": 127941,
+  "outputs": {
+    "full_history_control": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.0,
+        "ci95_s": [
+          0.0,
+          0.0
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "raw_order_checks": {
+        "reverse65_equal": true,
+        "singleton4_equal": true
+      }
+    },
+    "calendar_fold_control": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.34522944169578,
+        "rmse_s": 210.96695102201042,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.08851736347222548,
+        "ci95_s": [
+          0.04672289384986212,
+          0.12570990122147452
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "raw_order_checks": {
+        "reverse65_equal": true,
+        "singleton4_equal": true
+      }
+    },
+    "integrated_five_views": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.30689145778132,
+        "rmse_s": 210.96448771597125,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.05017937955776491,
+        "ci95_s": [
+          0.010970627397598316,
+          0.0878928782093045
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "raw_order_checks": {
+        "reverse65_equal": true,
+        "singleton4_equal": true
+      }
+    }
+  },
+  "qualified_candidates": [],
+  "main_policy": "integrated_five_views",
+  "full_history_control_exact": true,
+  "full_raw_movement_feature_max_error": 0.0,
+  "full_raw_static_feature_max_error": 0.0,
+  "original_model_unchanged": true,
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "profiles_sha256": {
+    "time_s.npy": "ce9a2b6aa7ffb47388867fdaf762f00d334d53f9c71f09a3b71956ef29e40ab7",
+    "state_support.npy": "b2a177b668f1c1587375b5aa976093a63eb07e777d405154cfbb1356be912e36",
+    "link_support.npy": "9ea27cc344a819d4d10e46ddc48ea9fb24b35627b5dc2e8369f0232494d923d6"
+  },
+  "sources": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "evaluar_historicos_integrados.py": "df113652980fc59a63f608be0c6b5079bbda9a976a9acc5abccbb94f10dbfb34"
+  },
+  "predictions_sha256": "9e04f8b85e5dda4965aae7371d848be61df67e51d71d16286390336506cb3685",
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\manifiesto.json",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "elapsed_seconds": 22.57831645011902,
+  "conclusion": "Compare fixed integration policy with original full-history and matched-construction control; no individual-view or blending-weight selection. A failed result does not complete the research goal.",
+  "goal": "active"
+}

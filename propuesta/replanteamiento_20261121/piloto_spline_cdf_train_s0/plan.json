@@ -1,0 +1,42 @@
+{
+  "scope": "ChronologicalheldTrain ODgate, not primaryValidation orconfirmation.",
+  "hypothesis": "Conditionaldurationdensity may need moreflexibility than restricted finiteGaussiantimecomponents. Replace with monotone rationalquadraticsplineCDF and nonlinearperfeature embeddings; no route/history/driveraux.",
+  "inspiration": {
+    "title": "TabResFlow: A Normalizing Spline Flow Model for Probabilistic Univariate Tabular Regression",
+    "venue": "ECAI2025, officialpagefirstonline2026-08-25",
+    "url": "https://journals.sagepub.com/doi/10.3233/FAIA251412",
+    "adaptation": "Inspiredarchitecture, notexactreplica:8ensembles, SiLU/LayerNorm/rawfeatureskip, exactdiscretebinNLL+RPS instead continuousNLL. No publishedTTEperformanceclaim."
+  },
+  "architecture": {
+    "members": 8,
+    "width": 192,
+    "residual_blocks": 3,
+    "numeric_feature_encoder": "scalar->8->3 perfeature plusrawskip",
+    "bins": 32,
+    "spline_bound": 4,
+    "minimum_width_height_derivative": 0.001,
+    "dropout": 0.1
+  },
+  "seed": 20261122,
+  "fit_n": 200000,
+  "held_n": 50000,
+  "held_last_days": 21,
+  "features": 206,
+  "training": {
+    "epochs": 50,
+    "batch": 1024,
+    "lr_initial": 0.001,
+    "lr_final": 0.0001,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "loss": "OriginaldurationbinNLL+5RPS"
+  },
+  "precision": "NeuralFP32highest; splineinverse/CDF integrationFP64 forstableintervalprobabilities. NoAMP.",
+  "duration_support": "Original60..1785step15; all primarylabels unchanged, no dequantization/relabeling.",
+  "stopping": "Fixed50epochs; evaluateheldonlyafterfinalepoch, noheldmodelselection.",
+  "control": "Exactstored206publicCatBoost800tree200kfit/50kheldcontrol; samequeryrows, labels andpurgedcutoff.",
+  "gate": "At least1secondheldTrainMAEreduction andupperdaybootstrapdeltaCI<0 before any fullprimarytrial.",
+  "resources": "OneGPUfraction.3; nofullCDFdiskbank, <=100MiBnewartifacts.",
+  "Validation": false,
+  "Test": false
+}

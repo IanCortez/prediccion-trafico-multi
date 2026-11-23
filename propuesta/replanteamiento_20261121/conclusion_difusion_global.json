@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "validation": {
+    "n": 127941,
+    "mae_s": 139.95339397347203,
+    "rmse_s": 219.11217825636902,
+    "mdae_s": 87.9281005859375
+  },
+  "comparison": {
+    "delta_mae_s": 9.795352376173279,
+    "ci95_s": [
+      8.939257874230416,
+      10.585617482314369
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "meaningful_gate_passed": false,
+  "qualified": false,
+  "sensitivity256": null,
+  "certificate": null,
+  "uncertainty": {
+    "coverage80": 0.7283435333474023,
+    "mean_width80_s": 386.8456726074219,
+    "interpretation": "EmpiricalonreusedValidation; not a guaranteedcoverageclaim."
+  },
+  "decision": "Globaljointdiffusiondidnotpassusefulnessgate. Do notretuneparticlecounts/epochs/widths againstsameValidation; usecriticalerroranalysis foradifferentmechanism.",
+  "limitations": [
+    "Geometriclabels areobservedTrainroadfingerprints, notexactannotatedpaths.",
+    "Unknowngeometryusesa normalizedplaceholderandmaskedgeometryscore; timevelocitylosskeepsalloriginalTrainqueries. Thisdoesnotestablishanexactmissing-datajointlikelihood.",
+    "Jointglobaldenoising avoidsautoregressiveroadprefixqueries butdenoisingerror/finitedraws canstilllimitaccuracy.",
+    "SingleNNseed/reusedValidation. Independentconfirmation73.5remainsunproven."
+  ],
+  "all_primary_rows_labels_andquery_information_unchanged": true,
+  "all_completed_metrics_predictions_preserved": true,
+  "goal": "ACTIVE",
+  "Test": "sealed"
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "scope": "Synthetic structural proof, not a trainedPorto benchmark or completeUNITEneuralnetwork.",
+  "actual_unmodified_components": [
+    "SegTimeEstimator withgraph_flagTrue anddefaultstarFalse",
+    "temporal andspatial attention",
+    "SparseMoE",
+    "NoisyTopkGating",
+    "officialUNITE.forward negativecontrol"
+  ],
+  "fixtures": "Otherencoder/policy/state methods use deterministic stubs. Real head finalLinear set tovalidconstantpositive1; proves representable counterexample, not actualtrainedcheckpoint behavior.",
+  "original_same_query_single": 3.0,
+  "original_same_query_mixed": 4.0,
+  "corrected_same_query_single": 4.0,
+  "corrected_same_query_mixed": 4.0,
+  "corrected_batch_singleton_order_invariant": true,
+  "original_ratio_minus1_targetpoisoning_invariant": true,
+  "corrected_API_accepts_no_target_route_length_or_times": true,
+  "terminal_contribution_once": true,
+  "unfinished_routes_explicit": true,
+  "PyG_not_used": "DefaultstarFalse does not executeGAT; only imports omitted in isolatedtest namespace.",
+  "remaining": [
+    "RealPortoadapter must handle uncertainGPSendpointsets andpartial offsets.",
+    "Cap/deadend needs predictedremainingtime, not observedtripN.",
+    "Train-onlytimeprediction instrument andboundedfullcorpus beforeprimarytraining."
+  ],
+  "layers_source_sha256": "e8037306c1117393474e1f525f2510c27ee110895aac7903db06627bb50bee41",
+  "forward_source_sha256": "acd865d7120128615f33a06b1a1308fb13dc3b6b6c13e23ce2a9d439878c4d35",
+  "controller_source_sha256": "1b79eba1144b0568a6fda09bc221fad4224dd0f99b37c9a823d706a5d0fe49e9",
+  "verification_source_sha256": "cda60e0c81a5c08ab7231f7e973f8148ab7f7404f3000929379524ab79e85bda",
+  "real_datasets_opened": false,
+  "Test_access": false,
+  "seconds": 0.08545255661010742
+}

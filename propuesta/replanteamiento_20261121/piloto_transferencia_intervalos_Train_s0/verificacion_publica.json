@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "raw17_feature_maxerror": 0.0,
+  "reverse_singleton_exact": true,
+  "static_profile_independent": true,
+  "no_movement_values_in_features": true,
+  "only_fitparent_intervals": true,
+  "auxiliary_n": 113830,
+  "selected_parents": 40000,
+  "source_coordinates": "ImmutableTrainF32meters inverted to lonlat; millimeter-scale coordinate approximation.",
+  "cutoff": 1396531073,
+  "no_held_route_N_T_as_input": true
+}

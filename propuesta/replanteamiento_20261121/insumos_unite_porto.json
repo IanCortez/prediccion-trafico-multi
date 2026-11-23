@@ -1,0 +1,306 @@
+{
+  "scope": "Prerequisite audit for Porto adaptation, not an experiment or source-label validation.",
+  "archives": {
+    "propuesta\\datos\\train_gps_mapmatched.npz": {
+      "bytes": 33055466,
+      "arrays": {
+        "row": {
+          "shape": [
+            1023529
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "X": {
+          "shape": [
+            1023529,
+            10
+          ],
+          "dtype": "float32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "names": {
+          "shape": [
+            10
+          ],
+          "dtype": "<U24",
+          "fortran": false,
+          "contains_object": false
+        }
+      },
+      "read": "OnlyNPYheaders, no data arrays or pickle decoded."
+    },
+    "propuesta\\datos\\mapa_dirigido_2014.npz": {
+      "bytes": 4869952,
+      "arrays": {
+        "xy": {
+          "shape": [
+            94270,
+            2
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "lonlat": {
+          "shape": [
+            94270,
+            2
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "u": {
+          "shape": [
+            174112
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "v": {
+          "shape": [
+            174112
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "length": {
+          "shape": [
+            174112
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "seconds": {
+          "shape": [
+            174112
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "node_ids": {
+          "shape": [
+            94270
+          ],
+          "dtype": "int64",
+          "fortran": false,
+          "contains_object": false
+        }
+      },
+      "read": "OnlyNPYheaders, no data arrays or pickle decoded."
+    },
+    "propuesta\\datos\\grafo_compacto_2014.npz": {
+      "bytes": 4726536,
+      "arrays": {
+        "junction_raw": {
+          "shape": [
+            23039
+          ],
+          "dtype": "int64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "to_junction": {
+          "shape": [
+            94270
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "chain_src": {
+          "shape": [
+            53766
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "chain_dst": {
+          "shape": [
+            53766
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "chain_offsets": {
+          "shape": [
+            53767
+          ],
+          "dtype": "int64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "flat_nodes": {
+          "shape": [
+            227878
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "flat_incoming_arc": {
+          "shape": [
+            227878
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "node_chain": {
+          "shape": [
+            94270,
+            2
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "node_pos": {
+          "shape": [
+            94270,
+            2
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        },
+        "prefix_length": {
+          "shape": [
+            227878
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "prefix_free": {
+          "shape": [
+            227878
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "chain_length": {
+          "shape": [
+            53766
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "chain_free": {
+          "shape": [
+            53766
+          ],
+          "dtype": "float64",
+          "fortran": false,
+          "contains_object": false
+        }
+      },
+      "read": "OnlyNPYheaders, no data arrays or pickle decoded."
+    },
+    "propuesta\\replanteamiento_20261121\\datos_semi_markov\\runs_train.npz": {
+      "bytes": 30623649,
+      "arrays": {
+        "cell": {
+          "shape": [
+            20195926
+          ],
+          "dtype": "uint16",
+          "fortran": false,
+          "contains_object": false
+        },
+        "duration_n": {
+          "shape": [
+            20195926
+          ],
+          "dtype": "uint8",
+          "fortran": false,
+          "contains_object": false
+        },
+        "enter_n": {
+          "shape": [
+            20195926
+          ],
+          "dtype": "uint8",
+          "fortran": false,
+          "contains_object": false
+        },
+        "outgoing_valid_bits": {
+          "shape": [
+            2524491
+          ],
+          "dtype": "uint8",
+          "fortran": false,
+          "contains_object": false
+        },
+        "run_offsets": {
+          "shape": [
+            1023486
+          ],
+          "dtype": "int64",
+          "fortran": false,
+          "contains_object": false
+        },
+        "trip_train_index": {
+          "shape": [
+            1023485
+          ],
+          "dtype": "int32",
+          "fortran": false,
+          "contains_object": false
+        }
+      },
+      "read": "OnlyNPYheaders, no data arrays or pickle decoded."
+    }
+  },
+  "mapper_sources": [
+    {
+      "file": "propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\fuentes\\consultas_mapmatched.py",
+      "sha256": "5c87cfe16bb55050917418242ad2c669bc89f582ba5e74a68bbb6f88b99202c9",
+      "definitions": [
+        "projected_route_features"
+      ]
+    },
+    {
+      "file": "propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\fuentes\\map_matching.py",
+      "sha256": "ae9f105ff04ce04cd19d27ac71b0f8c1a058f383aab603a70260be0fcb97c79b",
+      "definitions": [
+        "viterbi_match"
+      ]
+    },
+    {
+      "file": "propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\fuentes\\map_matching_v1_serial.py",
+      "sha256": "7a6a188b0ebfb60a1aa57a6a02fd8db48538636f0cbaa84b33f5138439801753",
+      "definitions": [
+        "viterbi_match"
+      ]
+    }
+  ],
+  "raw_original_csv": {
+    "exists": true,
+    "bytes": 1942848724,
+    "opened": false
+  },
+  "original_primary_labels": "Unchanged(N−1)*15; every primary query remains. Route/segment labels Trainauxiliary only.",
+  "next_required": [
+    "Inspect actual graph/mapper schemas before deciding whether street sequences already exist or must be rebuilt.",
+    "When rebuilding from shared rawCSV: binaryline index membership in Trainrows BEFORE decoding/parsingPOLYLINE. Never decode heldout/Test raw paths.",
+    "Project input endpoints only from raw5/publicmap; actual mapmatched endpoints are auxiliary labels, never query inputs.",
+    "UNITEOD forward needs explicit absorbing terminal semantics and a length-independent cap; verify batch/singleton invariance before training.",
+    "No pretrained network or PortoMAE claim arises from syntheticcontrolflow proof."
+  ],
+  "Test_access": false,
+  "real_GPS_arrays_decoded": false,
+  "source_sha256": "9ccd511a5651daf4d50630862f5bce2abf40678f52d29ec6cd6ffae07499dd6e",
+  "seconds": 0.8101344108581543
+}

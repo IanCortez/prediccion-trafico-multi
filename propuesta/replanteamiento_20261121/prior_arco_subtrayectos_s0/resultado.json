@@ -1,0 +1,153 @@
+{
+  "complete": true,
+  "id": "prior_arco_subtrayectos_s0",
+  "config": {
+    "epochs": 6,
+    "batch": 512,
+    "lr": 0.001,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "seed": 20261122,
+    "parent_id": "atencion_historia_individual_s0",
+    "parent_sha256": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b",
+    "parent_validation": {
+      "n": 127941,
+      "mae_s": 130.15804159729876,
+      "rmse_s": 209.3534140414966,
+      "mdae_s": 75.0
+    },
+    "plan": {
+      "status": "Preparedbefore newgeometry-correction outcome; noGPUtraining launched.",
+      "reason": "Train-onlysemanticproof found212.32mmedian geometryprior mismatch. Correcttheprior withoutdiscarding observedhistoricaltime-profile features.",
+      "original_inputs": "Keepalloriginal34Dtime-sampledsourcefeatures, sourcepathproxy, originalnormalizer43b431... and timeanchor exactly.",
+      "correction": "Supplyseparate14Darclength sourcegeometry onlyto geometryprior. No newneuralparameters. No influenceonTTforward forfixedweights, onlyonjointauxiliarytraininggradients.",
+      "paired": "Samefrozen30componentparent, sameinitialneuralparameters andbuffers, exact6epochs/seed/optimizer/batches. Comparewithtime6control129.990034 andcurrentverifiedbest.",
+      "source_indices": "Same2048nearestpointsets/64parents andalloriginalTrainqueries; no neighbor/bandwidth/label/filter changes.",
+      "instruments": [
+        "OriginalTrainarclengthteacher512parents",
+        "892actualpartialintervals",
+        "Stationarypoint insertiongeometryinvariance",
+        "FixedNNweightsTTbranch independencefromgeometryprior",
+        "Pairedinitialparametersexact",
+        "Raw65/order/singleton/fullcheckpointreplay"
+      ],
+      "old_prepared_replacement": "Arc34replacement trainer preparedbutneverexecuted; superseded before any newscore toretaininformativehistoricaltimefeatures.",
+      "source_parent": "atencion_historia_individual_s0",
+      "epochs": 6,
+      "priority": "Finishfrozenjoint24trial; preserve/replayqualifiedresult. Then semanticpriorcorrection before spendingonoriginalsourcevaluecontrol. No causalclaim withoutmatchedcontrol.",
+      "current_joint_result_exists_at_planning": false,
+      "Test": "SEALED",
+      "goal": "ACTIVE"
+    },
+    "selection": "Fixedfinalepoch6 only, no Validationstopping or epochselection",
+    "source_manifest_sha256": "dbeddff00e11dd21d03ed607892207401e9dcfe92d41c4122fac70cbc2a720aa",
+    "normalization_sha256": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983",
+    "GPU_fraction": 0.5,
+    "source_memory_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+    "public_query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "geometry_prior": "Independent14Dmetricarclengthsourceprior; original34time/contextfeatures andnormalizer unchanged",
+    "prefix_sha256": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+    "comparison_best_id": "atencion_subtrayectos_s0",
+    "comparison_best_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd",
+    "time_control_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd"
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 129.99448964757192,
+    "rmse_s": 210.02515936501536,
+    "mdae_s": 75.0
+  },
+  "paired_vs_parent": {
+    "delta_mae_s": -0.1635519497268272,
+    "ci95_s": [
+      -0.2632904459444706,
+      -0.05756985372045089
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "meaningful_gate_passed": false,
+  "qualified": true,
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\prior_arco_subtrayectos_s0\\epoca_6.pt",
+  "model_sha256": "875ee5f72cee5a913360d3b437960b8adbffd320fe509d67860375a4b2e03171",
+  "fixed_epoch": 6,
+  "paired_vs_time_sampling": {
+    "delta_mae_s": 0.004455178558866978,
+    "ci95_s": [
+      -0.04888085546599185,
+      0.0582609329081772
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "paired_vs_best": {
+    "delta_mae_s": 0.004455178558866978,
+    "ci95_s": [
+      -0.04888085546599185,
+      0.0582609329081772
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "parent_unchanged": true,
+  "parent_source": "atencion_historia_individual_s0",
+  "raw65_cached_sources_tokens_full_quantiles_exact": true,
+  "raw65_arc_geometry_exact": true,
+  "all34input_features_normalizer_preserved": true,
+  "raw_reverse_singleton_exact": true,
+  "all_original_primary_queries_and_T": true,
+  "Train_parent_source_fold_excluded": true,
+  "normalization_sha256": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983",
+  "prefix_sha256": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+  "source_manifest_sha256": "dbeddff00e11dd21d03ed607892207401e9dcfe92d41c4122fac70cbc2a720aa",
+  "sources": {
+    "entrenar_prior_arco_subtrayectos.py": "dfb8ac8bb126911ef54a09469013fa170c2f18a1812f5a836afb9fcf29fb6652",
+    "modelo_atencion_subtrayectos.py": "637715980cb836e601f272b52629cca44fd71a7826f3917aff2d70d414edef46",
+    "modelo_prior_arco_subtrayectos.py": "ba71cd022d8834e90336fd07f7edd97d3c71ca1959d6532b36e912e36b51ab84",
+    "tokens_subtrayectos.py": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+    "tokens_subtrayectos_arco.py": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014",
+    "inferencia_atencion_historia.py": "5f7b261aac43e54d2d6f5046e312cdea7c2f7e2f35fe7b0c50e21364bdaeb3fa",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c"
+  },
+  "predictions_sha256": "bdbbb9431732ebe29fbaf76f8b2204e8ccba016f8f0d4e0c1eaee95991b50c48",
+  "uncertainty": {
+    "coverage80": 0.8105845663235397,
+    "width80_s": 379.1984558105469
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 685.1376533508301
+}

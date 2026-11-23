@@ -1,0 +1,9 @@
+{
+  "reload_epoch": 6,
+  "model_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd",
+  "saved_branch_matches_final_optimizer_checkpoint": true,
+  "training_not_repeated": true,
+  "reason": "FinalB2048distribution calculation exceeded6GiBcap withallTrain tensors resident; reloadonlyValidationdata.",
+  "same_architecture_weights_batch_and_query_information": true,
+  "Test": "sealed"
+}

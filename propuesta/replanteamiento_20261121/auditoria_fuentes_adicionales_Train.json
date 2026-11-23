@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "scope": "Additional earlyTrain source availability only; no predictor fitted and no primarymetric.",
+  "source": "Original rawCSV, excluding every originalprimaryTrainrow before parse; timestamp+binarypointcount determine safeTrainarrival before decoding.",
+  "cutoff": 1396531073,
+  "maximum_selected_source_arrival": 1396454691,
+  "all_selected_arrivals_before_heldTrain": true,
+  "counts": {
+    "decoded_additional_earlyTrain_parents": 278941,
+    "parents_with_atleast5_core_points": 268012,
+    "atleast_one_fullendpoint_outside_bbox": 237298,
+    "metadata_too_short": 37721
+  },
+  "full_duration_histogram": {
+    "<=1785s": 238561,
+    ">1785s": 40380
+  },
+  "additional_points": 22161411,
+  "points_inside_primary_bbox": 13592254,
+  "fixed3attempt_valid_interval_samples": 241985,
+  "parents_contributing_sample": 140393,
+  "interval_time_bin_counts": {
+    "0": 105775,
+    "300": 68444,
+    "1500": 10441,
+    "1200": 11984,
+    "600": 29182,
+    "900": 16159
+  },
+  "skipped_long_binary": 0,
+  "source_GPS_bytes_persisted": 0,
+  "primary_original_queries_filters_labels_split_unchanged": true,
+  "Validation_or_Test_GPS_decoded": false,
+  "potential_use": "Only evidence of extra supervision availability. New training use requires a separate frozen protocol and controls; no accuracy claim.",
+  "source_sha256_previously_verified": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d",
+  "code_sha256": "34d9c0b6579cc5b200aa72c2c3baa133fbb4315ac259101561e9bae0d65b570b",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 23.750812292099
+}

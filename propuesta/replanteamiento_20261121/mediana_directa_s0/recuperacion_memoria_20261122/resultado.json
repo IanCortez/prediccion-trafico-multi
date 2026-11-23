@@ -1,0 +1,20 @@
+{
+  "cause": "Second evaluation retained previous2048row22component distribution in the underscore variable, increasing peak memory. Process30436 and serial session28304 terminal before this change.",
+  "completed_epochs_preserved": 1,
+  "epoch1_validation": {
+    "n": 127941,
+    "mae_s": 131.35625014655193,
+    "rmse_s": 210.4935261762291,
+    "mdae_s": 75.0
+  },
+  "fix": "Separate recovery runner releases unused distributions immediately and clears unused CUDA cache before evaluation. Mathematical model, optimizer, batching, seed,FP32,canonical2048,labels and cohort unchanged.",
+  "original_executed_trainer_sha256": "2765704ecc0200005f009c6e4efbc1e7b053014cfdd54eb4e0fa1a6bfc195ccc",
+  "recovery_runner_sha256": "67ac35da6864fcfe1f9c1ada06c9e1fd3ebf17ab3dceb06bddb2cf1b0745c458",
+  "unchanged_model_sha256": "4492929607866e124929c5cfc91afddf797b69b9b3f68c3dfa9084e84eff143e",
+  "resume_checkpoint_epoch1_sha256": "00a194d30bfce1eb05caf78e3d1d91f63e4765be8f7336afd64441907ccc332b",
+  "epoch1_predictions_sha256": "ed35e5f85470d41384c0b02e6f0d85f5d489b5357f883affb8f5c1b9e527b55f",
+  "protocol_sha256": "f4860789fce1f38eb47f4cb2f0b4a5afb2b1e5d88d3123fa6dc0bac7b04136ea",
+  "reference_cache_sha256": "398dcbe640f7362a3f180765042dae7e80df5f20fc927c5a0ab218540217ccfa",
+  "Test_access": false,
+  "note": "Resume epoch2 from saved epoch1; no replay/selection of a completed epoch. Control, if justified, must use the same recovery runner."
+}

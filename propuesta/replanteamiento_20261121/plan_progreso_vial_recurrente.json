@@ -1,0 +1,62 @@
+{
+  "status": "Architecture and data contract for next genuinely distinct full-primary experiment; neural implementation/resource preflight still required.",
+  "reason": {
+    "local_greedy": "90.82% teacher-state next-road accuracy did not improve rawOD time.",
+    "global_code": "PCA12 retained33.5% geometric variance. ScalarGPU semantic132.615s versus random132.399s, no useful gate. True-code oracle118.91s versus full-route90featureoracle94.02s shows the compressed labels lose predictive information.",
+    "next": "Use full Train road sequences, prefix memory, predicted-clock feedback and coherent trip-level latent styles. No code-count/rank/bin retuning."
+  },
+  "reference": {
+    "title": "UNITE",
+    "year": 2026,
+    "url": "https://web.comp.polyu.edu.hk/csmlyiu/conf/KDD26_UNITE.pdf",
+    "adaptation": "Porto raw-point OD adaptation inspired by shared progress/route/time modeling, not a replica or a publishedPorto result."
+  },
+  "public_input": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "architecture": {
+    "endpoints": "Public4projections perendpoint and partialchain offsets. Train-only HMMinitial/terminalchain supervision teaches a16pair attachment posterior; inference uses predictedtop4 and keeps omittedprobability as globalfallback, never truequeryHMM IDs.",
+    "root": "Original216legalraw5-derivedfeatures. Shared ODencoder and rootTdistribution supervised on EVERY1023485purgedprimaryTrain query, including queries without usefulroadaux.",
+    "progress": "Compact53766roadgraph, learned32Droadembeddings plus publicstatic/neighborhoodcontext. GRU128 remembers prefix. Four coherent tripstyles shared across all decisions in a route, no actualdriverID input.",
+    "style": "Train-only recognition posterior from full observedTrainroadsequence and route/time summaries; categoricalprior fromrawOD only. Variational route/time objectives, priorKL; no posteriorrecognition at querytime. Measure collapse, do not assume diverse styles.",
+    "clock": "Train localroadentryclock from originalsum-preserving segmenttimes. Query advances its own predictedUnixclock, not trueelapsed/finaltime. Float64Unix/int64parenttimestamps; never absoluteUnixseconds inFloat32. EuropeLisbon calendaroffsettable frompublictimezone rules.",
+    "route": "Outgoing-neighbor plus arrival policy; EOS permitted at proposedpublicdestinationstate. Freeze terminated trajectories and add partialterminaltime exactlyonce. No targetroute/N/time arguments in publicrollout.",
+    "time": "Positivepace*partialdistance plus nonnegative dwell; prefix/clock/OD/style conditioned. UnknownGAPs remain maskedTrainaux, and originaltotalT remains unchanged.",
+    "tail": "Fixed192step resourcecap independent ofactualqueryN; predictedremainingvalue atcap/deadend, plus safe globalfallback when no publicattachment works. Never remove a primaryquery.",
+    "stageB": "After frozen sequence model, generate onlypublic predictedroute/time summaries for alloriginalTrain/Validation queries. Fit compact primarypoint/quantile regressor on originalTrainT; no actualqueryroute enters summaries. Freeze model beforeprimaryevaluation."
+  },
+  "data": {
+    "corpus": "datos_calles_parciales_Train_s0",
+    "auxiliary_trips": 894105,
+    "tokens": 41775036,
+    "coverage": "99.104% sum-preserved time trusted, GAP65535 explicit.",
+    "primary_Train": 1023485,
+    "primary_Validation": 127941,
+    "Test": "sealed",
+    "teacher_fields": "GTroadsequence, partialdistance, originalTrainlocaltime/remainingtime, actualHMMendpoint labels are PRIVATEteacher inputs only.",
+    "unknowns": "Everyprimaryquery retained. Mask unreliableaux targets instead of filteringprimarycohort.",
+    "index": "indices_progreso_vial_s0; no duplicate fulltokenbank."
+  },
+  "resources": {
+    "GPU": "OneheavyGPU, initialcap.5 after meaningfulpreflight; no competingGPUjob.",
+    "distance_matrix": "Reuseexisting23039junction D. If placedonGPU, publicconstant buffer MUST persistent=False. Never save it in a checkpoint or create53766square distances.",
+    "checkpoints": "Assert state_dict diskpayload<50MiB; protect everyfullValidationMAE<131.06 and strictglobalbest.",
+    "data": "Fullraggedteacher tokens remain CPUreadonly, gatherboundedteacher batches; summariestarget<=500MiB; noCDFbank.",
+    "failure": "Preserve every completedmetric/prediction and exactsources; delete exactdiscardedweights/intermediates afterverify."
+  },
+  "instruments": [
+    "Raw5 whitelist rejects route,N,driver,time target fields.",
+    "Positive terminal ETA includedonce, completedrows/hiddens frozen, batch/reverse/singleton forecasts equal.",
+    "Targetroute/length/timing poisoning cannot affect publicqueryprediction.",
+    "TrueTrainaux sum matchesoriginalT, allsourcearrivals beforeValidation, primaryrows/labels/splits exact.",
+    "RealGPUBPTT/rollout memoryandlatency preflight before fulltraining; never inferfailure from pollingtimeout.",
+    "Predict-only canonical heldcohort replay, raw65inputs feature/forecast replay, source/checkpoint hashes.",
+    "Matchedprefix-reset/nohistory control onlyafter a meaningful fullprimarygain; do not attribute benefit to memory withoutit."
+  ],
+  "objective": "IndependentconfirmationMAE<73.5s unchanged. Best130.158 stillprotected; no guarantee or success claim.",
+  "Test": "sealed"
+}

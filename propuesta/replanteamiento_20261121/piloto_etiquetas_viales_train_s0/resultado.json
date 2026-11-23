@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "trips": 4096,
+  "points": 169827,
+  "zero_reset_trip_fraction": 0.81494140625,
+  "point_projection_within100m": 0.9982982682376772,
+  "projection_error_median_m": 3.5463743209838867,
+  "projection_error_p95_m": 22.234534835815413,
+  "HMM_endpoint_in_public4_fraction": 1.0,
+  "HMM_vs_public_nearest1_disagreement_fraction": 0.484619140625,
+  "endpoint_projections_without_interiors_exact": true,
+  "all_primary_duration_labels_exact": true,
+  "observed_collapsed_chain_count_quantiles": [
+    24.0,
+    42.0,
+    48.0,
+    61.0,
+    88.0
+  ],
+  "observed_chain_jumps_directly_adjacent_fraction": 0.499407131770989,
+  "trips_revisiting_chain_fraction": 0.32373046875,
+  "complete_bridged_road_sequence_not_yet_available": true,
+  "conclusion": "Prerequisitefailed: inspect map/projection failures before any full streetmodel.",
+  "auxiliary_pilot_only": true,
+  "primary_cohort_unchanged": true,
+  "Validation_paths_decoded": false,
+  "Test_paths_decoded": false,
+  "raw_selected_row_sha256": "fd06d819510c91d556c74b922bd4fa157d29456154441d974e48364760cf4412",
+  "source_sha256": "e6b28da34cf22d0526bdb2fc934acc7530432916cb566645b49d09437a96a927",
+  "mapper_source_sha256": "ae9f105ff04ce04cd19d27ac71b0f8c1a058f383aab603a70260be0fcb97c79b",
+  "predictions_sha256": "f394dd88faaafeea8dae81e8110957f5567c82779c57dc1cbd011e151aaa205b",
+  "artifact_bytes": 1142565,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy"
+  ],
+  "seconds": 5.913874626159668
+}

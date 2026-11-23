@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "scope": "PRIVILEGED512Trainteacherdiagnostic, not primaryODValidation/confirmation.",
+  "query_not_available_fields": [
+    "actualTrainroadsequence",
+    "actualpartialpositions",
+    "observedTrainelapsedclock",
+    "recognitionposteriorwithprivatetrajectorysummary"
+  ],
+  "fixed_random_Train_parents": 512,
+  "fragments": 1146,
+  "known_tokens": 23448,
+  "CPU_only": true,
+  "no_CUDA_initialized": true,
+  "matched_known_time_total_error": {
+    "n": 512,
+    "mae_s": 95.36117084056605,
+    "rmse_s": 133.93218184177516,
+    "mdae_s": 67.54731750488281
+  },
+  "matched_known_time_bias_s": -73.1669280192582,
+  "known_time_coverage_quantiles": [
+    0.5454545263810592,
+    0.9656322120871124,
+    1.0,
+    1.000000045853432,
+    1.0000001312584006
+  ],
+  "local_token_MAE_s": 4.971760026508124,
+  "teacher_route_accuracy_unweighted_fragment_mean": 0.943136539724138,
+  "interpretation": "If errorsremainlargeevenwithknownprefix/clock/road, currentlocalpseudotimeHuberdoesnotensurewholetripTconsistency. If errorssmallbutpublicfree-runpoor, route/clockexposuregap dominates. Neitherdiagnostic is a publicODscore or an errorlowerbound.",
+  "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+  "predictions_sha256": "e9a7e28651a46126fb7008e3bf5031ab333c3e073c9a51edf4073e9ae4bb92c2",
+  "source_sha256": "0f4e0992b300ab20966853246d96affcc1395ac43bd8598e31e4688faee5c7a1",
+  "no_Validation_labels_or_Test_access": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 63.39895248413086
+}

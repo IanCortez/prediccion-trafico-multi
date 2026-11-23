@@ -1,0 +1,32 @@
+{
+  "complete_public_stage": true,
+  "complete_global_study": false,
+  "public_branch_gate_passed": false,
+  "metrics": {
+    "n": 10000,
+    "mae_s": 132.71120226898495,
+    "rmse_s": 207.58562166766143,
+    "mdae_s": 87.5359977538028
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparison": {
+    "delta_mae_s": -0.6441905238169621,
+    "ci95_s": [
+      -1.0612561041518305,
+      -0.1976841273495255
+    ],
+    "days": 22,
+    "interpretation": "Completedpublic-onlystage recoveredfromcomputationallyretiredglobalstudy; no semantic/randomcomparisonfinished."
+  },
+  "model_sha256": "6f26c7c3ed18426422ecbc25987f1ee5d12638df30bee437bbabfb6230fc3862",
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\piloto_posterior_ruta_global_train_s0\\public_time_only.cbm",
+  "predictions_sha256": "05cdb79539726d89ff3d52506daa724ec9341f2f587dd13145763a54363da1cb",
+  "source_sha256": "926d90a91791002ec5da707dcdf7137f2b307a00bc10ed3bce0194996fdba883",
+  "no_Validation_or_Test_access": true,
+  "seconds": 3.974414587020874
+}

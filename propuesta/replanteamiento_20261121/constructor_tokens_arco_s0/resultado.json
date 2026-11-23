@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "normalization_n": 32768,
+  "valid_source_tokens": 147282,
+  "geometry_columns_updated": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "all_time_context_statistics_and_anchor_preserved_exactly": true,
+  "time_anchor": [
+    1.6744332313537598,
+    0.7360289096832275
+  ],
+  "original_constructor_sha256": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983",
+  "constructor_sha256": "f881cc5f00208fcb1e7fef7f530c3d84245249e3e5d9fd317aa367cc608db60d",
+  "sources": {
+    "tokens_subtrayectos.py": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+    "tokens_subtrayectos_arco.py": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014",
+    "normalizar_tokens_arco_Train.py": "1600676656abafff8cf72231f28e48e282daa42291032513313a7ab88051b1bb"
+  },
+  "semantic_proof_sha256": "b51fca693fb3f05036c6f91a1e27958137a8376d1d8e63394082c16b71f5fe3e",
+  "source_indices_manifest_sha256": "dbeddff00e11dd21d03ed607892207401e9dcfe92d41c4122fac70cbc2a720aa",
+  "no_Validation_or_Test": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 5.540431261062622
+}

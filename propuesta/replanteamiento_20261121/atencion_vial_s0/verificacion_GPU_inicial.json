@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "zero_correction_all127941_reference_predictions_exact": true,
+  "finite_gradients": true,
+  "correction_output_gradient_nonzero": true,
+  "Test_access": false
+}

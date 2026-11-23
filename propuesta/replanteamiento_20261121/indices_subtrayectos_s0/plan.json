@@ -1,0 +1,20 @@
+{
+  "k": 2048,
+  "sources": 64,
+  "Train": "Exclude entire parentweekfold before constructing nearestpointtree",
+  "raw_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "preserve": "Only parentint32 andfirst/lastuint8 perquery, reconstructtokens on demand",
+  "max_MiB": 500,
+  "sources_sha256": {
+    "preparar_indices_subtrayectos.py": "9ee3024958a1d89830588ca71e66c9bc5323c283324f4986567c76b0961fb8ee",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  }
+}

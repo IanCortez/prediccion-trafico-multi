@@ -1,0 +1,145 @@
+{
+  "treatment": {
+    "id": "mezcla_proyeccion_incierta_s0",
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.12516706919595,
+      "rmse_s": 210.54082134265047,
+      "mdae_s": 75.0
+    },
+    "best_epoch": 6,
+    "model_sha256": "d839c846f11de0c284e2ec164187453227672c51d1098cb990e66f3b20a6b1b4"
+  },
+  "control": {
+    "id": "control_dos_rutas_proyeccion_s0",
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.24850517035196,
+      "rmse_s": 210.64766938458985,
+      "mdae_s": 75.0
+    },
+    "best_epoch": 3,
+    "model_sha256": "f1762f5ca2fcfe4d1ec623375e9455c93c2c905930075b05364c34681a246e87"
+  },
+  "identical_initial_model_state": true,
+  "initial_state_sha256": "7129df6cf0c55d8a242ae12aea1694beada9b7ff62d3f06b2fb20565d527c07c",
+  "fixed_epoch9_expanded_minus_control": {
+    "delta_mae_s": -0.2737589982882735,
+    "ci95_s": [
+      -0.38293952264809017,
+      -0.17346794864354986
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "fixed_epoch3_frozen_expanded_minus_control": {
+    "delta_mae_s": -0.09062771121063615,
+    "ci95_s": [
+      -0.134946029197472,
+      -0.048497262526711056
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "selected_models_expanded_minus_control": {
+    "delta_mae_s": -0.12333810115600159,
+    "ci95_s": [
+      -0.18018752349894673,
+      -0.06927230469499093
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "selected_treatment_minus_original": {
+    "delta_mae_s": -0.13154500902759866,
+    "ci95_s": [
+      -0.19462138618194716,
+      -0.07443510547647313
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "treatment_initial_untrained_validation": {
+    "n": 127941,
+    "mae_s": 131.2531948319929,
+    "rmse_s": 210.85057736820357,
+    "mdae_s": 75.0
+  },
+  "full_prediction_reproduction_and_raw65_reverse_singletons_passed": true,
+  "checkpoints_all_preserved": [
+    {
+      "id": "mezcla_proyeccion_incierta_s0",
+      "saved_checkpoints": [
+        {
+          "epoch": 0,
+          "file": "epoca_0.pt",
+          "sha256": "bc742e19eaadadcbf45e222e8716629db371395e2a04f66e496f8ab61601e43b",
+          "validation": {
+            "n": 127941,
+            "mae_s": 131.2531948319929,
+            "rmse_s": 210.85057736820357,
+            "mdae_s": 75.0
+          },
+          "threshold_qualifies": false
+        },
+        {
+          "epoch": 1,
+          "file": "epoca_1.pt",
+          "sha256": "366dfb1c678d312a76379f4f6fb3dca8b339b3d50be813575a088460cf0af41f",
+          "validation": {
+            "n": 127941,
+            "mae_s": 131.1989119984993,
+            "rmse_s": 210.65536252267836,
+            "mdae_s": 75.0
+          },
+          "threshold_qualifies": false
+        },
+        {
+          "epoch": 3,
+          "file": "epoca_3.pt",
+          "sha256": "5d58656b956d6e77d1b7e2718a07f3d9a90783ca80d45c33a5ff35aef6733639",
+          "validation": {
+            "n": 127941,
+            "mae_s": 131.15787745914133,
+            "rmse_s": 210.625698773211,
+            "mdae_s": 75.0
+          },
+          "threshold_qualifies": false
+        },
+        {
+          "epoch": 6,
+          "file": "epoca_6.pt",
+          "sha256": "d839c846f11de0c284e2ec164187453227672c51d1098cb990e66f3b20a6b1b4",
+          "validation": {
+            "n": 127941,
+            "mae_s": 131.12516706919595,
+            "rmse_s": 210.54082134265047,
+            "mdae_s": 75.0
+          },
+          "threshold_qualifies": false
+        }
+      ]
+    },
+    {
+      "id": "control_dos_rutas_proyeccion_s0",
+      "saved_checkpoints": [
+        {
+          "epoch": 3,
+          "file": "epoca_3.pt",
+          "sha256": "f1762f5ca2fcfe4d1ec623375e9455c93c2c905930075b05364c34681a246e87",
+          "validation": {
+            "n": 127941,
+            "mae_s": 131.24850517035196,
+            "rmse_s": 210.64766938458985,
+            "mdae_s": 75.0
+          },
+          "threshold_qualifies": false
+        }
+      ]
+    }
+  ],
+  "threshold131_06_achieved": false,
+  "confirmation_target73_5_achieved": false,
+  "Test_access": false,
+  "conclusion": "Small exploratory improvement with8hypotheses; fixed-epoch paired controls support attribution under this single configuration. ReusedValidation and one seed, not confirmation, not external matched-cohort victory."
+}

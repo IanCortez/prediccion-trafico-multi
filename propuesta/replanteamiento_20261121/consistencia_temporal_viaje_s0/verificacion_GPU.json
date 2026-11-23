@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "real256parentgradient_finite": true,
+  "original_frozen_body_unchanged": true,
+  "GPU_peak_MiB": 3988.001953125,
+  "state_MiB": 8.583309173583984,
+  "known_teacher_tokens": 41511860,
+  "originalprimary_queries": 1023485,
+  "Test": false
+}

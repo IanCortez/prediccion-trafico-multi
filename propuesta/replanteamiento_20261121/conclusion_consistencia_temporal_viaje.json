@@ -1,0 +1,61 @@
+{
+  "complete": true,
+  "main_validation": {
+    "n": 127941,
+    "mae_s": 135.99613162839904,
+    "rmse_s": 217.77361771079788,
+    "mdae_s": 81.93957816870409
+  },
+  "comparisons": {
+    "full_vs_reference": {
+      "delta_mae_s": 5.8380900311002595,
+      "ci95_s": [
+        5.087391871886329,
+        6.608847299360217
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "full_vs_uncalibrated": {
+      "delta_mae_s": -0.11507364654089844,
+      "ci95_s": [
+        -0.26772436196366683,
+        0.02783599400576188
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "full_vs_216control": {
+      "delta_mae_s": 0.007630553036038177,
+      "ci95_s": [
+        -0.7093985762209556,
+        0.7391403158336743
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    }
+  },
+  "meaningful_gate_passed": false,
+  "new_numerical_minimum": false,
+  "certification": null,
+  "private_Train_before": {
+    "n": 512,
+    "mae_s": 95.35834865272045,
+    "rmse_s": 133.92830852882184,
+    "mdae_s": 67.53720092773438
+  },
+  "private_Train_after": {
+    "n": 512,
+    "mae_s": 76.28844946622849,
+    "rmse_s": 105.8288826892995,
+    "mdae_s": 54.40374755859375
+  },
+  "diagnostic_warning": "PrivilegedTrainimprovement cannot substitute for primaryODValidation orconfirmation.",
+  "frozen_body_unchanged": true,
+  "decision": "Aggregateknowntriptime calibration didnotpassprimaryusefulnessgate. Do not retuneepochs/scales/stylecounts; nextaddressglobalrouteuncertainty andtrain/queryprefixexposure.",
+  "no_primary_filter_label_or_query_information_change": true,
+  "all_completed_metrics_predictions_preserved": true,
+  "current_best_source": "nuevo_mejor_verificado.json",
+  "goal": "ACTIVE",
+  "Test": "sealed"
+}

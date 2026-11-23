@@ -1,0 +1,45 @@
+{
+  "scope": "Train-only chronological gate, not primary Validation or confirmation",
+  "seed": 20261122,
+  "fit_n": 200000,
+  "held_n": 50000,
+  "held_last_days": 21,
+  "embargo": "Every fit trip must ARRIVE before first held departure; eligible primary Train only.",
+  "periods_seconds": [
+    15,
+    30,
+    45,
+    60,
+    90,
+    120,
+    180,
+    240,
+    300
+  ],
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "hypothesis": "Finite subminute/multiminute periodic functions may expose departure-time structure absent from coarse calendar encodings. This does not assume observed signal states.",
+  "public_features": "Original216 minus every mm_ historical movement feature; static public features only. No fitted pretrained representation.",
+  "model": {
+    "iterations": 800,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss_function": "MAE",
+    "thread_count": 2,
+    "random_seed": 20261122,
+    "allow_writing_files": false,
+    "task_type": "CPU"
+  },
+  "checkpoint": "Fixed final800 trees for both; no held stopping or parameter search.",
+  "gate": "At least0.5second heldTrain MAE improvement AND upper95%day-bootstrap delta interval below0.",
+  "GPU": false,
+  "Validation": false,
+  "Test": false,
+  "preserve": "All metrics,held predictions,sources,parameters; small final models retained for inspection."
+}

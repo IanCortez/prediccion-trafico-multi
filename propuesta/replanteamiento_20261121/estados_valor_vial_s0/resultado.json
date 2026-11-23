@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "scope": "Four fixedrandom trustedTrainprogressstates per eligible auxiliary trip; no queryfeatures contain actualroad/time/length.",
+  "primary_n": 1023529,
+  "auxiliary_trip_n": 815440,
+  "valid_state_n": 3260892,
+  "masked_endpoint_or_empty_n": 77839,
+  "K": 4,
+  "seed": 20261122,
+  "fields": [
+    "chain",
+    "destination",
+    "fraction",
+    "destination_fraction",
+    "remaining_km",
+    "remaining_time_s",
+    "local_time_s",
+    "local_distance_m",
+    "route_target",
+    "valid"
+  ],
+  "time_targets_dtype": "Originalsum-preservingfloat32; notfloat16",
+  "public_quantities_dtype": "Canonicalfloat16fraction/distances",
+  "max_outdegree": 6,
+  "source_sha256": "862f8b8e8f5e6fd1351d95f31496c3d283dccfe0597a081df889f3001d74e3ee",
+  "corpus_manifest_sha256": "972877355a56c50ab91f6fc466a8c880db39e0cbbff818d39a39797ed13eeb9d",
+  "targets_sha256": "6a4be8de5586436f52346cf2e2d7396aff06d4c1293532d84b8de1d3c0171c34",
+  "artifact_MiB": 45.59082317352295,
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 47.69461703300476
+}

@@ -1,0 +1,18 @@
+{
+  "validation": {
+    "n": 127941,
+    "mae_s": 187.8400780282029,
+    "rmse_s": 279.55109867853804,
+    "mdae_s": 123.9545398455017
+  },
+  "model": {
+    "file": "full246_q10.cbm",
+    "sha256": "78972b4487047c0076d51993b19b9238d7f79498919f0798407878c0bc284107",
+    "bytes": 4242736,
+    "loss": "Quantile:alpha=0.1",
+    "width": 246
+  },
+  "predictions_sha256": "f7f0060b5165398d37453f2743a87fc98dcb1dabe5238e0a40e24722762ab899",
+  "actual_labels_evaluated_in_seconds": true,
+  "Test": false
+}

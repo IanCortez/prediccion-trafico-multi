@@ -1,0 +1,9 @@
+{
+  "removed": [
+    {
+      "file": "ultima_reanudacion.pt",
+      "sha256": "1769d82bf991f11d614c34c5b034ee84dda265fb944fd5e3fd7223bdaf38fa9b"
+    }
+  ],
+  "completed_metrics_predictions_sources_preserved": true
+}

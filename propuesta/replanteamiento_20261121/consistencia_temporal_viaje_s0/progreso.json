@@ -1,0 +1,8 @@
+{
+  "epoch": 2,
+  "step": 3400,
+  "steps": 3493,
+  "parent_n": 870656,
+  "online_training_knownT_MAE_s": 77.09429169934975,
+  "seconds": 28.804978847503662
+}

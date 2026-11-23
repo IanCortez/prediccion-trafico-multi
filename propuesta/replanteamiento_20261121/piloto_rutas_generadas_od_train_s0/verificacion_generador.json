@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "raw_policy_score_max_error": 0.0,
+  "reverse_singleton_descriptor_exact": true,
+  "no_observed_N_route_or_time_in_generator_API": true,
+  "absorbingarrival_and_publictail": true
+}

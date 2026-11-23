@@ -1,0 +1,7 @@
+{
+  "original_exit_code": 1,
+  "stage": "Syntax only; no run directory, data read, model fit or parameter update occurred",
+  "fix": "Use NumPy square directly for discrete CRPS; remove malformed unused branch",
+  "GPU_untouched": true,
+  "source_sha256": "b2761128058b3f876e4700e8db7aa14746b51274295558870d137c1549eee2b4"
+}

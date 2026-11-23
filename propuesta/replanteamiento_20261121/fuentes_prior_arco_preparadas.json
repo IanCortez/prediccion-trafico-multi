@@ -1,0 +1,12 @@
+{
+  "prepared": true,
+  "not_launched": true,
+  "source_sha256": "dfb8ac8bb126911ef54a09469013fa170c2f18a1812f5a836afb9fcf29fb6652",
+  "model_sha256": "ba71cd022d8834e90336fd07f7edd97d3c71ca1959d6532b36e912e36b51ab84",
+  "semantic_proof": "b51fca693fb3f05036c6f91a1e27958137a8376d1d8e63394082c16b71f5fe3e",
+  "fixed_weight_TT_invariance_proof": "e86123536a1dd89d402060c531aa49448927173ba1a6ab8b59f4bc1bb776235c",
+  "original34features_and_constructor_preserved": true,
+  "no_new_neural_parameters": true,
+  "expected_next": "Aftercurrentjoint24terminalresultandqualifiedreload, runthis6epochgeometrypriorcorrection. DoNOTlaunchsupersededArc34replacementtrainer.",
+  "Test": "SEALED"
+}

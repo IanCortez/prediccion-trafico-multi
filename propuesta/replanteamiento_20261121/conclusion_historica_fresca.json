@@ -1,0 +1,143 @@
+{
+  "treatment": {
+    "n": 127941,
+    "mae_s": 130.20482097216686,
+    "rmse_s": 209.28216351177895,
+    "mdae_s": 75.0
+  },
+  "control": {
+    "n": 127941,
+    "mae_s": 130.56416629540178,
+    "rmse_s": 209.5718496506962,
+    "mdae_s": 75.0
+  },
+  "fixed_epoch20": {
+    "historica_fresca_s0": {
+      "n": 127941,
+      "mae_s": 132.20109269116233,
+      "rmse_s": 210.9571559800764,
+      "mdae_s": 75.0
+    },
+    "control_historica_fresca_s0": {
+      "n": 127941,
+      "mae_s": 132.6937416465402,
+      "rmse_s": 212.5963510479619,
+      "mdae_s": 75.0
+    }
+  },
+  "fixed_epoch20_paired_treatment_minus_control": {
+    "delta_mae_s": -0.4926489553778695,
+    "ci95_s": [
+      -0.7694033076889218,
+      -0.21770129770118898
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "selected_epoch_paired_treatment_minus_control": {
+    "delta_mae_s": -0.3593453232349286,
+    "ci95_s": [
+      -0.6428899076737276,
+      -0.0858180267768868
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "selected_treatment_minus_previous_verified": {
+    "delta_mae_s": -0.9203460970290993,
+    "ci95_s": [
+      -1.310560344880075,
+      -0.5652661567728828
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "initial_state_sha256": "22d289c74f37acd0528e1c7a844091244b11cde7909b7987be9f6fd42b3430a0",
+  "same_initial_weights": true,
+  "treatment_epochs": 39,
+  "control_epochs": 49,
+  "treatment_best_epoch": 27,
+  "control_best_epoch": 40,
+  "all_primary_rows_labels_timestamps_identical": true,
+  "both_full_and_raw_input_certifications_passed": true,
+  "mean_mode_mass": {
+    "historica_fresca_s0": [
+      0.1773959845304489,
+      0.3364015817642212,
+      0.4861987233161926
+    ],
+    "control_historica_fresca_s0": [
+      0.5233811736106873,
+      0.4766194522380829,
+      0.0
+    ]
+  },
+  "uncertainty": {
+    "historica_fresca_s0": {
+      "ensemble_NLL": 3.6765362644411073,
+      "normalized_RPS": 0.05556234432875035,
+      "coverage80": 0.8131013514041628,
+      "mean_width80_s": 391.3486022949219,
+      "mean_mode_mass_general_public_historical": [
+        0.1773959845304489,
+        0.3364015817642212,
+        0.4861987233161926
+      ],
+      "randomized_PIT_decile_counts": [
+        12993,
+        12784,
+        12923,
+        13126,
+        12727,
+        12646,
+        12365,
+        12501,
+        12347,
+        13529
+      ],
+      "interpretation": "Descriptive reusedValidation calibration; not confirmation or a coverage guarantee."
+    },
+    "control_historica_fresca_s0": {
+      "ensemble_NLL": 3.680356031912225,
+      "normalized_RPS": 0.05575844509901633,
+      "coverage80": 0.8075753667706208,
+      "mean_width80_s": 386.4235534667969,
+      "mean_mode_mass_general_public_historical": [
+        0.5233811736106873,
+        0.4766194522380829,
+        0.0
+      ],
+      "randomized_PIT_decile_counts": [
+        13699,
+        12957,
+        12876,
+        12861,
+        12724,
+        12351,
+        12311,
+        12177,
+        12424,
+        13561
+      ],
+      "interpretation": "Descriptive reusedValidation calibration; not confirmation or a coverage guarantee."
+    }
+  },
+  "checkpoint_sha256": {
+    "historica_fresca_s0": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+    "control_historica_fresca_s0": "361c349c9d31bcdc19bb8b9a1c6cefd6dd7930cd2f332fb021dd499b63fbb512"
+  },
+  "all_metrics_and_every_epoch_predictions_retained": true,
+  "limitations": [
+    "One seed; repeated adaptively reused Validation. Not confirmation.",
+    "This control disables the historical branch; effective trainable capacity is not equal.",
+    "Selected epochs are adaptive and can differ; fixed20 is the matched epoch mechanism comparison.",
+    "Public route/history prototypes are latent hypotheses, not observed query trajectories or guaranteed drivable historical paths.",
+    "TransferTraj has a different published processed cohort; no matched benchmark claim."
+  ],
+  "verdict": "Historical branch improves the matched fixed20 epoch comparison.",
+  "goal_73_5_confirmation_achieved": false,
+  "Test": "sealed",
+  "source_sha256": "15fa209025ec3a4deed1b9131ea06dd8754c0b99d41e2256e3a1767ba10bbe6e",
+  "actual_data_files_accessed": [],
+  "seconds": 0.6958482265472412
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "Reusedchronological40kfit/10kheldTrain signalgate, not primaryValidation, confirmation or a targetcohortchange.",
+  "motivation": "Descriptiveprimaryaudit found9.9percentofqueriescontribute40percentofabsoluteerror. Study identifiable supervisedtime-regimes ratherthan anotherroutegenerator.",
+  "boundary_s": 900,
+  "query": "Same206publicfeatures, excludingall10mm_profiles to prevent heldperiodlabel leakage.",
+  "density": "116original15secondbins, empiricalleafdistributions withoneTrainmarginalpseudoobservationperleaf.",
+  "factorization": "P(T|OD)=P(short|OD)*P(T|short,OD)+P(long|OD)*P(T|long,OD); trueTregime isTrainlabel only, neverheldinput.",
+  "global_control": "256ExtraTrees depth14,minleaf20,maxfeatures1,seed20261122,CPU2",
+  "treatment": "128binarygate trees+128conditionaldensitytrees perregime, same depth/minleaf. Equal approximate fittedrow-tree visits; capacitynotexactidentical.",
+  "gate": ">=2seconds betterthan stored133.355393reference AND>=1second betterthan globaldensitycontrol; exploratorydayCIupper<0forboth.",
+  "no_tuning": "Onefixedboundary, treecount/depth/smoothing. No held stopping, no laterboundaries selected.",
+  "oracle": "No targetregime oracle presented as a publicforecast.",
+  "resources": "CPU2 only whileoneGPUjointmodeltrains; save qualifiedpilotweights onlyifgatepasses, allpredictions/metrics/sourcesalways.",
+  "comparison_limitation": "Pilotrows inheritedfrompreviousrouteinstrument and repeatedlyexamined; no independentgeneralization or primaryMAEclaim.",
+  "Validation": false,
+  "Test": false
+}

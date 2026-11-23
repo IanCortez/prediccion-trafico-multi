@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "edge_embedding_gradient_norm": 0.0003775617806240916,
+  "global_parameters_frozen": true,
+  "only_Train_queries": true
+}

@@ -1,0 +1,7 @@
+{
+  "scientific_result_complete": true,
+  "result_and_predictions_saved_verified": true,
+  "only_final_console_json_print_failed_due_to_numpy_array": true,
+  "original_source_preserved_by_hash": true,
+  "do_not_rerun_completed_computation": true
+}

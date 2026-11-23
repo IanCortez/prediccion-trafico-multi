@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "source_sha256": "9616688c8b3fbcce96db3440f4b840e27ce1d287d84eb0ad6987d5be829e9e5a",
+  "model_sha256": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+  "data_sha256": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+  "records": [
+    {
+      "task": "teacher_gradient",
+      "batch": 256,
+      "seconds": 0.15684890747070312,
+      "peak_allocated_MiB": 3554.41796875,
+      "fragments_per_second": 1632.1439793759273
+    },
+    {
+      "task": "teacher_gradient",
+      "batch": 512,
+      "seconds": 0.145845095316569,
+      "peak_allocated_MiB": 4074.88525390625,
+      "fragments_per_second": 3510.5740024281317
+    },
+    {
+      "task": "public_rollout_max192",
+      "batch": 256,
+      "seconds": 0.7361598014831543,
+      "peak_allocated_MiB": 3181.14404296875,
+      "queries_per_second": 347.7505828004086,
+      "projected_allTrain_minutes": 49.05263765761629
+    },
+    {
+      "task": "public_rollout_max192",
+      "batch": 512,
+      "seconds": 1.024637222290039,
+      "peak_allocated_MiB": 3241.578125,
+      "queries_per_second": 499.68904980407854,
+      "projected_allTrain_minutes": 34.13739672706773
+    },
+    {
+      "task": "public_rollout_max192",
+      "batch": 1024,
+      "seconds": 1.704841136932373,
+      "peak_allocated_MiB": 3361.51904296875,
+      "queries_per_second": 600.6424750182572,
+      "projected_allTrain_minutes": 28.39972869520231
+    }
+  ],
+  "numerical_precision_and_architecture_unchanged": true,
+  "no_Validation_or_Test": true,
+  "seconds": 63.501370429992676
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "Initial GPU objective, before backward/optimizer updates",
+  "weights_updated": false,
+  "no_checkpoints_or_predictions": true,
+  "cause": "Unsupported strict deterministic CUDA cumsum",
+  "replacement": "aux_solicitud_control_s0_v2",
+  "original_source_sha256": "b85038c94751fd50658082c2181f05d4c0b1f723351841babba9434283b67a3d"
+}

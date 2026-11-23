@@ -1,0 +1,8 @@
+{
+  "completed_scientific_output": false,
+  "stage": "Firstbatchbeforecandidateevaluation",
+  "cause": "CPU NumPy sequential Float32 cumsum differed from original GPUtorchcumsum at a discrete quantilethreshold.",
+  "correction": "Newcdfsource uses protectedGPUCDF directly, retains frozenfirstattemptsources, same source density/gate/queries/labels.",
+  "rerun": "memoria_subtrayectos_cdf_s0",
+  "no_target_or_hyperparameter_selection": true
+}

@@ -1,0 +1,83 @@
+{
+  "complete": true,
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation/confirmation.",
+  "metrics": {
+    "public_only": {
+      "n": 10000,
+      "mae_s": 132.7847418317525,
+      "rmse_s": 208.3766105809556,
+      "mdae_s": 87.94059785028367
+    },
+    "semantic": {
+      "n": 10000,
+      "mae_s": 132.61536834597305,
+      "rmse_s": 208.39358582911402,
+      "mdae_s": 86.14168573047209
+    },
+    "random": {
+      "n": 10000,
+      "mae_s": 132.3992990625692,
+      "rmse_s": 207.9954419580835,
+      "mdae_s": 86.2613468282143
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "public_vs_reference": {
+      "delta_mae_s": -0.5706509610493942,
+      "ci95_s": [
+        -1.2528300189497283,
+        0.12635641289460414
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    },
+    "semantic_vs_reference": {
+      "delta_mae_s": -0.7400244468288858,
+      "ci95_s": [
+        -1.3733035722359712,
+        -0.05880204186818461
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    },
+    "semantic_vs_random": {
+      "delta_mae_s": 0.21606928340384912,
+      "ci95_s": [
+        -0.3253825090230214,
+        0.7619975092094893
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    },
+    "semantic_vs_public": {
+      "delta_mae_s": -0.1693734857794916,
+      "ci95_s": [
+        -0.6677758910034072,
+        0.28162961949863485
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    }
+  },
+  "held_code_accuracy": 0.6052,
+  "privileged_true_code_oracle": {
+    "n": 10000,
+    "mae_s": 118.9095890248882,
+    "rmse_s": 174.0405477324305,
+    "mdae_s": 83.17828776235274
+  },
+  "decision": "Globalroutecodegatefailed: semantic132.615s vsrandom132.399s andpublic132.785s, belowrequired2secondgainover133.355reference; no fullprimaryexpansion/no codecountPCA/binsearch.",
+  "information": "Fullactualroute90featureoracle94.024s; truecompressedcodeoracle118.910s. Thisfinitecoding losespredictiveinformation. Notanirreducibleerrorbound orclaimallrouteposteriorsfail.",
+  "resource_event": "CPUsharedMultiQuantilestudyretiredforcost; completedpublic132.711s predictionrecovered. ScalarGPUstudycomplete andallthreebranchespreserved.",
+  "next": "Fullsequenceprefixmemory/clock-awareroadmodel, no coarsecodebook. Physicalprivatepositionsrecovered; unsupportedmacroturns masked instead ofassumingentry0.",
+  "all_completed_metrics_predictions_sources_retained": true,
+  "unselected_weights_removed": true,
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

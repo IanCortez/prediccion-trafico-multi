@@ -1,0 +1,57 @@
+{
+  "status": "New architecture after officialcode/Porto data instruments; not yet a trained primary model.",
+  "reference": {
+    "paper": "UNITE: A Unified Framework for Accurate and Efficient Origin-Destination and Route Travel Time Estimation",
+    "year": 2026,
+    "url": "https://web.comp.polyu.edu.hk/csmlyiu/conf/KDD26_UNITE.pdf",
+    "code": "https://github.com/derekwtian/UNITE",
+    "commit": "ca60d6d86e24b92e39c70537c96a166636c90af1"
+  },
+  "evidence": {
+    "geometry_history_attention": "8epochs certified130.158042s, only.0468s belowparent,CIcrosses0. Stop neighbor/slot tuning.",
+    "categorical_time_gate": "HeldTrain−.5688s,belowpredeclared1s; no full categorical trial.",
+    "officialODforward": "Mode−1independentoftrue route/length/time payload;ratio0lengthsensitive;defaultODdriver1teacherforcesroute.",
+    "terminal_issue": "Unmodifiedofficialforward can yield9vs15syntheticunits for same query alone/mixedbatch withpositive destination estimator. ActualSegTimeEstimator has no hard destination-zero mask. This is a structural counterexample, not a measured trainedUNITEfailure.",
+    "MoE_noise": "OfficialNoisyTopkGating correctly disables noise in eval; no change needed.",
+    "Portodata": "4096eligiblequalityTraintrips,169827GPSpoints. Whole-tripzero-reset81.49% failed90%gate; however99.335%individualsteps have no reset. Partial-route supervision is a different proposal, not a claim oldgatepassed.",
+    "endpoint_issue": "FullHMM endpoints disagree with pure-nearest1 in48.46%; actualHMMendpoint is always among public4. Full-route endpoint IDs are not permitted query inputs.",
+    "road_space": "Publicdirected174112arcs compressed into53766junction-to-junction chains over23039junctions; sourcepriorRNNusedcoarsegridcells, not these streetstates."
+  },
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "architecture": {
+    "endpoint": "Public4projectionsets plus junction incidences/partial offsets; encode uncertainty, never substitute full-queryHMMendpointIDs.",
+    "encoder": "OD/date encoder, staticchain attributes and historicalTrainonly roadtraffic; globaltripstyle shared acrossprogress. Frozen existingODrepresentation may warmstart if resource-safe.",
+    "progress": "Street-chain conditional route generator with absorbing arrival. Compute partial terminaltraversal/tail once and freeze completed rows. Fixed/graph-derived cap independent of actualqueryN, plus predicted remainingtime when cap hit.",
+    "time": "Local temporal/spatial traffic MoE inspired byUNITE; positive distance-pace and dwell/tail terms handle partial/zero-distance chains. All lookup tables only eligibleTrain; entirequeryfold excluded intraining, all backoffs too.",
+    "supervision": "Primary originalT for every unchangedquery. Separate maskedTrainroad-transition/partialtime auxiliary losses. Unknown intervals remain explicitGAP and preserve totalT; routeTeacherforcing never enters publicODprediction.",
+    "uncertainty": "Latentroute/style marginals; discrete60..1785support unchanged. Interval calibration reported descriptively and later independently confirmed."
+  },
+  "invariants": [
+    "Raw5API rejectsfuture route,N,duration,driver andcalltype.",
+    "Poison route/length/timing targets must not change ODprediction.",
+    "Prediction independent of singleton/batch/order, including early-arriving queries.",
+    "All primary labels/filters/splits unchanged; only auxiliary step masks vary.",
+    "NoTestdata/paths/metrics before a strongcandidate is frozen."
+  ],
+  "next_required": [
+    "Finish time-preserving bridgedTrainpilot and quantify maskedsteps/routeadjacency.",
+    "Test real neural temporalhead and absorbingadapter on syntheticgraphs.",
+    "Train-onlytime-specificoracle/gate; geometry coverage alone was insufficient.",
+    "Only then bounded primary training and matched architecture/control; freeze sources, retain allmetrics/predictions andeveryeligibleMAE<131.06weights."
+  ],
+  "resources": [
+    "OneheavyGPU; CPU2preprocessing; localConda andall files withinEproject.",
+    "Pilotartifacts<=200MiB; targetfullauxiliarybankaround500MiB, stream instead of keeping allpointcandidates.",
+    "Reuseexistingjunctiondistance matrices; never build dense53766x53766roadpairmatrix.",
+    "Branch/frozenparentreferences avoid duplicatefullweights; preserve all originaldata,40qualifiedmodels andTransferTraj."
+  ],
+  "scope": "Porto raw-point OD adaptation, not exact replication of publishedChinese-city UNITE protocol or a73.5s success claim.",
+  "goal": "<73.5seconds independent confirmation remains unmet and active.",
+  "Test": "sealed"
+}

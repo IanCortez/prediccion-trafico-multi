@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "GPU_quantile_with_categorical17_supported": true,
+  "gpu_ram_part": 0.25,
+  "task_type": "GPU",
+  "source_sha256": "7369f8065f068aa2170c312801da0dc4be610e29cddf0a6d67cb39b1a1419528",
+  "datasets_opened": false,
+  "Test_access": false,
+  "seconds": 0.4413948059082031
+}

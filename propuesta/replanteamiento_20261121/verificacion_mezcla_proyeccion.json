@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "scope": "Train-only structural instrument, not primary MAE",
+  "base_only_exact": true,
+  "probability_normalization_error": 2.384185791015625e-07,
+  "all_missing_route_fallback_max_logprob_error": 0.0,
+  "same_kind_candidate_permutation_max_logprob_error": 9.5367431640625e-07,
+  "candidate_permutation_quantiles_exact": true,
+  "all_gradients_finite": true,
+  "candidate_head_gradient_nonzero": true,
+  "gate_gradient_nonzero": true,
+  "frozen_backbone_has_no_gradients": true,
+  "default_control_cannot_use_extra_candidates": true,
+  "information": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "initial_new_mixture_is_not_original_reference": true,
+  "model_source_sha256": "0881ec64259b9c4195a9b94c5cb43233c1a547177ade6715eceb6abc2ee83672",
+  "data_manifest_sha256": "9b44173f87ca36209d0a67b66282ddd22c08da23ab99f21150ce632b04eb95c5",
+  "Validation_data_arrays_accessed": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 4.949929475784302
+}

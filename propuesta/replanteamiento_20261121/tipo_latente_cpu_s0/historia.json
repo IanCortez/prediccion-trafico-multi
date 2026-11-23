@@ -1,0 +1,174 @@
+{
+  "matched_unsupervised": [
+    {
+      "stage": "matched_unsupervised",
+      "step": 1000,
+      "loss": 3.691122531890869,
+      "marginal_NLL": 3.4613757133483887,
+      "seconds": 571.2796685695648
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 2000,
+      "loss": 3.791767120361328,
+      "marginal_NLL": 3.547808885574341,
+      "seconds": 575.2223474979401
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 3000,
+      "loss": 3.6228017807006836,
+      "marginal_NLL": 3.418212413787842,
+      "seconds": 578.9863691329956
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 4000,
+      "loss": 3.812033176422119,
+      "marginal_NLL": 3.557227373123169,
+      "seconds": 582.71653175354
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 5000,
+      "loss": 3.564528226852417,
+      "marginal_NLL": 3.359339952468872,
+      "seconds": 586.8344230651855
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 6000,
+      "loss": 3.681455135345459,
+      "marginal_NLL": 3.4699032306671143,
+      "seconds": 591.1777362823486
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 7000,
+      "loss": 3.703089714050293,
+      "marginal_NLL": 3.463902473449707,
+      "seconds": 595.2645990848541
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 8000,
+      "loss": 3.575565814971924,
+      "marginal_NLL": 3.3826780319213867,
+      "seconds": 599.0157387256622
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 9000,
+      "loss": 3.926522970199585,
+      "marginal_NLL": 3.642055034637451,
+      "seconds": 602.8728601932526
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 10000,
+      "loss": 3.650710105895996,
+      "marginal_NLL": 3.4276726245880127,
+      "seconds": 607.1272146701813
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 11000,
+      "loss": 3.708012819290161,
+      "marginal_NLL": 3.462399482727051,
+      "seconds": 610.3727505207062
+    },
+    {
+      "stage": "matched_unsupervised",
+      "step": 12000,
+      "loss": 3.8440589904785156,
+      "marginal_NLL": 3.5843424797058105,
+      "seconds": 614.0692913532257
+    }
+  ],
+  "supervised_type": [
+    {
+      "stage": "supervised_type",
+      "step": 1000,
+      "loss": 4.399169445037842,
+      "marginal_NLL": 3.4634814262390137,
+      "seconds": 617.775190114975
+    },
+    {
+      "stage": "supervised_type",
+      "step": 2000,
+      "loss": 4.551353931427002,
+      "marginal_NLL": 3.5439305305480957,
+      "seconds": 621.5188155174255
+    },
+    {
+      "stage": "supervised_type",
+      "step": 3000,
+      "loss": 4.33438777923584,
+      "marginal_NLL": 3.4190454483032227,
+      "seconds": 625.8578338623047
+    },
+    {
+      "stage": "supervised_type",
+      "step": 4000,
+      "loss": 4.477365970611572,
+      "marginal_NLL": 3.5638959407806396,
+      "seconds": 629.8804731369019
+    },
+    {
+      "stage": "supervised_type",
+      "step": 5000,
+      "loss": 4.302495002746582,
+      "marginal_NLL": 3.365238666534424,
+      "seconds": 633.7375361919403
+    },
+    {
+      "stage": "supervised_type",
+      "step": 6000,
+      "loss": 4.310184955596924,
+      "marginal_NLL": 3.469320058822632,
+      "seconds": 637.5269808769226
+    },
+    {
+      "stage": "supervised_type",
+      "step": 7000,
+      "loss": 4.348309516906738,
+      "marginal_NLL": 3.462446689605713,
+      "seconds": 642.1943211555481
+    },
+    {
+      "stage": "supervised_type",
+      "step": 8000,
+      "loss": 4.228185653686523,
+      "marginal_NLL": 3.3915271759033203,
+      "seconds": 647.9985954761505
+    },
+    {
+      "stage": "supervised_type",
+      "step": 9000,
+      "loss": 4.603463172912598,
+      "marginal_NLL": 3.6445209980010986,
+      "seconds": 652.9285175800323
+    },
+    {
+      "stage": "supervised_type",
+      "step": 10000,
+      "loss": 4.249741077423096,
+      "marginal_NLL": 3.4288225173950195,
+      "seconds": 657.4815878868103
+    },
+    {
+      "stage": "supervised_type",
+      "step": 11000,
+      "loss": 4.390478134155273,
+      "marginal_NLL": 3.4740827083587646,
+      "seconds": 663.3094885349274
+    },
+    {
+      "stage": "supervised_type",
+      "step": 12000,
+      "loss": 4.39708137512207,
+      "marginal_NLL": 3.57435941696167,
+      "seconds": 668.2408647537231
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "n": 20000,
+  "mean_geometry_baseline_m": 269.0622863769531,
+  "mean_geometry_expanded_m": 248.9938507080078,
+  "mean_geometry_reduction_m": 20.068462371826172,
+  "relative_geometry_reduction": 0.0745866789510236,
+  "fraction_improving_more10m": 0.20075,
+  "mean_length_baseline_m": 553.2581787109375,
+  "mean_length_expanded_m": 467.7594909667969,
+  "original_two_route_feature_recovery_max_error": [
+    0.0,
+    0.0
+  ],
+  "reverse_and_batch_subset_exact": true,
+  "actual_query_path_rejected": true,
+  "source_sha256": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "piloto_incertidumbre_proyeccion.py": "904c414c14fe99253ce8b12720a39338e82901d88a571773f08112b01f960219",
+    "rutas_proyeccion_incierta.py": "ecfdf06d4c6db7041f0b6743e5015140ad460e671e4d5035df72519477173cda"
+  },
+  "predictions_sha256": "f8864a37380db37ee53ca7b0586d19e11ee328fad43edd3d6a201b04edad58cf",
+  "primary_filters_unchanged": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 12.872828483581543,
+  "conclusion": "Gate supports or rejects expanding public endpoint-projection hypotheses. Oracle uses Train geometry and is not a deployable selector, primary MAE result, or universal bound."
+}

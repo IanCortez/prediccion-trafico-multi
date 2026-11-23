@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "n": 20000,
+  "compressed6_mean_m": 108.63877868652344,
+  "raw64_mean_m": 81.84169006347656,
+  "mean_reduction_m": 26.797090530395508,
+  "relative_reduction": 0.24666229549319912,
+  "source_fold_exclusion": true,
+  "retrieval_frozen_before_query_geometry": true,
+  "query_true_time_used": false,
+  "candidate_count_matched": false,
+  "predictive_MAE_gain_not_established": true,
+  "conclusion": "Gate passed: justify individual-history relational attention, with a learned-vs-matched-control full primary test.",
+  "source_sha256": "db9211d94e0a3b1afe3b46347c6dc99411969512342a4a4f03ca6aa08e4c69ff",
+  "memory_sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+  "previous_predictions_sha256": "5dac1d9890838764d2085c8e06fa48ab50370698aede10cfecea476368af4907",
+  "diagnostic_predictions_sha256": "1d25d11e513006cb010d4f314cc0821bb056123e98f096dbf17b4b76456a2190",
+  "diagnostic_bytes": 4347736,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 3.0250144004821777
+}

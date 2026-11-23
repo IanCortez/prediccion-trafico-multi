@@ -1,0 +1,10 @@
+{
+  "syntax_valid": true,
+  "sources": {
+    "tokens_subtrayectos.py": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+    "normalizar_tokens_subtrayectos.py": "d58865fad8b36e59e766c3d38e43c9d3b8ac186ef19433f4fb0a632d718c35b1",
+    "modelo_atencion_subtrayectos.py": "637715980cb836e601f272b52629cca44fd71a7826f3917aff2d70d414edef46",
+    "entrenar_atencion_subtrayectos.py": "64a4af8b15db701cb749396778597ea633c7a0fc9c075861bcb6b9e79f29bf1a"
+  },
+  "runtime_proofs": "Will run on actualTrain and raw5queries before acceptance."
+}

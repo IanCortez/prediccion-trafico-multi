@@ -1,0 +1,63 @@
+{
+  "complete": true,
+  "scope": "Additional-source availability inventory only, not a fitted model, outcome or new primarycohort.",
+  "binary_metadata_only": true,
+  "GPS_payloads_decoded": 0,
+  "original_primary_rows_labels_and_split_unchanged": true,
+  "counts": {
+    "known_primary_Train_rows_skipped_before_parse": 1023529,
+    "outside_primary_Train_metadata_rows": 687141,
+    "pilot_potential_parents_before_24h_buffer": 316662,
+    "primary_potential_parents_before_24h_buffer": 341366,
+    "outside_missing_flag": 10
+  },
+  "raw_rows": 1710670,
+  "examples_metadata": [
+    {
+      "rawrow": 2,
+      "timestamp": 1372636951
+    },
+    {
+      "rawrow": 9,
+      "timestamp": 1372637905
+    },
+    {
+      "rawrow": 22,
+      "timestamp": 1372638502
+    },
+    {
+      "rawrow": 24,
+      "timestamp": 1372637658
+    },
+    {
+      "rawrow": 25,
+      "timestamp": 1372639092
+    },
+    {
+      "rawrow": 26,
+      "timestamp": 1372639535
+    },
+    {
+      "rawrow": 33,
+      "timestamp": 1372640399
+    },
+    {
+      "rawrow": 35,
+      "timestamp": 1372639848
+    }
+  ],
+  "minimum_potential_timestamp": 1372636951,
+  "maximum_potential_timestamp": 1398258738,
+  "important_limit": "Potentialparents are not yet authorized as valid supervision by this inventory. Any later constructor must select earlyTrain by timestamp before GPSdecode, then verify sourcearrival cutoff and usable intervals. Buffer alone does not prove arrival.",
+  "distinction": "Priorregionaltransfer split existingprimary atlongitude−8.62; it did not inventory outside-primary rawTrainparents.",
+  "source_sha256_previously_verified": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d",
+  "source_file_bytes": 1942848724,
+  "code_sha256": "1f8f33ced16e2a9dc2fd0933848516492c65cf8e03dfc81cbcd9a51bf3515d73",
+  "Test_files_opened": false,
+  "no_model_or_prediction_claim": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 2.3201959133148193
+}

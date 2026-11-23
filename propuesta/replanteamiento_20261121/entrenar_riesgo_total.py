@@ -140,7 +140,8 @@ def main():
         torch.set_float32_matmul_precision('high')
         return pred,mass
     # GPU differentiation through complete sampled paths is a mandatory gate.
-    ii,smoke=draw(eligible[:4],particles=4,candidates=8)
+    smoke_sequences=np.random.default_rng(2026).choice(eligible,4,replace=False)
+    ii,smoke=draw(smoke_sequences,particles=4,candidates=8)
     assert smoke['complete'].any()
     ok=smoke['complete']
     value,_=conditional_crps_surrogate(smoke['times'][ok].double(),target[ii][ok].double(),smoke['log_probability'][ok])
@@ -154,7 +155,7 @@ def main():
     monitor_sequences=np.sort(np.random.default_rng(314).choice(eligible,256,replace=False))
     model.eval()
     with torch.no_grad():initial_teacher=float(teacher_loss(monitor_sequences))
-    write(run/'verificacion_GPU_inicial.json',dict(passed=True,finite_nonzero_complete_path_gradients=True,encoder_dropout_disabled=True,GRU_train_mode_dropout0=True,canonical128_inference_passed=True,initial_teacher_NLL=initial_teacher,Test_access=False))
+    write(run/'verificacion_GPU_inicial.json',dict(passed=True,finite_nonzero_complete_path_gradients=True,smoke_Train_rows=sequences.trip[smoke_sequences].tolist(),encoder_dropout_disabled=True,GRU_train_mode_dropout0=True,canonical128_inference_passed=True,initial_teacher_NLL=initial_teacher,Test_access=False))
     write(run/'baseline_selection.json',dict(reference=metric(v[proxy],initial[0]),initial_parent_same_canonical_graph=metric(v[proxy],initial[-1]),initial_mass=float(imass.mean())))
     opt=torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],lr=.00001,weight_decay=.0003)
     scheduler=torch.optim.lr_scheduler.ReduceLROnPlateau(opt,mode='min',factor=.5,patience=2,min_lr=1e-6)
@@ -203,7 +204,7 @@ def main():
         opt.step()
         failed_total+=failed_step;query_total+=16
         last_step=step
-        if step%50==0:print(json.dumps(dict(stage='on_policy_full_trip_CRPS',step=step,queries=step*16,sampled_CRPS_mean_over_complete_queries_s=risk/max(16-failed_step,1),score_surrogate=surrogate,teacher_NLL=float(aux.detach()),support_failures_step=failed_step,support_failure_rate=failed_total/query_total,attempted_candidates_per_micro_mean=attempts/4,seconds=time.time()-start)),flush=True)
+        if step%50==0:print(json.dumps(dict(stage='on_policy_full_trip_CRPS',step=step,queries=step*16,sampled_CRPS_mean_over_complete_queries_s=(risk/(16-failed_step) if failed_step<16 else None),complete_policy_queries=16-failed_step,score_surrogate=surrogate,teacher_NLL=float(aux.detach()),support_failures_step=failed_step,support_failure_rate=failed_total/query_total,attempted_candidates_per_micro_mean=attempts/4,seconds=time.time()-start)),flush=True)
         stop_drift=False
         if step%500==0:
             pp,mm=predict(proxy)

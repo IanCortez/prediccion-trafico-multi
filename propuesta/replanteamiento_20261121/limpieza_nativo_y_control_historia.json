@@ -1,0 +1,19 @@
+{
+  "removed": [
+    {
+      "path": "propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\ultima_reanudacion.pt",
+      "bytes": 25738506,
+      "sha256": "562a93178dd83a6bc8a7f311f30f647b018b989443ea3f3ffde490114ce10cc8"
+    },
+    {
+      "path": "propuesta\\replanteamiento_20261121\\prior_eventos\\probabilidad_train.npz",
+      "bytes": 14675637,
+      "sha256": "48ec875b0b4cca2a0029732c6b2207d45496ec6dc9737e81917feb3c9f123131"
+    }
+  ],
+  "reason": "Native training+full evaluation complete; best native checkpoint needed by active risk trial remains. Temporal GPU gate rejected; its full probability lookup is an unused intermediate. Compact count table and reproducible sources remain.",
+  "current_risk_weights_untouched": true,
+  "best_reference_untouched": true,
+  "TransferTraj_untouched": true,
+  "original_data_untouched": true
+}

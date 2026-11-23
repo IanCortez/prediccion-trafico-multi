@@ -1,0 +1,23 @@
+{
+  "hypothesis": "Out-of-fit privileged probabilistic teacher gives a softer Train time target while the student query remains OD only.",
+  "teacher": "Five whole-week-fold-excluded CatBoost lognormal teachers using actual geometry only in Train. Two raw parameters per row, not a CDF bank.",
+  "objective": "Original hard NLL +5 hard RPS +0.2 conditional geometry NLL +0.2*(teacher expected NLL+5 soft RPS). Teacher-only RPS variance constant omitted without changing gradient.",
+  "primary_labels_and_filters": "unchanged",
+  "query_teacher_input": false,
+  "matched_control": "Reuse exactly predeclared aux_solicitud_control_s0_v2. Same RequestAuxiliary wrapper with zero request loss, same seed, optimizer, batches,4epochs, and literal primary/sampling source.",
+  "common_primary_source_sha256": "22c84731e6256a949f2331a76f8383e8a72544d904254a0542f7ec042cf356f3",
+  "common_sampling_source_sha256": "714681f963c07723a4464f404d80e4bac1fd6909656b29f6d399b3c8af6dc973",
+  "control_source_sha256": "1d7726235b3f922472653f6b45b387ab2b68a46eddad496422dc9db5e4d1f0d3",
+  "four_epochs_fixed_before_control_results": true,
+  "probability_CPU_gate": "verificacion_perdida_maestro.json: exact expected-hard-score value/gradient identity and real-Train finite gradients passed",
+  "GPU_gate": "Mandatory finite gradients plus all protected reference predictions exact before any update.",
+  "execution_order": "Wait for actual request-study supervisor and teacher CPU process exits; require both results. No extra GPU simultaneous. A73.5Validation candidate takes priority for freeze/confirmation.",
+  "limitations": "Privileged teacher gain alone does not establish student improvement. Adaptive reused Validation remains exploratory.",
+  "sources": {
+    "entrenar_alumno_maestro.py": "9bafe94f1ffd0bb67562d959268107a8b45581b1f146ad3d0463c71add09ac50",
+    "perdida_maestro_probabilistico.py": "78a9b5d63a7eefa912bf5503e7b21aa8be73b7b5c1be546871c54f985fa98949",
+    "modelo_aux_solicitud.py": "fe079afdc764503ccb778d592e86a6b6872046c31fb87fec479012bd884d8fb4"
+  },
+  "goal": "active",
+  "Test": "sealed"
+}

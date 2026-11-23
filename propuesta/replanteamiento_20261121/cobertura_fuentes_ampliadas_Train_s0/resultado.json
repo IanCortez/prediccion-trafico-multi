@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "passed": false,
+  "query_n": 512,
+  "before": {
+    "zero_source_fraction": 0.318359375,
+    "source_within100m_fraction": 0.677734375,
+    "median_source_count": 1.0,
+    "finite_minerror_quantiles": [
+      2.3355248604834307,
+      5.5811499387079815,
+      18.878414842307734
+    ]
+  },
+  "after": {
+    "zero_source_fraction": 0.3671875,
+    "source_within100m_fraction": 0.630859375,
+    "median_source_count": 1.0,
+    "finite_minerror_quantiles": [
+      2.2003193614234773,
+      5.06863855016649,
+      16.758387251755448
+    ]
+  },
+  "zero_source_reduction_percentage_points": -4.8828125,
+  "gained_queries": 15,
+  "lost_queries": 40,
+  "additional_parents": 278941,
+  "additional_points": 22161411,
+  "additional_GPS_bytes_persisted": 0,
+  "source_selection_before_GPS_decode": true,
+  "held_query_GT_labels_routes_not_used": true,
+  "sameK2048": true,
+  "original_sampler_availability_exact17": true,
+  "long_parent_index_and_span_proof": true,
+  "primaryValidation_access": false,
+  "Test_access": false,
+  "source_sha256": "d3e1bc8f6c80efaf9cf826b566e2c4342622e42ce1df58973399a58e053eb506",
+  "predictions_sha256": "b4bd5856dafafd1838c33845e7160610e7d21468a356075cf9687f22c0ddabb4",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 70.42694401741028,
+  "next_if_fail": "Do not persist or train an expanded retrievalbank basedsolely on the amountofadditionaldata."
+}

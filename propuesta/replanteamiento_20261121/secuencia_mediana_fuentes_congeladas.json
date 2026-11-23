@@ -1,0 +1,10 @@
+{
+  "modelo_mediana_directa.py": "4492929607866e124929c5cfc91afddf797b69b9b3f68c3dfa9084e84eff143e",
+  "entrenar_mediana_directa.py": "2765704ecc0200005f009c6e4efbc1e7b053014cfdd54eb4e0fa1a6bfc195ccc",
+  "inferencia_historica_fresca.py": "99dac9ba9ed8470fcdd771ceaf491e21ebdf8191bedad971e413d8339111363f",
+  "certificar_historica_fresca.py": "a7134550883819cc41cc55afd286632232a891bd84e0f192f6c4df1b06d9e369",
+  "concluir_historica_fresca.py": "15fa209025ec3a4deed1b9131ea06dd8754c0b99d41e2256e3a1767ba10bbe6e",
+  "plan_mediana_directa.json": "21b62b4a402fdb7b1a45cb7adff33d31f51ea1639365aba14f1b94462db8f3b3",
+  "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+  "verificacion_mediana_directa_cpu.json": "df15d86d1270663678f0e3bd85961f1e3c4c5033d0faffa3e4cf6ccaa6255f50"
+}

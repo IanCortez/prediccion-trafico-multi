@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "tokens_verified": 41775036,
+  "macro_transitions_verified": 39413092,
+  "reconstructed_positions_consistent_to_m": 0.101,
+  "max_distance_error_m": 0.00986862046169179,
+  "all_macro_edges_actual_chain_end_to_start": true,
+  "all_arrival_targets_physicallyconsistent": true,
+  "all_original_total_times_preserved": true,
+  "corrected_legacy_noninitial_zero_entry_error_n": 680543,
+  "legacy_initial_nonzero_already_handled_n": 828029,
+  "diagnostic_correction": "Preparercounter legacy_remaining_wrong_entry includedcorrectlyhandledinitialpartialtokens. Usecorrected_noninitialcount here; no outputposition/maskdata changed.",
+  "position_known_time_fraction": 0.9897264162273338,
+  "partial_supervision_time_coverage_95percent_gate_passed": true,
+  "source_core_arrays_and_shards_unchanged": true,
+  "source_sha256": "c55ec29934c7504eeaeceb5a8612eba1b9bfb9320d5793e16e11673e8f63ef8c",
+  "adapter_manifest_sha256": "118c0474744e1a03cdfb51592c35de45014628a561548f599db5b9cb57b7efc6",
+  "no_Validation_or_Test_access": true,
+  "seconds": 7.414010763168335
+}

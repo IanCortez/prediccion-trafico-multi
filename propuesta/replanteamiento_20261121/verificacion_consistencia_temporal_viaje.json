@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "CPU_only": true,
+  "actual_neural_public_rollout_initially_exact_parent": true,
+  "wholetrip_aggregate_loss_decreased": true,
+  "initial_loss": 0.011065044440329075,
+  "last5_losses": [
+    0.0004020854248665273,
+    0.0012466110056266189,
+    0.0014607221819460392,
+    0.001154690282419324,
+    0.00037110361154191196
+  ],
+  "only_correction_gradients": true,
+  "frozen_root_policy_GRU_embeddings_unchanged": true,
+  "private_T_localtargets_recognition_poisoning_cannot_affect_prediction": true,
+  "public_query_interface_unchanged": true,
+  "positive_pace_and_delay": true,
+  "new_parameters": 8386,
+  "D_nonpersistent": true,
+  "parent_source_sha256": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+  "model_source_sha256": "2f8904022fa56c37e37206a904bc2deba9193753d91ce6566ed2fe0642089c1e",
+  "source_sha256": "3f3457001b96e183e0f82ab8fba4382a55dc56b01f64082ceb5f041a53f677c4",
+  "synthetic_proof_not_a_performance_score": true,
+  "Test": false
+}

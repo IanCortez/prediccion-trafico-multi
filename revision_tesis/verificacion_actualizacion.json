@@ -1,0 +1,29 @@
+{
+  "verified_utc": "2026-11-23T00:01:53Z",
+  "metric_recalculation": "Passed for all completed single-output and saved-selected-alpha primary prediction sets found by verificar_resultados.py.",
+  "new_best_MAE_s": 129.99003446901307,
+  "validation_n": 127941,
+  "checkpoint_chain_CPU_load_passed": true,
+  "frozen_source_hashes_passed": true,
+  "chain": [
+    {
+      "id": "historica_fresca_s0",
+      "epoch": 27
+    },
+    {
+      "id": "atencion_historia_individual_s0",
+      "epoch": 3
+    },
+    {
+      "id": "atencion_subtrayectos_s0",
+      "epoch": 6
+    }
+  ],
+  "original_student_src_modified": false,
+  "new_inference_executed": false,
+  "training_executed": false,
+  "GPU_used": false,
+  "Test_read": false,
+  "reproduction_evidence": "propuesta/replanteamiento_20261121/atencion_subtrayectos_s0/reproduccion_independiente.json",
+  "full_inference_resources_external": "revision_tesis/recursos_externos_129_99.json"
+}

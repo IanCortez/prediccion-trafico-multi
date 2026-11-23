@@ -1,0 +1,18 @@
+{
+  "validation": {
+    "n": 127941,
+    "mae_s": 135.98850107536296,
+    "rmse_s": 218.27877750096638,
+    "mdae_s": 83.01675539851544
+  },
+  "model": {
+    "file": "control216_MAE.cbm",
+    "sha256": "9fcde3239bff404af5e1f973ab345713ec4dda488c9269172e0b699dc15e16bc",
+    "bytes": 4205520,
+    "loss": "MAE",
+    "width": 216
+  },
+  "predictions_sha256": "4e8d250f2a42cf185220b78556666cdad073615932129f25049199431821f994",
+  "actual_labels_evaluated_in_seconds": true,
+  "Test": false
+}

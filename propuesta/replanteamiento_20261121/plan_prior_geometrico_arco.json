@@ -1,0 +1,23 @@
+{
+  "status": "Preparedbefore newgeometry-correction outcome; noGPUtraining launched.",
+  "reason": "Train-onlysemanticproof found212.32mmedian geometryprior mismatch. Correcttheprior withoutdiscarding observedhistoricaltime-profile features.",
+  "original_inputs": "Keepalloriginal34Dtime-sampledsourcefeatures, sourcepathproxy, originalnormalizer43b431... and timeanchor exactly.",
+  "correction": "Supplyseparate14Darclength sourcegeometry onlyto geometryprior. No newneuralparameters. No influenceonTTforward forfixedweights, onlyonjointauxiliarytraininggradients.",
+  "paired": "Samefrozen30componentparent, sameinitialneuralparameters andbuffers, exact6epochs/seed/optimizer/batches. Comparewithtime6control129.990034 andcurrentverifiedbest.",
+  "source_indices": "Same2048nearestpointsets/64parents andalloriginalTrainqueries; no neighbor/bandwidth/label/filter changes.",
+  "instruments": [
+    "OriginalTrainarclengthteacher512parents",
+    "892actualpartialintervals",
+    "Stationarypoint insertiongeometryinvariance",
+    "FixedNNweightsTTbranch independencefromgeometryprior",
+    "Pairedinitialparametersexact",
+    "Raw65/order/singleton/fullcheckpointreplay"
+  ],
+  "old_prepared_replacement": "Arc34replacement trainer preparedbutneverexecuted; superseded before any newscore toretaininformativehistoricaltimefeatures.",
+  "source_parent": "atencion_historia_individual_s0",
+  "epochs": 6,
+  "priority": "Finishfrozenjoint24trial; preserve/replayqualifiedresult. Then semanticpriorcorrection before spendingonoriginalsourcevaluecontrol. No causalclaim withoutmatchedcontrol.",
+  "current_joint_result_exists_at_planning": false,
+  "Test": "SEALED",
+  "goal": "ACTIVE"
+}

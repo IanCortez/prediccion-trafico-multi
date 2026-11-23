@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "scope": "PRIVATE geometry supervision for Train, never query inputs.",
+  "original_primary_Train": 1023485,
+  "Train_rows": 1023529,
+  "aux_source_parents": 894105,
+  "geometry_available": 894104,
+  "geometry_dimensions": 90,
+  "dtype": "float32; noPCA/codebook compression",
+  "geometry_uses_only": "TrainroadIDs/physicaldistances andpublicmapattributes; geometricroadcount, notGPSsamplecount.",
+  "original_totalT_unchanged": true,
+  "all_primary_queries_retained": true,
+  "missing_geometry_masks_aux_only": true,
+  "teacher_confidence": "Knownsource-timefraction weights onlyprivategeometrysupervision; neverapublicfeature orprimaryTweight.",
+  "old50000_teacher_crosscheck": {
+    "max_absolute_error": 0.0,
+    "max_relative_scaled_error": 0.0,
+    "allclose": true
+  },
+  "source_core_sha256": "972877355a56c50ab91f6fc466a8c880db39e0cbbff818d39a39797ed13eeb9d",
+  "outputs_sha256": "a40386642d31f8713f0d67853aa5584300196dbe08601963a160fd8f4851cdb7",
+  "artifact_MiB": 189.56457805633545,
+  "sources": {
+    "preparar_firma_global90_Train.py": "3f294bd868c47b0e940c2aeaa32999b91b55340ff0d7429210e321286ca26bbb",
+    "firma_global90.py": "b791c8bed6d29cba0bc19e8b32b75c90ab34049cd36f14c77fa1bd16a6733f50"
+  },
+  "no_Validation_labels_or_paths_or_Test": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 20.561468362808228
+}

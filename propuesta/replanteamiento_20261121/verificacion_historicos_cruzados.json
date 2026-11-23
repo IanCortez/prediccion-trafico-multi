@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "scope": "Raw query/input construction gate; no primary MAE or GPU run",
+  "query_fields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "observed_call_rejected": true,
+  "departure_timestamp_unmodified": true,
+  "n": 65,
+  "full_profile_movement_max_error": 0.0,
+  "static_max_error": 0.0,
+  "whole_raw_feature_max_error": 0.0,
+  "static_features_equal_across_all_history_views": true,
+  "history_movement_diversity_vs_full": [
+    0.07069194316864014,
+    0.1797347068786621,
+    0.07988911867141724,
+    0.13076353073120117,
+    0.08359730243682861
+  ],
+  "query_order_and_singleton_invariance": true,
+  "Validation_labels_read": false,
+  "Test_access": false,
+  "source_sha256": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+  "code_sha256": "a159670c29a827262698911e7ac37320e06ebacff5b9b669215930c4f0fe78a0",
+  "actual_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 14.345707416534424
+}

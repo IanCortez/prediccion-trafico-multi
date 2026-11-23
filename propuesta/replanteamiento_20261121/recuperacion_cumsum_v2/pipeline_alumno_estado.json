@@ -1,0 +1,9 @@
+{
+  "stage": "Preceding stage incomplete or a risk candidate takes priority; inspect existing results before launching another GPU.",
+  "missing": [
+    "propuesta\\replanteamiento_20261121\\aux_solicitud_control_s0\\resultado.json",
+    "propuesta\\replanteamiento_20261121\\aux_solicitud_semantic_s0\\resultado.json"
+  ],
+  "goal": "active",
+  "Test": "sealed"
+}

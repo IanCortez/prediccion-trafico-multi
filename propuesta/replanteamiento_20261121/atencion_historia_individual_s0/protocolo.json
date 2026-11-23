@@ -1,0 +1,43 @@
+{
+  "mode": "individual",
+  "seed": 20261122,
+  "max_epochs": 8,
+  "max_training_seconds": 1800,
+  "batch": 512,
+  "lr": 0.001,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "parent_id": "historica_fresca_s0",
+  "parent_model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\historica_fresca_s0\\epoca_27.pt",
+  "parent_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+  "parent_validation": {
+    "n": 127941,
+    "mae_s": 130.20482097216686,
+    "rmse_s": 209.28216351177895,
+    "mdae_s": 75.0
+  },
+  "parent_training": "Frozen throughout; branch parameters only",
+  "architecture": "Parent22components plus8query-conditioned slots over64source trips; canonical source ordering;4head64Dset attention.",
+  "loss": "PrimaryNLL+5RPS+.2conditionalTraingeometry",
+  "precision": "FP32 highest; canonicalFloat16derivedraw tokens",
+  "canonical_inference_batch": 2048,
+  "candidate_head_eval_chunk": 256,
+  "GPU_memory_fraction": 0.5,
+  "GPU_resource_note": "At most oneGPU; increased internal cap from4.8to6GiB for individual-context inference, no storage or protocol change.",
+  "memory_sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+  "normalization_sha256": "320dc331f7c0a2282e2b3a0cbe9197413c74bfbf68edbe4909ccad7b9063c1a8",
+  "index_manifest_sha256": "a867e403f1e658a7d95ac2fc4d7b72e19958ded505547ffa80c23b96623c3cff",
+  "source_query_inputs": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Train_n": 1023485,
+  "Validation_n": 127941,
+  "Test": "sealed",
+  "control": "Same network/initialweights/indices/batches, sourceG/path/time replaced by6prototype summaries; source relation fields unchanged.",
+  "control_trigger": "At least.1s fullValidation improvement and upper exploratorydaybootstrap deltaCI<0, after frozen checkpoint certification.",
+  "preservation": "Every complete initial/epoch metric and point prediction; every candidateMAE<131.06 and strict new globalbest; branch-only weights reference protectedparent."
+}

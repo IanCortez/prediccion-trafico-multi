@@ -1,0 +1,18 @@
+{
+  "public_D": {
+    "sha256": "4a5d6c373c4da164fa49bc81aa24de1b6f9dcdd0e52abcfc2f9a90a6f9225c7e",
+    "bytes": 2123182212
+  },
+  "static_graph": {
+    "sha256": "fb5798dd9f66998239cc2073787f4fb8159ce8ba2981b8bd6b878733bbd7ce27",
+    "bytes": 2019409
+  },
+  "corrected_adapter_manifest": {
+    "sha256": "118c0474744e1a03cdfb51592c35de45014628a561548f599db5b9cb57b7efc6",
+    "bytes": 56100
+  },
+  "full_Train_teacher_manifest": {
+    "sha256": "972877355a56c50ab91f6fc466a8c880db39e0cbbff818d39a39797ed13eeb9d",
+    "bytes": 52389
+  }
+}

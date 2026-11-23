@@ -1,0 +1,50 @@
+{
+  "learned_improvement": false,
+  "selected_epoch": 0,
+  "selected_output_is_existing_verified_reference": true,
+  "best_learned_epoch": 2,
+  "best_learned_validation": {
+    "n": 127941,
+    "mae_s": 131.35554669730578,
+    "rmse_s": 210.78933586237758,
+    "mdae_s": 75.0
+  },
+  "final_epoch_validation": {
+    "n": 127941,
+    "mae_s": 132.07728562384224,
+    "rmse_s": 211.98703844080353,
+    "mdae_s": 75.0
+  },
+  "best_learned_minus_reference": {
+    "delta_mae_s": 1.1507257251389311,
+    "ci95_s": [
+      0.9076215097853033,
+      1.3742744602771375
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "final_minus_reference": {
+    "delta_mae_s": 1.8724646516753816,
+    "ci95_s": [
+      1.4523925257392722,
+      2.291251005798493
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "Train_loss_first": 0.19020217183220994,
+  "Train_loss_last": 0.18830590065701047,
+  "control": "Conditional control skipped: no learned gain; original certified reference remains selected.",
+  "conclusion": "Stable direct-MAE readout did not generalize; training loss fell while primary Validation worsened. Do not keep varying this head without new evidence.",
+  "limitations": [
+    "One seed and reused Validation; this rejects this implementation, not all possible MAE objectives.",
+    "The six successful epochs include resumed epoch2 after a discarded memory-failed attempt; original sources and failure evidence remain archived.",
+    "Initial teacher was trained on allTrain; no out-of-fold representation claim.",
+    "No Test opened and no new uncertainty calibration claim."
+  ],
+  "all_six_epoch_metrics_predictions_preserved": true,
+  "source_sha256": "95dc89a6fed8a98041ab02db34cd705d9aebef1645f361c12217b5054d53ce01",
+  "Test": "sealed",
+  "goal_73_5_confirmation_achieved": false
+}

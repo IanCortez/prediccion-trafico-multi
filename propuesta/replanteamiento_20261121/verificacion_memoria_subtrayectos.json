@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "2048Trainquerysourcecoverage/resourceinstrument, not a primaryMAE.",
+  "source_points": 42624621,
+  "tree_points": 33066299,
+  "tree_build_s": 14.438809394836426,
+  "query_n": 2048,
+  "query_s": 0.7429988384246826,
+  "queries_per_second": 2756.3973105828813,
+  "forecast_fullValidation_retrieval_minutes": 0.7736003774974961,
+  "matching_parent_counts_quantiles": [
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    5.0,
+    10.299999999999955,
+    64.0
+  ],
+  "no_source_fraction": 0.30126953125,
+  "fraction_with8parents": 0.1435546875,
+  "matched_source_ODerror_m_quantiles": [
+    3.6222985982894897,
+    9.989316463470459,
+    37.277862548828125
+  ],
+  "source_fulltrip_fraction": 0.09008504923903313,
+  "source_order_and15second_labels_verified": true,
+  "source_parent_fold_excluded_beforetree": true,
+  "excluded_fold_geometry_poisoning_invariant": true,
+  "actual_query_reverse_singleton_all_sourceoutputs_exact": true,
+  "no_Validationlabels_or_Test": true,
+  "source_sha256": "bfbcf29c9e8189281e522353fceec51ddfdf344e63d190a876e47d9bd1744b89",
+  "model_source_sha256": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 18.258882761001587
+}

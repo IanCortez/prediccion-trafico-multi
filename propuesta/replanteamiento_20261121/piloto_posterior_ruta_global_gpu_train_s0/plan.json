@@ -1,0 +1,57 @@
+{
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation/confirmation.",
+  "reason": "CPUsharedMultiQuantilefirst1000treestage took>17minutes withoutcompletion, verifiedliveCPU. Use9scalarGPUquantileregressors withsamebranches/data beforeanyoldheldscoreobserved.",
+  "implementation_difference": "Nineindependenttreesets instead ofonesharedmultioutputtree. Everybranch hasidenticalscalarquantilecapacity; semantic/random same17wayclassifiercapacity. Noclaimbit-identicaltoCPUtraining.",
+  "training_target": "OriginalTseconds/600 reversibleunitnormalizationforGPUoptimization; multiplyallforecastsby600beforeevaluation, originallabels unchanged.",
+  "common_GPU": {
+    "random_seed": 20261122,
+    "thread_count": 2,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.25,
+    "one_hot_max_size": 32,
+    "border_count": 128,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "time": {
+    "iterations": 1000,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5
+  },
+  "classifier": {
+    "iterations": 300,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass"
+  },
+  "alphas": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "input": "Same206publicfeatures+90publicshortestsignature; actualroutecodeTrainteacheronly.",
+  "branches": [
+    "public_only",
+    "semantic",
+    "random"
+  ],
+  "random_control": "Exactclassfrequencypreservingfitlabelpermutationseed20261122.",
+  "categorical": "17latentcodesonehot, max32; no highcardinalitytargetCTR.",
+  "stopping": "Fixedfinal1000trees/scalarquantile and300classifier; heldscoredonlyafterallbranches.",
+  "semantic_gate": ">=2secondswithupperCI<0overstoredreference AND>=1secondwithupperCI<0overmatchedrandom ANDno worse thanpublic-only.",
+  "public_gate": "Independentlypreregistered>=2secondswithupperCI<0overstoredreference; no semanticclaimifonlythispasses.",
+  "distribution": "Samefixed9quantilemonotonerearrangement, continuouspiecewiselinearCDF mixture and36bisectioninversion, support60..1785.",
+  "replay": "GPUtrainingmaybenondeterministic; savedmodelCPUinference must replayexactly. CPUforecastthread_count2 explicit.",
+  "resources": "OneGPUfraction.25, CPU2,<=150MiB; resumeverifiedfinalmodelsbySHA, noCDFcache.",
+  "Validation": false,
+  "Test": false
+}

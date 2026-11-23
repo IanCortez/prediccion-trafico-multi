@@ -1,0 +1,42 @@
+{
+  "passed": false,
+  "metrics": {
+    "n": 50000,
+    "mae_s": 138.1284,
+    "rmse_s": 213.0145558406749,
+    "mdae_s": 90.0
+  },
+  "control": {
+    "n": 50000,
+    "mae_s": 135.46413079566094,
+    "rmse_s": 212.31790492326266,
+    "mdae_s": 87.7914278376644
+  },
+  "comparison": {
+    "delta_mae_s": 2.6642692043390777,
+    "ci95_s": [
+      0.9874578615119758,
+      4.565453802139366
+    ],
+    "days": 22,
+    "interpretation": "OnefixedfinalTrainonlyCDFtrial, chronologicalheldTrain; noValidationselection orconfirmation."
+  },
+  "scope": "ChronologicalheldTrain ODgate, not primaryValidation orconfirmation.",
+  "epochs": 50,
+  "held_evaluation_only_final": true,
+  "fit_arrival_purge": true,
+  "unchanged_duration_support_and_labels": true,
+  "no_extra_query_information": true,
+  "sources": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "modelo_spline_cdf.py": "04d9aa2606fcfde9dca3a6138d39176dea91a879b00af20a3a52cdd717b5733b",
+    "piloto_spline_cdf_train.py": "8d05f6821e40ede53ad8c19ca4d930e0404481cc414af6e30b8d2be2077a6bad"
+  },
+  "predictions_sha256": "59f8f7cb0c9f54e6e35b18bc1d1c78624253339dc71e9e9e26f8c83ff6bc129d",
+  "normalization_sha256": "50964e7076254dfc812b323b68485e91cb76ffb200c39ea84b71f6fba0b3298b",
+  "model_sha256": null,
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 122.97758388519287
+}

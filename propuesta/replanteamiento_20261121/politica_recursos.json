@@ -7,5 +7,30 @@
   "no_disk_CDF_banks": true,
   "completed_checkpoints_resumable": true,
   "reason": "Conservative resource bound after saturation during comparative profiling",
-  "goal_status": "active"
+  "goal_status": "active",
+  "training_microbatch_applies_to": "Legacy autoregressive generator only; each subsequent model records its own verified batch.",
+  "tabular_mixture_batch": 512,
+  "historical_prototype_data_max_MiB": 450,
+  "new_route_bank_max_MiB": 500,
+  "preservation_qualifying_checkpoints": "All fullMAE<131.06 and strict global new bests; never trade this against cached intermediates.",
+  "legacy_training_limits_scope": "Originalautoregressivegenerator; subsequentmodels useexplicitverifiedresourceprotocols.",
+  "recurrent_progress_verified": {
+    "training_batch": 512,
+    "query_batch": 1024,
+    "GPU_fraction": 0.5,
+    "measured_training_peak_MiB": 4074.88525390625,
+    "checkpoint_state_MiB": 8.551319122314453,
+    "source": "medicion_lotes_progreso_recurrente.json",
+    "public_summary_bank_max_MiB": 500
+  },
+  "active_joint_fresh": {
+    "Train_batch": 512,
+    "inference_batch": 2048,
+    "GPU_memory_fraction": 0.5,
+    "measured_Train_reserved_MiB": 5772,
+    "measured_inference_reserved_MiB": 6130,
+    "explicit_Train_tensor_release_before_evaluation": true,
+    "one_heavy_GPU": true,
+    "no_new_environment_installation": true
+  }
 }

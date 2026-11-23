@@ -1,0 +1,135 @@
+{
+  "complete_models": [
+    {
+      "id": "prefijo_nativo_s0",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "graph_validation": {
+        "n": 127941,
+        "mae_s": 148.7559500082069,
+        "rmse_s": 225.78150363230677,
+        "mdae_s": 105.0
+      },
+      "selected_alpha": 0,
+      "all_outputs": [
+        {
+          "n": 127941,
+          "mae_s": 131.25671207822356,
+          "rmse_s": 210.804448731162,
+          "mdae_s": 75.0
+        },
+        {
+          "n": 127941,
+          "mae_s": 131.33995357234974,
+          "rmse_s": 210.7964898947443,
+          "mdae_s": 75.0
+        },
+        {
+          "n": 127941,
+          "mae_s": 131.9470302717659,
+          "rmse_s": 211.10133892247694,
+          "mdae_s": 75.0
+        },
+        {
+          "n": 127941,
+          "mae_s": 135.5261800361104,
+          "rmse_s": 214.01658372126568,
+          "mdae_s": 90.0
+        },
+        {
+          "n": 127941,
+          "mae_s": 148.7559500082069,
+          "rmse_s": 225.78150363230677,
+          "mdae_s": 105.0
+        }
+      ],
+      "paired": {
+        "delta_mae_s": 0.0,
+        "ci95_s": [
+          0.0,
+          0.0
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "model_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc"
+    }
+  ],
+  "conditional_head_pilot": {
+    "protocol": {
+      "parent_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+      "history_counts_sha256": "00f0ff5db2aef7b6cdc98d7cdb7d929c137ef44445fabc2ada90f2271052a504",
+      "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47",
+      "Train_trips": 25000,
+      "valid_point_states": 1034670,
+      "fit_points": 811075,
+      "held_points": 223595,
+      "held_rule": "Train departure UTCweek modulo5==0 for newly fitted heads",
+      "counts": "Each point prior excludes its own complete departure-week fold at every backoff",
+      "representation_scope": "Parent representation already saw all eligible Train; this is heldout ONLY for new192weight heads, not whole-model generalization",
+      "controls": [
+        "original frozen native event output",
+        "matched new linear3-event head without temporal prior",
+        "same linear head plus log temporal prior"
+      ],
+      "fit": "Fixed60 L-BFGS iterations with strong-Wolfe search; L2 .001 on weights, never select by held labels",
+      "GPU": false,
+      "Test_access": false
+    },
+    "results": {
+      "native": {
+        "held_NLL": 0.511324405670166
+      },
+      "control": {
+        "held_NLL": 0.5111778378486633,
+        "optimizer_evaluations": 62,
+        "weight_norm": 0.737680196762085
+      },
+      "history": {
+        "held_NLL": 0.5270418524742126,
+        "optimizer_evaluations": 64,
+        "weight_norm": 0.5509338974952698
+      }
+    },
+    "history_minus_matched_control": {
+      "delta_NLL": 0.0158639308065176,
+      "CI95_by_Train_day": [
+        0.014052179521716595,
+        0.017760368517770454
+      ],
+      "days": 63
+    },
+    "history_minus_native": {
+      "delta_NLL": 0.015717430040240288,
+      "CI95_by_Train_day": [
+        0.013899556869912068,
+        0.017634828271356956
+      ],
+      "days": 63
+    },
+    "worth_GPU_test": false,
+    "interpretation": "Conditional event-head likelihood only, not OD time MAE or independent validation of the whole representation. A gain of coarse historical counts alone does not establish complementarity to a neural model.",
+    "hidden_bank_saved": false,
+    "no_GPU": true,
+    "actual_files_accessed": [
+      "propuesta\\datos\\train_contexto.npz",
+      "propuesta\\datos\\train_gps_mapmatched.npz",
+      "propuesta\\datos\\train_rutas.npz",
+      "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+      "propuesta\\datos\\train_x.npz",
+      "propuesta\\datos\\train_y.npy"
+    ],
+    "Test_access": false,
+    "head_sha256": "cb0d3507bca2b821229bcce2aa7de39e8d1b8dcf5156735c9b94daaf5f7ba73b",
+    "code_sha256": "bf1f06da3e70f089a87a5d78b8c72125833d45874dfb5fc86752357e967f87ef",
+    "seconds": 38.69738531112671
+  },
+  "decision": "Previous full results recorded before a new objective. Teacher-forcing likelihood does not optimize the marginal travel-time distribution directly; test conditional full-trip CRPS with teacher regularization.",
+  "scope": "A proposed experiment, no claim it will reach73.5s. All queries and labels unchanged; alpha0 is no learned improvement.",
+  "Test": "sealed",
+  "goal": "active"
+}

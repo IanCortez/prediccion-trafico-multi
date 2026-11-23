@@ -1,0 +1,192 @@
+{
+  "complete": true,
+  "id": "memoria_subtrayectos_cdf_s0",
+  "validation": {
+    "n": 127941,
+    "mae_s": 130.9599737378948,
+    "rmse_s": 212.83999089768474,
+    "mdae_s": 75.0
+  },
+  "metrics": {
+    "kernel_backoff": {
+      "n": 127941,
+      "mae_s": 163.94588130466386,
+      "rmse_s": 251.78703342777385,
+      "mdae_s": 105.0
+    },
+    "evidence_mixture": {
+      "n": 127941,
+      "mae_s": 130.9599737378948,
+      "rmse_s": 212.83999089768474,
+      "mdae_s": 75.0
+    }
+  },
+  "paired_vs_reference": {
+    "kernel_backoff": {
+      "delta_mae_s": 33.787839707365116,
+      "ci95_s": [
+        33.10948207601517,
+        34.53346314190015
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "evidence_mixture": {
+      "delta_mae_s": 0.801932140596056,
+      "ci95_s": [
+        0.5733103739464057,
+        1.0455643349179247
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    }
+  },
+  "meaningful_gate_passed": false,
+  "new_numerical_minimum": false,
+  "nonparametric_model": true,
+  "required_sources": [
+    "memoria_puntos_Train_s0/puntos_Train.npz",
+    "atencion_historia_individual_s0"
+  ],
+  "source_bank_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "source_summary_columns": [
+    "parent_count",
+    "effective_parent_count",
+    "weighted_endpoint_RMS_m",
+    "gate",
+    "full_trip_weight",
+    "weighted_time_s"
+  ],
+  "source_parent_count_quantiles": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    4.0,
+    8.0,
+    64.0
+  ],
+  "fraction_no_source": 0.3429784041081436,
+  "mean_gate": 0.1568740120151642,
+  "coverage_groups": [
+    {
+      "source_parent_range": [
+        0,
+        1
+      ],
+      "n": 43881,
+      "candidate": {
+        "n": 43881,
+        "mae_s": 145.96533807342587,
+        "rmse_s": 223.85021047418329,
+        "mdae_s": 90.0
+      },
+      "reference": {
+        "n": 43881,
+        "mae_s": 145.96533807342587,
+        "rmse_s": 223.85021047418329,
+        "mdae_s": 90.0
+      }
+    },
+    {
+      "source_parent_range": [
+        1,
+        4
+      ],
+      "n": 51408,
+      "candidate": {
+        "n": 51408,
+        "mae_s": 126.70605742296918,
+        "rmse_s": 203.2051366378872,
+        "mdae_s": 75.0
+      },
+      "reference": {
+        "n": 51408,
+        "mae_s": 126.55228758169935,
+        "rmse_s": 202.23127291568443,
+        "mdae_s": 75.0
+      }
+    },
+    {
+      "source_parent_range": [
+        4,
+        8
+      ],
+      "n": 17781,
+      "candidate": {
+        "n": 17781,
+        "mae_s": 114.51493166863506,
+        "rmse_s": 195.13736060952579,
+        "mdae_s": 60.0
+      },
+      "reference": {
+        "n": 17781,
+        "mae_s": 114.00118103593724,
+        "rmse_s": 191.0747554574024,
+        "mdae_s": 75.0
+      }
+    },
+    {
+      "source_parent_range": [
+        8,
+        100
+      ],
+      "n": 14871,
+      "candidate": {
+        "n": 14871,
+        "mae_s": 121.05103893483962,
+        "rmse_s": 231.5299823814997,
+        "mdae_s": 60.0
+      },
+      "reference": {
+        "n": 14871,
+        "mae_s": 115.29755900746419,
+        "rmse_s": 210.19717536582942,
+        "mdae_s": 60.0
+      }
+    }
+  ],
+  "raw65_full_quantiles_exact": true,
+  "reverse_singleton_exact": true,
+  "all_protected_reference_points_exact": true,
+  "uncertainty": {
+    "kernel_backoff": {
+      "coverage80": 0.7172915640803182,
+      "width80_s": 383.3702253382418
+    },
+    "evidence_mixture": {
+      "coverage80": 0.829569879866501,
+      "width80_s": 404.9424344033578
+    }
+  },
+  "no_query_private_fields": true,
+  "Test_access": false,
+  "sources": {
+    "evaluar_memoria_subtrayectos_cdf.py": "66899d55cb00dd78db29ab7f27ef37aa79a68aed0e1989e1fc2fcbf19042762d",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "experto_subtrayectos_cdf.py": "a262f9ee97fed20202643d87e51fbe3cde95f9f4c2321a4e80e31bc78801978a",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "inferencia_atencion_historia.py": "5f7b261aac43e54d2d6f5046e312cdea7c2f7e2f35fe7b0c50e21364bdaeb3fa"
+  },
+  "predictions_sha256": "8acfd92c643e8552a9b9ce263374b8a08d61c6d225687b5933a81632959570e9",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 139.42541909217834
+}

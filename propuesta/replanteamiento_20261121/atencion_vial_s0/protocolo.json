@@ -1,0 +1,33 @@
+{
+  "mode": "route",
+  "seed": 20261122,
+  "epochs": 9,
+  "frozen_global_epochs": 3,
+  "joint_epochs": 6,
+  "batch": 512,
+  "global_lr": 1e-05,
+  "branch_lr": 0.001,
+  "weight_decay": 0.0003,
+  "geometry_weight": 0.2,
+  "rps_weight": 5,
+  "clip": 5,
+  "representation": "32ordered public-road samples per length/freeflow route; learned16dim road ids,6static features,8calendar fields; shared64dim2layer4head Transformer and24time-parameter corrections. No observed query route.",
+  "information_control": "Conditional separate run with all road tokens zero, same clock/context/architecture/loop. Tests road information, not a claim of equal effective capacity.",
+  "confidence": "Train-only endpoint-independent sample counts n/(n+20) on road id embeddings; static map features available for all roads.",
+  "initialization": "Protected best global mixture; correction head initially zero. First3epochs freeze global tower, then6joint epochs.",
+  "precision": "FP32 highest, standard seeded CUDA, no bitwise training guarantee",
+  "canonical_inference_batch": 2048,
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "primary_Train_n": 1023485,
+  "Validation_n": 127941,
+  "Test": "sealed",
+  "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "source_data_manifest_sha256": "04dfa27fb245a844c423de4cdd1d9359fddd9a52688c07f6ff4a551cec1d3996",
+  "preservation": "Every completed metric and all epoch predictions, even MAE>131.06; weights for every strict primary new best and every complete MAE<131.06."
+}

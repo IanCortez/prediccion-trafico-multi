@@ -1,0 +1,52 @@
+{
+  "complete": true,
+  "id": "difusion_global_tiempo_geometria_s0",
+  "validation": {
+    "n": 127941,
+    "mae_s": 139.95339397347203,
+    "rmse_s": 219.11217825636902,
+    "mdae_s": 87.9281005859375
+  },
+  "model_file": null,
+  "model_sha256": "28c80f70b071845af828b94de9a1cf4e00c9f24222c86678fad17f04567fb044",
+  "fixed_final_EMA_epoch": 30,
+  "initial_weights_sha256": "1a792e37607a8ace5edf053bab48cde5234a183c28558faddab09aabc483b187",
+  "reference_id": "atencion_historia_individual_s0",
+  "paired_vs_reference": {
+    "delta_mae_s": 9.795352376173279,
+    "ci95_s": [
+      8.939257874230416,
+      10.585617482314369
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "meaningful_gate_passed": false,
+  "qualified": false,
+  "sample_count": 64,
+  "source_geometry_manifest_sha256": "1884f62fb66078f5fdddd302f610b582497073301d95d54b371ace62e0462594",
+  "normalization_sha256": "71ef9ec4b74c967d2b60730ae5092ee5bcfb0f2c7e34be16ae6586c836de6ab1",
+  "predictions_sha256": "9de3b73af8e471001391784112ad99d28be8e2ef17ebd3d5d82834d7cc191ef3",
+  "sources": {
+    "entrenar_difusion_global.py": "7677bf2bcb21d3d482c67223a3ae2a901695929ad684a7e381fd75c03c56602e",
+    "modelo_difusion_global.py": "a87c5f69a7927a864e769ea8176306558e411ba151eb356ffb689c2d47d2ed61",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "preserved_all_primary_queries_and_labels": true,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 282.20998191833496
+}

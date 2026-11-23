@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "scope": "17Train only; no predictive gain claimed.",
+  "parent_frozen_no_grad": true,
+  "component_count": 30,
+  "probabilities_normalized": true,
+  "raw_cached_tokens_exact": true,
+  "ownfold_value_intervention_exact": true,
+  "nohistory_parent_probabilities_exact": true,
+  "source_permutation_max_log_probability_error": 0.0,
+  "finite_gradients": true,
+  "head_gradient_l1": 12.297157049179077,
+  "gate_gradient_l1": 0.8686885833740234,
+  "model_sha256": "dff6dd910d62102ebe62c6917190772eca37c9108bbdebcce2452df1064e7260",
+  "token_constructor_sha256": "5f148eb805b3677ce3fd2b6923c9decd96cddb9dfaadea7a9deb93d071f9d400",
+  "normalization_sha256": "320dc331f7c0a2282e2b3a0cbe9197413c74bfbf68edbe4909ccad7b9063c1a8",
+  "parent_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 9.7639000415802
+}

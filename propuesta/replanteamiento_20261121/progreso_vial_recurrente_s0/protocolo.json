@@ -1,0 +1,59 @@
+{
+  "seed": 20261122,
+  "epochs": 6,
+  "auxiliary_batch": 512,
+  "max_fragment": 128,
+  "root_width": 256,
+  "GRU": 128,
+  "styles": 4,
+  "public_top_pairs": 4,
+  "public_max_steps": 192,
+  "public_summary_width": 30,
+  "learning_rate": 0.0007,
+  "final_learning_rate": 7e-05,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "precision": "FP32highest",
+  "loss": "PrimaryNLL+5RPS + .2next/EOSCE+.2logLocalHuber+.1logRemainingHuber+.02styleKL+.1attachmentCE",
+  "primary_Train": 1023485,
+  "auxiliary_Train": 894105,
+  "auxiliary_tokens": 41775036,
+  "source_teacher": "Corrected full Train fragments, split ONLY at privatephysicaluncertainty or fixed128TBPTTboundary. Everyknownteacher token appears once/epoch; everyeligibleprimaryquery once/epoch.",
+  "style": "FourTrainposteriorstyles; one parent-specific Gumbel draw per epoch reused acrossfragments. QueryusesrawODprior only.",
+  "clock": "F64Unix input plus observedTrainclock / predictedqueryclock; publicLisbonDSTtable.",
+  "Validation": "No selection/tuning in sixepochsequence training; rootquantiles evaluated only once at final.",
+  "stage_B": "Freezeepoch6 then public-onlyrollouts for allTrain/Validation. Fitmatched1000tree depth8 GPUCatBoostMAE withandwithout30summaries plus threefullquantiles, fixedseed/depth/epoch, compareMAEpointmodel once.",
+  "gate": "At least0.5seconds fullValidationgain over130.158 and upperdaybootstrapCI<0 AND >=.5secondgain overmatched216featureCatBoostcontrol before matchedprefix-resetcontrol; independentconfirmation73.5stillrequired.",
+  "preservation": "Allcompletedmetrics/predictions, allcheckpointsbelow131.06 orstrictglobalbest; fixedepoch6dependency retained untilStageB evaluated. Dnonpersistent, modelstate<50MiB.",
+  "Test": "sealed",
+  "reference": {
+    "id": "atencion_historia_individual_s0",
+    "epoch": 3,
+    "validation": {
+      "n": 127941,
+      "mae_s": 130.15804159729876,
+      "rmse_s": 209.3534140414966,
+      "mdae_s": 75.0
+    },
+    "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\epoca_3.pt",
+    "model_sha256": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b",
+    "checkpoint_kind": "Branch-only delta; immutable protected parent required.",
+    "required_parent": {
+      "id": "historica_fresca_s0",
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\historica_fresca_s0\\epoca_27.pt",
+      "model_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5"
+    },
+    "certification": "propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\certificacion\\resultado.json",
+    "scope": "Exact127941point replay and raw65fivefields/reverse/singleton. One seed/reusedValidation, not independent confirmation.",
+    "qualifies_below131_06": true,
+    "preserve_original_reference": {
+      "id": "od_mezcla8_geometria_conjunta_s0_fp32_v2",
+      "sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+      "mae_s": 131.25671207822356
+    },
+    "historical_memory_sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+    "all_completed_metrics_predictions_retained": true,
+    "control": "Meaningful-gain gate failed; interval includes0; no causal or robust improvement claim.",
+    "practical_gain_established": false
+  }
+}

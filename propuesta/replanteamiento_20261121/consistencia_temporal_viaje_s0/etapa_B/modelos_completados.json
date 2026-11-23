@@ -1,0 +1,9 @@
+{
+  "full246_MAE": {
+    "file": "full246_MAE.cbm",
+    "sha256": "fda483fe8e1228f06e5372f1b83cfa1fcc6a7123c827e09d269eef0ada63fa91",
+    "bytes": 4208992,
+    "loss": "MAE",
+    "width": 246
+  }
+}

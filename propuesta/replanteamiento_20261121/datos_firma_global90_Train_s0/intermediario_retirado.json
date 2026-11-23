@@ -1,0 +1,10 @@
+{
+  "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\datos_firma_global90_Train_s0\\firma90_Train.npz",
+  "sha256": "a40386642d31f8713f0d67853aa5584300196dbe08601963a160fd8f4851cdb7",
+  "bytes": 198772867,
+  "MiB": 189.56457805633545,
+  "reason": "Privategeometryteacher for completednegative diffusion; noqualified modeldepends onit.",
+  "recreate_from": "preparar_firma_global90_Train.py + firma_global90.py and unchangedcoreteacher",
+  "original_generation_seconds": 20.561468362808228,
+  "all_completed_metrics_predictions_sources_retained": true
+}

@@ -1,0 +1,61 @@
+{
+  "complete": true,
+  "metrics": {
+    "baseline": {
+      "n": 10000,
+      "mae_s": 133.12132830774271,
+      "rmse_s": 207.87403694947727,
+      "mdae_s": 87.4259202361759
+    },
+    "geometry_CDF_control": {
+      "n": 10000,
+      "mae_s": 133.2102889006977,
+      "rmse_s": 208.02315487163767,
+      "mdae_s": 88.04771144890765
+    },
+    "historical_CDF": {
+      "n": 10000,
+      "mae_s": 130.95561327932944,
+      "rmse_s": 204.7312065263863,
+      "mdae_s": 85.15720841493476
+    }
+  },
+  "comparisons": {
+    "vs_baseline": {
+      "delta_mae_s": -2.165715028413262,
+      "ci95_s": [
+        -3.1204807983084932,
+        -1.2210834304191487
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+    },
+    "vs_geometry_control": {
+      "delta_mae_s": -2.2546756213682455,
+      "ci95_s": [
+        -3.2856413536275073,
+        -1.2769160197220275
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": -2.3997795134724753,
+      "ci95_s": [
+        -3.428234025711694,
+        -1.3288934055073705
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain, not primaryValidation or confirmation."
+    }
+  },
+  "declared5s_expansion_gate": false,
+  "observed_time_signal_vs_geometry_control_s": -2.2546756213682455,
+  "decision": "No fullprimarytrial for this CDF recipe; no K/grid/sourcecount/tree sweep and no posthoc threshold reduction.",
+  "interpretation": "Historical source-time labels improve this reusedTrainpilot by about2.25s versus geometry-derived times. This is useful signal but below the declared5s expansion requirement versus baseline/reference.",
+  "retention": "All completed metrics/predictions/config/exactsource/compactindices retained. Trainpilot130.955613 is not a qualifying fullprimaryValidation model under131.06; its weights were not persisted.",
+  "limit": "No primaryValidation/confirmation MAE gain and no claim that73.5is reached. Small repeatedlyreusedTraininstrument, one modelseed.",
+  "proposed_next": "Study information-preserving individual-source conditional distributions rather than compressedCDF summaries, first on Train with the same predeclared5s criterion. No primary trial without a new positive gate.",
+  "Test": "SEALED",
+  "goal": "ACTIVE"
+}

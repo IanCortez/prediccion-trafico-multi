@@ -1,0 +1,36 @@
+{
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation orconfirmation.",
+  "hypothesis": "EndtoendmarginalT training may use globalroute labels better than separatelyfit p(C) andconditionalquantiles.",
+  "input": "Same296publicOD+publicshortestsignature features ineverybranch. ActualTrainrouteclass teacheronly, neverquery input.",
+  "branches": [
+    "time_only",
+    "semantic",
+    "random"
+  ],
+  "architecture": {
+    "members": 8,
+    "width": 128,
+    "residual_blocks": 3,
+    "classes": 17,
+    "dropout": 0.1,
+    "time": "Gaussianlogtimeperlatentclass; marginaldurationCDF onunchanged116bins"
+  },
+  "seed": 20261122,
+  "fit_n": 40000,
+  "held_n": 10000,
+  "epochs": 100,
+  "batch": 512,
+  "lr_initial": 0.001,
+  "lr_final": 0.0001,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "loss": "Time-onlyprimaryNLL+5RPS; semantic/random add.2routeCE+.2conditionalTclassNLL; sameparameters evenfornoaux.",
+  "matched": "Identicalinitialweights/normalization/batchorder/dropoutseeds; randompermutation preservesexactclassfrequencies. Onlyauxlabels/loss differ.",
+  "evaluation": "Fixedfinal100epochs ineachbranch, scoreheldonlyafterallbranches, noheldstopping/search.",
+  "semantic_gate": ">=2seconds overstoredCatBoostcontrol withupperCI<0 AND>=1second overmatchedrandom withupperCI<0 ANDno worsethantimeonly.",
+  "time_only_gate": "Independentlypreregistered>=2seconds overstoredCatBoostcontrol withupperCI<0.",
+  "data": "Existingfit-onlyPCA12/KMeans16geometricresidualcodes plusunknown17th; no newcodecountsearch.",
+  "resources": "OneGPUfraction.35, CPU4; concurrentindependentCPU2treeexperiment, no CDFdiskcache, <=100MiBnewartifacts.",
+  "Validation": false,
+  "Test": false
+}

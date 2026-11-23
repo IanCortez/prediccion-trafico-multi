@@ -1,0 +1,12 @@
+{
+  "scientific_results_complete_and_verified": true,
+  "all127941rows_and5outputs_exact": true,
+  "only_final_console_numpy_json_print_failed": true,
+  "all_cleanup_complete": true,
+  "do_not_rerun_training_or_models": true,
+  "archived_execution_source_unchanged": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ]
+}

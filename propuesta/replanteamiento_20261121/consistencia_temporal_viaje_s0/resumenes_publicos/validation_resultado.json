@@ -1,0 +1,17 @@
+{
+  "n": 127941,
+  "sha256": "0c45c05cc1da53479be4e3b2ac3eca65405d7fb03a8e45ee772e37bf3448133c",
+  "shape": [
+    127941,
+    30
+  ],
+  "bytes": 13020176,
+  "omitted_pair_mass_mean": 0.21871593594551086,
+  "weighted_tail_mass_mean": 0.109080970287323,
+  "weighted_completion_mass_mean": 0.6722031831741333,
+  "weighted_steps_mean": 49.10649108886719,
+  "style_eta_dispersion_s_mean": 4.363953113555908,
+  "model_sha256": "02f8b0ce622e541c35f80ea693abf9b91241d55b4f66e88a2f43c029a84f5431",
+  "no_actual_query_route_or_length_or_T": true,
+  "seconds": 220.00165915489197
+}

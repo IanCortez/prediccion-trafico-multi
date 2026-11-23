@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "MultiQuantile_categorical_supported": true,
+  "fit_only": true
+}

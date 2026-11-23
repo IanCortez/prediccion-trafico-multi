@@ -1,0 +1,32 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\matched_unsupervised.pt",
+      "bytes": 164060,
+      "sha256": "e5c6232911fdc8b9b52f54e0e4d7e73df510e33919bf647937713cdfa52890ec",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\supervised_type.pt",
+      "bytes": 164000,
+      "sha256": "bed9d948a99a265bfd1ca1e89154ce95c302dfe335d791f737e313c518338836",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_tipo_condicional_s0\\cabezas.pt",
+      "bytes": 299238,
+      "sha256": "7ae126ece22bb57f8d531c1f5ac337c7ae2dc31729dde80e27d87d1371d981e8",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\diagnostico_tipo_latente_s0\\clasificador.cbm",
+      "bytes": 3372272,
+      "sha256": "19d1088f4d8451ec81c5eee91f77fe5d93d4cc43b9e98a8d7a6abe5440dbbcad",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    }
+  ],
+  "total_bytes": 3999570,
+  "all_prediction_archives_retained": true,
+  "protected_reference_untouched": true,
+  "TransferTraj_untouched": true
+}

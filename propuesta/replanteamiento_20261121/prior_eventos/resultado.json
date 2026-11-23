@@ -37,7 +37,9 @@
     },
     "probabilidad_train.npz": {
       "bytes": 14675637,
-      "sha256": "48ec875b0b4cca2a0029732c6b2207d45496ec6dc9737e81917feb3c9f123131"
+      "sha256": "48ec875b0b4cca2a0029732c6b2207d45496ec6dc9737e81917feb3c9f123131",
+      "retained": false,
+      "reason": "Rejected temporal GPU configuration; reconstructible from retained conteos_fold.npz with historia_eventos.py"
     }
   },
   "code_sha256": "63bf6857f6641dd1b8de910f5a68a1b56da5a3f48146f91cd8d0e82a404f0743",

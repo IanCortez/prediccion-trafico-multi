@@ -1,0 +1,25 @@
+{
+  "duplicate_fold_files_removed": [
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\indices_subtrayectos_s0\\train_fold0.npz",
+      "sha256": "7c9578d50dc0bdb968e33084e70ecca918ea43053969381858fb07b19df49522"
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\indices_subtrayectos_s0\\train_fold1.npz",
+      "sha256": "1d16ccad908117375ccb1c9f2ee5a841d514252141d2876b957aa5e31f2c3478"
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\indices_subtrayectos_s0\\train_fold2.npz",
+      "sha256": "5af2693eb491a5a32f60545a6ca89c5defee330958912898937300f14bf8792a"
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\indices_subtrayectos_s0\\train_fold3.npz",
+      "sha256": "6c0c5e4dea127a4563dd174f89d8c9ceaa2f5b9564fb69ed1fdda0e235810cc5"
+    },
+    {
+      "file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\indices_subtrayectos_s0\\train_fold4.npz",
+      "sha256": "0d925da3210ff0e83f0a5fdde75581f6177b01cf6f44240afe5903d314c39411"
+    }
+  ],
+  "merged_checked_exact": true
+}

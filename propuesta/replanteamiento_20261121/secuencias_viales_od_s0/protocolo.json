@@ -1,0 +1,19 @@
+{
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "routes": "Two public2014routes: length-optimal and freeflow-optimal. Same projection and selection as protected216features.",
+  "tokens_per_route": 32,
+  "sampling": "Edge at each uniform arc-length midpoint; no observed path or observed point count.",
+  "missing_route": "All zero tokens plus existing protected global-feature fallback; no rows removed.",
+  "new_information": "Fine ordered road composition beyond seven geometric samples and route-level aggregates.",
+  "planned_model": "Original protected global mixture plus ordered road attention branch, trained on unchanged original primary durations.",
+  "max_cache_bytes": 524288000,
+  "Train_only_confidence": true,
+  "Validation_labels_accessed": false,
+  "Test": "sealed"
+}

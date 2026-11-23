@@ -1,0 +1,26 @@
+{
+  "scope": "Chronological heldTrain OD prediction gate; generated routes frompublic5fields, no heldactualroute/current/endpoint IDs.",
+  "fit_n": 40000,
+  "held_n": 10000,
+  "seed": 20261122,
+  "control": "Exact206public40kfit/10kheld1000treecontrol fromstreetoracle; verify predictions/row/timestamp/labels.",
+  "route": "Learned numeric roadchoicepolicy trained onlyon40kfit actualroutes; generateall16public4x4endpointpairs. Same modelandclockfeatures as predeclaredteacherstatediagnostic.",
+  "termination": "Absorbingarrival atpublicdestinationpartialoffset once; fixed192chaincap andmaximum2visits then publicshortestpathtail. CapindependentofobservedN. Deadend/invalidroutes masked without removingquery.",
+  "features": "Projection-priorweightedmean/std90generatedroutegeometrydescriptors plusvalidity/fallbackfractions andprojectionentropy. Addto206publiccontrol.",
+  "time_model": {
+    "iterations": 1000,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "loss_function": "MAE",
+    "l2_leaf_reg": 5,
+    "random_seed": 20261122,
+    "thread_count": 2,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "gate": "At least2seconds heldTrainMAE improvement andupperdaybootstrapdeltaCI<0. Otherwise do not expand fullprimaryroutebank.",
+  "numeric_policy": "Exportexistingclassifier numeric symmetric trees; rawlogit equivalence toCatBoost verifiedbefore generation.",
+  "resources": "CPU2; routesummarystreamchunks256queries; artifacts<=200MiB. NoGPU, nofulltrajectorycache.",
+  "Validation": false,
+  "Test": false
+}

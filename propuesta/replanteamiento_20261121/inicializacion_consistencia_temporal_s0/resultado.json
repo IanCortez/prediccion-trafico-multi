@@ -1,0 +1,7 @@
+{
+  "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+  "bytes": 8994361,
+  "source": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\modelo_secuencia_epoca6.pt",
+  "reason": "Boundedwarmstartfortheplannedwholetripconsistencyexperiment; preserve26minutes ofpretrainingwhileoriginalStageBmayremoveunqualifiedweights.",
+  "retention": "One8.58MiBtemporaryinitialization; removeafterfamilyifnotneededbyqualifiedmodelreproduction. Notapromotedcandidate."
+}

@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "scope": "HistoricalTrainGPSpoints only; noqueryobservedtrajectory. Storepoints/parentoffsets, never enumerateallsubtrippairs.",
+  "original_primary_Train": 1023485,
+  "primary_queries_filtered_out": 0,
+  "source_parents": 1023485,
+  "source_points": 42624621,
+  "indexable_source_points": 42195116,
+  "projection": "Metersrelative(-8.62,41.16);float32millimeter-scale precision inthisarea.",
+  "future_source_labels": "15*(j-i)seconds fororderedpoints i<j fromSAMEhistoricalparent; parentUTCweekfold must beexcludedforTrainqueries.",
+  "source_calendar": "Subtripdeparture timestamp=parenttimestamp+15*i; allsourceparentarrivalsstrictlybeforeValidation.",
+  "no_Validation_or_Test_rows_decoded": true,
+  "membership_checked_before_row_decode": true,
+  "source_endpoint_max_error": 0.0,
+  "no_persistent_pairbank": true,
+  "bank_MiB": 241.75903606414795,
+  "outputs_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "source_sha256": "4bf04a9e7b3adc26c97f3a11c1ee363b985919ac63880b2663d9671c0f3d3376",
+  "original_source_csv_sha256_recorded": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d",
+  "original_rows_labels_cohort_unchanged": true,
+  "Test": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 45.86182403564453
+}

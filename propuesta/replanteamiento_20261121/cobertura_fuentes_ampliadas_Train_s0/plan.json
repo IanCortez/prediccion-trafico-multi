@@ -1,0 +1,11 @@
+{
+  "scope": "No-outcome coverage instrument, not MAE or a fitted candidate.",
+  "queries": "512seeded rawOD/time heldTrain rows; labels/routes never read for scoring.",
+  "old": "Original sourceparents with arrival strictlybefore first heldTrain query, selectedbeforeKDtree.",
+  "extra": "Outside-primary rawparents, earlytimestamp and binaryN verify arrival before GPSdecode; anysourceintervalspan4..119.",
+  "comparison": "Same2048nearestpoints perendpoint in old and combinedindex; no extraKbudget or radius tuning.",
+  "sources": "All additional eligibleparents, including longer completejourneys; no sourceN enters query.",
+  "gate": "Reduce zero-source queryfraction by>=10percentagepoints without reducing the fraction with a sourcewithin100m endpointRSSerror.",
+  "resources": "All addedGPS RAM-only, no new pointbank on disk. OneCPU2 instrument alongside the publicfeaturebuilder.",
+  "limits": "Support is not predictiveaccuracy and not an irreducibleerrorbound. No primaryValidation or Test accessed."
+}

@@ -1,0 +1,37 @@
+{
+  "public_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "primary_Validation": 127941,
+  "original_labels_unchanged": true,
+  "Test": "sealed",
+  "nearest_points_per_endpoint": 2048,
+  "max_distinct_source_parents": 64,
+  "source_time": "15*(j-i) with j-i>=4, sourcechord>=200m, sourceODspeed<=120kmh; public chordratio clipped .5..2",
+  "source_weights": "Spatial sigma50m, Lisbon localclock sigma4h, weekendmismatch multiplier.35",
+  "source_logtime_sigma": 0.2,
+  "main": "evidence_mixture",
+  "gate": "ESS/(ESS+8) times exp(-.5*weightedendpoint_error_squared/50^2)",
+  "control": "kernel_backoff: source density if any, otherwise protectedCDF",
+  "no_Validation_tuning": true,
+  "meaningful_gate": "Atleast.5seconds better than protected and upperdayCI<0",
+  "sources": {
+    "evaluar_memoria_subtrayectos.py": "d28ac8a95aabd47c0bf381c503bc7aecd4b0a9fbba22223b753f4c2544396ccb",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "experto_subtrayectos.py": "4292c07a66b8e26df861da40aa19ee5212ec2b2b01a87bf04579fcd64b2d379f",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "inferencia_atencion_historia.py": "5f7b261aac43e54d2d6f5046e312cdea7c2f7e2f35fe7b0c50e21364bdaeb3fa"
+  },
+  "reference": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "reference_checkpoint_sha256": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b"
+}

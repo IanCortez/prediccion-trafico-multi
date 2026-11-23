@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "scope": "ChronologicalheldTrain ODgate, not primaryValidation orconfirmation.",
+  "metrics": {
+    "n": 50000,
+    "mae_s": 138.1284,
+    "rmse_s": 213.0145558406749,
+    "mdae_s": 90.0
+  },
+  "control": {
+    "n": 50000,
+    "mae_s": 135.46413079566094,
+    "rmse_s": 212.31790492326266,
+    "mdae_s": 87.7914278376644
+  },
+  "comparison": {
+    "delta_mae_s": 2.6642692043390777,
+    "ci95_s": [
+      0.9874578615119758,
+      4.565453802139366
+    ],
+    "days": 22,
+    "interpretation": "OnefixedfinalTrainonlyCDFtrial, chronologicalheldTrain; noValidationselection orconfirmation."
+  },
+  "epochs": 50,
+  "decision": "Failed>=1secondgate. NofullprimarySplineCDF and no bin/rank/epochsearch. Metrics, quantiles,protocol,sources andnormalization retained; no negativeweights.",
+  "observation": {
+    "initial_Train_loss": 4.239773454589844,
+    "final_Train_loss": 3.5768899031066894,
+    "held_evaluations": 1
+  },
+  "limits": "Specificfixedbudgetarchitecture. Cannot concludeallnormalizingflowsfail or claima general irreducibleerrorbound.",
+  "next": "Test globalroute-signatureposterior ratherthanlocalgreedydecisions, with matchedtime-onlycontrol andonlyrawODatprediction. Use existingTrainactualroute90features asauxiliaryteacher; no further routecount/histogramclocktuning.",
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

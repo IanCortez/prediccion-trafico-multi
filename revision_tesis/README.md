@@ -4,12 +4,20 @@ Instantánea de investigación del 22 de noviembre de 2026. Los archivos origina
 La rama aporta código, pesos retenidos, métricas, predicciones, protocolos y evidencia de resultados
 negativos. Las búsquedas usaron Validation de forma adaptativa: las cifras no son confirmación de Test.
 
+## Actualización de esta entrega
+
+El nuevo mínimo completo verificado es **129,990034 s**, del modelo de atención de
+subtrayectos. Ver [actualización y dependencias](ACTUALIZACION_129_99.md).
+Se incluyen su checkpoint y los dos padres requeridos. Los resultados, checkpoints
+y pilotos nuevos no deben confundirse con los estados históricos de la primera entrega.
+
 ## Cifras que deben distinguirse
 
 | Sistema | MAE en segundos | Alcance |
 |---|---:|---|
 | Código original corregido | 140,822594 | 127.941 viajes de Validation |
-| Mejor modelo individual conservado | 131,256712 | Misma Validation; checkpoint incluido |
+| Mejor modelo actual: atención de subtrayectos | **129,990034** | Misma Validation; cadena de tres checkpoints incluida |
+| Modelo original conservado | 131,256712 | Misma Validation; checkpoint incluido |
 | Ensamble histórico | 131,063381 | Misma Validation; registro incluido, componentes incompletos |
 | TransferTraj adaptado sin preentrenamiento | 164,367686 | Misma Validation |
 | TransferTraj adaptado con preentrenamiento de 30 épocas | 171,720112 | Misma Validation |
@@ -26,7 +34,7 @@ Un resultado con selección privilegiada u oracle utiliza la respuesta real para
 No es un modelo desplegable ni un MAE conseguido. Los pilotos internos de 4.096 o 512 casos tampoco
 sustituyen la evaluación de los 127.941 viajes.
 
-## Modelos incluidos
+## Modelos de la primera entrega, también conservados
 
 1. propuesta/experimentos/od_mezcla8_geometria_conjunta_s0_fp32_v2/modelo.pt:
    referencia completa, 4.280.768 parámetros, 216 atributos OD, ocho componentes de duración y
@@ -38,7 +46,8 @@ sustituyen la evaluación de los 127.941 viajes.
    alternativa direccional con prior de conteos; 137,538866 s. No superó la referencia.
 4. propuesta/replanteamiento_20261121/prefijo_nativo_s0/modelo.pt:
    generador recurrente experimental. Entrenamiento de diez épocas terminado; la evaluación
-   completa estaba en curso al capturar la entrega. No se le atribuye una mejora.
+   completa estaba en curso en la primera captura. Sus resultados posteriores están en
+   el registro actualizado de ese experimento; no es el nuevo mejor modelo.
 
 Cada peso se publica como binario de Git, por debajo de 100 MiB, con SHA256 en
 manifiesto_archivos.json. Los pesos descartados de TransferTraj no se incluyen porque ya no existen;

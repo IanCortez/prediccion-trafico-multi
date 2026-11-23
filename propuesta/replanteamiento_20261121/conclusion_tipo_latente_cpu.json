@@ -1,0 +1,27 @@
+{
+  "reference_MAE_s": 131.25671207822356,
+  "unsupervised_MAE_s": 135.1057518700026,
+  "semantic_MAE_s": 134.7877928107487,
+  "semantic_vs_control": {
+    "delta_mae_s": -0.31795905925387485,
+    "ci95_s": [
+      -0.41984049015981567,
+      -0.2191748581270257
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "versus_reference": {
+    "delta_mae_s": 3.5310807325251483,
+    "ci95_s": [
+      2.517468356320261,
+      4.630604521838285
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "qualified": [],
+  "interpretation": "Semantic label provides a small matched-control gain, but both frozen residual density heads degrade the strong reference. Train-reserved-head pilot was optimistic for absolute performance; its frozen representation already saw all Train. Do not blend/search weights of these frozen outputs.",
+  "next_hypothesis": "Test label as conditional auxiliary likelihood on original route-duration components, preserving the original duration marginal and original primary/geometry objectives. Avoid fitting a correction density to in-sample reference errors. This remains a hypothesis, not a promised gain.",
+  "Test": "sealed"
+}

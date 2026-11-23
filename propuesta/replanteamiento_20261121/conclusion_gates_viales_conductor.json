@@ -1,0 +1,65 @@
+{
+  "experiments": [
+    {
+      "id": "piloto_rutas_generadas_od_train_s0",
+      "scope": "Chronological heldTrain OD prediction gate; generated routes frompublic5fields, no heldactualroute/current/endpoint IDs.",
+      "metrics": {
+        "n": 10000,
+        "mae_s": 133.9692334551895,
+        "rmse_s": 209.06311042417377,
+        "mdae_s": 88.15131764427639
+      },
+      "control": {
+        "n": 10000,
+        "mae_s": 133.35539279280192,
+        "rmse_s": 208.67719173020703,
+        "mdae_s": 87.6963494151947
+      },
+      "comparison": {
+        "delta_mae_s": 0.6138406623875716,
+        "ci95_s": [
+          -0.08414525618217307,
+          1.3489124599614857
+        ],
+        "days": 22,
+        "interpretation": "ChronologicalheldTrain raw5ODgate, noheldactualroute input; not primaryValidation."
+      },
+      "decision": "Publicraw5generatedroutesfailedthe>=2secondgate; no fullprimaryroutebank, no routinghyperparametersearch. TeacherstateaccuracydidnottranslatetoODtime.",
+      "predictions_sha256": "bad2a7bcb1c2b612a9488f83e39bc7c08750c2267c7e42317c44c32ecd808541",
+      "all_metrics_predictions_sources_retained": true
+    },
+    {
+      "id": "piloto_conductor_oraculo_train_s0",
+      "scope": "Privilegeddriver chronological heldTrainoracle, not deployableOD. Train metadata supervision idea only.",
+      "metrics": {
+        "n": 50000,
+        "mae_s": 134.3420374825961,
+        "rmse_s": 211.10437385248366,
+        "mdae_s": 86.73494868689727
+      },
+      "control": {
+        "n": 50000,
+        "mae_s": 135.46413079566094,
+        "rmse_s": 212.31790492326266,
+        "mdae_s": 87.7914278376644
+      },
+      "comparison": {
+        "delta_mae_s": -1.1220933130647999,
+        "ci95_s": [
+          -1.3732689239026674,
+          -0.876242719850856
+        ],
+        "days": 22,
+        "interpretation": "PrivilegeddriverchronologicalheldTrain only; no primaryODdriver input or confirmation."
+      },
+      "decision": "True-driveroracleimprovement1.122seconds below3secondgate; no latentdriver training. DriverinputremainsforbiddeninpublicODqueries.",
+      "predictions_sha256": "ce25a4cebd1effea04032c92a5fe2f41d9928907651dc7215182ea2d034d3d1f",
+      "all_metrics_predictions_sources_retained": true
+    }
+  ],
+  "not_primary_Validation": true,
+  "caution": "True-route94.024 andteacherstate90.82percentaccuracy remainprivileged diagnostics, not deployableODachievements. Failedgenerateddescriptorconfiguration does not disproveallroutegenerators.",
+  "next": "Independentlowranklocalroadtrafficfield usesactualTrainroadentryclock, sourceparentweekexcluded inallparams; onlypublicOD5fieldsatreprediction.",
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

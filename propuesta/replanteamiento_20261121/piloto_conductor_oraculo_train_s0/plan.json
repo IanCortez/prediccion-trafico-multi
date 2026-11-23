@@ -1,0 +1,16 @@
+{
+  "scope": "Privilegeddriver chronological heldTrainoracle, not deployableOD. Train metadata supervision idea only.",
+  "hypothesis": "Driver behavior might explain residualtime beyond OD. A true-driver oracle must showmeaningfulsignal before any latentdriver architecture.",
+  "fit_n": 200000,
+  "held_n": 50000,
+  "held_last_days": 21,
+  "seed": 20261122,
+  "input": "206publicnumericODcontrol plusone categorical actualTAXI_ID, used onlyin thisprivilegedoracle. Neveraddhelddriver to primaryValidation/Test.",
+  "metadata": "ReadbinaryCSVmembership inselectedTrain rows beforedecode; no Validation/Test metadata decoded. Persist only stablehasheddriverlabels.",
+  "model": "Exact800tree depth7MAEpriorcontrol parameters; max_ctr_complexity1,ctr_leaf_count_limit200000, no heldstopping.",
+  "gate": "At least3seconds heldTrainMAE improvement andupper95percentdaybootstrapdeltaCI<0; otherwise no latentdriver training.",
+  "caution": "Even positiveoracle would not showdriver inferablefromfivequeryfields; requiresseparateposteriorpredictability test.",
+  "resources": "CPU2; noGPU, <=100MiB artifacts.",
+  "Validation": false,
+  "Test": false
+}

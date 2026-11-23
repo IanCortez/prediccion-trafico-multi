@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "scope": "FullprimaryTrain index and PRIVATEroadteacher targets only, not a model result.",
+  "primary_Train": 1023485,
+  "primary_Validation": 127941,
+  "auxiliary_trips": 894105,
+  "tokens": 41775036,
+  "attachment_supervised_n": 892090,
+  "attachment_teacher_coverage": 0.997746349701657,
+  "token_length_quantiles": [
+    43.0,
+    76.0,
+    89.0,
+    116.0,
+    153.0,
+    939.0
+  ],
+  "max_auxiliary_sum_error_s": 5.984306335449219e-05,
+  "time_valid_tokens": 41537485,
+  "next_valid_tokens": 40102682,
+  "remaining_valid_tokens": 40958284,
+  "primary_queries_filtered_out": 0,
+  "public_distance_matrix": {
+    "shape": [
+      23039,
+      23039
+    ],
+    "dtype": "float32",
+    "bytes": 2123182084,
+    "checkpoint_persistent": false
+  },
+  "no_duplicate_full_tokenbank": true,
+  "corpus_manifest_sha256": "972877355a56c50ab91f6fc466a8c880db39e0cbbff818d39a39797ed13eeb9d",
+  "source_sha256": "2b485318dfaec59ed5c38be6a991e6cee525cf58cb405e4b1f0ecffb9178237d",
+  "outputs_sha256": "ba4379b4696c7f778ea40c8cd347a04e1ed94bee8868a8fce126f078942f0bd3",
+  "artifact_MiB": 7.9675188064575195,
+  "no_Validationlabels_or_paths_or_Test_accessed": true,
+  "seconds": 14.37062668800354
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "Train-only auxiliary pseudo-label pilot, not primary prediction/evaluation or claimed groundtruth route.",
+  "trips": 4096,
+  "tokens": 192117,
+  "mean_tokens_per_trip": 46.903564453125,
+  "original_total_time_labels_preserved": true,
+  "max_auxiliary_sum_error_s": 3.0159950256347656e-05,
+  "unknown_time_fraction": 0.008592236817493408,
+  "trusted_time_fraction": 0.9914077631825066,
+  "bridge_failures": 0,
+  "overflow_trips": 0,
+  "stationary_steps": 9861,
+  "valid_auxiliary_route_transitions": 184675,
+  "route_token_gap_id": 65535,
+  "semantics": "Each original15secondinterval is distributed over public shortest-path arc lengths and merged into compactchains. Unknown/reset/highprojectionerror intervals keep15seconds as an explicit maskedGAP; stationaryintervals keep15seconds andzero distance. Nonadjacent route targets masked.",
+  "limitations": [
+    "Pseudo-labels infer unobserved paths between15secondGPSsamples; not observed exact streets.",
+    "Data-quality sample only for auxiliary preparation; every primary query/label remains unchanged.",
+    "Endpoint public projections are query-safe; HMMendpointdirection is a Train auxiliary target, not a query input.",
+    "Negative/zero distance and partial-chain traversals require robust time heads; do not treat every token as a full chain."
+  ],
+  "ready_for_full_model_training": false,
+  "next_required": "Execute actual neural absorbingOD/batch/singleton proof and Train-onlytime-prediction oracle before full primary streetmodel.",
+  "source_sha256": "2b490f1c23349466fa801db1e744fe6fa6cb2e40a3b185213d7b7c6c7b9cea21",
+  "trace_predictions_sha256": "ba655b07f435fad99fe6f30ca66f2e7913ad091fc0e4d8bab9ef2eef34f06f9e",
+  "predictions_sha256": "6906046bef7cd6c2b7d735ca71bdfb7a575975e6cbae9cf0b0d78a80f78baa39",
+  "artifact_bytes": 1184227,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy"
+  ],
+  "seconds": 2.060980796813965
+}

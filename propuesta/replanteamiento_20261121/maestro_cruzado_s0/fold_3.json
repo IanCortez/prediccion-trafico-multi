@@ -1,0 +1,23 @@
+{
+  "fold": 3,
+  "fit_n": 830872,
+  "held_n": 192613,
+  "own_week_fold_excluded": true,
+  "fit_rows_sha256": "e6536b2c92d277fffcd4a05a159069391318b3e7fcf43a48025c52ed1773c1e7",
+  "held_rows_sha256": "fa3057bd6759a0e2eb7bdb92f35cb42119d939722c48181644ae63f2a209770b",
+  "model_sha256": "1c9a905a86b0e330cb3e689225f3c649616dfd2d80798f7bc3c9908929fdd7ec",
+  "held_parameters_sha256": "2bb290c3cdfdb2926eab92662de6bfaae0e1b1080a16fbb1102b7dacfa2da987",
+  "held_Train": {
+    "duration": {
+      "n": 192613,
+      "mae_s": 107.77535784189021,
+      "rmse_s": 159.68187476082113,
+      "mdae_s": 75.0
+    },
+    "NLL": 3.552513867036067,
+    "CRPS_s": 78.03844009609938,
+    "coverage80": 0.8365634718321193,
+    "sigma_mean": 0.23317229653790603
+  },
+  "elapsed_seconds": 932.5070760250092
+}

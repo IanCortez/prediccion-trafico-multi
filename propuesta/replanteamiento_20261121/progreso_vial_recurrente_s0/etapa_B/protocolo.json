@@ -1,0 +1,25 @@
+{
+  "seed": 20261122,
+  "iterations": 1000,
+  "depth": 8,
+  "learning_rate": 0.05,
+  "l2_leaf_reg": 5,
+  "GPU_fraction": 0.35,
+  "border_count": 128,
+  "CPU_threads": 2,
+  "selection": "FixedMAEpointmodel with246features; no selectionbetweenalphas/control/epochs.",
+  "models": [
+    "control216_MAE",
+    "full246_MAE",
+    "full246_q10",
+    "full246_q50",
+    "full246_q90"
+  ],
+  "input": "Original216legalraw5derivedfeatures, plus30frozenpredicted-route/time summaries. No actualqueryroad,N,elapsed,T.",
+  "target": "OriginalTseconds dividedby600onlyduringfit; forecasts*600 and clippedtooriginal60..1785support.",
+  "primary_Train": 1023485,
+  "Validation": 127941,
+  "Test": "sealed",
+  "gate": "Full246_MAE at least.5seconds overprotectedbest andmatched216control, both upperdayCI<0. Then certifyraw5/replay andmatchedprefix-resetcontrol.",
+  "preservation": "AllfivefullValidationmetrics/predictions including above131.06; allqualifiedweights<131.06 orstrictglobalbest. Full246models depend on frozenGRU."
+}

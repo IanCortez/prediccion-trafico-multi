@@ -1,0 +1,66 @@
+{
+  "reason": "Train memories, maps and derived indices are not included as Git blobs. Model chain and small normalization files are included.",
+  "full_inference_also_requires_original_model_maps_profiles_and_features": true,
+  "assets": [
+    {
+      "path": "propuesta/replanteamiento_20261121/memoria_puntos_Train_s0/puntos_Train.npz",
+      "bytes": 253502723,
+      "sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_prototipos_historicos_s0/memoria_Train.npz",
+      "bytes": 78769248,
+      "sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_subtrayectos_s0/train_indices.npz",
+      "bytes": 29427371,
+      "sha256": "8dded27fe326b041384b6fae8005891d0a6675cd0e456d45edc3cc41ce7f4118",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/indices_subtrayectos_s0/validation_indices.npz",
+      "bytes": 3192791,
+      "sha256": "02b99d0080ad521f4feb846a29c9dde4a43357df946c7a851bf9e800a3c353c8",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_historia_individual_s0/train_indices.npz",
+      "bytes": 212251365,
+      "sha256": "a78690f7245cd034d9c361c8b1aea3335247943e6131b02c80f570aeddac933c",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_historia_individual_s0/validation_indices.npz",
+      "bytes": 25832364,
+      "sha256": "ef1ea4061122766290dd14b2f6f1691557ed5ee9c14c6f2f784b457276163b2f",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/banco_proyeccion_incierta_s0/train_banco.npz",
+      "bytes": 337960230,
+      "sha256": "e15cddb51068321e760e9425efda73ab3fec80f290eb1d7b3c2d8ed0ebb1da8e",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/banco_proyeccion_incierta_s0/validation_banco.npz",
+      "bytes": 42412357,
+      "sha256": "fdf2440127a47feaefb6f6e4ed3414241ac43344a2915768f431e9c3ca323b96",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_prototipos_historicos_s0/train_historicos.npz",
+      "bytes": 315498496,
+      "sha256": "244ce93b0c7b18eae65d9ed3ac9de44dcc3430adb0e1eb83cb3c5eee320b0565",
+      "included_in_Git": false
+    },
+    {
+      "path": "propuesta/replanteamiento_20261121/datos_prototipos_historicos_s0/validation_historicos.npz",
+      "bytes": 38768142,
+      "sha256": "943ee3aae4db0cb968f529cfc2c1353536f935fa772aae95de818b81eb1d3d2a",
+      "included_in_Git": false
+    }
+  ]
+}

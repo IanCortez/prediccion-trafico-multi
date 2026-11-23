@@ -1,0 +1,33 @@
+{
+  "arm": "auxiliary",
+  "seed": 20261122,
+  "joint_epochs": 6,
+  "auxiliary_warmup_epochs": 1,
+  "batch": 512,
+  "primary_lr": 1e-05,
+  "auxiliary_lr": 0.001,
+  "weight_decay": 0.0003,
+  "auxiliary_weight": 0.2,
+  "geometry_weight": 0.2,
+  "rps_weight": 5,
+  "clip": 5,
+  "precision": "FP32 highest, standard seeded CUDA; no bitwise training guarantee",
+  "primary_Train_n": 1023485,
+  "aux_Train_n": 475076,
+  "Validation_n": 127941,
+  "sampling": "All primary rows once per epoch;512 random auxiliary rows per primary step, separate seeded RNG. Same auxiliary forwards in conditional control to match dropout draws.",
+  "warmup": "One auxiliary epoch with shared duration model frozen/eval; original full validation predictions must remain exact.",
+  "initialization": "Protected original best duration model; independent per-member8component auxiliary duration head. Primary head only at query.",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Test": "sealed",
+  "canonical_inference_batch": 2048,
+  "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "aux_features_sha256": "a4779166d5ea406421fadf92bdb62aa0283f0021af20a165800a9148bbffe13e",
+  "preserve": "All metrics/predictions including MAE>131.06; weights for every strict primary new best and complete MAE<131.06 candidate."
+}

@@ -1,0 +1,1010 @@
+{
+  "id": "control_historica_fresca_s0",
+  "config": {
+    "mode": "parent_control",
+    "seed": 0,
+    "max_epochs": 50,
+    "min_epochs": 20,
+    "patience": 12,
+    "meaningful_progress_s": 0.01,
+    "max_training_seconds": 3600,
+    "batch": 512,
+    "lr": 0.001,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "geometry_weight": 0.2,
+    "rps_weight": 5,
+    "scheduler": "ReduceLROnPlateau factor.5 patience5 min1e-5",
+    "initial_historical_gate_logit": 0,
+    "architecture": "Fresh global8unknown-route modes,8public-projection modes,6crossfit historical route/time modes; shared heads and learned set-conditioned gates.",
+    "initialization": "All neural weights trained from scratch; no retained model state loaded. Reuse only eligibleTrain input normalization/bins/physical anchors.",
+    "historical_control": "Same model/state, preprocessing,primary examples and optimizer; historical branch unavailable. An ablation of the branch, not equal effective capacity.",
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "Train_n": 1023485,
+    "Validation_n": 127941,
+    "Test": "sealed",
+    "canonical_inference_batch": 2048,
+    "inference_candidate_chunk": 256,
+    "precision": "FP32 highest model,canonicalFP16derived route/history inputs,standard seededCUDA",
+    "base_constructor_sha256": "8cdb41e34b315b35b2b21ee334e4e519e7bb213aaf776bb55014e757896a8cdd",
+    "history_constructor_sha256": "53b6bdf1b83d5a93a02e5aa0a5004773f789959ee411e92c2684789aad773def",
+    "map_normalization_sha256": "ddaf8e997204e39387207f41947ed2601a1b2e96c2cf687812483f3f3adaea7f",
+    "history_data_manifest_sha256": "e8fbb1f6b68c7fecbfa72b0f8ab650e3ba10b75cb230d7b3519aa96f790bb38c",
+    "preservation": "All metrics and every epoch prediction. Checkpoint every strict global new best and every completeMAE<131.06.",
+    "reference_mae_s": 131.12516706919595,
+    "reference_checkpoint_sha256": "d839c846f11de0c284e2ec164187453227672c51d1098cb990e66f3b20a6b1b4"
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 130.56416629540178,
+    "rmse_s": 209.5718496506962,
+    "mdae_s": 75.0
+  },
+  "initial_validation": {
+    "n": 127941,
+    "mae_s": 163.8627570520787,
+    "rmse_s": 244.25093522150212,
+    "mdae_s": 120.0
+  },
+  "best_epoch": 40,
+  "epochs_run": 49,
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "primary_train_n": 1023485,
+      "train_loss": 3.890985821106612,
+      "validation": {
+        "n": 127941,
+        "mae_s": 137.0112786362464,
+        "rmse_s": 221.35199724672165,
+        "mdae_s": 90.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 87.74096632003784
+    },
+    {
+      "epoch": 2,
+      "primary_train_n": 1023485,
+      "train_loss": 3.8174737751743364,
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.3736487912397,
+        "rmse_s": 216.99735351270812,
+        "mdae_s": 90.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 161.3170473575592
+    },
+    {
+      "epoch": 3,
+      "primary_train_n": 1023485,
+      "train_loss": 3.792564756920808,
+      "validation": {
+        "n": 127941,
+        "mae_s": 134.90843435646119,
+        "rmse_s": 216.78405557645337,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 235.10025072097778
+    },
+    {
+      "epoch": 4,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7760328577644002,
+      "validation": {
+        "n": 127941,
+        "mae_s": 134.28271625202242,
+        "rmse_s": 216.10133821663035,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 308.7342381477356
+    },
+    {
+      "epoch": 5,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7633257900286528,
+      "validation": {
+        "n": 127941,
+        "mae_s": 134.30077144933992,
+        "rmse_s": 216.9232143844228,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 382.24058079719543
+    },
+    {
+      "epoch": 6,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7525329750971412,
+      "validation": {
+        "n": 127941,
+        "mae_s": 133.70237062395947,
+        "rmse_s": 214.5731770255202,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 455.83573389053345
+    },
+    {
+      "epoch": 7,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7435947398689535,
+      "validation": {
+        "n": 127941,
+        "mae_s": 133.43212887190188,
+        "rmse_s": 213.854030408905,
+        "mdae_s": 90.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 529.5120980739594
+    },
+    {
+      "epoch": 8,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7357093668287074,
+      "validation": {
+        "n": 127941,
+        "mae_s": 133.70166717471335,
+        "rmse_s": 215.20328797467423,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 603.3791055679321
+    },
+    {
+      "epoch": 9,
+      "primary_train_n": 1023485,
+      "train_loss": 3.728457399521044,
+      "validation": {
+        "n": 127941,
+        "mae_s": 134.203460970291,
+        "rmse_s": 216.4631255729403,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 677.0476336479187
+    },
+    {
+      "epoch": 10,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7218689922673853,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.93947991652402,
+        "rmse_s": 216.28540142160142,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 750.8687930107117
+    },
+    {
+      "epoch": 11,
+      "primary_train_n": 1023485,
+      "train_loss": 3.71611462149956,
+      "validation": {
+        "n": 127941,
+        "mae_s": 133.10209393392267,
+        "rmse_s": 213.82585081772368,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 824.6486146450043
+    },
+    {
+      "epoch": 12,
+      "primary_train_n": 1023485,
+      "train_loss": 3.7103191277486687,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.66150022275892,
+        "rmse_s": 212.02976216468727,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 898.6705858707428
+    },
+    {
+      "epoch": 13,
+      "primary_train_n": 1023485,
+      "train_loss": 3.70493878769785,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.36464464088917,
+        "rmse_s": 213.05222288815895,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 972.8884508609772
+    },
+    {
+      "epoch": 14,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6999746448300184,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.79949351654278,
+        "rmse_s": 215.12508896406874,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1047.3220837116241
+    },
+    {
+      "epoch": 15,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6953537383889,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.63523811756983,
+        "rmse_s": 211.87871194620814,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1121.9563238620758
+    },
+    {
+      "epoch": 16,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6912834078154306,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.9558233873426,
+        "rmse_s": 211.43812645483987,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 1196.5412521362305
+    },
+    {
+      "epoch": 17,
+      "primary_train_n": 1023485,
+      "train_loss": 3.687271842107588,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.98126480174454,
+        "rmse_s": 212.75596378075053,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1270.827288389206
+    },
+    {
+      "epoch": 18,
+      "primary_train_n": 1023485,
+      "train_loss": 3.683805062543638,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.41423781274182,
+        "rmse_s": 212.53402801211033,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1345.1766211986542
+    },
+    {
+      "epoch": 19,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6799612556084376,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.71500926208174,
+        "rmse_s": 210.4264601799293,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 1419.3580305576324
+    },
+    {
+      "epoch": 20,
+      "primary_train_n": 1023485,
+      "train_loss": 3.676587227891174,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.6937416465402,
+        "rmse_s": 212.5963510479619,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1493.7524507045746
+    },
+    {
+      "epoch": 21,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6735895029868857,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.40631228456866,
+        "rmse_s": 211.33072523539457,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 1568.1390402317047
+    },
+    {
+      "epoch": 22,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6705062549385623,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.86906464698572,
+        "rmse_s": 212.3709568474654,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1642.712272644043
+    },
+    {
+      "epoch": 23,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6675545036446535,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.02710624428448,
+        "rmse_s": 211.79509227865898,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1717.1345694065094
+    },
+    {
+      "epoch": 24,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6647736622732703,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.54805730766526,
+        "rmse_s": 212.35581881878898,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1791.560025215149
+    },
+    {
+      "epoch": 25,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6623184871781205,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.7507679320937,
+        "rmse_s": 212.92888261903738,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1866.0767443180084
+    },
+    {
+      "epoch": 26,
+      "primary_train_n": 1023485,
+      "train_loss": 3.659593902141367,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.1335615635332,
+        "rmse_s": 213.7928061025245,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 1940.6409177780151
+    },
+    {
+      "epoch": 27,
+      "primary_train_n": 1023485,
+      "train_loss": 3.65714698030128,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.21614650502966,
+        "rmse_s": 211.07394578501626,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.001,
+      "seconds": 2015.465850353241
+    },
+    {
+      "epoch": 28,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6552792094815207,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.84608530494526,
+        "rmse_s": 210.68576499216363,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 2090.0661187171936
+    },
+    {
+      "epoch": 29,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6528745780892216,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.8649611930499,
+        "rmse_s": 212.36005475994142,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 2164.6179769039154
+    },
+    {
+      "epoch": 30,
+      "primary_train_n": 1023485,
+      "train_loss": 3.65088041578226,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.64396088822193,
+        "rmse_s": 212.3912275285416,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 2239.382952451706
+    },
+    {
+      "epoch": 31,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6489093613806154,
+      "validation": {
+        "n": 127941,
+        "mae_s": 132.35503083452528,
+        "rmse_s": 209.9779783716293,
+        "mdae_s": 90.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 2314.1670122146606
+    },
+    {
+      "epoch": 32,
+      "primary_train_n": 1023485,
+      "train_loss": 3.64714693394313,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.30302248692757,
+        "rmse_s": 211.81079345951164,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.001,
+      "seconds": 2389.120801448822
+    },
+    {
+      "epoch": 33,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6453260474298963,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.73611273946585,
+        "rmse_s": 213.42519031852618,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.0005,
+      "seconds": 2463.993856906891
+    },
+    {
+      "epoch": 34,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6258310990159384,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.8108424977138,
+        "rmse_s": 209.90518043313904,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 2538.826005935669
+    },
+    {
+      "epoch": 35,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6217644610778827,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.23244307923184,
+        "rmse_s": 211.8693782324332,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.0005,
+      "seconds": 2613.7623805999756
+    },
+    {
+      "epoch": 36,
+      "primary_train_n": 1023485,
+      "train_loss": 3.619832301702284,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.6849250826553,
+        "rmse_s": 209.64162178744087,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 2688.8175733089447
+    },
+    {
+      "epoch": 37,
+      "primary_train_n": 1023485,
+      "train_loss": 3.618026025310271,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.00628414659883,
+        "rmse_s": 210.6247928485329,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 2764.0550212860107
+    },
+    {
+      "epoch": 38,
+      "primary_train_n": 1023485,
+      "train_loss": 3.616790930901736,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.894201233381,
+        "rmse_s": 209.74308806058502,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 2839.133179664612
+    },
+    {
+      "epoch": 39,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6154984102150514,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.11320843201162,
+        "rmse_s": 210.0223542597616,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.0005,
+      "seconds": 2914.243034362793
+    },
+    {
+      "epoch": 40,
+      "primary_train_n": 1023485,
+      "train_loss": 3.614404950516743,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.56416629540178,
+        "rmse_s": 209.5718496506962,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 2989.315672159195
+    },
+    {
+      "epoch": 41,
+      "primary_train_n": 1023485,
+      "train_loss": 3.613341942353063,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.95387717776163,
+        "rmse_s": 210.98160522281768,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 3064.815536260605
+    },
+    {
+      "epoch": 42,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6123535304751893,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.00804276971417,
+        "rmse_s": 211.44629401938306,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 3140.3313579559326
+    },
+    {
+      "epoch": 43,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6113771274137485,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.39810537669706,
+        "rmse_s": 212.62131898437553,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.0005,
+      "seconds": 3215.612588405609
+    },
+    {
+      "epoch": 44,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6104234763063974,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.75632518113818,
+        "rmse_s": 210.96898083125993,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 3291.142045021057
+    },
+    {
+      "epoch": 45,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6097680339674767,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.9167116092574,
+        "rmse_s": 210.40801871613013,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.0005,
+      "seconds": 3366.622661590576
+    },
+    {
+      "epoch": 46,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6087400927213062,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.27347761858982,
+        "rmse_s": 211.84748866646385,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.00025,
+      "seconds": 3442.3245537281036
+    },
+    {
+      "epoch": 47,
+      "primary_train_n": 1023485,
+      "train_loss": 3.5973800253377632,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.11660843670128,
+        "rmse_s": 210.914786143262,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "lr": 0.00025,
+      "seconds": 3517.963947057724
+    },
+    {
+      "epoch": 48,
+      "primary_train_n": 1023485,
+      "train_loss": 3.595595171172998,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.79935282669356,
+        "rmse_s": 210.6676342287067,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.00025,
+      "seconds": 3593.5729241371155
+    },
+    {
+      "epoch": 49,
+      "primary_train_n": 1023485,
+      "train_loss": 3.5943751343022337,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.7596079442868,
+        "rmse_s": 210.47154782985046,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "lr": 0.00025,
+      "seconds": 3669.3631126880646
+    }
+  ],
+  "trained_from_scratch": true,
+  "initial_model_state_sha256": "22d289c74f37acd0528e1c7a844091244b11cde7909b7987be9f6fd42b3430a0",
+  "beats_verified_reference": true,
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_40.pt",
+  "model_sha256": "361c349c9d31bcdc19bb8b9a1c6cefd6dd7930cd2f332fb021dd499b63fbb512",
+  "saved_checkpoints": [
+    {
+      "epoch": 34,
+      "file": "epoca_34.pt",
+      "sha256": "7eeda827e68c73ea4fc608b0c3784f233e9f9f2c254ca8c1724b74743979d558",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.8108424977138,
+        "rmse_s": 209.90518043313904,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 36,
+      "file": "epoca_36.pt",
+      "sha256": "2f75c8c536acb1f16f7b7f21dc4a1f98173404bd1fb553bb219fcd90cccdf3d9",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.6849250826553,
+        "rmse_s": 209.64162178744087,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 37,
+      "file": "epoca_37.pt",
+      "sha256": "00b3ddaa5f6726aba1212a32de120f005da661acae7a52c3f35003dc99a5c0e0",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.00628414659883,
+        "rmse_s": 210.6247928485329,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 38,
+      "file": "epoca_38.pt",
+      "sha256": "d770544f2cd69d94da3de975d6df1ad8f6a7feac824420b0081803cde5040f97",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.894201233381,
+        "rmse_s": 209.74308806058502,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 40,
+      "file": "epoca_40.pt",
+      "sha256": "361c349c9d31bcdc19bb8b9a1c6cefd6dd7930cd2f332fb021dd499b63fbb512",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.56416629540178,
+        "rmse_s": 209.5718496506962,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 41,
+      "file": "epoca_41.pt",
+      "sha256": "59ae15c252f889bccb1c0fd3cfcdf5954f91e0ed9c49cd80f0761ea1c2f352ce",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.95387717776163,
+        "rmse_s": 210.98160522281768,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 42,
+      "file": "epoca_42.pt",
+      "sha256": "1e660cd80c72b053762c3220643142613a784d0ef211ee0cdd6a81389d6e7726",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.00804276971417,
+        "rmse_s": 211.44629401938306,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 44,
+      "file": "epoca_44.pt",
+      "sha256": "d248ec1747d36320d1378f77465557611c6cd6bf67d696891d5637138c509814",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.75632518113818,
+        "rmse_s": 210.96898083125993,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 45,
+      "file": "epoca_45.pt",
+      "sha256": "3189c8d96427c997be135db0c2d199299fe11fa83e93e4fff159c7c09eb2e618",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.9167116092574,
+        "rmse_s": 210.40801871613013,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 48,
+      "file": "epoca_48.pt",
+      "sha256": "c668f63fdc086f05b5a89dbdd5d437c847087bcc247fe8a60b3290a2b402fa1e",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.79935282669356,
+        "rmse_s": 210.6676342287067,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 49,
+      "file": "epoca_49.pt",
+      "sha256": "384ad47b23ae2e5b6b044644beb057108b1b8009e84d831de74c045ae21e879a",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.7596079442868,
+        "rmse_s": 210.47154782985046,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    }
+  ],
+  "discarded_control_checkpoints": [
+    {
+      "file": "epoca_0.pt",
+      "sha256": "fd81d449e7e92603c456920d0a19f986660168112df0917d18c114b2d6e19577",
+      "mae_s": 163.8627570520787,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_1.pt",
+      "sha256": "61fa134725433cc8400bbdf57795a4c59376ec0d8f08cf2daf3e111e98dc9231",
+      "mae_s": 137.0112786362464,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_2.pt",
+      "sha256": "801ce9dac2cf5adc481fabc7ba809695bb495ea2d4ffb71a0c2e15b148972fef",
+      "mae_s": 135.3736487912397,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_3.pt",
+      "sha256": "a46f9cb20674431c831077fbe8e1e9bd9857652fb8d9bd4b3abf3e1e819bf3ba",
+      "mae_s": 134.90843435646119,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_4.pt",
+      "sha256": "ff811b258a8e8fa71a905085bc0528c3b4cb870e60100b535b3b515bc51dc8ec",
+      "mae_s": 134.28271625202242,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_6.pt",
+      "sha256": "16a6a7de294cdfbd533f12e70518b2e8325bfbd0c319ec38a5eb708544e3a64d",
+      "mae_s": 133.70237062395947,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_7.pt",
+      "sha256": "16bfaee6707a2d9514faef539d85cdadbbd94debb7f21f64109f1a42b30f3244",
+      "mae_s": 133.43212887190188,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_10.pt",
+      "sha256": "a696ee6eba3532158e8d3d6484833989d202cbfef1d24e1785de2943060d27eb",
+      "mae_s": 132.93947991652402,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_12.pt",
+      "sha256": "4d9bd3e5d35b9fb4b9d08e06c4c9e1e2efa18ba0f0bfe9f3d967c567ae96ab07",
+      "mae_s": 132.66150022275892,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_13.pt",
+      "sha256": "6d7700c1b2c255132b8048e70333340b11dac6c55b911afb659877d452ddb75c",
+      "mae_s": 132.36464464088917,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_16.pt",
+      "sha256": "69720ae7a6805206b02b1269fddd6f425e6325ab0a1004af2e2c258f8baa7a18",
+      "mae_s": 131.9558233873426,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_19.pt",
+      "sha256": "d2a71a7b7aac032e3f2fed888cb4321bfcb35ee41f491306a386bf9ec467dacc",
+      "mae_s": 131.71500926208174,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_21.pt",
+      "sha256": "e846e628d431152a5075f1f4b94dc0791c2d4f7c7fdaac9e26b7c4f31ab8cafb",
+      "mae_s": 131.40631228456866,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    },
+    {
+      "file": "epoca_27.pt",
+      "sha256": "fc6bd4d62d4373595dc1fb57bdbd5072a420dd7463da665ce72988e87236b504",
+      "mae_s": 131.21614650502966,
+      "reason": "Superseded nonqualifying control checkpoint; every metric/prediction retained."
+    }
+  ],
+  "paired_vs_reference": {
+    "delta_mae_s": -0.5610007737941708,
+    "ci95_s": [
+      -0.7769757647691654,
+      -0.336691999701764
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "predictions_sha256": "02a06cdc97e6807dbad065ed6081e89ce6df60db423f052d82fda3acecdfae33",
+  "sources": {
+    "entrenar_historica_fresca_control.py": "3b8a2718addb9d569bee93d4ce935b873cc6ad1222fb2fcbbe734b2f33218aea",
+    "modelo_mezcla_historica.py": "806739e994331184f484a9270bf3bcc48fddadb52af0a4c6687e515be9e26938",
+    "modelo_mezcla_proyeccion.py": "0881ec64259b9c4195a9b94c5cb43233c1a547177ade6715eceb6abc2ee83672",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "historicos_rutas.py": "cbe6d47d8325f32895dff0ed2e46e9bb8445d9e3a70a38ddb4499d451185321d",
+    "piloto_prototipos_ruta.py": "2cc3d14d0e89145b42a6e6295e31ebc9b80361d2fe3a5f687744e92578471aa9",
+    "rutas_proyeccion_incierta.py": "ecfdf06d4c6db7041f0b6743e5015140ad460e671e4d5035df72519477173cda",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 3674.0788872241974,
+  "reference_unchanged": true,
+  "goal": "ACTIVE unless strong frozen model later achieves73.5confirmation."
+}

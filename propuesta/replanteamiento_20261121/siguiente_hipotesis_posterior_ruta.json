@@ -1,0 +1,16 @@
+{
+  "status": "Planned, no claimedresult.",
+  "hypothesis": "Globalroutechoice may be coherent acrossmanyjunctions. Independentgreedy90.8percentlocalchoicesfailedODtime; learna whole-route latentposterior fromTraingeometricroute signatures.",
+  "existing_assets": [
+    "oraculo_tiempo_calle_train_s0/descriptores_ruta_Train.npz",
+    "oraculo_tiempo_calle_train_s0/auxiliares_Train.npz",
+    "banco_valor_vial_s0/train_proyecciones.npz",
+    "datos_calles_parciales_Train_s0/resultado.json"
+  ],
+  "prerequisite": "Derivewhole-route semanticcodes fromfit-only geometryresidual versuspublicshortestroute, withoutusingT incodeconstruction.",
+  "query": "Onlyoriginal5fields; routecode is aTrainauxiliarylabel, never actualheldroute input.",
+  "test": "Chronological40kfit/10kheldsameoraclecohort; trainmarginalduration+routecodejointmodel andmatchedtime-onlycontrol. Heldroutecode onlydiagnostic, neverforwardinput. Fixedfinalevaluation, no heldparametersearch.",
+  "gate": "Predeclarefullmodel andresourceboundsbeforeexecution; require >=2seconds gainoverexactCatBoostcontrol and >=1second overmatchedtime-onlymodel withupperdayCI<0 beforefullprimary.",
+  "fallback": "Ifglobalrouteposterioralsofails, document inabilitytorecoverprivilegedroutegap and reevaluate informationavailable; never changeprimarylabels, filters orqueryinformation.",
+  "goal": "73.5confirmationactive; best130.158 preserved, Testsealed."
+}

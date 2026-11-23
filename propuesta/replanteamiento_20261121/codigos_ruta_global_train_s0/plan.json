@@ -1,0 +1,14 @@
+{
+  "scope": "Train-only latentroute teacher preparation, not predictionMAE.",
+  "fit_n": 40000,
+  "held_n": 10000,
+  "seed": 20261122,
+  "public": "Projectionpriorweightedmean90streetgeometry descriptors over16publicshortest4x4endpointpairs. No learnedpolicy or actualqueryroute in publicsignature.",
+  "teacher": "Actual90routegeometry minus public90signature; StandardScalerfloor.01, fit-onlyPCA12 thenfit-onlyKMeans16. NoTused inPCA/codeconstruction. Unknownpublicsignature getsauxfallbackcode16.",
+  "latent": "Whole-route category supervises p(C|OD) and conditionalTT. Actualheldcode never enters forecast.",
+  "codebook_fit": "Onlyfirst40000chronologicallypurgedfitTrain rows. Held10000actualgeometry used onlytoassigndiagnostic/teacherlabels afterfitfrozen.",
+  "invariants": "Everyquery/trueT retained, raw5publicinputsunchanged, noactualN/timeusedinpublicsignature.",
+  "Validation": false,
+  "Test": false,
+  "resources": "CPU2, chunks2048, <=100MiBnewartifacts."
+}

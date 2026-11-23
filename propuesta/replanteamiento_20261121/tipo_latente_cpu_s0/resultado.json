@@ -1,0 +1,122 @@
+{
+  "id": "tipo_latente_cpu_s0",
+  "architecture": "frozen_TabM_mean_hidden + three semantic duration experts",
+  "query_information": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Train_n": 1023485,
+  "Validation_n": 127941,
+  "actual_type_in_forward": false,
+  "outputs": {
+    "matched_unsupervised": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.1057518700026,
+        "rmse_s": 212.44095619857612,
+        "mdae_s": 90.0
+      },
+      "duration_NLL": 3.7241287659273246,
+      "paired_vs_reference": {
+        "delta_mae_s": 3.849039791779023,
+        "ci95_s": [
+          2.8132240146058143,
+          5.021890638013651
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "raw_inference_contracts_passed": true,
+      "model_sha256": "e5c6232911fdc8b9b52f54e0e4d7e73df510e33919bf647937713cdfa52890ec",
+      "weights_retained": false,
+      "weights_reason": "Full Validation did not improve reference; metrics, all predictions, exact source and training protocol retained"
+    },
+    "supervised_type": {
+      "validation": {
+        "n": 127941,
+        "mae_s": 134.7877928107487,
+        "rmse_s": 212.18935768861806,
+        "mdae_s": 90.0
+      },
+      "duration_NLL": 3.7193329341119057,
+      "paired_vs_reference": {
+        "delta_mae_s": 3.5310807325251483,
+        "ci95_s": [
+          2.517468356320261,
+          4.630604521838285
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      },
+      "raw_inference_contracts_passed": true,
+      "model_sha256": "bed9d948a99a265bfd1ca1e89154ce95c302dfe335d791f737e313c518338836",
+      "weights_retained": false,
+      "weights_reason": "Full Validation did not improve reference; metrics, all predictions, exact source and training protocol retained"
+    }
+  },
+  "paired_semantic_vs_matched": {
+    "delta_mae_s": -0.31795905925387485,
+    "ci95_s": [
+      -0.41984049015981567,
+      -0.2191748581270257
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "qualified_candidates": [],
+  "reference_CPU_equal_protected": true,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "parent_unchanged": true,
+  "sources": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "entrenar_tipo_latente_cpu.py": "492ec9c8a907bd453b4c6679ffb0c482f8e2994dcee9a4f1089002e25565aca2",
+    "modelo_tipo_latente.py": "c8ce5e7113f3e357dddb4a1c237249df24f4f38186c9fea83b76db5796be134f"
+  },
+  "predictions_sha256": "d3df187df2c777334d41f2c8edaa8f7225e8506f8fab355836f3720c4b2cdc5a",
+  "elapsed_seconds": 741.756046295166,
+  "goal_status": "active unless eligible confirmation <73.5 is subsequently verified",
+  "discarded_weights_audit": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\matched_unsupervised.pt",
+      "bytes": 164060,
+      "sha256": "e5c6232911fdc8b9b52f54e0e4d7e73df510e33919bf647937713cdfa52890ec",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\tipo_latente_cpu_s0\\supervised_type.pt",
+      "bytes": 164000,
+      "sha256": "bed9d948a99a265bfd1ca1e89154ce95c302dfe335d791f737e313c518338836",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_tipo_condicional_s0\\cabezas.pt",
+      "bytes": 299238,
+      "sha256": "7ae126ece22bb57f8d531c1f5ac337c7ae2dc31729dde80e27d87d1371d981e8",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\diagnostico_tipo_latente_s0\\clasificador.cbm",
+      "bytes": 3372272,
+      "sha256": "19d1088f4d8451ec81c5eee91f77fe5d93d4cc43b9e98a8d7a6abe5440dbbcad",
+      "reason": "Discarded or reconstructible intermediate; full semantic duration heads did not improve protected reference"
+    }
+  ]
+}

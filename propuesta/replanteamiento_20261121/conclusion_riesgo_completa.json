@@ -1,0 +1,104 @@
+{
+  "outputs": [
+    {
+      "alpha": 0.0,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.0,
+        "ci95_s": [
+          0.0,
+          0.0
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 0.05,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.30853283935565,
+        "rmse_s": 211.09033377346236,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.05182076113208432,
+        "ci95_s": [
+          0.00925492572248981,
+          0.09552070638363395
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 0.2,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.76987830328042,
+        "rmse_s": 212.2908240010061,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.5131662250568622,
+        "ci95_s": [
+          0.36682993075693415,
+          0.6640134583203982
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 0.5,
+      "validation": {
+        "n": 127941,
+        "mae_s": 134.24461275119,
+        "rmse_s": 216.40814514751196,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 2.9879006729664455,
+        "ci95_s": [
+          2.518311418617585,
+          3.4582704816344334
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 1.0,
+      "validation": {
+        "n": 127941,
+        "mae_s": 142.36652050554554,
+        "rmse_s": 226.35631253335274,
+        "mdae_s": 90.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 11.109808427321969,
+        "ci95_s": [
+          9.963828556092272,
+          12.31321336240901
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    }
+  ],
+  "selected_alpha": 0.05,
+  "steps_run": 3174,
+  "best_step": 3000,
+  "support_failure_rate": 0.0,
+  "reference_predictions_exact": true,
+  "predictions_sha256": "41959e19991e4c99415489b190965ca0cbb3b153a7fc1b8752fb8c67a91e0720",
+  "conclusion": "Bounded full-trip CRPS training did not improve the unchanged full-cohort reference at any declared weight. The512 selection improvement did not generalize. Do not extend this identical configuration merely to chase the threshold.",
+  "limitations": "Finite trial, not proof that all generative models fail. Native and risk used different canonical batch sizes, so cross-run branch differences are not a clean causal estimate.",
+  "Test": "sealed",
+  "goal": "active"
+}

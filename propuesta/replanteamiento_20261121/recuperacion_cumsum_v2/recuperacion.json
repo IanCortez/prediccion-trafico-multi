@@ -1,0 +1,15 @@
+{
+  "all_previous_processes_confirmed_terminal": true,
+  "failed_trial_had_no_updates": true,
+  "reference_unchanged": true,
+  "model_losses_and_data_unchanged": true,
+  "changed_sources": {
+    "entrenar_aux_solicitud.py": "1d7726235b3f922472653f6b45b387ab2b68a46eddad496422dc9db5e4d1f0d3",
+    "continuar_aux_solicitud.py": "f4700b3a68a09a1c1b8e8e558483e5564f886de2ac1f75dff151fda3a8c19667",
+    "preparar_alumno_maestro.py": "c26f8360651b24a4da6d0a7b460ec5748de860b0f8d03a97583dd8406248f90b",
+    "continuar_alumno_maestro.py": "143313d79c40dcd0fcd0cbd5f2f8bca10f5f0711b714e3c08742edd287d14aff"
+  },
+  "GPU_gate_mandatory": true,
+  "Test": "sealed",
+  "goal": "active"
+}

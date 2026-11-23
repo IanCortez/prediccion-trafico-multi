@@ -1,0 +1,61 @@
+{
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.30853283935565,
+    "rmse_s": 211.09033377346236,
+    "mdae_s": 75.0
+  },
+  "graph": {
+    "n": 127941,
+    "mae_s": 142.36652050554554,
+    "rmse_s": 226.35631253335274,
+    "mdae_s": 90.0
+  },
+  "all_outputs": [
+    {
+      "n": 127941,
+      "mae_s": 131.25671207822356,
+      "rmse_s": 210.804448731162,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.30853283935565,
+      "rmse_s": 211.09033377346236,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.76987830328042,
+      "rmse_s": 212.2908240010061,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 134.24461275119,
+      "rmse_s": 216.40814514751196,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 142.36652050554554,
+      "rmse_s": 226.35631253335274,
+      "mdae_s": 90.0
+    }
+  ],
+  "best_step": 3000,
+  "learned_update_selected": true,
+  "paired": {
+    "delta_mae_s": 0.05182076113208432,
+    "ci95_s": [
+      0.00925492572248981,
+      0.09552070638363395
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "support_failure_rate": 0.0,
+  "goal": "active",
+  "Test": "sealed",
+  "next": "If target eligible, reproduce/freeze/confirm; otherwise draw a critical conclusion and pursue a different improvement, never stop goal merely because this trial ended"
+}

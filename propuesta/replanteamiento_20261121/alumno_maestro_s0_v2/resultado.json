@@ -1,0 +1,141 @@
+{
+  "id": "alumno_maestro_s0_v2",
+  "config": {
+    "arm": "distill",
+    "weight": 0.0,
+    "epochs": 4,
+    "batch": 512,
+    "seed": 20261122,
+    "duration_lr": 1e-05,
+    "request_lr": 0.001,
+    "weight_decay": 0.0003,
+    "geometry_weight": 0.2,
+    "rps_weight": 5.0,
+    "canonical_inference_batch": 2048,
+    "precision": "FP32 highest, no autocast",
+    "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "Test": "sealed",
+    "primary_train_rule": "1023485 embargoe-safe rows, unchanged evaluation cohort",
+    "training_determinism": "Fixed seeds and standard CUDA algorithms, matching original reference; no bitwise training guarantee",
+    "compatibility_fix": "Strict CUDA cumsum unsupported; failure occurred before any optimizer update",
+    "teacher_weight": 0.2,
+    "teacher_parameters_sha256": "b50586ecd81295876117a675029ceca3800555565b12c6c473639325fc0cb3b1",
+    "teacher_parameter_file": "propuesta\\replanteamiento_20261121\\maestro_cruzado_s0\\parametros_train_fuera_bloque.npz",
+    "soft_target_probability_sha256": "78a9b5d63a7eefa912bf5503e7b21aa8be73b7b5c1be546871c54f985fa98949",
+    "control_source_sha256": "1d7726235b3f922472653f6b45b387ab2b68a46eddad496422dc9db5e4d1f0d3",
+    "matched_control": "aux_solicitud_control_s0_v2",
+    "query_uses_teacher": false
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "train_n": 1023485,
+      "train_loss": 4.409879329544348,
+      "teacher_expected_score": 3.9019736024468785,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.47923652308486,
+        "rmse_s": 210.98260964014943,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 41.71711325645447
+    },
+    {
+      "epoch": 2,
+      "train_n": 1023485,
+      "train_loss": 4.408047947457102,
+      "teacher_expected_score": 3.8943087224153814,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.52331934250944,
+        "rmse_s": 210.96257873820974,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 75.91515564918518
+    },
+    {
+      "epoch": 3,
+      "train_n": 1023485,
+      "train_loss": 4.4070975012246185,
+      "teacher_expected_score": 3.8911329618500092,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.5169882992942,
+        "rmse_s": 210.99990487319266,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 109.4978346824646
+    },
+    {
+      "epoch": 4,
+      "train_n": 1023485,
+      "train_loss": 4.406813877724907,
+      "teacher_expected_score": 3.8891750081239818,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.526133139494,
+        "rmse_s": 211.0007550119475,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 143.81403851509094
+    }
+  ],
+  "best_epoch": 0,
+  "learned_update_selected": false,
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\modelo.pt",
+  "model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "saved_checkpoints": [],
+  "paired_vs_reference": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "source_sha256": {
+    "entrenar_alumno_maestro.py": "9bafe94f1ffd0bb67562d959268107a8b45581b1f146ad3d0463c71add09ac50",
+    "modelo_aux_solicitud.py": "fe079afdc764503ccb778d592e86a6b6872046c31fb87fec479012bd884d8fb4",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "perdida_maestro_probabilistico.py": "78a9b5d63a7eefa912bf5503e7b21aa8be73b7b5c1be546871c54f985fa98949"
+  },
+  "predictions_sha256": "0274b4cf47b3c624890185755eff6f62c09a7c94b36508a31adfd58c80a5557e",
+  "Train_n": 1023485,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "parent_unchanged": true,
+  "seconds": 144.54232120513916,
+  "goal": "active unless confirmation target later genuinely achieved"
+}

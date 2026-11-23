@@ -1,0 +1,20 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_rutas_generadas_od_train_s0\\descriptores_generados_Train.npz",
+      "bytes": 24451393,
+      "sha256": "0caea4642f0d70a903df3a5ed238c6801a8a935a6d3bb5dd2f392efd87b54473",
+      "kind": "Generatedroutegeometrymean/std, not experimentpredictions.",
+      "recreate_from": "propuesta\\replanteamiento_20261121\\piloto_rutas_generadas_od_train_s0\\fuente_ejecutada.py"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\piloto_conductor_oraculo_train_s0\\etiquetas_conductor_Train.npz",
+      "bytes": 3181025,
+      "sha256": "9f3760db3f3ee96c82223cb96204308ce859f48a3572257352793115266777a1",
+      "kind": "RegenerablehashedTrainmetadata, not experimentpredictions.",
+      "recreate_from": "propuesta\\replanteamiento_20261121\\piloto_conductor_oraculo_train_s0\\fuente_ejecutada.py"
+    }
+  ],
+  "all_completed_metrics_predictions_preserved": true,
+  "originals_best_TransferTraj_unchanged": true
+}

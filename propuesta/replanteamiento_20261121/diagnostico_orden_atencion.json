@@ -1,0 +1,6 @@
+{
+  "max_log_probability_difference": 0.000217437744140625,
+  "max_absolute_probability_difference": 2.2351741790771484e-08,
+  "point_medians_exact": true,
+  "scope": "Train numerical probe; no Validation or predictive gain claim."
+}

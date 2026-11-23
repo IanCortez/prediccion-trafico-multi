@@ -1,0 +1,22 @@
+[
+  {
+    "epoch": 1,
+    "student_trainable": false,
+    "primary_train_n": 1023485,
+    "train_loss": 0.19020217183220994,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.35625014655193,
+      "rmse_s": 210.4935261762291,
+      "mdae_s": 75.0
+    },
+    "continuous_validation": {
+      "n": 127941,
+      "mae_s": 131.43915898366762,
+      "rmse_s": 210.4621349204964,
+      "mdae_s": 80.2275390625
+    },
+    "preserved": false,
+    "seconds": 82.84481024742126
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "hypothesis": "Local endpoint patterns may be underrepresented by the existing global numerical embedding. Learn continuous multiscale origin/destination fields jointly from scratch.",
+  "architecture": "Six31.25..1000m bilinear fields per endpoint,8channels each; concatenate origin,destination,elementwise product and8calendar signals;128SiLU projection into the original8component route-duration raw parameters. Global TabM and field both learned fresh.",
+  "regularization": "Coordinate-only Train node support n/(n+20); unsupported fine locations back off to global/coarse representation.",
+  "information": "Same five raw query fields,216derived legal features; actual path only original Train geometry loss. No new query metadata.",
+  "losses": "Same primary NLL+5RPS+0.2conditional geometry likelihood. No failed semantic or privileged-teacher auxiliary.",
+  "budget": "50epochs maximum, at least20 before patience stop,12checks without0.01s improvement,1hour per arm.512batch,FP32highest,AdamW.001.",
+  "control": "Conditional parameter-matched dense branch1220x1220 if spatial model beats original full-cohort reference; identical initial global weights, ctor, optimizer, seed and shuffle/dropout streams checked.",
+  "evidence": "CPU interpolation,zero-branch recovery,finite nonzero embedding/output gradients passed. Mandatory actual GPU gradient gate and separate exact protected-reference reproduction before updates.",
+  "context": [
+    {
+      "title": "ODConNet",
+      "url": "https://openreview.net/pdf?id=y9tJg8Me65",
+      "status": "Manuscript labeled under review forICLR2026; final acceptance not established here",
+      "relevance": "Multiscale cells as a conceptual OD representation antecedent; not a local replication or Porto performance guarantee"
+    },
+    {
+      "title": "MDTI",
+      "url": "https://arxiv.org/html/2510.05840v1",
+      "status": "arXiv2025 preprint",
+      "relevance": "Uses full trajectories for route-based TTE; not a fair OD benchmark. Do not pass its observed GPS/grid sequence to query."
+    }
+  ],
+  "rationale_after_failures": "Request labels,privileged soft-target warm adjustment and frozen profile integration all failed full Validation. Change representation and fresh learning dynamics instead of additional frozen-output weights.",
+  "conservation": "Retain every full epoch below131.06 and every strict new best below reference; shared original model and all TransferTraj comparisons protected.",
+  "sources": {
+    "entrenar_campo_multiescala.py": "3d31b2d5f32e35defbe1a5a7f3e470333a6ed559f787b53a85fb6126e5b3f9ba",
+    "modelo_campo_multiescala.py": "9cd92f373120924e310b6e523d0d5632b79377e91ef177560f761f79b1058b90",
+    "datos_campo_multiescala.py": "2035e66b1ca620362ac1bd11f8151d84a14dd22e0ed1d045b5307065730e67a9",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "goal": "active",
+  "Test": "sealed"
+}

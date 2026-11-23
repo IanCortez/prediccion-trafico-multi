@@ -1,0 +1,16 @@
+{
+  "cell_m": 200.0,
+  "margin_m": 1000.0,
+  "nx": 66,
+  "ny": 36,
+  "N": 2376,
+  "x0": -6800.0,
+  "y0": -3200.0,
+  "source": "Only Train GPS; arrival before first Validation departure",
+  "neighbor_radius": 3,
+  "max_step_m": 500,
+  "minimum_observed_support": 5,
+  "public_reach_distance_m": 800,
+  "query_route_is_input": false,
+  "Test_access": false
+}

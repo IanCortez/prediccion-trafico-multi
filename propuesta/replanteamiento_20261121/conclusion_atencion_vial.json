@@ -1,0 +1,38 @@
+{
+  "id": "atencion_vial_s0",
+  "best_learned_epoch": {
+    "epoch": 4,
+    "global_frozen": false,
+    "primary_train_n": 1023485,
+    "train_loss": 3.625921275301597,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.2738293432129,
+      "rmse_s": 210.51818380926792,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 196.8940782546997
+  },
+  "protected_reference": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "final_fixed_epoch_vs_reference": {
+    "delta_mae_s": 1.2887190189227846,
+    "ci95_s": [
+      0.9897681169348448,
+      1.608000866684543
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "all_nine_epoch_metrics_and_predictions_preserved": true,
+  "selected_epoch0_is_original_reference": true,
+  "conditional_information_control": "Skipped per predeclared rule; no learned epoch improved protected reference.",
+  "conclusion": "This public-road attention configuration did not improve primary MAE. Later joint training reduced Train loss while validation worsened; no universal claim about attention models.",
+  "Test_access": false,
+  "goal": "ACTIVE; target not achieved"
+}

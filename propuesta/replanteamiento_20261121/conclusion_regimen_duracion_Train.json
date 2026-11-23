@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "pilot_metrics": {
+    "n": 10000,
+    "mae_s": 138.6045,
+    "rmse_s": 213.56697427270913,
+    "mdae_s": 90.0
+  },
+  "global_control": {
+    "n": 10000,
+    "mae_s": 139.332,
+    "rmse_s": 213.1316846459015,
+    "mdae_s": 90.0
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "vs_global": {
+      "delta_mae_s": -0.7275,
+      "ci95_s": [
+        -1.154944148584705,
+        -0.29197626533056403
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedchronologicalheldTrain, no primaryValidation orconfirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": 5.249107207198075,
+      "ci95_s": [
+        4.152304820058914,
+        6.304037801550515
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedchronologicalheldTrain, no primaryValidation orconfirmation."
+    }
+  },
+  "gate_passed": false,
+  "conclusion": "Explicit900sregime forest modestlyimproved itsglobalforestcontrol butwasworse thanexistingODreference. Retiretestedfactorization; no threshold/treecount sweep orfullprimaryrun.",
+  "limitations": "ReusedheldTrain, limitedforestfamily, no universalclaimthat durationregimescannothelp.",
+  "all_metrics_predictions_sources_retained": true,
+  "weights_discarded": true,
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

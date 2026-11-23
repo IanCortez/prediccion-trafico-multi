@@ -1,0 +1,40 @@
+{
+  "complete": true,
+  "passed": true,
+  "before": {
+    "zero_source_fraction": 0.318359375,
+    "source_within100m_fraction": 0.677734375
+  },
+  "after": {
+    "zero_source_fraction": 0.0,
+    "source_within100m_fraction": 0.98828125,
+    "median_source_count": 3120.5,
+    "finite_minerror_quantiles": [
+      2.513269474345094,
+      6.949375708655359,
+      25.14413362325012
+    ]
+  },
+  "within100m_gain_percentage_points": 31.0546875,
+  "minimumRSS_never_increased": true,
+  "original_support_never_lost": true,
+  "synthetic_and_real_bruteforce_exact": true,
+  "reversed_singleton_exact": true,
+  "sourceparents_selected_before_tree": true,
+  "held_query_time_route_not_used": true,
+  "sourceendpoint_bbox_filter_preserved": true,
+  "additional_GPS_bytes_persisted": 0,
+  "Test_access": false,
+  "Validation_access": false,
+  "sources": {
+    "piloto_busqueda_ordenada_bbox_Train.py": "8ad205f7fd82c2d8e785b65958634f926fc8f9bfd0c5a9d6d6e3652f852988c4",
+    "busqueda_ordenada_fuentes.py": "f8d8eaed4e2a3acc31e94bb326ee2ff458dbef083788790d5f241d1735db675d",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "coverage_sha256": "5299eff9026c9546932e3216c459e53c8dd8866b97a8a673374ca8fdeaeb6c1d",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 22.426027297973633,
+  "next": "Positivegeometrygate requires separate fullTraincrossfit sourceconstructor and independentprototype before any primaryMAEclaim; no threshold/Ksweep."
+}

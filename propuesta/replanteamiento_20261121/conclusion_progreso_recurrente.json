@@ -1,0 +1,108 @@
+{
+  "complete": true,
+  "scope": "FullunchangedprimaryODValidation, reusedduringadaptive research; not independentconfirmation.",
+  "primary_rows_and_times_unchanged": true,
+  "root_diagnostic": {
+    "n": 127941,
+    "mae_s": 137.8945764063123,
+    "rmse_s": 220.84847161001406,
+    "mdae_s": 90.0
+  },
+  "full_pipeline_metrics": {
+    "control216_MAE": {
+      "n": 127941,
+      "mae_s": 135.98850107536296,
+      "rmse_s": 218.27877750096638,
+      "mdae_s": 83.01675539851544
+    },
+    "full246_MAE": {
+      "n": 127941,
+      "mae_s": 136.1112052749399,
+      "rmse_s": 217.82632324070562,
+      "mdae_s": 82.15039946813079
+    },
+    "full246_q10": {
+      "n": 127941,
+      "mae_s": 187.8400780282029,
+      "rmse_s": 279.55109867853804,
+      "mdae_s": 123.9545398455017
+    },
+    "full246_q50": {
+      "n": 127941,
+      "mae_s": 136.0751961547707,
+      "rmse_s": 217.80876928142487,
+      "mdae_s": 81.96791992882027
+    },
+    "full246_q90": {
+      "n": 127941,
+      "mae_s": 254.61366161298656,
+      "rmse_s": 314.3498818396562,
+      "mdae_s": 217.99241390261898
+    }
+  },
+  "comparisons": {
+    "full_vs_reference": {
+      "delta_mae_s": 5.953163677641161,
+      "ci95_s": [
+        5.158153408636728,
+        6.76637783919766
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "full_vs_control": {
+      "delta_mae_s": 0.12270419957693665,
+      "ci95_s": [
+        -0.6576855616077242,
+        0.9148113069537702
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    }
+  },
+  "meaningful_gate_passed": false,
+  "numerical_minimum_model": "control216_MAE",
+  "numerical_minimum": {
+    "n": 127941,
+    "mae_s": 135.98850107536296,
+    "rmse_s": 218.27877750096638,
+    "mdae_s": 83.01675539851544
+  },
+  "candidate_better_than_protected": false,
+  "candidate_certification": null,
+  "decision": "Fixed fullsequence experiment failed meaningfulgate; no epoch/stylecount/stepcap retuning. Examine trainqueryexposuregap/coverage before choosing a different hypothesis.",
+  "route_diagnostics": {
+    "train": {
+      "n": 1023529,
+      "omitted_pair_mass_mean": 0.21985717117786407,
+      "weighted_tail_mass_mean": 0.10046792030334473,
+      "weighted_completion_mass_mean": 0.6796748042106628,
+      "weighted_steps_mean": 47.09956359863281,
+      "style_eta_dispersion_s_mean": 3.884978771209717
+    },
+    "validation": {
+      "n": 127941,
+      "omitted_pair_mass_mean": 0.21871593594551086,
+      "weighted_tail_mass_mean": 0.10909253358840942,
+      "weighted_completion_mass_mean": 0.6721914410591125,
+      "weighted_steps_mean": 49.10812759399414,
+      "style_eta_dispersion_s_mean": 4.180037021636963
+    }
+  },
+  "limits": [
+    "Train road/time labels inferred between 15-second GPS samples; not exact annotated physical paths or idling.",
+    "Unsupported interior chain turns reset private prefix supervision; all original primary trips/totalT kept.",
+    "Fixed128 teacher fragments truncate long recurrent history; querycap192 independentofactual N.",
+    "Training uses observedteacher clock/prefix; queryuses its own priorstyles/generatedprefix/predictedclock. Exposuregap remainsa risk.",
+    "One seed, reusedValidation.73.5confirmation not reached orclaimed."
+  ],
+  "preservation": "Allsixcompletedprimaryoutputs(5trees+root), originalrows/labels/quantiles/config/sources retained, including >131.06. Qualifiedweights anddependencies retained.",
+  "protected_best": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "goal": "ACTIVE",
+  "Test": "sealed"
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "PartialpublicTrainrollout diagnostics, no Validation orTest, not a finalmodelscore",
+  "completed_Train": 230400,
+  "fallback_probability_mean": 0.2219916135072708,
+  "tail_probability_mean": 0.10673855990171432,
+  "completion_probability_mean": 0.6712697744369507,
+  "weighted_steps_mean": 48.17683029174805,
+  "style_eta_sd_s_quantiles": [
+    0.15714256465435028,
+    0.5202762484550476,
+    1.9039100766181947
+  ],
+  "public_ETA_quantiles_s": [
+    261.4933807373047,
+    512.5788269042969,
+    1255.7432373046877
+  ],
+  "mass_identity_max_error": 2.384185791015625e-07
+}

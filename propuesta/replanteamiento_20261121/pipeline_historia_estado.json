@@ -1,9 +1,6 @@
 {
-  "stage": "Waiting for frozen native full result and actual GPU exit",
-  "original_processes": [
-    35928
-  ],
-  "supervisor_pid": 34908,
+  "stage": "Conditional pilot did not justify temporal-prior GPU training; continue with a genuinely different mechanism, do not repeat blend or smoothing searches",
   "goal": "active",
-  "Test": "sealed"
+  "Test": "sealed",
+  "requires_user_input": false
 }

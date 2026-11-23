@@ -1,0 +1,5 @@
+{
+  "scope": "Diagnostic only; original matching reproduced exactly, no primary label/filter change.",
+  "primary": "Every query and originalduration retained; partialsupervision is a new proposal, not a reinterpretation that the oldgatepassed.",
+  "changes": "Traceflags only; no matching parameter or filtering change."
+}

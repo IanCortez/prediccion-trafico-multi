@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "real4096query_joint_loss_finite": true,
+  "conditional_encoder_gradient_nonzero": true,
+  "original_time_supervised_for_all_queries": true,
+  "parameters": 4025563,
+  "state_MiB": 15.451454162597656,
+  "GPU_peak_MiB": 1604.8798828125,
+  "geometry_available": 894104,
+  "Test": false
+}

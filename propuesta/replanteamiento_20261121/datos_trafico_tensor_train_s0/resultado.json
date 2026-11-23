@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "observations": 1000000,
+  "available_observations": 1662936,
+  "seed": 20261122,
+  "max_per_parent_trip": 2,
+  "max_observations": 1000000,
+  "chronological_cutoff": 1396530690,
+  "all_source_arrivals_before_cutoff": true,
+  "parent_fold": "ParentqueryUTCweek modulo5; entire source trip is excludedforcrossfit, includingallsubsegments.",
+  "local_clock": "ObservedTrainroadentry derived fromsum-preservingpartialtimes, rounded1millisecond to avoid numericalboundaryjitter; not query input. Predictionusesquerydeparture/publicfreeflowarrival.",
+  "observations_sha256": "041783d8a0cdecdcbde8cd82c40ac8980ade5fee0901ff2fffd34c776f6044f5",
+  "source_sha256": "6f0a49ef94853435c9f8280af9ebc2c3263ca6986589e8a9fc49010c2873342e",
+  "corpus_manifest_sha256": "972877355a56c50ab91f6fc466a8c880db39e0cbbff818d39a39797ed13eeb9d",
+  "artifact_MiB": 14.714996337890625,
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 21.75371813774109
+}

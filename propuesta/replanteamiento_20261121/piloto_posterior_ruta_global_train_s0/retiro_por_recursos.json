@@ -1,0 +1,23 @@
+{
+  "retired": true,
+  "do_not_restart_this_CPU_runner": true,
+  "reason": "Resourceimplementationreplacementbeforeobservinganycompletedheldmetric: CPUfirstsharedMultiQuantile1000trees1072seconds, verifiedliveafter1322seconds/2605CPUseconds. GPUscalar1000trees~29seconds perquantile, all9~270seconds, samequeries/controls preregisteredbeforeCPUscore.",
+  "first_completed_stage_wall_s": 1072.3221309185028,
+  "verified_live_snapshot": {
+    "elapsed_s": 1322.6737346,
+    "cpu_s": 2605.171875,
+    "pid": 5152
+  },
+  "process_identity_verified_before_stop": true,
+  "original_source_and_protocol_unchanged": true,
+  "completed_models": [
+    "public_time_only"
+  ],
+  "unfinished_stage": "semantic_posteriorclassifier, stoppedbeforefinalmodelpersisted",
+  "every_completed_stage_prediction_recovered": true,
+  "globalcomparison_not_claimed": true,
+  "replacement": "piloto_posterior_ruta_global_gpu_train_s0",
+  "replacement_difference": "Nineindependentquantiletreesets instead ofsharedmultioutputtrees. Matchedcapacitywithinreplacement.",
+  "stopped_for_resource_efficiency_not_MAE": true,
+  "Test": "sealed"
+}

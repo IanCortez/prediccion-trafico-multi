@@ -1,0 +1,38 @@
+{
+  "mode": "joint",
+  "seed": 20261122,
+  "max_epochs": 6,
+  "warmup_epochs": 2,
+  "batch": 512,
+  "head_lr": 0.0003,
+  "student_lr": 1e-05,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "max_training_seconds": 1800,
+  "precision": "FP32 highest",
+  "canonical_inference_batch": 2048,
+  "loss": ".5MAE(mean members)+.5mean memberMAE, divided by600; no implicit quantile gradients.",
+  "reference_id": "historica_fresca_s0",
+  "reference_model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\historica_fresca_s0\\epoca_27.pt",
+  "reference_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+  "reference_validation": {
+    "n": 127941,
+    "mae_s": 130.20482097216686,
+    "rmse_s": 209.28216351177895,
+    "mdae_s": 75.0
+  },
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Train_n": 1023485,
+  "Validation_n": 127941,
+  "Test": "sealed",
+  "point_output": "Mean of16direct member outputs, nearest original15second bin",
+  "control": "Same fixed readout and batches; student representation remains frozen and eval throughout.",
+  "uncertainty": "This is a point readout; frozen reference intervals are not certified intervals of the new point predictor.",
+  "preservation": "Every epoch metrics and predictions; every sub131.06checkpoint and strict new best. Original and verified references untouched."
+}

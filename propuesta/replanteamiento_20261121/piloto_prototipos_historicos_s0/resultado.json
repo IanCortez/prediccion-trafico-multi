@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "n": 20000,
+  "memory_Train_trips": 894105,
+  "mean_public8_geometry_m": 248.9938507080078,
+  "mean_historical8_geometry_m": 108.63877868652344,
+  "mean_reduction_m": 140.3550567626953,
+  "relative_reduction": 0.5636888475904092,
+  "fraction_improving_more25m": 0.50015,
+  "fraction_with_history": 0.99935,
+  "own_fold_never_retrieved": true,
+  "no_query_geometry_in_selector": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "source_sha256": "2cc3d14d0e89145b42a6e6295e31ebc9b80361d2fe3a5f687744e92578471aa9",
+  "predictions_sha256": "5dac1d9890838764d2085c8e06fa48ab50370698aede10cfecea476368af4907",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 8.786776065826416,
+  "limitation": "Reanchored historical latent shapes are not guaranteed road-connected. An oracle coverage gain alone is not a time-prediction gain."
+}

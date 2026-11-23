@@ -1,0 +1,76 @@
+{
+  "complete": true,
+  "metrics": {
+    "time_only": {
+      "n": 10000,
+      "mae_s": 142.482,
+      "rmse_s": 219.59866802874737,
+      "mdae_s": 90.0
+    },
+    "semantic": {
+      "n": 10000,
+      "mae_s": 141.891,
+      "rmse_s": 217.84266111117904,
+      "mdae_s": 90.0
+    },
+    "random": {
+      "n": 10000,
+      "mae_s": 143.6595,
+      "rmse_s": 219.3360606466707,
+      "mdae_s": 90.0
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "time_only_vs_reference": {
+      "delta_mae_s": 9.126607207198075,
+      "ci95_s": [
+        7.457470885498451,
+        10.883571374262894
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    },
+    "semantic_vs_reference": {
+      "delta_mae_s": 8.535607207198076,
+      "ci95_s": [
+        6.710996523942989,
+        10.442061894016298
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    },
+    "semantic_vs_random": {
+      "delta_mae_s": -1.7685,
+      "ci95_s": [
+        -3.282423099109583,
+        -0.24842327353481342
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    },
+    "semantic_vs_timeonly": {
+      "delta_mae_s": -0.591,
+      "ci95_s": [
+        -1.7374644291268857,
+        0.6676338231009491
+      ],
+      "days": 22,
+      "interpretation": "Fixed100epochmatchedTrainonly globalroute study, heldonlyfinal. Not primaryValidation/confirmation."
+    }
+  },
+  "decision": "Failedreferencegate: semantic141.891seconds versusstrong133.355reference. No fullprimaryneuralglobalposterior andnohiddenwidth/classcount/auxweighttuning.",
+  "evidence": "Semantic−random1.7685seconds, butsemantic−timeonly.591seconds CIcrosses0; semantic remains8.5356secondsworsethanstrongreference.",
+  "limits": "Signalversusrandomlabels insufficient toshowusefulgain. Fixed100epochsmallTraincohort experiment, not disproof ofallsemanticroute learning.",
+  "initial_weights_same": true,
+  "all_metrics_quantiles_predictions_preserved": true,
+  "next": "Finishindependenttreeglobalposteriorwithmatchedcontrols; CPUimplementationretiredforcost, scalarGPUimplementationactive.",
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation orconfirmation.",
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

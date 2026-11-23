@@ -1,0 +1,76 @@
+{
+  "complete": true,
+  "passed": false,
+  "metrics": {
+    "n": 10000,
+    "mae_s": 138.6045,
+    "rmse_s": 213.56697427270913,
+    "mdae_s": 90.0
+  },
+  "global_density_control": {
+    "n": 10000,
+    "mae_s": 139.332,
+    "rmse_s": 213.1316846459015,
+    "mdae_s": 90.0
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "vs_global": {
+      "delta_mae_s": -0.7275,
+      "ci95_s": [
+        -1.154944148584705,
+        -0.29197626533056403
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedchronologicalheldTrain, no primaryValidation orconfirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": 5.249107207198075,
+      "ci95_s": [
+        4.152304820058914,
+        6.304037801550515
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedchronologicalheldTrain, no primaryValidation orconfirmation."
+    }
+  },
+  "binary_gate": {
+    "AUC": 0.8303976939091443,
+    "log_loss": 0.3144865614454294,
+    "brier": 0.09350708851266999,
+    "true_long_fraction": 0.1485,
+    "mean_probability_long": 0.15533604502884787
+  },
+  "uncertainty": {
+    "coverage80": 0.8625,
+    "width80_s": 493.56
+  },
+  "originalT_seconds": true,
+  "no_held_groundtruth_regime_used": true,
+  "reverse_singleton_quantiles_gate_exact": true,
+  "sources": {
+    "piloto_regimen_duracion_Train.py": "a300b72cc327bea611748f2edb09f9571bb27956fcb70d40018c3e1aa06c2502",
+    "bosque_distribucional_regimen.py": "b447309b0ac820631bb0309ed59cedf62f8d857b183470867648c5bebe28e843",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "predictions_sha256": "92a0822fdb4256f881caf429590e1dd3290481d930ab3c62b6db8cdbf52e41df",
+  "weights": null,
+  "future_if_pass": "Testfulloriginalprimarycohort withstructuredconditionaldensity expert; no inference-regimeoracle, no ordinarypointaverage in placeofmixturemedian.",
+  "future_if_fail": "RetirethisCPUforestfactorization; no boundary/treecount sweeps, nofullprimarytrial basedsolelyon AUC.",
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 129.13824152946472
+}

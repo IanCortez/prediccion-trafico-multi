@@ -1,0 +1,35 @@
+{
+  "scope": "Reused chronological 40000fit/10000heldTrain; no primaryValidation or independent confirmation.",
+  "hypothesis": "Learn directly from observed interval OD/time pairs with endpoint-boundary indicators and bounded covariate-density weighting, rather than retrieval or warm-start neural auxiliary heads.",
+  "distinction": "Previous auxiliary experiment warmed a separate neural head and updated a pretrained encoder with fixed sourceweight. Here use fresh shared tree partitions, explicit boundary covariates and cross-fitted density-ratio weights.",
+  "parent_selection": "Only the exact40000 original fitparents; their arrival is before the first held departure. Heldparent geometry never selected.",
+  "interval_sampling": "Three seeded proper intervals per fitparent, no enumeration. Interval labels15*(j-i); timestamp=parenttimestamp+15*i.",
+  "auxiliary_filters": "Original public bbox/OD>=200m/ODspeed<=120kmh/time60..1785 applied only to sourceexamples. All primary fit/heldrows and labels stay unchanged.",
+  "source_covariates": "206public features excluding every mm_ profile; plus whether sourceorigin/destination is its parentendpoint. Bothflags1 for complete querytrips, never queryN/T.",
+  "density": "Five OOF parent-group splits. Balanced logisticdomain classifier on206publicX, per-fold scaler; clip posterior odds .05..10 and normalize source mean1. Source totalweight=.2*full weight.",
+  "identification_limit": "Density weighting assumes conditional transfer after boundary adjustment; this is a hypothesis, not a guaranteed correction of label shift.",
+  "regressors": {
+    "iterations": 1000,
+    "depth": 8,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss": "MAE",
+    "target": "Originalseconds/600 then inverse600"
+  },
+  "control": "Same sourceX/flags/weights but auxiliarytargets are public baselinepredictions. Distinguishes actual source-time labels from regularization by extra covariates.",
+  "gate": ">=5secondsbetter than no-augmentationbaseline ANDstoredreference; >=2secondsbetter than pseudo-labelcontrol, dayCIupper<0 in all three. No sourceweight/count/depth sweep.",
+  "resources": "OneGPU .25cap,CPU2. Sourcefeatures ephemeral; persist only provenance, metrics, predictions and sources; pilotweights onlyifgatepasses.",
+  "references": [
+    "https://arxiv.org/html/2407.05895v2"
+  ],
+  "literature_limit": "ProbETA motivates trip-subsampling but takes queriedpath/context; this OD adaptation is not a replica or a comparable claimedscore.",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Validation": false,
+  "Test": false
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "fresh_neural_weights": true,
+  "no_retained_network_state_loaded": true,
+  "finite_joint_gradients": true,
+  "posterior_component_sum_error": 3.5762786865234375e-07,
+  "Test_access": false
+}

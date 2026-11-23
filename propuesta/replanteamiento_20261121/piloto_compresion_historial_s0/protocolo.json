@@ -1,0 +1,21 @@
+{
+  "scope": "Train-only privileged GEOMETRY coverage instrument, not predictive MAE.",
+  "sample": "Same20000Train queries as prior route/prototype gates.",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "retrieval": "Same nearest64 in4DOD, sourceUTCweekfold excluded,250mGaussian,4hourclock,width.35weekendmismatch,500mcutoff.",
+  "comparison": "Public2routes plus straight and all available64reanchored historical shapes, versus previous6prototypes plus same public/straight fallback.",
+  "candidate_count_matched": false,
+  "reason": "Diagnose compression loss; an oracle improves monotonically as hypotheses increase. Does not prove a learned attention model can select the right history.",
+  "gate": "At least10meters AND15percent reduction in mean geometry oracle error versus6prototype compression; otherwise do not expand this memory context.",
+  "query_geometry_used_only_for_post_retrieval_scoring": true,
+  "query_time_label_used": false,
+  "Validation": false,
+  "Test": "sealed",
+  "resources": "CPU2,20kquery only; prediction/provenance archive <12MiB."
+}

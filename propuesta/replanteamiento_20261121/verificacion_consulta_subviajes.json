@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "CPU Train-only input/label instrument, no primary MAE",
+  "existing_Train_feature_recovery_max_error": 0.0,
+  "feature_names_match_protected216": true,
+  "all10000_interval_arithmetic_checks": true,
+  "provenance_extra_field_rejected": true,
+  "raw_query_fields": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "whole_query_UTCweek_fold_excluded_at_all_history_levels": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "code_sha256": "3c5217488b699c1f15ced41ddac599c66b49cb5a7fcd2c68cb334497b899df49",
+  "source_sha256": "8963ecb1c2261309030841c182c99f4a708c01a788006f1bfb5243e88573bba9",
+  "actual_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 5.212139129638672
+}

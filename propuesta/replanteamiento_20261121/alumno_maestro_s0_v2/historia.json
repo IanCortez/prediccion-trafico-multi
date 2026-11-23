@@ -1,0 +1,58 @@
+[
+  {
+    "epoch": 1,
+    "train_n": 1023485,
+    "train_loss": 4.409879329544348,
+    "teacher_expected_score": 3.9019736024468785,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.47923652308486,
+      "rmse_s": 210.98260964014943,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 41.71711325645447
+  },
+  {
+    "epoch": 2,
+    "train_n": 1023485,
+    "train_loss": 4.408047947457102,
+    "teacher_expected_score": 3.8943087224153814,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.52331934250944,
+      "rmse_s": 210.96257873820974,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 75.91515564918518
+  },
+  {
+    "epoch": 3,
+    "train_n": 1023485,
+    "train_loss": 4.4070975012246185,
+    "teacher_expected_score": 3.8911329618500092,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.5169882992942,
+      "rmse_s": 210.99990487319266,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 109.4978346824646
+  },
+  {
+    "epoch": 4,
+    "train_n": 1023485,
+    "train_loss": 4.406813877724907,
+    "teacher_expected_score": 3.8891750081239818,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.526133139494,
+      "rmse_s": 211.0007550119475,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 143.81403851509094
+  }
+]

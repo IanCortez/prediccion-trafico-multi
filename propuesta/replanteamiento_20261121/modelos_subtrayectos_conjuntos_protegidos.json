@@ -1,0 +1,23 @@
+{
+  "candidates": [
+    {
+      "id": "subtrayectos_conjuntos_s0",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.6859802565245,
+        "rmse_s": 208.88094169100518,
+        "mdae_s": 75.0
+      },
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\subtrayectos_conjuntos_s0\\epoca_24.pt",
+      "model_sha256": "7614dd37a801a975a086626a6adb75340574b880183ad965146dd4c3fb4c5907",
+      "dependencies": {
+        "memoria_puntos_Train_s0/puntos_Train.npz": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+        "indices_subtrayectos_s0/train_indices.npz": "8dded27fe326b041384b6fae8005891d0a6675cd0e456d45edc3cc41ce7f4118",
+        "indices_subtrayectos_s0/validation_indices.npz": "02b99d0080ad521f4feb846a29c9dde4a43357df946c7a851bf9e800a3c353c8",
+        "subtrayectos_conjuntos_s0\\constructor_tokens.npz": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983"
+      },
+      "checkpoint_kind": "Fulljointmodel, no neuralparent checkpoint required.",
+      "qualified": true
+    }
+  ]
+}

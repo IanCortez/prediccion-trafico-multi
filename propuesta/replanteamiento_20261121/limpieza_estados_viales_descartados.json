@@ -1,0 +1,15 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\estados_valor_vial_s0\\estados_Train.npz",
+      "bytes": 47805443,
+      "sha256": "6a4be8de5586436f52346cf2e2d7396aff06d4c1293532d84b8de1d3c0171c34",
+      "type": "RegenerableTrain-onlyauxiliarytargets, not experimentpredictions or originaldata.",
+      "reason": "Amortizedvaluefamilyfailed; noqueued/runningjobuses thisderivedsamplebank. Full232MiBTrainstreetcorpus and executedpreparer preserved.",
+      "reconstruction_source": "estados_valor_vial_s0/fuente_ejecutada.py",
+      "full_corpus_manifest": "datos_calles_parciales_Train_s0/resultado.json"
+    }
+  ],
+  "all_completed_predictions_metrics_preserved": true,
+  "originals_best_TransferTraj_unchanged": true
+}

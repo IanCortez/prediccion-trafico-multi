@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "model_source_sha256": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+  "data_source_sha256": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+  "verifier_source_sha256": "e0ad31353c5678cd8f7c86fc6b99b6ba204783a3660c72ec05ea515e2149f1cf",
+  "actual_neural_terminal_time_positive_and_included_once": true,
+  "completed_hidden_frozen": true,
+  "controlled_short_long_mixed_reverse_singleton_consistent": true,
+  "Float64_clock_distinguishes_one_second": true,
+  "no_private_target_parameters": true,
+  "all_teacher_gradient_paths_finite_nonzero": true,
+  "full_Train_fragments": 2099324,
+  "full_Train_tokens": 41775036,
+  "resident_teacher_MiB": 1058.0713386535645,
+  "B128_auxiliary_plus_primary_plus_attachment_step_seconds": 0.13005703687667847,
+  "public_64queries_16paths_max192_seconds": 0.564122200012207,
+  "public_allTrain_rollout_projected_minutes": 150.35692965611815,
+  "GPU_peak_allocated_MiB": 3467.865234375,
+  "GPU_peak_reserved_MiB": 3736.0,
+  "state_dict_MiB": 8.551319122314453,
+  "D_persistent": false,
+  "losses": [
+    6.284434795379639,
+    6.107640743255615,
+    5.911780834197998,
+    5.697783470153809,
+    5.478730201721191,
+    5.271793842315674,
+    5.09400749206543,
+    4.95562219619751
+  ],
+  "no_Validation_labels_or_Test_access": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 73.71350407600403
+}

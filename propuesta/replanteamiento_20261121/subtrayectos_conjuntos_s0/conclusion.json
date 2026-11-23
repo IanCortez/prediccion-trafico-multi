@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "id": "subtrayectos_conjuntos_s0",
+  "validation": {
+    "n": 127941,
+    "mae_s": 130.6859802565245,
+    "rmse_s": 208.88094169100518,
+    "mdae_s": 75.0
+  },
+  "paired_vs_frozen_reference": {
+    "delta_mae_s": 0.6959457875114311,
+    "ci95_s": [
+      0.3922784823668913,
+      1.0178294331183857
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "useful_gain_gate": false,
+  "qualified_model_preserved": true,
+  "full_checkpoint_independently_replayed": true,
+  "all24epochs_all_originalTrainqueries": true,
+  "all127941primary_queries_and_labels_verified": true,
+  "raw65_source_token_quantile_order_singleton": true,
+  "matched_source_value_comparison": null,
+  "next": "Runindependentreloadifqualified; runmatchedcontrolonlyifpreregisteredusefulgatepassed. No newepochs or neighbors selected.",
+  "no_confirmation_claim": true,
+  "Test": "SEALED",
+  "goal": "ACTIVE",
+  "source_sha256": "50e50c9d657cd881b50f7b41a7ad1da4d1467b0fd9c0b680f10e63bcd8a149af"
+}

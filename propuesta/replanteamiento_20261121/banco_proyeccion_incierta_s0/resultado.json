@@ -1,0 +1,62 @@
+{
+  "outputs": {
+    "train_banco.npz": {
+      "bytes": 337960230,
+      "sha256": "e15cddb51068321e760e9425efda73ab3fec80f290eb1d7b3c2d8ed0ebb1da8e",
+      "n": 1023529,
+      "available_per_slot": [
+        1022546,
+        1022546,
+        1022533,
+        1022533,
+        1022505,
+        1022505,
+        1021450,
+        1021450
+      ]
+    },
+    "validation_banco.npz": {
+      "bytes": 42412357,
+      "sha256": "fdf2440127a47feaefb6f6e4ed3414241ac43344a2915768f431e9c3ca323b96",
+      "n": 127941,
+      "available_per_slot": [
+        127817,
+        127817,
+        127817,
+        127817,
+        127813,
+        127813,
+        127678,
+        127678
+      ]
+    }
+  },
+  "cache_bytes": 380372587,
+  "canonical_precision": "FP16features,FP32model",
+  "max_absolute_feature_quantization_error": 0.015380859375,
+  "normalization": "Mean/std of available routes in1023485eligibleTrain rows, fitted before validation; no target input.",
+  "normalization_sha256": "ddaf8e997204e39387207f41947ed2601a1b2e96c2cf687812483f3f3adaea7f",
+  "all_primary_rows_retained": true,
+  "original_query_fields_only": true,
+  "Validation_labels_accessed": false,
+  "Test_access": false,
+  "observed_heldout_paths_decoded": false,
+  "source_sha256": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "preparar_banco_proyeccion.py": "a11e56b3dd9a95355612e0d4fe7b9a58ecfb426c8e55bb3182695f96c2367d29",
+    "rutas_proyeccion_incierta.py": "ecfdf06d4c6db7041f0b6743e5015140ad460e671e4d5035df72519477173cda"
+  },
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 70.94643092155457
+}

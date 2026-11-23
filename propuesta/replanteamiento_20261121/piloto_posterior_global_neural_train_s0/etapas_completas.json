@@ -1,0 +1,20 @@
+[
+  {
+    "mode": "time_only",
+    "file": "time_only.pt",
+    "sha256": "126494b9e97022ad90c3fe6bd2d0314f14540394533829324081b47dba3e7976",
+    "bytes": 7777729
+  },
+  {
+    "mode": "semantic",
+    "file": "semantic.pt",
+    "sha256": "a990cdd0fa38bdb776b63a02f4d18775876050a9aed2e024e24d39e505077026",
+    "bytes": 7777696
+  },
+  {
+    "mode": "random",
+    "file": "random.pt",
+    "sha256": "8f8955ae39a8be3132377d195e956e32d35205aa00878b8e0d0fec18e6c2077a",
+    "bytes": 7776158
+  }
+]

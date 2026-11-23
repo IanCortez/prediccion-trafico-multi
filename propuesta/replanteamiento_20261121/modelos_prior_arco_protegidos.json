@@ -1,0 +1,24 @@
+{
+  "candidates": [
+    {
+      "id": "prior_arco_subtrayectos_s0",
+      "validation": {
+        "n": 127941,
+        "mae_s": 129.99448964757192,
+        "rmse_s": 210.02515936501536,
+        "mdae_s": 75.0
+      },
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\prior_arco_subtrayectos_s0\\epoca_6.pt",
+      "model_sha256": "875ee5f72cee5a913360d3b437960b8adbffd320fe509d67860375a4b2e03171",
+      "dependencies": {
+        "memoria_puntos_Train_s0/puntos_Train.npz": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+        "distancia_arco_puntos_Train_s0/distancia_acumulada_m.npz": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+        "indices_subtrayectos_s0/train_indices.npz": "8dded27fe326b041384b6fae8005891d0a6675cd0e456d45edc3cc41ce7f4118",
+        "indices_subtrayectos_s0/validation_indices.npz": "02b99d0080ad521f4feb846a29c9dde4a43357df946c7a851bf9e800a3c353c8",
+        "prior_arco_subtrayectos_s0\\constructor_tokens.npz": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983",
+        "atencion_historia_individual_s0\\epoca_3.pt": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b"
+      },
+      "checkpoint_kind": "Branchonly, protected30componentparent required; original34Dtimefeatures plusauxiliaryarclengthgeometryprior."
+    }
+  ]
+}

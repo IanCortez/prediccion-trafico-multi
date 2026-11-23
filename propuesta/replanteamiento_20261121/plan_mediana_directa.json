@@ -1,0 +1,26 @@
+{
+  "hypothesis": "The current distribution model optimizes joint likelihood, CDF score and geometry, while the requested endpoint is point MAE. Test a stable explicitly predicted median correction, without differentiating through a discrete/implicit mixture median.",
+  "contrast_with_discarded_trial": "ajuste_mae.py differentiated through interpolated probabilities under BF16 and updated the original reference. This alternative keeps the certified130.204821s predictor immutable, uses a new FP32 direct readout, and optionally trains a separate student representation.",
+  "reference": "historica_fresca_s0 epoch27 sha81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+  "architecture": "Immutable reference median + bounded600second explicit residual; student same22component architecture,512global hidden +22component means +22SDs +22weights, LayerNorm578,MLP128,one output per16members. Final point is member mean quantized to original15second support.",
+  "loss": ".5 MAE of mean member prediction +.5 mean member MAE, divided by600; no target supplied to inference; no implicit median gradients.",
+  "experiment": "Treat:2readout warmup epochs then4joint student/readout epochs. Control conditional if learned gain:6epochs same readout training with immutable student representation. Same random initialization and batches.",
+  "seed": 20261122,
+  "batch": 512,
+  "head_lr": 0.0003,
+  "student_lr": 0.00001,
+  "weight_decay": 0.0003,
+  "selection": "All full127941Validation epochs retained; selected best compared with initial exact reference. ReusedValidation is exploratory.",
+  "preservation": "Every complete epoch's metrics and predictions, every strict new best and every below131.06weights; initial identity reconstructed from protected reference and seeded zero readout without duplicating its weights.",
+  "precision": "FP32 highest; canonical inference batch2048; candidate chunk256.",
+  "resources": "Only after existing GPU control terminal and certified. One GPU, max1800seconds, cache reference point predictions <10MiB with hashed provenance.",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Test": "sealed",
+  "target": "<73.5seconds confirmation still required; this plan alone is not evidence of progress in accuracy."
+}

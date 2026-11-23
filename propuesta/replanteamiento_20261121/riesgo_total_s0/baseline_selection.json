@@ -1,0 +1,15 @@
+{
+  "reference": {
+    "n": 512,
+    "mae_s": 140.244140625,
+    "rmse_s": 232.34022988254745,
+    "mdae_s": 90.0
+  },
+  "initial_parent_same_canonical_graph": {
+    "n": 512,
+    "mae_s": 159.404296875,
+    "rmse_s": 246.8661984190525,
+    "mdae_s": 105.0
+  },
+  "initial_mass": 0.9837948083877563
+}

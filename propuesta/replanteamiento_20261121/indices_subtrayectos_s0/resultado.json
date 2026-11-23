@@ -1,0 +1,54 @@
+{
+  "complete": true,
+  "outputs": {
+    "train": {
+      "complete": true,
+      "sha256": "8dded27fe326b041384b6fae8005891d0a6675cd0e456d45edc3cc41ce7f4118",
+      "n": 1023529,
+      "MiB": 28.064127922058105,
+      "counts_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        5.0,
+        11.0,
+        64.0
+      ],
+      "eligible_n": 1023485,
+      "source_fold_checked": true,
+      "all_original_queries_preserved": true
+    },
+    "validation": {
+      "complete": true,
+      "sha256": "02b99d0080ad521f4feb846a29c9dde4a43357df946c7a851bf9e800a3c353c8",
+      "n": 127941,
+      "MiB": 3.0448827743530273,
+      "counts_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        4.0,
+        8.0,
+        64.0
+      ],
+      "eligible_n": 127941,
+      "source_fold_checked": true,
+      "all_original_queries_preserved": true
+    }
+  },
+  "bank_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "sources": {
+    "preparar_indices_subtrayectos.py": "9ee3024958a1d89830588ca71e66c9bc5323c283324f4986567c76b0961fb8ee",
+    "recuperar_subtrayectos.py": "f84c390aa4bfb460204e1633bb187788a8be711cbdf83f67beb9cbb20b9c1f5d",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 522.8786745071411
+}

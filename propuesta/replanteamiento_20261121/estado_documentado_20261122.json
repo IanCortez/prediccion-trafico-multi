@@ -1,0 +1,8 @@
+{
+  "native_complete": true,
+  "temporal_history_gate": false,
+  "active": "riesgo_total_s0",
+  "GPU_gate_passed": true,
+  "Test": "sealed",
+  "goal": "active"
+}

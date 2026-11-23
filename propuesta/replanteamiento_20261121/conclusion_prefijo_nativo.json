@@ -1,0 +1,60 @@
+{
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "graph_validation": {
+    "n": 127941,
+    "mae_s": 148.7559500082069,
+    "rmse_s": 225.78150363230677,
+    "mdae_s": 105.0
+  },
+  "all_outputs": [
+    {
+      "n": 127941,
+      "mae_s": 131.25671207822356,
+      "rmse_s": 210.804448731162,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.33995357234974,
+      "rmse_s": 210.7964898947443,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.9470302717659,
+      "rmse_s": 211.10133892247694,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 135.5261800361104,
+      "rmse_s": 214.01658372126568,
+      "mdae_s": 90.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 148.7559500082069,
+      "rmse_s": 225.78150363230677,
+      "mdae_s": 105.0
+    }
+  ],
+  "selected_alpha": 0,
+  "paired": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "best_epoch": 8,
+  "goal": "active",
+  "Test": "sealed",
+  "conclusion": "Complete native-generator evidence before deciding another trial; alpha0 is the protected baseline, not a learned gain. Additional temporal history requires a matched conditional pilot."
+}

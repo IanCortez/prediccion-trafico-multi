@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "validation": {
+    "n": 127941,
+    "mae_s": 129.99003446901307,
+    "rmse_s": 209.65124761307314,
+    "mdae_s": 75.0
+  },
+  "paired_vs_parent": {
+    "delta_mae_s": -0.1680071282856942,
+    "ci95_s": [
+      -0.22231047695247166,
+      -0.11033163133171371
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "new_verified_numerical_best": true,
+  "practical_gate": false,
+  "warning": "Exploratory adaptiveValidation; RMSEslightlyworse; no independentconfirmation or causalclaim.",
+  "next": "Jointfreshinitialization trainsroot+sources together, ratherthan extending samefrozenbranch or tuning sixepochs.",
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

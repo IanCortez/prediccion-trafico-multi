@@ -1,0 +1,319 @@
+{
+  "id": "atencion_historia_individual_s0",
+  "config": {
+    "mode": "individual",
+    "seed": 20261122,
+    "max_epochs": 8,
+    "max_training_seconds": 1800,
+    "batch": 512,
+    "lr": 0.001,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "parent_id": "historica_fresca_s0",
+    "parent_model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\historica_fresca_s0\\epoca_27.pt",
+    "parent_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+    "parent_validation": {
+      "n": 127941,
+      "mae_s": 130.20482097216686,
+      "rmse_s": 209.28216351177895,
+      "mdae_s": 75.0
+    },
+    "parent_training": "Frozen throughout; branch parameters only",
+    "architecture": "Parent22components plus8query-conditioned slots over64source trips; canonical source ordering;4head64Dset attention.",
+    "loss": "PrimaryNLL+5RPS+.2conditionalTraingeometry",
+    "precision": "FP32 highest; canonicalFloat16derivedraw tokens",
+    "canonical_inference_batch": 2048,
+    "candidate_head_eval_chunk": 256,
+    "GPU_memory_fraction": 0.5,
+    "GPU_resource_note": "At most oneGPU; increased internal cap from4.8to6GiB for individual-context inference, no storage or protocol change.",
+    "memory_sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+    "normalization_sha256": "320dc331f7c0a2282e2b3a0cbe9197413c74bfbf68edbe4909ccad7b9063c1a8",
+    "index_manifest_sha256": "a867e403f1e658a7d95ac2fc4d7b72e19958ded505547ffa80c23b96623c3cff",
+    "source_query_inputs": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "Train_n": 1023485,
+    "Validation_n": 127941,
+    "Test": "sealed",
+    "control": "Same network/initialweights/indices/batches, sourceG/path/time replaced by6prototype summaries; source relation fields unchanged.",
+    "control_trigger": "At least.1s fullValidation improvement and upper exploratorydaybootstrap deltaCI<0, after frozen checkpoint certification.",
+    "preservation": "Every complete initial/epoch metric and point prediction; every candidateMAE<131.06 and strict new globalbest; branch-only weights reference protectedparent."
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "initial_validation": {
+    "n": 127941,
+    "mae_s": 130.21818650784346,
+    "rmse_s": 209.2251657909117,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 3,
+  "epochs_run": 8,
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "primary_train_n": 1023485,
+      "train_loss": 3.4767244819930956,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.35617980162732,
+        "rmse_s": 210.18506796847916,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 100.08019256591797
+    },
+    {
+      "epoch": 2,
+      "primary_train_n": 1023485,
+      "train_loss": 3.465451530080621,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.390648814688,
+        "rmse_s": 210.311489121362,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 176.85364770889282
+    },
+    {
+      "epoch": 3,
+      "primary_train_n": 1023485,
+      "train_loss": 3.462588525588662,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.15804159729876,
+        "rmse_s": 209.3534140414966,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 253.90447521209717
+    },
+    {
+      "epoch": 4,
+      "primary_train_n": 1023485,
+      "train_loss": 3.460784657079987,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.29943489577227,
+        "rmse_s": 210.05065061182125,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 330.77018904685974
+    },
+    {
+      "epoch": 5,
+      "primary_train_n": 1023485,
+      "train_loss": 3.459504909982954,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.33378666729195,
+        "rmse_s": 210.0116610223733,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 407.7295277118683
+    },
+    {
+      "epoch": 6,
+      "primary_train_n": 1023485,
+      "train_loss": 3.4584173132607012,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.29333833563908,
+        "rmse_s": 210.26862117840187,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 485.03734850883484
+    },
+    {
+      "epoch": 7,
+      "primary_train_n": 1023485,
+      "train_loss": 3.4576079079258495,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.27411072291133,
+        "rmse_s": 210.3910969481678,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 562.2683823108673
+    },
+    {
+      "epoch": 8,
+      "primary_train_n": 1023485,
+      "train_loss": 3.45684451572563,
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.55408352287384,
+        "rmse_s": 211.1352380072977,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 639.6471998691559
+    }
+  ],
+  "learned_update_selected": true,
+  "beats_parent": true,
+  "control_trigger_met": false,
+  "paired_vs_parent": {
+    "delta_mae_s": -0.04677937486810327,
+    "ci95_s": [
+      -0.12141397204323626,
+      0.02493887927384272
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "initial_branch_sha256": "f75695a81c9b615e3573a94e814511cc8f33ce2bee114f2169151d1e823fd64e",
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\atencion_historia_individual_s0\\epoca_3.pt",
+  "model_sha256": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b",
+  "saved_checkpoints": [
+    {
+      "epoch": 0,
+      "file": "epoca_0.pt",
+      "sha256": "625e7714685a2c02f43bb891e1481372465c22f9473bf917ba98c4e5647a66d5",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.21818650784346,
+        "rmse_s": 209.2251657909117,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 1,
+      "file": "epoca_1.pt",
+      "sha256": "747c26fd9e732feb64a70f26494597f737ee96e5442bc494f4c67da7d3ee8e1f",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.35617980162732,
+        "rmse_s": 210.18506796847916,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 2,
+      "file": "epoca_2.pt",
+      "sha256": "c64d9cdba618b296ec3c74705c3fc0395468b061ded5e1ff9286f818cde8af1b",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.390648814688,
+        "rmse_s": 210.311489121362,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 3,
+      "file": "epoca_3.pt",
+      "sha256": "6d9926e4fdc7e17f0a15dbfb6c076d3323cee5cd07fb08b16e7df56d78c9399b",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.15804159729876,
+        "rmse_s": 209.3534140414966,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 4,
+      "file": "epoca_4.pt",
+      "sha256": "89f42403efce1dd1b76a1fa0f1e0c90805cc413f81009800f3d3049dfe3f01c5",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.29943489577227,
+        "rmse_s": 210.05065061182125,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 5,
+      "file": "epoca_5.pt",
+      "sha256": "f7045844ea908371bdc457a7610063eb6f29e9ba059138578dadde2fb75387a6",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.33378666729195,
+        "rmse_s": 210.0116610223733,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 6,
+      "file": "epoca_6.pt",
+      "sha256": "722207737a038c1b61f70e325ec9c6e81704112f16cae19bbc4b64d5e1ec3c66",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.29333833563908,
+        "rmse_s": 210.26862117840187,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 7,
+      "file": "epoca_7.pt",
+      "sha256": "ff8efe4b9092c0ec03b0eed9bf9f976972183471bfdf8170a2b9b91bbd932623",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.27411072291133,
+        "rmse_s": 210.3910969481678,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    },
+    {
+      "epoch": 8,
+      "file": "epoca_8.pt",
+      "sha256": "621fd54c7ab12f2111f77ed7a8d6b90732d9f89a3d8518e72ecdd3bce98af339",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.55408352287384,
+        "rmse_s": 211.1352380072977,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": true
+    }
+  ],
+  "parent_unchanged": true,
+  "predictions_sha256": "b5aec33ccc7f817294d64907f9b42c79e384610119380ddd45ee591f8b46cb79",
+  "sources": {
+    "entrenar_atencion_historia.py": "7dbd73e660fbb3f7c2e472c45bcc841fc35c9870437b435af9e62d90bccc6734",
+    "modelo_atencion_historia.py": "dff6dd910d62102ebe62c6917190772eca37c9108bbdebcce2452df1064e7260",
+    "historia_individual.py": "5f148eb805b3677ce3fd2b6923c9decd96cddb9dfaadea7a9deb93d071f9d400",
+    "inferencia_historica_fresca.py": "99dac9ba9ed8470fcdd771ceaf491e21ebdf8191bedad971e413d8339111363f",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12"
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 640.8140439987183,
+  "goal": "ACTIVE; no confirmation or external matchedcohort claim."
+}

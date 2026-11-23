@@ -1,0 +1,133 @@
+{
+  "id": "aux_solicitud_semantic_s0_v2",
+  "config": {
+    "arm": "semantic",
+    "weight": 0.2,
+    "epochs": 4,
+    "batch": 512,
+    "seed": 20261122,
+    "duration_lr": 1e-05,
+    "request_lr": 0.001,
+    "weight_decay": 0.0003,
+    "geometry_weight": 0.2,
+    "rps_weight": 5.0,
+    "canonical_inference_batch": 2048,
+    "precision": "FP32 highest, no autocast",
+    "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "Test": "sealed",
+    "primary_train_rule": "1023485 embargoe-safe rows, unchanged evaluation cohort",
+    "training_determinism": "Fixed seeds and standard CUDA algorithms, matching original reference; no bitwise training guarantee",
+    "compatibility_fix": "Strict CUDA cumsum unsupported; failure occurred before any optimizer update"
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "train_n": 1023485,
+      "train_loss": 3.820454885260351,
+      "request_conditional_NLL": 0.9605539575898124,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.44582268389337,
+        "rmse_s": 210.87107342904267,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 40.55392813682556
+    },
+    {
+      "epoch": 2,
+      "train_n": 1023485,
+      "train_loss": 3.8119891708516604,
+      "request_conditional_NLL": 0.9219400104048666,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.49776068656647,
+        "rmse_s": 210.8372069412726,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 73.93103241920471
+    },
+    {
+      "epoch": 3,
+      "train_n": 1023485,
+      "train_loss": 3.8084501085334623,
+      "request_conditional_NLL": 0.9054858498052268,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.4661054704903,
+        "rmse_s": 210.80693476312834,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 107.0580940246582
+    },
+    {
+      "epoch": 4,
+      "train_n": 1023485,
+      "train_loss": 3.806085429275707,
+      "request_conditional_NLL": 0.8920631251250142,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.48638825708724,
+        "rmse_s": 210.78443844308055,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 140.08110284805298
+    }
+  ],
+  "best_epoch": 0,
+  "learned_update_selected": false,
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\experimentos\\od_mezcla8_geometria_conjunta_s0_fp32_v2\\modelo.pt",
+  "model_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "saved_checkpoints": [],
+  "paired_vs_reference": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "source_sha256": {
+    "entrenar_aux_solicitud.py": "1d7726235b3f922472653f6b45b387ab2b68a46eddad496422dc9db5e4d1f0d3",
+    "modelo_aux_solicitud.py": "fe079afdc764503ccb778d592e86a6b6872046c31fb87fec479012bd884d8fb4",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "predictions_sha256": "834ad1fd6c441efb2723be2a2496eef55a359a74f9a755e20ca625594941dd23",
+  "Train_n": 1023485,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "parent_unchanged": true,
+  "seconds": 140.78340601921082,
+  "goal": "active unless confirmation target later genuinely achieved"
+}

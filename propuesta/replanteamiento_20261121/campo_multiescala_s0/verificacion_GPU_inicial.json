@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "fresh_model_finite_gradients": true,
+  "added_branch_output_gradient_nonzero": true,
+  "protected_reference_all127941_exact": true,
+  "initial_global_state_sha256": "eddb3f22c72dd785a75920aa852b6288492cc029988e03a5e29740c87dc91c47",
+  "query_inputs_unchanged": true,
+  "Test_access": false
+}

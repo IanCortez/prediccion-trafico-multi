@@ -1,0 +1,50 @@
+{
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation or confirmation.",
+  "hypothesis": "Coherentwhole-routecategory may transfer moretimeinformation than independentlocalgreedychoices.",
+  "latent": "p(T,C|x)=p(C|x)*p(T|x,C). Codeconstructorfit-only geometryresidual PCA12/KMeans16, noT incodeconstruction; C actualTrainauxlabel only. Inferencemarginalizes allcodes without actualqueryroute.",
+  "input": "Same206publicODfeatures plus90publicshorteststreet-signature features forEVERYbranch; no actualheldroute,N,timing,driver.",
+  "branches": [
+    "public_time_only_quantiles",
+    "semantic_global_route_marginal",
+    "matched_random_route_marginal"
+  ],
+  "matched_control": "Randompermutation of truefitcodes keepsclassfrequencies identical; sameclassifier andconditionaltimeparams/capacity. Also directtime-onlyquantilecontrol.",
+  "classifier": {
+    "iterations": 300,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 20261122,
+    "thread_count": 2,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "conditional_time": {
+    "iterations": 1000,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiQuantile:alpha=0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9",
+    "random_seed": 20261122,
+    "thread_count": 2,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "categorical": {
+    "max_ctr_complexity": 1,
+    "ctr_leaf_count_limit": 200000
+  },
+  "seed": 20261122,
+  "fit_n": 40000,
+  "held_n": 10000,
+  "checkpoint": "Fixedfinaltrees, no heldstopping/parametersweep.",
+  "distribution": "Monotonerearrange9conditionalquantiles clipped60..1785; linearlyinterpolatedCDF betweenquantiles withfixedsupporttails. SumCDFsweightedbyclassposterior, generalizedinversevia36bisections. Continuousseconds pointforecast, originalT unchanged.",
+  "semantic_gate": ">=2seconds gainoverstored206CatBoostMAEcontrol withupperdayCI<0 AND>=1second gainovermatchedrandom withupperCI<0 AND no worse thanpublictime-onlyquantilecontrol.",
+  "public_only_gate": "Independentlypreregistered: >=2seconds gainoverstored206CatBoostMAEcontrol withupperdayCI<0. Ifonlythispasses, teachersemanticsnotcredited andonlypublicsignaturetimebranchadvances.",
+  "selection": "Semantic ifitsgatepasses, otherwisepublic-only ifitsgatepasses, else nofullprimaryexpansion. Randomcontrol neverselected.",
+  "controls": "AllforecastscomputedbeforeheldTTmetrics. Actualheldcode used onlyafterforecasts forprivilegedoracle/classaccuracy diagnostics.",
+  "resources": "CPU2, <=150MiB; resumefinalstageweights byverifiedmanifest, noCDFondisk.",
+  "Validation": false,
+  "Test": false
+}

@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "file": "train_secuencias.npz",
+      "bytes": 94406271,
+      "sha256": "a7559dac06eb9666983ff2eedf208fca236c9c2eca38662dd790e8f6584f6b37"
+    },
+    {
+      "file": "validation_secuencias.npz",
+      "bytes": 11718211,
+      "sha256": "92c150387c623260017186c655db61143277e7464cd51b79053ca21aabe18f55"
+    }
+  ],
+  "bytes": 106124482,
+  "reason": "Finished nine-epoch configuration did not beat reference.",
+  "exact_regeneration_script": "reconstruir_secuencias_viales_od.py",
+  "every_completed_metric_prediction_source_preserved": true,
+  "confidence_counts_retained_sha256": "f4a8c37531bb40dad993e5fbd50984a13a3cbc287e9e0139a421caaa2ecb7ae6",
+  "protected_model_unchanged": true
+}

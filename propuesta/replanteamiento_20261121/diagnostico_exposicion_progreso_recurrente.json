@@ -1,0 +1,338 @@
+{
+  "complete": true,
+  "stage": "Post-result diagnostics; no newmodelselection orvalidationtuning",
+  "goal": "ACTIVE",
+  "Test": "sealed",
+  "train_vs_validation": {
+    "train": {
+      "public_forecasts": {
+        "root_median": {
+          "n": 1023485,
+          "mae_s": 125.14692936388907,
+          "rmse_s": 205.9138779733877,
+          "mdae_s": 75.0,
+          "mean_signed_error_s": -46.05231635050831
+        },
+        "public_path_mixture_median": {
+          "n": 1023485,
+          "mae_s": 243.62187243570315,
+          "rmse_s": 404.9339782800109,
+          "mdae_s": 113.11734008789062,
+          "mean_signed_error_s": 9.119475473716742
+        },
+        "public_path_weighted_mean": {
+          "n": 1023485,
+          "mae_s": 245.10979234427666,
+          "rmse_s": 400.054598376593,
+          "mdae_s": 112.6558837890625,
+          "mean_signed_error_s": 40.055714915422186
+        }
+      },
+      "fallback_probability_mean": 0.21985675394535065,
+      "tail_probability_mean": 0.10046857595443726,
+      "completed_probability_mean": 0.6796746850013733,
+      "root_fallback_probability_quantiles": [
+        0.0,
+        0.09103268384933472,
+        0.19450044631958008,
+        0.32585060596466064,
+        1.0
+      ],
+      "tail_probability_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000238418579
+      ],
+      "style_eta_sd_s_quantiles": [
+        0.0,
+        0.24914421141147614,
+        0.4623735249042511,
+        0.8288605809211731,
+        1.8465280532836912,
+        69.94226684570314,
+        4049.52978515625
+      ],
+      "fraction_style_eta_SD_below1second": 0.8057460539236042,
+      "fraction_style_eta_SD_below5seconds": 0.9550125307161317,
+      "prior_entropy_mean": 0.9854086637496948,
+      "prior_max_mean": 0.5659591555595398,
+      "warning": "LowETAspreadcanindicatestyleforecastcollapse butdoesnotproveidenticalroutes. No routearrays/actualqueryroute are used."
+    },
+    "validation": {
+      "public_forecasts": {
+        "root_median": {
+          "n": 127941,
+          "mae_s": 137.8945764063123,
+          "rmse_s": 220.84847161001406,
+          "mdae_s": 90.0,
+          "mean_signed_error_s": -51.530236593429784
+        },
+        "public_path_mixture_median": {
+          "n": 127941,
+          "mae_s": 256.87552120167504,
+          "rmse_s": 418.7144762975396,
+          "mdae_s": 122.1441650390625,
+          "mean_signed_error_s": 11.690107661676075
+        },
+        "public_path_weighted_mean": {
+          "n": 127941,
+          "mae_s": 257.73188999702666,
+          "rmse_s": 412.921486217437,
+          "mdae_s": 122.18463134765625,
+          "mean_signed_error_s": 41.689716475072586
+        }
+      },
+      "fallback_probability_mean": 0.21871593594551086,
+      "tail_probability_mean": 0.10909253358840942,
+      "completed_probability_mean": 0.6721914410591125,
+      "root_fallback_probability_quantiles": [
+        0.0,
+        0.08934229612350464,
+        0.1931248903274536,
+        0.32512128353118896,
+        1.0
+      ],
+      "tail_probability_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.000000238418579
+      ],
+      "style_eta_sd_s_quantiles": [
+        0.0,
+        0.2570320665836334,
+        0.48123955726623535,
+        0.898664653301239,
+        1.9852445125579834,
+        72.42654418945318,
+        2728.594970703125
+      ],
+      "fraction_style_eta_SD_below1second": 0.7809302725475024,
+      "fraction_style_eta_SD_below5seconds": 0.9538302811452154,
+      "prior_entropy_mean": 0.9748398065567017,
+      "prior_max_mean": 0.5796704888343811,
+      "warning": "LowETAspreadcanindicatestyleforecastcollapse butdoesnotproveidenticalroutes. No routearrays/actualqueryroute are used."
+    },
+    "uncertainty": {
+      "coverage80": 0.7581854135890762,
+      "width80_s_mean": 377.0678709556723,
+      "interpretation": "Descriptive reusedValidation only; no posthoccalibration."
+    }
+  },
+  "conditional_errors": {
+    "predicted_tail_probability": [
+      {
+        "group": "below.1",
+        "n": 105246,
+        "new": {
+          "n": 105246,
+          "mae_s": 133.85917212469892,
+          "rmse_s": 215.95059897481562,
+          "mdae_s": 80.22382770318927
+        },
+        "reference": {
+          "n": 105246,
+          "mae_s": 127.88196225984835,
+          "rmse_s": 207.1607964953397,
+          "mdae_s": 75.0
+        },
+        "delta_mae_s": 5.977209864850565
+      },
+      {
+        "group": ".1to.5",
+        "n": 7719,
+        "new": {
+          "n": 7719,
+          "mae_s": 153.22604282680658,
+          "rmse_s": 239.97116204497152,
+          "mdae_s": 94.56267987367255
+        },
+        "reference": {
+          "n": 7719,
+          "mae_s": 146.2106490478041,
+          "rmse_s": 232.67221221403318,
+          "mdae_s": 90.0
+        },
+        "delta_mae_s": 7.01539377900246
+      },
+      {
+        "group": "atleast.5",
+        "n": 14976,
+        "new": {
+          "n": 14976,
+          "mae_s": 143.11628339108606,
+          "rmse_s": 218.9543836870632,
+          "mdae_s": 90.17025009067083
+        },
+        "reference": {
+          "n": 14976,
+          "mae_s": 137.87960737179486,
+          "rmse_s": 211.9767667444314,
+          "mdae_s": 90.0
+        },
+        "delta_mae_s": 5.236676019291197
+      }
+    ],
+    "omitted_attachment_probability": [
+      {
+        "group": "below.25",
+        "n": 78950,
+        "new": {
+          "n": 78950,
+          "mae_s": 133.77282685696954,
+          "rmse_s": 214.39148315394917,
+          "mdae_s": 80.72788493503725
+        },
+        "reference": {
+          "n": 78950,
+          "mae_s": 128.04585180493984,
+          "rmse_s": 206.47063131580433,
+          "mdae_s": 75.0
+        },
+        "delta_mae_s": 5.726975052029726
+      },
+      {
+        "group": ".25to.5",
+        "n": 41955,
+        "new": {
+          "n": 41955,
+          "mae_s": 139.2177411266761,
+          "rmse_s": 222.4314122766997,
+          "mdae_s": 84.03059998794242
+        },
+        "reference": {
+          "n": 41955,
+          "mae_s": 132.72112978190918,
+          "rmse_s": 212.73131850295508,
+          "mdae_s": 75.0
+        },
+        "delta_mae_s": 6.4966113447669045
+      },
+      {
+        "group": "atleast.5",
+        "n": 7036,
+        "new": {
+          "n": 7036,
+          "mae_s": 143.825853432866,
+          "rmse_s": 228.073326185787,
+          "mdae_s": 86.98178075540397
+        },
+        "reference": {
+          "n": 7036,
+          "mae_s": 138.57518476407049,
+          "rmse_s": 220.85732901192824,
+          "mdae_s": 90.0
+        },
+        "delta_mae_s": 5.250668668795513
+      }
+    ],
+    "raw_OD_chord_km": [
+      {
+        "group": "0to1",
+        "n": 14737,
+        "new": {
+          "n": 14737,
+          "mae_s": 164.4836491429232,
+          "rmse_s": 291.9934413388853,
+          "mdae_s": 76.73256250608517
+        },
+        "reference": {
+          "n": 14737,
+          "mae_s": 155.78340232068942,
+          "rmse_s": 281.33888973269643,
+          "mdae_s": 75.0
+        },
+        "delta_mae_s": 8.70024682223379
+      },
+      {
+        "group": "1to2",
+        "n": 35775,
+        "new": {
+          "n": 35775,
+          "mae_s": 116.79453865314922,
+          "rmse_s": 198.83109632504662,
+          "mdae_s": 67.65653499913242
+        },
+        "reference": {
+          "n": 35775,
+          "mae_s": 112.91823899371069,
+          "rmse_s": 193.0024928962083,
+          "mdae_s": 60.0
+        },
+        "delta_mae_s": 3.8762996594385357
+      },
+      {
+        "group": "2to4",
+        "n": 51217,
+        "new": {
+          "n": 51217,
+          "mae_s": 133.60915276960486,
+          "rmse_s": 206.97775636364705,
+          "mdae_s": 83.99160559831671
+        },
+        "reference": {
+          "n": 51217,
+          "mae_s": 128.45930062284006,
+          "rmse_s": 198.83549387564844,
+          "mdae_s": 75.0
+        },
+        "delta_mae_s": 5.149852146764815
+      },
+      {
+        "group": "4to8",
+        "n": 25515,
+        "new": {
+          "n": 25515,
+          "mae_s": 151.12748464259823,
+          "rmse_s": 214.36645380636375,
+          "mdae_s": 106.56169182814892
+        },
+        "reference": {
+          "n": 25515,
+          "mae_s": 142.22163433274545,
+          "rmse_s": 203.0454853864091,
+          "mdae_s": 105.0
+        },
+        "delta_mae_s": 8.905850309852784
+      },
+      {
+        "group": "8toinf",
+        "n": 697,
+        "new": {
+          "n": 697,
+          "mae_s": 161.84477516308067,
+          "rmse_s": 218.14091020232968,
+          "mdae_s": 119.60936702943854
+        },
+        "reference": {
+          "n": 697,
+          "mae_s": 156.43472022955524,
+          "rmse_s": 212.99842382264842,
+          "mdae_s": 120.0
+        },
+        "delta_mae_s": 5.410054933525418
+      }
+    ]
+  },
+  "mass_identity_verified_all_queries": true,
+  "all_primary_queries_kept": true,
+  "limits": [
+    "Trainforecasts are in-sample for frozenrepresentation; stageB usesin-samplesummaries. Train/Valgap helpsdetectoverfit, not a causalproof.",
+    "Teacherrouteaccuracy doesnotmeasure targetfreewholetriprouteaccuracy.",
+    "Pseudotimes inherited from15secondGPS allocation; residualdelay is notannotated idling.",
+    "Tail/head split andstyle dispersion are modelpredictions; no GTroute/noactualqueryN used.",
+    "Feature29 is minoverencoded16public distances, including0forunreachablepairs; interpretasencodedminimum, notalwaysshortestvaliddistance."
+  ],
+  "predictions_sha256": "b272e450291f9f3c770f6518f6d861aec8c4f06c6dc7e5cec759f10083c840e7",
+  "source_sha256": "aa514aa6e5d818dcd75903b88efa9ff6567e09d72e1ee41c97e60e197a7c0faa",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 1.0644752979278564
+}

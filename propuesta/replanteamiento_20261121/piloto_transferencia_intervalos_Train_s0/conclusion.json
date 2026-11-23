@@ -1,0 +1,60 @@
+{
+  "complete": true,
+  "passed": false,
+  "metrics": {
+    "baseline": {
+      "n": 10000,
+      "mae_s": 133.51143159502624,
+      "rmse_s": 208.755103301834,
+      "mdae_s": 87.30363051134873
+    },
+    "pseudo_label_control": {
+      "n": 10000,
+      "mae_s": 133.97135480969416,
+      "rmse_s": 208.94729424245128,
+      "mdae_s": 87.96544732194846
+    },
+    "observed_intervals": {
+      "n": 10000,
+      "mae_s": 133.78532839152166,
+      "rmse_s": 208.6285604302447,
+      "mdae_s": 87.10693977825676
+    }
+  },
+  "comparisons": {
+    "vs_baseline": {
+      "delta_mae_s": 0.2738967964954254,
+      "ci95_s": [
+        -0.38270282038540315,
+        0.9359853343026779
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain; not primaryValidation or confirmation."
+    },
+    "vs_pseudo_label_control": {
+      "delta_mae_s": -0.18602641817248822,
+      "ci95_s": [
+        -0.8521289147479262,
+        0.5118890209806373
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain; not primaryValidation or confirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": 0.42993559871973946,
+      "ci95_s": [
+        -0.33361314157675465,
+        1.2383913910578441
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain; not primaryValidation or confirmation."
+    }
+  },
+  "scope": "ReusedchronologicalTrainpilot; notprimaryValidation orconfirmation.",
+  "interpretation": "Boundary-aware density-weighted sourceintervalaugmentation did not improve the freshbaseline; no evidence that source-time labels help through this recipe.",
+  "decision": "Retire this augmentationrecipe without a sourceweight/count/tree sweep. No fullprimarytrial.",
+  "all_completed_predictions_metrics_config_sources_retained": true,
+  "weights_persisted": false,
+  "frozen_best_unchanged": true,
+  "Test": "SEALED"
+}

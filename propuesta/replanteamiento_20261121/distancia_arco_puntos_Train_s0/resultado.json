@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "points": 42624621,
+  "source_point_bank_sha256": "fc73c4e73788c9b2005bfb48bc18cb86adc64d9aeb52c1f76fd5454523e478ed",
+  "units": "metres, zero at each parentstart",
+  "outputs_sha256": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+  "MiB": 144.71876907348633,
+  "max_independent1024parent_error_m": 0.0013273769909574185,
+  "source_sha256": "476dded3d9fa15fd8608dd766a73f442c548d1cbdbcbb6161167f103547e2c30",
+  "purpose": "Correct arclength-sampled historicalsource geometry andfullintervalpathlength; noGPSN/T/querypath changes.",
+  "no_Validation_or_Test": true,
+  "actual_data_files_accessed": [],
+  "seconds": 7.977692365646362
+}

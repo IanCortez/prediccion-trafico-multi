@@ -1,0 +1,142 @@
+{
+  "experiment": "control_historica_fresca_s0",
+  "stage": "Training active unless complete resultado.json exists; no certification claimed here.",
+  "candidates": [
+    {
+      "epoch": 34,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_34.pt",
+      "model_sha256": "7eeda827e68c73ea4fc608b0c3784f233e9f9f2c254ca8c1724b74743979d558",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.8108424977138,
+        "rmse_s": 209.90518043313904,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 36,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_36.pt",
+      "model_sha256": "2f75c8c536acb1f16f7b7f21dc4a1f98173404bd1fb553bb219fcd90cccdf3d9",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.6849250826553,
+        "rmse_s": 209.64162178744087,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 37,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_37.pt",
+      "model_sha256": "00b3ddaa5f6726aba1212a32de120f005da661acae7a52c3f35003dc99a5c0e0",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.00628414659883,
+        "rmse_s": 210.6247928485329,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 38,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_38.pt",
+      "model_sha256": "d770544f2cd69d94da3de975d6df1ad8f6a7feac824420b0081803cde5040f97",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.894201233381,
+        "rmse_s": 209.74308806058502,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 40,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_40.pt",
+      "model_sha256": "361c349c9d31bcdc19bb8b9a1c6cefd6dd7930cd2f332fb021dd499b63fbb512",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.56416629540178,
+        "rmse_s": 209.5718496506962,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 41,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_41.pt",
+      "model_sha256": "59ae15c252f889bccb1c0fd3cfcdf5954f91e0ed9c49cd80f0761ea1c2f352ce",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.95387717776163,
+        "rmse_s": 210.98160522281768,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 42,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_42.pt",
+      "model_sha256": "1e660cd80c72b053762c3220643142613a784d0ef211ee0cdd6a81389d6e7726",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.00804276971417,
+        "rmse_s": 211.44629401938306,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 44,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_44.pt",
+      "model_sha256": "d248ec1747d36320d1378f77465557611c6cd6bf67d696891d5637138c509814",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.75632518113818,
+        "rmse_s": 210.96898083125993,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 45,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_45.pt",
+      "model_sha256": "3189c8d96427c997be135db0c2d199299fe11fa83e93e4fff159c7c09eb2e618",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.9167116092574,
+        "rmse_s": 210.40801871613013,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 48,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_48.pt",
+      "model_sha256": "c668f63fdc086f05b5a89dbdd5d437c847087bcc247fe8a60b3290a2b402fa1e",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.79935282669356,
+        "rmse_s": 210.6676342287067,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    },
+    {
+      "epoch": 49,
+      "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_historica_fresca_s0\\epoca_49.pt",
+      "model_sha256": "384ad47b23ae2e5b6b044644beb057108b1b8009e84d831de74c045ae21e879a",
+      "validation": {
+        "n": 127941,
+        "mae_s": 130.7596079442868,
+        "rmse_s": 210.47154782985046,
+        "mdae_s": 75.0
+      },
+      "preserve": true
+    }
+  ],
+  "latest_completed_epoch": 49,
+  "all_completed_metrics_predictions_retained": true,
+  "final_goal73_5_achieved": false,
+  "Test_access": false
+}

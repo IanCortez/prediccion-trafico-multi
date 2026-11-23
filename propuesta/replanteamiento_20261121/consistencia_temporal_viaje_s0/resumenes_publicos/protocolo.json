@@ -1,0 +1,15 @@
+{
+  "model_sha256": "02f8b0ce622e541c35f80ea693abf9b91241d55b4f66e88a2f43c029a84f5431",
+  "canonical_batch": 1024,
+  "paths": 16,
+  "max_steps": 192,
+  "features": 30,
+  "sources": {
+    "generar_resumenes_consistencia_temporal_viaje.py": "001163b664bb89ec67b30b080cf5432977f90d9171f7b274fff6d15038e72de7",
+    "modelo_consistencia_temporal_viaje.py": "2f8904022fa56c37e37206a904bc2deba9193753d91ce6566ed2fe0642089c1e",
+    "modelo_progreso_recurrente.py": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+    "datos_progreso_recurrente.py": "9ca6dc2adc29abf746940143528f92ea7d49fc18a53768a3e1e2c019268cb05c"
+  },
+  "no_private_teacher_constructed": true,
+  "Test": "sealed"
+}

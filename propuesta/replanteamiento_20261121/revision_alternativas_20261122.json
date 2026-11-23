@@ -1,0 +1,28 @@
+{
+  "considered": [
+    {
+      "title": "TrajRoute",
+      "year": 2025,
+      "url": "https://www.johnkrumm.net/_files/ugd/3e3382_9d657170e9144dcb873791573d75c542.pdf",
+      "lesson": "Followobservedtrajectoryintervals; paperalsoallowsstitching andmapfallback.",
+      "limitation": "Routing vsAzureMaps, SanFrancisco, ±30minutequerywindow; notourevaluation orTrain-onlyhistoricaltraffic. No paperfilteradopted."
+    },
+    {
+      "title": "MDTI: MultimodalTrajectoryRepresentationLearningforTravelTimeEstimation",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2510.05840v2",
+      "lesson": "Modality-specificGPS/grid/roadencoders, contrastivealignment andmasking.",
+      "limitation": "Consumesobservedtrajectory atquery. WouldrequireTrain-onlyteacher orODadaptation andnewproof; itsreportedTTEscoreisnotODbenchmark. No directreplicaclaim."
+    },
+    {
+      "title": "ETA PredictioninLast-MileLogisticsUnderDomainShift",
+      "year": 2026,
+      "url": "https://www.mdpi.com/2076-3417/16/17/8861",
+      "lesson": "Targetsupervision andmatchedtargetonlycontrols matterfortransfer.",
+      "limitation": "Lastmilelogistics andlabeledtarget adaptation differs; cannotconsumeValidation/Testlabels forourtraining."
+    }
+  ],
+  "implementation": "Orderedsubtrajectorysourceexpert completed129.990034; jointfresh30componentexperimentnext.",
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "scope": "Privileged known-current-road and true-terminal-road chronological Train route-predictability diagnostic. Not ODprediction or endtoendroute accuracy.",
+  "fit_states": 156891,
+  "held_states": 39235,
+  "accuracy": 0.9082197017968651,
+  "greedy_accuracy": 0.8719255766534981,
+  "accuracy_gain": 0.03629412514336694,
+  "mean_NLL": 0.31324745800061743,
+  "control_mean_NLL": 0.5276593581855072,
+  "delta_NLL": -0.21441190018488976,
+  "delta_NLL_day_CI95": [
+    -0.22593098437492393,
+    -0.20249519879664463
+  ],
+  "no_time_targets_in_features": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "source_sha256": "c30a8a62e389682cdee835a632fddbb9ef955cc494dd62c1ee986c3bf346f658",
+  "predictions_sha256": "b9f7d55be11cc004df985099faca17d361623af9bd81a5ab1b1af996a90cb406",
+  "model_sha256": "fc2b0a88983516f85bc8b1d2bc7fa69cd7631acfc685df420fe17ca623951940",
+  "limitation": "Teacherstate top1 accuracy compounds along whole generatedroutes; trueendpointroad is privileged here. A separate raw5publicendpoint ODgate is required before full routearchitecture.",
+  "seconds": 41.03339242935181
+}

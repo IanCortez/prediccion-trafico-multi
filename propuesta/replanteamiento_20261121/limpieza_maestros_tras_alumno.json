@@ -1,0 +1,32 @@
+{
+  "removed": [
+    {
+      "file": "propuesta\\replanteamiento_20261121\\maestro_cruzado_s0\\maestro_fold_0.cbm",
+      "bytes": 3204152,
+      "sha256": "e9e6dd464310b9eccae2dafcea86d148d27fbca8ce6a56bc111ee095c8cfbaca"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\maestro_cruzado_s0\\maestro_fold_1.cbm",
+      "bytes": 3201016,
+      "sha256": "81284b31562cd39972dbef35af58d7f853e389e5c79aafca46b85e9deaae2a69"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\maestro_cruzado_s0\\maestro_fold_2.cbm",
+      "bytes": 3203968,
+      "sha256": "f8f193d3ff649214287aeba85ea18f2f586715222e1f62e7587fcb59e977025a"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\maestro_cruzado_s0\\maestro_fold_3.cbm",
+      "bytes": 3203864,
+      "sha256": "1c9a905a86b0e330cb3e689225f3c649616dfd2d80798f7bc3c9908929fdd7ec"
+    },
+    {
+      "file": "propuesta\\replanteamiento_20261121\\maestro_cruzado_s0\\maestro_fold_4.cbm",
+      "bytes": 3201664,
+      "sha256": "edf1d1075e2d037894a1f6a006790227a348711d3ea6e7b65ec16947b38207da"
+    }
+  ],
+  "predicted_parameters_retained": true,
+  "params_sha256": "b50586ecd81295876117a675029ceca3800555565b12c6c473639325fc0cb3b1",
+  "original_reference_protected": true
+}

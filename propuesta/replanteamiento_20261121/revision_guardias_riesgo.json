@@ -1,0 +1,14 @@
+{
+  "passed_static_review": true,
+  "changes": {
+    "no_completed_policy_samples_metric_is_null_not_zero": true,
+    "GPU_smoke_same_Train_query_selection_as_passed_CPU_probe": true,
+    "finished_checkpoint_prevents_extra_training_on_inference_resume": true,
+    "teacher_fallback_does_not_remove_primary_queries": true,
+    "source_not_running_when_edited": true,
+    "actual_GPU_validation_pending": true
+  },
+  "trainer_sha256": "7eba76afd0911c0ddb27918860918cd7b15bbcc4d51752266b62e42e38a076e8",
+  "Test": "sealed",
+  "goal": "active"
+}

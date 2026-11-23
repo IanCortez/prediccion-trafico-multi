@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "finite_nonzero_complete_path_gradients": true,
+  "smoke_Train_rows": [
+    27206,
+    872030,
+    654997,
+    183321
+  ],
+  "encoder_dropout_disabled": true,
+  "GRU_train_mode_dropout0": true,
+  "canonical128_inference_passed": true,
+  "initial_teacher_NLL": 0.27964451909065247,
+  "Test_access": false
+}

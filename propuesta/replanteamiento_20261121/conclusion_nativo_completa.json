@@ -1,0 +1,116 @@
+{
+  "n": 127941,
+  "outputs": [
+    {
+      "alpha": 0,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.25671207822356,
+        "rmse_s": 210.804448731162,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.0,
+        "ci95_s": [
+          0.0,
+          0.0
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 0.05,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.33995357234974,
+        "rmse_s": 210.7964898947443,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.0832414941261988,
+        "ci95_s": [
+          0.006151231749099954,
+          0.16773905720199445
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 0.2,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.9470302717659,
+        "rmse_s": 211.10133892247694,
+        "mdae_s": 75.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 0.6903181935423359,
+        "ci95_s": [
+          0.357316528797621,
+          1.0760752989566456
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 0.5,
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.5261800361104,
+        "rmse_s": 214.01658372126568,
+        "mdae_s": 90.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 4.269467957886839,
+        "ci95_s": [
+          3.211485117578983,
+          5.484854452646979
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    },
+    {
+      "alpha": 1,
+      "validation": {
+        "n": 127941,
+        "mae_s": 148.7559500082069,
+        "rmse_s": 225.78150363230677,
+        "mdae_s": 105.0
+      },
+      "paired_vs_reference": {
+        "delta_mae_s": 17.49923792998335,
+        "ci95_s": [
+          15.105194130872276,
+          20.232833904700843
+        ],
+        "days": 35,
+        "interpretation": "Exploratory; reused Validation and adaptive model search"
+      }
+    }
+  ],
+  "selected_alpha": 0,
+  "selected_output_is_exact_original_reference": true,
+  "no_new_primary_best": true,
+  "preservation_threshold_reached": false,
+  "interpretation": "Autoregressive teacher-forced likelihood improved in Train, but none of these complete outputs improved primary MAE. Do not extend this same training or rerun blend searches. Test full-trip marginal CRPS next.",
+  "historical_prior_rejected": {
+    "NLL_history": 0.5270418524742126,
+    "NLL_native": 0.511324405670166,
+    "NLL_matched_control": 0.5111778378486633,
+    "difference": {
+      "delta_NLL": 0.0158639308065176,
+      "CI95_by_Train_day": [
+        0.014052179521716595,
+        0.017760368517770454
+      ],
+      "days": 63
+    },
+    "scope": "Only new heads held out; frozen representation saw Train. Reject this configuration, not every use of temporal history."
+  },
+  "Test": "sealed",
+  "goal": "active"
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "batch": 32,
+  "loss": 3.088813066482544,
+  "GPU_reserved_MiB": 3286.0,
+  "seconds": 0.2802717685699463,
+  "parent_gradients_absent": true
+}

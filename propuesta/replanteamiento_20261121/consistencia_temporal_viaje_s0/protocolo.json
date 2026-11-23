@@ -1,0 +1,30 @@
+{
+  "seed": 20261122,
+  "epochs": 2,
+  "parent_batch": 256,
+  "fragment_max": 128,
+  "lr": 0.0007,
+  "final_lr": 7e-05,
+  "weight_decay": 0.0003,
+  "clip": 5,
+  "trained_parameters": 8386,
+  "body": "Frozenroot/GRU/roadembeddings/policy/valuehead; onlypositivepace/delaycorrection trained.",
+  "initialization": {
+    "model_sha256": "4578fbf4a678f78f3f6993d4ad0a4fe70b23b3076c0e48f39b804c0ab0c14473",
+    "bytes": 8994361,
+    "source": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\progreso_vial_recurrente_s0\\modelo_secuencia_epoca6.pt",
+    "reason": "Boundedwarmstartfortheplannedwholetripconsistencyexperiment; preserve26minutes ofpretrainingwhileoriginalStageBmayremoveunqualifiedweights.",
+    "retention": "One8.58MiBtemporaryinitialization; removeafterfamilyifnotneededbyqualifiedmodelreproduction. Notapromotedcandidate."
+  },
+  "loss": "MeanparentL1(sumknownpredictedlocaltimes,sumoriginalknownTrainlocaltimes)/600 +.001meanboundedcorrectionSquared.",
+  "target": "Aggregateknown portion of originalTrainT, notloglocalHuber. Everyauxparentweightedonce; no inverseobservedN/durationweight.",
+  "style": "PRIVATEteacher prefix/clock/positions but PUBLICprior-mode style; no recognitionposterior or targetT predictorinput.",
+  "original_primary_Train": 1023485,
+  "primary_filter_changes": false,
+  "final_point_stage": "AlloriginalTrainT andunchangedValidation.",
+  "query": "Samepublicraw5; ownpredictedroute/clock. Top4pairs*4styles,192stepcap,30summaries unchanged.",
+  "stopping": "Fixedtwoepochs; noValidationselection orlearningrate/count/stepcapseach.",
+  "reuse_control": "Reusepreviousfull216CatBoostcontrol: identicaldataset/features/hyperparameters; no redundantrefit.",
+  "source_parent": "progreso_vial_recurrente_s0/resultado_etapa_A.json",
+  "Test": "sealed"
+}

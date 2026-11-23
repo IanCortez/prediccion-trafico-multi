@@ -1,0 +1,10 @@
+{
+  "primary_n": 1023485,
+  "teacher_fragments": 2099324,
+  "teacher_tokens": 41775036,
+  "teacher_RAM_MiB": 1058.0713386535645,
+  "source_adapter_sha256": "118c0474744e1a03cdfb51592c35de45014628a561548f599db5b9cb57b7efc6",
+  "no_primary_filtered": true,
+  "all_source_arrivals_beforeValidation": true,
+  "Test": false
+}

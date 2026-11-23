@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "Train_loss": 4.676866054534912,
+  "input_features": 216,
+  "primary_and_auxiliary_gradients_finite": true,
+  "learned_road_embedding_gradient_nonzero": true,
+  "raw_target_payload_not_a_public_method_argument": true,
+  "batch_reverse_singleton_quantiles_exact": true,
+  "initial_weights_sha256": "4a3e38ba8c8e9c2d69cbe054224a220ababfcebe380eaa0950da75799fb2fc71",
+  "parameters": 3110987,
+  "Test": false
+}

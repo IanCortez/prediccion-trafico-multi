@@ -1,0 +1,237 @@
+{
+  "id": "control_dos_rutas_proyeccion_s0",
+  "config": {
+    "mode": "defaults",
+    "seed": 20261122,
+    "epochs": 9,
+    "frozen_base_epochs": 3,
+    "joint_epochs": 6,
+    "batch": 512,
+    "base_lr": 1e-05,
+    "branch_lr": 0.001,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "geometry_weight": 0.2,
+    "rps_weight": 5,
+    "initial_gate_logit": -4,
+    "gps_prior_sigma_m": 30,
+    "architecture": "Protected8component time/geometry mixture plus8public-route candidate components with a shared545-128-128-31head. Gate574-64-1uses global hidden state and mean/std of normalized candidate set. Extra hypotheses preserve unknown-route base modes.",
+    "control": "Same constructor,state initialization,normalization,optimizer,sampling and loops; only first two protected route candidates available.",
+    "training": "Three epochs frozen protected tower, then six joint epochs. Original primary labels/filters and query information unchanged.",
+    "query": [
+      "o_lon",
+      "o_lat",
+      "d_lon",
+      "d_lat",
+      "timestamp"
+    ],
+    "primary_Train_n": 1023485,
+    "Validation_n": 127941,
+    "Test": "sealed",
+    "precision": "FP32 highest model; canonicalFP16public-route inputs; standard seeded CUDA, no bitwise training guarantee",
+    "canonical_inference_batch": 2048,
+    "candidate_head_inference_chunk": 256,
+    "initialization_note": "The default initial new mixture includes a1.8percent candidate gate; its epoch0 is not the original reference. Base-only control must reproduce reference exactly.",
+    "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+    "data_manifest_sha256": "9b44173f87ca36209d0a67b66282ddd22c08da23ab99f21150ce632b04eb95c5",
+    "preserve": "All completed metrics/predictions, even above131.06; weights for every strict new primary best and every fullMAE<131.06."
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.24850517035196,
+    "rmse_s": 210.64766938458985,
+    "mdae_s": 75.0
+  },
+  "initial_validation": {
+    "n": 127941,
+    "mae_s": 131.25811897671582,
+    "rmse_s": 210.9012238296965,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 3,
+  "new_function_selected": true,
+  "learned_update_selected": true,
+  "selected_original_reference": false,
+  "all_epoch_validation": [
+    {
+      "epoch": 1,
+      "base_frozen": true,
+      "primary_train_n": 1023485,
+      "train_loss": 3.584290483304139,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.28485004806902,
+        "rmse_s": 210.7166095821084,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 46.205065965652466
+    },
+    {
+      "epoch": 2,
+      "base_frozen": true,
+      "primary_train_n": 1023485,
+      "train_loss": 3.583732645587696,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.26116725678241,
+        "rmse_s": 210.65593438336327,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 80.40173149108887
+    },
+    {
+      "epoch": 3,
+      "base_frozen": true,
+      "primary_train_n": 1023485,
+      "train_loss": 3.583336371298384,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.24850517035196,
+        "rmse_s": 210.64766938458985,
+        "mdae_s": 75.0
+      },
+      "preserved": true,
+      "seconds": 114.47833037376404
+    },
+    {
+      "epoch": 4,
+      "base_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6254467879239596,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.37418810232842,
+        "rmse_s": 210.98858603278777,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 168.38687109947205
+    },
+    {
+      "epoch": 5,
+      "base_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.623545040148981,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.367036368326,
+        "rmse_s": 210.65340900147586,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 222.12720727920532
+    },
+    {
+      "epoch": 6,
+      "base_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.622458462535849,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.37031913147467,
+        "rmse_s": 210.66797649053262,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 275.95941829681396
+    },
+    {
+      "epoch": 7,
+      "base_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.621534940371422,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.34253288625226,
+        "rmse_s": 210.87231188608416,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 329.79611444473267
+    },
+    {
+      "epoch": 8,
+      "base_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6207713408301894,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.38087087016672,
+        "rmse_s": 210.77017938018787,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 383.6686954498291
+    },
+    {
+      "epoch": 9,
+      "base_frozen": false,
+      "primary_train_n": 1023485,
+      "train_loss": 3.6200168587097745,
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.41018125542243,
+        "rmse_s": 210.62443799218218,
+        "mdae_s": 75.0
+      },
+      "preserved": false,
+      "seconds": 437.68119645118713
+    }
+  ],
+  "initial_model_state_sha256": "7129df6cf0c55d8a242ae12aea1694beada9b7ff62d3f06b2fb20565d527c07c",
+  "model_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\control_dos_rutas_proyeccion_s0\\epoca_3.pt",
+  "model_sha256": "f1762f5ca2fcfe4d1ec623375e9455c93c2c905930075b05364c34681a246e87",
+  "saved_checkpoints": [
+    {
+      "epoch": 3,
+      "file": "epoca_3.pt",
+      "sha256": "f1762f5ca2fcfe4d1ec623375e9455c93c2c905930075b05364c34681a246e87",
+      "validation": {
+        "n": 127941,
+        "mae_s": 131.24850517035196,
+        "rmse_s": 210.64766938458985,
+        "mdae_s": 75.0
+      },
+      "threshold_qualifies": false
+    }
+  ],
+  "paired_vs_reference": {
+    "delta_mae_s": -0.008206907871597065,
+    "ci95_s": [
+      -0.03235090817225726,
+      0.014208099519955022
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "predictions_sha256": "ed7e0cd033218c30abaa6ddfb0c3f45a91daece6b42c94cdf94a9bd7d822e363",
+  "sources": {
+    "entrenar_mezcla_proyeccion.py": "fcbee8ae15926ac6ec75ed1e660f1f6c9d99d1e100d47533ad05d254228356df",
+    "modelo_mezcla_proyeccion.py": "0881ec64259b9c4195a9b94c5cb43233c1a547177ade6715eceb6abc2ee83672",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "rutas_proyeccion_incierta.py": "ecfdf06d4c6db7041f0b6743e5015140ad460e671e4d5035df72519477173cda",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "parent_unchanged": true,
+  "seconds": 438.9308273792267,
+  "goal": "ACTIVE unless confirmation target later actually achieved"
+}

@@ -1,0 +1,30 @@
+{
+  "reason": "NumPy polyfit float32 default rcond scales with about1million rows and truncated the fit. Refit logs in float64 before any model training.",
+  "old_constructor_sha256": "f29d79e755587a2f278732846812ff8fde71e26594799b14ebe0771613209c33",
+  "old_time_anchor": [
+    3.14603590965271,
+    0.5042617917060852
+  ],
+  "used_constructor_file": "constructor_Train_fp64.npz",
+  "used_constructor_sha256": "53b6bdf1b83d5a93a02e5aa0a5004773f789959ee411e92c2684789aad773def",
+  "new_time_anchor": [
+    1.4295733546607479,
+    0.7766074218486033
+  ],
+  "log_time_std": 0.4417802080702298,
+  "rank": 2,
+  "rcond": 2.2707480340500297e-10,
+  "singular_values": [
+    1.4133280153121175,
+    0.050039195977496426
+  ],
+  "normalization_mean_std_unchanged": true,
+  "all_route_input_cache_files_unchanged": true,
+  "scope": "EligibleTrain only, supervised scalar model preprocessing; no Validation labels.",
+  "source_sha256": "ca868ad279d86e860287ac7255addeabe4a4e60285b9f6bd66af44f71e561a1b",
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 1.3343837261199951
+}

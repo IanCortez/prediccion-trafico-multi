@@ -1,0 +1,102 @@
+{
+  "complete": true,
+  "scope": "TRAIN diagnostics only; not primaryValidation orconfirmation; no newcheckpoint qualifiesfromthesevalues.",
+  "all_primary_Train_queries": 1023485,
+  "public_forecasts_Train": {
+    "root": {
+      "n": 1023485,
+      "mae_s": 125.14692936388907,
+      "rmse_s": 205.9138779733877,
+      "mdae_s": 75.0,
+      "mean_signed_error_s": -46.05231635050831
+    },
+    "public_mixture_median": {
+      "n": 1023485,
+      "mae_s": 243.62187243570315,
+      "rmse_s": 404.9339782800109,
+      "mdae_s": 113.11734008789062,
+      "mean_signed_error_s": 9.119475473716742
+    },
+    "public_weighted_mean": {
+      "n": 1023485,
+      "mae_s": 245.10979234427666,
+      "rmse_s": 400.054598376593,
+      "mdae_s": 112.6558837890625,
+      "mean_signed_error_s": 40.055714915422186
+    }
+  },
+  "matched512_scenarios": {
+    "all512": {
+      "root": {
+        "n": 512,
+        "mae_s": 121.611328125,
+        "rmse_s": 201.43491601662558,
+        "mdae_s": 75.0,
+        "mean_signed_error_s": -49.951171875
+      },
+      "public_mixture_median": {
+        "n": 512,
+        "mae_s": 226.13316111266613,
+        "rmse_s": 385.89647275206806,
+        "mdae_s": 110.44509887695312,
+        "mean_signed_error_s": -15.415703609585762
+      },
+      "public_weighted_mean": {
+        "n": 512,
+        "mae_s": 221.20283149182796,
+        "rmse_s": 375.56276932931496,
+        "mdae_s": 101.16986083984375,
+        "mean_signed_error_s": 9.185792699456215
+      },
+      "private_teacher_prefix_clock_style": {
+        "n": 512,
+        "mae_s": 101.68864040612243,
+        "rmse_s": 144.67558981295403,
+        "mdae_s": 71.43646240234375,
+        "mean_signed_error_s": -81.34562942548655
+      }
+    },
+    "known_time_complete_diagnostic_subgroup": {
+      "root": {
+        "n": 411,
+        "mae_s": 110.62043795620438,
+        "rmse_s": 179.20291886960675,
+        "mdae_s": 75.0,
+        "mean_signed_error_s": -38.284671532846716
+      },
+      "public_mixture_median": {
+        "n": 411,
+        "mae_s": 179.67848903535346,
+        "rmse_s": 313.25289443505375,
+        "mdae_s": 93.93728637695312,
+        "mean_signed_error_s": -53.04487439083647
+      },
+      "public_weighted_mean": {
+        "n": 411,
+        "mae_s": 173.53308170439263,
+        "rmse_s": 308.2576024959895,
+        "mdae_s": 89.5328369140625,
+        "mean_signed_error_s": -31.480925901092753
+      },
+      "private_teacher_prefix_clock_style": {
+        "n": 411,
+        "mae_s": 92.81482905366995,
+        "rmse_s": 130.17836316357895,
+        "mdae_s": 67.45101928710938,
+        "mean_signed_error_s": -71.99941522361588
+      }
+    }
+  },
+  "complete_time_subgroup_n": 411,
+  "scenario_difference": "Private usesGTroad/prefix/clock/recognizedstyle; public usesgeneratedroute/clock, priorstylemixture andattachmentfallback. Differencecannotbeattributedtoroutealone.",
+  "known_time_subgroup_warning": "Diagnostic-onlygroup withinfixed512, never changesprimarycohort/labels ormodelselection threshold.",
+  "sources_sha256": "6a5be3a0e5714884c37b7bab3e07878036cac24dc69b5dfce5495a71c7398331",
+  "public_bank_sha256": "d21010d34cf40374834642a60b7da50dce3e25e09e780edc24534971c8f901a6",
+  "private_predictions_sha256": "e9a7e28651a46126fb7008e3bf5031ab333c3e073c9a51edf4073e9ae4bb92c2",
+  "no_Validationlabels_or_Test": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 0.821662187576294
+}

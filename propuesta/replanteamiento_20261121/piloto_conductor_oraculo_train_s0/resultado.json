@@ -1,0 +1,33 @@
+{
+  "passed": false,
+  "scope": "Privilegeddriver chronological heldTrainoracle, not deployableOD. Train metadata supervision idea only.",
+  "metrics": {
+    "n": 50000,
+    "mae_s": 134.3420374825961,
+    "rmse_s": 211.10437385248366,
+    "mdae_s": 86.73494868689727
+  },
+  "control": {
+    "n": 50000,
+    "mae_s": 135.46413079566094,
+    "rmse_s": 212.31790492326266,
+    "mdae_s": 87.7914278376644
+  },
+  "comparison": {
+    "delta_mae_s": -1.1220933130647999,
+    "ci95_s": [
+      -1.3732689239026674,
+      -0.876242719850856
+    ],
+    "days": 22,
+    "interpretation": "PrivilegeddriverchronologicalheldTrain only; no primaryODdriver input or confirmation."
+  },
+  "unique_fit_drivers": 436,
+  "unique_held_drivers": 431,
+  "source_sha256": "379353359a75048690288552397d6b8445bca2894b317f5778e1e96fa1c9f52c",
+  "predictions_sha256": "ce25a4cebd1effea04032c92a5fe2f41d9928907651dc7215182ea2d034d3d1f",
+  "hashed_labels_sha256": "9f3760db3f3ee96c82223cb96204308ce859f48a3572257352793115266777a1",
+  "Validation_metadata_decoded": false,
+  "Test_metadata_decoded": false,
+  "seconds": 135.18637347221375
+}

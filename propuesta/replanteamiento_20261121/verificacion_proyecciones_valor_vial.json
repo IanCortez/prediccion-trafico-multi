@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "n": 65,
+  "Train_only": true,
+  "raw_public4candidate_chain_fraction_error_distance_reachability_exact": true,
+  "singleton_reverse_exact": true,
+  "source_sha256": "4488e2b17dca23ae8d1e26c1c5749f1ef92c0e96ce90c25dcb2be3571f6798e5",
+  "bank_manifest_sha256": "99cca39e34d10a73c84dbec95ca4fc1a0f96134b0d23880b03c9277b2e353183",
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 0.9818639755249023
+}

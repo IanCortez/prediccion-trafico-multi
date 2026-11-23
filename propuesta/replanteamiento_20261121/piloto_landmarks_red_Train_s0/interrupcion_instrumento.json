@@ -1,0 +1,8 @@
+{
+  "scientific_model_fit": false,
+  "scientific_score_computed": false,
+  "error": "Projectionweights lacked singletonlandmarkdimension for512x4x32broadcast.",
+  "correction": "Addexplicitfinalaxis, samegeometry/weights/landmarks/rows/targets/settings.",
+  "next_run": "piloto_landmarks_red_Train_v2_s0",
+  "original_frozen_sources_preserved": true
+}

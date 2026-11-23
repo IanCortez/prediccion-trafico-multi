@@ -1,0 +1,26 @@
+{
+  "scope": "Exploratoryreusedchronological40kfit/10kheldTrain, not primaryValidation orconfirmation.",
+  "hypothesis": "Directednetworkdistanceprofiles provideglobaltopologicalODrelations beyondcoordinates andfewexplicitshortestroute summaries.",
+  "static": "32farthestEuclideanreferencejunctions inlargest2014SCC andprimarybbox, selectedwithoutlabels. ExistinglengthDreadonly, no newallpairmatrix.",
+  "geometry": "Fourdirectedendpoint-to/from-reference profiles, marginalizefourpublicGPSprojectioncandidates withsigma30m andaccesserror; log1p(km),132columns.",
+  "control": "Same132columncount, Euclideanreference distances instead ofnetworkdistance, availability1. Directionduplicates areintentional isotropiccontrol; notidenticaleffectivefeatureentropy.",
+  "baseline": "Stored206publicCatBoostreference133.355393, exactsamefit/heldrows andpurgedcutoff.",
+  "time_model": {
+    "iterations": 1000,
+    "depth": 8,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss": "MAE",
+    "target": "T/600; forecast*600, originallabelsseconds"
+  },
+  "gate": ">=2secondsbetterthan storedreference AND>=1secondbetterthan matchedEuclidean withupperdayCI<0; no new referencecount/forestdepth sweep.",
+  "info": "Raw5 query only; no heldGPSroute/N/T. All10mm_features excludedfrom206base.",
+  "resources": "OneGPU .25cap, CPU2; <=100MiB pilotartifact; preserveallmetrics/predictions, weights onlyifgatepasses.",
+  "references": [
+    "https://arxiv.org/abs/1309.4973",
+    "https://www.sciencedirect.com/science/article/abs/pii/S037843712400726X"
+  ],
+  "literature_limit": "Ownstaticgeometryencoding, notfulltime-dependentdistanceoracle orAGEtensor/graphreplica.",
+  "Validation": false,
+  "Test": false
+}

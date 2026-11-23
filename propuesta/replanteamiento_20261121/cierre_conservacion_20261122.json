@@ -1,0 +1,38 @@
+{
+  "topology_pilot": {
+    "complete": true,
+    "scope": "Reused chronological heldTrain only; not primaryValidation or confirmation.",
+    "directed_network_mae_s": 132.42407800784585,
+    "euclidean_mae_s": 132.28690018588162,
+    "comparisons": {
+      "vs_euclidean": {
+        "delta_mae_s": 0.13717782196421877,
+        "ci95_s": [
+          -0.39960072184738826,
+          0.661093793226916
+        ],
+        "days": 22,
+        "interpretation": "ExploratoryreusedchronologicalheldTrain, staticgraphfeatures; not primaryValidation orconfirmation."
+      },
+      "vs_reference": {
+        "delta_mae_s": -0.9313147849560682,
+        "ci95_s": [
+          -1.6267994452246695,
+          -0.2714695562722974
+        ],
+        "days": 22,
+        "interpretation": "ExploratoryreusedchronologicalheldTrain, staticgraphfeatures; not primaryValidation orconfirmation."
+      }
+    },
+    "passed": false,
+    "interpretation": "Directed topology profiles did not outperform the matched Euclidean representation; no evidence for an additional useful topological effect in this pilot.",
+    "decision": "Do not launch a full primary trial or sweep landmark count/tree depth.",
+    "all_metrics_predictions_config_sources_retained": true,
+    "Test": "SEALED"
+  },
+  "policy_confirmed": true,
+  "all_completed_results_including_worse131_06": true,
+  "closed_primary_replays": true,
+  "goal": "ACTIVE",
+  "Test": "SEALED"
+}

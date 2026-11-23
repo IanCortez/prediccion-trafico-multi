@@ -1,0 +1,36 @@
+{
+  "validation": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 3,
+  "epochs": 8,
+  "paired_vs_parent": {
+    "delta_mae_s": -0.04677937486810327,
+    "ci95_s": [
+      -0.12141397204323626,
+      0.02493887927384272
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "meaningful_control_gate_passed": false,
+  "interpretation": "Numerically lower reusedValidation MAE, but0.0468s is below.1s predeclared meaningful threshold and day-bootstrap interval includes0. No reliable or causal accuracy benefit established.",
+  "control": "Not executed: predeclared meaningful-gain gate failed.",
+  "saved_threshold_models": 9,
+  "parent_frozen": true,
+  "source_mode_mass": [
+    0.15269328653812408,
+    0.29000842571258545,
+    0.40827441215515137,
+    0.14902397990226746
+  ],
+  "conclusion": "Historical branch is used(~15%mass), so this is not merely a collapsed gate. Geometry coverage improved inTrain, but the time-MAE gain remains weak. Do not expand neighbor/slot counts or tune blend weights on this Validation.",
+  "all_initial_and_epoch_metrics_predictions_retained": true,
+  "next_family": "Audit/adapt officialUNITE street-segment progress/local-traffic mechanism, with synthetic OD target-poisoning and batch-composition invariance before any real-data training.",
+  "Test": "sealed",
+  "goal_confirmation73_5_achieved": false,
+  "source_sha256": "d2cd675b27e83f324e0cd1301008e9062b1d0bb8952c5839479768851dc57fb5"
+}

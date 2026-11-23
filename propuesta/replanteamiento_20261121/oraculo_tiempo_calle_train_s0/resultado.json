@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "scope": "Privileged actual-route chronological Train-only diagnostic; not deployable OD, primaryValidation or a lower bound.",
+  "metrics": {
+    "control": {
+      "n": 10000,
+      "mae_s": 133.35539279280192,
+      "rmse_s": 208.67719173020703,
+      "mdae_s": 87.6963494151947
+    },
+    "privileged_route": {
+      "n": 10000,
+      "mae_s": 94.02438259321093,
+      "rmse_s": 134.38674109901228,
+      "mdae_s": 66.84542927735208
+    }
+  },
+  "comparison": {
+    "delta_mae_s": -39.331010199591006,
+    "ci95_s": [
+      -42.18627566468277,
+      -36.588217566623634
+    ],
+    "days": 22,
+    "interpretation": "Privileged-route chronological heldTrain diagnostic, not primary OD performance or bound."
+  },
+  "trips": 50000,
+  "tokens": 2327407,
+  "trusted_time_fraction": 0.9910897241195041,
+  "max_auxiliary_sum_error_s": 3.331899642944336e-05,
+  "feature_count": {
+    "control": 206,
+    "privileged_route": 296
+  },
+  "no_token_times_GPSsample_counts_or_labels_in_features": true,
+  "fit_arrival_purge": true,
+  "primary_cohort_unchanged": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "source_sha256": "57540b455dc3d37f8956445f92816b6c1df81824c715341ff2eb8fe1f3a0812e",
+  "helper_sha256": "5f4ce136b76e391b9d3c50f6e4ce4a04bc3bd6338b7d5ba6224dd6d570893ce5",
+  "auxiliary_sha256": "49a36a335d83588a80aec36bca5bb02b5232f5496977ac1346eab6f627460cfb",
+  "predictions_sha256": "73dc1afc73431fe4d48f0f719f10b0cca782663562e528310583c4d0eaf4f7b4",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 150.5769636631012
+}

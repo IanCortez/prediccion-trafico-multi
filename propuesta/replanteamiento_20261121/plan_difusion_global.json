@@ -1,0 +1,44 @@
+{
+  "status": "Frozenforfullprimaryexecution aftertwo completednegative roadsequenceexperiments.",
+  "architecture": "Globaljoint91dimtime/geometryconditionalvelocitydiffusion; full30epochEMA, noautoregressiveroadprefix inquery.",
+  "primary_Train": 1023485,
+  "Validation": 127941,
+  "Test": "sealed",
+  "geometry_Train": 894104,
+  "geometry_bank_MiB": 189.56457805633545,
+  "hypothesis": "Currentown-routeTrainMAE243.62 vsroot125.15 andknownpath95.36 exposes severequery-state mismatch. Tripcalibrationimprovedknownpath95.36->76.29 butprimary135.996 remainedworsethan130.158. PredictglobalTandgeometrytogether instead ofrollingoutroads.",
+  "private_auxiliary": "90uncompressedobservedTrainroadgeometryvariables, alloriginalTlabelsused evenwithoutgeometry; noqueryGTroute/N/T.",
+  "inference": "64fixedSobolparticles,32globaldenoisingsteps, medianinoriginalseconds;256particle sensitivity forqualifiedmodels.",
+  "selected_checkpoint": "FixedEMAepoch30; no intermediateValidationselection.",
+  "critical_limit": "Maskedgeometryscorewithmissingnormalizedplaceholder isauxiliarysupervision, not anexactmissing-datajointlikelihood guarantee.",
+  "references": [
+    {
+      "title": "DutyTTE",
+      "year": 2025,
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33350",
+      "full_author_preprint": "https://arxiv.org/html/2408.12809v1",
+      "inference": "PaperidentifiespatherroraccumulationandusesoverallalignmentRL. Ourdataexposuregap motivatesmovingbeyondteacher-stateaccuracy; localadaptationnotreplica."
+    },
+    {
+      "title": "UNITE",
+      "year": 2026,
+      "url": "https://web.comp.polyu.edu.hk/csmlyiu/conf/KDD26_UNITE.pdf",
+      "inference": "Jointprogress/route/time precedent; ourpreviousGRUexperiment didnotreproducefullmSTE/PSE, norclaimitsreportedresults."
+    },
+    {
+      "title": "DOT",
+      "year": "2023preprint;authorsreportSIGMOD2024acceptance",
+      "url": "https://arxiv.org/abs/2307.03048",
+      "full_text": "https://arxiv.org/html/2307.03048v1",
+      "inference": "Globalconditionaltrajectorydiffusionprecedent. Heregeometry/time arejointlatenttargets, nooutlierfiltering orPiTreplication; noPortoresultassumed."
+    }
+  ],
+  "sources": {
+    "entrenar_difusion_global.py": "7677bf2bcb21d3d482c67223a3ae2a901695929ad684a7e381fd75c03c56602e",
+    "modelo_difusion_global.py": "a87c5f69a7927a864e769ea8176306558e411ba151eb356ffb689c2d47d2ed61",
+    "concluir_difusion_global.py": "031de9f38aaf96367a4508cc4e9132a6a6c2d04f6eeb7b184a2a93b83777f9c0",
+    "verificar_conservacion.py": "70074976f7264377484ea53a871e3ec32372021483d5f1b53a69a42d847dce1c"
+  },
+  "orchestrator_sha256": "4e2edface4bd1aaef9689a885d3b40363dff46ef1cf45175c83e8e293ddc2a0f",
+  "goal": "ACTIVE"
+}

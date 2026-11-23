@@ -1,0 +1,11 @@
+{
+  "hypothesis": "Exact Train subtrip OD durations can improve shared OD encoding, while a separate auxiliary head absorbs midtrip/booking domain differences.",
+  "distinction": "Supervised interval durations and separate task head; not masked-prefix/suffix pretraining or query path input.",
+  "primary_labels_and_cohort_unchanged": true,
+  "auxiliary_examples_max": 500000,
+  "training": "1 frozen-backbone auxiliary warmup then6fixed joint epochs, lambda.2; matched zero-weight control only if primary reference beaten.",
+  "control_decision": "No control GPU run if no learned epoch beats original131.25671207822356; all metrics/predictions retained either way.",
+  "risk": "Subtrip time distribution differs from full trips; tasks may conflict. No expectation/guarantee of73.5 from this mechanism.",
+  "Test": "sealed",
+  "cache_cleanup": "After a negative complete trial remove only exact feature cache <=600MiB, keeping selected queries/labels/provenance, source and reconstruction instrument."
+}

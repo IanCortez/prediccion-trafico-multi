@@ -1,0 +1,156 @@
+{
+  "id": "prefijo_nativo_s0",
+  "config": {
+    "id": "prefijo_nativo_s0",
+    "seed": 0,
+    "epochs": 10,
+    "batch": 128,
+    "lr": 0.0002,
+    "weight_decay": 0.0003,
+    "selection_n": 512,
+    "selection_particles": 128,
+    "full_particles": 128,
+    "canonical_query_batch": 16,
+    "reference_batch": 2048,
+    "alphas": [
+      0,
+      0.05,
+      0.2,
+      0.5,
+      1
+    ],
+    "selection": "Best generated graph MAE on fixed512 Validation queries; alpha chosen only after checkpoint frozen",
+    "objective": "Mean observed-sequence joint teacher-forced NLL scaled by constant120; actual prefixes used ONLY for Train supervision",
+    "query": "216 OD/departure/static/history features, generated recurrent prefix and elapsed simulation time; NO true route, point count, elapsed trip observation or duration",
+    "generation": "Fixed120 time steps, one interval15s; conditional non-stop particles with Rao-Blackwellized stopping mass at each step; cohort conditioning only after absorption",
+    "randomness": "Stateless hash of exact raw OD/departure plus particle counter, step and stream; no row index and no input order RNG",
+    "prior": "Current Train weekfold counts excluded; Validation uses Train totals",
+    "max_training_seconds": 5400,
+    "minimum_epochs": 3,
+    "patience": 4,
+    "max_GPU_jobs": 1,
+    "no_disk_distribution_or_hidden_bank": true,
+    "Test_access": false,
+    "inference_precision": "FP32 highest",
+    "inference_only_replacement": true
+  },
+  "training_protocol": {
+    "id": "prefijo_nativo_s0",
+    "seed": 0,
+    "epochs": 10,
+    "batch": 128,
+    "lr": 0.0002,
+    "weight_decay": 0.0003,
+    "selection_n": 512,
+    "selection_particles": 128,
+    "full_particles": 128,
+    "canonical_query_batch": 16,
+    "reference_batch": 2048,
+    "alphas": [
+      0,
+      0.05,
+      0.2,
+      0.5,
+      1
+    ],
+    "selection": "Best generated graph MAE on fixed512 Validation queries; alpha chosen only after checkpoint frozen",
+    "objective": "Mean observed-sequence joint teacher-forced NLL scaled by constant120; actual prefixes used ONLY for Train supervision",
+    "query": "216 OD/departure/static/history features, generated recurrent prefix and elapsed simulation time; NO true route, point count, elapsed trip observation or duration",
+    "generation": "Fixed120 time steps, one interval15s; conditional non-stop particles with Rao-Blackwellized stopping mass at each step; cohort conditioning only after absorption",
+    "randomness": "Stateless hash of exact raw OD/departure plus particle counter, step and stream; no row index and no input order RNG",
+    "prior": "Current Train weekfold counts excluded; Validation uses Train totals",
+    "max_training_seconds": 5400,
+    "minimum_epochs": 3,
+    "patience": 4,
+    "max_GPU_jobs": 1,
+    "no_disk_distribution_or_hidden_bank": true,
+    "Test_access": false
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "graph_validation": {
+    "n": 127941,
+    "mae_s": 148.7559500082069,
+    "rmse_s": 225.78150363230677,
+    "mdae_s": 105.0
+  },
+  "all_alpha_validation": [
+    {
+      "n": 127941,
+      "mae_s": 131.25671207822356,
+      "rmse_s": 210.804448731162,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.33995357234974,
+      "rmse_s": 210.7964898947443,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 131.9470302717659,
+      "rmse_s": 211.10133892247694,
+      "mdae_s": 75.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 135.5261800361104,
+      "rmse_s": 214.01658372126568,
+      "mdae_s": 90.0
+    },
+    {
+      "n": 127941,
+      "mae_s": 148.7559500082069,
+      "rmse_s": 225.78150363230677,
+      "mdae_s": 105.0
+    }
+  ],
+  "selected_alpha": 0,
+  "reference_validation": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "best_epoch": 8,
+  "epochs_run": 10,
+  "steps": 79960,
+  "model_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+  "code_sha256": "5aa78e2a4ce733c122b1b58b3aae7eb32417213f41f2d9c67965d77a06c4d26e",
+  "inference_code_sha256": "2dabd61a7ace9bf9c67ebd9df3ba2fe3d5090fac13b46e9aea50eb597c55f4d4",
+  "model_code_sha256": "409276770dce488db10e035e289faf6aa45d735742db6d98060375f448cc177b",
+  "data_code_sha256": "15170dcd56b4c9e697997502ef2dbdb89ca547bfe17d17841990f7e8ee62a557",
+  "parent_sha256": "4edfda0acdbe2d9618d43ca53becd2670fd3949bf9034a115133b8865fa98d8a",
+  "reference_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "paired_vs_retained": {
+    "delta_mae_s": 0.0,
+    "ci95_s": [
+      0.0,
+      0.0
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "qualified_candidates": [],
+  "new_primary_best_pending_reproduction": false,
+  "goal_validation": false,
+  "actual_data_files_accessed_in_replacement_inference": [
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "training_trace": "Unchanged completed checkpoint, final resume10epochs/79960steps, immutable training sources and history; original process stopped during slow inference, not training",
+  "training_elapsed_seconds": 2475.9786002635956,
+  "replacement_inference_seconds": 3432.959741830826,
+  "Test_access": false,
+  "inference_audit": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\prefijo_nativo_s0\\evaluacion_acelerada",
+  "weights_retained": false,
+  "cleanup_note": "Discarded full-cohort family: source, metrics and all predictions retained. No active/queued model depends on these weights."
+}

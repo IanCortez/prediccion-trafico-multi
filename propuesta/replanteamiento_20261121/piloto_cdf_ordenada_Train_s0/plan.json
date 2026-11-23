@@ -1,0 +1,22 @@
+{
+  "scope": "Reused chronological40000fit/10000heldTrain timeprediction gate; no primaryValidation or confirmation.",
+  "hypothesis": "Ordered parent-based retrieval supplies historical interval times missing from independently truncated endpointlists.",
+  "sources": "Original immutable241.76MiB pointbank only, arrival before heldcutoff. Trainqueries exclude whole parentUTCweekfold BEFORE tree construction; helduses all earlierparents.",
+  "representation": "15geometry/calendar/boundary summaries plus3boundary-group weightedCDFs on116fixedoriginaltimebins. Full/touch/internal source groups, same64sources andK2048.",
+  "geometrycontrol": "SameCDFdimension, groups, geometry and weights; replace observed historicaltime with sourcechord/(25kmh)*distance-adjustment. Different effective featureentropy is disclosed; not identical informationcontent.",
+  "no_query_targets": "Query API has raw5fields only. No backbone pretrained on heldTrainlabels. Actualheld route/N/T never features.",
+  "learner": {
+    "iterations": 1000,
+    "depth": 8,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss": "MAE",
+    "seed": 20261124,
+    "target": "Originalseconds/600 and exactinverse600"
+  },
+  "gate": ">=5sbetterthan freshpublic206baseline ANDstored133.355393reference; >=2sbetterthan geometryCDFcontrol, exploratorydayCIupper<0 for all.",
+  "no_tuning": "One fixedCDFgrid/groups/gates/treeconfig. Failedtimegate is not repaired by changing K/radius/binning or selecting an epoch.",
+  "resources": "OneGPU .25cap, CPU2 for sourceconstruction. No extraGPSbank; compactsourceindices <=30MiB, allmetrics/predictions always preserved.",
+  "validation": false,
+  "Test": false
+}

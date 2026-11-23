@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "timestamps": 1070,
+  "actual_model_calendar_method": true,
+  "CPU_only": true,
+  "includes_DST_transition_boundaries_and_fractional_seconds": true,
+  "max_calendar_feature_error": 0.0,
+  "timezone_file": ".conda-env\\Lib\\site-packages\\tzdata\\zoneinfo\\Europe\\Lisbon",
+  "timezone_file_sha256": "44d2f6cf84737e6a1e0daf914109e94256beca40b40c9a11b7a04e8bddaee4ec",
+  "model_source_sha256": "4063f4c83f349c37b830d47f84846e88ab19b331b9f06fb569ecc979722f6147",
+  "source_sha256": "14ab0b5942829250c3f7d43d6ad4021a15e2547e92fc0da24f4d6bf8af792261",
+  "no_Validationlabels_or_Test": true
+}

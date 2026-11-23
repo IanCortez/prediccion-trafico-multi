@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "finite_trueTrain_objective_and_gradients": true,
+  "Train_loss": 4.478936195373535,
+  "features": 206,
+  "parameters": 4977042,
+  "Test": false
+}

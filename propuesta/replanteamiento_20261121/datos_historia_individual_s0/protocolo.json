@@ -1,0 +1,20 @@
+{
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "source_UTCweekfold_excluded_for_Train": true,
+  "Val_memory": "Only eligibleTrain trips arriving before firstValidation departure.",
+  "neighbors": 64,
+  "cutoff_OD4D_km": 0.5,
+  "weight_clock_sigma_hours": 4,
+  "weight_distance_sigma_km": 0.25,
+  "weekend_mismatch_weight": 0.35,
+  "cache": "Only source indices, five-field query derivatives,row/timestamp. No query labels or query trajectory.",
+  "max_total_MiB_including_shared_memory": 450,
+  "normalization": "Pending Train-only raw-token feature constructor; no neural model run by this preparer.",
+  "Test": "sealed"
+}

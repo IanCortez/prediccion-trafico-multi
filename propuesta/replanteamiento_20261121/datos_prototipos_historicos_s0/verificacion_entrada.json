@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "own_fold_time_and_geometry_intervention_invariant": true,
+  "raw5_vs_cached_public_defaults_exact": true,
+  "reverse_and_singleton_exact": true,
+  "query_target_extra_field_rejected": true,
+  "validation_labels_accessed": false,
+  "Test_access": false
+}

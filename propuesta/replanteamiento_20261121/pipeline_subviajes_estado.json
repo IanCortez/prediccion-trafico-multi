@@ -1,0 +1,7 @@
+{
+  "stage": "complete",
+  "learned_improvement": false,
+  "control_run": false,
+  "goal": "ACTIVE; continue distinct alternatives if needed",
+  "Test": "sealed"
+}

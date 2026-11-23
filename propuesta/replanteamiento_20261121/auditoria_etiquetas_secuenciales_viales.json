@@ -1,0 +1,149 @@
+{
+  "complete": true,
+  "scope": "Train-only recurrentteacher semantic audit, no primaryfilter/labelchanges.",
+  "counts": {
+    "trips": 894105,
+    "tokens": 41775036,
+    "known_tokens": 41537485,
+    "terminal_known_matching": 816268,
+    "terminal_after_gap_or_unknown_entry": 31074,
+    "terminal_distance_inconsistent": 55449,
+    "terminal_selfloop_extra_traversals": 157,
+    "initial_known_matching": 855602,
+    "initial_unknown_or_gap": 38503,
+    "known_full_entry_tokens": 40102682,
+    "full_entry_excess_distance": 157,
+    "full_entry_excess_selfloops": 157,
+    "full_entry_excess_nonselfloops": 0,
+    "zero_distance_known_tokens": 613598
+  },
+  "max_full_entry_excess_m": 199.06192168719912,
+  "examples": [
+    {
+      "row": 28,
+      "chain": 8713,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 21.14873504638672,
+      "recorded_traversal_m": 0.43417954444885254,
+      "difference_m": -20.714555501937866,
+      "chain_length_m": 48.28566429725769
+    },
+    {
+      "row": 41,
+      "chain": 8856,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 120.54625701904297,
+      "recorded_traversal_m": 11.880815505981445,
+      "difference_m": -108.66544151306152,
+      "chain_length_m": 142.66612804514622
+    },
+    {
+      "row": 63,
+      "chain": 38511,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 22.11195182800293,
+      "recorded_traversal_m": 3.874011516571045,
+      "difference_m": -18.237940311431885,
+      "chain_length_m": 158.29991436113693
+    },
+    {
+      "row": 67,
+      "chain": 14753,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 66.00924682617188,
+      "recorded_traversal_m": 25.653167724609375,
+      "difference_m": -40.3560791015625,
+      "chain_length_m": 89.07860957049357
+    },
+    {
+      "row": 72,
+      "chain": 8628,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 36.121212005615234,
+      "recorded_traversal_m": 4.790920257568359,
+      "difference_m": -31.330291748046875,
+      "chain_length_m": 139.26611495272437
+    },
+    {
+      "row": 81,
+      "chain": 49119,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 150.6782989501953,
+      "recorded_traversal_m": 34.90009689331055,
+      "difference_m": -115.77820205688477,
+      "chain_length_m": 186.94966967967116
+    },
+    {
+      "row": 96,
+      "chain": 26569,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 83.9452896118164,
+      "recorded_traversal_m": 8.460697174072266,
+      "difference_m": -75.48459243774414,
+      "chain_length_m": 85.7250963282156
+    },
+    {
+      "row": 149,
+      "chain": 2799,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 95.42430877685547,
+      "recorded_traversal_m": 3.4384591579437256,
+      "difference_m": -91.98584961891174,
+      "chain_length_m": 215.89209733002727
+    },
+    {
+      "row": 163,
+      "chain": 8856,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 135.27822875976562,
+      "recorded_traversal_m": 8.415759086608887,
+      "difference_m": -126.86246967315674,
+      "chain_length_m": 142.66612804514622
+    },
+    {
+      "row": 176,
+      "chain": 26033,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 10.47607707977295,
+      "recorded_traversal_m": 3.442479372024536,
+      "difference_m": -7.033597707748413,
+      "chain_length_m": 145.12751267934033
+    },
+    {
+      "row": 288,
+      "chain": 43473,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 76.56903076171875,
+      "recorded_traversal_m": 36.124019622802734,
+      "difference_m": -40.445011138916016,
+      "chain_length_m": 487.08084900941543
+    },
+    {
+      "row": 290,
+      "chain": 18622,
+      "self_loop": false,
+      "entry_m": 0.0,
+      "terminal_offset_m": 40.05118942260742,
+      "recorded_traversal_m": 1.1086702346801758,
+      "difference_m": -38.942519187927246,
+      "chain_length_m": 67.04597915805394
+    }
+  ],
+  "issue": "Corebankmergesconsecutiveidenticalchaincodes. Selflooprepeatedlapscanbecompressed; before recurrentteacher forcing, expandlosslesslyinDistancewithsum-preservingtimeallocation, ormaskambiguousauxtransition/EOS. NeverforceEOSfromrawtokenindex when physicallyinconsistent.",
+  "required": "KeeporiginalprimaryT for everyquery; unknownGAP clocks retained. Reconstructedsequence labels remain pseudo-observations, not annotatedexactroadpath/time.",
+  "corpus_manifest_sha256": "972877355a56c50ab91f6fc466a8c880db39e0cbbff818d39a39797ed13eeb9d",
+  "source_sha256": "e05d80565a722516baef83f3427cd51f348da48b4d7724a5c75bcfcffedbbaa0",
+  "no_Validation_or_Test_access": true,
+  "seconds": 3.787238597869873
+}

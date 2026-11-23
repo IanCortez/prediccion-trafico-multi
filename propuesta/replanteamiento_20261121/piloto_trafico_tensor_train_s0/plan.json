@@ -1,0 +1,27 @@
+{
+  "scope": "Chronological heldTrain raw5ODfeature gate. Not primaryValidation or independentconfirmation.",
+  "mode": "observed_road_entry_clock",
+  "seed": 20261122,
+  "source_observations": 1000000,
+  "source_cutoff": 1396530690,
+  "views": "Six independentlytrainedfields: view0..4 excludesENTIREparentUTCweekfold inALLparameters/support/backoffs; heldview5usesallsourcesbeforecutoff.",
+  "local_target": "Sum-preservingTrainpartialroadtime; positivepace*partialdistance+positivedwell, no actualqueryroute required. LocalclockatobservedTrainroadentry, not initialtripdeparture.",
+  "architecture": "Rank16roadxweeklyquarterhour pace/dwell, publicstatic12background, supportshrinkcount/(count+10). Periodicslot672, learnableclockbias.",
+  "fit": {
+    "epochs": 8,
+    "batch": 8192,
+    "lr": 0.003,
+    "weight_decay": 0.0001,
+    "clip": 5,
+    "clock_smoothness": 0.001,
+    "loss": "Huberlog1ptime beta.5"
+  },
+  "gate_features": "16weightedmean/stdpace+dwell features over4publiccandidate roads at2endpoints, atdeparture andpublicfreeflowarrival. No truequeryN/road/duration.",
+  "primary_fit": 200000,
+  "held": 50000,
+  "control": "Exactstored206numeric800tree control fromfineclock experiment; samefit/heldrows/params.",
+  "gate": "At least1second heldTrainMAEimprovement andupperdaybootstrapCI<0. Onlythen matchedparentclockcontrol andfurtherprimarydesign.",
+  "storage": "Allmetrics/predictions;6fields temporarilyneededforfeatureconstruction, keep onlyifgatepasses; <=120MiBnewartifacts.",
+  "Validation": false,
+  "Test": false
+}

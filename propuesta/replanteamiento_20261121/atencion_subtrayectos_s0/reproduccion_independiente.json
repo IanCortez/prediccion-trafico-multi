@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "reloaded_model_sha256": "07db7a1d4f77647de15a1db6c8be1b68e26bdd4edf16a43aab2b0d2f905c39dd",
+  "all127941quantiles_exact": true,
+  "raw65_reverse_singleton_exact": true,
+  "validation": {
+    "n": 127941,
+    "mae_s": 129.99003446901307,
+    "rmse_s": 209.65124761307314,
+    "mdae_s": 75.0
+  },
+  "source_sha256": "6c3d781c2b031e89815372699a5dba674a82994d088d3ceba0eda1dde069e300",
+  "inference_source_sha256": "b74cd7426e303e24a2ae4746b6a2e0f7bd2a6ffdbb23c1342bf2de3e064af4a1",
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 44.27068877220154
+}

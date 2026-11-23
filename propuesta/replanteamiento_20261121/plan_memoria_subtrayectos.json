@@ -1,0 +1,36 @@
+{
+  "status": "StartingTrain-onlypointbank; retrievalexpert/stressproof andfullprimaryevaluation next.",
+  "hypothesis": "All-threegenerated-route/globaldensityalternativesfailed. Reuseobservedorderedsubtrajectories toincreaseendpointcoverage andretainrealhistoricalelapsedtimes, avoidingpseudo-linkaggregation andself-generatedprefix.",
+  "source": "All1023485purgedTrainparents; preserveeveryprimaryquery andoriginalT.",
+  "representation": "OneFloat32xy pointbank+parentoffsets; implicitorderedpointpairs, noO(N^2)pairfile. Bound500MiB.",
+  "retrieval": "IntersectparentIDs ofnearestorigin/destinationpointsets; require i<j, fixedsourcehistoricaltimes15*(j-i). ExcludewholeparentUTCweekgroup forTrainqueries.",
+  "public_query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "inference": "HistoricalsubtrajectorytimeCDF withstrongprotectedmodelbackoff forlowcoverage. EveryValidationquerypredicted, noactualqueryN/route/T.",
+  "instruments": [
+    "RawTrainonlymembershipbeforedecode",
+    "Exactsourceparentendpoints/timestamps/15secondlabels",
+    "Parent-foldpoisoningexclusion",
+    "Perquerysource-order i<j andsourcearrivalsbeforeValidation",
+    "NearestpointintersectionCPU/RAMlatency preflight",
+    "Raw5/reverse/singletonfullprimarychecks"
+  ],
+  "risks": [
+    "Midtriptime distribution differsfromwhole-tripstart/stopcontext; requirescriticalcalibration/control.",
+    "Nearestpointcandidatecoverage andeffectiveparentdiversity mustbemeasured before largeTrainquerybank.",
+    "Do notmistakeaveraginghistoricalcases orprivilegedTrainmetrics forindependentconfirmation."
+  ],
+  "best_protected": {
+    "n": 127941,
+    "mae_s": 130.15804159729876,
+    "rmse_s": 209.3534140414966,
+    "mdae_s": 75.0
+  },
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

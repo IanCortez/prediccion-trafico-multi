@@ -1,0 +1,53 @@
+{
+  "status": "Architecture specified after a positive Train-only compression diagnostic; no primary predictive claim yet.",
+  "hypothesis": "Individual historical time/geometry variation discarded by6fixedmedoids may be useful when jointly related to query and other source trips. A learned dot-product kernel over static features already failed; this tests a nonseparable source-value relation.",
+  "evidence": {
+    "diagnostic": "piloto_compresion_historial_s0/resultado.json",
+    "queries": 20000,
+    "compressed6_mean_geometry_m": 108.63877868652344,
+    "raw64_mean_geometry_m": 81.84169006347656,
+    "reduction_percent": 24.6662295493,
+    "scope": "Privileged Train geometry oracle; more hypotheses; no predictive MAE proof."
+  },
+  "parent": {
+    "id": "historica_fresca_s0",
+    "MAE_s": 130.20482097216686,
+    "sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+    "training": "Frozen throughout initial experiment to avoid the overfitting observed in direct median joint tuning."
+  },
+  "source_context": "Nearest64eligible historicalTrain OD neighbors, same250m/4h prior and500m cutoff, entire queryUTCweekfold excluded inTrain. Allheldout sources completed beforeValidation.",
+  "raw28_features": [
+    "14reanchored relative historical geometry coordinates",
+    "scaled historical path km",
+    "log circuity",
+    "log scaled HISTORICAL source duration seconds",
+    "4source-vs-query endpoint differences km",
+    "4DOD distance",
+    "sin and cos signed clock difference",
+    "weekend match",
+    "log OD chord scale",
+    "log retrieval weight prior",
+    "historical-source availability"
+  ],
+  "architecture": "Shared28->64embedding; source-set attention4heads64dims plus128feedforward;8query-conditioned slots attend64sourcevalues. Each of16frozenparent ensemble members supplies512hidden query context. Shared slot time/geometry head605->128->31 produces8newjointcomponents, gated with protectedparent22. No all64component probability bank.",
+  "loss": "Primary NLL+5RPS +.2conditionalTraingeometry, using original labels/cohort. Point is original discrete mixture median.",
+  "planned_training": "8fixed frozen-parent epochs; branch parameters only, seed20261122,batch512,AdamW.001; all fullValidation outputs and qualifying branch weights preserved. Refine resource cap before launch if necessary; no more than oneGPU.",
+  "normalization": "Fixed32768eligibleTrainquery sample only; no Validation labels. Source values from excluded queryfold; no query trajectory, duration, driver or call type inputs.",
+  "control": "Conditional if a real candidate beats parent: identical network/init/indices/batches; replace each source G/path/time with its nearest existing6prototype summary, retaining OD/time relation fields. Tests lost individual values with matched architecture and context length. No observed query geometry in assignment.",
+  "requirements_before_training": [
+    "Implement single deterministic Torch raw-token feature constructor reused for cached/raw5inference.",
+    "Verify exact ownfold exclusion, no-history fallback, permutation invariance and finite gradients onTrain only.",
+    "Fit normalization usingTrain only and freeze sources.",
+    "Keep moment/head evaluation chunks bounded; release unused full distributions before next evaluation.",
+    "Predeclare preservation and selection; Testclosed."
+  ],
+  "resources": "Index cache plus shared source memory <450MiB; no whole-dataset64x28token cache or diskCDF arrays. Branch-only checkpoints reference protected parent, avoiding duplicate full model weights.",
+  "comparison_limits": [
+    "One seed and adaptiveValidation remain exploratory.",
+    "Geometry oracle gate is diagnostic, not a Bayes lower bound or time-prediction result.",
+    "Source shapes reanchored to OD are latent hypotheses, not guaranteed drivable query routes.",
+    "PublishedTransferTraj processed cohort remains unmatched."
+  ],
+  "goal": "<73.5s confirmation unchanged; no claim achieved.",
+  "Test": "sealed"
+}

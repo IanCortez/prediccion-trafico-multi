@@ -1,0 +1,26 @@
+{
+  "removed": [
+    {
+      "file": "parametros_fold_0.npz",
+      "bytes": 1804599
+    },
+    {
+      "file": "parametros_fold_1.npz",
+      "bytes": 1706773
+    },
+    {
+      "file": "parametros_fold_2.npz",
+      "bytes": 1557828
+    },
+    {
+      "file": "parametros_fold_3.npz",
+      "bytes": 1558362
+    },
+    {
+      "file": "parametros_fold_4.npz",
+      "bytes": 1654665
+    }
+  ],
+  "final_parameter_archive_verified": true,
+  "teachers_retained": true
+}

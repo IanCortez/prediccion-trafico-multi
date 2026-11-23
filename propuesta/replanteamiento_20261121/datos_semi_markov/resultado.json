@@ -1,0 +1,37 @@
+{
+  "trips": 1023485,
+  "runs": 20195926,
+  "GPS_points": 42624621,
+  "outside_points": 116348,
+  "grid_nodes": 2376,
+  "allowed_arcs": 53757,
+  "observed_step_coverage": 0.9999663401167115,
+  "duration_partition_exact": true,
+  "first_run_at_elapsed0": true,
+  "terminal_run_duration_can_be0": true,
+  "all_training_trips_with_arrival_before_validation_retained": true,
+  "validation_and_test_paths_decoded": false,
+  "Test_access": false,
+  "seconds": 123.99043798446655,
+  "code_sha256": "68fc45d9be6fac5481bc5c2b01046ceebb1cca4857f53457e8aff7c4e901f55b",
+  "outputs": {
+    "runs_train.npz": {
+      "bytes": 30623649,
+      "sha256": "03cdb472b698961de1eda403c361a8dd71ea2b0e74d0a89aabc9a7385eabc250"
+    },
+    "grafo_grid.npz": {
+      "bytes": 88535,
+      "sha256": "da3266454673cece73d5e08072a9af0c4504cd20e508d2bcb05ef9512300b112"
+    },
+    "distancias_grid.npy": {
+      "bytes": 22581632,
+      "sha256": "ba9cd00564f4d23257851a1222f7ff2eaed70f9c68b4d2624e0981d4f2547bea"
+    }
+  },
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ]
+}

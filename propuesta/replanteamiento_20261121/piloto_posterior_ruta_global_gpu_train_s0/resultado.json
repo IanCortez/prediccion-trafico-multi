@@ -1,0 +1,296 @@
+{
+  "passed": false,
+  "selected": null,
+  "semantic_gate_passed": false,
+  "public_gate_passed": false,
+  "metrics": {
+    "public_only": {
+      "n": 10000,
+      "mae_s": 132.7847418317525,
+      "rmse_s": 208.3766105809556,
+      "mdae_s": 87.94059785028367
+    },
+    "semantic": {
+      "n": 10000,
+      "mae_s": 132.61536834597305,
+      "rmse_s": 208.39358582911402,
+      "mdae_s": 86.14168573047209
+    },
+    "random": {
+      "n": 10000,
+      "mae_s": 132.3992990625692,
+      "rmse_s": 207.9954419580835,
+      "mdae_s": 86.2613468282143
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "public_vs_reference": {
+      "delta_mae_s": -0.5706509610493942,
+      "ci95_s": [
+        -1.2528300189497283,
+        0.12635641289460414
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    },
+    "semantic_vs_reference": {
+      "delta_mae_s": -0.7400244468288858,
+      "ci95_s": [
+        -1.3733035722359712,
+        -0.05880204186818461
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    },
+    "semantic_vs_random": {
+      "delta_mae_s": 0.21606928340384912,
+      "ci95_s": [
+        -0.3253825090230214,
+        0.7619975092094893
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    },
+    "semantic_vs_public": {
+      "delta_mae_s": -0.1693734857794916,
+      "ci95_s": [
+        -0.6677758910034072,
+        0.28162961949863485
+      ],
+      "days": 22,
+      "interpretation": "FixedfinalscalarGPUquantiles, chronologicalheldTrain, not primaryValidation/confirmation."
+    }
+  },
+  "privileged_true_code_oracle": {
+    "n": 10000,
+    "mae_s": 118.9095890248882,
+    "rmse_s": 174.0405477324305,
+    "mdae_s": 83.17828776235274
+  },
+  "held_code_accuracy_diagnostic": 0.6052,
+  "original_labels_evaluated_in_seconds": true,
+  "noactualheldroutecode_in_public_forecast": true,
+  "reverse_singleton_allquantiles_exact": true,
+  "sources": {
+    "piloto_posterior_ruta_global_gpu_train.py": "836de1bebbcb53608a0a3a94faea555bb7648b8abd910d6511266d99ee2a7396",
+    "distribucion_cuantiles_ruta.py": "c79f1db363d81cd7360a8aff32536e20a003cc780053cc4765881df241cd2980",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "codebook_manifest_sha256": "a57cb0f4991ca3cca20e1b8b9b927636ad3a6d84bcb0f81918ed9d5e6730eca9",
+  "fitted_stages": {
+    "public_only_q1": {
+      "file": "public_only_q1.cbm",
+      "sha256": "5e354e84b8fe6899c808656ef2b617d42dd8e25a40f7b4f95d1ea97b53cff034",
+      "bytes": 2188616,
+      "kind": "time",
+      "alpha": 0.1
+    },
+    "public_only_q2": {
+      "file": "public_only_q2.cbm",
+      "sha256": "ae1eb4c2849b450c2e6a6633212a10b4ad964fee6d7b7009370296bc15649fd4",
+      "bytes": 2188944,
+      "kind": "time",
+      "alpha": 0.2
+    },
+    "public_only_q3": {
+      "file": "public_only_q3.cbm",
+      "sha256": "79275497b293c46dbc2730269d3942f882b309368a113041dd3769907fd58bd6",
+      "bytes": 2188776,
+      "kind": "time",
+      "alpha": 0.3
+    },
+    "public_only_q4": {
+      "file": "public_only_q4.cbm",
+      "sha256": "fdb21783f12a879643314a612494533f5146fc1cf64c67c11f1e8678b3c2c893",
+      "bytes": 2188416,
+      "kind": "time",
+      "alpha": 0.4
+    },
+    "public_only_q5": {
+      "file": "public_only_q5.cbm",
+      "sha256": "7680f1ece3e76f9d6c752d526bc95015e04761c7f25ef6476b78ff7b28255f6b",
+      "bytes": 2187792,
+      "kind": "time",
+      "alpha": 0.5
+    },
+    "public_only_q6": {
+      "file": "public_only_q6.cbm",
+      "sha256": "b6312e09d39f491916f6fbb342b22a1693eec46a3d42e870153d90127d9ad88f",
+      "bytes": 2187416,
+      "kind": "time",
+      "alpha": 0.6
+    },
+    "public_only_q7": {
+      "file": "public_only_q7.cbm",
+      "sha256": "ea67ee39d144d904b9c54d8148a84d4e3953bf1a80c7e2fb9d136ebf28ec2f35",
+      "bytes": 2187112,
+      "kind": "time",
+      "alpha": 0.7
+    },
+    "public_only_q8": {
+      "file": "public_only_q8.cbm",
+      "sha256": "fb92d1f180a6cef2e7fbd163b7a293670d20e4fdf3e6ff71fbb2c503987c519a",
+      "bytes": 2186560,
+      "kind": "time",
+      "alpha": 0.8
+    },
+    "public_only_q9": {
+      "file": "public_only_q9.cbm",
+      "sha256": "999986c4b5c108227181efd1d0e541d14953c1e1055561f07cf9c2f315507be8",
+      "bytes": 2184200,
+      "kind": "time",
+      "alpha": 0.9
+    },
+    "semantic_posterior": {
+      "file": "semantic_posterior.cbm",
+      "sha256": "bae9d54f8e1bcf239ad6bacfd6438fdf4166babf4bfbeffd7d5f16fad30021bb",
+      "bytes": 2810040,
+      "kind": "classifier",
+      "alpha": null
+    },
+    "semantic_q1": {
+      "file": "semantic_q1.cbm",
+      "sha256": "ff2ad5a16b5ddb1fce1fa2f299ec9279f6feabfea617df4fab7d7c71efdd46c8",
+      "bytes": 2196888,
+      "kind": "time",
+      "alpha": 0.1
+    },
+    "semantic_q2": {
+      "file": "semantic_q2.cbm",
+      "sha256": "c7f66bc2fa9aeed01bf6c7d20fc33f059a78498b6367d31b52f08c9946a0f536",
+      "bytes": 2197992,
+      "kind": "time",
+      "alpha": 0.2
+    },
+    "semantic_q3": {
+      "file": "semantic_q3.cbm",
+      "sha256": "3809352150102a75dd45f3e81cd1e980d504e30bec0936a8ac0aa168edb021e2",
+      "bytes": 2197928,
+      "kind": "time",
+      "alpha": 0.3
+    },
+    "semantic_q4": {
+      "file": "semantic_q4.cbm",
+      "sha256": "efb30e3c9ab893784259872fb613ca572650da8be8584e37845f9937cd2250af",
+      "bytes": 2197608,
+      "kind": "time",
+      "alpha": 0.4
+    },
+    "semantic_q5": {
+      "file": "semantic_q5.cbm",
+      "sha256": "8cf4f3c87bdf7e7fa9e911b87edf39302373d631a3f6131abc018378594f27df",
+      "bytes": 2197368,
+      "kind": "time",
+      "alpha": 0.5
+    },
+    "semantic_q6": {
+      "file": "semantic_q6.cbm",
+      "sha256": "82badb9e4878985b0b6dc265ec7d9d280eb99fc7d6b47874ac56ae56fd490d95",
+      "bytes": 2196928,
+      "kind": "time",
+      "alpha": 0.6
+    },
+    "semantic_q7": {
+      "file": "semantic_q7.cbm",
+      "sha256": "382b0e5bec6398be233dfd4f0aeb1172c51790ac28b4f52e1d3b1fc9acccd44b",
+      "bytes": 2196800,
+      "kind": "time",
+      "alpha": 0.7
+    },
+    "semantic_q8": {
+      "file": "semantic_q8.cbm",
+      "sha256": "413a532ba85952942e403c654a5f21eb77507d5156958806db73e701220ff605",
+      "bytes": 2196168,
+      "kind": "time",
+      "alpha": 0.8
+    },
+    "semantic_q9": {
+      "file": "semantic_q9.cbm",
+      "sha256": "7062291f95cfdf3e43af209f42dc981753ab9307fe90e49f41c72369795d0df2",
+      "bytes": 2193912,
+      "kind": "time",
+      "alpha": 0.9
+    },
+    "random_posterior": {
+      "file": "random_posterior.cbm",
+      "sha256": "e5ac16d158649343c5bbef3627974e4e9cf71092d0fafd8d1803eb89e58d096f",
+      "bytes": 2810680,
+      "kind": "classifier",
+      "alpha": null
+    },
+    "random_q1": {
+      "file": "random_q1.cbm",
+      "sha256": "2ae2d0ce3d4cb0677f9ad462130bece0c350ac258e40fcff5a3f712fbbec9fd9",
+      "bytes": 2198720,
+      "kind": "time",
+      "alpha": 0.1
+    },
+    "random_q2": {
+      "file": "random_q2.cbm",
+      "sha256": "bd14101f83e1f02533e81ee23ee5c16ba02978d46e138119df8c0bac9a06ddb7",
+      "bytes": 2199448,
+      "kind": "time",
+      "alpha": 0.2
+    },
+    "random_q3": {
+      "file": "random_q3.cbm",
+      "sha256": "509e8273d60dd634a6a9bf5600a3cd3f44a8b079454d334d8f6a44f96fad968e",
+      "bytes": 2199056,
+      "kind": "time",
+      "alpha": 0.3
+    },
+    "random_q4": {
+      "file": "random_q4.cbm",
+      "sha256": "e9480b8caaa2904494a4a2934b5903d964b673d78c27d9a0a81effd174ef2832",
+      "bytes": 2198784,
+      "kind": "time",
+      "alpha": 0.4
+    },
+    "random_q5": {
+      "file": "random_q5.cbm",
+      "sha256": "319aa9cce8aa41308b42d4735a0083addc53dd398371eab6cb74f445d061e2f9",
+      "bytes": 2198344,
+      "kind": "time",
+      "alpha": 0.5
+    },
+    "random_q6": {
+      "file": "random_q6.cbm",
+      "sha256": "ad3caa63b1418a5bf952f6040065146bbb0866864b03b332223274247b00f8cc",
+      "bytes": 2197624,
+      "kind": "time",
+      "alpha": 0.6
+    },
+    "random_q7": {
+      "file": "random_q7.cbm",
+      "sha256": "6d4674bfdab4fb6088826c6640ede34fe6d1ed266e76dc85c558fb3bd6acec70",
+      "bytes": 2197224,
+      "kind": "time",
+      "alpha": 0.7
+    },
+    "random_q8": {
+      "file": "random_q8.cbm",
+      "sha256": "acd75c680bbb1b4b9934931e07f5c022ab58b1ac0ffb07e561030abf16a47095",
+      "bytes": 2196848,
+      "kind": "time",
+      "alpha": 0.8
+    },
+    "random_q9": {
+      "file": "random_q9.cbm",
+      "sha256": "88a04e4db85c54f616b10a1c738c373ff682358f9c686bce9420093ea2c21116",
+      "bytes": 2194512,
+      "kind": "time",
+      "alpha": 0.9
+    }
+  },
+  "predictions_sha256": "c2d69bc43bd14b8727983ab352dbee4d4dd6f902340e59087a98ab8d1f637733",
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 808.928300857544,
+  "scope": "Chronological40kfit/10kheldTrain raw5ODgate, not primaryValidation/confirmation."
+}

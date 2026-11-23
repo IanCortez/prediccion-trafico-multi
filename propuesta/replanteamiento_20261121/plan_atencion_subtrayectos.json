@@ -1,0 +1,18 @@
+{
+  "source": "Implicitorderedintervals of ALLpastTrainrawtrajectories; never queryactualpath",
+  "hypothesis": "Directsubtrajectorykernel failed163.946s; evidenceblend130.960s. Learn source-to-query time transport, route-shape relevance, andconditionalgate from originalTrainqueries.",
+  "architecture": "Frozenprotected30components +8attentioncomponents over64subtrajectorysources;34Dtokens includes7pointgeometry andstart/stopcontext.",
+  "Train": "1023485originalqueries withoriginalT, wholeparentweekfold excludedbeforetree; no narrowingprimarycohort",
+  "training": {
+    "epochs": 6,
+    "batch": 512,
+    "lr": 0.001,
+    "seed": 20261122,
+    "loss": "NLL+5RPS+.2conditionalTrainGeometry",
+    "selection": "Fixedfinalepoch6; no Validationepochselection"
+  },
+  "normalizer": "Fixed32768Trainqueries seed5833, sourcefeaturestatistics and robust logsourceT tologqueryT regression; noValidationlabels.",
+  "main_control_trigger": ">=.5seconds improvement overprotected130.158 and upperdayCI<0; then matched sourcevalues control.",
+  "Test": "SEALED",
+  "bounded_storage": "Onlyparentint32+first/lastuint8indices;34Dtokens derivedonGPU, no token/CDFcache."
+}

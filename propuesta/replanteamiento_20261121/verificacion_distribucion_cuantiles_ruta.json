@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "uniform_quantiles_exact_to_1e_6": true,
+  "mixture_mass_median_and_order_exact_to_1e_6": true,
+  "dataset_rows_timestamps_original_labels_exact": true,
+  "fit_arrival_purge_verified": true,
+  "held_cutoff": 1396530690,
+  "CatBoost_MultiQuantile_leaf_method": "Exact",
+  "no_Validation_or_Test_access": true,
+  "source_sha256": "c79f1db363d81cd7360a8aff32536e20a003cc780053cc4765881df241cd2980",
+  "seconds": 2.5927064418792725
+}

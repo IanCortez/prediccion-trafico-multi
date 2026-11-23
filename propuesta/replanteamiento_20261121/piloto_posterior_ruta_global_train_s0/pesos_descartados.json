@@ -1,0 +1,10 @@
+{
+  "removed": [
+    {
+      "file": "public_time_only.cbm",
+      "bytes": 10416904,
+      "sha256": "6f26c7c3ed18426422ecbc25987f1ee5d12638df30bee437bbabfb6230fc3862"
+    }
+  ],
+  "all_completed_predictions_preserved": true
+}

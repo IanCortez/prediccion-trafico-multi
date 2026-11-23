@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "main": {
+    "n": 127941,
+    "mae_s": 130.9599737378948,
+    "rmse_s": 212.83999089768474,
+    "mdae_s": 75.0
+  },
+  "control": {
+    "n": 127941,
+    "mae_s": 163.94588130466386,
+    "rmse_s": 251.78703342777385,
+    "mdae_s": 105.0
+  },
+  "paired_vs_protected": {
+    "kernel_backoff": {
+      "delta_mae_s": 33.787839707365116,
+      "ci95_s": [
+        33.10948207601517,
+        34.53346314190015
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    },
+    "evidence_mixture": {
+      "delta_mae_s": 0.801932140596056,
+      "ci95_s": [
+        0.5733103739464057,
+        1.0455643349179247
+      ],
+      "days": 35,
+      "interpretation": "Exploratory; reused Validation and adaptive model search"
+    }
+  },
+  "meaningful_gate_passed": false,
+  "conclusions": [
+    "Directhistoricalsegmenttimes do nottransfer usefullywithoutlearnedcalibration. Fixedconfidenceblend alsoworsened primaryMAE.",
+    "Coverage andsourcecountalone cannotjustify replacing protectedCDF. No claimthat observedsegments are querygroundtruth.",
+    "Nexttest learns source-to-query time transport andsourcebegin/endcontext fromTrain; no neighborcount/bandwidth sweep."
+  ],
+  "preservation": {
+    "main_under131_06": true,
+    "nonparametric_sources_preserved": true,
+    "all_metrics_predictions_sources_retained": true
+  },
+  "next_plan": "plan_atencion_subtrayectos.json",
+  "Test": "SEALED",
+  "goal": "ACTIVE"
+}

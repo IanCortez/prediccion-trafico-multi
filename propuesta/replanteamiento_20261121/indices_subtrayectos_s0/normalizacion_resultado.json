@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "normalization_n": 32768,
+  "valid_source_tokens": 147282,
+  "anchor_n": 23218,
+  "time_anchor": [
+    1.6744331775516208,
+    0.7360288872260529
+  ],
+  "source_tokens_finite": true,
+  "source_reverse_singleton_exact": true,
+  "all_source_context_columns_Trainonly": true,
+  "constructor_sha256": "43b431eee35469c4019dc91cd29ebd8d565a543720d6b843e09b2cb53e14c983",
+  "sources": {
+    "tokens_subtrayectos.py": "3bd73ea601047a706286cf6f6af4988d4a7ea5adc23f1b14733f676d4e91908f",
+    "normalizar_tokens_subtrayectos.py": "d58865fad8b36e59e766c3d38e43c9d3b8ac186ef19433f4fb0a632d718c35b1"
+  },
+  "no_Validationlabels": true,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 2.8172523975372314
+}

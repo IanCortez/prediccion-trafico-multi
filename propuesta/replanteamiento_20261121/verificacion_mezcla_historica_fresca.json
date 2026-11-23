@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "Train-only fresh-model probability/information instruments, not primaryMAE",
+  "fresh_global_weights_no_retained_checkpoint_loaded": true,
+  "preprocessing_only_ctor_Train_n": 1023485,
+  "components": 22,
+  "initial_historical_gate": 0.5,
+  "probability_normalization_error": 2.384185791015625e-07,
+  "historical_set_permutation_logprob_error": 9.5367431640625e-07,
+  "all_missing_history_parent_fallback_exact": true,
+  "permuted_history_quantiles_exact": true,
+  "all_gradients_finite": true,
+  "new_head_and_gate_gradients_nonzero": true,
+  "parent_control_history_perturbation_invariant": true,
+  "parent_control_exact_parent_prediction": true,
+  "own_fold_source_intervention_from_preparation_passed": true,
+  "physical_calibration_fp64_rank": 2,
+  "model_source_sha256": "806739e994331184f484a9270bf3bcc48fddadb52af0a4c6687e515be9e26938",
+  "parent_model_source_sha256": "0881ec64259b9c4195a9b94c5cb43233c1a547177ade6715eceb6abc2ee83672",
+  "base_constructor_sha256": "8cdb41e34b315b35b2b21ee334e4e519e7bb213aaf776bb55014e757896a8cdd",
+  "history_constructor_sha256": "53b6bdf1b83d5a93a02e5aa0a5004773f789959ee411e92c2684789aad773def",
+  "Validation_data_arrays_accessed": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 5.957399129867554
+}

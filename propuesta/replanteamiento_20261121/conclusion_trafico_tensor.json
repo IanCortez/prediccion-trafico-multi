@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "scope": "Chronological heldTrain raw5ODfeature gate. Not primaryValidation or independentconfirmation.",
+  "metrics": {
+    "n": 50000,
+    "mae_s": 135.5056617284108,
+    "rmse_s": 212.33169252786044,
+    "mdae_s": 87.661523529704
+  },
+  "control": {
+    "n": 50000,
+    "mae_s": 135.46413079566094,
+    "rmse_s": 212.31790492326266,
+    "mdae_s": 87.7914278376644
+  },
+  "comparison": {
+    "delta_mae_s": 0.04153093274987801,
+    "ci95_s": [
+      -0.18524636871400685,
+      0.2366921876975252
+    ],
+    "days": 22,
+    "interpretation": "ChronologicalheldTrain only, sourcefieldparentweekcrossfit, everyparameterexcludesownsourcefold. ExtraTrainauxlabelsupervision not a matchedcapacitycausaltest."
+  },
+  "decision": "Failed>=1secondgate; no matchedparentclockcontrol and no rank/slot/offsettuning. Keepallmetrics/predictions/sources; sixnegativefieldweights alreadydiscarded.",
+  "limits": "Endpointpooledfieldfeatures did not improve thiscontrol. Doesnot disproveeverytime-dependentroadmodel orforecast; causalclockalignmentgain notestablished.",
+  "six_source_views_parentfold_excluded": true,
+  "next": "IndependentmonotoneSplineCDF family. Usesonly206publicraw5features andunchangedoriginaldurationbins, no road/driver auxiliaries.",
+  "Test": "sealed"
+}

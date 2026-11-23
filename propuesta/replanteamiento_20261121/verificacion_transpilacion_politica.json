@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "random_public_states": 1024,
+  "candidate_rows": 2958,
+  "original_training_statements_executed_exactly": true,
+  "max_candidate_feature_error": 0.0,
+  "max_native_model_score_error": 0.0,
+  "source_sha256": "c30a8a62e389682cdee835a632fddbb9ef955cc494dd62c1ee986c3bf346f658",
+  "generator_sha256": "87962e6782205ddf4f90b421de041d0b5a6a3d9e8a59418b3819b487c959bd83",
+  "no_real_trajectories_or_labels_decoded": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "seconds": 0.8095731735229492
+}

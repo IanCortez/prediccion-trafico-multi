@@ -1,0 +1,29 @@
+{
+  "status": "Frozenforfullpipelineexecution; previousfullprimaryexperimentcompleteandnegative. OneGPU, Testsealed.",
+  "hypothesis": "LocaltimeHuberdoesnotensuretriptimeconsistency;512privilegedTrainparents95.361sMAE and-73.167smeanbias motivatesdirectsumtimeconstraint.",
+  "evidence_scope": "Trainonlydiagnostic, notpublicODperformance or comparisonwithheldrouteoracle.",
+  "architecture": "Frozenprefix/route/value/rootbody plus8386parameterpositivepace/delaycorrection, identityatstart.",
+  "supervision": "WholeknownTriptimeL1, sameoriginaltimes; noqueryfilter/labelchange. Publicprior-mode style, notprivate recognition.",
+  "full_training": "Twofixedepochs,256parents, all894104auxparents/41511860knowntokensonceperepoch. Finalpointregressorusesall1023485originalTrainqueries.",
+  "next": "Finishcurrentfullprimary246vs216comparison. Ifmeaningfulgainornewcertifiedminimum, handlecontrol/promotionfirst. Otherwisetrainwholetripconsistencyanditsfullpublicevaluation.",
+  "preservation": "Everycompletedmetric/predictionincluding>131.06, allqualifiedweights plusdependencies, originals/TransferTraj protected.",
+  "model_source_sha256": "2f8904022fa56c37e37206a904bc2deba9193753d91ce6566ed2fe0642089c1e",
+  "trainer_source_sha256": "5943341a48295f2554d930e07b7809dfabf6d2261fe8da16aaf001acbfa0dda7",
+  "Test": "sealed",
+  "goal": "ACTIVE",
+  "public_rollout_source": "generar_resumenes_consistencia_temporal_viaje.py",
+  "point_evaluation_source": "evaluar_consistencia_temporal_viaje.py",
+  "evaluation": "Onefixed246MAE model vs exactpreviousuncalibratedforecast,216control andcurrentbest. Quantile-tailmodels onlyfornewnumericalminimum. No redundantcontrolfit.",
+  "certification_source": "certificar_consistencia_temporal_viaje.py",
+  "ready_sources": {
+    "modelo_consistencia_temporal_viaje.py": "2f8904022fa56c37e37206a904bc2deba9193753d91ce6566ed2fe0642089c1e",
+    "entrenar_consistencia_temporal_viaje.py": "5943341a48295f2554d930e07b7809dfabf6d2261fe8da16aaf001acbfa0dda7",
+    "generar_resumenes_consistencia_temporal_viaje.py": "001163b664bb89ec67b30b080cf5432977f90d9171f7b274fff6d15038e72de7",
+    "evaluar_consistencia_temporal_viaje.py": "ac208b85acf54eaaaeabc56a4adeb0a41e195d39f7182d5e0aa9c4d8093ea37e",
+    "certificar_consistencia_temporal_viaje.py": "47858b0c267cf92dc033a887fc66989abd31b30b7db94a01206273683a1bb93f",
+    "concluir_consistencia_temporal_viaje.py": "b26f96f763b34b942a8e6b27b42c31645567f2d0a8f4c06c66a0a6f134e435d3",
+    "verificar_conservacion.py": "70074976f7264377484ea53a871e3ec32372021483d5f1b53a69a42d847dce1c"
+  },
+  "interpretation_control": "Ifaggregatecorrection useful, require matchedadditional8386parameterlocal-time-supervisioncontrol withsameinitialization/epochs/parents toattribute gains totripaggregation; do notattributegaintosumlossfromcapacityalone.",
+  "orchestrator_sha256": "4ad1066e98d3d20781c85084013f8000f92c74cad245a542def91438883dad25"
+}

@@ -1,0 +1,82 @@
+{
+  "removed_weights": [
+    {
+      "file": "control216_MAE.cbm",
+      "sha256": "9fcde3239bff404af5e1f973ab345713ec4dda488c9269172e0b699dc15e16bc",
+      "bytes": 4205520,
+      "loss": "MAE",
+      "width": 216,
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.98850107536296,
+        "rmse_s": 218.27877750096638,
+        "mdae_s": 83.01675539851544
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    {
+      "file": "full246_MAE.cbm",
+      "sha256": "be36bca35e1dc7c7f54797e101bc8a206298d2a9657912d7f2bf85764895452e",
+      "bytes": 4209320,
+      "loss": "MAE",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.1112052749399,
+        "rmse_s": 217.82632324070562,
+        "mdae_s": 82.15039946813079
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    {
+      "file": "full246_q10.cbm",
+      "sha256": "78972b4487047c0076d51993b19b9238d7f79498919f0798407878c0bc284107",
+      "bytes": 4242736,
+      "loss": "Quantile:alpha=0.1",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 187.8400780282029,
+        "rmse_s": 279.55109867853804,
+        "mdae_s": 123.9545398455017
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    {
+      "file": "full246_q50.cbm",
+      "sha256": "71e73ce5c58fa2095089f6965b84c59d90e0c5625ff6d2842076a72119989c0a",
+      "bytes": 4244512,
+      "loss": "Quantile:alpha=0.5",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 136.0751961547707,
+        "rmse_s": 217.80876928142487,
+        "mdae_s": 81.96791992882027
+      },
+      "preserved": false,
+      "requires_GRU": false
+    },
+    {
+      "file": "full246_q90.cbm",
+      "sha256": "0d89ae4b3d3761aca7e574dafbe1686df9b98fff26fe2ed26fa82268c95d3932",
+      "bytes": 4239288,
+      "loss": "Quantile:alpha=0.9",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 254.61366161298656,
+        "rmse_s": 314.3498818396562,
+        "mdae_s": 217.99241390261898
+      },
+      "preserved": false,
+      "requires_GRU": false
+    }
+  ],
+  "sequence_weights_preserved": false,
+  "all_completed_predictions_metrics_sources_preserved": true,
+  "duplicate_point_archives_removed_after_exactproof": true
+}

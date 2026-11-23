@@ -1,0 +1,73 @@
+{
+  "complete": true,
+  "passed": false,
+  "metrics": {
+    "euclidean": {
+      "n": 10000,
+      "mae_s": 132.28690018588162,
+      "rmse_s": 207.5340284447755,
+      "mdae_s": 86.4657977636125
+    },
+    "directed_network": {
+      "n": 10000,
+      "mae_s": 132.42407800784585,
+      "rmse_s": 207.30175147852563,
+      "mdae_s": 86.74413774968343
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "vs_euclidean": {
+      "delta_mae_s": 0.13717782196421877,
+      "ci95_s": [
+        -0.39960072184738826,
+        0.661093793226916
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedchronologicalheldTrain, staticgraphfeatures; not primaryValidation orconfirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": -0.9313147849560682,
+      "ci95_s": [
+        -1.6267994452246695,
+        -0.2714695562722974
+      ],
+      "days": 22,
+      "interpretation": "ExploratoryreusedchronologicalheldTrain, staticgraphfeatures; not primaryValidation orconfirmation."
+    }
+  },
+  "features_count": 338,
+  "public_static_landmark_n": 32,
+  "raw17_source_features_order_singleton_exact": true,
+  "forecast_order_singleton_exact": true,
+  "no_actual_queryroute_N_T": true,
+  "weights": [],
+  "sources": {
+    "piloto_landmarks_red_Train_v2.py": "b28559c5528b112bcfa7b146db81afab02ad71f08a760c1ac98d0b107a853059",
+    "landmarks_red_publica_v2.py": "e5a79d412f89234b904965934d4939ba1367787838eabf791242e31e69afa600",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "predictions_sha256": "927b808150d85e52173bfa812273d4f569adeb388c221e4ec88323a84282e8d2",
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 108.96391129493713
+}

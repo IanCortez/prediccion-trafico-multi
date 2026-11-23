@@ -1,0 +1,7 @@
+{
+  "stage": "Arm ended without complete result; inspect log/checkpoint, no automatic overwrite",
+  "exit_code": 1,
+  "arm": "control",
+  "goal": "active",
+  "Test": "sealed"
+}

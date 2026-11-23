@@ -1,0 +1,33 @@
+{
+  "epoch": 3,
+  "train_loss_history": [
+    {
+      "epoch": 1,
+      "primary_train_n": 1023485,
+      "train_loss": 3.4607951333062874,
+      "seconds": 97.27581429481506
+    },
+    {
+      "epoch": 2,
+      "primary_train_n": 1023485,
+      "train_loss": 3.4598817460991684,
+      "seconds": 97.75737714767456
+    },
+    {
+      "epoch": 3,
+      "primary_train_n": 1023485,
+      "train_loss": 3.4592730123808035,
+      "seconds": 97.98838829994202
+    }
+  ],
+  "gate_final_bias": [
+    -3.947279214859009
+  ],
+  "gate_final_weight_norm": 1.0028560161590576,
+  "source_head_final_weight_norm": 4.853910446166992,
+  "source_head_final_bias_norm": 0.6839823722839355,
+  "interpretation": "Optimizationdiagnostic only. Gatebiasalone isnot averageconditionalmixtureweight; do notlabel it collapse.",
+  "actual_model_parent_frozen": true,
+  "Validation_access": false,
+  "Test_access": false
+}

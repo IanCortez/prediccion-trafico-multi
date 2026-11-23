@@ -1,0 +1,9 @@
+{
+  "syntax_valid": true,
+  "sources": {
+    "modelo_subtrayectos_conjuntos.py": "707f405b3bd7901a64993677944084c1c1198d6a498cbd639f16dd4bfae9f57e",
+    "entrenar_subtrayectos_conjuntos.py": "bd38f04603f2cae83e053b0b2582f0dcbc433bbd4f0df2f88f1bc46184344ce8"
+  },
+  "joint_training_real_gradient_and_canonical2048_preflight": "Required before optimizerupdates; no frozenparent gradients allowed.",
+  "final_evaluation": "Train tensors explicitly released before fullValidation; no enlargedGPUcap."
+}

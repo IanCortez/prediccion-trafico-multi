@@ -1,0 +1,8 @@
+{
+  "deleted_exact_file": "features_train.npz",
+  "bytes": 206299998,
+  "reason": "Completed auxiliary trial did not improve original reference; keep exact queries/labels/provenance and source.",
+  "rebuild_script": "reconstruir_features_subviajes.py",
+  "all_completed_metrics_predictions_preserved": true,
+  "protected_model_unchanged": true
+}

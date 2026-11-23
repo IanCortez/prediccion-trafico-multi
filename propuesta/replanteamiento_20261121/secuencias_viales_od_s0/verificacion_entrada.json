@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "Train65_route_summaries_match_protected_features": true,
+  "max_error_m_or_s": 0.0,
+  "reversal_and_singleton_exact": true,
+  "actual_path_extra_field_rejected": true,
+  "Validation_labels_accessed": false,
+  "Test_access": false
+}

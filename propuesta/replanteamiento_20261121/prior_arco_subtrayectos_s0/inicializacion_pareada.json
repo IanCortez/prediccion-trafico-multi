@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "trainable_neural_parameter_sha256": "e9a49004c2e37e3d9e65eb3ad1d9108d62e74f26b5f8f478b82c5d23ee1b0fef",
+  "identical_time_control_initial_neural_parameters": true,
+  "all_normalizers_exact": true
+}

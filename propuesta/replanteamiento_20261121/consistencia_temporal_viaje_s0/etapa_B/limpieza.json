@@ -1,0 +1,21 @@
+{
+  "unqualified_weights_removed": [
+    {
+      "file": "full246_MAE.cbm",
+      "sha256": "fda483fe8e1228f06e5372f1b83cfa1fcc6a7123c827e09d269eef0ada63fa91",
+      "bytes": 4208992,
+      "loss": "MAE",
+      "width": 246,
+      "validation": {
+        "n": 127941,
+        "mae_s": 135.99613162839904,
+        "rmse_s": 217.77361771079788,
+        "mdae_s": 81.93957816870409
+      },
+      "preserved": false,
+      "requires_GRU": false
+    }
+  ],
+  "sequence_and_initialization_preserved": false,
+  "all_completed_predictions_metrics_sources_retained": true
+}

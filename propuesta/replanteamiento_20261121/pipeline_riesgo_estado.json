@@ -1,7 +1,7 @@
 {
-  "stage": "Waiting for actual preceding GPU/control chain exit",
-  "wait_original_controller": 34908,
-  "supervisor_pid": 29428,
+  "stage": "Inspect complete risk result and continue goal",
+  "exit_code": 0,
+  "complete_result": true,
   "goal": "active",
   "Test": "sealed"
 }

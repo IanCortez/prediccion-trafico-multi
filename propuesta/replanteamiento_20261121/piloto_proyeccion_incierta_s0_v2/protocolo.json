@@ -1,0 +1,10 @@
+{
+  "seed": 20261122,
+  "n": 20000,
+  "scope": "Train-only oracle geometry coverage, not OD TTE performance or an error lower bound.",
+  "hypotheses": "Protected two default routes plus two cost types for three additional distinct endpoint-projection pairs selected by squared GPS projection residual, independent of labels.",
+  "information": "Raw five OD/departure fields; whole UTC-week historical exclusion for Train; actual geometry only evaluation target.",
+  "gate": "At least2percent and5meters mean seven-point geometry-oracle reduction vs protected two routes plus straight-line prior.",
+  "Validation_labels_accessed": false,
+  "Test": "sealed"
+}

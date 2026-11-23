@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "sha256": "02b99d0080ad521f4feb846a29c9dde4a43357df946c7a851bf9e800a3c353c8",
+  "n": 127941,
+  "MiB": 3.0448827743530273,
+  "counts_quantiles": [
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    4.0,
+    8.0,
+    64.0
+  ],
+  "eligible_n": 127941,
+  "source_fold_checked": true,
+  "all_original_queries_preserved": true
+}

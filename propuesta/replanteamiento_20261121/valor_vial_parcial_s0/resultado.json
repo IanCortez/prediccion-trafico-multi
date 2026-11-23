@@ -1,0 +1,89 @@
+{
+  "id": "valor_vial_parcial_s0",
+  "config": {
+    "mode": "partial_street_auxiliary",
+    "seed": 20261122,
+    "max_epochs": 40,
+    "max_training_seconds": 3600,
+    "minimum_epochs": 12,
+    "patience": 8,
+    "batch": 512,
+    "lr": 0.0007,
+    "weight_decay": 0.0003,
+    "clip": 5,
+    "precision": "FP32highest",
+    "canonical_inference_batch": 2048,
+    "GPU_memory_fraction": 0.5,
+    "architecture": "Fresh4memberamortizedstreetvalue; learned53766roadembeddings withonehopgraphcontext;16uncertainpublicendpointpairs*2timecomponents plus2globalfallback; no route rollout or target teacherforcing inpublicODprediction.",
+    "loss": "PrimaryNLL+5RPS; treatment adds.05continuousremainingtimeNLL+.05partiallocaltimeHuber+.1neighbor/EOSrouteCE.",
+    "input": "Same216legalraw5derivedfeatures as protectedreference, including existingwholeweekcrossfitTraintraffic summaries; primary normalizer uses eligibleTrainonly. Purepublic206 was used only for heldTrainoracle to avoid nestedhistoryleak.",
+    "auxiliary": "FourfixedtrustedTrainstates, one rotatingpertrip/epoch. Actualroad/remainingtime onlyauxmethod; every originalprimaryTrain query retained.",
+    "bank_manifest_sha256": "99cca39e34d10a73c84dbec95ca4fc1a0f96134b0d23880b03c9277b2e353183",
+    "aux_manifest_sha256": "535c5a8a316a9228c4c210fac7d2c75a0bcec5c3c1cb21044f3813b5b0626f47",
+    "Train_n": 1023485,
+    "Validation_n": 127941,
+    "Test": "sealed",
+    "reference_id": "atencion_historia_individual_s0",
+    "reference_validation": {
+      "n": 127941,
+      "mae_s": 130.15804159729876,
+      "rmse_s": 209.3534140414966,
+      "mdae_s": 75.0
+    },
+    "control_trigger": "At least.5second fullValidation improvement overprotectedbest and upperdaybootstrapdeltaCI<0, then certifycandidate andmatchednoauxcontrol.",
+    "preservation": "Allcompletedmetrics/predictions; every completeMAE<131.06checkpoint and strictnewbest. Nonqualifyingweights temporaryonly."
+  },
+  "validation": {
+    "n": 127941,
+    "mae_s": 134.77935141979506,
+    "rmse_s": 215.76814945323818,
+    "mdae_s": 75.0
+  },
+  "initial_validation": {
+    "n": 127941,
+    "mae_s": 179.167585058738,
+    "rmse_s": 254.41176554702363,
+    "mdae_s": 135.0
+  },
+  "best_epoch": 7,
+  "epochs_run": 15,
+  "model_file": null,
+  "model_sha256": null,
+  "initial_weights_sha256": "4a3e38ba8c8e9c2d69cbe054224a220ababfcebe380eaa0950da75799fb2fc71",
+  "paired_vs_reference": {
+    "delta_mae_s": 4.621309822496307,
+    "ci95_s": [
+      3.950116333313929,
+      5.315648868143286
+    ],
+    "days": 35,
+    "interpretation": "Exploratory; reused Validation and adaptive model search"
+  },
+  "control_trigger_met": false,
+  "saved_checkpoints": [],
+  "normalization_sha256": "01d6224815f9812d4b87bb6bce6dce2c7c1de4d8215ad0c16e946d7731419504",
+  "predictions_sha256": "5b441047431cba8973c4a1c4cf8413484cf7f8268456af23779a0f353dcb0b73",
+  "sources": {
+    "entrenar_valor_vial.py": "b5abf0ca37e3f4b33d5951777b119b241c33a110e061cb266d3df77bab8ff9c7",
+    "modelo_valor_vial.py": "d723b836982ab50ceb6d2574e133eff6d86a58ecdfbd013987e0cf07b06ce31f",
+    "modelo_aux_subviajes.py": "157982e2480ea0fafdd11ecbcc5bb21ec9069efb3c97954746cb69d174a56c12",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_contexto.npz",
+    "propuesta\\datos\\validation_gps_mapmatched.npz",
+    "propuesta\\datos\\validation_rutas.npz",
+    "propuesta\\datos\\validation_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\validation_x.npz",
+    "propuesta\\datos\\validation_y.npy"
+  ],
+  "seconds": 670.246809720993,
+  "scope": "CompleteunchangedprimaryODValidation; learnedstreetvalue does not roll out a teacherforcedroute. ReusedValidation not independentconfirmation."
+}

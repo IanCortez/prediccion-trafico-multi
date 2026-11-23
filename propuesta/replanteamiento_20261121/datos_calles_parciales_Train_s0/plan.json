@@ -1,0 +1,20 @@
+{
+  "scope": "Train-only auxiliary street labels; all original primary queries/labels/splits unchanged.",
+  "trips": 894105,
+  "matching": "Frozen nearest4/Viterbi traced without output changes; no tolerance modifications.",
+  "labels": "Original15seconds intervals distributed on public shortest bridges, merged into53766chains; uncertain intervalGAP65535. All totalduration labels unchanged.",
+  "quality": "Existing894105quality eligibleTrain sources used only for auxiliary labels. All1023485purgedprimaryTrain queries retained in future objective.",
+  "privacy": "BinaryCSVrow membership checked before decoding; no Validation/Test trajectories decoded.",
+  "endpoint": "TrueHMM first/lastchain andfraction are auxiliary labels only; publicOD input must use standalone4projections from5fields.",
+  "resources": {
+    "chunk_trips": 4096,
+    "max_artifact_MiB": 500,
+    "CPU_threads": 2,
+    "no_GPU": true
+  },
+  "source_memory_sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+  "source_sha256": "c2e915fe1915e7f30d5c897ccb5aff53f3c6a5320f39e6918d3a61478057c9e4",
+  "trace_sha256": "d7e2adb69884134a926271039ddb6145e30c2d86b7cefd897e16f1e0835d52d2",
+  "Test": "sealed",
+  "resume": "Completed immutable shards and recordedlastCSVrow are retained; no repeat of complete shards."
+}

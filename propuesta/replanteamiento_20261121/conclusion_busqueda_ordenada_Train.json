@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "additional_data_effect": {
+    "zero_source_before": 0.318359375,
+    "zero_source_after": 0.3671875,
+    "gained_queries": 15,
+    "lost_queries": 40,
+    "persist_additional_bank": false
+  },
+  "ordered_search_effect": {
+    "before": {
+      "zero_source_fraction": 0.318359375,
+      "source_within100m_fraction": 0.677734375
+    },
+    "after": {
+      "zero_source_fraction": 0.0,
+      "source_within100m_fraction": 0.98828125,
+      "median_source_count": 3120.5,
+      "finite_minerror_quantiles": [
+        2.513269474345094,
+        6.949375708655359,
+        25.14413362325012
+      ]
+    },
+    "within100m_gain_percentage_points": 31.0546875,
+    "bbox_filter_preserved": true,
+    "exact_same_outputs_as_initial_prototype": true,
+    "bruteforce_exact": true,
+    "perquery_old_support_preserved": true
+  },
+  "interpretation": "Fixed independent endpoint-neighbor truncation hides ordered matches. Parent-union discovery followed by within-parent ordered optimization corrects that geometric mechanism on512Trainqueries.",
+  "limitation": "No new MAE result. Reused smallTraininstrument, not primaryValidation, confirmation, or proof that target73.5 is attainable.",
+  "new_GPS_bank_written": false,
+  "best_model_changed": false,
+  "Test": "SEALED"
+}

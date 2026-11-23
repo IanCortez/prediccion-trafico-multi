@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scope": "Actualattention branch with5queries16members64sources; perturbednonzeroNNparameters, not azeroheadshortcut.",
+  "same_neural_state_layout": true,
+  "all_TTweights_probabilities_gates_sigmas_exact_forfixedparameters": true,
+  "geometryprior_actually_changes": true,
+  "paired_source_permutation_alloutputs_exact": true,
+  "singleton_tolerance": 2e-06,
+  "time_source_input_and_normalizer_unchanged": true,
+  "source_sha256": "d13e71755e82bfea88a7a7df52e68cb95309649f7da7aebf36c923be4340e5ed",
+  "model_sha256": "ba71cd022d8834e90336fd07f7edd97d3c71ca1959d6532b36e912e36b51ab84",
+  "Test_access": false
+}

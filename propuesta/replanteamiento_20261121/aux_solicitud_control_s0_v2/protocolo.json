@@ -1,0 +1,26 @@
+{
+  "arm": "control",
+  "weight": 0.0,
+  "epochs": 4,
+  "batch": 512,
+  "seed": 20261122,
+  "duration_lr": 1e-05,
+  "request_lr": 0.001,
+  "weight_decay": 0.0003,
+  "geometry_weight": 0.2,
+  "rps_weight": 5.0,
+  "canonical_inference_batch": 2048,
+  "precision": "FP32 highest, no autocast",
+  "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "Test": "sealed",
+  "primary_train_rule": "1023485 embargoe-safe rows, unchanged evaluation cohort",
+  "training_determinism": "Fixed seeds and standard CUDA algorithms, matching original reference; no bitwise training guarantee",
+  "compatibility_fix": "Strict CUDA cumsum unsupported; failure occurred before any optimizer update"
+}

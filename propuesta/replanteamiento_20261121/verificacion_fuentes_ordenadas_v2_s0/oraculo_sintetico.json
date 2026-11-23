@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "queries": 5,
+  "sourceparents": 200,
+  "exhaustivepairs_and_weight_ranking": true,
+  "original_indexable_mask_preserved": true,
+  "duplicate_parent_ties_canonical": true,
+  "pruned_unpruned_top64_exact": true
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "scope": "CPU mathematical/information/gradient instrument; no optimizer step and no primary MAE result",
+  "query_forward": "x only, 216 legal OD/map/calendar inputs",
+  "uniform_type_conditional_NLL": 1.0986121892929077,
+  "expected_uniform_NLL": 1.0986122886681098,
+  "type_marginalization_max_probability_error": 3.725290298461914e-08,
+  "initial_duration_output_bit_identical": true,
+  "request_head_gradient_norm": 0.04367072880268097,
+  "duration_output_gradient_norm_after_nonuniform_types": 0.0007749872747808695,
+  "conditional_probability_matches_direct_arithmetic": true,
+  "actual_request_only_training_target": true,
+  "Test_access": false,
+  "Validation_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "sources": {
+    "modelo_aux_solicitud.py": "fe079afdc764503ccb778d592e86a6b6872046c31fb87fec479012bd884d8fb4",
+    "verificar_aux_solicitud_cpu.py": "646ce29739f388086f8abbbf128e93fc2ac9cc927280464561c5eb1924477a2a"
+  },
+  "seconds": 4.074636936187744
+}

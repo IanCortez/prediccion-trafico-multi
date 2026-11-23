@@ -1,0 +1,69 @@
+{
+  "scope": "Train-only conditional instrument, not a primary MAE result",
+  "frozen_representation_limitation": "Strong reference saw all Train. Held rows reserve new heads only, not truly unseen foundation data.",
+  "fit_n": 19525,
+  "held_n": 5475,
+  "reference_held_Train": {
+    "n": 5475,
+    "mae_s": 112.74794520547945,
+    "rmse_s": 190.464860312076,
+    "mdae_s": 60.0
+  },
+  "matched_unsupervised": {
+    "n": 5475,
+    "mae_s": 110.99178082191781,
+    "rmse_s": 185.4224351367838,
+    "mdae_s": 60.0
+  },
+  "supervised_type": {
+    "n": 5475,
+    "mae_s": 110.27397260273973,
+    "rmse_s": 183.95316557017352,
+    "mdae_s": 60.0
+  },
+  "paired_vs_control": {
+    "delta_mae_s": -0.7178082191780822,
+    "ci95_s": [
+      -1.3701094232874318,
+      -0.0368827846828061
+    ],
+    "days": 63,
+    "interpretation": "Exploratory Train-only day-block interval. Held rows reserve only the new heads; the frozen base already saw all Train. No Validation was accessed by this instrument."
+  },
+  "paired_vs_reference": {
+    "delta_mae_s": -2.473972602739726,
+    "ci95_s": [
+      -3.573489345157837,
+      -1.373243503002874
+    ],
+    "days": 63,
+    "interpretation": "Exploratory Train-only day-block interval. Held rows reserve only the new heads; the frozen base already saw all Train. No Validation was accessed by this instrument."
+  },
+  "duration_NLL": {
+    "matched_unsupervised": 3.488550901412964,
+    "supervised_type": 3.481862783432007
+  },
+  "worth_full_experiment": true,
+  "interpretation": "Matched instrument only. Actual call is a training target, not a primary query feature. It cannot establish new full Validation MAE or confirmation performance.",
+  "CPU_only": true,
+  "Test_access": false,
+  "Validation_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "parent_unchanged": true,
+  "parent_sha256": "55fa2262e3b26b259839fa06e6f28812e75ff30b578aceb6022c8286c2cb161f",
+  "code_sha256": "aa8ff9f2a51f287b933ce1e0874532ee59677b644a7873a8f6674a76bd29c0e9",
+  "model_code_sha256": "c8ce5e7113f3e357dddb4a1c237249df24f4f38186c9fea83b76db5796be134f",
+  "predictions_sha256": "48914de055cefad0e1535176968a6c917315b0a31e7ecd13bea3e2f3334ee7e7",
+  "heads_sha256": "7ae126ece22bb57f8d531c1f5ac337c7ae2dc31729dde80e27d87d1371d981e8",
+  "seconds": 29.662941694259644,
+  "postprocess_note": "Corrected generic paired-helper wording from reused Validation to actual Train-only scope; numeric results unchanged. Original executed source remains preserved and hashed.",
+  "heads_retained": false,
+  "cleanup_note": "After full-cohort descendant failed, reconstruction sources and all metrics/predictions retained; small unused intermediate weights removed."
+}

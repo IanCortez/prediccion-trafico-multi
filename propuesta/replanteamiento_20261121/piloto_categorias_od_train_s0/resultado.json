@@ -1,0 +1,51 @@
+{
+  "passed": false,
+  "metrics": {
+    "n": 50000,
+    "mae_s": 134.8953204833374,
+    "rmse_s": 211.7851231261962,
+    "mdae_s": 86.97708452331906
+  },
+  "control": {
+    "n": 50000,
+    "mae_s": 135.46413079566094,
+    "rmse_s": 212.31790492326266,
+    "mdae_s": 87.7914278376644
+  },
+  "comparison": {
+    "delta_mae_s": -0.5688103123235165,
+    "ci95_s": [
+      -0.8040554195792483,
+      -0.3146349870035158
+    ],
+    "days": 22,
+    "interpretation": "Chronological heldTrain only; no Validation labels or adaptive stopping. Control reused exactly from stored predictions."
+  },
+  "categorical_features": [
+    "category_o_64",
+    "category_d_64",
+    "category_o_128",
+    "category_d_128",
+    "category_OD_128",
+    "category_o_256",
+    "category_d_256",
+    "category_OD_256",
+    "category_OD256_weekday_daypart"
+  ],
+  "model_sha256": null,
+  "source_sha256": "130e77d1679ff2ee30a1b4806334f6aedf6d771cabe7e927b8b7340bc8fb54e8",
+  "baseline_predictions_sha256": "8437bd770a564c0e6edb2d2b675890d28ae6e3503c34e2943c2a418e63161819",
+  "predictions_sha256": "6991718fd9698b8239936507c6270a890f7ace4755047c30928af748ad75e8a6",
+  "all_fit_arrivals_before_held": true,
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 151.4480574131012
+}

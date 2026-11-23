@@ -1,0 +1,16 @@
+{
+  "parents_selected": 250000,
+  "aux_examples": 475076,
+  "unique_aux_parents": 247222,
+  "excluded_attempts": {
+    "endpoint_bbox": 5053,
+    "OD_under200m": 17380,
+    "duplicate_within_parent": 1531,
+    "OD_speed_over120": 120,
+    "too_short_parent": 308,
+    "parent_crosses_UTC_week": 112
+  },
+  "query_timestamp_min": 1372636854,
+  "query_timestamp_max": 1398344917,
+  "seconds": 23.158804178237915
+}

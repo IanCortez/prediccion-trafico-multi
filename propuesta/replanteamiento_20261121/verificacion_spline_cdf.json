@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "inverse_error_float64": 8.881784197001252e-16,
+  "identity_error_float64": 0.0,
+  "strict_monotonicity_including_linear_tails": true,
+  "probability_normalization": true,
+  "reverse_singleton_allquantiles_exact": true,
+  "max_singleton_probability_error": 2.60770320892334e-08,
+  "finite_NLL_gradients": true,
+  "parameters": 4977042,
+  "model_sha256": "04d9aa2606fcfde9dca3a6138d39176dea91a879b00af20a3a52cdd717b5733b",
+  "datasets_opened": false,
+  "Test_access": false,
+  "seconds": 0.14727425575256348
+}

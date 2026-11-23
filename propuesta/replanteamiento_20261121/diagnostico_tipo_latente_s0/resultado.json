@@ -1,0 +1,128 @@
+{
+  "scope": "Auxiliary metadata classification on held Train weeks only, NOT travel-time MAE and NOT a primary benchmark result",
+  "features": [
+    "ox",
+    "oy",
+    "dx",
+    "dy",
+    "delta_x",
+    "delta_y",
+    "od_km",
+    "log_od",
+    "abs_x",
+    "abs_y",
+    "bearing_x",
+    "bearing_y",
+    "mid_x",
+    "mid_y",
+    "hour",
+    "dow",
+    "weekend",
+    "month",
+    "hour_sin",
+    "hour_cos",
+    "week_sin",
+    "week_cos",
+    "season_sin",
+    "season_cos",
+    "o_rot0.79a",
+    "o_rot0.79b",
+    "d_rot0.79a",
+    "d_rot0.79b",
+    "o_rot-0.79a",
+    "o_rot-0.79b",
+    "d_rot-0.79a",
+    "d_rot-0.79b",
+    "calendar_special",
+    "calendar_eve",
+    "calendar_after",
+    "calendar_bridge",
+    "calendar_until_week",
+    "calendar_since_week",
+    "calendar_weekend_or_special"
+  ],
+  "query_information": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "actual_call_is_not_a_query_input": true,
+  "metadata_intervention_feature_invariance": true,
+  "fit_n": 156262,
+  "held_n": 43738,
+  "held_rule": "Train departure UTCweek modulo5==0; deterministic OD/calendar features only, no fitted target-history feature banks",
+  "iterations_fixed_before_held": true,
+  "held_Train_classification": {
+    "NLL": 0.47207030058769717,
+    "constant_prior_NLL": 1.0300540400065934,
+    "delta_NLL": -0.5579837394188961,
+    "CI95_by_Train_day": [
+      -0.5715940966095022,
+      -0.545319878750831
+    ],
+    "accuracy": 0.8217568247290685,
+    "majority_accuracy": 0.5103799899400978,
+    "confusion_A_B_C": [
+      [
+        8047,
+        321,
+        1221
+      ],
+      [
+        130,
+        22006,
+        187
+      ],
+      [
+        2859,
+        3078,
+        5889
+      ]
+    ]
+  },
+  "informative_auxiliary_label": true,
+  "Train_description": [
+    {
+      "call": "A",
+      "Train_n": 231316,
+      "Train_mean_T_s": 661.7405395507812,
+      "Train_median_T_s": 615.0,
+      "interpretation": "Descriptive only; distance/context confounding, not a causal type effect"
+    },
+    {
+      "call": "B",
+      "Train_n": 525174,
+      "Train_mean_T_s": 592.6559448242188,
+      "Train_median_T_s": 540.0,
+      "interpretation": "Descriptive only; distance/context confounding, not a causal type effect"
+    },
+    {
+      "call": "C",
+      "Train_n": 267039,
+      "Train_mean_T_s": 598.161865234375,
+      "Train_median_T_s": 540.0,
+      "interpretation": "Descriptive only; distance/context confounding, not a causal type effect"
+    }
+  ],
+  "interpretation": "Predictability can justify investigating an auxiliary semantic label. It does not prove extra information beyond a strong neural representation or any travel-time MAE gain. A future latent-type model must marginalize predicted type at query time; observed CALL_TYPE remains ineligible as a primary query feature.",
+  "historical_enriched_control": "od_mas_call_mae_d10_s0 used observed metadata and is not eligible. This diagnostic is not a repeat of that information contract.",
+  "no_GPU": true,
+  "Test_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "code_sha256": "a8dfd5c56446db0d20942defb7d2961449dbe3d238edce43958870b114747d58",
+  "seconds": 60.95773410797119,
+  "input_hashes": {
+    "train_x.npz": "f543f8873d930dbf95a6b189df84c182887376d85d6e6a47099d2e8749f7350f",
+    "runs_train.npz": "03cdb472b698961de1eda403c361a8dd71ea2b0e74d0a89aabc9a7385eabc250"
+  },
+  "predictions_sha256": "9c98e894cded2267a56e04f4eda235d324cb681d9eafecd3a1b9fcf7522ca84a",
+  "classifier_sha256": "19d1088f4d8451ec81c5eee91f77fe5d93d4cc43b9e98a8d7a6abe5440dbbcad",
+  "next_scope": "Auxiliary metadata is predictable from allowed OD/time variables. A future supervised latent-type duration model must infer/marginalize type at query; never set enriched=True or pass observed call. No travel-time experiment or MAE gain yet.",
+  "classifier_retained": false,
+  "cleanup_note": "After full-cohort descendant failed, reconstruction sources and all metrics/predictions retained; small unused intermediate weights removed."
+}

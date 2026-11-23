@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-22",
+  "primary_sources": [
+    {
+      "title": "TrajCogn,IJCAI2025",
+      "url": "https://ijcai.org/proceedings/2025/411",
+      "verified": "Sections3.2,4.4,5.1,5.4: trajectory learning; PortoTTE explicitly excluded due equal-interval sampling leakage; its51.973sTTE is Chengdu, not PortoOD.",
+      "decision": "Do not treat it as PortoOD benchmark or expose query sample count."
+    },
+    {
+      "title": "Efficient and representative door-to-door travel time estimation,2026",
+      "url": "https://link.springer.com/article/10.1007/s11116-025-10705-7",
+      "verified": "Switzerland travel surveys and routing/built-environment correction; intersection count/density along route predictive.",
+      "inference": "Detailed public-route composition is a testable input refinement; Swiss performance does not establish Porto accuracy."
+    },
+    {
+      "title": "UNITE,KDD2026",
+      "url": "https://web.comp.polyu.edu.hk/csmlyiu/conf/KDD26_UNITE.pdf",
+      "verified": "Progress-state route/time modeling, movement histograms and local traffic. China cities, not Porto.",
+      "local_source_inspection": "models/tte.py: teacher_forcing_ratio=-1 uses fixed50step generation; ratio0 still masks using observed lengths. Any official adaptation must use fully autonomous query-only inference.",
+      "decision": "Do not execute official defaults or claim local attention branch is a replication."
+    },
+    {
+      "title": "STFD-ETA,publisher result found",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0950705126019866",
+      "status": "Search excerpt only; full publisher access403; issue date4Dec2026 after current22Nov. OD input/protocol not verified.",
+      "decision": "No matched benchmark claim or adoption based on headline MAE."
+    }
+  ],
+  "files_changed_outside_project": false
+}

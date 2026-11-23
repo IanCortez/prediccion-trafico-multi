@@ -1,0 +1,7 @@
+{
+  "stage": "Numba compilation before any scientific output",
+  "error": "Conditional tuple expansion unsupported bytecode",
+  "recovery": "Explicit length/free branches, no math/data/threshold change",
+  "replacement": "piloto_proyeccion_incierta_s0_v2",
+  "Test_access": false
+}

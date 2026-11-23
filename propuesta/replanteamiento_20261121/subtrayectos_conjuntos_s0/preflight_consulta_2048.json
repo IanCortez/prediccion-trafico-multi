@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "batch": 2048,
+  "GPU_reserved_MiB": 6130.0,
+  "no_Validationmetric": true
+}

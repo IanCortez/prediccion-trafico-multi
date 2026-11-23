@@ -1,0 +1,11 @@
+{
+  "primary_source": "https://papers.nips.cc/paper_files/paper/2025/file/9f02b7c937447b6857b21d31d5c344e6-Paper-Conference.pdf",
+  "checked": [
+    "Table3p8: PortoODTTE1.225±.006minutes,73.5seconds.",
+    "Table8p21:323481trips.",
+    "B.2: chronological8:1:1.",
+    "Task definitionp7: starting/ending locations and departure time."
+  ],
+  "conclusion": "Published target verified; exact processed cohort still unavailable, so no matched-cohort comparison claim.",
+  "primary_cohort_unchanged": true
+}

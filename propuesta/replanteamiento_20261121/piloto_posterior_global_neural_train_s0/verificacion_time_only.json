@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "finite_Train_gradients": true,
+  "initial_sha256": "56a81308b3f78d5ade511d8239c5e419f50e8fa5e21549af990548a8c72a64f5",
+  "reverse_singleton_quantiles_exact": true,
+  "no_route_code_in_public_forward": true,
+  "Test": false
+}

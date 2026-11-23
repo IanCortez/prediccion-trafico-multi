@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "wholeTrain_parent_teacher_n": 512,
+  "scope": "Source=query onlyfor originalTrain geometryidentityproof; actualmodelindices256queries areweekfoldcrossfit. No modeltraining or forecastmetric.",
+  "arclength_teacher_error_m_quantiles": [
+    9.292930085301162e-05,
+    0.021542895131001688,
+    0.048458172739883884,
+    0.09772672791949391,
+    0.17837227396993327,
+    0.9727132153556247
+  ],
+  "max_relative_path_error": 0.00045994979917483023,
+  "partial_crossfit_Train_queries": 256,
+  "partial_source_intervals": 892,
+  "independent_partial_max_scaled_error": 0.00038249681702168584,
+  "all_columns16to33_exactly_unchanged": true,
+  "stationary_sample_insertion_geometry_invariant": true,
+  "stationary_source_time_feature_correctly_changes": true,
+  "actual_source_reverse_singleton_exact": true,
+  "query_inputs_unchanged": true,
+  "source_sha256": "cec89bd091a4ef05a218c2ca5fdfa0357bc78ecac687389273720b158985e7bc",
+  "token_sha256": "5d87c3f8cd4e0e5d6e45240e025d763c09dbf75496f5cdd77fd3da367b66b014",
+  "prefix_sha256": "230170eb2ba794d290a4cadc9a87f0796cfb008a3f75127e74c7f30f60c712e6",
+  "no_Validation_or_Test": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 3.124630928039551
+}

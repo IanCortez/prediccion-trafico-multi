@@ -1,0 +1,16 @@
+{
+  "domain_auc": 0.8039016258894842,
+  "domain_crossentropy": 0.5448393393710308,
+  "ratio_quantiles": [
+    0.05,
+    0.07410977669015721,
+    0.47443842251406887,
+    2.5459637345397432,
+    10.0
+  ],
+  "effective_source_n": 35032.32980203875,
+  "weights_total": 8000.000000000001,
+  "source_time_mean_s": 333.3528946674866,
+  "full_time_mean_s": 607.5394287109375,
+  "limit": "OOFdomain discrimination does not prove conditional label-transferability; sourceboundary indicators may not remove all behavioral differences."
+}

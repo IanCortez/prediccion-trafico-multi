@@ -1,0 +1,86 @@
+[
+  {
+    "epoch": 1,
+    "primary_train_n": 1023485,
+    "primary_loss": 3.628297815063978,
+    "auxiliary_loss": 3.217368839723727,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.3700846483926,
+      "rmse_s": 210.79190550194588,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 73.36931324005127
+  },
+  {
+    "epoch": 2,
+    "primary_train_n": 1023485,
+    "primary_loss": 3.6271580644473076,
+    "auxiliary_loss": 3.2087277767580744,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.3699674068516,
+      "rmse_s": 210.74835505512308,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 129.52390241622925
+  },
+  {
+    "epoch": 3,
+    "primary_train_n": 1023485,
+    "primary_loss": 3.6266947425600913,
+    "auxiliary_loss": 3.2070874697872163,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.36926395760545,
+      "rmse_s": 210.83579728353536,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 185.85769152641296
+  },
+  {
+    "epoch": 4,
+    "primary_train_n": 1023485,
+    "primary_loss": 3.6263833116591577,
+    "auxiliary_loss": 3.2047855054324628,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.39751916899195,
+      "rmse_s": 210.9390652176161,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 242.2812786102295
+  },
+  {
+    "epoch": 5,
+    "primary_train_n": 1023485,
+    "primary_loss": 3.626053649366545,
+    "auxiliary_loss": 3.204080721139506,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.35988463432363,
+      "rmse_s": 210.6334177613887,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 298.88194251060486
+  },
+  {
+    "epoch": 6,
+    "primary_train_n": 1023485,
+    "primary_loss": 3.6259796118125593,
+    "auxiliary_loss": 3.2047097145616847,
+    "validation": {
+      "n": 127941,
+      "mae_s": 131.36293291439023,
+      "rmse_s": 210.67981757252838,
+      "mdae_s": 75.0
+    },
+    "preserved": false,
+    "seconds": 355.359201669693
+  }
+]

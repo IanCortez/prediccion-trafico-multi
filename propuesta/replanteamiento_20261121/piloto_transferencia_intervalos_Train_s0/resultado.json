@@ -1,0 +1,95 @@
+{
+  "complete": true,
+  "passed": false,
+  "metrics": {
+    "baseline": {
+      "n": 10000,
+      "mae_s": 133.51143159502624,
+      "rmse_s": 208.755103301834,
+      "mdae_s": 87.30363051134873
+    },
+    "pseudo_label_control": {
+      "n": 10000,
+      "mae_s": 133.97135480969416,
+      "rmse_s": 208.94729424245128,
+      "mdae_s": 87.96544732194846
+    },
+    "observed_intervals": {
+      "n": 10000,
+      "mae_s": 133.78532839152166,
+      "rmse_s": 208.6285604302447,
+      "mdae_s": 87.10693977825676
+    }
+  },
+  "reference": {
+    "n": 10000,
+    "mae_s": 133.35539279280192,
+    "rmse_s": 208.67719173020703,
+    "mdae_s": 87.6963494151947
+  },
+  "comparisons": {
+    "vs_baseline": {
+      "delta_mae_s": 0.2738967964954254,
+      "ci95_s": [
+        -0.38270282038540315,
+        0.9359853343026779
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain; not primaryValidation or confirmation."
+    },
+    "vs_pseudo_label_control": {
+      "delta_mae_s": -0.18602641817248822,
+      "ci95_s": [
+        -0.8521289147479262,
+        0.5118890209806373
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain; not primaryValidation or confirmation."
+    },
+    "vs_reference": {
+      "delta_mae_s": 0.42993559871973946,
+      "ci95_s": [
+        -0.33361314157675465,
+        1.2383913910578441
+      ],
+      "days": 22,
+      "interpretation": "Exploratory repeatedly reused chronological heldTrain; not primaryValidation or confirmation."
+    }
+  },
+  "auxiliary_n": 113830,
+  "full_fit_n": 40000,
+  "held_n": 10000,
+  "all_original_held_rows_labels_preserved": true,
+  "no_held_GPS_N_T_in_features": true,
+  "domain_weighting_only_fitparents": true,
+  "boundary_flags_query_constant_full": true,
+  "predictions_sha256": "f00f740c51b60ffe7d0088e04836372c5e856528fd236434bc7cbca79435d344",
+  "provenance_sha256": "3093c591b9261b6a61146dd0b211f69dd85975ce16bb2b8dfe189f9c3ac8a0bc",
+  "sources": {
+    "piloto_transferencia_intervalos_Train.py": "8e33a2f3757bfb12ce38e7a05d0c85180e289e0d163d83d12ac5dc79b2a74d66",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76"
+  },
+  "weights": [],
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\contexto_rejilla25m.npz",
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido.npz",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 1627.5654575824738,
+  "next_if_fail": "Retire this boundary/density augmentation recipe. Do not sweep sourceweights/counts/treeparameters."
+}

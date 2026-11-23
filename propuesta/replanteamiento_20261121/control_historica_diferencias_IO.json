@@ -1,0 +1,12 @@
+{
+  "control_source_sha256": "3b8a2718addb9d569bee93d4ce935b873cc6ad1222fb2fcbbe734b2f33218aea",
+  "treatment_source_sha256": "a5222f3d204f10bfe5b62498a86019a23ab42e4763cc0ea4de49514e9baa5e84",
+  "math_optimizer_sampler_architecture_unchanged": true,
+  "differences": [
+    "Explicit frozen pretrial reference, so registry promotion cannot change comparison.",
+    "Keep current best control weights even if worse than reference for uncertainty/reproduction checks.",
+    "Delete only superseded nonqualifying control checkpoint files inside its own run, retaining all metrics/predictions and deletion hashes."
+  ],
+  "all_full_MAE_below131_06_preserved": true,
+  "note": "Separate new control runner; active treatment source and imports were not edited. No control launched while treatment GPU is live."
+}

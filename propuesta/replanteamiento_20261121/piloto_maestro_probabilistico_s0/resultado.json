@@ -1,0 +1,74 @@
+{
+  "scope": "Train-only teacher calibration instrument, not primary OD evaluation",
+  "results": {
+    "OD_only": {
+      "duration": {
+        "n": 43591,
+        "mae_s": 144.3174049689156,
+        "rmse_s": 219.36897380415982,
+        "mdae_s": 105.0
+      },
+      "NLL": 3.866403765086735,
+      "CRPS_s": 106.55362426064625,
+      "coverage80": 0.8147323988896791,
+      "mean_interval80_s": 427.4791814824161,
+      "sigma_clipped_fraction": 0.0,
+      "sigma_mean": 0.3070863502048224,
+      "model_sha256": "0dea6ebf377f78c77eb012e093271b55254278f1680a86bb6898d273e5b698db"
+    },
+    "privileged_geometry": {
+      "duration": {
+        "n": 43591,
+        "mae_s": 110.78961253469753,
+        "rmse_s": 164.10597919377668,
+        "mdae_s": 75.0
+      },
+      "NLL": 3.610701084131869,
+      "CRPS_s": 80.58269897621967,
+      "coverage80": 0.8096625450207612,
+      "mean_interval80_s": 326.209309261086,
+      "sigma_clipped_fraction": 2.294051524397238e-05,
+      "sigma_mean": 0.2244740645773704,
+      "model_sha256": "520fc1e297ecbbd82b85e766fba3ba970d083770bd90b4412a58d676c0afb141"
+    }
+  },
+  "privileged_minus_OD_NLL": {
+    "delta": -0.2557026809548655,
+    "CI95": [
+      -0.27190587148290585,
+      -0.23841845078372878
+    ],
+    "days": 63,
+    "scope": "Exploratory held Train weeks, no shared pretrained representation, no Validation use"
+  },
+  "privileged_minus_OD_CRPS_s": {
+    "delta": -25.970925284426574,
+    "CI95": [
+      -27.404181559474242,
+      -24.41933186372087
+    ],
+    "days": 63,
+    "scope": "Exploratory held Train weeks, no shared pretrained representation, no Validation use"
+  },
+  "worth_building_full_crossfit_teacher": true,
+  "fit_n": 156409,
+  "held_n": 43591,
+  "geometry_valid_n": 200000,
+  "all_sampled_rows_retained": true,
+  "no_pretrained_shared_representation": true,
+  "teacher_has_observed_geometry": true,
+  "primary_student_gain_not_tested": true,
+  "Test_access": false,
+  "Validation_access": false,
+  "actual_files_accessed": [
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "source_sha256": "b2761128058b3f876e4700e8db7aa14746b51274295558870d137c1549eee2b4",
+  "parameters_sha256": "70bd59cee3cbdf5ca87cb3e37ae987c3d9b57fc684b4d2984e79dc9517ba0d34",
+  "seconds": 118.62888836860657,
+  "next": "If gate favorable, generate actual whole-fold-excluded Train teacher parameters; any future student remains OD-only and needs a matched full-cohort experiment. Do not launch another GPU while current studies run.",
+  "pilot_teacher_weights_retained": false,
+  "cleanup_note": "Pilot teacher parameters and metrics retained; actual five full crossfit teachers are retained separately for the student."
+}

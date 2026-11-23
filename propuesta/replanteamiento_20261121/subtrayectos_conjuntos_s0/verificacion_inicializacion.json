@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "no_retained_network_state_loaded": true,
+  "base_constructor_sha256": "8cdb41e34b315b35b2b21ee334e4e519e7bb213aaf776bb55014e757896a8cdd",
+  "protected_reference_unchanged": true,
+  "Test": false
+}

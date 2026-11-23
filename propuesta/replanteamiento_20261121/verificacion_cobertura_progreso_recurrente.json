@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "no_CUDA_allocations": true,
+  "actual_checkpoint_epoch_observed": 2,
+  "state_MiB": 8.551319122314453,
+  "public_D_graph_not_in_actual_checkpoint": true,
+  "auxiliary_fragments": 2099324,
+  "auxiliary_parents_with_supervision": 894104,
+  "source_parents_with_unknown_destination": 0,
+  "source_tokens": 41775036,
+  "known_position_tokens_used_once_per_epoch": 41511860,
+  "known_tokens_coverage_maximum": 1,
+  "all_unknown_or_unsupported_tokens_masked": true,
+  "corrected_macro_targets_exact": 39413092,
+  "corrected_EOS_targets_exact": 816130,
+  "original_clock_includes_all_source_token_times": true,
+  "max_clock_F32_elapsed_storage_error_s": 6.103515625e-05,
+  "all_original_primary_queries_once_per_epoch": 1023485,
+  "all_auxiliary_fragments_once_per_epoch": true,
+  "source_sha256": "02750c5d4e347ee89129191fc17441f5f1eecdbd0eecbce0fb262043de1ba042",
+  "no_Validation_labels_or_Test": true,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy"
+  ],
+  "seconds": 71.32043790817261
+}

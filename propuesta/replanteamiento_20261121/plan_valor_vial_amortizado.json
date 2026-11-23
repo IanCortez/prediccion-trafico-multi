@@ -1,0 +1,51 @@
+{
+  "decision": "Use amortized streetremainingtimevalue rather than generating a fullroute atODinference in this trial.",
+  "reason": "Avoid expensive or unstable path rollout while sharing learnedroadembeddings/valueheads with actualTrainprogress, localtime andnextroad auxiliaries. This is a distinctPortoadaptation, not publishedUNITEreplica.",
+  "evidence": {
+    "privileged_route_heldTrain_MAE": {
+      "control": {
+        "n": 10000,
+        "mae_s": 133.35539279280192,
+        "rmse_s": 208.67719173020703,
+        "mdae_s": 87.6963494151947
+      },
+      "privileged_route": {
+        "n": 10000,
+        "mae_s": 94.02438259321093,
+        "rmse_s": 134.38674109901228,
+        "mdae_s": 66.84542927735208
+      }
+    },
+    "delta": {
+      "delta_mae_s": -39.331010199591006,
+      "ci95_s": [
+        -42.18627566468277,
+        -36.588217566623634
+      ],
+      "days": 22,
+      "interpretation": "Privileged-route chronological heldTrain diagnostic, not primary OD performance or bound."
+    },
+    "partial_label_corpus": {
+      "trips": 894105,
+      "tokens": 41775036,
+      "trusted_time_fraction": 0.9910434353100058
+    }
+  },
+  "architecture": {
+    "primary": "Fresh4members, onehopgraphcontext over53766roads,16publicendpointpairs with2timecomponents each plus2globalfallback; discrete60..1785secondsupport.",
+    "input": "Original5rawfields produce same216features asprotectedreference andstandalonepublic4mapprojections; no actualroute,N or elapsedtime.",
+    "auxiliary": "Remainingvalue continuousNLL, partiallocaltimeHuber, neighbor/EOSCE on fixedtrustedTrainstates. No route decoder or observedlength in primaryprediction.",
+    "endpoint_uncertainty": "Directedroadcandidates andpartialchainoffsets marginalised instead ofusingtruefullHMMendpoint.",
+    "source_paths": "OnlyeligibleTrainroads used forauxiliarysupervision; no Validation/TestinteriorGPSdecoded."
+  },
+  "limits": [
+    "Actualrouteoracle94.02 is privileged and does not show howwellODcan infer route.",
+    "Some error is unseenroutechoice/dwell; no claim target73.5 is attainable by thisarchitecture.",
+    "Auxpartialtime allocatedbetween15seconds observations, not exactgroundtruthroadtime.",
+    "ReusedValidation/modelselection isexploratory, no independentconfirmation."
+  ],
+  "control": "Sameinitialweights/batches withoutaux; conditional on >=.5s primarygain andupperdayCI<0 aftercertification.",
+  "source": "valor_vial_parcial_s0/fuentes",
+  "Test": "sealed",
+  "goal": "ACTIVE"
+}

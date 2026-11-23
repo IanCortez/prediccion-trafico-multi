@@ -1,0 +1,83 @@
+{
+  "memory": {
+    "n": 894105,
+    "sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+    "bytes": 78769248,
+    "all_source_arrivals_before_Validation": true,
+    "all_memory_rows_in_eligible_Train": true
+  },
+  "outputs": {
+    "train_historicos.npz": {
+      "n": 1023529,
+      "bytes": 315498496,
+      "sha256": "244ce93b0c7b18eae65d9ed3ac9de44dcc3430adb0e1eb83cb3c5eee320b0565",
+      "fraction_with_history": 0.9991881031216506
+    },
+    "validation_historicos.npz": {
+      "n": 127941,
+      "bytes": 38768142,
+      "sha256": "943ee3aae4db0cb968f529cfc2c1353536f935fa772aae95de818b81eb1d3d2a",
+      "fraction_with_history": 0.9958027528313832
+    }
+  },
+  "total_bytes": 433035886,
+  "features": [
+    "shape_0",
+    "shape_1",
+    "shape_2",
+    "shape_3",
+    "shape_4",
+    "shape_5",
+    "shape_6",
+    "shape_7",
+    "shape_8",
+    "shape_9",
+    "shape_10",
+    "shape_11",
+    "shape_12",
+    "shape_13",
+    "path_km",
+    "log_circuity",
+    "median_time600",
+    "MAD_time600",
+    "cluster_mass",
+    "mean_OD4D_km",
+    "mean_clock_difference12h",
+    "log1p_effective_historical_n",
+    "mean_shape_dispersion_km",
+    "available",
+    "mean_source_age_years",
+    "mean_log_ODscale"
+  ],
+  "all_primary_rows_retained": true,
+  "own_fold_never_used_in_retrieved_geometry_or_time": true,
+  "own_fold_intervention_passed": true,
+  "constructor_fitted_only_on_eligible_Train": true,
+  "constructor_sha256": "f29d79e755587a2f278732846812ff8fde71e26594799b14ebe0771613209c33",
+  "Validation_labels_accessed": false,
+  "Test_access": false,
+  "observed_heldout_paths_decoded": false,
+  "sources": {
+    "base_replanteo.py": "1034beb3b9df08ebb91cb9c34f8ddbfe79fcf1b5856cde44d6ad9ee7092c2a76",
+    "consulta_historicos_cruzados.py": "bc4c62d8dc6ba272aa33cb0d9db5ad3644f345064c5752cc103db27098ef15b0",
+    "historicos_rutas.py": "cbe6d47d8325f32895dff0ed2e46e9bb8445d9e3a70a38ddb4499d451185321d",
+    "piloto_prototipos_ruta.py": "2cc3d14d0e89145b42a6e6295e31ebc9b80361d2fe3a5f687744e92578471aa9",
+    "preparar_prototipos_historicos.py": "289890041a2dd44784ecd7f58d98afda0baf2e9a1785560d825648da2eefee6d",
+    "rutas_proyeccion_incierta.py": "ecfdf06d4c6db7041f0b6743e5015140ad460e671e4d5035df72519477173cda"
+  },
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\distancias_2014\\D.npy",
+    "propuesta\\datos\\distancias_2014_free\\D.npy",
+    "propuesta\\datos\\geometria_train.npz",
+    "propuesta\\datos\\grafo_compacto_2014.npz",
+    "propuesta\\datos\\manifiesto.json",
+    "propuesta\\datos\\mapa_dirigido_2014.npz",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\link_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\state_support.npy",
+    "propuesta\\datos\\perfiles_mapmatched_2014\\time_s.npy",
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\train_y.npy",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 92.65673017501831
+}

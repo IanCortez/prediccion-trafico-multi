@@ -1,0 +1,15 @@
+{
+  "scope": "Train-only teacher calibration instrument, not primary OD evaluation",
+  "hypothesis": "An out-of-fit teacher using actual path geometry may provide less noisy soft duration distributions for a later OD-only student.",
+  "information": "Teacher privileged geometry is allowed ONLY for Train soft-target creation. Eventual student forward keeps five raw OD/departure fields. No teacher query-time path, type, duration or length input to student.",
+  "contrast": "Matched probabilistic CatBoost teachers: deterministic raw OD/calendar features versus same features plus observed path length and14 shape deviations. No actual point count or max GPS step.",
+  "split": "Sample200000 embargoe-safe Train rows; fit UTCweek modulo5!=0; reserve modulo5==0 for teachers. No pretrained shared representation.",
+  "selection": "1000 fixed trees, depth7,LR0.07,L2=5,seed20261122,CPU2threads, no held early stopping.",
+  "distribution": "RMSEWithUncertainty on log seconds. RawFormulaVal=(mu, log sigma), sigma clipped[.05,1.5] before 116-bin discretization on original60..1785 support.",
+  "reference_docs": "https://catboost.ai/docs/en/concepts/loss-functions-regression#RMSEWithUncertainty",
+  "gate": "Require improvement versus unprivileged teacher in both held duration NLL and15-second CRPS with upper day-bootstrap CI<0, and80% interval coverage between.72 and.90.",
+  "caveat": "Privileged teacher gain does not prove OD student gain, does not achieve73.5s and is not an irreducible-error bound. Later full Train soft targets require whole-fold exclusion for every row.",
+  "no_GPU": true,
+  "no_Validation_or_Test": true,
+  "no_CDF_bank_on_disk": true
+}

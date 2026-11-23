@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "base_only_all127941_reference_predictions_exact": true,
+  "complete_joint_time_geometry_gradients_finite": true,
+  "posterior_component_normalization_error": 3.5762786865234375e-07,
+  "initial_new_mixture_differs_from_reference_by_design": true,
+  "Test_access": false
+}

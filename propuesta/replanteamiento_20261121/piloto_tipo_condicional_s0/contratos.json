@@ -1,0 +1,7 @@
+{
+  "zero_residual_max_probability_error": 2.9802322387695312e-08,
+  "initial_medians_unchanged": true,
+  "forward_has_no_observed_type": true,
+  "permutation_test": true,
+  "CPU_only": true
+}

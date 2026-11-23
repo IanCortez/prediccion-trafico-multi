@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "17Train inputs only; no predictive improvement claimed.",
+  "source_sha256": "4492929607866e124929c5cfc91afddf797b69b9b3f68c3dfa9084e84eff143e",
+  "verification_source_sha256": "3dbe5943a7fa2fa8c65884ebbfed3e40675e55707d2aba26b37da2d725da32d9",
+  "reference_sha256": "81c543b8a175efc11a25418def2a103dfabdc4a000379ea4b4b58e46360c31e5",
+  "zero_initialized_readout_exact_reference": true,
+  "immutable_reference_no_grad": true,
+  "head_gradient_l1": 40.121931593865156,
+  "student_gradient_l1": 1.27623968757689,
+  "finite_gradients": true,
+  "cache_and_uncached_paths_exact": true,
+  "zero_readout_reverse_exact": true,
+  "query": [
+    "o_lon",
+    "o_lat",
+    "d_lon",
+    "d_lat",
+    "timestamp"
+  ],
+  "target_as_forward_input": false,
+  "precision": "FP32 highest; direct point residual, no implicit CDF median derivative",
+  "Validation_access": false,
+  "Test_access": false,
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_contexto.npz",
+    "propuesta\\datos\\train_gps_mapmatched.npz",
+    "propuesta\\datos\\train_rutas.npz",
+    "propuesta\\datos\\train_rutas_proyectadas2014.npz",
+    "propuesta\\datos\\train_x.npz"
+  ],
+  "seconds": 8.964397430419922
+}

@@ -1,0 +1,47 @@
+{
+  "completed": {
+    "categorical": {
+      "file": "piloto_categorias_od_train_s0/resultado.json",
+      "passed": false,
+      "delta_mae_s": -0.5688103123235,
+      "reason": "Belowpredeclared1secondgate; no fullprimarytrial."
+    },
+    "whole_trip_matching": {
+      "file": "piloto_etiquetas_viales_train_s0/resultado.json",
+      "passed": false,
+      "zero_reset_fraction": 0.81494140625,
+      "reason": "Failed90percent wholetripgate; remainsfailed."
+    },
+    "partial_step_trace": {
+      "file": "diagnostico_resets_viales_s0/resultado.json",
+      "passed": true,
+      "trusted_step_fraction": 0.993350670665114,
+      "original_matching_exact": true
+    },
+    "partial_time_labels": {
+      "file": "piloto_cadenas_parciales_train_s0/resultado.json",
+      "trusted_time_fraction": 0.9914077631825066,
+      "primary_labels_exact": true,
+      "trips": 4096
+    },
+    "neural_absorption": {
+      "file": "verificacion_unite_neural_absorcion.json",
+      "passed": true,
+      "real_time_components": true,
+      "trained_Portobenchmark": false,
+      "original_synthetic_single": 3,
+      "original_synthetic_mixed": 4,
+      "corrected_synthetic_single": 4,
+      "corrected_synthetic_mixed": 4
+    }
+  },
+  "active_trial": {
+    "experiment": "oraculo_tiempo_calle_train_s0",
+    "stage": "ChronologicalTrain40kfit10kheld, matched206publicOD versus privilegedactualroute geometry. Not primaryOD. CPU2, fixed1000trees.",
+    "pid": 27328,
+    "Test": "sealed",
+    "log": "oraculo_tiempo_calle_train.log"
+  },
+  "Test": "sealed",
+  "not_primary_scores": true
+}

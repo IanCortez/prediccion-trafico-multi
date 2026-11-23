@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "raw17_cached_summaries_exact": true,
+  "reverse_singleton_exact": true,
+  "source_labels_only_from_arrivedTrain": true,
+  "parentweekexcluded_before_finiteK": true,
+  "statistics": [
+    {
+      "fold": 0,
+      "n": 8144,
+      "median_evaluated": 607.0,
+      "median_discovered": 3077.0
+    },
+    {
+      "fold": 1,
+      "n": 7944,
+      "median_evaluated": 600.5,
+      "median_discovered": 3056.0
+    },
+    {
+      "fold": 2,
+      "n": 7952,
+      "median_evaluated": 604.0,
+      "median_discovered": 3069.0
+    },
+    {
+      "fold": 3,
+      "n": 8205,
+      "median_evaluated": 610.0,
+      "median_discovered": 3089.0
+    },
+    {
+      "fold": 4,
+      "n": 7755,
+      "median_evaluated": 595.0,
+      "median_discovered": 3068.0
+    },
+    {
+      "fold": 5,
+      "n": 10000,
+      "median_evaluated": 612.0,
+      "median_discovered": 3129.5
+    }
+  ],
+  "constructor_source_sha256": "112915003e6233952081db9f8858f26cb81dd5d65f4a5ec2fbdedbee4ba9acfa"
+}

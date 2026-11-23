@@ -1,0 +1,20 @@
+{
+  "parent_sha256": "04f84b39784f0fb039fb60c8ce83a9264ce71cbbdba1b6ad7260e846846a57fc",
+  "history_counts_sha256": "00f0ff5db2aef7b6cdc98d7cdb7d929c137ef44445fabc2ada90f2271052a504",
+  "history_code_sha256": "7c10c597e32cc468f1451d07ffec3d3729be0c25cf1aea1629b7eaa728ccda47",
+  "Train_trips": 25000,
+  "valid_point_states": 1034670,
+  "fit_points": 811075,
+  "held_points": 223595,
+  "held_rule": "Train departure UTCweek modulo5==0 for newly fitted heads",
+  "counts": "Each point prior excludes its own complete departure-week fold at every backoff",
+  "representation_scope": "Parent representation already saw all eligible Train; this is heldout ONLY for new192weight heads, not whole-model generalization",
+  "controls": [
+    "original frozen native event output",
+    "matched new linear3-event head without temporal prior",
+    "same linear head plus log temporal prior"
+  ],
+  "fit": "Fixed60 L-BFGS iterations with strong-Wolfe search; L2 .001 on weights, never select by held labels",
+  "GPU": false,
+  "Test_access": false
+}

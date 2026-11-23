@@ -1,0 +1,43 @@
+{
+  "outputs": {
+    "train_indices.npz": {
+      "n": 1023529,
+      "shape": [
+        1023529,
+        64
+      ],
+      "sha256": "a78690f7245cd034d9c361c8b1aea3335247943e6131b02c80f570aeddac933c",
+      "bytes": 212251365,
+      "fraction_with_history": 0.9991881031216506,
+      "query_labels_used": false
+    },
+    "validation_indices.npz": {
+      "n": 127941,
+      "shape": [
+        127941,
+        64
+      ],
+      "sha256": "ef1ea4061122766290dd14b2f6f1691557ed5ee9c14c6f2f784b457276163b2f",
+      "bytes": 25832364,
+      "fraction_with_history": 0.9958027528313832,
+      "query_labels_used": false
+    }
+  },
+  "source_sha256": "4cc6291fd0d6968b3945a1de493d91f89d85ca75a9f05561a408c27985c4c6af",
+  "memory_sha256": "0bc964fe70856e6cf5f62c926629ec95021afc96e7c3213eb493589f39b0da84",
+  "shared_memory_file": "E:\\UTEC\\Tesis\\TesisIan\\propuesta\\replanteamiento_20261121\\datos_prototipos_historicos_s0\\memoria_Train.npz",
+  "total_bytes_including_shared_memory": 316857381,
+  "gate_sha256": "61835c2326675bef044aa234e8818973e1ce6c4f432b3ef78704551b1c8a1bff",
+  "all_Train_sources_exclude_query_UTCweekfold": true,
+  "all_Validation_sources_arrive_before_Validation": true,
+  "query_labels_or_geometry_used": false,
+  "Validation_labels_accessed": false,
+  "Test_access": false,
+  "ready_for_neural_training": false,
+  "next_required": "Define/verify raw28token constructor, fit Train-only normalization, then train frozen-parent attention mixture and conditional compression control.",
+  "actual_data_files_accessed": [
+    "propuesta\\datos\\train_x.npz",
+    "propuesta\\datos\\validation_x.npz"
+  ],
+  "seconds": 23.903584241867065
+}

@@ -1,0 +1,23 @@
+{
+  "reference_CPU_equal_protected": true,
+  "reference_changed_rows": 0,
+  "reference_CPU_metric": {
+    "n": 127941,
+    "mae_s": 131.25671207822356,
+    "rmse_s": 210.804448731162,
+    "mdae_s": 75.0
+  },
+  "initial_max_probability_error": 2.9802322387695312e-08,
+  "order_checks": {
+    "matched_unsupervised": {
+      "reverse_65_equal": true,
+      "singletons_equal": true
+    },
+    "supervised_type": {
+      "reverse_65_equal": true,
+      "singletons_equal": true
+    }
+  },
+  "forward_no_observed_type": true,
+  "all_Validation_rows_evaluated": true
+}
